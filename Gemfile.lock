@@ -112,6 +112,8 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.4-x86_64-linux)
+      racc (~> 1.4)
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
@@ -177,6 +179,8 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.1)
+    rspec_junit_formatter (0.6.0)
+      rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (1.56.2)
       base64 (~> 0.1.1)
       json (~> 2.3)
@@ -216,6 +220,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -224,12 +229,10 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.7, >= 7.0.7.2)
   rspec-rails
+  rspec_junit_formatter
   rubocop-rails
   rubocop-rspec
   tzinfo-data
-
-RUBY VERSION
-   ruby 3.2.0p0
 
 BUNDLED WITH
    2.4.19
