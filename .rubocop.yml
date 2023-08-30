@@ -5,3 +5,12 @@ require:
 
 AllCops:
   NewCops: enable
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
