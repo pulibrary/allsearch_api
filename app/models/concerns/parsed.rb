@@ -5,7 +5,7 @@ module Parsed
 
   def parsed_records(documents:)
     documents.map do |document|
-      doc_keys = %i[title creator publisher id type description url other_fields]
+      doc_keys = [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields]
       parsed_record(document:, doc_keys:)
     end
   end

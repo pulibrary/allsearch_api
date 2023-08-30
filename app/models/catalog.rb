@@ -33,7 +33,7 @@ class Catalog
   end
 
   def other_fields(document:)
-    doc_keys = %i[call_number library]
+    doc_keys = [:call_number, :library]
     parsed_record(document:, doc_keys:)
   end
 

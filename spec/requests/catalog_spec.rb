@@ -35,9 +35,9 @@ RSpec.describe 'GET /search/catalog' do
       expect(response).to be_successful
       response_body = JSON.parse(response.body, symbolize_names: true)
 
-      expect(response_body.keys).to match_array(%i[number more records])
-      expect(response_body[:records].first.keys).to match_array(%i[title creator publisher id type url
-                                                                   other_fields])
+      expect(response_body.keys).to contain_exactly(:number, :more, :records)
+      expect(response_body[:records].first.keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
+                                                                    :other_fields)
       expect(response_body[:records].first).to match(expected_response[:records].first)
     end
 
@@ -55,14 +55,6 @@ RSpec.describe 'GET /search/catalog' do
       get '/search/catalog?query='
 
       expect(response).to be_bad_request
-
-      #     response_body = JSON.parse(response.body, symbolize_names: true)
-
-      #     expect(response_body).to eq(
-      #       errors: {
-      #         query: ["must be filled"]
-      #       }
-      #     )
     end
   end
 
@@ -77,7 +69,7 @@ RSpec.describe 'GET /search/catalog' do
       get '/search/catalog?query=pangulubalang'
 
       response_body = JSON.parse(response.body, symbolize_names: true)
-      expect(response_body[:records].first.keys).to match_array(%i[title id type url other_fields])
+      expect(response_body[:records].first.keys).to contain_exactly(:title, :id, :type, :url, :other_fields)
     end
   end
 

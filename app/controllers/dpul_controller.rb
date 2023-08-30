@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-class CatalogController < ApplicationController
+class DpulController < ApplicationController
   rescue_from ActionController::ParameterMissing, with: :show_query_errors
   def show
-    @catalog_query = Catalog.new(query_terms: query_params)
+    @dpul_query = Dpul.new(query_terms: query_params)
 
-    render json: @catalog_query.our_response
+    render json: @dpul_query.our_response
   end
 
   private
