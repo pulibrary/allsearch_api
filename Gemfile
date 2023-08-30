@@ -26,5 +26,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem 'pry-byebug'
+  gem 'rspec-rails'
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec'
 end
