@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   get '/search/catalog/', to: 'catalog#show', defaults: { format: 'json' }
   get '/search/dpul/', to: 'dpul#show', defaults: { format: 'json' }
+  get '/search/findingaids/', to: 'findingaids#show', defaults: { format: 'json' }
 end
