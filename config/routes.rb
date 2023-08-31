@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/search/artmuseum/', to: 'art_museum#show', defaults: { format: 'json' }
   get '/search/catalog/', to: 'catalog#show', defaults: { format: 'json' }
   get '/search/dpul/', to: 'dpul#show', defaults: { format: 'json' }
   get '/search/findingaids/', to: 'findingaids#show', defaults: { format: 'json' }
