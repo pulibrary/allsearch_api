@@ -8,7 +8,7 @@ Requires:
 - Ruby 3.2
 
 ## Getting started
-1. Clone the repository - `git clone git@github.com:maxkadel/bento_rails_api.git`
+1. Clone the repository - `git clone git@github.com:pulibrary/bento_rails_api.git`
 1. Go to the repository directory - `cd bento_rails_api`
 1. Install the required gems - `bundle install`
 1. Start the application server on localhost:2300 - `bundle exec rails s`
