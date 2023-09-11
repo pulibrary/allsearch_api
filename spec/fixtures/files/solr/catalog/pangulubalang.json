@@ -1,0 +1,46 @@
+{
+    "responseHeader": {
+      "zkConnected": true,
+      "status": 0,
+      "QTime": 4,
+      "params": {
+        "q": "pangulubalang",
+        "fl": "id,title_display,author_display,pub_created_display,format,holdings_1display",
+        "rows": "3",
+        "facet": "false"
+      }
+    },
+    "response": {
+      "numFound": 7,
+      "start": 0,
+      "docs": [
+        {
+          "id": "99126848356906421",
+          "title_display": "[A bamboo tube of three internodes]",
+          "format": [
+            "Manuscript",
+            "Book"
+          ],
+          "holdings_1display": "{\"22963835490006421\":{\"location_code\":\"rare$mss\",\"location\":\"Manuscripts Collection\",\"library\":\"Special Collections\",\"call_number\":\"C0935 PB 35\",\"call_number_browse\":\"C0935 PB 35\"}}"
+        },
+        {
+          "id": "99126848358106421",
+          "title_display": "[Fragments of a Pustaha]",
+          "format": [
+            "Manuscript",
+            "Book"
+          ],
+          "holdings_1display": "{\"22963834020006421\":{\"location_code\":\"rare$mss\",\"location\":\"Manuscripts Collection\",\"library\":\"Special Collections\",\"call_number\":\"C0935 PB 18\",\"call_number_browse\":\"C0935 PB 18\"}}"
+        },
+        {
+          "id": "99126848357406421",
+          "title_display": "[Pustaha]",
+          "format": [
+            "Manuscript",
+            "Book"
+          ],
+          "holdings_1display": "{\"22963834340006421\":{\"location_code\":\"rare$mss\",\"location\":\"Manuscripts Collection\",\"library\":\"Special Collections\",\"call_number\":\"C0935 PB 30\",\"call_number_browse\":\"C0935 PB 30\"}}"
+        }
+      ]
+    }
+  }

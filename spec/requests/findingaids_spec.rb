@@ -4,8 +4,8 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/findingaids' do
   it 'returns json' do
-    stub_request(:get, 'https://findingaids.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields')
-      .to_return(status: 200, body: file_fixture('findingaids/cats.json'))
+    stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_sim,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_sim:Collection')
+      .to_return(status: 200, body: file_fixture('solr/findingaids/cats.json'))
     get '/search/findingaids?query=cats'
 
     expect(response).to be_successful
@@ -14,8 +14,8 @@ RSpec.describe 'GET /search/findingaids' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'https://findingaids.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields')
-        .to_return(status: 200, body: file_fixture('findingaids/cats.json'))
+      stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_sim,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_sim:Collection')
+        .to_return(status: 200, body: file_fixture('solr/findingaids/cats.json'))
     end
 
     let(:expected_response) do
@@ -25,11 +25,11 @@ RSpec.describe 'GET /search/findingaids' do
           { title: 'Edward Anthony Papers, 1920s -1950s',
             creator: 'Anthony, Edward, 1895-1971',
             id: 'TC125',
-            type: 'collection',
-            description: '<p>Contains several manuscripts, including a 528-page autobiography, &quot;' \
-                         'My Big Cats&quot; co-authored with Clyde Beatty about animal training in the circus, ' \
+            type: 'Collection',
+            description: 'Contains several manuscripts, including a 528-page autobiography, "' \
+                         'My Big Cats" co-authored with Clyde Beatty about animal training in the circus, ' \
                          'and a collection of poems. Also included are a few letters, a calendar date book for 1928, ' \
-                         'and other miscellanea.</p>',
+                         'and other miscellanea.',
             url: 'https://findingaids.princeton.edu/catalog/TC125',
             other_fields: {
               access_restriction: 'Collection is open for research use.',
