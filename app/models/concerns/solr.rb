@@ -2,11 +2,13 @@
 
 module Solr
   def solr_service_response(query_terms:)
+    builder = solr_config[:ssl] ? URI::HTTPS : URI::HTTP
     query = "q=#{query_terms}&rows=3&facet=false&fl=#{solr_fields}&sort=#{solr_sort}"
     query = "#{query}&#{extra_solr_params}" if respond_to? :extra_solr_params
-    uri = URI::HTTPS.build(host: 'lib-solr8-prod.princeton.edu', port: '8983',
-                           path: "/solr/#{solr_collection}/select",
-                           query:)
+    uri = builder.build(host: solr_config[:host],
+                        port: solr_config[:port],
+                        path: "/solr/#{solr_collection}/select",
+                        query:)
     response = Net::HTTP.get(uri)
     JSON.parse(response, symbolize_names: true)
   end
@@ -30,5 +32,13 @@ module Solr
 
   def url(document:)
     "https://#{service}.princeton.edu/catalog/#{id(document:)}"
+  end
+
+  def solr_collection
+    Rails.application.config_for(:allsearch)[service][:solr][:collection]
+  end
+
+  def solr_config
+    Rails.application.config_for(:allsearch)[service][:solr]
   end
 end

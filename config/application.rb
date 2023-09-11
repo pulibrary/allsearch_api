@@ -8,6 +8,8 @@ require 'action_controller/railtie'
 require 'active_record/railtie'
 require 'action_view/railtie'
 
+require_relative 'lando_env'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)

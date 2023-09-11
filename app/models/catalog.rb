@@ -57,10 +57,6 @@ class Catalog
     holding['library']
   end
 
-  def solr_collection
-    'catalog-alma-production'
-  end
-
   def solr_fields
     'id,title_display,author_display,pub_created_display,format,holdings_1display'
   end
