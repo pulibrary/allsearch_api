@@ -1,0 +1,651 @@
+{
+    "links": {
+      "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields",
+      "next": "https://dpul.princeton.edu/catalog.json?page=2&per_page=3&q=cats&search_field=all_fields",
+      "last": "https://dpul.princeton.edu/catalog.json?page=80&per_page=3&q=cats&search_field=all_fields"
+    },
+    "meta": {
+      "pages": {
+        "current_page": 1,
+        "next_page": 2,
+        "prev_page": null,
+        "total_pages": 80,
+        "limit_value": 3,
+        "offset_value": 0,
+        "total_count": 238,
+        "first_page?": true,
+        "last_page?": false
+      }
+    },
+    "data": [
+      {
+        "id": "02578b4e2ccf4497f1426a3ab7e11464",
+        "type": null,
+        "attributes": {
+          "readonly_collections_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/9w032853n#readonly_collections_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "<ul><li dir=\"ltr\"><a href=\"/cotsen-collection\">Lloyd E. Cotsen</a></li></ul>",
+              "label": "Collections"
+            }
+          },
+          "readonly_creator_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/9w032853n#readonly_creator_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Defoe, Daniel, 1661?-1731",
+              "label": "Creator"
+            }
+          },
+          "readonly_title_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/9w032853n#readonly_title_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Robinson Crusoe, The clever cats, &c. : a picture-book for the nursery ; containing sixteen coloured illustrations",
+              "label": "Title"
+            }
+          },
+          "readonly_publisher_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/9w032853n#readonly_publisher_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "London ; Edinburgh ; New York : Thomas Nelson & Sons, [not after 1888]",
+              "label": "Publisher"
+            }
+          },
+          "readonly_format_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/9w032853n#readonly_format_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Book",
+              "label": "Format"
+            }
+          },
+          "readonly_collections_tesim": {
+            "id": "https://dpul.princeton.edu/catalog/9w032853n#readonly_collections_tesim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Lloyd E. Cotsen",
+              "label": "Collections"
+            }
+          }
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog/9w032853n"
+        }
+      },
+      {
+        "id": "7aadb58d17a19c532e38e4ff99cb95e9",
+        "type": null,
+        "attributes": {
+          "readonly_collections_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/5712mf700#readonly_collections_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "<ul><li dir=\"ltr\"><a href=\"/cotsen-collection\">Lloyd E. Cotsen</a></li></ul>",
+              "label": "Collections"
+            }
+          },
+          "readonly_creator_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/5712mf700#readonly_creator_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Cats, Jacob, 1577-1660",
+              "label": "Creator"
+            }
+          },
+          "readonly_title_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/5712mf700#readonly_title_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Sinn-en-Minne-Beelden. Emblemata Amores Moresque. Emblemes, touchants les Amoues et les Moeurs [engraved title].",
+              "label": "Title"
+            }
+          },
+          "readonly_publisher_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/5712mf700#readonly_publisher_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Middelburg. [Hans vander Hellen (Hellenius). 1618].",
+              "label": "Publisher"
+            }
+          },
+          "readonly_format_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/5712mf700#readonly_format_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Book",
+              "label": "Format"
+            }
+          },
+          "readonly_collections_tesim": {
+            "id": "https://dpul.princeton.edu/catalog/5712mf700#readonly_collections_tesim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Lloyd E. Cotsen",
+              "label": "Collections"
+            }
+          }
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog/5712mf700"
+        }
+      },
+      {
+        "id": "c68aa97b019a52478cc7dc6396336158",
+        "type": null,
+        "attributes": {
+          "readonly_collections_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/x059c746f#readonly_collections_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "<ul><li dir=\"ltr\">Treasures of the Graphic Arts Collection</li></ul>",
+              "label": "Collections"
+            }
+          },
+          "readonly_creator_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/x059c746f#readonly_creator_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Isoda, Koryūsai, active 1764-1788",
+              "label": "Creator"
+            }
+          },
+          "readonly_title_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/x059c746f#readonly_title_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "[Cat near fishbowl].",
+              "label": "Title"
+            }
+          },
+          "readonly_publisher_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/x059c746f#readonly_publisher_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "n.d.",
+              "label": "Publisher"
+            }
+          },
+          "readonly_format_ssim": {
+            "id": "https://dpul.princeton.edu/catalog/x059c746f#readonly_format_ssim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Visual material",
+              "label": "Format"
+            }
+          },
+          "readonly_collections_tesim": {
+            "id": "https://dpul.princeton.edu/catalog/x059c746f#readonly_collections_tesim",
+            "type": "document_value",
+            "attributes": {
+              "value": "Treasures of the Graphic Arts Collection",
+              "label": "Collections"
+            }
+          }
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog/x059c746f"
+        }
+      }
+    ],
+    "included": [
+      {
+        "type": "facet",
+        "id": "readonly_collections_ssim",
+        "attributes": {
+          "label": "Collections",
+          "items": [
+            {
+              "attributes": {
+                "label": "The Sid Lapidus '59 Collection on Liberty and the American Revolution",
+                "value": "The Sid Lapidus '59 Collection on Liberty and the American Revolution",
+                "hits": 171
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=The+Sid+Lapidus+%2759+Collection+on+Liberty+and+the+American+Revolution&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Collections Donated to Princeton University Library",
+                "value": "Collections Donated to Princeton University Library",
+                "hits": 158
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=Collections+Donated+to+Princeton+University+Library&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Lapidus Pamphlets",
+                "value": "Lapidus Pamphlets",
+                "hits": 119
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=Lapidus+Pamphlets&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Treasures of the Graphic Arts Collection",
+                "value": "Treasures of the Graphic Arts Collection",
+                "hits": 21
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=Treasures+of+the+Graphic+Arts+Collection&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Lloyd E. Cotsen",
+                "value": "Lloyd E. Cotsen",
+                "hits": 16
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=Lloyd+E.+Cotsen&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "PUDL0130",
+                "value": "PUDL0130",
+                "hits": 13
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=PUDL0130&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "South Asian Ephemera",
+                "value": "South Asian Ephemera",
+                "hits": 10
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=South+Asian+Ephemera&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Cotsen Children's Library",
+                "value": "Cotsen Children's Library",
+                "hits": 8
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=Cotsen+Children%27s+Library&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "LGBTQIA+ Ephemera",
+                "value": "LGBTQIA+ Ephemera",
+                "hits": 7
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=LGBTQIA%2B+Ephemera&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Indigenous Cultures",
+                "value": "Indigenous Cultures",
+                "hits": 4
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=Indigenous+Cultures&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Print Culture in Indigenous North America",
+                "value": "Print Culture in Indigenous North America",
+                "hits": 4
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_collections_ssim%5D%5B%5D=Print+Culture+in+Indigenous+North+America&per_page=3&q=cats&search_field=all_fields"
+              }
+            }
+          ]
+        },
+        "links": {
+          "self": "/catalog/facet/readonly_collections_ssim"
+        }
+      },
+      {
+        "type": "facet",
+        "id": "readonly_language_ssim",
+        "attributes": {
+          "label": "Language",
+          "items": [
+            {
+              "attributes": {
+                "label": "English",
+                "value": "English",
+                "hits": 181
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=English&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "French",
+                "value": "French",
+                "hits": 28
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=French&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "No linguistic content; Not applicable",
+                "value": "No linguistic content; Not applicable",
+                "hits": 16
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=No+linguistic+content%3B+Not+applicable&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "German",
+                "value": "German",
+                "hits": 4
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=German&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Assamese",
+                "value": "Assamese",
+                "hits": 2
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=Assamese&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Latin",
+                "value": "Latin",
+                "hits": 2
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=Latin&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Russian",
+                "value": "Russian",
+                "hits": 2
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=Russian&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Spanish; Castilian",
+                "value": "Spanish; Castilian",
+                "hits": 2
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=Spanish%3B+Castilian&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Arabic",
+                "value": "Arabic",
+                "hits": 1
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=Arabic&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Hindi",
+                "value": "Hindi",
+                "hits": 1
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=Hindi&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Japanese",
+                "value": "Japanese",
+                "hits": 1
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_language_ssim%5D%5B%5D=Japanese&per_page=3&q=cats&search_field=all_fields"
+              }
+            }
+          ]
+        },
+        "links": {
+          "self": "/catalog/facet/readonly_language_ssim"
+        }
+      },
+      {
+        "type": "facet",
+        "id": "readonly_subject_ssim",
+        "attributes": {
+          "label": "Subject",
+          "items": [
+            {
+              "attributes": {
+                "label": "Caricature",
+                "value": "Caricature",
+                "hits": 15
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Caricature&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Pets—Great Britain—Caricatures and cartoons",
+                "value": "Pets—Great Britain—Caricatures and cartoons",
+                "hits": 12
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Pets%E2%80%94Great+Britain%E2%80%94Caricatures+and+cartoons&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Cats—Great Britain—Caricatures and cartoons",
+                "value": "Cats—Great Britain—Caricatures and cartoons",
+                "hits": 11
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Cats%E2%80%94Great+Britain%E2%80%94Caricatures+and+cartoons&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Animals—Great Britain—Caricatures and cartoons",
+                "value": "Animals—Great Britain—Caricatures and cartoons",
+                "hits": 10
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Animals%E2%80%94Great+Britain%E2%80%94Caricatures+and+cartoons&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Political science",
+                "value": "Political science",
+                "hits": 8
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Political+science&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Gender",
+                "value": "Gender",
+                "hits": 7
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Gender&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Slave trade",
+                "value": "Slave trade",
+                "hits": 7
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Slave+trade&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Cats—Juvenile fiction",
+                "value": "Cats—Juvenile fiction",
+                "hits": 6
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Cats%E2%80%94Juvenile+fiction&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Gay culture",
+                "value": "Gay culture",
+                "hits": 6
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Gay+culture&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "Transgender people",
+                "value": "Transgender people",
+                "hits": 6
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=Transgender+people&per_page=3&q=cats&search_field=all_fields"
+              }
+            },
+            {
+              "attributes": {
+                "label": "United States—Description and travel",
+                "value": "United States—Description and travel",
+                "hits": 5
+              },
+              "links": {
+                "self": "https://dpul.princeton.edu/catalog.json?f%5Breadonly_subject_ssim%5D%5B%5D=United+States%E2%80%94Description+and+travel&per_page=3&q=cats&search_field=all_fields"
+              }
+            }
+          ]
+        },
+        "links": {
+          "self": "/catalog/facet/readonly_subject_ssim"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "all_fields",
+        "attributes": {
+          "label": "Keyword"
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "title",
+        "attributes": {
+          "label": "Title"
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=title"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "publisher",
+        "attributes": {
+          "label": "Publisher"
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=publisher"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "subject",
+        "attributes": {
+          "label": "Subject"
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=subject"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "relevance",
+        "attributes": {
+          "label": "Relevance"
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields&sort=relevance"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "sort_title",
+        "attributes": {
+          "label": "Title"
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields&sort=sort_title"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "sort_date_desc",
+        "attributes": {
+          "label": "Date Descending"
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields&sort=sort_date_desc"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "sort_date_asc",
+        "attributes": {
+          "label": "Date Ascending"
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields&sort=sort_date_asc"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "sort_author",
+        "attributes": {
+          "label": "Author"
+        },
+        "links": {
+          "self": "https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields&sort=sort_author"
+        }
+      }
+    ]
+  }

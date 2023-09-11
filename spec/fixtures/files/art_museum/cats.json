@@ -1,0 +1,73 @@
+{
+    "took": 14,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": 263,
+      "max_score": 58.366127,
+      "hits": [
+        {
+          "_index": "2023-08-15_0957",
+          "_id": "6463",
+          "_score": 58.366127,
+          "_source": {
+            "displaymaker": "Theophile-Alexandre Steinlen, 1859–1923; born Lausanne, Switzerland; died Paris, France",
+            "objectnumber": "x1948-1210",
+            "creditline": "Bequest of Dan Fellows Platt, Class of 1895",
+            "displaydate": null,
+            "primaryimage": [
+              "https://puam-loris.aws.princeton.edu/loris/INV34694.jp2"
+            ],
+            "medium": "Graphite",
+            "displaytitle": "Two cats",
+            "objectid": 6463,
+            "dimensions": "25.1 × 26.2 cm. (9 7/8 × 10 5/16 in.)"
+          },
+          "_type": "artobjects"
+        },
+        {
+          "_index": "2023-08-15_0957",
+          "_id": "40016",
+          "_score": 58.002666,
+          "_source": {
+            "displaymaker": "Peter Finnemore, British (Welsh), born 1963",
+            "objectnumber": "2001-158",
+            "creditline": "Gift of the artist",
+            "displaydate": "1994",
+            "primaryimage": [
+              "https://puam-loris.aws.princeton.edu/loris/INV11648.jp2"
+            ],
+            "medium": "Gelatin silver print",
+            "displaytitle": "Cats Tales",
+            "objectid": 40016,
+            "dimensions": "image: 19.8 x 28.1 cm (7 13/16 x 11 1/16 in.)\r\nsheet: 27.5 x 33 cm (10 13/16 x 13 in.)"
+          },
+          "_type": "artobjects"
+        },
+        {
+          "_index": "2023-08-15_0957",
+          "_id": "40222",
+          "_score": 55.855583,
+          "_source": {
+            "displaymaker": "Francisco Toledo, 1940–2019, born Juchitan, Oaxaca, Mexico; died Oaxaca City, Mexico; active Oaxaca City",
+            "objectnumber": "2001-120",
+            "creditline": "Bequest of David L. Meginnity, Class of 1958",
+            "displaydate": "1993",
+            "primaryimage": [
+              "https://puam-loris.aws.princeton.edu/loris/PUAMSTU2018-1959213.jp2"
+            ],
+            "medium": "Recto: Black ink and watercolor \r\nVerso: Black ink and watercolor",
+            "displaytitle": "Two Cats",
+            "objectid": 40222,
+            "dimensions": "28 x 38 cm (11 x 14 15/16 in.)"
+          },
+          "_type": "artobjects"
+        }
+      ]
+    }
+  }
