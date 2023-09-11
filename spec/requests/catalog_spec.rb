@@ -4,6 +4,8 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/catalog' do
   it 'returns json' do
+    stub_request(:get, 'https://catalog.princeton.edu/catalog.json?per_page=3&q=rubix&search_field=all_fields')
+      .to_return(status: 200, body: file_fixture('catalog/rubix.json'))
     get '/search/catalog?query=rubix'
 
     expect(response).to be_successful
@@ -11,6 +13,11 @@ RSpec.describe 'GET /search/catalog' do
   end
 
   context 'with a search term' do
+    before do
+      stub_request(:get, 'https://catalog.princeton.edu/catalog.json?per_page=3&q=rubix&search_field=all_fields')
+        .to_return(status: 200, body: file_fixture('catalog/rubix.json'))
+    end
+
     let(:expected_response) do
       { number: 7,
         more: 'https://catalog.princeton.edu/catalog?q=rubix&search_field=all_fields',
@@ -59,6 +66,11 @@ RSpec.describe 'GET /search/catalog' do
   end
 
   context 'without a publisher in records' do
+    before do
+      stub_request(:get, 'https://catalog.princeton.edu/catalog.json?per_page=3&q=pangulubalang&search_field=all_fields')
+        .to_return(status: 200, body: file_fixture('catalog/pangulubalang.json'))
+    end
+
     it 'does not raise the error NoMethodError' do
       get '/search/catalog?query=pangulubalang'
 
@@ -74,6 +86,11 @@ RSpec.describe 'GET /search/catalog' do
   end
 
   context 'with weird search strings' do
+    before do
+      stub_request(:get, 'https://catalog.princeton.edu/catalog.json?per_page=3&q=What%20if%20%22I%20quote%22%20my%20search?&search_field=all_fields')
+        .to_return(status: 200, body: file_fixture('catalog/what_if.json'))
+    end
+
     it 'appropriately escapes the query' do
       get '/search/catalog?query=What if "I quote" my search?'
 
@@ -85,6 +102,11 @@ RSpec.describe 'GET /search/catalog' do
   end
 
   context 'with CJK characters' do
+    before do
+      stub_request(:get, 'https://catalog.princeton.edu/catalog.json?per_page=3&q=%E8%A7%A6%E7%89%A9%E7%94%9F%E6%83%85%E8%AF%9D%E9%81%93%E5%8D%97&search_field=all_fields')
+        .to_return(status: 200, body: file_fixture('catalog/触物生情话道南.json'))
+    end
+
     it 'matches the catalog search results' do
       # 触物生情话道南 is escaped after you put it in the browser - in the search bar it still shows as the
       # correct characters

@@ -29,3 +29,7 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
 end
+
+group :test do
+  gem 'webmock'
+end

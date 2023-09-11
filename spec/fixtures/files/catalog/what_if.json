@@ -1,0 +1,172 @@
+{
+    "links": {
+      "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields",
+      "last": "https://catalog.princeton.edu/catalog.json?page=0&per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields"
+    },
+    "meta": {
+      "pages": {
+        "current_page": 1,
+        "next_page": null,
+        "prev_page": null,
+        "total_pages": 0,
+        "limit_value": 3,
+        "offset_value": 0,
+        "total_count": 0,
+        "first_page?": true,
+        "last_page?": false
+      }
+    },
+    "data": [],
+    "included": [
+      {
+        "type": "search_field",
+        "id": "all_fields",
+        "attributes": {
+          "label": "Keyword"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "title",
+        "attributes": {
+          "label": "Title"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=title"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "author",
+        "attributes": {
+          "label": "Author/Creator"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=author"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "subject",
+        "attributes": {
+          "label": "Subject"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=subject"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "left_anchor",
+        "attributes": {
+          "label": "Title starts with"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=left_anchor"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "browse_subject",
+        "attributes": {
+          "label": "Subject (browse)"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=browse_subject"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "browse_name",
+        "attributes": {
+          "label": "Author (browse)"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=browse_name"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "name_title",
+        "attributes": {
+          "label": "Author (sorted by title)"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=name_title"
+        }
+      },
+      {
+        "type": "search_field",
+        "id": "browse_cn",
+        "attributes": {
+          "label": "Call number (browse)"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=browse_cn"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "score desc, pub_date_start_sort desc, title_sort asc",
+        "attributes": {
+          "label": "relevance"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields&sort=score+desc%2C+pub_date_start_sort+desc%2C+title_sort+asc"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "pub_date_start_sort desc, title_sort asc, score desc",
+        "attributes": {
+          "label": "year (newest first)"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields&sort=pub_date_start_sort+desc%2C+title_sort+asc%2C+score+desc"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "pub_date_start_sort asc, title_sort asc, score desc",
+        "attributes": {
+          "label": "year (oldest first)"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields&sort=pub_date_start_sort+asc%2C+title_sort+asc%2C+score+desc"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "author_sort asc, title_sort asc, score desc",
+        "attributes": {
+          "label": "author"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields&sort=author_sort+asc%2C+title_sort+asc%2C+score+desc"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "title_sort asc, pub_date_start_sort desc, score desc",
+        "attributes": {
+          "label": "title"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields&sort=title_sort+asc%2C+pub_date_start_sort+desc%2C+score+desc"
+        }
+      },
+      {
+        "type": "sort",
+        "id": "cataloged_tdt desc, title_sort asc, score desc",
+        "attributes": {
+          "label": "date cataloged"
+        },
+        "links": {
+          "self": "https://catalog.princeton.edu/catalog.json?per_page=3&q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields&sort=cataloged_tdt+desc%2C+title_sort+asc%2C+score+desc"
+        }
+      }
+    ]
+  }

@@ -4,6 +4,8 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/dpul' do
   it 'returns json' do
+    stub_request(:get, 'https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields')
+      .to_return(status: 200, body: file_fixture('dpul/cats.json'))
     get '/search/dpul?query=cats'
 
     expect(response).to be_successful
@@ -11,6 +13,11 @@ RSpec.describe 'GET /search/dpul' do
   end
 
   context 'with a search term' do
+    before do
+      stub_request(:get, 'https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields')
+        .to_return(status: 200, body: file_fixture('dpul/cats.json'))
+    end
+
     let(:expected_response) do
       { number: 238,
         more: 'https://dpul.princeton.edu/catalog?q=cats&search_field=all_fields',
