@@ -9,6 +9,7 @@ gem 'activemodel'
 gem 'activerecord'
 gem 'activesupport'
 gem 'bootsnap', require: false
+gem 'pg'
 gem 'puma', '~> 5.0'
 gem 'railties'
 

@@ -1,0 +1,8 @@
+name: allsearch
+services:
+  allsearch_dev_database:
+    type: postgres:13
+    portforward: true
+  allsearch_test_database:
+    type: postgres:13
+    portforward: true

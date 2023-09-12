@@ -1,6 +1,40 @@
 version: 2.1
 orbs:
   ruby: circleci/ruby@2.1.0
+executors:
+  allsearch-executor:
+    docker:
+      - image: cimg/ruby:3.1.0-browsers
+        environment:
+          RAILS_ENV: test
+          ALLSEARCH_HOST: localhost
+          AllSEARCH_USER: postgres
+          SOLR_URL: http://solr:SolrRocks@localhost:8983/solr/allsearch-test
+          COVERALLS_PARALLEL: true
+      - image: cimg/postgres:13.6
+        environment:
+          POSTGRES_USER: allsearch
+          POSTGRES_PASSWORD: allsearch
+          POSTGRES_DB: allsearch_test
+    working_directory: ~/allsearch_api  
+commands:
+  setup-bundler:
+    steps:
+      - run:
+          name: Install bundler
+          command: gem install bundler -v '2.4.19'
+      # Restore bundle cache
+      - restore_cache:
+          keys:
+          - allsearch-v1-{{ checksum "Gemfile.lock" }}
+      # Bundle install dependencies
+      - run:
+          name: Install dependencies
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+      - save_cache:
+          key: allsearch-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ./vendor/bundle
 jobs:
   build:
     docker:
@@ -18,11 +52,21 @@ jobs:
           format: progress
           label: Inspecting with Rubocop
   test:
-    docker: 
-      - image: cimg/ruby:3.2
+    executor: allsearch-executor
     parallelism: 3
     steps:
+      - attach_workspace:
+          at: '~/allsearch_api'
       - checkout
+      - setup-bundler
+      - run: ruby --version
+      - run: sudo apt install postgresql-client
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run:
+          name: Database setup
+          command: bundle exec rake db:setup
       - ruby/install-deps
       - ruby/rspec-test:
           include: spec/**/*_spec.rb
