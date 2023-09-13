@@ -1,0 +1,18 @@
+{
+    "responseHeader": {
+      "zkConnected": true,
+      "status": 0,
+      "QTime": 26,
+      "params": {
+        "q": "What if \"I quote\" my search?",
+        "fl": "id,title_display,author_display,pub_created_display,format,holdings_1display",
+        "rows": "3",
+        "facet": "false"
+      }
+    },
+    "response": {
+      "numFound": 0,
+      "start": 0,
+      "docs": []
+    }
+  }

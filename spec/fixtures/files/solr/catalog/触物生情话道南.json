@@ -1,0 +1,63 @@
+{
+    "responseHeader": {
+      "zkConnected": true,
+      "status": 0,
+      "QTime": 26,
+      "params": {
+        "q": "触物生情话道南",
+        "fl": "id,title_display,author_display,pub_created_display,format,holdings_1display",
+        "rows": "3",
+        "facet": "false"
+      }
+    },
+    "response": {
+      "numFound": 81,
+      "start": 0,
+      "docs": [
+        {
+          "id": "99123965713506421",
+          "author_display": [
+            "Foo, Angeline"
+          ],
+          "title_display": "Collecting memories : the Asian Civilisations Museum at the old Tao Nan School = Chu wu sheng qing hua Dao nan.",
+          "pub_created_display": [
+            "Singapore : National Heritage Board, ©1997."
+          ],
+          "format": [
+            "Book"
+          ],
+          "holdings_1display": "{\"22621120770006421\":{\"location_code\":\"marquand$pj\",\"location\":\"Remote Storage (ReCAP): Marquand Library Use Only\",\"library\":\"Marquand Library\",\"call_number\":\"LG395.S576 F66 1997\",\"call_number_browse\":\"LG395.S576 F66 1997\",\"items\":[{\"holding_id\":\"22621120770006421\",\"id\":\"23621120750006421\",\"status_at_load\":\"1\",\"barcode\":\"32101103597843\",\"copy_number\":\"0\"}]}}"
+        },
+        {
+          "id": "SCSB-10418409",
+          "author_display": [
+            "Foo, Angeline"
+          ],
+          "title_display": "Collecting memories : the Asian Civilisations Museum at the old Tao Nan School = Chu wu sheng qing hua Dao nan.",
+          "pub_created_display": [
+            "Singapore : National Heritage Board, c1997."
+          ],
+          "format": [
+            "Book"
+          ],
+          "holdings_1display": "{\"11193682\":{\"location_code\":\"scsbhl\",\"location\":\"Remote Storage\",\"library\":\"ReCAP\",\"call_number\":\"LG395.S576 F66 1997x\",\"call_number_browse\":\"LG395.S576 F66 1997x\",\"items\":[{\"holding_id\":\"11193682\",\"id\":\"16918615\",\"status_at_load\":\"Available\",\"barcode\":\"HX1VG3\",\"storage_location\":\"HD\",\"cgd\":\"Shared\",\"collection_code\":\"HW\"}]},\"11193683\":{\"location_code\":\"scsbhl\",\"location\":\"Remote Storage\",\"library\":\"ReCAP\",\"call_number\":\"MLC-C\",\"call_number_browse\":\"MLC-C\",\"items\":[{\"holding_id\":\"11193683\",\"id\":\"21272199\",\"status_at_load\":\"Available\",\"barcode\":\"HYAJC3\",\"storage_location\":\"HD\",\"cgd\":\"Uncommittable\",\"collection_code\":\"HY\"}]}}"
+        },
+        {
+          "id": "99113166343506421",
+          "author_display": [
+            "Mo, Lifeng, 1949-",
+            "莫砺锋, 1949-"
+          ],
+          "title_display": "Mo Lifeng wen ji / Mo Lifeng zhu.",
+          "pub_created_display": [
+            "Nanjing : Feng huang chu ban she, 2019.",
+            "南京 : 凤凰出版社, 2019."
+          ],
+          "format": [
+            "Book"
+          ],
+          "holdings_1display": "{\"22658560550006421\":{\"location_code\":\"recap$pa\",\"location\":\"Remote Storage\",\"library\":\"ReCAP\",\"call_number\":\"CT3990.M65 A25 2019\",\"call_number_browse\":\"CT3990.M65 A25 2019\",\"items\":[{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.3\",\"id\":\"23658560510006421\",\"status_at_load\":\"1\",\"barcode\":\"32101113456048\",\"copy_number\":\"0\"},{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.4\",\"id\":\"23658560500006421\",\"status_at_load\":\"1\",\"barcode\":\"32101113456055\",\"copy_number\":\"0\"},{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.2\",\"id\":\"23658560520006421\",\"status_at_load\":\"1\",\"barcode\":\"32101113456030\",\"copy_number\":\"0\"},{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.7\",\"id\":\"23658560530006421\",\"status_at_load\":\"1\",\"barcode\":\"32101113456089\",\"copy_number\":\"0\"},{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.1\",\"id\":\"23658560540006421\",\"status_at_load\":\"1\",\"barcode\":\"32101090077247\",\"copy_number\":\"0\"},{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.8\",\"id\":\"23658560450006421\",\"status_at_load\":\"1\",\"barcode\":\"32101113456097\",\"copy_number\":\"0\"},{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.10\",\"id\":\"23658560410006421\",\"status_at_load\":\"1\",\"barcode\":\"32101113456113\",\"copy_number\":\"0\"},{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.9\",\"id\":\"23658560420006421\",\"status_at_load\":\"1\",\"barcode\":\"32101113456105\",\"copy_number\":\"0\"},{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.5\",\"id\":\"23658560480006421\",\"status_at_load\":\"1\",\"barcode\":\"32101113456063\",\"copy_number\":\"0\"},{\"holding_id\":\"22658560550006421\",\"enumeration\":\"vol.6\",\"id\":\"23658560490006421\",\"status_at_load\":\"1\",\"barcode\":\"32101113456071\",\"copy_number\":\"0\"}],\"location_has\":[\"Vol.1-v.10\"],\"supplements\":[null],\"indexes\":[null]}}"
+        }
+      ]
+    }
+  }

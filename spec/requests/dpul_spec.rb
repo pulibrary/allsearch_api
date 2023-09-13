@@ -4,8 +4,8 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/dpul' do
   it 'returns json' do
-    stub_request(:get, 'https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields')
-      .to_return(status: 200, body: file_fixture('dpul/cats.json'))
+    stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&q=cats&rows=3&sort=score%20desc')
+      .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
     get '/search/dpul?query=cats'
 
     expect(response).to be_successful
@@ -14,8 +14,8 @@ RSpec.describe 'GET /search/dpul' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'https://dpul.princeton.edu/catalog.json?per_page=3&q=cats&search_field=all_fields')
-        .to_return(status: 200, body: file_fixture('dpul/cats.json'))
+      stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&q=cats&rows=3&sort=score%20desc')
+        .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
     end
 
     let(:expected_response) do
@@ -28,7 +28,7 @@ RSpec.describe 'GET /search/dpul' do
             publisher: 'London ; Edinburgh ; New York : Thomas Nelson & Sons, [not after 1888]',
             id: '02578b4e2ccf4497f1426a3ab7e11464',
             type: 'Book',
-            url: 'https://dpul.princeton.edu/catalog/9w032853n',
+            url: 'https://dpul.princeton.edu/catalog/02578b4e2ccf4497f1426a3ab7e11464',
             other_fields: {
               collection: 'Lloyd E. Cotsen'
             } }
