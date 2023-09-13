@@ -1,8 +1,30 @@
 name: allsearch
 services:
-  allsearch_dev_database:
+  allsearch_database:
     type: postgres:13
     portforward: true
-  allsearch_test_database:
-    type: postgres:13
+  catalog_solr:
+    type: solr:8.4
     portforward: true
+    core: catalog
+    config:
+      dir: "solr/solr_configs/catalog-production-v2/conf"
+  dpul_solr:
+    type: solr:8.4
+    portforward: true
+    core: dpul
+    config:
+      dir: "solr/solr_configs/dpul/conf"
+  findingaids_solr:
+    type: solr:8.4
+    portforward: true
+    core: findingaids
+    config:
+      dir: "solr/solr_configs/pulfalight-production/conf"
+proxy:
+  catalog_solr:
+    - catalog.dev.solr.lndo.site:8983
+  dpul_solr:
+    - dpul.dev.solr.lndo.site:8983
+  findingaids_solr:
+    - findingaids.dev.solr.lndo.site:8983

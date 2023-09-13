@@ -41,10 +41,6 @@ class Dpul
     document[:readonly_collections_tesim]&.first
   end
 
-  def solr_collection
-    'dpul-production'
-  end
-
   def solr_fields
     %w[id readonly_title_ssim readonly_creator_ssim readonly_publisher_ssim readonly_format_ssim
        readonly_collections_tesim].join(',')

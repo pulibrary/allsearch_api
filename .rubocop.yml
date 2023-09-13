@@ -5,6 +5,11 @@ require:
 
 AllCops:
   NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'solr/**/*'
+    - 'vendor/bundle/**/*'
 
 RSpec/ExampleLength:
   Enabled: false
