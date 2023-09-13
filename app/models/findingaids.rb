@@ -12,46 +12,6 @@ class Findingaids
     @service_response = solr_service_response(query_terms:)
   end
 
-  # Use the collection name as the title?
-  def title(document:)
-    document[:collection_ssm]&.first
-  end
-
-  def creator(document:)
-    document[:creator_ssm]&.first
-  end
-
-  # No sensible field to map to this currently
-  def publisher(document:)
-    # tbd - nothing in the current json that seems relevant
-  end
-
-  def type(document:)
-    document[:level_sim]&.first
-  end
-
-  # This field may contain html
-  def description(document:)
-    document[:scopecontent_ssm]&.first
-  end
-
-  def other_fields(document:)
-    doc_keys = [:repository, :extent, :access_restriction]
-    parsed_record(document:, doc_keys:)
-  end
-
-  def repository(document:)
-    document[:repository_ssm]&.first
-  end
-
-  def extent(document:)
-    document[:extent_ssm]&.to_sentence
-  end
-
-  def access_restriction(document:)
-    document[:accessrestrict_ssm]&.first
-  end
-
   def solr_collection
     'pulfalight-production'
   end
