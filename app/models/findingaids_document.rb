@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
+# This class is responsible for getting relevant
+# metadata from PULFALight's JSON
 class FindingaidsDocument < Document
   private
 
   def id
-    @json[:id]
+    json[:id]
   end
 
   def url
@@ -13,11 +15,11 @@ class FindingaidsDocument < Document
 
   # Use the collection name as the title?
   def title
-    @json[:collection_ssm]&.first
+    json[:collection_ssm]&.first
   end
 
   def creator
-    @json[:creator_ssm]&.first
+    json[:creator_ssm]&.first
   end
 
   # No sensible field to map to this currently
@@ -26,12 +28,12 @@ class FindingaidsDocument < Document
   end
 
   def type
-    @json[:level_sim]&.first
+    json[:level_sim]&.first
   end
 
   # This field may contain html
   def description
-    @json[:scopecontent_ssm]&.first
+    json[:scopecontent_ssm]&.first
   end
 
   def doc_keys
@@ -39,14 +41,14 @@ class FindingaidsDocument < Document
   end
 
   def repository
-    @json[:repository_ssm]&.first
+    json[:repository_ssm]&.first
   end
 
   def extent
-    @json[:extent_ssm]&.to_sentence
+    json[:extent_ssm]&.to_sentence
   end
 
   def access_restriction
-    @json[:accessrestrict_ssm]&.first
+    json[:accessrestrict_ssm]&.first
   end
 end

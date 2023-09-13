@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# A generic document class, to be subclassed with
+# specific logic about getting document metadata
+# from various JSON structures
 class Document
   def initialize(json:, doc_keys:)
     @json = json
@@ -20,4 +23,6 @@ class Document
   def other_fields
     doc_keys&.index_with { |key| send(key) }
   end
+
+  attr_reader :json
 end

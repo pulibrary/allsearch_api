@@ -5,7 +5,7 @@ class DpulController < ApplicationController
   def show
     @dpul_query = Dpul.new(query_terms: query_params)
 
-    render json: @dpul_query.our_response
+    render json: dpul_query.our_response
   end
 
   private
@@ -17,4 +17,6 @@ class DpulController < ApplicationController
   def show_query_errors(exception)
     render json: { error: exception.message }, status: :bad_request
   end
+
+  attr_reader :dpul_query
 end

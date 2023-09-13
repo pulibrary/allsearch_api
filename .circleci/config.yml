@@ -51,6 +51,15 @@ jobs:
       - ruby/rubocop-check:
           format: progress
           label: Inspecting with Rubocop
+  reek:
+    docker:
+      - image: cimg/ruby:3.2
+    steps:
+      - checkout
+      - ruby/install-deps
+      - run:
+          name: Check code smells with Reek
+          command: bundle exec reek app
   test:
     executor: allsearch-executor
     parallelism: 3
@@ -75,6 +84,7 @@ workflows:
     jobs:
       - build
       - checking
+      - reek
       - test:
           requires:
             - build

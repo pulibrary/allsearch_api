@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
+# This class is responsible for getting relevant
+# metadata from DPUL's JSON
 class DpulDocument < Document
   private
 
   def id
-    @json[:id]
+    json[:id]
   end
 
   def url
@@ -12,19 +14,19 @@ class DpulDocument < Document
   end
 
   def title
-    @json[:readonly_title_ssim]&.first
+    json[:readonly_title_ssim]&.first
   end
 
   def creator
-    @json[:readonly_creator_ssim]&.first
+    json[:readonly_creator_ssim]&.first
   end
 
   def publisher
-    @json[:readonly_publisher_ssim]&.first
+    json[:readonly_publisher_ssim]&.first
   end
 
   def type
-    @json[:readonly_format_ssim]&.first
+    json[:readonly_format_ssim]&.first
   end
 
   def description
@@ -40,6 +42,6 @@ class DpulDocument < Document
   end
 
   def collection
-    @json[:readonly_collections_tesim]&.first
+    json[:readonly_collections_tesim]&.first
   end
 end

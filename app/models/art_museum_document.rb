@@ -1,18 +1,20 @@
 # frozen_string_literal: true
 
+# This class is responsible for getting relevant
+# metadata from the Art Museum's JSON
 class ArtMuseumDocument < Document
   private
 
   def id
-    @json[:_id]
+    json[:_id]
   end
 
   def title
-    @json.dig(:_source, :displaytitle)
+    json.dig(:_source, :displaytitle)
   end
 
   def creator
-    @json.dig(:_source, :displaymaker)
+    json.dig(:_source, :displaymaker)
   end
 
   def publisher
@@ -20,7 +22,7 @@ class ArtMuseumDocument < Document
   end
 
   def type
-    @json[:_type]
+    json[:_type]
   end
 
   def description
@@ -36,22 +38,22 @@ class ArtMuseumDocument < Document
   end
 
   def credit_line
-    @json.dig(:_source, :creditline)
+    json.dig(:_source, :creditline)
   end
 
   def medium
-    @json.dig(:_source, :medium)
+    json.dig(:_source, :medium)
   end
 
   def dimensions
-    @json.dig(:_source, :dimensions)
+    json.dig(:_source, :dimensions)
   end
 
   def primary_image
-    @json.dig(:_source, :primaryimage)&.first
+    json.dig(:_source, :primaryimage)&.first
   end
 
   def object_number
-    @json.dig(:_source, :objectnumber)
+    json.dig(:_source, :objectnumber)
   end
 end

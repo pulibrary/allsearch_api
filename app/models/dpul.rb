@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This class is responsible for querying DPUL
 class Dpul
   include ActiveModel::API
   include Parsed
@@ -14,7 +15,7 @@ class Dpul
 
   def solr_fields
     %w[id readonly_title_ssim readonly_creator_ssim readonly_publisher_ssim readonly_format_ssim
-       readonly_collections_tesim].join(',')
+       readonly_collections_tesim]
   end
 
   def solr_sort

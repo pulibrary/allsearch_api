@@ -5,7 +5,7 @@ class FindingaidsController < ApplicationController
   def show
     @findingaids_query = Findingaids.new(query_terms: query_params)
 
-    render json: @findingaids_query.our_response
+    render json: findingaids_query.our_response
   end
 
   private
@@ -17,4 +17,6 @@ class FindingaidsController < ApplicationController
   def show_query_errors(exception)
     render json: { error: exception.message }, status: :bad_request
   end
+
+  attr_reader :findingaids_query
 end
