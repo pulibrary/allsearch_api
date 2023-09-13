@@ -1,0 +1,28 @@
+---
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+  timeout: 5000
+
+development: &development
+  <<: *default
+  database: allsearch_development
+  host: <%= ENV["lando_allsearch_database_conn_host"] || "localhost" %>
+  port: <%= ENV["lando_allsearch_database_conn_port"] %>
+  username: <%= ENV["lando_allsearch_database_creds_user"] || "allsearch" %>
+  password: <%= ENV["lando_allsearch_database_creds_password"] || "allsearch" %>
+
+test:
+  <<: *development
+  database: allsearch_test
+
+production: &production
+  <<: *default
+  database: <%= ENV.fetch("APP_DB", "database") %>
+  host: <%= ENV.fetch("APP_DB_HOST", "host") %>
+  username: <%= ENV.fetch("APP_DB_USERNAME",'user') %>
+  password: <%= ENV.fetch("APP_DB_PASSWORD",'password') %>
+
+staging:
+  <<: *production
