@@ -56,6 +56,24 @@ development:
 
 staging:
   <<: *default
+  catalog:
+    solr:
+      host: "lib-solr8-staging.princeton.edu"
+      port: 8983
+      collection: "catalog-alma-staging"
+      ssl: true
+  dpul:
+    solr:
+      host: "lib-solr8-staging.princeton.edu"
+      port: 8983
+      collection: "dpul-staging"
+      ssl: true
+  findingaids:
+    solr:
+      host: "lib-solr8-staging.princeton.edu"
+      port: 8983
+      collection: "pulfalight-staging"
+      ssl: true
 
 test:
   <<: *default
