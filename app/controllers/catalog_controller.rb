@@ -1,22 +1,10 @@
 # frozen_string_literal: true
 
-class CatalogController < ApplicationController
+class CatalogController < ServiceController
   rescue_from ActionController::ParameterMissing, with: :show_query_errors
-  def show
-    @catalog_query = Catalog.new(query_terms: query_params)
 
-    render json: catalog_query.our_response
+  def initialize
+    super
+    @service = Catalog
   end
-
-  private
-
-  def query_params
-    params.require(:query)
-  end
-
-  def show_query_errors(exception)
-    render json: { error: exception.message }, status: :bad_request
-  end
-
-  attr_reader :catalog_query
 end

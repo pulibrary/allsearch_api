@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-class ArtMuseumController < ServiceController
+class PulmapController < ServiceController
   rescue_from ActionController::ParameterMissing, with: :show_query_errors
 
   def initialize
     super
-    @service = ArtMuseum
+    @service = Pulmap
   end
 end
