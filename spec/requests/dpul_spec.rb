@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/dpul' do
   it 'returns json' do
-    stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&q=cats&rows=3&sort=score%20desc')
+    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&q=cats&rows=3&sort=score%20desc')
       .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
     get '/search/dpul?query=cats'
 
@@ -14,7 +14,7 @@ RSpec.describe 'GET /search/dpul' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&q=cats&rows=3&sort=score%20desc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&q=cats&rows=3&sort=score%20desc')
         .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
     end
 

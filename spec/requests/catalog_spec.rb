@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/catalog' do
   it 'returns json' do
-    stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
       .to_return(status: 200, body: file_fixture('solr/catalog/rubix.json'))
     get '/search/catalog?query=rubix'
 
@@ -14,7 +14,7 @@ RSpec.describe 'GET /search/catalog' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
         .to_return(status: 200, body: file_fixture('solr/catalog/rubix.json'))
     end
 
@@ -67,7 +67,7 @@ RSpec.describe 'GET /search/catalog' do
 
   context 'without a publisher in records' do
     before do
-      stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=pangulubalang&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=pangulubalang&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
         .to_return(status: 200, body: file_fixture('solr/catalog/pangulubalang.json'))
     end
 
@@ -87,7 +87,7 @@ RSpec.describe 'GET /search/catalog' do
 
   context 'with weird search strings' do
     before do
-      stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=What%20if%20%22I%20quote%22%20my%20search?&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=What%20if%20%22I%20quote%22%20my%20search?&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
         .to_return(status: 200, body: file_fixture('solr/catalog/what_if.json'))
     end
 
@@ -103,7 +103,7 @@ RSpec.describe 'GET /search/catalog' do
 
   context 'with CJK characters' do
     before do
-      stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=%E8%A7%A6%E7%89%A9%E7%94%9F%E6%83%85%E8%AF%9D%E9%81%93%E5%8D%97&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=%E8%A7%A6%E7%89%A9%E7%94%9F%E6%83%85%E8%AF%9D%E9%81%93%E5%8D%97&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
         .to_return(status: 200, body: file_fixture('solr/catalog/触物生情话道南.json'))
     end
 
