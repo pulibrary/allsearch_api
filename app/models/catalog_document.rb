@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
+# This class is responsible for getting relevant
+# metadata from the Catalog's JSON
 class CatalogDocument < Document
   private
 
   def id
-    @json[:id]
+    json[:id]
   end
 
   def url
@@ -12,19 +14,19 @@ class CatalogDocument < Document
   end
 
   def title
-    @json[:title_display]
+    json[:title_display]
   end
 
   def creator
-    @json[:author_display]&.first
+    json[:author_display]&.first
   end
 
   def publisher
-    @json[:pub_created_display]&.first
+    json[:pub_created_display]&.first
   end
 
   def type
-    @json[:format]&.first
+    json[:format]&.first
   end
 
   def description
@@ -40,22 +42,17 @@ class CatalogDocument < Document
   end
 
   def first_holding
-    return nil unless @json[:holdings_1display]
+    holdings_string = json[:holdings_1display]
+    return {} if holdings_string.blank?
 
-    JSON.parse(@json[:holdings_1display])&.first&.last
+    JSON.parse(holdings_string)&.first&.last
   end
 
   def call_number
-    holding = first_holding
-    return nil unless holding
-
-    holding['call_number']
+    first_holding['call_number']
   end
 
   def library
-    holding = first_holding
-    return nil unless holding
-
-    holding['library']
+    first_holding['library']
   end
 end

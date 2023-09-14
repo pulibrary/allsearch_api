@@ -18,6 +18,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   gem 'pry-byebug'
+  gem 'reek'
   gem 'rspec_junit_formatter', require: false
   gem 'rspec-rails'
   gem 'rubocop-rails', require: false

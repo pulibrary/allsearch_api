@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This module helps classes parse API responses
 module Parsed
   extend ActiveSupport::Concern
 

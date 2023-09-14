@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This class is responsible for querying Findingaids (aka PULFAlight)
 class Findingaids
   include ActiveModel::API
   include Parsed
@@ -17,7 +18,7 @@ class Findingaids
   end
 
   def solr_fields
-    'id,collection_ssm,creator_ssm,level_sim,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm'
+    %w[id collection_ssm creator_ssm level_sim scopecontent_ssm repository_ssm extent_ssm accessrestrict_ssm]
   end
 
   def solr_sort

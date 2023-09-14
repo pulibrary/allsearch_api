@@ -5,7 +5,7 @@ class CatalogController < ApplicationController
   def show
     @catalog_query = Catalog.new(query_terms: query_params)
 
-    render json: @catalog_query.our_response
+    render json: catalog_query.our_response
   end
 
   private
@@ -17,4 +17,6 @@ class CatalogController < ApplicationController
   def show_query_errors(exception)
     render json: { error: exception.message }, status: :bad_request
   end
+
+  attr_reader :catalog_query
 end

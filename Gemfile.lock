@@ -43,6 +43,7 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
+    kwalify (0.7.2)
     language_server-protocol (3.17.0.3)
     loofah (2.21.3)
       crass (~> 1.0.2)
@@ -91,6 +92,10 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
+    reek (6.1.4)
+      kwalify (~> 0.7.0)
+      parser (~> 3.2.0)
+      rainbow (>= 2.0, < 4.0)
     regexp_parser (2.8.1)
     rexml (3.2.6)
     rspec-core (3.12.2)
@@ -165,6 +170,7 @@ DEPENDENCIES
   pry-byebug
   puma (~> 5.0)
   railties
+  reek
   rspec-rails
   rspec_junit_formatter
   rubocop-rails

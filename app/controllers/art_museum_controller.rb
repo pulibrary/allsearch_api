@@ -5,7 +5,7 @@ class ArtMuseumController < ApplicationController
   def show
     @art_museum_query = ArtMuseum.new(query_terms: query_params)
 
-    render json: @art_museum_query.our_response
+    render json: art_museum_query.our_response
   end
 
   private
@@ -17,4 +17,6 @@ class ArtMuseumController < ApplicationController
   def show_query_errors(exception)
     render json: { error: exception.message }, status: :bad_request
   end
+
+  attr_reader :art_museum_query
 end

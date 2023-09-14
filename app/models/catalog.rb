@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This class is responsible for querying the Catalog
 class Catalog
   include ActiveModel::API
   include Parsed
@@ -13,7 +14,7 @@ class Catalog
   end
 
   def solr_fields
-    'id,title_display,author_display,pub_created_display,format,holdings_1display'
+    %w[id title_display author_display pub_created_display format holdings_1display]
   end
 
   def solr_sort

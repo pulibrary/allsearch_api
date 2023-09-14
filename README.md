@@ -25,6 +25,11 @@ bundle exec rspec
 ```bash
 bundle exec rubocop
 ```
+
+### Reek
+```bash
+bundle exec reek
+```
 ## Create a new service
 - Controller
   - Must have `#show` method. Can base entire controller on existing controllers, just instantiate the appropriate model within the show method
