@@ -11,13 +11,8 @@ module Parsed
   end
 
   def parsed_record(document:, doc_keys:)
-    doc_hash = {}
-    # The method name must match the key name, and must take the keyword argument `document:`
-    doc_keys.each do |key|
-      val = send(key, document:)
-      doc_hash[key] = val if val
-    end
-    doc_hash
+    document_class = "#{self.class}Document".constantize
+    document_class.new(json: document, doc_keys:).to_h
   end
 
   def our_response
