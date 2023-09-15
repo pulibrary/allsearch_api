@@ -22,7 +22,7 @@ group :development do
   gem 'bcrypt_pbkdf'
   gem 'capistrano', require: false
   gem 'capistrano-bundler'
-  gem 'capistrano-passenger'
+  gem 'capistrano-rails', require: false
   gem 'ed25519'
   gem 'puma', '~> 5.0'
 end
