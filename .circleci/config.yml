@@ -79,6 +79,15 @@ jobs:
       - ruby/install-deps
       - ruby/rspec-test:
           include: spec/**/*_spec.rb
+  semgrep:
+    docker:
+        - image: returntocorp/semgrep
+    steps:
+      - checkout
+      - run:
+          name: Check code against community-provided and custom semgrep rules
+          command: semgrep ci --config auto --config .semgrep.yml
+
 workflows:
   build_and_test:
     jobs:
@@ -88,3 +97,4 @@ workflows:
       - test:
           requires:
             - build
+      - semgrep
