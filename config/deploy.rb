@@ -12,4 +12,13 @@ set :log_level, :debug
 
 set :ssh_options, { forward_agent: true }
 
-set :passenger_restart_with_touch, true
+namespace :passenger do
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute 'passenger-config restart-app /opt/allsearch_rails_api/current'
+    end
+  end
+
+  after :publishing, :restart
+end

@@ -2,4 +2,4 @@
 
 set :stage, :staging
 set :rails_env, 'staging'
-server 'allsearch-api-staging1', user: 'deploy'
+server 'allsearch-api-staging1', user: 'deploy', roles: ['app']
