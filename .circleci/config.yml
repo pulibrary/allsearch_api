@@ -87,6 +87,16 @@ jobs:
       - run:
           name: Check code against community-provided and custom semgrep rules
           command: semgrep ci --config auto --config .semgrep.yml
+  brakeman:
+    executor: allsearch-executor
+    steps:
+      - attach_workspace:
+          at: '~/allsearch_api'
+      - setup-bundler
+      - run: 
+          name: Check code for vulnerabilities
+          command: bundle exec brakeman
+
 
 workflows:
   build_and_test:
@@ -94,6 +104,7 @@ workflows:
       - build
       - checking
       - reek
+      - brakeman
       - test:
           requires:
             - build

@@ -28,6 +28,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'brakeman'
   gem 'pry-byebug'
   gem 'reek'
   gem 'rspec_junit_formatter', require: false
