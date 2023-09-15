@@ -30,6 +30,19 @@ bundle exec rubocop
 ```bash
 bundle exec reek
 ```
+
+## Semgrep
+This repository uses [semgrep](https://semgrep.dev/) to:
+
+* Perform static security analysis
+
+To run semgrep locally:
+
+```
+brew install semgrep
+semgrep --config auto . # run rules from the semgrep community
+```
+
 ## Create a new service
 - Controller
   - Must have `#show` method. Can base entire controller on existing controllers, just instantiate the appropriate model within the show method
