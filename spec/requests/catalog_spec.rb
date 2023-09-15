@@ -36,16 +36,39 @@ RSpec.describe 'GET /search/catalog' do
         ] }
     end
 
+    # it 'can take a parameter' do
+    #   get '/search/catalog?query=rubix'
+
+    #   expect(response).to be_successful
+    #   response_body = JSON.parse(response.body, symbolize_names: true)
+
+    #   expect(response_body.keys).to contain_exactly(:number, :more, :records)
+    #   expect(response_body[:records].first.keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
+    #                                                                 :other_fields)
+    #   expect(response_body[:records].first).to match(expected_response[:records].first)
+    # end
     it 'can take a parameter' do
-      get '/search/catalog?query=rubix'
+      # tags 'Catalog'
+      # consumes 'application/json'
+      # produces 'application/json'
+      # description "Catalog service"
 
-      expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      path '/search/catalog/query={query}' do
+        parameter name: 'query', in: :path, type: :string, description: 'A string to query the catalog'
+        get '/search/catalog?query=rubix' do
 
-      expect(response_body.keys).to contain_exactly(:number, :more, :records)
-      expect(response_body[:records].first.keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
-                                                                    :other_fields)
-      expect(response_body[:records].first).to match(expected_response[:records].first)
+          description "Get results from the catalog service"
+          produces 'application/json'
+
+          expect(response).to be_successful
+          response_body = JSON.parse(response.body, symbolize_names: true)
+
+          expect(response_body.keys).to contain_exactly(:number, :more, :records)
+          expect(response_body[:records].first.keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
+                                                                        :other_fields)
+          expect(response_body[:records].first).to match(expected_response[:records].first)
+        end
+      end
     end
 
     it 'only returns the first three records' do
