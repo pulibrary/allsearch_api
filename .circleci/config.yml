@@ -92,6 +92,7 @@ jobs:
     steps:
       - attach_workspace:
           at: '~/allsearch_api'
+      - checkout
       - setup-bundler
       - run: 
           name: Check code for vulnerabilities
