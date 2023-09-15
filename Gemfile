@@ -11,6 +11,7 @@ gem 'activesupport'
 gem 'bootsnap', require: false
 gem 'ddtrace', require: 'ddtrace/auto_instrument'
 gem 'dogstatsd-ruby'
+gem 'honeybadger'
 gem 'pg'
 gem 'puma', '~> 5.0'
 gem 'railties'
