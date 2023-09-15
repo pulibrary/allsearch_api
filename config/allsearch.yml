@@ -4,25 +4,21 @@ default: &default
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
       collection: "catalog-alma-production"
-      ssl: true
   dpul:
     solr:
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
       collection: "dpul-production"
-      ssl: true
   findingaids:
     solr:
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
       collection: "pulfalight-production"
-      ssl: true
   pulmap:
     solr: 
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
       collection: "pulmap"
-      ssl: true 
 
 development:
   <<: *default
@@ -31,31 +27,42 @@ development:
       host: <%= ENV["lando_catalog_solr_conn_host"] %>
       port: <%= ENV["lando_catalog_solr_conn_port"] %>
       collection: "catalog"
-      ssl: false
 
   dpul:
     solr:
       host: <%= ENV["lando_dpul_solr_conn_host"] %>
       port: <%= ENV["lando_dpul_solr_conn_port"] %>
       collection: "dpul"
-      ssl: false
 
   findingaids:
     solr:
       host: <%= ENV["lando_findingaids_solr_conn_host"] %>
       port: <%= ENV["lando_findingaids_solr_conn_port"] %>
       collection: "findingaids"
-      ssl: false
   
   pulmap:
     solr:
       host: <%= ENV["lando_pulmap_solr_conn_host"] %>
       port: <%= ENV["lando_pulmap_solr_conn_port"] %> 
       collection: "pulmap"
-      ssl: false
 
 staging:
   <<: *default
+  catalog:
+    solr:
+      host: "lib-solr8-staging.princeton.edu"
+      port: 8983
+      collection: "catalog-alma-staging"
+  dpul:
+    solr:
+      host: "lib-solr8-staging.princeton.edu"
+      port: 8983
+      collection: "dpul-staging"
+  findingaids:
+    solr:
+      host: "lib-solr8-staging.princeton.edu"
+      port: 8983
+      collection: "pulfalight-staging"
 
 test:
   <<: *default

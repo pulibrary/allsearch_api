@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/findingaids' do
   it 'returns json' do
-    stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_sim,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_sim:Collection')
+    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_sim,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_sim:Collection')
       .to_return(status: 200, body: file_fixture('solr/findingaids/cats.json'))
     get '/search/findingaids?query=cats'
 
@@ -14,7 +14,7 @@ RSpec.describe 'GET /search/findingaids' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'https://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_sim,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_sim:Collection')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_sim,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_sim:Collection')
         .to_return(status: 200, body: file_fixture('solr/findingaids/cats.json'))
     end
 
