@@ -1,7 +1,7 @@
 name: allsearch
 services:
   allsearch_database:
-    type: postgres:13
+    type: postgres:15
     portforward: true
   catalog_solr:
     type: solr:8.4
