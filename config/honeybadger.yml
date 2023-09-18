@@ -1,6 +1,7 @@
 ---
 # For more options, see https://docs.honeybadger.io/lib/ruby/gem-reference/configuration
 # The API key is configured as an environment variable in Princeton Ansible 
+api_key: "<%= ENV['HONEYBADGER_API_KEY'] %>"
 
 # The environment your app is running in.
 env: "<%= Rails.env %>"

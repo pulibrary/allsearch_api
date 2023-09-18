@@ -13,7 +13,6 @@ gem 'ddtrace', require: 'ddtrace/auto_instrument'
 gem 'dogstatsd-ruby'
 gem 'honeybadger'
 gem 'pg'
-gem 'puma', '~> 5.0'
 gem 'railties'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -23,8 +22,9 @@ group :development do
   gem 'bcrypt_pbkdf'
   gem 'capistrano', require: false
   gem 'capistrano-bundler'
-  gem 'capistrano-passenger'
+  gem 'capistrano-rails', require: false
   gem 'ed25519'
+  gem 'puma', '~> 5.0'
 end
 
 group :development, :test do
