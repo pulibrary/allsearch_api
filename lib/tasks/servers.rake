@@ -13,5 +13,6 @@ namespace :servers do
     system('lando start')
     system('rake servers:initialize')
     system('rake servers:initialize RAILS_ENV=test')
+    Rake::Task['best_bets:sync'].invoke
   end
 end

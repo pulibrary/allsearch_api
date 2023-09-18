@@ -2,3 +2,5 @@
 detectors:
   IrresponsibleModule:
     enabled: false
+exclude_paths:
+  - db
