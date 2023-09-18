@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_18_174143) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_18_230048) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_174143) do
     t.date "last_update"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "oauth_tokens", force: :cascade do |t|
+    t.string "service", null: false
+    t.string "endpoint", null: false
+    t.string "token", null: false
+    t.datetime "expiration_time", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["endpoint"], name: "index_oauth_tokens_on_endpoint", unique: true
+    t.index ["service"], name: "index_oauth_tokens_on_service", unique: true
   end
 
 end
