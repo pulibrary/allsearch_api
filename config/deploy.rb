@@ -19,6 +19,6 @@ namespace :passenger do
       execute 'passenger-config restart-app /opt/allsearch_rails_api/current'
     end
   end
-
-  after :publishing, :restart
 end
+
+after 'deploy:publishing', 'passenger:restart'
