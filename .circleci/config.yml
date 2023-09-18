@@ -11,7 +11,7 @@ executors:
           AllSEARCH_USER: postgres
           SOLR_URL: http://solr:SolrRocks@localhost:8983/solr/allsearch-test
           COVERALLS_PARALLEL: true
-      - image: cimg/postgres:13.6
+      - image: cimg/postgres:15.4
         environment:
           POSTGRES_USER: allsearch
           POSTGRES_PASSWORD: allsearch
