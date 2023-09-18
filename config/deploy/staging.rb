@@ -2,6 +2,5 @@
 
 set :stage, :staging
 set :rails_env, 'staging'
-set :linked_dirs, %w[log]
 
 server 'allsearch-api-staging1', user: 'deploy', roles: ['app']
