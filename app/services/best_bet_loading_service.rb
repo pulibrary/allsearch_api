@@ -22,8 +22,8 @@ class BestBetLoadingService
   end
 
   def process_data
-    BestBetDocument.destroy_all
-    csv.each { |row| BestBetDocument.new_from_csv(row) }
+    BestBetRecord.destroy_all
+    csv.each { |row| BestBetRecord.new_from_csv(row) }
   end
 
   def data_is_valid?

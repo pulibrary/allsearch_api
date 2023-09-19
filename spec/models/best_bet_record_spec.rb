@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe BestBetDocument do
+RSpec.describe BestBetRecord do
   describe 'query scope' do
     it 'finds matches in the search_terms (array) field' do
       doc1 = described_class.create(search_terms: %w[dogs cats])
