@@ -12,6 +12,8 @@ set :log_level, :debug
 
 set :ssh_options, { forward_agent: true }
 
+set :linked_dirs, %w[log]
+
 namespace :passenger do
   desc 'Restart application'
   task :restart do
