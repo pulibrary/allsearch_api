@@ -17,10 +17,11 @@ module Parsed
   end
 
   def our_response
-    {
+    hash = {
       number:,
-      more: more_link,
       records: parsed_records(documents:)
-    }.to_json
+    }
+    hash[:more] = more_link if more_link.present?
+    hash.to_json
   end
 end
