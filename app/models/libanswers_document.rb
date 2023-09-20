@@ -4,11 +4,11 @@
 # metadata from the Libanswers FAQ search JSON
 class LibanswersDocument < Document
   def title
-    json['question']
+    document['question']
   end
 
   def id
-    json['id'].to_s
+    document['id'].to_s
   end
 
   def type
@@ -16,11 +16,11 @@ class LibanswersDocument < Document
   end
 
   def url
-    json['url'].gsub('\/', '/')
+    document['url'].gsub('\/', '/')
   end
 
   def topics
-    json['topics']&.to_sentence
+    document['topics']&.to_sentence
   end
 
   # not implemented for this API

@@ -37,6 +37,7 @@ RSpec.describe 'GET /search/best-bet' do
     response_body = JSON.parse(response.body, symbolize_names: true)
 
     expect(response_body.keys).to contain_exactly(:number, :records)
+    expect(response_body[:records].count).to eq(1)
     expect(response_body[:records].first.keys).to match_array(expected_record_keys)
     # Since right now the ID is coming from the database, it will be different each time we run the test
     matching_record_keys = expected_record_keys - [:id]

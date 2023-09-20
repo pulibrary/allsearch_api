@@ -5,13 +5,13 @@ require 'rails_helper'
 RSpec.describe LibanswersDocument do
   describe '#url' do
     context 'when libanswers gives us a URL with escaped slashes' do
-      let(:json) do
+      let(:document) do
         { 'url' => 'https:\/\/faq.library.princeton.edu\/econ\/faq\/11210' }
       end
 
       it 'removes the escaping' do
-        document = described_class.new(json:, doc_keys: [])
-        expect(document.url).to eq('https://faq.library.princeton.edu/econ/faq/11210')
+        doc = described_class.new(document:, doc_keys: [])
+        expect(doc.url).to eq('https://faq.library.princeton.edu/econ/faq/11210')
       end
     end
   end

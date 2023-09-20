@@ -7,7 +7,6 @@ class BestBet
 
   def initialize(query_terms:)
     @query_terms = query_terms
-    # @service = 'bestbet'
     @service_response = best_bet_service_response
   end
 

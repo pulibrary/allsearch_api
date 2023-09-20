@@ -11,7 +11,7 @@ RSpec.describe BestBetLoadingService do
   end
 
   it 'creates a new row in the best_bet table for each CSV row' do
-    expect { described_class.new.run }.to change(BestBetRecord, :count).by(4)
+    expect { described_class.new.run }.to change(BestBetRecord, :count).by(6)
     expect(BestBetRecord.third.title).to eq('Access and Borrowing')
     expect(BestBetRecord.third.description).to eq('Information on access and borrowing privileges ' \
                                                   'for different categories of library patrons, espec')
