@@ -2,11 +2,12 @@
 
 # This class is responsible for getting relevant
 # metadata from the BestBetRecords in the database
+# The document is a BestBetRecord
 class BestBetDocument < Document
   private
 
   def title
-    json.title
+    document.title
   end
 
   # Not relevant for this service
@@ -17,7 +18,7 @@ class BestBetDocument < Document
 
   # TODO: Could we add identifiers to the sheet? Then they would be more likely to stay consistent
   def id
-    json.id
+    document.id
   end
 
   # TODO: Can we add this to the sheet? Or should they all be "Electronic Resource" or similar?
@@ -26,11 +27,11 @@ class BestBetDocument < Document
   end
 
   def description
-    json.description
+    document.description
   end
 
   def url
-    json.url
+    document.url
   end
 
   # No other fields needed at this time

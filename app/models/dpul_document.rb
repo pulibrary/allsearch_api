@@ -6,7 +6,7 @@ class DpulDocument < Document
   private
 
   def id
-    json[:id]
+    document[:id]
   end
 
   def url
@@ -14,19 +14,19 @@ class DpulDocument < Document
   end
 
   def title
-    json[:readonly_title_ssim]&.first
+    document[:readonly_title_ssim]&.first
   end
 
   def creator
-    json[:readonly_creator_ssim]&.first
+    document[:readonly_creator_ssim]&.first
   end
 
   def publisher
-    json[:readonly_publisher_ssim]&.first
+    document[:readonly_publisher_ssim]&.first
   end
 
   def type
-    json[:readonly_format_ssim]&.first
+    document[:readonly_format_ssim]&.first
   end
 
   def description
@@ -42,6 +42,6 @@ class DpulDocument < Document
   end
 
   def collection
-    json[:readonly_collections_tesim]&.first
+    document[:readonly_collections_tesim]&.first
   end
 end

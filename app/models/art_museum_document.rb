@@ -2,19 +2,20 @@
 
 # This class is responsible for getting relevant
 # metadata from the Art Museum's JSON
+# The document is a Hash
 class ArtMuseumDocument < Document
   private
 
   def id
-    json[:_id]
+    document[:_id]
   end
 
   def title
-    json.dig(:_source, :displaytitle)
+    document.dig(:_source, :displaytitle)
   end
 
   def creator
-    json.dig(:_source, :displaymaker)
+    document.dig(:_source, :displaymaker)
   end
 
   def publisher
@@ -22,7 +23,7 @@ class ArtMuseumDocument < Document
   end
 
   def type
-    json[:_type]
+    document[:_type]
   end
 
   def description
@@ -38,22 +39,22 @@ class ArtMuseumDocument < Document
   end
 
   def credit_line
-    json.dig(:_source, :creditline)
+    document.dig(:_source, :creditline)
   end
 
   def medium
-    json.dig(:_source, :medium)
+    document.dig(:_source, :medium)
   end
 
   def dimensions
-    json.dig(:_source, :dimensions)
+    document.dig(:_source, :dimensions)
   end
 
   def primary_image
-    json.dig(:_source, :primaryimage)&.first
+    document.dig(:_source, :primaryimage)&.first
   end
 
   def object_number
-    json.dig(:_source, :objectnumber)
+    document.dig(:_source, :objectnumber)
   end
 end

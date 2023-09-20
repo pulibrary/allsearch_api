@@ -2,10 +2,10 @@
 
 # A generic document class, to be subclassed with
 # specific logic about getting document metadata
-# from various JSON structures
+# from various Data structures
 class Document
-  def initialize(json:, doc_keys:)
-    @json = json
+  def initialize(document:, doc_keys:)
+    @document = document
     @doc_keys = doc_keys
   end
 
@@ -24,5 +24,5 @@ class Document
     doc_keys&.index_with { |key| send(key) }
   end
 
-  attr_reader :json
+  attr_reader :document
 end

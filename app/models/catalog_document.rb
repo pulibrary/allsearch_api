@@ -2,11 +2,12 @@
 
 # This class is responsible for getting relevant
 # metadata from the Catalog's JSON
+# The document is a Hash
 class CatalogDocument < Document
   private
 
   def id
-    json[:id]
+    document[:id]
   end
 
   def url
@@ -14,19 +15,19 @@ class CatalogDocument < Document
   end
 
   def title
-    json[:title_display]
+    document[:title_display]
   end
 
   def creator
-    json[:author_display]&.first
+    document[:author_display]&.first
   end
 
   def publisher
-    json[:pub_created_display]&.first
+    document[:pub_created_display]&.first
   end
 
   def type
-    json[:format]&.first
+    document[:format]&.first
   end
 
   def description
@@ -42,7 +43,7 @@ class CatalogDocument < Document
   end
 
   def first_holding
-    holdings_string = json[:holdings_1display]
+    holdings_string = document[:holdings_1display]
     return {} if holdings_string.blank?
 
     JSON.parse(holdings_string)&.first&.last

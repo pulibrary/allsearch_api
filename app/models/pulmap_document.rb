@@ -6,7 +6,7 @@ class PulmapDocument < Document
   private
 
   def id
-    json[:uuid]
+    document[:uuid]
   end
 
   def url
@@ -14,23 +14,23 @@ class PulmapDocument < Document
   end
 
   def title
-    json[:dc_title_s]
+    document[:dc_title_s]
   end
 
   def creator
-    json[:dc_creator_sm]&.first
+    document[:dc_creator_sm]&.first
   end
 
   def publisher
-    json[:dc_publisher_s]
+    document[:dc_publisher_s]
   end
 
   def type
-    json[:dc_format_s]
+    document[:dc_format_s]
   end
 
   def description
-    json[:dc_description_s]
+    document[:dc_description_s]
   end
 
   def doc_keys
@@ -38,10 +38,10 @@ class PulmapDocument < Document
   end
 
   def rights
-    json[:dc_rights_s]
+    document[:dc_rights_s]
   end
 
   def layer_geom_type
-    json[:layer_geom_type_s]
+    document[:layer_geom_type_s]
   end
 end

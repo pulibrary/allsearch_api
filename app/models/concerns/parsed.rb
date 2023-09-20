@@ -13,7 +13,7 @@ module Parsed
 
   def parsed_record(document:, doc_keys:)
     document_class = "#{self.class}Document".constantize
-    document_class.new(json: document, doc_keys:).to_h
+    document_class.new(document:, doc_keys:).to_h
   end
 
   def our_response
