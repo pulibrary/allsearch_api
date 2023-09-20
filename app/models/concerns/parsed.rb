@@ -13,14 +13,15 @@ module Parsed
 
   def parsed_record(document:, doc_keys:)
     document_class = "#{self.class}Document".constantize
-    document_class.new(json: document, doc_keys:).to_h
+    document_class.new(document:, doc_keys:).to_h
   end
 
   def our_response
-    {
+    hash = {
       number:,
-      more: more_link,
       records: parsed_records(documents:)
-    }.to_json
+    }
+    hash[:more] = more_link if more_link.present?
+    hash.to_json
   end
 end

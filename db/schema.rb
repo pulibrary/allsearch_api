@@ -14,7 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_194551) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "best_bet_documents", force: :cascade do |t|
+  create_table "best_bet_records", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.string "url"

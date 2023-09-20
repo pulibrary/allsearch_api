@@ -10,7 +10,7 @@ RSpec.describe CatalogDocument do
                '{"holding_id":"22513144820006421","id":"23513144810006421",' \
                '"status_at_load":"1","barcode":"32101052309489","copy_number":"1"}]}}'
     source_data = { holdings_1display: holdings }
-    document = described_class.new(json: source_data, doc_keys: [:library]).to_h
+    document = described_class.new(document: source_data, doc_keys: [:library]).to_h
     expect(document[:library]).to eq 'Mendel Music Library'
   end
 end

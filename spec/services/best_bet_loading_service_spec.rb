@@ -11,27 +11,27 @@ RSpec.describe BestBetLoadingService do
   end
 
   it 'creates a new row in the best_bet table for each CSV row' do
-    expect { described_class.new.run }.to change(BestBetDocument, :count).by(3)
-    expect(BestBetDocument.third.title).to eq('Access and Borrowing')
-    expect(BestBetDocument.third.description).to eq('Information on access and borrowing privileges ' \
-                                                    'for different categories of library patrons, espec')
-    expect(BestBetDocument.third.url).to eq('https://library.princeton.edu/services/access')
-    expect(BestBetDocument.third.search_terms).to contain_exactly('access', 'access office', 'privileges',
-                                                                  'privileges office', 'visitors')
-    expect(BestBetDocument.third.last_update).to eq(Date.new(2021, 7, 8))
+    expect { described_class.new.run }.to change(BestBetRecord, :count).by(6)
+    expect(BestBetRecord.third.title).to eq('Access and Borrowing')
+    expect(BestBetRecord.third.description).to eq('Information on access and borrowing privileges ' \
+                                                  'for different categories of library patrons, espec')
+    expect(BestBetRecord.third.url).to eq('https://library.princeton.edu/services/access')
+    expect(BestBetRecord.third.search_terms).to contain_exactly('access', 'access office', 'privileges',
+                                                                'privileges office', 'visitors')
+    expect(BestBetRecord.third.last_update).to eq(Date.new(2021, 7, 8))
   end
 
   it 'is idempotent' do
     described_class.new.run
-    expect { described_class.new.run }.not_to change(BestBetDocument, :count)
+    expect { described_class.new.run }.not_to change(BestBetRecord, :count)
   end
 
   context 'when file does not have the required headers' do
     let(:google_response) { 'bad response' }
 
     it 'does not proceed' do
-      BestBetDocument.create(url: 'library.princeton.edu')
-      expect { described_class.new.run }.not_to(change(BestBetDocument, :count))
+      BestBetRecord.create(url: 'library.princeton.edu')
+      expect { described_class.new.run }.not_to(change(BestBetRecord, :count))
     end
   end
 end
