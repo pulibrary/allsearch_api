@@ -1,0 +1,45 @@
+{
+    "search": {
+        "numFound": 2,
+        "query": "printer",
+        "filters": {
+            "iid": 344,
+            "group_id": [
+                680,
+                87,
+                11670,
+                1059
+            ],
+            "topics": [],
+            "keywords": []
+        },
+        "start": 0,
+        "rows": 2,
+        "sort_field": "_score",
+        "sort_dir": "desc",
+        "results": [
+            {
+                "id": 11559,
+                "question": "Color printer?",
+                "iid": 344,
+                "topics": [
+                    "Library Information and Policies",
+                    "Technology"
+                ],
+                "g": 87,
+                "url": "https:\/\/faq.library.princeton.edu\/faq\/11559"
+            },
+            {
+                "id": 11210,
+                "question": "Printing from laptop to a library printer?",
+                "iid": 344,
+                "topics": [
+                    "Technical issues"
+                ],
+                "g": 680,
+                "url": "https:\/\/faq.library.princeton.edu\/econ\/faq\/11210"
+            }
+        ],
+        "error": ""
+    }
+}

@@ -35,5 +35,21 @@ RSpec.describe OAuthToken do
         expect(entry.expiration_time).to eq(Time.utc(2020, 1, 7, 23, 0, 0))
       end
     end
+
+    context 'when there is not yet a token or expiration_time in the database' do
+      before do
+        described_class.create(service: 'libanswers', endpoint: 'http://my-api.com')
+      end
+
+      it 'fetches a new token from the endpoint' do
+        stub_request(:post, 'http://my-api.com')
+          .with(body: 'client_id=ABC&client_secret=12345&grant_type=client_credentials')
+          .to_return(status: 200, body: file_fixture('libanswers/oauth_token.json'))
+        travel_to Date.new(2020, 1, 1)
+        entry = described_class.find_by(endpoint: 'http://my-api.com')
+        expect(entry.token).to eq('abcdef1234567890abcdef1234567890abcdef12')
+        expect(entry.expiration_time).to eq(Time.utc(2020, 1, 7, 23, 0, 0))
+      end
+    end
   end
 end
