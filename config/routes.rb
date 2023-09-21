@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/search/artmuseum/', to: 'art_museum#show', defaults: { format: 'json' }
   get '/search/best-bet/', to: 'best_bet#show', defaults: { format: 'json' }
   get '/search/catalog/', to: 'catalog#show', defaults: { format: 'json' }
+  get '/search/database/', to: 'library_database#show', defaults: { format: 'json' }
   get '/search/dpul/', to: 'dpul#show', defaults: { format: 'json' }
   get '/search/findingaids/', to: 'findingaids#show', defaults: { format: 'json' }
   get '/search/libanswers/', to: 'libanswers#show', defaults: { format: 'json' }

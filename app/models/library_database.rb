@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
 # This class is responsible for
-class BestBet
+class LibraryDatabase
   include Parsed
   attr_reader :query_terms, :service_response
 
   def initialize(query_terms:)
     @query_terms = query_terms
-    @service_response = best_bet_service_response
+    @service_response = library_database_service_response
   end
 
-  def best_bet_service_response
-    BestBetRecord.query(query_terms)
+  def library_database_service_response
+    LibraryDatabaseRecord.query(query_terms)
   end
 
   def number

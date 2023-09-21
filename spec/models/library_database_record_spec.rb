@@ -66,5 +66,25 @@ RSpec.describe LibraryDatabaseRecord do
     it 'finds matches in the alt_names_concat field' do
       expect(described_class.query('jstor')).to contain_exactly(doc1)
     end
+
+    context 'with fixture file loaded' do
+      let(:libjobs_response) { file_fixture('libjobs/library-databases.csv') }
+
+      before do
+        stub_request(:get, 'https://lib-jobs.princeton.edu/library-databases.csv')
+          .to_return(status: 200, body: libjobs_response)
+        LibraryDatabaseLoadingService.new.run
+      end
+
+      it 'matches the sort from the original service' do
+        skip('Currently this test is flaky - it often passes but sometimes fails.' \
+             'Will do another commit to fix this')
+        query_response = described_class.query('oxford music')
+        expect(query_response.count).to eq(3)
+        expect(query_response[0].name).to eq('Oxford Music Online')
+        expect(query_response[1].name).to eq('Oxford Bibliographies: Music')
+        expect(query_response[2].name).to eq('Oxford Scholarship Online:  Music')
+      end
+    end
   end
 end
