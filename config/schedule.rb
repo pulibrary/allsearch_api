@@ -25,3 +25,7 @@
 every :day, at: '9:30am', roles: [:prod_db] do
   rake 'best_bets:sync'
 end
+
+every :hour, roles: [:prod_db] do
+  rake 'library_databases:sync'
+end
