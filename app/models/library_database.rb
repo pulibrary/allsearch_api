@@ -11,7 +11,7 @@ class LibraryDatabase
   end
 
   def library_database_service_response
-    LibraryDatabaseRecord.query(query_terms)
+    LibraryDatabaseRecord.query(query_terms).limit(3)
   end
 
   def number
