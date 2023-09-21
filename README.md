@@ -51,3 +51,16 @@ semgrep --config auto . # run rules from the semgrep community
 - Model
   - Must have methods for the `doc_keys` in the `#parsed_records` method
 - Request Spec
+
+## API documentation
+Documentation lives in `https://allsearch-api.princeton.edu/api-docs`
+
+To update the api documentation for a service:
+* create a spec in: `spec/requests/api/`
+   * `./bin/rails generate rspec:swagger CatalogController --spec_path requests/api/`
+* Generate the docs by running:
+    * `bundle exec rake rswag:specs:swaggerize`.
+    * This will generate the file `swagger/v1/swagger.yaml`.
+    * Please make sure to commit it.
+
+

@@ -1,0 +1,24 @@
+---
+openapi: 3.0.1
+info:
+  title: Allsearch API
+  version: v1
+paths:
+  "/search/catalog?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query the catalog
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/catalog?query={query}"
+      responses:
+        '200':
+          description: successful
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
