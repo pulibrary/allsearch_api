@@ -38,10 +38,6 @@ class CatalogDocument < Document
     [:call_number, :library]
   end
 
-  def other_fields
-    doc_keys.index_with { |key| send(key) }
-  end
-
   def first_holding
     holdings_string = document[:holdings_1display]
     return {} if holdings_string.blank?
