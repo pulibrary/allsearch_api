@@ -7,7 +7,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - 'bin/**/*'
-    - 'db/schema.rb'
+    - 'db/**/*'
     - 'solr/**/*'
     - 'vendor/bundle/**/*'
 
