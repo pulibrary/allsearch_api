@@ -22,26 +22,6 @@ RSpec.configure do |config|
         version: 'v1'
       },
       paths: {},
-      components: {
-        schemas: {
-          not_found: {
-            type: 'object',
-            properties: {
-              message: { type: :string }
-            }
-          },
-          service: {
-            type: 'object',
-            required: [:query],
-            properties: {
-              query: {
-                type: :string,
-                example: "Hi there!"
-              },
-            }
-          },
-        },
-      },
       servers: [
         {
           url: 'https://{defaultHost}',
