@@ -18,8 +18,10 @@ class LibraryDatabase
     service_response.count
   end
 
-  # Not relevant for this service
-  def more_link; end
+  def more_link
+    URI::HTTPS.build(host: 'libguides.princeton.edu', path: '/az.php',
+                     query: "q=#{query_terms}")
+  end
 
   def documents
     service_response

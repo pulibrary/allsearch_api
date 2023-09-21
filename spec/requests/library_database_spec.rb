@@ -44,8 +44,7 @@ RSpec.describe 'GET /search/database' do
 
     expect(response).to be_successful
     response_body = JSON.parse(response.body, symbolize_names: true)
-
-    expect(response_body.keys).to contain_exactly(:number, :records)
+    expect(response_body.keys).to contain_exactly(:number, :more, :records)
     expect(response_body[:records].count).to eq(3)
     expect(response_body[:records].first.keys).to match_array(expected_record_keys)
     expected_record_keys.each do |key|
