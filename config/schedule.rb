@@ -21,8 +21,7 @@
 
 # Learn more: http://github.com/javan/whenever
 
-# 5:30 am Eastern Daylight Time, 4:30 am Eastern Standard Time
-every :day, at: '9:30am', roles: [:prod_db] do
+every :hour, roles: [:prod_db] do
   rake 'best_bets:sync'
 end
 
