@@ -1,32 +1,18 @@
 # frozen_string_literal: true
 
-require 'csv'
-require 'open-uri'
-
 # This class is responsible for refreshing the
 # best_bet_document table from the canonical
 # spreadsheet maintained by librarians
-class BestBetLoadingService
-  def run
-    fetch_data
-    process_data if data_is_valid?
-  end
-
+class BestBetLoadingService < CSVLoadingService
   private
 
-  attr_reader :csv
-
-  def fetch_data
-    contents = uri.open
-    @csv = CSV.new(contents)
-  end
-
-  def process_data
-    BestBetRecord.destroy_all
-    csv.each { |row| BestBetRecord.new_from_csv(row) }
+  def class_to_load
+    BestBetRecord
   end
 
   def data_is_valid?
+    return false if csv_is_much_smaller?
+
     csv.readline == ['Title', 'Description', 'URL', 'Search Terms', 'Last Update']
   end
 

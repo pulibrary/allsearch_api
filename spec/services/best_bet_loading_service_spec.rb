@@ -34,4 +34,29 @@ RSpec.describe BestBetLoadingService do
       expect { described_class.new.run }.not_to(change(BestBetRecord, :count))
     end
   end
+
+  context 'when a best bet in postgres is no longer in the CSV' do
+    it 'removes it from the database' do
+      old_record = BestBetRecord.create(id: 123)
+      expect(BestBetRecord.where(id: 123)).to contain_exactly(old_record)
+      described_class.new.run
+      expect(BestBetRecord.where(id: 123)).to be_empty
+    end
+  end
+
+  context 'when a best bet has updated info in the CSV' do
+    it 'updates the relevant fields' do
+      BestBetRecord.create(title: 'Access and Borrowing', url: 'incorrect.com')
+      expect(BestBetRecord.find_by(title: 'Access and Borrowing').url).to eq 'incorrect.com'
+      described_class.new.run
+      expect(BestBetRecord.find_by(title: 'Access and Borrowing').url).to eq 'https://library.princeton.edu/services/access'
+    end
+  end
+
+  context 'when the CSV is suspiciously small relative to the number of database rows' do
+    it 'does not proceed' do
+      30.times { BestBetRecord.create }
+      expect { described_class.new.run }.not_to(change(BestBetRecord, :count))
+    end
+  end
 end

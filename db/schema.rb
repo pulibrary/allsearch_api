@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_19_194551) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_20_214343) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_194551) do
     t.date "last_update"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "library_database_records", force: :cascade do |t|
+    t.bigint "libguides_id", null: false
+    t.string "name", null: false
+    t.string "description"
+    t.string "alt_names", array: true
+    t.string "alt_names_concat"
+    t.string "url"
+    t.string "friendly_url"
+    t.string "subjects", array: true
+    t.string "subjects_concat"
+    t.virtual "searchable", type: :tsvector, as: "to_tsvector('english'::regconfig, (((((((COALESCE(name, ''::character varying))::text || ' '::text) || (COALESCE(alt_names_concat, ''::character varying))::text) || ' '::text) || (COALESCE(description, ''::character varying))::text) || ' '::text) || (COALESCE(subjects_concat, ''::character varying))::text))", stored: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["searchable"], name: "searchable_idx", using: :gin
   end
 
   create_table "oauth_tokens", force: :cascade do |t|
