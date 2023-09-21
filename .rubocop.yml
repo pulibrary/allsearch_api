@@ -17,6 +17,10 @@ RSpec/ExampleLength:
 RSpec/MultipleExpectations:
   Enabled: false
 
+RSpec/EmptyExampleGroup:
+  Exclude:
+    - 'spec/requests/api/catalog_spec.rb'
+
 Style/Documentation:
   Enabled: false
 

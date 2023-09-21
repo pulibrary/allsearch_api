@@ -8,12 +8,15 @@ paths:
     parameters:
     - name: query
       in: path
-      description: A string to query the catalog
+      description: A string to query the Catalog
       required: true
       schema:
         type: string
     get:
       summary: "/search/catalog?query={query}"
+      tags:
+      - Catalog
+      description: Searches the Catalog using a query term
       responses:
         '200':
           description: successful
