@@ -37,10 +37,6 @@ class DpulDocument < Document
     [:collection]
   end
 
-  def other_fields
-    doc_keys.index_with { |key| send(key) }
-  end
-
   def collection
     document[:readonly_collections_tesim]&.first
   end

@@ -13,4 +13,13 @@ RSpec.describe CatalogDocument do
     document = described_class.new(document: source_data, doc_keys: [:library]).to_h
     expect(document[:library]).to eq 'Mendel Music Library'
   end
+
+  describe '#other_fields' do
+    it 'does not include nil values' do
+      source_data = { title_display: 'My book', id: 'SCSB-1234' }
+      doc_keys = [:title, :other_fields]
+      document = described_class.new(document: source_data, doc_keys:).to_h
+      expect(document[:other_fields]).to eq({})
+    end
+  end
 end

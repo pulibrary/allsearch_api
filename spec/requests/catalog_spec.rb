@@ -32,7 +32,14 @@ RSpec.describe 'GET /search/catalog' do
             other_fields: {
               call_number: 'ML421.I55 A96 1990z',
               library: 'ReCAP'
-            } }
+            } },
+          { title: 'COVID-19 and minority health access : illustrating symptomatic cases ' \
+                   'from reported minority communities and healthcare gaps due to COVID-19.',
+            publisher: '[Lawrence, Mass.] : Rubix Life Sciences, 2020.',
+            id: '99122566163506421',
+            type: 'Book',
+            url: 'https://catalog.princeton.edu/catalog/99122566163506421',
+            other_fields: {} }
         ] }
     end
 
@@ -46,6 +53,7 @@ RSpec.describe 'GET /search/catalog' do
       expect(response_body[:records].first.keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
                                                                     :other_fields)
       expect(response_body[:records].first).to match(expected_response[:records].first)
+      expect(response_body[:records].second).to match(expected_response[:records].second)
     end
 
     it 'only returns the first three records' do
