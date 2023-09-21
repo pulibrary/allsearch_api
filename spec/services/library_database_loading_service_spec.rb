@@ -33,4 +33,29 @@ RSpec.describe LibraryDatabaseLoadingService do
       expect { described_class.new.run }.not_to(change(LibraryDatabaseRecord, :count))
     end
   end
+
+  context 'when a library database in postgres is no longer in the CSV' do
+    it 'removes it from the database' do
+      old_record = LibraryDatabaseRecord.create(libguides_id: 123, name: 'JSTOR')
+      expect(LibraryDatabaseRecord.where(libguides_id: 123)).to contain_exactly(old_record)
+      described_class.new.run
+      expect(LibraryDatabaseRecord.where(libguides_id: 123)).to be_empty
+    end
+  end
+
+  context 'when a library database has updated info in the CSV' do
+    it 'updates the relevant fields' do
+      LibraryDatabaseRecord.create(libguides_id: 2_938_694, name: 'JSTOR')
+      expect(LibraryDatabaseRecord.find_by(libguides_id: 2_938_694).name).to eq 'JSTOR'
+      described_class.new.run
+      expect(LibraryDatabaseRecord.find_by(libguides_id: 2_938_694).name).to eq 'AAPG Datapages'
+    end
+  end
+
+  context 'when the CSV is suspiciously small relative to the number of database rows' do
+    it 'does not proceed' do
+      30.times { |number| LibraryDatabaseRecord.create(libguides_id: number, name: 'JSTOR') }
+      expect { described_class.new.run }.not_to(change(LibraryDatabaseRecord, :count))
+    end
+  end
 end

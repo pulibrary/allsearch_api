@@ -11,6 +11,8 @@ class BestBetLoadingService < CSVLoadingService
   end
 
   def data_is_valid?
+    return false if csv_is_much_smaller?
+
     csv.readline == ['Title', 'Description', 'URL', 'Search Terms', 'Last Update']
   end
 

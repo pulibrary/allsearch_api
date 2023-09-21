@@ -8,6 +8,8 @@ class LibraryDatabaseLoadingService < CSVLoadingService
   end
 
   def data_is_valid?
+    return false if csv_is_much_smaller?
+
     csv.readline == %w[id name description alt_names url friendly_url subjects]
   end
 

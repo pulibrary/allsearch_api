@@ -30,6 +30,14 @@ class CSVLoadingService
     false
   end
 
+  # If the CSV shrinks by 25% or more, assume something is wrong
+  def csv_is_much_smaller?
+    existing_records = class_to_load.count
+    csv_shrinkage = existing_records - csv.readlines.size
+    csv.rewind
+    csv_shrinkage > (existing_records * 0.25)
+  end
+
   def uri; end
 
   def class_to_load; end
