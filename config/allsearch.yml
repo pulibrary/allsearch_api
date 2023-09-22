@@ -51,6 +51,7 @@ development:
 
 staging:
   <<: *default
+  allsearch_base: <%= ENV['ALLSEARCH_BASE'] || "https://allsearch-api-staging.princeton.edu/" %>
   catalog:
     solr:
       host: "lib-solr8-staging.princeton.edu"
@@ -72,3 +73,4 @@ test:
 
 production:
   <<: *default
+  allsearch_base: <%= ENV['ALLSEARCH_BASE'] || "https://allsearch-api.princeton.edu/" %>
