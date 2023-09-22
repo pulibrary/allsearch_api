@@ -58,9 +58,12 @@ Documentation lives in `https://allsearch-api.princeton.edu/api-docs`
 To update the api documentation for a service:
 * create a spec in: `spec/requests/api/`
    * `./bin/rails generate rspec:swagger CatalogController --spec_path requests/api/`
+   *  Do the necessary changes to create the swagger doc based on the spec.
 * Generate the docs by running:
     * `bundle exec rake rswag:specs:swaggerize`.
     * This will generate the file `swagger/v1/swagger.yaml`.
     * Please make sure to commit it.
+* Visit the documentation:
+    * [Documentation](https://allsearch-api.princeton.edu/api-docs)
 
 
