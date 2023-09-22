@@ -19,7 +19,7 @@ RSpec/MultipleExpectations:
 
 RSpec/EmptyExampleGroup:
   Exclude:
-    - 'spec/requests/api/catalog_spec.rb'
+    - 'spec/requests/api/*'
 
 Style/Documentation:
   Enabled: false
