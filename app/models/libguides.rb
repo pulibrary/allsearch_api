@@ -31,7 +31,16 @@ class Libguides
   end
 
   def uri
-    URI.parse "https://lgapi-us.libapps.com/1.2/guides?search_terms=#{CGI.escape(query_terms)}&sort_by=relevance&status=1&expand=owner%2Csubjects%2Ctags"
+    URI::HTTPS.build(host: 'lgapi-us.libapps.com',
+                     path: '/1.2/guides',
+                     query: query_hash)
+  end
+
+  def query_hash
+    { search_terms: query_terms,
+      sort_by: 'relevance',
+      status: '1',
+      expand: 'owner,subjects,tags' }.to_query
   end
 
   def request
