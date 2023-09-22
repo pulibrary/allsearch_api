@@ -38,29 +38,34 @@ RSpec.describe 'GET /search/database' do
   end
 
   it 'returns three results' do
-    skip('Currently this test is flaky - it often passes but sometimes fails.' \
-         'Will do another commit to fix this')
+    pending('Waiting for more insight into LibGuides search')
     get '/search/database?query=oxford music'
 
     expect(response).to be_successful
     response_body = JSON.parse(response.body, symbolize_names: true)
     expect(response_body.keys).to contain_exactly(:number, :more, :records)
     expect(response_body[:records].count).to eq(3)
-    expect(response_body[:records].first.keys).to match_array(expected_record_keys)
+    expect(response_body[:records][2].keys).to match_array(expected_record_keys)
     expected_record_keys.each do |key|
-      expect(response_body[:records].first[key]).to match(expected_response[:records].first[key])
+      expect(response_body[:records][2][key]).to match(expected_response[:records].first[key])
     end
   end
 
   it 'matches the sort of the current service' do
-    skip('Currently this test is flaky - it often passes but sometimes fails.' \
-         'Will do another commit to fix this')
+    pending('Waiting for more insight into LibGuides search')
+
     get '/search/database?query=oxford music'
 
     response_body = JSON.parse(response.body, symbolize_names: true)
 
-    expect(response_body[:records][0][:title]).to eq('Oxford Music Online')
+    # Current sort
+    # expect(response_body[:records][0][:title]).to eq('Oxford Music Online')
+    # expect(response_body[:records][1][:title]).to eq('Oxford Bibliographies: Music')
+    # expect(response_body[:records][2][:title]).to eq('Oxford Scholarship Online:  Music')
+
+    # The order from Libguides search https://libguides.princeton.edu/az.php?q=oxford%20music
+    expect(response_body[:records][0][:title]).to eq('Oxford Scholarship Online:  Music')
     expect(response_body[:records][1][:title]).to eq('Oxford Bibliographies: Music')
-    expect(response_body[:records][2][:title]).to eq('Oxford Scholarship Online:  Music')
+    expect(response_body[:records][2][:title]).to eq('Oxford Music Online')
   end
 end

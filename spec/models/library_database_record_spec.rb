@@ -77,23 +77,20 @@ RSpec.describe LibraryDatabaseRecord do
       end
 
       it 'matches the sort from the original service' do
-        skip('Waiting for more insight into LibGuides search')
+        pending('Waiting for more insight into LibGuides search')
         query_response = described_class.ordered_query('oxford music').with_pg_search_rank
         # The order from our current expected sort
         # expect(query_response[0].name).to eq('Oxford Music Online')
-        # expect(query_response[0].pg_search_rank).to eq(0.56352997)
+        # expect(query_response[0].pg_search_rank).to eq(0.99986285)
         # expect(query_response[1].name).to eq('Oxford Scholarship Online:  Music')
-        # expect(query_response[1].pg_search_rank).to eq(0.382076)
-        # expect(query_response[2].name).to eq('Oxford Reference:  Performing Arts')
-        # expect(query_response[2].pg_search_rank).to eq(0.15097708)
+        # expect(query_response[1].pg_search_rank).to eq(0.9904934)
+        # expect(query_response[2].name).to eq('Oxford Bibliographies: Music')
+        # expect(query_response[2].pg_search_rank).to eq(0.985053)
 
-        # This is the actual order
-        expect(query_response[0].name).to eq('Oxford Music Online')
-        expect(query_response[0].pg_search_rank).to eq(0.99986285)
+        # The order from Libguides search https://libguides.princeton.edu/az.php?q=oxford%20music
+        expect(query_response[0].name).to eq('Oxford Scholarship Online:  Music')
         expect(query_response[1].name).to eq('Oxford Bibliographies: Music')
-        expect(query_response[1].pg_search_rank).to eq(0.9904934)
-        expect(query_response[2].name).to eq('Oxford Scholarship Online:  Music')
-        expect(query_response[2].pg_search_rank).to eq(0.985053)
+        expect(query_response[2].name).to eq('Oxford Music Online')
       end
     end
   end
