@@ -1,0 +1,467 @@
+{
+    "responseHeader": {
+        "zkConnected": true,
+        "status": 0,
+        "QTime": 544,
+        "params": {
+            "q": "cats",
+            "fl": "*",
+            "rows": "3",
+            "facet": "false"
+        }
+    },
+    "response": {
+        "numFound": 204,
+        "start": 0,
+        "maxScore": 259239.98,
+        "docs": [
+            {
+                "id": "9958465153506421",
+                "numeric_id_b": true,
+                "author_display": [
+                    "Lloyd Webber, Andrew, 1948-"
+                ],
+                "author_citation_display": [
+                    "Lloyd Webber, Andrew",
+                    "Eliot, T. S."
+                ],
+                "author_roles_1display": "{\"secondary_authors\":[\"Eliot, T. S.\"],\"translators\":[],\"editors\":[],\"compilers\":[],\"primary_author\":\"Lloyd Webber, Andrew\"}",
+                "author_s": [
+                    "Lloyd Webber, Andrew, 1948-",
+                    "Eliot, T. S. (Thomas Stearns), 1888-1965"
+                ],
+                "marc_relator_display": [
+                    "Author"
+                ],
+                "uniform_title_s": [
+                    "Cats. Vocal score. Selections"
+                ],
+                "title_display": "Cats : the songs from the musical / by Andrew Lloyd Webber ; based on Old Possum's book of practical cats by T.S. Eliot.",
+                "title_t": [
+                    "Cats : the songs from the musical / by Andrew Lloyd Webber ; based on Old Possum's book of practical cats by T.S. Eliot."
+                ],
+                "title_citation_display": [
+                    "Cats : the songs from the musical"
+                ],
+                "compiled_created_t": [
+                    "Cats : the songs from the musical / by Andrew Lloyd Webber ; based on Old Possum's book of practical cats by T.S. Eliot."
+                ],
+                "pub_created_display": [
+                    "London : Faber Music ; New York : Entertainment Co. ; Winona, MN : Distributed by H. Leonard Pub. Corp., c1981."
+                ],
+                "pub_created_s": [
+                    "London : Faber Music ; New York : Entertainment Co. ; Winona, MN : Distributed by H. Leonard Pub. Corp., c1981."
+                ],
+                "pub_citation_display": [
+                    "Winona, MN: Distributed by H. Leonard Pub. Corp"
+                ],
+                "pub_date_display": [
+                    "1981"
+                ],
+                "pub_date_start_sort": 1981,
+                "cataloged_tdt": "2009-08-19T10:59:00Z",
+                "format": [
+                    "Musical score"
+                ],
+                "description_display": [
+                    "1 score (112 p.) ; 31 cm."
+                ],
+                "description_t": [
+                    "1 score (112 p.) ; 31 cm."
+                ],
+                "number_of_pages_citation_display": [
+                    "1 score (112 p.)"
+                ],
+                "notes_display": [
+                    "For voice and piano.",
+                    "Chord symbols acc. some of the songs."
+                ],
+                "language_facet": [
+                    "English"
+                ],
+                "language_code_s": [
+                    "eng"
+                ],
+                "language_iana_s": [
+                    "en"
+                ],
+                "contents_display": [
+                    "Overture",
+                    "Jellicle songs for Jellicle cats",
+                    "The naming of cats",
+                    "The invitation to the Jellicle Ball [Text only]",
+                    "The old Gumbie Cat",
+                    "The Rum Tum Tugger",
+                    "Bustopher Jones: The cat about town",
+                    "Mungojerrie and Rumpelteazer",
+                    "Old Deuteronomy",
+                    "The awefull battle of the Pekes and the Pollicles [Text only]",
+                    "The song of the Jellicles",
+                    "Grizabella: the glamour cat",
+                    "The moments of happiness [Text only]",
+                    "Gus: The theatre cat --Growltiger's last stand",
+                    "The ballad of Billy M'Caw",
+                    "Skimbleshanks: the railway cat",
+                    "Macavity: the mystery cat",
+                    "Mr. Mistoffelees",
+                    "Memory",
+                    "The journey to the Heavyside layer",
+                    "The ad-dressing of cats."
+                ],
+                "lc_subject_display": [
+                    "Musicals—Excerpts—Vocal scores with piano",
+                    "Eliot, T. S. (Thomas Stearns), 1888-1965—Musical settings"
+                ],
+                "subject_facet": [
+                    "Musicals—Excerpts—Vocal scores with piano",
+                    "Eliot, T. S. (Thomas Stearns), 1888-1965—Musical settings",
+                    "Arrangements (Music)",
+                    "Vocal scores",
+                    "Excerpts",
+                    "Musicals",
+                    "Revues"
+                ],
+                "lcgft_s": [
+                    "Arrangements (Music)",
+                    "Vocal scores",
+                    "Excerpts",
+                    "Musicals",
+                    "Revues"
+                ],
+                "contains_1display": "[[\"Eliot, T. S. (Thomas Stearns), 1888-1965.\",\"Old Possum's book of practical cats.\"]]",
+                "isbn_display": [
+                    "0881882003 :",
+                    "9780881882001"
+                ],
+                "publisher_no_display": [
+                    "HL00359465"
+                ],
+                "isbn_s": [
+                    "9780881882001"
+                ],
+                "isbn_t": [
+                    "9780881882001"
+                ],
+                "oclc_s": [
+                    "8936861"
+                ],
+                "other_version_s": [
+                    "9780881882001",
+                    "ocm08936861",
+                    "ocm08995134",
+                    "ocm09002277",
+                    "ocm11640306",
+                    "ocm14928024",
+                    "ocm22867911"
+                ],
+                "holdings_1display": "{\"22538392720006421\":{\"location_code\":\"mendel$stacks\",\"location\":\"Stacks\",\"library\":\"Mendel Music Library\",\"call_number\":\"M1508 .C287 1981q Oversize\",\"call_number_browse\":\"M1508 .C287 1981q Oversize\",\"items\":[{\"holding_id\":\"22538392720006421\",\"id\":\"23538392710006421\",\"status_at_load\":\"1\",\"barcode\":\"32101076721453\",\"copy_number\":\"1\"}]}}",
+                "location_code_s": [
+                    "mendel$stacks"
+                ],
+                "location": [
+                    "Mendel Music Library"
+                ],
+                "location_display": [
+                    "Stacks"
+                ],
+                "advanced_location_s": [
+                    "mendel$stacks",
+                    "Mendel Music Library"
+                ],
+                "name_uniform_title_1display": "[[\"Lloyd Webber, Andrew, 1948-.\",\"Cats.\",\"Vocal score.\",\"Selections\"]]",
+                "name_title_browse_s": [
+                    "Eliot, T. S. (Thomas Stearns), 1888-1965. Old Possum's book of practical cats",
+                    "Lloyd Webber, Andrew, 1948-. Cats",
+                    "Lloyd Webber, Andrew, 1948-. Cats. Vocal score",
+                    "Lloyd Webber, Andrew, 1948-. Cats. Vocal score. Selections"
+                ],
+                "call_number_display": [
+                    "Oversize M1508 .C287 1981q"
+                ],
+                "call_number_browse_s": [
+                    "M1508 .C287 1981q Oversize"
+                ],
+                "call_number_locator_display": [
+                    "M1508 .C287 1981q"
+                ],
+                "hashed_id_ssi": "a6c9985c656b502d",
+                "_version_": 1744145709698908200,
+                "timestamp": "2022-09-16T16:49:27.615Z"
+            },
+            {
+                "id": "9976442293506421",
+                "numeric_id_b": true,
+                "author_display": [
+                    "Ondaatje, Michael, 1943-"
+                ],
+                "author_citation_display": [
+                    "Ondaatje, Michael"
+                ],
+                "author_roles_1display": "{\"secondary_authors\":[],\"translators\":[],\"editors\":[],\"compilers\":[],\"primary_author\":\"Ondaatje, Michael\"}",
+                "author_s": [
+                    "Ondaatje, Michael, 1943-"
+                ],
+                "marc_relator_display": [
+                    "Author"
+                ],
+                "title_display": "The cat's table [electronic resource] / Michael Ondaatje.",
+                "title_t": [
+                    "The cat's table [electronic resource] / Michael Ondaatje."
+                ],
+                "title_citation_display": [
+                    "The cat's table"
+                ],
+                "compiled_created_t": [
+                    "The cat's table [electronic resource] / Michael Ondaatje."
+                ],
+                "edition_display": [
+                    "Kindle ed."
+                ],
+                "pub_created_display": [
+                    "New York : Alfred A. Knopf, 2011."
+                ],
+                "pub_created_s": [
+                    "New York : Alfred A. Knopf, 2011."
+                ],
+                "pub_citation_display": [
+                    "New York: Alfred A. Knopf"
+                ],
+                "pub_date_display": [
+                    "2011"
+                ],
+                "pub_date_start_sort": 2011,
+                "cataloged_tdt": "2021-07-21T03:44:48Z",
+                "format": [
+                    "Book"
+                ],
+                "electronic_access_1display": "{\"http://libguides.princeton.edu/content.php?pid=295717&sid=2427989\":[\"libguides.princeton.edu\",\"Available only on a library iPad. Click here for information about iPad lending at Princeton University Library\"],\"http://amzn.to/rPmSyq\":[\"Amazon.com description of book\"]}",
+                "description_display": [
+                    "1 electronic book (290 p.)"
+                ],
+                "description_t": [
+                    "1 electronic book (290 p.)"
+                ],
+                "number_of_pages_citation_display": [
+                    "1 electronic book (290 p.)"
+                ],
+                "related_record_info_display": [
+                    "Print version:"
+                ],
+                "summary_note_display": [
+                    "\"In the early 1950s, an eleven-year-old boy in Colombo boards a ship bound for England. At mealtimes he is seated at the \"cat's table\"--as far from the Captain's Table as can be--with a ragtag group of \"insignificant\" adults and two other boys, Cassius and Ramadhin. As the ship makes its way across the Indian Ocean, through the Suez Canal, into the Mediterranean, the boys tumble from one adventure to another, bursting all over the place like freed mercury. But there are other diversions as well: one man talks with them about jazz and women, another opens the door to the world of literature. The narrator's elusive, beautiful cousin Emily becomes his confidante, allowing him to see himself \"with a distant eye\" for the first time, and to feel the first stirring of desire. Another Cat's Table denizen, the shadowy Miss Lasqueti, is perhaps more than what she seems. And very late every night, the boys spy on a shackled prisoner, his crime and his fate a galvanizing mystery that will haunt them forever. As the narrative moves between the decks and holds of the ship and the boy's adult years, it tells a spellbinding story--by turns poignant and electrifying--about the magical, often forbidden, discoveries of childhood and a lifelong journey that begins unexpectedly with a spectacular sea voyage.\""
+                ],
+                "notes_display": [
+                    "\"This is a Borzoi book.\"",
+                    "Sold by: Random House Digital, Inc."
+                ],
+                "source_desc_notes_display": [
+                    "Description based on print version record."
+                ],
+                "language_facet": [
+                    "English"
+                ],
+                "language_code_s": [
+                    "eng"
+                ],
+                "language_iana_s": [
+                    "en"
+                ],
+                "lc_subject_display": [
+                    "Ocean travel—Fiction"
+                ],
+                "subject_facet": [
+                    "Ocean travel—Fiction",
+                    "Fiction"
+                ],
+                "lcgft_s": [
+                    "Fiction"
+                ],
+                "standard_no_1display": "{\"Other standard number\":[\"40019806449\"]}",
+                "other_version_s": [
+                    "ocn798224430",
+                    "9780307700117",
+                    "ocn697261660"
+                ],
+                "holdings_1display": "{\"22577754560006421\":{\"location_code\":\"engineer$stacks\",\"location\":\"Stacks\",\"library\":\"Engineering Library\",\"call_number\":\"Engineering Library iPads\",\"call_number_browse\":\"Engineering Library iPads\",\"location_note\":[\"To borrow this ebook, please request an iPad from the circulation desk at the Engineering Library\"]},\"22577754580006421\":{\"location_code\":\"firestone$stacks\",\"location\":\"Stacks\",\"library\":\"Firestone Library\",\"call_number\":\"Firestone Library iPads\",\"call_number_browse\":\"Firestone Library iPads\",\"location_note\":[\"To borrow this ebook, please request an iPad from the circulation desk at Firestone Library\"]},\"22577754570006421\":{\"location_code\":\"lewis$stacks\",\"location\":\"Stacks\",\"library\":\"Lewis Library\",\"call_number\":\"Lewis Library iPads\",\"call_number_browse\":\"Lewis Library iPads\",\"location_note\":[\"To borrow this ebook, please request an iPad from the circulation desk at Lewis Library\"]}}",
+                "location_code_s": [
+                    "engineer$stacks",
+                    "firestone$stacks",
+                    "lewis$stacks"
+                ],
+                "location": [
+                    "Engineering Library",
+                    "Firestone Library",
+                    "Lewis Library"
+                ],
+                "location_display": [
+                    "Stacks",
+                    "Stacks",
+                    "Stacks"
+                ],
+                "advanced_location_s": [
+                    "engineer$stacks",
+                    "firestone$stacks",
+                    "lewis$stacks",
+                    "Engineering Library",
+                    "Firestone Library",
+                    "Lewis Library"
+                ],
+                "name_title_browse_s": [
+                    "Ondaatje, Michael, 1943-. The cat's table"
+                ],
+                "call_number_display": [
+                    "Engineering Library iPads",
+                    "Firestone Library iPads",
+                    "Lewis Library iPads"
+                ],
+                "call_number_browse_s": [
+                    "Engineering Library iPads",
+                    "Firestone Library iPads",
+                    "Lewis Library iPads"
+                ],
+                "call_number_locator_display": [
+                    "Engineering Library iPads",
+                    "Firestone Library iPads",
+                    "Lewis Library iPads"
+                ],
+                "electronic_portfolio_s": [
+                    "{\"desc\":null,\"title\":\"Online Content\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53889423010006421&Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[\"Available only on a library iPad. Click here for information about iPad lending at Princeton University Library\"]}"
+                ],
+                "_version_": 1728031797232533500,
+                "timestamp": "2022-03-22T20:05:42.735Z"
+            },
+            {
+                "id": "9978157393506421",
+                "numeric_id_b": true,
+                "author_citation_display": [
+                    "Imai, Shingo",
+                    "Akagi, Yayoi",
+                    "Nakazono, Hiromi"
+                ],
+                "author_roles_1display": "{\"secondary_authors\":[\"Akagi, Yayoi\",\"Nakazono, Hiromi\",\"赤木弥生\",\"中園博美\"],\"translators\":[],\"editors\":[\"Imai, Shingo\",\"今井新悟\"],\"compilers\":[]}",
+                "author_s": [
+                    "Imai, Shingo",
+                    "Akagi, Yayoi",
+                    "Nakazono, Hiromi",
+                    "今井新悟",
+                    "今井新悟,",
+                    "赤木弥生",
+                    "赤木弥生,",
+                    "中園博美",
+                    "中园博美,"
+                ],
+                "title_display": "J-CAT ofisharu gaido : konpyūta ni yoru jidō saiten Nihongo tesuto / Imai Shingo hencho ; Akagi Yayoi, Nakazono Hiromi cho.",
+                "title_vern_display": "J-CATオフィシャルガイド : コンピュータによる自動採点日本語テスト / 今井新悟編著 ; 赤木弥生, 中園博美著.",
+                "title_t": [
+                    "J-CAT ofisharu gaido : konpyūta ni yoru jidō saiten Nihongo tesuto / Imai Shingo hencho ; Akagi Yayoi, Nakazono Hiromi cho."
+                ],
+                "title_citation_display": [
+                    "J-CAT ofisharu gaido : konpyūta ni yoru jidō saiten Nihongo tesuto",
+                    "J-CATオフィシャルガイド : コンピュータによる自動採点日本語テスト"
+                ],
+                "compiled_created_t": [
+                    "J-CAT ofisharu gaido : konpyūta ni yoru jidō saiten Nihongo tesuto / Imai Shingo hencho ; Akagi Yayoi, Nakazono Hiromi cho.",
+                    "J-CATオフィシャルガイド : コンピュータによる自動採点日本語テスト / 今井新悟編著 ; 赤木弥生, 中園博美著."
+                ],
+                "edition_display": [
+                    "Shohan.",
+                    "初版."
+                ],
+                "pub_created_vern_display": [
+                    "東京 : ココ出版, 2012."
+                ],
+                "pub_created_display": [
+                    "Tōkyō : Koko Shuppan, 2012.",
+                    "東京 : ココ出版, 2012."
+                ],
+                "pub_created_s": [
+                    "Tōkyō : Koko Shuppan, 2012.",
+                    "東京 : ココ出版, 2012."
+                ],
+                "pub_citation_display": [
+                    "Tōkyō: Koko Shuppan",
+                    "東京: ココ出版"
+                ],
+                "pub_date_display": [
+                    "2012"
+                ],
+                "pub_date_start_sort": 2012,
+                "cataloged_tdt": "2015-03-17T10:59:00Z",
+                "format": [
+                    "Book"
+                ],
+                "description_display": [
+                    "163 pages ; 19 cm"
+                ],
+                "description_t": [
+                    "163 pages ; 19 cm"
+                ],
+                "number_of_pages_citation_display": [
+                    "163 pages"
+                ],
+                "bib_ref_notes_display": [
+                    "Includes bibliographical references (pages 159-160) and index."
+                ],
+                "language_facet": [
+                    "Japanese"
+                ],
+                "language_code_s": [
+                    "jpn"
+                ],
+                "language_iana_s": [
+                    "ja"
+                ],
+                "lc_subject_display": [
+                    "Japanese language—Study and teaching—Foreign speakers"
+                ],
+                "subject_facet": [
+                    "Japanese language—Study and teaching—Foreign speakers"
+                ],
+                "related_name_json_1display": "{\"Author\":[\"Imai, Shingo\",\"Akagi, Yayoi\",\"Nakazono, Hiromi\",\"今井新悟\",\"赤木弥生\",\"中園博美\"],\"Editor\":[\"Imai, Shingo\",\"今井新悟\"]}",
+                "isbn_display": [
+                    "9784904595183",
+                    "4904595181"
+                ],
+                "isbn_s": [
+                    "9784904595183"
+                ],
+                "isbn_t": [
+                    "9784904595183"
+                ],
+                "oclc_s": [
+                    "785865953"
+                ],
+                "other_version_s": [
+                    "ocn785865953",
+                    "9784904595183"
+                ],
+                "holdings_1display": "{\"22583081810006421\":{\"location_code\":\"recap$pa\",\"location\":\"Remote Storage\",\"library\":\"ReCAP\",\"call_number\":\"PL519 .J43 2012\",\"call_number_browse\":\"PL519 .J43 2012\",\"items\":[{\"holding_id\":\"22583081810006421\",\"id\":\"23583081800006421\",\"status_at_load\":\"1\",\"barcode\":\"32101089400970\",\"copy_number\":\"1\"}]}}",
+                "location_code_s": [
+                    "recap$pa"
+                ],
+                "location": [
+                    "ReCAP"
+                ],
+                "location_display": [
+                    "Remote Storage"
+                ],
+                "advanced_location_s": [
+                    "recap$pa",
+                    "ReCAP"
+                ],
+                "call_number_display": [
+                    "PL519 .J43 2012"
+                ],
+                "call_number_browse_s": [
+                    "PL519 .J43 2012"
+                ],
+                "call_number_locator_display": [
+                    "PL519 .J43 2012"
+                ],
+                "hashed_id_ssi": "e61a7f1f8694c36a",
+                "_version_": 1743969437657071600,
+                "timestamp": "2022-09-14T18:07:41.235Z"
+            }
+        ]
+    }
+}
