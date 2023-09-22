@@ -4,6 +4,22 @@ info:
   title: Allsearch API
   version: v1
 paths:
+  "/search/artmuseum?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query the Art Museum
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/artmuseum?query={query}"
+      tags:
+      - Art Museum
+      description: Searches the Art Museum using a query term
+      responses:
+        '200':
+          description: successful
   "/search/catalog?query={query}":
     parameters:
     - name: query
@@ -17,6 +33,54 @@ paths:
       tags:
       - Catalog
       description: Searches the Catalog using a query term
+      responses:
+        '200':
+          description: successful
+  "/search/dpul?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query Dpul
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/dpul?query={query}"
+      tags:
+      - Dpul
+      description: Searches Dpul using a query term
+      responses:
+        '200':
+          description: successful
+  "/search/findingaids?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query Findingaids
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/findingaids?query={query}"
+      tags:
+      - Findingaids
+      description: Searches Findingaids using a query term
+      responses:
+        '200':
+          description: successful
+  "/search/pulmap?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query Pulmap
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/pulmap?query={query}"
+      tags:
+      - Pulmap
+      description: Searches Pulmap using a query term
       responses:
         '200':
           description: successful
