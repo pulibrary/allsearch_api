@@ -13,12 +13,8 @@ class Findingaids
     @service_response = solr_service_response(query_terms:)
   end
 
-  def solr_collection
-    'pulfalight-production'
-  end
-
   def solr_fields
-    %w[id collection_ssm creator_ssm level_sim scopecontent_ssm repository_ssm extent_ssm accessrestrict_ssm]
+    %w[id collection_ssm creator_ssm level_ssm scopecontent_ssm repository_ssm extent_ssm accessrestrict_ssm]
   end
 
   def solr_sort
@@ -26,6 +22,6 @@ class Findingaids
   end
 
   def extra_solr_params
-    '&fq=level_sim:Collection'
+    'fq=level_ssm:collection'
   end
 end
