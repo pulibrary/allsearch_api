@@ -6,9 +6,8 @@ LIBRARY_DATABASE_CSV_FIELDS = [:libguides_id, :name, :description, :alt_names_co
 class LibraryDatabaseRecord < ApplicationRecord
   include PgSearch::Model
 
-  scope :query, ->(search_term) { where("searchable @@ websearch_to_tsquery('english', ?)", search_term) }
   # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
-  pg_search_scope :ordered_query,
+  pg_search_scope :query,
                   against: 'searchable',
                   using: {
                     tsearch: {
