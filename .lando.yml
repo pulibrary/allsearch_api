@@ -21,7 +21,7 @@ services:
     core: findingaids
     config:
       dir: "solr/solr_configs/pulfalight-production/conf"
-  pulmap:
+  pulmap_solr:
     type: solr:8.4
     portforward: true
     core: pulmap
@@ -34,5 +34,5 @@ proxy:
     - dpul.dev.solr.lndo.site:8983
   findingaids_solr:
     - findingaids.dev.solr.lndo.site:8983
-  pulmap:
+  pulmap_solr:
     - pulmap.dev.solr.lndo.site:8983

@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/findingaids' do
   it 'returns json' do
-    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_sim,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_sim:Collection')
+    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_ssm,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_ssm:collection')
       .to_return(status: 200, body: file_fixture('solr/findingaids/cats.json'))
     get '/search/findingaids?query=cats'
 
@@ -14,7 +14,7 @@ RSpec.describe 'GET /search/findingaids' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_sim,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_sim:Collection')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_ssm,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_ssm:collection')
         .to_return(status: 200, body: file_fixture('solr/findingaids/cats.json'))
     end
 
@@ -25,7 +25,7 @@ RSpec.describe 'GET /search/findingaids' do
           { title: 'Edward Anthony Papers, 1920s -1950s',
             creator: 'Anthony, Edward, 1895-1971',
             id: 'TC125',
-            type: 'Collection',
+            type: 'collection',
             description: 'Contains several manuscripts, including a 528-page autobiography, "' \
                          'My Big Cats" co-authored with Clyde Beatty about animal training in the circus, ' \
                          'and a collection of poems. Also included are a few letters, a calendar date book for 1928, ' \

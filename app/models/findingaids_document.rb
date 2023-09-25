@@ -28,7 +28,7 @@ class FindingaidsDocument < Document
   end
 
   def type
-    document[:level_sim]&.first
+    document[:level_ssm]&.first
   end
 
   # This field may contain html

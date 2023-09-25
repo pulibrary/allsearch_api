@@ -1,0 +1,1404 @@
+[
+    {
+        "id": "9976442293506421",
+        "numeric_id_b": true,
+        "author_display": [
+            "Ondaatje, Michael, 1943-"
+        ],
+        "author_citation_display": [
+            "Ondaatje, Michael"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[],\"translators\":[],\"editors\":[],\"compilers\":[],\"primary_author\":\"Ondaatje, Michael\"}",
+        "author_s": [
+            "Ondaatje, Michael, 1943-"
+        ],
+        "marc_relator_display": [
+            "Author"
+        ],
+        "title_display": "The cat's table [electronic resource] / Michael Ondaatje.",
+        "title_t": [
+            "The cat's table [electronic resource] / Michael Ondaatje."
+        ],
+        "title_citation_display": [
+            "The cat's table"
+        ],
+        "compiled_created_t": [
+            "The cat's table [electronic resource] / Michael Ondaatje."
+        ],
+        "edition_display": [
+            "Kindle ed."
+        ],
+        "pub_created_display": [
+            "New York : Alfred A. Knopf, 2011."
+        ],
+        "pub_created_s": [
+            "New York : Alfred A. Knopf, 2011."
+        ],
+        "pub_citation_display": [
+            "New York: Alfred A. Knopf"
+        ],
+        "pub_date_display": [
+            "2011"
+        ],
+        "pub_date_start_sort": 2011,
+        "cataloged_tdt": "2021-07-21T03:44:48Z",
+        "format": [
+            "Book"
+        ],
+        "electronic_access_1display": "{\"http://libguides.princeton.edu/content.php?pid=295717\u0026sid=2427989\":[\"libguides.princeton.edu\",\"Available only on a library iPad. Click here for information about iPad lending at Princeton University Library\"],\"http://amzn.to/rPmSyq\":[\"Amazon.com description of book\"]}",
+        "description_display": [
+            "1 electronic book (290 p.)"
+        ],
+        "description_t": [
+            "1 electronic book (290 p.)"
+        ],
+        "number_of_pages_citation_display": [
+            "1 electronic book (290 p.)"
+        ],
+        "related_record_info_display": [
+            "Print version:"
+        ],
+        "summary_note_display": [
+            "\"In the early 1950s, an eleven-year-old boy in Colombo boards a ship bound for England. At mealtimes he is seated at the \"cat's table\"--as far from the Captain's Table as can be--with a ragtag group of \"insignificant\" adults and two other boys, Cassius and Ramadhin. As the ship makes its way across the Indian Ocean, through the Suez Canal, into the Mediterranean, the boys tumble from one adventure to another, bursting all over the place like freed mercury. But there are other diversions as well: one man talks with them about jazz and women, another opens the door to the world of literature. The narrator's elusive, beautiful cousin Emily becomes his confidante, allowing him to see himself \"with a distant eye\" for the first time, and to feel the first stirring of desire. Another Cat's Table denizen, the shadowy Miss Lasqueti, is perhaps more than what she seems. And very late every night, the boys spy on a shackled prisoner, his crime and his fate a galvanizing mystery that will haunt them forever. As the narrative moves between the decks and holds of the ship and the boy's adult years, it tells a spellbinding story--by turns poignant and electrifying--about the magical, often forbidden, discoveries of childhood and a lifelong journey that begins unexpectedly with a spectacular sea voyage.\""
+        ],
+        "notes_display": [
+            "\"This is a Borzoi book.\"",
+            "Sold by: Random House Digital, Inc."
+        ],
+        "source_desc_notes_display": [
+            "Description based on print version record."
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_code_s": [
+            "eng"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "lc_subject_display": [
+            "Ocean travel—Fiction"
+        ],
+        "subject_facet": [
+            "Ocean travel—Fiction",
+            "Fiction"
+        ],
+        "lcgft_s": [
+            "Fiction"
+        ],
+        "standard_no_1display": "{\"Other standard number\":[\"40019806449\"]}",
+        "other_version_s": [
+            "ocn798224430",
+            "9780307700117",
+            "ocn697261660"
+        ],
+        "holdings_1display": "{\"22577754560006421\":{\"location_code\":\"engineer$stacks\",\"location\":\"Stacks\",\"library\":\"Engineering Library\",\"call_number\":\"Engineering Library iPads\",\"call_number_browse\":\"Engineering Library iPads\",\"location_note\":[\"To borrow this ebook, please request an iPad from the circulation desk at the Engineering Library\"]},\"22577754580006421\":{\"location_code\":\"firestone$stacks\",\"location\":\"Stacks\",\"library\":\"Firestone Library\",\"call_number\":\"Firestone Library iPads\",\"call_number_browse\":\"Firestone Library iPads\",\"location_note\":[\"To borrow this ebook, please request an iPad from the circulation desk at Firestone Library\"]},\"22577754570006421\":{\"location_code\":\"lewis$stacks\",\"location\":\"Stacks\",\"library\":\"Lewis Library\",\"call_number\":\"Lewis Library iPads\",\"call_number_browse\":\"Lewis Library iPads\",\"location_note\":[\"To borrow this ebook, please request an iPad from the circulation desk at Lewis Library\"]}}",
+        "location_code_s": [
+            "engineer$stacks",
+            "firestone$stacks",
+            "lewis$stacks"
+        ],
+        "location": [
+            "Engineering Library",
+            "Firestone Library",
+            "Lewis Library"
+        ],
+        "location_display": [
+            "Stacks",
+            "Stacks",
+            "Stacks"
+        ],
+        "advanced_location_s": [
+            "engineer$stacks",
+            "firestone$stacks",
+            "lewis$stacks",
+            "Engineering Library",
+            "Firestone Library",
+            "Lewis Library"
+        ],
+        "name_title_browse_s": [
+            "Ondaatje, Michael, 1943-. The cat's table"
+        ],
+        "call_number_display": [
+            "Engineering Library iPads",
+            "Firestone Library iPads",
+            "Lewis Library iPads"
+        ],
+        "call_number_browse_s": [
+            "Engineering Library iPads",
+            "Firestone Library iPads",
+            "Lewis Library iPads"
+        ],
+        "call_number_locator_display": [
+            "Engineering Library iPads",
+            "Firestone Library iPads",
+            "Lewis Library iPads"
+        ],
+        "electronic_portfolio_s": [
+            "{\"desc\":null,\"title\":\"Online Content\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53889423010006421\u0026Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[\"Available only on a library iPad. Click here for information about iPad lending at Princeton University Library\"]}"
+        ]
+    },
+    {
+        "id": "dsp01t148fk145",
+        "title_t": [
+            "Nanoparticles as Potential Drug Carriers: Characterization of the time and size dependent uptake of PEG-PCL nanoparticles into feline lymphoblastoid cells"
+        ],
+        "title_citation_display": [
+            "Nanoparticles as Potential Drug Carriers: Characterization of the time and size dependent uptake of PEG-PCL nanoparticles into feline lymphoblastoid cells"
+        ],
+        "title_display": "Nanoparticles as Potential Drug Carriers: Characterization of the time and size dependent uptake of PEG-PCL nanoparticles into feline lymphoblastoid cells",
+        "electronic_access_1display": "{\"http://arks.princeton.edu/ark:/88435/dsp01t148fk145\":[\"DataSpace\",\"Citation only\"]}",
+        "restrictions_note_display": [
+            "This thesis can be viewed in person at the \u003ca href=http://mudd.princeton.edu\u003eMudd Manuscript Library\u003c/a\u003e.  \nTo order a copy complete the \u003ca href=\"http://rbsc.princeton.edu/senior-thesis-order-form\" target=\"_blank\"\u003eSenior Thesis Request Form\u003c/a\u003e.  \nFor more information contact \u003ca href=mailto:mudd@princeton.edu\u003emudd@princeton.edu\u003c/a\u003e."
+        ],
+        "call_number_display": [
+            "AC102 21102"
+        ],
+        "call_number_browse_s": [
+            "AC102 21102"
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_name_display": [
+            "English"
+        ],
+        "author_display": [
+            "Pawlowski, Paul K."
+        ],
+        "author_s": [
+            "Pawlowski, Paul K.",
+            "Soboyejo, Winston Oluwole",
+            "Grant, Barbara Rosemary",
+            "Princeton University. Department of Ecology and Evolutionary Biology"
+        ],
+        "advisor_display": [
+            "Soboyejo, Winston Oluwole"
+        ],
+        "contributor_display": [
+            "Grant, Barbara Rosemary"
+        ],
+        "department_display": [
+            "Princeton University. Department of Ecology and Evolutionary Biology"
+        ],
+        "description_display": [
+            "48 Pages"
+        ],
+        "location": [
+            "Mudd Manuscript Library"
+        ],
+        "location_display": [
+            "Mudd Manuscript Library"
+        ],
+        "location_code_s": [
+            "mudd$stacks"
+        ],
+        "advanced_location_s": [
+            "mudd$stacks",
+            "Mudd Manuscript Library"
+        ],
+        "holdings_1display": "{\"thesis\":{\"location\":\"Mudd Manuscript Library\",\"library\":\"Mudd Manuscript Library\",\"location_code\":\"mudd$stacks\",\"call_number\":\"AC102 21102\",\"call_number_browse\":\"AC102 21102\",\"dspace\":true}}",
+        "class_year_s": [
+            "2007"
+        ],
+        "pub_date_start_sort": 2007,
+        "pub_date_end_sort": 2007,
+        "format": [
+            "Senior thesis"
+        ]
+    },
+    {
+        "id": "9989210103506421",
+        "numeric_id_b": true,
+        "author_citation_display": [
+            "Liang, Ting",
+            "Mai, Zhaohui",
+            "Zhuang, Wenqiang",
+            "Yen, Donnie",
+            "Jiang, Wen",
+            "Sun, Li",
+            "Fang, Zhongxin",
+            "Chen, Hong",
+            "Shao, Bing",
+            "An, Zhijie",
+            "Wang, Xuebing",
+            "Wang, Bojie",
+            "Dong, Yong",
+            "Li, Zonghan",
+            "Nie, Yuan",
+            "Qian, Xiaohao",
+            "Chen, Zhiying",
+            "Lei, Chuxiong",
+            "Chen, Gufang",
+            "Kuang, Zhiliang",
+            "Li, Yunwen",
+            "Xing hui tian ji guo ji chuan mei you xian gong si",
+            "Shanghai dian ying ji tuan gong si",
+            "Anhui guang dian chuan mei chan ye ji tuan",
+            "Edko Films"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[\"Liang, Ting\",\"Mai, Zhaohui\",\"Zhuang, Wenqiang\",\"Yen, Donnie\",\"Jiang, Wen\",\"Sun, Li\",\"Fang, Zhongxin\",\"Chen, Hong\",\"Shao, Bing\",\"An, Zhijie\",\"Wang, Xuebing\",\"Wang, Bojie\",\"Dong, Yong\",\"Li, Zonghan\",\"Nie, Yuan\",\"Qian, Xiaohao\",\"Chen, Zhiying\",\"Lei, Chuxiong\",\"Chen, Gufang\",\"Kuang, Zhiliang\",\"Li, Yunwen\",\"Xing hui tian ji guo ji chuan mei you xian gong si\",\"Shanghai dian ying ji tuan gong si\",\"Anhui guang dian chuan mei chan ye ji tuan\",\"Edko Films\",\"梁婷\",\"麥兆輝\",\"莊文強\",\"甄子丹\",\"姜文\",\"孫儷\",\"方中信\",\"陳紅\",\"邵兵\",\"安志杰\",\"王學兵\",\"王柏傑\",\"董勇\",\"李宗翰\",\"聶遠\",\"錢小豪\",\"陳志英\",\"雷楚雄\",\"陳顧方\",\"鄺志良\",\"黎允文\",\"星滙天姬國際傳媒有限公司\",\"上海電影集團公司\",\"安徽廣電傳媒產業集團\"],\"translators\":[],\"editors\":[],\"compilers\":[]}",
+        "author_s": [
+            "Liang, Ting, producer",
+            "Mai, Zhaohui, 1965-",
+            "Zhuang, Wenqiang",
+            "Yen, Donnie, 1963-",
+            "Jiang, Wen, 1963-",
+            "Sun, Li, 1982-",
+            "Fang, Zhongxin, 1963-",
+            "Chen, Hong, 1968-",
+            "Shao, Bing, 1968-",
+            "An, Zhijie, 1977-",
+            "Wang, Xuebing, 1971-",
+            "Wang, Bojie, 1989-",
+            "Dong, Yong, 1968 December-",
+            "Li, Zonghan, 1976-",
+            "Nie, Yuan, 1978-",
+            "Qian, Xiaohao",
+            "Chen, Zhiying",
+            "Lei, Chuxiong",
+            "Chen, Gufang",
+            "Kuang, Zhiliang",
+            "Li, Yunwen",
+            "Xing hui tian ji guo ji chuan mei you xian gong si",
+            "Shanghai dian ying ji tuan gong si",
+            "Anhui guang dian chuan mei chan ye ji tuan",
+            "Edko Films",
+            "梁婷, producer",
+            "梁婷, producer,",
+            "麥兆輝, 1965-",
+            "麦兆辉, 1965-",
+            "莊文強",
+            "庄文强,",
+            "甄子丹, 1963-",
+            "姜文, 1963-",
+            "孫儷, 1982-",
+            "孙俪, 1982-",
+            "方中信, 1963-",
+            "陳紅, 1968-",
+            "陈红, 1968-",
+            "邵兵, 1968-",
+            "安志杰, 1977-",
+            "王學兵, 1971-",
+            "王学兵, 1971-",
+            "王柏傑, 1989-",
+            "王柏杰, 1989-",
+            "董勇, 1968 Dec.-",
+            "李宗翰, 1976-",
+            "聶遠, 1978-",
+            "聂远, 1978-",
+            "錢小豪",
+            "钱小豪,",
+            "陳志英",
+            "陈志英,",
+            "雷楚雄",
+            "雷楚雄,",
+            "陳顧方",
+            "陈顾方,",
+            "鄺志良",
+            "邝志良,",
+            "黎允文",
+            "黎允文,",
+            "星滙天姬國際傳媒有限公司",
+            "星滙天姬国际传媒有限公司,",
+            "上海電影集團公司",
+            "上海电影集团公司,",
+            "安徽廣電傳媒產業集團",
+            "安徽广电传媒产业集团,"
+        ],
+        "uniform_title_s": [
+            "Guan Yunchang (Motion picture)",
+            "關雲長 (Motion picture)"
+        ],
+        "title_display": "Guan Yunchang / Xing hui tian ji guo ji chuan mei you xian gong si, Shanghai dian ying (ji tuan) you xian gong si, Anhui guang dian chuan mei chan ye ji tuan you xian ze ren gong si chu pin ; chu pin ren, Liang Ting, Ren Zhonglun, Li Jinhua ; jian zhi, Liang Ting, Wang Tianyun ; zhi pian ren, Liang Ting ; bian ju dao yan, Mai Zhaohui, Zhuang Wenqiang = The lost bladesman / Star Union Skykee International Media Limited, Shanghai Film Group Co. Ltd., Anhui Media Industry Group Co. Ltd. present ; executive producers, Liang Ting, Ren Zhong Lun, Li In Hua ; producers, Liang Ting, Wang Tian Yun ; produced by Liang Ting ; writtedn \u0026 directed by Alan Mak, Felin Chong.",
+        "title_vern_display": "關雲長 / 星滙天姬國際傳媒有限公司, 上海電影(集團)有限公司, 安徽廣電傳媒產業集團有限責任公司出品 ; 出品人梁婷, 任仲倫, 李金華 ; 監製梁婷, 汪天雲 ; 製片人梁婷 ; 編劇導演麥兆輝, 莊文強 = The lost bladesman / Star Union Skykee International Media Limited, Shanghai Film (Group) Co. Ltd., Anhui Media Industry Group Co. Ltd. present ; executive producers, Liang Ting, Ren Zhong Lun, Li In Hua ; producers, Liang Ting, Wang Tian Yun ; produced by Liang Ting ; written \u0026 directed by Alan Mak, Felin Chong.",
+        "title_t": [
+            "Guan Yunchang / Xing hui tian ji guo ji chuan mei you xian gong si, Shanghai dian ying (ji tuan) you xian gong si, Anhui guang dian chuan mei chan ye ji tuan you xian ze ren gong si chu pin ; chu pin ren, Liang Ting, Ren Zhonglun, Li Jinhua ; jian zhi, Liang Ting, Wang Tianyun ; zhi pian ren, Liang Ting ; bian ju dao yan, Mai Zhaohui, Zhuang Wenqiang = The lost bladesman / Star Union Skykee International Media Limited, Shanghai Film Group Co. Ltd., Anhui Media Industry Group Co. Ltd. present ; executive producers, Liang Ting, Ren Zhong Lun, Li In Hua ; producers, Liang Ting, Wang Tian Yun ; produced by Liang Ting ; writtedn \u0026 directed by Alan Mak, Felin Chong."
+        ],
+        "title_citation_display": [
+            "Guan Yunchang",
+            "關雲長"
+        ],
+        "compiled_created_t": [
+            "Guan Yunchang / Xing hui tian ji guo ji chuan mei you xian gong si, Shanghai dian ying (ji tuan) you xian gong si, Anhui guang dian chuan mei chan ye ji tuan you xian ze ren gong si chu pin ; chu pin ren, Liang Ting, Ren Zhonglun, Li Jinhua ; jian zhi, Liang Ting, Wang Tianyun ; zhi pian ren, Liang Ting ; bian ju dao yan, Mai Zhaohui, Zhuang Wenqiang = The lost bladesman / Star Union Skykee International Media Limited, Shanghai Film Group Co. Ltd., Anhui Media Industry Group Co. Ltd. present ; executive producers, Liang Ting, Ren Zhong Lun, Li In Hua ; producers, Liang Ting, Wang Tian Yun ; produced by Liang Ting ; writtedn \u0026 directed by Alan Mak, Felin Chong.",
+            "關雲長 / 星滙天姬國際傳媒有限公司, 上海電影(集團)有限公司, 安徽廣電傳媒產業集團有限責任公司出品 ; 出品人梁婷, 任仲倫, 李金華 ; 監製梁婷, 汪天雲 ; 製片人梁婷 ; 編劇導演麥兆輝, 莊文強 = The lost bladesman / Star Union Skykee International Media Limited, Shanghai Film (Group) Co. Ltd., Anhui Media Industry Group Co. Ltd. present ; executive producers, Liang Ting, Ren Zhong Lun, Li In Hua ; producers, Liang Ting, Wang Tian Yun ; produced by Liang Ting ; written \u0026 directed by Alan Mak, Felin Chong."
+        ],
+        "pub_created_display": [
+            "Hong Kong : Marketed and distributed by Edko Films, 2011."
+        ],
+        "pub_created_s": [
+            "Hong Kong : Marketed and distributed by Edko Films, 2011."
+        ],
+        "pub_citation_display": [
+            "Hong Kong: Marketed and distributed by Edko Films"
+        ],
+        "pub_date_display": [
+            "2011"
+        ],
+        "pub_date_start_sort": 2011,
+        "cataloged_tdt": "2015-04-20T10:59:00Z",
+        "format": [
+            "Video/Projected medium"
+        ],
+        "description_display": [
+            "1 videodisc (109 min.) : sound, color ; 4 3/4 in."
+        ],
+        "description_t": [
+            "1 videodisc (109 min.) : sound, color ; 4 3/4 in."
+        ],
+        "number_of_pages_citation_display": [
+            "1 videodisc (109 min.)"
+        ],
+        "summary_note_display": [
+            "\"The story of legendary Guan Yu crossing five passes \u0026 slaying six generals. He played a major role in the civil war that led to the collapse of Han Dynasty \u0026 the establishment of Shu Han of the 3 Kingdoms, making Liu Bei its first emperor\"--IMDb.com."
+        ],
+        "notes_display": [
+            "Originally produced as a motion picture in Hong Kong in 2011.",
+            "Special features: making of ; interview of Tao Jie ; teaser trailer ; theatrical tralier ; photo gallery."
+        ],
+        "credits_notes_display": [
+            "She ying zhi dao, Chen Zhiying ; mei shu zong jian, Lei Chuxiong ; zao xing gu wen, Chen Gufang ; jian jie, Kuang Zhiliang ; yuan chuang yin yue, Li Yunwen ; dong zuo dao yan, Zhen Zidan.",
+            "攝影指導陳志英 ; 美術總監雷楚雄 ; 造型顧問陳顧方 ; 剪接鄺志良 ; 原創音樂黎允文 ; 動作導演甄子丹."
+        ],
+        "system_details_notes_display": [
+            "DVD-9, NTSC, region 3, 16:9."
+        ],
+        "participant_performer_display": [
+            "Zhen Zidan, Jiang Wen, Sun Li, Fang Zhongxin, Chen Hong, Jun Bing, An Zhijie, Wang Xuebing, Wang Bojie, Dong Yong, Li Zonghan, Nie Yuan, Qian Xiaohao.",
+            "甄子丹, 姜文, 孫儷, 方中信, 陳紅, 邵兵, 安志杰, 王學兵, 王柏傑, 董勇, 李宗翰, 聶遠, 錢小豪."
+        ],
+        "language_display": [
+            "Optional soundtracks in Mandarin (Dolby Digital Surround EX or DTS Digital Surround ES) and Cantonese (Dolby Digital Surround EX) with optional subtitles in traditional Chinese and English."
+        ],
+        "language_facet": [
+            "Chinese"
+        ],
+        "language_code_s": [
+            "chi"
+        ],
+        "language_iana_s": [
+            "zh"
+        ],
+        "lc_subject_display": [
+            "Guan, Yu, 160-220—Drama",
+            "Cao, Cao, 155-220—Drama"
+        ],
+        "subject_facet": [
+            "Guan, Yu, 160-220—Drama",
+            "Cao, Cao, 155-220—Drama",
+            "Historical films",
+            "Martial arts films",
+            "Fiction films",
+            "Feature films",
+            "Drama",
+            "Video recordings"
+        ],
+        "lcgft_s": [
+            "Historical films",
+            "Martial arts films",
+            "Fiction films",
+            "Feature films",
+            "Drama",
+            "Video recordings"
+        ],
+        "related_name_json_1display": "{\"Film producer\":[\"Liang, Ting, producer\",\"梁婷, producer\"],\"Film director\":[\"Mai, Zhaohui, 1965-\",\"Zhuang, Wenqiang\",\"麥兆輝, 1965-\",\"莊文強\"],\"Screenwriter\":[\"Mai, Zhaohui, 1965-\",\"Zhuang, Wenqiang\",\"麥兆輝, 1965-\",\"莊文強\"],\"Actor\":[\"Yen, Donnie, 1963-\",\"Jiang, Wen, 1963-\",\"Sun, Li, 1982-\",\"Fang, Zhongxin, 1963-\",\"Chen, Hong, 1968-\",\"Shao, Bing, 1968-\",\"An, Zhijie, 1977-\",\"Wang, Xuebing, 1971-\",\"Wang, Bojie, 1989-\",\"Dong, Yong, 1968 December-\",\"Li, Zonghan, 1976-\",\"Nie, Yuan, 1978-\",\"Qian, Xiaohao\",\"甄子丹, 1963-\",\"姜文, 1963-\",\"孫儷, 1982-\",\"方中信, 1963-\",\"陳紅, 1968-\",\"邵兵, 1968-\",\"安志杰, 1977-\",\"王學兵, 1971-\",\"王柏傑, 1989-\",\"董勇, 1968 Dec.-\",\"李宗翰, 1976-\",\"聶遠, 1978-\",\"錢小豪\"],\"Choreographer\":[\"Yen, Donnie, 1963-\",\"甄子丹, 1963-\"],\"Director of photography\":[\"Chen, Zhiying\",\"陳志英\"],\"Art director\":[\"Lei, Chuxiong\",\"雷楚雄\"],\"Costume designer\":[\"Chen, Gufang\",\"陳顧方\"],\"Editor of moving image work\":[\"Kuang, Zhiliang\",\"鄺志良\"],\"Composer\":[\"Li, Yunwen\",\"黎允文\"],\"Presenter\":[\"Xing hui tian ji guo ji chuan mei you xian gong si\",\"Shanghai dian ying ji tuan gong si\",\"Anhui guang dian chuan mei chan ye ji tuan\",\"星滙天姬國際傳媒有限公司\",\"上海電影集團公司\",\"安徽廣電傳媒產業集團\"],\"Film distributor\":[\"Edko Films\"]}",
+        "other_title_display": [
+            "Lost bladesman"
+        ],
+        "alt_title_246_display": [
+            "Lost bladesman"
+        ],
+        "publisher_no_display": [
+            "11-EDVD-23"
+        ],
+        "oclc_s": [
+            "743452620"
+        ],
+        "other_version_s": [
+            "ocn743452620",
+            "ocn744794446"
+        ],
+        "holdings_1display": "{\"22683472510006421\":{\"location_code\":\"recap$qv\",\"location\":\"Remote Storage: Video Collection\",\"library\":\"ReCAP\",\"call_number\":\"DVD\",\"call_number_browse\":\"DVD\",\"items\":[{\"holding_id\":\"22683472510006421\",\"id\":\"23683472500006421\",\"status_at_load\":\"1\",\"barcode\":\"32101081421958\",\"copy_number\":\"1\"}]}}",
+        "location_code_s": [
+            "recap$qv"
+        ],
+        "location": [
+            "ReCAP"
+        ],
+        "location_display": [
+            "Remote Storage: Video Collection"
+        ],
+        "advanced_location_s": [
+            "recap$qv",
+            "ReCAP"
+        ],
+        "call_number_display": [
+            "DVD"
+        ],
+        "call_number_browse_s": [
+            "DVD"
+        ],
+        "call_number_locator_display": [
+            "DVD"
+        ]
+    },
+    {
+        "id": "99100949473506421",
+        "numeric_id_b": true,
+        "author_display": [
+            "Berque, Augustin"
+        ],
+        "author_citation_display": [
+            "Berque, Augustin"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[],\"translators\":[],\"editors\":[],\"compilers\":[],\"primary_author\":\"Berque, Augustin\"}",
+        "author_s": [
+            "Berque, Augustin"
+        ],
+        "marc_relator_display": [
+            "Author"
+        ],
+        "uniform_title_s": [
+            "Histoire de l'habitat idéal. Japanese"
+        ],
+        "title_display": "Risō no sumai : inton kara sappūkei e / Ogyusutan Berugu cho ; Toriumi Motoki yaku.",
+        "title_vern_display": "理想の住まい : 隠遁から殺風景へ / オギュスタン・ベルク著 ; 鳥海基樹訳.",
+        "title_t": [
+            "Risō no sumai : inton kara sappūkei e / Ogyusutan Berugu cho ; Toriumi Motoki yaku."
+        ],
+        "title_citation_display": [
+            "Risō no sumai : inton kara sappūkei e",
+            "理想の住まい : 隠遁から殺風景へ"
+        ],
+        "compiled_created_t": [
+            "Risō no sumai : inton kara sappūkei e / Ogyusutan Berugu cho ; Toriumi Motoki yaku.",
+            "理想の住まい : 隠遁から殺風景へ / オギュスタン・ベルク著 ; 鳥海基樹訳."
+        ],
+        "edition_display": [
+            "Shohan.",
+            "初版."
+        ],
+        "pub_created_vern_display": [
+            "京都市 : 京都大学学術出版会, 2017."
+        ],
+        "pub_created_display": [
+            "Kyōto-shi : Kyōto Daigaku Gakujutsu Shuppankai, 2017.",
+            "Paris : Félin, ©2010.",
+            "京都市 : 京都大学学術出版会, 2017."
+        ],
+        "pub_created_s": [
+            "Kyōto-shi : Kyōto Daigaku Gakujutsu Shuppankai, 2017.",
+            "Paris : Félin, ©2010.",
+            "京都市 : 京都大学学術出版会, 2017."
+        ],
+        "pub_citation_display": [
+            "Kyōto-shi: Kyōto Daigaku Gakujutsu Shuppankai",
+            "Paris: Félin",
+            "京都市: 京都大学学術出版会"
+        ],
+        "pub_date_display": [
+            "2017"
+        ],
+        "pub_date_start_sort": 2017,
+        "cataloged_tdt": "2017-04-14T10:59:00Z",
+        "format": [
+            "Book"
+        ],
+        "description_display": [
+            "xi, 482 pages : illustrations (color) ; 22 cm."
+        ],
+        "description_t": [
+            "xi, 482 pages : illustrations (color) ; 22 cm."
+        ],
+        "number_of_pages_citation_display": [
+            "xi, 482 pages"
+        ],
+        "translation_of_display": [
+            "Berque, Augustin Histoire de l'habitat idéal : de l'Orient à l'Occident"
+        ],
+        "series_display": [
+            "Kankyō ningengaku to chiiki",
+            "環境人間学と地域."
+        ],
+        "more_in_this_series_t": [
+            "Kankyō ningengaku to chiiki",
+            "環境人間学と地域"
+        ],
+        "notes_display": [
+            "文献:p448-462."
+        ],
+        "bib_ref_notes_display": [
+            "Includes bibliographical references (pages 448-462) and indexes."
+        ],
+        "language_facet": [
+            "Japanese"
+        ],
+        "language_code_s": [
+            "jpn"
+        ],
+        "language_iana_s": [
+            "ja"
+        ],
+        "lc_subject_display": [
+            "Architecture—Environmental aspects",
+            "Ecological houses"
+        ],
+        "subject_facet": [
+            "Architecture—Environmental aspects",
+            "Ecological houses"
+        ],
+        "isbn_display": [
+            "9784814000517",
+            "4814000510"
+        ],
+        "isbn_s": [
+            "9784814000517"
+        ],
+        "isbn_t": [
+            "9784814000517"
+        ],
+        "oclc_s": [
+            "969706129"
+        ],
+        "other_version_s": [
+            "ocn969706129",
+            "9784814000517"
+        ],
+        "holdings_1display": "{\"22483991870006421\":{\"location_code\":\"recap$pa\",\"location\":\"Remote Storage\",\"library\":\"ReCAP\",\"call_number\":\"NA7117.5 .B47163 2017\",\"call_number_browse\":\"NA7117.5 .B47163 2017\",\"items\":[{\"holding_id\":\"22483991870006421\",\"id\":\"23483991860006421\",\"status_at_load\":\"1\",\"barcode\":\"32101093168720\",\"copy_number\":\"0\"}]}}",
+        "location_code_s": [
+            "recap$pa"
+        ],
+        "location": [
+            "ReCAP"
+        ],
+        "location_display": [
+            "Remote Storage"
+        ],
+        "advanced_location_s": [
+            "recap$pa",
+            "ReCAP"
+        ],
+        "linked_title_s": [
+            "Berque, Augustin Histoire de l'habitat idéal : de l'Orient à l'Occident"
+        ],
+        "name_uniform_title_1display": "[[\"Berque, Augustin.\",\"Histoire de l'habitat idéal.\",\"Japanese\"]]",
+        "name_title_browse_s": [
+            "Berque, Augustin Histoire de l'habitat idéal : de l'Orient à l'Occident",
+            "Berque, Augustin. Histoire de l'habitat idéal",
+            "Berque, Augustin. Histoire de l'habitat idéal. Japanese"
+        ],
+        "call_number_display": [
+            "NA7117.5 .B47163 2017"
+        ],
+        "call_number_browse_s": [
+            "NA7117.5 .B47163 2017"
+        ],
+        "call_number_locator_display": [
+            "NA7117.5 .B47163 2017"
+        ]
+    },
+    {
+        "id": "9961983933506421",
+        "numeric_id_b": true,
+        "author_display": [
+            "Ksepka, Daniel T."
+        ],
+        "author_citation_display": [
+            "Ksepka, Daniel T.",
+            "Clarke, Julia A."
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[\"Clarke, Julia A.\"],\"translators\":[],\"editors\":[],\"compilers\":[],\"primary_author\":\"Ksepka, Daniel T.\"}",
+        "author_s": [
+            "Ksepka, Daniel T.",
+            "Clarke, Julia A."
+        ],
+        "marc_relator_display": [
+            "Author"
+        ],
+        "title_display": "The basal penguin (Aves, Sphenisciformes) Perudyptes devriesi and a phylogenetic evaluation of the penguin fossil record / Daniel T. Ksepka, Julia A. Clarke.",
+        "title_t": [
+            "The basal penguin (Aves, Sphenisciformes) Perudyptes devriesi and a phylogenetic evaluation of the penguin fossil record / Daniel T. Ksepka, Julia A. Clarke."
+        ],
+        "title_citation_display": [
+            "The basal penguin (Aves, Sphenisciformes) Perudyptes devriesi and a phylogenetic evaluation of the penguin fossil record"
+        ],
+        "compiled_created_t": [
+            "The basal penguin (Aves, Sphenisciformes) Perudyptes devriesi and a phylogenetic evaluation of the penguin fossil record / Daniel T. Ksepka, Julia A. Clarke."
+        ],
+        "pub_created_display": [
+            "[New York] : American Museum of Natural History, c2010."
+        ],
+        "pub_created_s": [
+            "[New York] : American Museum of Natural History, c2010."
+        ],
+        "pub_citation_display": [
+            "New York: American Museum of Natural History"
+        ],
+        "pub_date_display": [
+            "2010"
+        ],
+        "pub_date_start_sort": 2010,
+        "cataloged_tdt": "2021-07-13T14:36:54Z",
+        "format": [
+            "Book"
+        ],
+        "electronic_access_1display": "{\"http://hdl.handle.net/2246/6065\":[\"hdl.handle.net\",\"Click here for the freely available online version.\"],\"http://www.bioone.org/bioone/?request=get-archive\u0026issn=0003-0090\u0026volume=337\":[\"www.bioone.org\",\"Click here for the online version via BioOne.\"]}",
+        "description_display": [
+            "77 p. : ill., map ; 26 cm."
+        ],
+        "description_t": [
+            "77 p. : ill., map ; 26 cm."
+        ],
+        "number_of_pages_citation_display": [
+            "77 p."
+        ],
+        "geocode_display": [
+            "Peru"
+        ],
+        "series_display": [
+            "Bulletin of the American Museum of Natural History ; no. 337.",
+            "Bulletin of the American Museum of Natural History, 0003-0090 ; no. 337"
+        ],
+        "more_in_this_series_t": [
+            "Bulletin of the American Museum of Natural History"
+        ],
+        "notes_display": [
+            "\"Issued June 3, 2010.\""
+        ],
+        "bib_ref_notes_display": [
+            "Includes bibliographical references (p. 47-53)."
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_code_s": [
+            "eng"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "other_format_display": [
+            "Also available online."
+        ],
+        "lc_subject_display": [
+            "Penguins, Fossil—Phylogeny",
+            "Paleontology—Eocene",
+            "Paleontology—Peru—Pisco River Valley",
+            "Paleontology—Peru—Paracas Region",
+            "Penguins—Phylogeny"
+        ],
+        "subject_facet": [
+            "Penguins, Fossil—Phylogeny",
+            "Paleontology—Eocene",
+            "Paleontology—Peru—Pisco River Valley",
+            "Paleontology—Peru—Paracas Region",
+            "Penguins—Phylogeny"
+        ],
+        "related_name_json_1display": "{\"Related name\":[\"Clarke, Julia A.\"]}",
+        "other_title_display": [
+            "Fossil record of penguins"
+        ],
+        "alt_title_246_display": [
+            "Fossil record of penguins"
+        ],
+        "oclc_s": [
+            "639288566"
+        ],
+        "other_version_s": [
+            "ocn639288566"
+        ],
+        "subject_era_facet": [
+            "Eocene"
+        ],
+        "holdings_1display": "{\"22720944580006421\":{\"location_code\":\"firestone$stacks\",\"location\":\"Stacks\",\"library\":\"Firestone Library\",\"call_number\":\"GN2 .A27 no.337\",\"call_number_browse\":\"GN2 .A27 no.337\",\"items\":[{\"holding_id\":\"22720944580006421\",\"id\":\"23720944570006421\",\"status_at_load\":\"1\",\"barcode\":\"32101074955236\",\"copy_number\":\"1\"}]}}",
+        "location_code_s": [
+            "firestone$stacks"
+        ],
+        "location": [
+            "Firestone Library"
+        ],
+        "location_display": [
+            "Stacks"
+        ],
+        "advanced_location_s": [
+            "firestone$stacks",
+            "Firestone Library"
+        ],
+        "name_title_browse_s": [
+            "Ksepka, Daniel T.. The basal penguin (Aves, Sphenisciformes) Perudyptes devriesi and a phylogenetic evaluation of the penguin fossil record"
+        ],
+        "call_number_display": [
+            "GN2 .A27 no.337"
+        ],
+        "call_number_browse_s": [
+            "GN2 .A27 no.337"
+        ],
+        "call_number_locator_display": [
+            "GN2 .A27 no.337"
+        ],
+        "electronic_portfolio_s": [
+            "{\"desc\":null,\"title\":\"Online Content\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53874209610006421\u0026Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[\"Click here for the freely available online version.\"]}",
+            "{\"desc\":null,\"title\":\"Online Content\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53874209590006421\u0026Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[\"Click here for the online version via BioOne.\"]}"
+        ]
+    },
+    {
+        "id": "9992489243506421",
+        "numeric_id_b": true,
+        "author_citation_display": [
+            "Hensher, Philip"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[],\"translators\":[],\"editors\":[\"Hensher, Philip\"],\"compilers\":[]}",
+        "author_s": [
+            "Hensher, Philip"
+        ],
+        "title_display": "The Penguin book of the British short story / selected with a general introduction by Philip Hensher.",
+        "title_t": [
+            "The Penguin book of the British short story / selected with a general introduction by Philip Hensher."
+        ],
+        "title_citation_display": [
+            "The Penguin book of the British short story"
+        ],
+        "compiled_created_t": [
+            "The Penguin book of the British short story / selected with a general introduction by Philip Hensher."
+        ],
+        "pub_created_display": [
+            "UK : Penguin Books, 2015.",
+            "©2015"
+        ],
+        "pub_created_s": [
+            "UK : Penguin Books, 2015.",
+            "©2015"
+        ],
+        "pub_citation_display": [
+            "UK: Penguin Books"
+        ],
+        "pub_date_display": [
+            "2015"
+        ],
+        "pub_date_start_sort": 2015,
+        "pub_date_end_sort": 2015,
+        "cataloged_tdt": "2016-01-11T10:59:00Z",
+        "format": [
+            "Book"
+        ],
+        "description_display": [
+            "2 volumes ; 24 cm."
+        ],
+        "description_t": [
+            "2 volumes ; 24 cm."
+        ],
+        "number_of_pages_citation_display": [
+            "2 volumes"
+        ],
+        "geocode_display": [
+            "Great Britain"
+        ],
+        "series_display": [
+            "Penguin classics"
+        ],
+        "more_in_this_series_t": [
+            "Penguin classics"
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_code_s": [
+            "eng"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "contents_display": [
+            "Volume 1. From Daniel Defoe to John Buchan -- volume 2. From P.G. Wodehouse to Zadie Smith."
+        ],
+        "lc_subject_display": [
+            "Short stories, English",
+            "English fiction"
+        ],
+        "subject_facet": [
+            "Short stories, English",
+            "English fiction",
+            "Short stories"
+        ],
+        "lcgft_s": [
+            "Short stories"
+        ],
+        "related_name_json_1display": "{\"Editor\":[\"Hensher, Philip\"]}",
+        "isbn_display": [
+            "9780141395999 ((v. 1))",
+            "0141395990 ((v. 1))",
+            "9780141396019 ((v. 2))",
+            "0141396016 ((v. 2))"
+        ],
+        "isbn_s": [
+            "9780141395999",
+            "9780141396019"
+        ],
+        "isbn_t": [
+            "9780141395999",
+            "9780141396019"
+        ],
+        "oclc_s": [
+            "930771336",
+            "928402403"
+        ],
+        "other_version_s": [
+            "9780141395999",
+            "9780141396019",
+            "ocn930771336",
+            "ocn928402403"
+        ],
+        "holdings_1display": "{\"22492530960006421\":{\"location_code\":\"firestone$stacks\",\"location\":\"Stacks\",\"library\":\"Firestone Library\",\"call_number\":\"PR1309.S5 P45 2015\",\"call_number_browse\":\"PR1309.S5 P45 2015\",\"items\":[{\"holding_id\":\"22492530960006421\",\"enumeration\":\"vol.1\",\"id\":\"23492530930006421\",\"status_at_load\":\"0\",\"barcode\":\"32101095622385\",\"copy_number\":\"1\"},{\"holding_id\":\"22492530960006421\",\"enumeration\":\"vol.2\",\"id\":\"23492530910006421\",\"status_at_load\":\"0\",\"barcode\":\"32101096050701\",\"copy_number\":\"1\"}],\"location_has\":[\"Vol. 1-v. 2\"],\"supplements\":[],\"indexes\":[]}}",
+        "location_code_s": [
+            "firestone$stacks"
+        ],
+        "location": [
+            "Firestone Library"
+        ],
+        "location_display": [
+            "Stacks"
+        ],
+        "advanced_location_s": [
+            "firestone$stacks",
+            "Firestone Library"
+        ],
+        "call_number_display": [
+            "PR1309.S5 P45 2015"
+        ],
+        "call_number_browse_s": [
+            "PR1309.S5 P45 2015"
+        ],
+        "call_number_locator_display": [
+            "PR1309.S5 P45 2015"
+        ]
+    },
+    {
+        "id": "9977813863506421",
+        "numeric_id_b": true,
+        "author_citation_display": [
+            "Balcom, John"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[\"Balcom, John\"],\"translators\":[],\"editors\":[],\"compilers\":[]}",
+        "author_s": [
+            "Balcom, John"
+        ],
+        "title_display": "Short stories in Chinese : new Penguin parallel text / translated and edited by John Balcom.",
+        "title_t": [
+            "Short stories in Chinese : new Penguin parallel text / translated and edited by John Balcom."
+        ],
+        "title_citation_display": [
+            "Short stories in Chinese : new Penguin parallel text"
+        ],
+        "compiled_created_t": [
+            "Short stories in Chinese : new Penguin parallel text / translated and edited by John Balcom."
+        ],
+        "pub_created_display": [
+            "New York, New York : Penguin Books, 2013."
+        ],
+        "pub_created_s": [
+            "New York, New York : Penguin Books, 2013."
+        ],
+        "pub_citation_display": [
+            "New York, New York: Penguin Books"
+        ],
+        "pub_date_display": [
+            "2013"
+        ],
+        "pub_date_start_sort": 2013,
+        "cataloged_tdt": "2013-10-24T10:59:00Z",
+        "format": [
+            "Book"
+        ],
+        "description_display": [
+            "xiv, 257 p. ; 20 cm."
+        ],
+        "description_t": [
+            "xiv, 257 p. ; 20 cm."
+        ],
+        "number_of_pages_citation_display": [
+            "xiv, 257 p."
+        ],
+        "bib_ref_notes_display": [
+            "Includes bibliographical references (pages 254-257)."
+        ],
+        "language_display": [
+            "Text in English and Chinese."
+        ],
+        "language_facet": [
+            "English",
+            "Chinese"
+        ],
+        "language_code_s": [
+            "eng",
+            "chi"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "contents_display": [
+            "O Xiangxue / Tie Ning (b. 1957) -- The ancestor / Bi Feiyu (b. 1964) -- Dog / Cao Naiqian (b. 1949) -- Plow ox / Li Rui (b. 1950) -- The mistake / Ma Yuan (b. 1953) -- Lanterns for the dead / Jiang Yun (b. 1954) -- Greasy moon / Jia Pingwa (b. 1953) -- Receiving the precepts / Wang Zengqi (1970-1997)."
+        ],
+        "lc_subject_display": [
+            "Short stories, Chinese—Translations into English",
+            "Chinese fiction—20th century—Translations into English"
+        ],
+        "subject_facet": [
+            "Short stories, Chinese—Translations into English",
+            "Chinese fiction—20th century—Translations into English"
+        ],
+        "related_name_json_1display": "{\"Related name\":[\"Balcom, John\"]}",
+        "isbn_display": [
+            "9780143118350",
+            "0143118358"
+        ],
+        "lccn_display": [
+            "  2011044031"
+        ],
+        "lccn_s": [
+            "2011044031"
+        ],
+        "isbn_s": [
+            "9780143118350"
+        ],
+        "isbn_t": [
+            "9780143118350"
+        ],
+        "oclc_s": [
+            "515457794"
+        ],
+        "other_version_s": [
+            "ocn515457794",
+            "9780143118350"
+        ],
+        "subject_era_facet": [
+            "20th century"
+        ],
+        "holdings_1display": "{\"22481118030006421\":{\"location_code\":\"eastasian$gest\",\"location\":\"Western Languages\",\"library\":\"East Asian Library\",\"call_number\":\"PL2658.E8 S56 2013\",\"call_number_browse\":\"PL2658.E8 S56 2013\",\"items\":[{\"holding_id\":\"22481118030006421\",\"id\":\"23481118020006421\",\"status_at_load\":\"0\",\"barcode\":\"32101070037997\",\"copy_number\":\"1\"}]}}",
+        "location_code_s": [
+            "eastasian$gest"
+        ],
+        "location": [
+            "East Asian Library"
+        ],
+        "location_display": [
+            "Western Languages"
+        ],
+        "advanced_location_s": [
+            "eastasian$gest",
+            "East Asian Library"
+        ],
+        "call_number_display": [
+            "PL2658.E8 S56 2013"
+        ],
+        "call_number_browse_s": [
+            "PL2658.E8 S56 2013"
+        ],
+        "call_number_locator_display": [
+            "PL2658.E8 S56 2013"
+        ]
+    },
+    {
+        "id": "dsp01mg74qq28w",
+        "title_t": [
+            "Household Hypercarnivores: Modern Trends in Commercial Cat Food Composition and Implications for the Health of Domestic Cats (Felis catus)"
+        ],
+        "title_citation_display": [
+            "Household Hypercarnivores: Modern Trends in Commercial Cat Food Composition and Implications for the Health of Domestic Cats (Felis catus)"
+        ],
+        "title_display": "Household Hypercarnivores: Modern Trends in Commercial Cat Food Composition and Implications for the Health of Domestic Cats (Felis catus)",
+        "electronic_access_1display": "{\"http://arks.princeton.edu/ark:/88435/dsp01mg74qq28w\":[\"DataSpace\",\"Full text\"]}",
+        "call_number_display": [
+            "AC102"
+        ],
+        "call_number_browse_s": [
+            "AC102"
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_name_display": [
+            "English"
+        ],
+        "author_display": [
+            "Russo, Maria"
+        ],
+        "author_s": [
+            "Russo, Maria",
+            "Rubenstein, Daniel",
+            "Princeton University. Department of Ecology and Evolutionary Biology"
+        ],
+        "advisor_display": [
+            "Rubenstein, Daniel"
+        ],
+        "department_display": [
+            "Princeton University. Department of Ecology and Evolutionary Biology"
+        ],
+        "summary_note_display": [
+            "Global cat (Felis catus) ownership is on the rise at an unprecedented rate, and the pet food market has consequently been growing, expanding, and increasing in value to record highs. These trends are coupled with a rise in popularity of alternative plant-based diets in humans, leading to growing interest in plant-based cat foods as well. However, several issues within companion animal nutrition research and the commercial pet food industry have allowed for propagation of formulations that may be inadequate and even unsafe for feline nutritional needs, many of which have potential causative links to common and concerning feline health concerns. This review aims to compile currently available research on domestic feline commercial diets, nutritional needs, potential and known dietary-derived health concerns, and shortcomings of available commercial formulations, particularly with respect to novel plant-based diets. The synthesis of these findings demonstrates chronic, widespread quality and standardization issues within the pet food industry and plant-based diets, and show several likely links between identified commercial diet nutrient deficiencies/excesses and feline health concerns. Several areas in need of further research or policy intervention are identified, and the conflicts of interest between the profits of the commercial pet food industry and nutritional research are explored."
+        ],
+        "electronic_portfolio_s": [
+            "{\"thesis\":{\"call_number\":\"AC102\",\"call_number_browse\":\"AC102\",\"dspace\":true}}"
+        ],
+        "class_year_s": [
+            "2022"
+        ],
+        "pub_date_start_sort": 2022,
+        "pub_date_end_sort": 2022,
+        "format": [
+            "Senior thesis"
+        ]
+    },
+    {
+        "id": "99125432345206421",
+        "numeric_id_b": true,
+        "author_display": [
+            "Recio, Belinda, 1961-"
+        ],
+        "author_citation_display": [
+            "Recio, Belinda",
+            "Rowlands, Mark"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[\"Rowlands, Mark\"],\"translators\":[],\"editors\":[],\"compilers\":[],\"primary_author\":\"Recio, Belinda\"}",
+        "author_s": [
+            "Recio, Belinda, 1961-",
+            "Rowlands, Mark"
+        ],
+        "marc_relator_display": [
+            "Author"
+        ],
+        "title_display": "When animals rescue : amazing true stories about heroic and helpful creatures / Belinda Recio ; foreword by Mark Rowlands.",
+        "title_t": [
+            "When animals rescue : amazing true stories about heroic and helpful creatures / Belinda Recio ; foreword by Mark Rowlands."
+        ],
+        "title_citation_display": [
+            "When animals rescue : amazing true stories about heroic and helpful creatures"
+        ],
+        "compiled_created_t": [
+            "When animals rescue : amazing true stories about heroic and helpful creatures / Belinda Recio ; foreword by Mark Rowlands."
+        ],
+        "pub_created_display": [
+            "New York : Skyhorse Publishing, [2020]",
+            "©2020"
+        ],
+        "pub_created_s": [
+            "New York : Skyhorse Publishing, [2020]",
+            "©2020"
+        ],
+        "pub_citation_display": [
+            "New York: Skyhorse Publishing"
+        ],
+        "pub_date_display": [
+            "2020"
+        ],
+        "pub_date_start_sort": 2020,
+        "pub_date_end_sort": 2020,
+        "cataloged_tdt": "2021-12-22T05:00:00Z",
+        "format": [
+            "Book"
+        ],
+        "description_display": [
+            "144 pages : illustrations ; 23 cm"
+        ],
+        "description_t": [
+            "144 pages : illustrations ; 23 cm"
+        ],
+        "number_of_pages_citation_display": [
+            "144 pages"
+        ],
+        "summary_note_display": [
+            "\"What do stories about humpback whales protecting a biologist from a shark, a pride of lions rescuing a girl from kidnappers, gorillas working together to dismantle poacher snares, a parrot warding off an attacker in a park, a chimpanzee consoling a human, and an elephant trying to rescue a baby rhino tell us about animal nature? And what might they suggest about our very own human nature? Until just a few decades ago, there were only a few animals reported to behave empathetically and altruistically. More recently, the list of species who have been observed behaving in compassionate, helpful, and caring ways has grown exponentially, ranging from rats to elephants. When Animals Rescue presents dozens of astonishing and heart-warming stories about animals, such as chickens, horses, dolphins, and wolves, who engage in acts of helpful kindness. During a time in history when studies show that human empathy is decreasing, our knowledge about animal empathy is increasing. These true tales of heroism, kindness, and compassion suggest that we have far more in common with other animals than we once believed and provocatively suggest that what's best about our human natures just might be our animal natures.\"-- From back cover."
+        ],
+        "bib_ref_notes_display": [
+            "Includes bibliographic references."
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_code_s": [
+            "eng"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "contents_display": [
+            "Whale -- A beautiful question -- A compassionate instinct? -- Beluga to the rescue -- A whale of gratitude -- The cells that make us ... whale? -- Parrot -- More than just a mimic -- Need a guard dog? Consider a parrot instead! -- The human-parrot bond -- Gorilla -- For the greater good -- Nurturing nature: Binti Jua -- Jambo -- Frown, sad, trouble -- Dog -- The crow pass guide dog -- Returning the favor -- Not just a warm and fuzzy feeling -- A guardian angel -- When the lion lies down with the baby oryx -- Rescued by lions? -- The leonine sisterhood -- Monkey -- Monkey paramedics -- Monkey midwifery -- It is (biologically) better to give than to receive -- Dolphin -- The good citizens of the sea -- Mysterious minds -- They had his back -- Kindred spirits in the sea -- Across the species divide -- Cat -- The order of the blue tiger -- The alarm cat -- The feline first responder -- Cats in the coal mine -- Pig -- When pigs fly: How a potbellied pig surprised the world-- Pulling her weight -- \"If you were a pig, you would have this figured out by now\" -- Bear -- The benevolent bear -- Kinder than the average bear -- Guardians of the forest? -- Bear in mind: They're a lot like us -- Horse -- A horse as good as Kerry Gold -- Rescue reciprocity -- Straight from the horse's heart -- Seal and sea lion -- A protective circle of seals -- An unlikely lifeguard -- A sea lion's gift of a second chance -- A case for sea lion empathy? -- Orangutan -- The heart and mind of an orangutan -- The friendly orange apes -- The person of the forest -- Elephant -- An elephant never forgets -- The kindness of elephants -- The amazing elephant -- Hippopotamus -- The river crossing guards -- Hippopotamus empathy -- Chimpanzee and bonobo -- Please person hug: Washoe's generosity of heart -- What is it like to be a bonobo thinking about a starling? -- The sisterhood of motherhood: Bonobo midwifery -- Kindness of the apes -- Crow -- Under his wing -- The feathered apes-- Rat and mouse -- Rats to the rescue? Rethinking the much-maligned rodent -- Mirror, mirror: Who's the most empathetic of all? -- Mice are nice, too."
+        ],
+        "lc_subject_display": [
+            "Human-animal relationships",
+            "Pets—Anecdotes",
+            "Animal heroes",
+            "Altruistic behavior in animals"
+        ],
+        "subject_facet": [
+            "Human-animal relationships",
+            "Pets—Anecdotes",
+            "Animal heroes",
+            "Altruistic behavior in animals"
+        ],
+        "related_name_json_1display": "{\"Author\":[\"Rowlands, Mark\"]}",
+        "other_title_display": [
+            "Amazing true stories about heroic and helpful creatures"
+        ],
+        "alt_title_246_display": [
+            "Amazing true stories about heroic and helpful creatures"
+        ],
+        "isbn_display": [
+            "9781510762602",
+            "1510762604"
+        ],
+        "isbn_s": [
+            "9781510762602"
+        ],
+        "isbn_t": [
+            "9781510762602"
+        ],
+        "oclc_s": [
+            "1248935222"
+        ],
+        "other_version_s": [
+            "9781510762602",
+            "on1248935222",
+            "on1236258987"
+        ],
+        "holdings_1display": "{\"22910911530006421\":{\"location_code\":\"firestone$dixn\",\"location\":\"Dixon Books\",\"library\":\"Firestone Library\",\"call_number\":\"QL85 .R43 2020\",\"call_number_browse\":\"QL85 .R43 2020\",\"items\":[{\"holding_id\":\"22910911530006421\",\"id\":\"23910911520006421\",\"status_at_load\":\"0\",\"barcode\":\"32101104300452\"}]}}",
+        "location_code_s": [
+            "firestone$dixn"
+        ],
+        "location": [
+            "Firestone Library"
+        ],
+        "location_display": [
+            "Dixon Books"
+        ],
+        "advanced_location_s": [
+            "firestone$dixn",
+            "Firestone Library"
+        ],
+        "name_title_browse_s": [
+            "Recio, Belinda, 1961-. When animals rescue"
+        ],
+        "call_number_display": [
+            "QL85 .R43 2020"
+        ],
+        "call_number_browse_s": [
+            "QL85 .R43 2020"
+        ],
+        "call_number_locator_display": [
+            "QL85 .R43 2020"
+        ]
+    },
+    {
+        "id": "dsp01qv33rx85f",
+        "title_t": [
+            "\"A Sort of Cat-And-Dog Affair\": Arthur Krock, Franklin Roosevelt, and Press-Government Relations in America"
+        ],
+        "title_citation_display": [
+            "\"A Sort of Cat-And-Dog Affair\": Arthur Krock, Franklin Roosevelt, and Press-Government Relations in America"
+        ],
+        "title_display": "\"A Sort of Cat-And-Dog Affair\": Arthur Krock, Franklin Roosevelt, and Press-Government Relations in America",
+        "electronic_access_1display": "{\"http://arks.princeton.edu/ark:/88435/dsp01qv33rx85f\":[\"DataSpace\",\"Citation only\"]}",
+        "restrictions_note_display": [
+            "This thesis can be viewed in person at the \u003ca href=http://mudd.princeton.edu\u003eMudd Manuscript Library\u003c/a\u003e.  \nTo order a copy complete the \u003ca href=\"http://rbsc.princeton.edu/senior-thesis-order-form\" target=\"_blank\"\u003eSenior Thesis Request Form\u003c/a\u003e.  \nFor more information contact \u003ca href=mailto:mudd@princeton.edu\u003emudd@princeton.edu\u003c/a\u003e."
+        ],
+        "call_number_display": [
+            "AC102 23815"
+        ],
+        "call_number_browse_s": [
+            "AC102 23815"
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_name_display": [
+            "English"
+        ],
+        "author_display": [
+            "Sheehan, Jessica"
+        ],
+        "author_s": [
+            "Sheehan, Jessica",
+            "Miles, Paul L.",
+            "Princeton University. Department of History"
+        ],
+        "advisor_display": [
+            "Miles, Paul L."
+        ],
+        "department_display": [
+            "Princeton University. Department of History"
+        ],
+        "description_display": [
+            "83 Pages"
+        ],
+        "location": [
+            "Mudd Manuscript Library"
+        ],
+        "location_display": [
+            "Mudd Manuscript Library"
+        ],
+        "location_code_s": [
+            "mudd$stacks"
+        ],
+        "advanced_location_s": [
+            "mudd$stacks",
+            "Mudd Manuscript Library"
+        ],
+        "holdings_1display": "{\"thesis\":{\"location\":\"Mudd Manuscript Library\",\"library\":\"Mudd Manuscript Library\",\"location_code\":\"mudd$stacks\",\"call_number\":\"AC102 23815\",\"call_number_browse\":\"AC102 23815\",\"dspace\":true}}",
+        "class_year_s": [
+            "2009"
+        ],
+        "pub_date_start_sort": 2009,
+        "pub_date_end_sort": 2009,
+        "format": [
+            "Senior thesis"
+        ]
+    },
+    {
+        "id": "9999354273506421",
+        "numeric_id_b": true,
+        "author_citation_display": [
+            "Iida, Motoharu",
+            "Kinokuniya"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[\"Iida, Motoharu\",\"Kinokuniya\",\"飯田基晴\",\"紀伊國屋\"],\"translators\":[],\"editors\":[],\"compilers\":[]}",
+        "author_s": [
+            "Iida, Motoharu, 1973-",
+            "Kinokuniya",
+            "飯田基晴, 1973-",
+            "饭田基晴, 1973-",
+            "紀伊國屋",
+            "纪伊国屋."
+        ],
+        "title_display": "Inu to neko to ningen to = Dogs, cats \u0026 humans / kantoku Iida Motoharu.",
+        "title_vern_display": "犬と猫と人間と = Dogs, cats \u0026 humans / 監督飯田基晴.",
+        "title_t": [
+            "Inu to neko to ningen to = Dogs, cats \u0026 humans / kantoku Iida Motoharu."
+        ],
+        "title_citation_display": [
+            "Inu to neko to ningen to = Dogs, cats \u0026 humans",
+            "犬と猫と人間と = Dogs, cats \u0026 humans"
+        ],
+        "compiled_created_t": [
+            "Inu to neko to ningen to = Dogs, cats \u0026 humans / kantoku Iida Motoharu.",
+            "犬と猫と人間と = Dogs, cats \u0026 humans / 監督飯田基晴."
+        ],
+        "pub_created_vern_display": [
+            "[東京] : 紀伊國屋, 2009."
+        ],
+        "pub_created_display": [
+            "Tōkyō : Kinokuniya, 2009.",
+            "[東京] : 紀伊國屋, 2009."
+        ],
+        "pub_created_s": [
+            "Tōkyō : Kinokuniya, 2009.",
+            "[東京] : 紀伊國屋, 2009."
+        ],
+        "pub_citation_display": [
+            "Tōkyō: Kinokuniya",
+            "東京: 紀伊國屋"
+        ],
+        "pub_date_display": [
+            "2009"
+        ],
+        "pub_date_start_sort": 2009,
+        "cataloged_tdt": "2017-02-21T10:59:00Z",
+        "format": [
+            "Video/Projected medium"
+        ],
+        "description_display": [
+            "1 videodisc (118 min.) : sound, color ; 4 3/4 in."
+        ],
+        "description_t": [
+            "1 videodisc (118 min.) : sound, color ; 4 3/4 in."
+        ],
+        "number_of_pages_citation_display": [
+            "1 videodisc (118 min.)"
+        ],
+        "geocode_display": [
+            "Japan"
+        ],
+        "summary_note_display": [
+            "The film was made at the direct request of an elderly woman who wanted to use her savings to help animals in some way."
+        ],
+        "notes_display": [
+            "Originally produced as a documentary film in 2009.",
+            "Special features include trailers and additional bonus footage."
+        ],
+        "credits_notes_display": [
+            "Kantoku Iida Motoharu.",
+            "監督飯田基晴."
+        ],
+        "system_details_notes_display": [
+            "DVD, region 2; Viewer must have DVD players that will play region 2 DVDs.; Dolby digital."
+        ],
+        "language_display": [
+            "In Japanese with selectable English subtitles."
+        ],
+        "language_facet": [
+            "Japanese"
+        ],
+        "language_code_s": [
+            "jpn"
+        ],
+        "language_iana_s": [
+            "ja"
+        ],
+        "lc_subject_display": [
+            "Animal welfare—Japan",
+            "Dogs—Social aspects—Japan",
+            "Cats—Social aspects—Japan"
+        ],
+        "subject_facet": [
+            "Animal welfare—Japan",
+            "Dogs—Social aspects—Japan",
+            "Cats—Social aspects—Japan",
+            "Documentary films",
+            "Video recordings"
+        ],
+        "lcgft_s": [
+            "Documentary films",
+            "Video recordings"
+        ],
+        "related_name_json_1display": "{\"Related name\":[\"Iida, Motoharu, 1973-\",\"Kinokuniya\",\"飯田基晴, 1973-\",\"紀伊國屋\"]}",
+        "other_title_display": [
+            "Dogs cats \u0026 humans",
+            "Dogs cats and humans"
+        ],
+        "alt_title_246_display": [
+            "Dogs cats \u0026 humans",
+            "Dogs cats and humans"
+        ],
+        "publisher_no_display": [
+            "KKJS-96"
+        ],
+        "oclc_s": [
+            "683860404"
+        ],
+        "other_version_s": [
+            "ocn683860404"
+        ],
+        "holdings_1display": "{\"22512182880006421\":{\"location_code\":\"recap$qv\",\"location\":\"Remote Storage: Video Collection\",\"library\":\"ReCAP\",\"call_number\":\"DVD\",\"call_number_browse\":\"DVD\",\"items\":[{\"holding_id\":\"22512182880006421\",\"id\":\"23512182870006421\",\"status_at_load\":\"1\",\"barcode\":\"32101100033883\",\"copy_number\":\"0\"}]}}",
+        "location_code_s": [
+            "recap$qv"
+        ],
+        "location": [
+            "ReCAP"
+        ],
+        "location_display": [
+            "Remote Storage: Video Collection"
+        ],
+        "advanced_location_s": [
+            "recap$qv",
+            "ReCAP"
+        ],
+        "call_number_display": [
+            "DVD"
+        ],
+        "call_number_browse_s": [
+            "DVD"
+        ],
+        "call_number_locator_display": [
+            "DVD"
+        ]
+    }
+]

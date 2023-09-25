@@ -13,6 +13,7 @@ namespace :servers do
     system('lando start')
     system('rake servers:initialize')
     system('rake servers:initialize RAILS_ENV=test')
-    Rake::Task['best_bets:sync'].invoke
+    system('rake solr:load_sample_data')
+    system('rake best_bets:sync')
   end
 end
