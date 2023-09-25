@@ -16,6 +16,7 @@ gem 'lograge'
 gem 'logstash-event'
 gem 'pg'
 gem 'pg_search'
+gem 'rack-cors'
 gem 'railties'
 gem 'rswag'
 gem 'whenever', require: false
