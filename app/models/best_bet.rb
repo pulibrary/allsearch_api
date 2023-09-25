@@ -18,9 +18,8 @@ class BestBet
     service_response.count
   end
 
-  def more_link
-    # Not relevant for this service
-  end
+  # Not relevant for this service
+  def more_link; end
 
   def documents
     service_response

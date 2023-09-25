@@ -10,8 +10,8 @@ RSpec.describe LibraryDatabaseLoadingService do
       .to_return(status: 200, body: libjobs_response)
   end
 
-  it 'creates a new row in the best_bet table for each CSV row' do
-    expect { described_class.new.run }.to change(LibraryDatabaseRecord, :count).by(7)
+  it 'creates a new row in the library_database_records table for each CSV row' do
+    expect { described_class.new.run }.to change(LibraryDatabaseRecord, :count).by(11)
     expect(LibraryDatabaseRecord.third.name).to eq('Abzu')
     expect(LibraryDatabaseRecord.third.description).to eq('Database of networked open access data relevant to the ' \
                                                           'study and public presentation of the Ancient Near East ' \

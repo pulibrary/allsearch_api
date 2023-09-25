@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_20_214343) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_21_193904) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,9 +34,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_214343) do
     t.string "friendly_url"
     t.string "subjects", array: true
     t.string "subjects_concat"
-    t.virtual "searchable", type: :tsvector, as: "to_tsvector('english'::regconfig, (((((((COALESCE(name, ''::character varying))::text || ' '::text) || (COALESCE(alt_names_concat, ''::character varying))::text) || ' '::text) || (COALESCE(description, ''::character varying))::text) || ' '::text) || (COALESCE(subjects_concat, ''::character varying))::text))", stored: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.virtual "searchable", type: :tsvector, as: "(((setweight(to_tsvector('english'::regconfig, (COALESCE(name, ''::character varying))::text), 'A'::\"char\") || setweight(to_tsvector('english'::regconfig, (COALESCE(alt_names_concat, ''::character varying))::text), 'B'::\"char\")) || setweight(to_tsvector('english'::regconfig, (COALESCE(description, ''::character varying))::text), 'C'::\"char\")) || setweight(to_tsvector('english'::regconfig, (COALESCE(subjects_concat, ''::character varying))::text), 'D'::\"char\"))", stored: true
     t.index ["searchable"], name: "searchable_idx", using: :gin
   end
 

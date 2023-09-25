@@ -15,6 +15,7 @@ gem 'honeybadger'
 gem 'lograge'
 gem 'logstash-event'
 gem 'pg'
+gem 'pg_search'
 gem 'railties'
 gem 'rswag'
 gem 'whenever', require: false
