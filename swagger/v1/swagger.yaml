@@ -68,6 +68,22 @@ paths:
       responses:
         '200':
           description: successful
+  "/search/libguides?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query Libguides
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/libguides?query={query}"
+      tags:
+      - Libguides
+      description: Searches the Libguides research guides using a query term
+      responses:
+        '200':
+          description: successful
   "/search/pulmap?query={query}":
     parameters:
     - name: query

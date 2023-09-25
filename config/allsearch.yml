@@ -17,6 +17,9 @@ default: &default
   libanswers:
     client_id: <%= ENV['LIBANSWERS_CLIENT_ID'] || 'ABC' %>
     client_secret: <%= ENV['LIBANSWERS_CLIENT_SECRET'] || '12345' %>
+  libguides:
+    client_id: <%= ENV['LIBGUIDES_CLIENT_ID'] || 'ABC' %>
+    client_secret: <%= ENV['LIBGUIDES_CLIENT_SECRET'] || '12345' %>
   pulmap:
     solr: 
       host: "lib-solr8-prod.princeton.edu"
