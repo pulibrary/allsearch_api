@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# This class is responsible for
+# This class is responsible for translating LibraryDatabaseRecords, originally from LibGuides,
+# into an API response
 class LibraryDatabase
   include Parsed
   attr_reader :query_terms, :service_response
