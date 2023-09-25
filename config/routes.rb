@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/search/dpul/', to: 'dpul#show', defaults: { format: 'json' }
   get '/search/findingaids/', to: 'findingaids#show', defaults: { format: 'json' }
   get '/search/pulmap', to: 'pulmap#show', defaults: { format: 'json' }
+  get '/search/summon', to: 'summon#show', defaults: { format: 'json' }
 end

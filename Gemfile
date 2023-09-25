@@ -14,6 +14,7 @@ gem 'dogstatsd-ruby'
 gem 'honeybadger'
 gem 'lograge'
 gem 'logstash-event'
+gem 'openssl'
 gem 'pg'
 gem 'railties'
 
