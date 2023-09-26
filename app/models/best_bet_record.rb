@@ -3,7 +3,7 @@
 # This class is responsible for storing and retrieving relevant
 # metadata from the best_bet_record table in the database
 class BestBetRecord < ApplicationRecord
-  scope :query, ->(search_term) { where('? = ANY(search_terms)', search_term) }
+  scope :query, ->(search_term) { where('? ILIKE ANY(search_terms)', search_term) }
   # :reek:TooManyStatements
   def self.new_from_csv(row)
     record = BestBetRecord.new
