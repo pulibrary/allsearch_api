@@ -44,13 +44,23 @@ semgrep --config auto . # run rules from the semgrep community
 ```
 
 ## Create a new service
-- Controller
-  - Must have `#show` method. Can base entire controller on existing controllers, just instantiate the appropriate model within the show method
-- Route
-  - `  get '/search/new_service/', to: 'new_service#show', defaults: { format: 'json' }`
-- Model
-  - Must have methods for the `doc_keys` in the `#parsed_records` method
-- Request Spec
+
+1. If the upstream service requires a secret, add it to the
+[vault and environment variables](https://github.com/pulibrary/princeton_ansible/tree/main/group_vars/allsearch_api) using a princeton_ansible pull request
+1. Create a new request spec for your service, based on the other service request specs
+1. Create a new route in `config/routes`
+    ```
+    get '/search/new_service/', to: 'new_service#show', defaults: { format: 'json' }
+    ```
+1. Create a new controller for your service.  You can inherit from `ServiceController` and/or implement your own `#show` method.
+1. Create a controller spec to confirm that query inputs are sanitized appropriately.
+1. Create a model to represent a request to the upstream service.  Include the `Parsed` module in your model.
+1. Create a model to represent a document returned by the upstream service. This should inherit from `Document` and implement a `#doc_keys` method.
+    * `#doc_keys` should return a list of fields (as symbols) that will be
+    presented in allsearch's API response.  Each symbol should match the
+    name of a method in this model.
+1. Create an API spec for your service in spec/requests/api/
+1. Generate the swagger docs as described below.
 
 ## API documentation
 Documentation lives in `https://allsearch-api.princeton.edu/api-docs`
