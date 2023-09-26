@@ -11,5 +11,6 @@ RSpec.describe 'GET /' do
     expect(response_body[:application]).to eq('Princeton University Library All Search API')
     expect(response_body[:environment]).to eq('test')
     expect(response_body[:github_link]).to eq('https://github.com/pulibrary/allsearch_api')
+    expect(response_body[:documentation]).to eq('https://allsearch-api.princeton.edu/api-docs')
   end
 end
