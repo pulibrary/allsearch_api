@@ -3,6 +3,8 @@
 class Libguides
   include Parsed
 
+  attr_reader :query_terms
+
   def initialize(query_terms:)
     @query_terms = query_terms
   end
@@ -23,8 +25,6 @@ class Libguides
   end
 
   private
-
-  attr_reader :query_terms
 
   def more_link
     "https://libguides.princeton.edu/srch.php?q=#{query_terms}"

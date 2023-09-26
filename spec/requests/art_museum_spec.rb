@@ -4,8 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/artmuseum' do
   it 'returns json' do
-    stub_request(:get, 'https://data.artmuseum.princeton.edu/search?q=cats&size=3&type=all')
-      .to_return(status: 200, body: file_fixture('art_museum/cats.json'))
+    stub_art_museum(query: 'cats', fixture: 'art_museum/cats.json')
     get '/search/artmuseum?query=cats'
 
     expect(response).to be_successful
@@ -14,8 +13,7 @@ RSpec.describe 'GET /search/artmuseum' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'https://data.artmuseum.princeton.edu/search?q=cats&size=3&type=all')
-        .to_return(status: 200, body: file_fixture('art_museum/cats.json'))
+      stub_art_museum(query: 'cats', fixture: 'art_museum/cats.json')
     end
 
     let(:expected_response) do

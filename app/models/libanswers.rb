@@ -2,9 +2,11 @@
 
 # This class is responsible for querying Libanswers for FAQs
 class Libanswers
+  attr_reader :query_terms
+
   include Parsed
   def initialize(query_terms:)
-    @query_terms = query_terms
+    @query_terms = CGI.escape(query_terms)
   end
 
   def number
@@ -27,8 +29,6 @@ class Libanswers
   end
 
   private
-
-  attr_reader :query_terms
 
   def uri
     URI.parse "https://faq.library.princeton.edu/api/1.1/search/#{query_terms}?iid=344&limit=3"
