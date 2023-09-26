@@ -4,16 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/libanswers' do
   before do
-    stub_request(:post, 'https://faq.library.princeton.edu/api/1.1/oauth/token')
-      .with(body: 'client_id=ABC&client_secret=12345&grant_type=client_credentials')
-      .to_return(status: 200, body: file_fixture('libanswers/oauth_token.json'))
-    stub_request(:get, 'https://faq.library.princeton.edu/api/1.1/search/printer?iid=344&limit=3')
-      .with(
-        headers: {
-          'Authorization' => 'Bearer abcdef1234567890abcdef1234567890abcdef12'
-        }
-      )
-      .to_return(status: 200, body: file_fixture('libanswers/printer.json'))
+    stub_libanswers(query: 'printer', fixture: 'libanswers/printer.json')
   end
 
   it 'returns json' do

@@ -4,3 +4,4 @@ detectors:
     enabled: false
 exclude_paths:
   - db
+  - spec/support

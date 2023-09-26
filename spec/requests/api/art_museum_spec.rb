@@ -4,8 +4,7 @@ require 'swagger_helper'
 
 RSpec.describe 'art_museum' do
   before do
-    stub_request(:get, 'https://data.artmuseum.princeton.edu/search?q=cats&size=3&type=all')
-      .to_return(status: 200, body: file_fixture('art_museum/cats.json'))
+    stub_art_museum(query: 'cats', fixture: 'art_museum/cats.json')
   end
 
   path '/search/artmuseum?query={query}' do
