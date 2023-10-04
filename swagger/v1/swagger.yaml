@@ -20,6 +20,22 @@ paths:
       responses:
         '200':
           description: successful
+  "/search/best-bet?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query the Best-Bets
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/best-bet?query={query}"
+      tags:
+      - Best Bets
+      description: Searches the Best Bets using a query term
+      responses:
+        '200':
+          description: successful
   "/search/catalog?query={query}":
     parameters:
     - name: query
@@ -68,6 +84,22 @@ paths:
       responses:
         '200':
           description: successful
+  "/search/libanswers?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query Libanswers
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/libanswers?query={query}"
+      tags:
+      - Libanswers
+      description: 'Searches the Libanswers FAQs using a query term'
+      responses:
+        '200':
+          description: successful
   "/search/libguides?query={query}":
     parameters:
     - name: query
@@ -81,6 +113,22 @@ paths:
       tags:
       - Libguides
       description: Searches the Libguides research guides using a query term
+      responses:
+        '200':
+          description: successful
+  "/search/database?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query the Library Databases
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/database?query={query}"
+      tags:
+      - Library Databases
+      description: Searches for relevant Library Databases using a query term
       responses:
         '200':
           description: successful
