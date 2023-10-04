@@ -84,6 +84,22 @@ paths:
       responses:
         '200':
           description: successful
+  "/search/libanswers?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query Libanswers
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/libanswers?query={query}"
+      tags:
+      - Libanswers
+      description: 'Searches the Libanswers FAQs using a query term'
+      responses:
+        '200':
+          description: successful
   "/search/libguides?query={query}":
     parameters:
     - name: query
