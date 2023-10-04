@@ -116,6 +116,22 @@ paths:
       responses:
         '200':
           description: successful
+  "/search/database?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query the Library Databases
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/database?query={query}"
+      tags:
+      - Library Databases
+      description: Searches for relevant Library Databases using a query term
+      responses:
+        '200':
+          description: successful
   "/search/pulmap?query={query}":
     parameters:
     - name: query
