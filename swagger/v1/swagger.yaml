@@ -20,6 +20,22 @@ paths:
       responses:
         '200':
           description: successful
+  "/search/best-bet?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query the Best-Bets
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/best-bet?query={query}"
+      tags:
+      - Best Bets
+      description: Searches the Best Bets using a query term
+      responses:
+        '200':
+          description: successful
   "/search/catalog?query={query}":
     parameters:
     - name: query
