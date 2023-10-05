@@ -25,7 +25,11 @@ default: &default
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
       collection: "pulmap"
-
+  summon:
+    access_id: 'princeton'
+    api_host: 'api.summon.serialssolutions.com'
+    api_path: '/2.0.0/search'
+    secret_key: <%= ENV['SUMMON_SECRET_KEY'] || 'summon-secret-key' %>
 development:
   <<: *default
   catalog:
@@ -72,6 +76,11 @@ staging:
 
 test:
   <<: *default
+  summon:
+    access_id: 'princeton'
+    api_host: 'api.summon.serialssolutions.com'
+    api_path: '/2.0.0/search'
+    secret_key: 'ed2ee2e0-65c1-11de-8a39-0800200c9a66'
 
 production:
   <<: *default
