@@ -23,8 +23,8 @@ default: &default
       port: 8983
       collection: "pulmap"
   summon:
-    app_id: "princeton"
-    key: <%= ENV['SUMMON_API_KEY'] || 'secret' %>
+    access_id: "princeton"
+    secret_key: <%= ENV['SUMMON_API_KEY'] || 'secret' %>
     path: "/2.0.0/search"
     url: "api.summon.serialssolutions.com"
 

@@ -11,18 +11,19 @@ class SummonService
   def summon_service_response
     
 
-    uri = URI::HTTPS.build(host: @config[:url], path: @config[:path], query: query_string)
+    uri = URI::HTTP.build(host: @config[:url], path: @config[:path], query: query_string)
     response = Net::HTTP.get(uri, headers_with_auth)
     byebug
     JSON.parse(response, symbolize_names: true)
   end
 
   def auth_token
-    hash = OpenSSL::HMAC.base64digest('SHA1', @config[:key], data)
-    "Summon #{@config[:app_id]};#{hash}"
+    # hash = OpenSSL::HMAC.base64digest('SHA1', @config[:key], data)
+    hash = Base64.encode64(OpenSSL::HMAC.digest(OpenSSL::Digest::SHA1.new, @config[:secret_key], id)).chomp
+    "Summon #{@config[:access_id]};#{hash}"
   end
 
-  def data
+  def id
     params = []
     headers.each do |key, value|
       params.push("#{value}\n")
@@ -35,7 +36,8 @@ class SummonService
 
   # query params must be in alphabetical order
   def query_string
-    "s.dailyCatalog=t&s.fvf=ContentType%2CNewspaper+Article%2Ct&s.ho=t&s.normalized.subjects=f&s.ps=3&s.q=#{CGI.escape(@query_terms)}&s.rapido=f&s.role=authenticated&s.secure=t&s.shortenurl=f"
+    "s.q=#{CGI.escape(@query_terms)}"
+    # "s.dailyCatalog=t&s.fvf=ContentType%2CNewspaper+Article%2Ct&s.ho=t&s.normalized.subjects=f&s.ps=3&s.q=#{CGI.escape(@query_terms)}&s.rapido=f&s.role=authenticated&s.secure=t&s.shortenurl=f"
   end
 
   def date_time
@@ -44,6 +46,7 @@ class SummonService
 
   def headers
     {
+      'Content-Type': 'application/x-www-form-urlencoded; charset=utf8',
       Accept: 'application/json',
       'x-summon-date': date_time,
     }
@@ -51,6 +54,7 @@ class SummonService
 
   def headers_with_auth
     {
+      'Content-Type': 'application/x-www-form-urlencoded; charset=utf8',
       Host: @config[:url],
       Accept: 'application/json',
       'x-summon-date': date_time,
