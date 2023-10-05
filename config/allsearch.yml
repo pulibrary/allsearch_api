@@ -26,7 +26,7 @@ default: &default
     app_id: "princeton"
     key: <%= ENV['SUMMON_API_KEY'] || 'secret' %>
     path: "/2.0.0/search"
-    url: "princeton.summon.serialssolutions.com"
+    url: "api.summon.serialssolutions.com"
 
 development:
   <<: *default

@@ -25,30 +25,36 @@ class SummonService
   def data
     params = []
     headers.each do |key, value|
-      params.push("#{key}\n#{value}\n")
+      params.push("#{value}\n")
     end
     params.push("#{@config[:url]}\n")
-    params.push("api.summon.serialssolutions.com\n")
-    params.push("#{query_string}\n")
+    params.push("#{@config[:path]}\n")
+    params.push("#{CGI.unescape(query_string)}\n")
     params.join
   end
 
   # query params must be in alphabetical order
   def query_string
-    "s.dailyCatalog=t&s.fvf=ContentType%2CNewspaper+Article%2Ct&s.ho=t&s.normalized.subjects=f&s.ps=3&s.q=#{CGI.escape(@query_terms)}&s.rapido=f&s.role=authenticated&s.secure=t&s.shortenurl=f\n"
+    "s.dailyCatalog=t&s.fvf=ContentType%2CNewspaper+Article%2Ct&s.ho=t&s.normalized.subjects=f&s.ps=3&s.q=#{CGI.escape(@query_terms)}&s.rapido=f&s.role=authenticated&s.secure=t&s.shortenurl=f"
+  end
+
+  def date_time
+    @date_time ||= Time.zone.now.strftime('%a, %d %b %Y %H:%M:%S %Z')
   end
 
   def headers
     {
       Accept: 'application/json',
-      'x-summon-date': Time.zone.now.strftime('%a, %d %b %Y %H:%M:%S %Z'),
-      Host: @config[:url]
+      'x-summon-date': date_time,
     }
   end
 
   def headers_with_auth
-    all = headers.dup
-    all['Authorization'] = auth_token
-    all
+    {
+      Host: @config[:url],
+      Accept: 'application/json',
+      'x-summon-date': date_time,
+      Authorization: auth_token
+    }
   end
 end
