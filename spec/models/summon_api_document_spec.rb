@@ -9,7 +9,7 @@ RSpec.describe SummonApiDocument do
   let(:summon_api_document) { described_class.new(document:, doc_keys:) }
 
   before do
-    stub_summon(query: 'forest', fixture: 'summon_api/summon_response.json')
+    stub_summon(query: 'forest', fixture: 'summon_api/forest.json')
   end
 
   it 'has the expected values' do

@@ -1,0 +1,3357 @@
+{
+  "version": "2.0.0",
+  "sessionId": "SUMMON-SESSION-LIB-MBHH94TJFVL6-45874-1",
+  "elapsedQueryTime": 392,
+  "queryTime": 371,
+  "internalSolrQueryTime": 376,
+  "totalRequestTime": 459,
+  "pageCount": 533722,
+  "recordCount": 1601165,
+  "query": {
+    "queryString": "s.fvf=ContentType%2CNewspaper+Article%2Ct&s.normalized.subjects=f&s.secure=f&s.dailyCatalog=t&s.q=war+and+peace&s.dym=t&s.ho=t&s.rapido=f&s.ps=3&s.shortenurl=f",
+    "pageNumber": 1,
+    "pageSize": 3,
+    "isDidYouMeanEnabled": true,
+    "isHoldingsOnlyEnabled": true,
+    "textQueries": [
+      {
+        "textQuery": "war and peace",
+        "removeCommand": "removeTextQuery(war and peace)"
+      }
+    ],
+    "searchTerms": [],
+    "textFilters": [],
+    "rangeFilters": [],
+    "facetValueFilters": [
+      {
+        "fieldName": "ContentType",
+        "value": "Newspaper Article",
+        "isNegated": true,
+        "removeCommand": "removeFacetValueFilter(ContentType,Newspaper Article)",
+        "negateCommand": "negateFacetValueFilter(ContentType,Newspaper Article)"
+      }
+    ],
+    "inclusiveFacetValueFilters": [],
+    "facetValueGroupFilters": [],
+    "facetFields": [],
+    "rangeFacetFields": [],
+    "sort": []
+  },
+  "facetFields": [],
+  "rangeFacetFields": [],
+  "didYouMeanSuggestions": [],
+  "recommendationLists": {},
+  "documents": [
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Leadership+and+Character%28s%29%3A+Behavioral+Business+Ethics+in+%E2%80%98War+and+Peace%E2%80%99&rft.jtitle=Journal+of+business+ethics&rft.au=Michaelson%2C+Christopher&rft.date=2022-04-01&rft.pub=Springer+Netherlands&rft.issn=0167-4544&rft.eissn=1573-0697&rft.volume=177&rft.issue=1&rft.spage=31&rft.epage=47&rft_id=info:doi/10.1007%2Fs10551-021-04746-y&rft.externalDocID=10_1007_s10551_021_04746_y",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwlV1bT8IwFD4RTZQXL2jivJC-qdHFbbaDGUMCBgJkGOSmPjVdV6IvaARjeONn6N_jl9iOFRD1wacl21mX9rTnsn7nK8DRgj3wKwWzViiXPdyqljq-a2KSzWBT5Yo1r-qTxj15KM5KuSO8u96UjGz1XLmb9O-mAhVYOINdc5iAFSI9mIJyNZqdmQX-zumN42KZ39v45pAWzfKP_dHI7ZQ2gOninQhzPUWdKFkuZNQ2h8eeI3b8T982YT2OSVF-Mom2YEn0UrCqIfEpdbJzjAJJQcJn7ylI1vUJCMNtaPtTODRivRBdaw7o4_7JJSpMeQCQbhFNQPboqYfGo4-rx9wde43eVPZZXJ0_5sajzx1ol4qt67IZn9ZgcoytgclFGPAL7jCR5dwSWUxUqNO1uC2zbAtzyxbMkw4zCJ3Q6XKbdYmMXgIpGBCu_u_tAsIiS9yMR2QS6GImb9oyYXJDhj0eWCzkBpxqXdGXCRsHnfEuqxGkcgRpNIJ0aMCRUidVS3UgO87iioPnnlCkVzTvKjI8GbHYBhxojdN4DfepDBUzioDfsQw400qbPf77u3v_E9-HpKNqKiI40AEsD17fxCGsTadSGlbyftOvyGuheFNvpCFxW3PT0ZT_Ak4w-js",
+      "linkToPdf": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3JTsMwEB1RkKAXloJEWX0DBFGT4KQNQki0tCoQEALKcrIcx1W5hAqKUG98BvweX4InjdMFOCCuiePEnvF4Jn7zBmBjxB74x2XjrFyve_T6pHbjuwZ1SkVqYKx45p34zuWdc18dSOSPAe_6VLKX1oBETVGn0A6bhYHcN7XZG4gwMGmRukY3AxNYTgvV_PLqpm-Ohwm-aZI583MfQ7vTqI3-dlga70G1GYjST0cAdgpBwbZCKhduAJytWR7_M9BZmE68VXLYU685GJNRDiY1WD6HNZ8TfEgOMj5_zUH2QtdG6M5Dw0-B0oRHIalodujN5609Uk4ZAojukfTg9-QhIp9v7_utg1v-FD-JllvuF1oHn28fC9CoVa8rdSOp42AISs2OIWQYiF1hc1kSwpQl6qAT1DSFpeJvkwrTktxTW2kQ2qHdFBZvOsqvCVTDwBH4528RCJUlxy16jgoPXcrVRUuFUm7IqScCk4ciD9tacKzd4-lgfUZmnEGmZpDFM8i6edhA2TJcxB01cJ7kIjxGEumw2KGLNHnKl7HysKLFz5LV_cyUE1lEan7bzMOOFmD_9u_vXfpb83WYvDiqMf_4_HQZsjYmXsSYoRUY7zy9yFWYSlVsLVb6L0ynAuI",
+      "linkToHtml": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwlV3JTsMwEB2xSMCFpSBRKOAbIIhIgpM0qKrUVlQFUoSgbCfLcVzBJaC2CPXWz4Df65fgSeOU9cA1cZx4xp4lfvMMsP3NHgQnVaNZbTR82jqt3wSuQZ2iRw3MFZv-aeBc3jn3x2ldWFcD3vWuZGKsP9W7KQdvIKrApB51jf4kTFOsrcQ0_epmbIK_knrTtFrm9z6-eKTvdvnHBmnid-oLEGafi6DrDHaCbYVUYdsnQLZmdvzv4BZhPo1KSWU0jZZgQsY5mNGg-Bye7ZziQHIwGfDXHMxd6DMQ-stwHWSAaMLjiNQ0C_ROd_eIVDMmAKJ7JCOYPXmMyXDwVnoo3_JO8iRaaFk6eCgPB-8rcF0_btUaRnpegyEoNXuGkFEoDoXNZVEIUxapg8FO2xSWyrNNKkxLcl-5zDCyI7stLN52VPwSqoahI_AP3yoQKouO6_mOSgNdytVFS6VMbsSpL0KTRyIPe1pZ7HnEx8HGzMsoQaYkyBIJsn4etlGfDBdrTw2cpzUHT7FE2itWcZEOT8UsVh4KWuUsXcVdpoJFDyn4bTMP-1pp49t_v3ftf823YLbRagYsODk_W4c5GyssEnBQAaZ6nRe5AbPZvNpMZvoHgXD57w",
+      "ExternalDocumentID": [
+        "A699548181",
+        "10_1007_s10551_021_04746_y"
+      ],
+      "Issue": [
+        "1"
+      ],
+      "DBID": [
+        "AAYXX",
+        "CITATION",
+        "BSHEE",
+        "0-V",
+        "3V.",
+        "7TQ",
+        "7WY",
+        "7WZ",
+        "7XB",
+        "87Z",
+        "88C",
+        "88G",
+        "88J",
+        "8AO",
+        "8BJ",
+        "8FI",
+        "8FJ",
+        "8FK",
+        "8FL",
+        "8G5",
+        "AABKS",
+        "ABSDQ",
+        "ABUWG",
+        "AFKRA",
+        "ALSLI",
+        "AVQMV",
+        "AZQEC",
+        "BENPR",
+        "BEZIV",
+        "DHY",
+        "DON",
+        "DPSOV",
+        "DWQXO",
+        "FQK",
+        "FRNLG",
+        "FYUFA",
+        "F~G",
+        "GHDGH",
+        "GNUQQ",
+        "GUQSH",
+        "JBE",
+        "K50",
+        "K60",
+        "K6~",
+        "K8~",
+        "KC-",
+        "L.-",
+        "M0C",
+        "M0T",
+        "M1D",
+        "M2L",
+        "M2M",
+        "M2O",
+        "M2R",
+        "MBDVC",
+        "PQBIZ",
+        "PQBZA",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "PSYQQ",
+        "Q9U",
+        "S0X"
+      ],
+      "Score": [
+        "45.43816"
+      ],
+      "PublicationPlace": [
+        "Dordrecht"
+      ],
+      "ID": [
+        "FETCH-LOGICAL-c440t-cedbc3c2ae8cc0e8453976f0c178804c01ea9303bd2d2fc1af5743be84b5c4793"
+      ],
+      "DOI": [
+        "10.1007/s10551-021-04746-y"
+      ],
+      "Publisher": [
+        "Springer Netherlands",
+        "Springer",
+        "Springer Nature B.V"
+      ],
+      "Language": [
+        "English"
+      ],
+      "EISSN": [
+        "1573-0697"
+      ],
+      "ISSN": [
+        "0167-4544"
+      ],
+      "Cites_doi": [
+        "10.1177/1745691612454303",
+        "10.1126/science.1229294",
+        "10.1146/annurev-psych-113011-143745",
+        "10.1126/science.7455683",
+        "10.1075/ssol.2.1.03gre",
+        "10.4337/9781845429928",
+        "10.1023/B:BUSI.0000021052.57865.7b",
+        "10.1111/j.1467-9280.2009.02296.x",
+        "10.1177/017084069501600408",
+        "10.1017/CBO9780511840715",
+        "10.5465/amr.2014.0201",
+        "10.1111/j.1467-937X.2009.00582.x",
+        "10.1111/ijmr.12203",
+        "10.5465/amr.2003.10196688",
+        "10.1515/9781400837991",
+        "10.1177/0170840613511928",
+        "10.1111/j.1468-2370.2005.00112.x",
+        "10.5465/amle.2002.8509400",
+        "10.1007/s10551-007-9353-0",
+        "10.1177/0170840600213005",
+        "10.1007/978-94-007-0375-9_1",
+        "10.1037/0033-295X.108.4.814",
+        "10.1177/0149206313511272",
+        "10.2307/3857485",
+        "10.1126/science.1239918",
+        "10.3390/admsci7030033",
+        "10.7208/chicago/9780226065595.001.0001",
+        "10.2307/3857632",
+        "10.2307/3857275",
+        "10.2307/3857690",
+        "10.1016/0898-5898(92)90005-H",
+        "10.1177/0170840617709309",
+        "10.2307/258647",
+        "10.1515/9781400884841",
+        "10.1007/s10551-017-3538-y",
+        "10.1016/j.riob.2014.10.002"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "GroupedDBID": [
+        "-51",
+        "-5C",
+        "-5G",
+        "-BR",
+        "-EM",
+        "-W8",
+        "-Y2",
+        "-~C",
+        "-~X",
+        ".86",
+        ".GO",
+        "0-V",
+        "06D",
+        "08R",
+        "0R~",
+        "0VY",
+        "199",
+        "1N0",
+        "1SB",
+        "2.D",
+        "203",
+        "28-",
+        "29K",
+        "2J2",
+        "2JN",
+        "2JY",
+        "2KG",
+        "2KM",
+        "2LR",
+        "2P1",
+        "2VQ",
+        "2~H",
+        "30V",
+        "3V.",
+        "4.4",
+        "406",
+        "408",
+        "409",
+        "40D",
+        "40E",
+        "5GY",
+        "5QI",
+        "5VS",
+        "67Z",
+        "6NX",
+        "78A",
+        "7WY",
+        "8AO",
+        "8FI",
+        "8FJ",
+        "8FL",
+        "8FW",
+        "8G5",
+        "8H~",
+        "8TC",
+        "8UJ",
+        "8VB",
+        "95-",
+        "95.",
+        "95~",
+        "96X",
+        "AAAHA",
+        "AABHQ",
+        "AABKS",
+        "AABYN",
+        "AAFGU",
+        "AAGAY",
+        "AAHNG",
+        "AAIAL",
+        "AAJKR",
+        "AANTL",
+        "AANZL",
+        "AARHV",
+        "AARTL",
+        "AATVU",
+        "AAUYE",
+        "AAWCG",
+        "AAXYU",
+        "AAYIU",
+        "AAYQN",
+        "AAYTO",
+        "ABBBX",
+        "ABBHK",
+        "ABBXA",
+        "ABDZT",
+        "ABECU",
+        "ABECW",
+        "ABFGW",
+        "ABFTD",
+        "ABFTV",
+        "ABHLI",
+        "ABHQN",
+        "ABIVO",
+        "ABJOX",
+        "ABKAS",
+        "ABKCH",
+        "ABKTN",
+        "ABKTR",
+        "ABKVW",
+        "ABLJU",
+        "ABMNI",
+        "ABMQK",
+        "ABNWP",
+        "ABQBU",
+        "ABSDQ",
+        "ABSXP",
+        "ABTAH",
+        "ABTEG",
+        "ABTHY",
+        "ABTMW",
+        "ABULA",
+        "ABUWG",
+        "ABWNU",
+        "ABXPI",
+        "ABYRZ",
+        "ABYYQ",
+        "ACBMV",
+        "ACBRV",
+        "ACBXY",
+        "ACBYP",
+        "ACGFO",
+        "ACGFS",
+        "ACHQT",
+        "ACHSB",
+        "ACHXU",
+        "ACIGE",
+        "ACIHN",
+        "ACIOK",
+        "ACIPQ",
+        "ACKNC",
+        "ACMDZ",
+        "ACMLO",
+        "ACNCT",
+        "ACNXV",
+        "ACOKC",
+        "ACOMO",
+        "ACREJ",
+        "ACREN",
+        "ACTTH",
+        "ACVFL",
+        "ACVWB",
+        "ACVYN",
+        "ACWMK",
+        "ACYUM",
+        "ADBBV",
+        "ADGDI",
+        "ADHHG",
+        "ADHIR",
+        "ADIMF",
+        "ADINQ",
+        "ADKNI",
+        "ADKPE",
+        "ADMDM",
+        "ADMHC",
+        "ADMHP",
+        "ADPTO",
+        "ADRFC",
+        "ADTPH",
+        "ADULT",
+        "ADURQ",
+        "ADYFF",
+        "ADYOE",
+        "ADZKW",
+        "AEAAH",
+        "AEAQA",
+        "AEBTG",
+        "AEEQQ",
+        "AEFIE",
+        "AEFTE",
+        "AEGAL",
+        "AEGNC",
+        "AEJHL",
+        "AEJRE",
+        "AEKMD",
+        "AEOHA",
+        "AEPYU",
+        "AESTI",
+        "AETLH",
+        "AEUPB",
+        "AEVTX",
+        "AEXYK",
+        "AFEXP",
+        "AFFNX",
+        "AFGCZ",
+        "AFKRA",
+        "AFLOW",
+        "AFMIJ",
+        "AFQWF",
+        "AFWTZ",
+        "AFYQB",
+        "AFZKB",
+        "AGAYW",
+        "AGDGC",
+        "AGGBP",
+        "AGGDS",
+        "AGJBK",
+        "AGMZJ",
+        "AGQMX",
+        "AGWIL",
+        "AGWZB",
+        "AGYKE",
+        "AHAJD",
+        "AHAVH",
+        "AHBYD",
+        "AHKAY",
+        "AHSBF",
+        "AHYZX",
+        "AI.",
+        "AIAKS",
+        "AIIXL",
+        "AILAN",
+        "AIMYW",
+        "AITGF",
+        "AJBLW",
+        "AJDOV",
+        "AJRNO",
+        "AJUXI",
+        "AJZVZ",
+        "AKQUC",
+        "AKVCP",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ALSLI",
+        "ALWAN",
+        "AMKLP",
+        "AMTXH",
+        "AMYLF",
+        "AMYQR",
+        "AOCGG",
+        "AQUVI",
+        "ARALO",
+        "ARMRJ",
+        "ASPBG",
+        "AVQMV",
+        "AVWKF",
+        "AXYYD",
+        "AYQZM",
+        "AZFZN",
+        "AZQEC",
+        "AZRUE",
+        "B-.",
+        "BA0",
+        "BAPOH",
+        "BBWZM",
+        "BDATZ",
+        "BENPR",
+        "BEZIV",
+        "BGNMA",
+        "BHNFS",
+        "BKOMP",
+        "BPHCQ",
+        "BVXVI",
+        "CAG",
+        "CBXGM",
+        "CHNMF",
+        "COF",
+        "CS3",
+        "CSCUP",
+        "CWXUR",
+        "CZBKB",
+        "D-I",
+        "DL5",
+        "DNIVK",
+        "DPSOV",
+        "DU5",
+        "DWQXO",
+        "E.L",
+        "EBLON",
+        "EBS",
+        "EBU",
+        "ECVKH",
+        "EGZRM",
+        "EHE",
+        "EIOEI",
+        "EJD",
+        "ESBYG",
+        "F5P",
+        "FEDTE",
+        "FERAY",
+        "FFXSO",
+        "FIGPU",
+        "FINBP",
+        "FNLPD",
+        "FRNLG",
+        "FRRFC",
+        "FSGXE",
+        "FWDCC",
+        "FYUFA",
+        "GGCAI",
+        "GGRSB",
+        "GJIRD",
+        "GNWQR",
+        "GPZZG",
+        "GQ6",
+        "GQ7",
+        "GQ8",
+        "GROUPED_ABI_INFORM_ARCHIVE",
+        "GROUPED_ABI_INFORM_COMPLETE",
+        "GROUPED_ABI_INFORM_RESEARCH",
+        "GUQSH",
+        "GXS",
+        "H13",
+        "HECYW",
+        "HF~",
+        "HG5",
+        "HG6",
+        "HMJXF",
+        "HQYDN",
+        "HRMNR",
+        "HYQOX",
+        "HZ~",
+        "H~9",
+        "I09",
+        "IHE",
+        "IJ-",
+        "IKXTQ",
+        "ITM",
+        "IWAJR",
+        "IXC",
+        "IZIGR",
+        "IZQ",
+        "I~X",
+        "I~Z",
+        "J-C",
+        "J0Z",
+        "JAAYA",
+        "JAB",
+        "JBMMH",
+        "JBSCW",
+        "JBU",
+        "JCJTX",
+        "JENOY",
+        "JHFFW",
+        "JKQEH",
+        "JLEZI",
+        "JLXEF",
+        "JPL",
+        "JPPEU",
+        "JSODD",
+        "JST",
+        "JZLTJ",
+        "K50",
+        "K60",
+        "K6~",
+        "K8~",
+        "KC-",
+        "KDC",
+        "KOV",
+        "KOW",
+        "LAK",
+        "LLZTM",
+        "M0C",
+        "M0T",
+        "M1D",
+        "M2L",
+        "M2M",
+        "M2O",
+        "M2R",
+        "M4Y",
+        "MA-",
+        "MQGED",
+        "N2Q",
+        "N9A",
+        "NB0",
+        "NDZJH",
+        "NEJ",
+        "NPVJJ",
+        "NQJWS",
+        "NU0",
+        "O-F",
+        "O-J",
+        "O9-",
+        "O93",
+        "O9G",
+        "O9I",
+        "O9J",
+        "OAM",
+        "OVD",
+        "P19",
+        "P2P",
+        "P9Q",
+        "PF-",
+        "PQBIZ",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "PRG",
+        "PROAC",
+        "PSYQQ",
+        "PT4",
+        "PT5",
+        "PZZ",
+        "Q2X",
+        "Q5E",
+        "QF4",
+        "QM6",
+        "QM7",
+        "QN7",
+        "QO5",
+        "QOK",
+        "QOS",
+        "QWB",
+        "R-Y",
+        "R4E",
+        "R89",
+        "R9I",
+        "RHV",
+        "RNI",
+        "RNS",
+        "ROL",
+        "RPX",
+        "RSV",
+        "RZC",
+        "RZD",
+        "RZK",
+        "S0X",
+        "S16",
+        "S1Z",
+        "S26",
+        "S27",
+        "S28",
+        "S3B",
+        "SA0",
+        "SAP",
+        "SCLPG",
+        "SDA",
+        "SDH",
+        "SDM",
+        "SHS",
+        "SHX",
+        "SISQX",
+        "SJYHP",
+        "SNE",
+        "SNX",
+        "SOHCF",
+        "SOJ",
+        "SPISZ",
+        "SRMVM",
+        "SSLCW",
+        "STPWE",
+        "SZN",
+        "T13",
+        "T16",
+        "TAE",
+        "TEORI",
+        "TH9",
+        "TN5",
+        "TSG",
+        "TSK",
+        "TSV",
+        "TUC",
+        "U2A",
+        "U5U",
+        "UBC",
+        "UG4",
+        "UHB",
+        "UKHRP",
+        "UNUBA",
+        "UOJIU",
+        "UTJUX",
+        "UZXMN",
+        "VC2",
+        "VFIZW",
+        "VH1",
+        "VQA",
+        "VQP",
+        "W23",
+        "W48",
+        "WH7",
+        "WHG",
+        "WIP",
+        "WK6",
+        "WK8",
+        "XFK",
+        "YCJ",
+        "YLTOR",
+        "YQT",
+        "YYP",
+        "Z45",
+        "Z5O",
+        "Z7R",
+        "Z7S",
+        "Z7U",
+        "Z7V",
+        "Z7W",
+        "Z7X",
+        "Z7Y",
+        "Z7Z",
+        "Z81",
+        "Z83",
+        "Z85",
+        "Z86",
+        "Z87",
+        "Z88",
+        "Z8M",
+        "Z8N",
+        "Z8O",
+        "Z8P",
+        "Z8Q",
+        "Z8S",
+        "Z8T",
+        "Z8U",
+        "Z8V",
+        "Z8W",
+        "Z8Z",
+        "Z91",
+        "Z92",
+        "ZA5",
+        "ZCG",
+        "ZL0",
+        "ZMTXR",
+        "ZWUKE",
+        "ZY4",
+        "~8M",
+        "~EX",
+        "~OX",
+        "~OY",
+        "~OZ",
+        "~P-",
+        "~P.",
+        "~P0",
+        "~P1",
+        "~PQ",
+        "~P~",
+        "AATNV",
+        "AAYFA",
+        "AAYXX",
+        "ABTKH",
+        "ADOXG",
+        "AESKC",
+        "AEVLU",
+        "AFNRJ",
+        "AMXSW",
+        "CCPQU",
+        "CITATION",
+        "DDRTE",
+        "DPUIP",
+        "K1G",
+        "SNPRN",
+        "BSHEE",
+        "7TQ",
+        "7XB",
+        "8BJ",
+        "8FK",
+        "DHY",
+        "DON",
+        "FQK",
+        "JBE",
+        "L.-",
+        "MBDVC",
+        "PQBZA",
+        "Q9U"
+      ],
+      "SubjectTerms": [
+        "Behavior",
+        "Behavioral economics",
+        "Business and Management",
+        "Business Ethics",
+        "Business schools",
+        "Capitalism",
+        "Confirmatory bias",
+        "Cultivation",
+        "Education",
+        "Ethics",
+        "Fiction",
+        "Humanities",
+        "Illusions",
+        "Leadership",
+        "Management",
+        "Novels",
+        "Original Paper",
+        "Peace",
+        "Philosophers",
+        "Philosophy",
+        "Psychologists",
+        "Psychology",
+        "Quality of Life Research",
+        "Social sciences",
+        "War",
+        "Wisdom"
+      ],
+      "Discipline": [
+        "Law",
+        "Education",
+        "Philosophy",
+        "Business",
+        "Psychology"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "References": [
+        "Bayley (CR6) 1988",
+        "Quoidbach, Gilbert, Wilson (CR54) 2013; 339",
+        "Steiner (CR62) 1959",
+        "Whitehead (CR76) 1978",
+        "Meynhardt, Hermann, Anderer (CR46) 2017; 7",
+        "Gladwell (CR24) 2000",
+        "Morson (CR47) 1987",
+        "Donaldson (CR17) 2003; 28",
+        "Burnyeat, Schofield, Nussbaum (CR12) 1982",
+        "Kidd, Castano (CR39) 2013; 342",
+        "Michaelson (CR82) 2016; 15",
+        "Michaelson (CR80) 2008; 77",
+        "CR36",
+        "CR35",
+        "Kern, Chugh (CR38) 2009; 20",
+        "Tversky, Kahneman (CR71) 1981; 211",
+        "Bazerman, Tenbrunsel (CR7) 2011",
+        "Michaelson (CR81) 2015; 40",
+        "Nussbaum (CR50) 1990",
+        "Haidt (CR30) 2001; 108",
+        "McLean, Elkind (CR43) 2003",
+        "Tetlock (CR63) 2005",
+        "Morson, Schapiro (CR48) 2017",
+        "Zhang, Gino, Bazerman (CR79) 2014; 34",
+        "Wasiolek (CR72) 1978",
+        "Paine (CR52) 1994; 72",
+        "CR3",
+        "Booth (CR9) 1983",
+        "Maugham (CR41) 1959",
+        "Bowie (CR10) 2000; 10",
+        "Beigi, Callahan, Michaelson (CR84) 2019; 21",
+        "Feldman (CR20) 2004; 47",
+        "Gentile (CR23) 2010",
+        "Arnold (CR4) 1888",
+        "Phillips (CR53) 1995; 16",
+        "Gragg (CR27) 1940",
+        "Gagliardi, Czarniawska (CR22) 2006",
+        "Savage, Cornelissen, Franck (CR58) 2018; 39",
+        "McCabe (CR42) 2014; 35",
+        "Thaler, Sunstein (CR64) 2008",
+        "Nussbaum (CR51) 2001",
+        "Zane (CR78) 2007",
+        "Roese, Vohs (CR57) 2012; 7",
+        "Leeson (CR40) 1996",
+        "Collins (CR13) 2001",
+        "Berlin (CR8) 1953",
+        "Friedman (CR21) 2016",
+        "Haidt (CR32) 2012",
+        "Weaver, Treviño (CR75) 1994; 4",
+        "Ariely (CR2) 2008",
+        "CR16",
+        "DeCock (CR15) 2000; 21",
+        "CR59",
+        "Badaracco (CR5) 2006",
+        "Donaldson, Freeman (CR18) 1994",
+        "Davis, Stark (CR14) 2001",
+        "Williams (CR77) 1985",
+        "Rhodes, Brown (CR56) 2005; 7",
+        "Murphy, Enderle (CR49) 1995; 5",
+        "Goodpaster, Bowie (CR25) 2002",
+        "Argyris (CR1) 2002; 1",
+        "Solomon (CR61) 1999; 9",
+        "Kahneman (CR37) 2011",
+        "Weaver, Reynolds, Brown (CR74) 2014; 40",
+        "Green, Chatham, Sestir (CR28) 2012; 2",
+        "Hartman (CR33) 1992; 4",
+        "Brockner (CR11) 1992; 17",
+        "Hartman (CR34) 1996",
+        "Michaelson (CR83) 2017; 142",
+        "Wasiolek (CR73) 1985",
+        "Greenleaf (CR29) 1970",
+        "Rabin, Vayanos (CR55) 2010; 77",
+        "Solomon (CR60) 1992",
+        "Haidt (CR31) 2006",
+        "Meyer, Kunreuther (CR45) 2017",
+        "Treviño, den Nieuwenboer, Kish-Gephart (CR70) 2014; 65",
+        "CR67",
+        "Treviño, Brown (CR68) 2004; 19",
+        "CR66",
+        "CR65",
+        "Messick, Bazerman (CR44) 1996; 37",
+        "Ellis (CR19) 1921",
+        "Treviño, Nelson (CR69) 2014",
+        "G Steiner (4746_CR62) 1959",
+        "DM Messick (4746_CR44) 1996; 37",
+        "T Meynhardt (4746_CR46) 2017; 7",
+        "J Brockner (4746_CR11) 1992; 17",
+        "4746_CR16",
+        "LK Treviño (4746_CR70) 2014; 65",
+        "4746_CR59",
+        "JC Collins (4746_CR13) 2001",
+        "I Berlin (4746_CR8) 1953",
+        "WC Booth (4746_CR9) 1983",
+        "DE Kidd (4746_CR39) 2013; 342",
+        "LK Treviño (4746_CR69) 2014",
+        "B McLean (4746_CR43) 2003",
+        "MC Nussbaum (4746_CR51) 2001",
+        "GR Weaver (4746_CR75) 1994; 4",
+        "M Arnold (4746_CR4) 1888",
+        "J Quoidbach (4746_CR54) 2013; 339",
+        "A Tversky (4746_CR71) 1981; 211",
+        "D Ariely (4746_CR2) 2008",
+        "(4746_CR18) 1994",
+        "MC Gentile (4746_CR23) 2010",
+        "GS Morson (4746_CR48) 2017",
+        "4746_CR67",
+        "CI Gragg (4746_CR27) 1940",
+        "M Rabin (4746_CR55) 2010; 77",
+        "4746_CR66",
+        "MC Green (4746_CR28) 2012; 2",
+        "4746_CR65",
+        "SP Feldman (4746_CR20) 2004; 47",
+        "J Haidt (4746_CR31) 2006",
+        "N Phillips (4746_CR53) 1995; 16",
+        "D McCabe (4746_CR42) 2014; 35",
+        "E Wasiolek (4746_CR73) 1985",
+        "J Bayley (4746_CR6) 1988",
+        "C DeCock (4746_CR15) 2000; 21",
+        "KE Goodpaster (4746_CR25) 2002",
+        "P Savage (4746_CR58) 2018; 39",
+        "GR Weaver (4746_CR74) 2014; 40",
+        "C Michaelson (4746_CR80) 2008; 77",
+        "B Williams (4746_CR77) 1985",
+        "E Hartman (4746_CR34) 1996",
+        "MC Nussbaum (4746_CR50) 1990",
+        "4746_CR3",
+        "RK Greenleaf (4746_CR29) 1970",
+        "4746_CR35",
+        "C Rhodes (4746_CR56) 2005; 7",
+        "M Gladwell (4746_CR24) 2000",
+        "4746_CR36",
+        "T Zhang (4746_CR79) 2014; 34",
+        "MC Kern (4746_CR38) 2009; 20",
+        "LK Treviño (4746_CR68) 2004; 19",
+        "C Argyris (4746_CR1) 2002; 1",
+        "NE Bowie (4746_CR10) 2000; 10",
+        "MH Bazerman (4746_CR7) 2011",
+        "GS Morson (4746_CR47) 1987",
+        "N Leeson (4746_CR40) 1996",
+        "T Donaldson (4746_CR17) 2003; 28",
+        "(4746_CR78) 2007",
+        "C Michaelson (4746_CR81) 2015; 40",
+        "LS Paine (4746_CR52) 1994; 72",
+        "TL Friedman (4746_CR21) 2016",
+        "C Michaelson (4746_CR83) 2017; 142",
+        "DK Hartman (4746_CR33) 1992; 4",
+        "RC Solomon (4746_CR60) 1992",
+        "P Gagliardi (4746_CR22) 2006",
+        "P Murphy (4746_CR49) 1995; 5",
+        "PE Tetlock (4746_CR63) 2005",
+        "D Kahneman (4746_CR37) 2011",
+        "RC Solomon (4746_CR61) 1999; 9",
+        "WS Maugham (4746_CR41) 1959",
+        "E Wasiolek (4746_CR72) 1978",
+        "J Haidt (4746_CR32) 2012",
+        "C Michaelson (4746_CR82) 2016; 15",
+        "RH Thaler (4746_CR64) 2008",
+        "(4746_CR14) 2001",
+        "MF Burnyeat (4746_CR12) 1982",
+        "M Beigi (4746_CR84) 2019; 21",
+        "J Badaracco (4746_CR5) 2006",
+        "J Haidt (4746_CR30) 2001; 108",
+        "NJ Roese (4746_CR57) 2012; 7",
+        "H Ellis (4746_CR19) 1921",
+        "R Meyer (4746_CR45) 2017",
+        "AN Whitehead (4746_CR76) 1978"
+      ],
+      "SourceType": [
+        "Aggregation Database",
+        "Publisher"
+      ],
+      "PublicationYear": [
+        "2022"
+      ],
+      "StartPage": [
+        "31"
+      ],
+      "SourceID": [
+        "proquest",
+        "gale",
+        "crossref",
+        "springer"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "The Author(s), under exclusive licence to Springer Nature B.V. part of Springer Nature 2021"
+        },
+        {
+          "notice": "COPYRIGHT 2022 Springer"
+        },
+        {
+          "notice": "The Author(s), under exclusive licence to Springer Nature B.V. part of Springer Nature 2021."
+        }
+      ],
+      "SSID": [
+        "ssj0000514"
+      ],
+      "Title": [
+        "Leadership and Character(s): Behavioral Business Ethics in ‘<h>War and Peace</h>’"
+      ],
+      "CitedBy_id": [
+        "crossref_primary_10_1080_14759551_2022_2143500"
+      ],
+      "DatabaseTitle": [
+        "CrossRef",
+        "ProQuest Business Collection (Alumni Edition)",
+        "ProQuest One Psychology",
+        "Research Library Prep",
+        "ProQuest Central Student",
+        "ProQuest Central Essentials",
+        "ABI/INFORM Complete",
+        "Philosophy Collection",
+        "Health Research Premium Collection",
+        "Arts Premium Collection",
+        "Business Premium Collection",
+        "Social Science Premium Collection",
+        "ABI/INFORM Global",
+        "ProQuest Political Science",
+        "ProQuest One Academic Eastern Edition",
+        "ProQuest Hospital Collection",
+        "Health Research Premium Collection (Alumni)",
+        "ProQuest Business Collection",
+        "ProQuest Hospital Collection (Alumni)",
+        "ProQuest Social Science Journals",
+        "ProQuest Social Sciences Premium Collection",
+        "ProQuest One Academic UKI Edition",
+        "PAIS International",
+        "ProQuest Health Management (Alumni Edition)",
+        "ProQuest DELNET Management Collection",
+        "ProQuest Politics Collection",
+        "Arts & Humanities Full Text",
+        "ProQuest One Academic",
+        "ABI/INFORM Global (Corporate)",
+        "ProQuest One Business",
+        "SIRS Editorial",
+        "ProQuest Social Science Journals (Alumni Edition)",
+        "ProQuest Central (Alumni Edition)",
+        "Research Library (Alumni Edition)",
+        "Politics Collection",
+        "ProQuest Pharma Collection",
+        "ProQuest Central",
+        "ABI/INFORM Professional Advanced",
+        "International Bibliography of the Social Sciences (IBSS)",
+        "ProQuest Central Korea",
+        "ProQuest Research Library",
+        "ProQuest Art, Design and Architecture Collection",
+        "ABI/INFORM Complete (Alumni Edition)",
+        "ABI/INFORM Global (Alumni Edition)",
+        "ProQuest Central Basic",
+        "ProQuest Health Management",
+        "ProQuest Psychology Journals (Alumni)",
+        "ProQuest Psychology Journals",
+        "ProQuest One Business (Alumni)",
+        "ProQuest Central (Alumni)",
+        "Business Premium Collection (Alumni)",
+        "Philosophy Database"
+      ],
+      "EndPage": [
+        "47"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-c440t-cedbc3c2ae8cc0e8453976f0c178804c01ea9303bd2d2fc1af5743be84b5c4793"
+      ],
+      "Copyright": [
+        "The Author(s), under exclusive licence to Springer Nature B.V. part of Springer Nature 2021",
+        "COPYRIGHT 2022 Springer",
+        "The Author(s), under exclusive licence to Springer Nature B.V. part of Springer Nature 2021."
+      ],
+      "IngestDate": [
+        "Thu Sep 21 21:55:04 EDT 2023",
+        "Fri Sep 15 04:05:31 EDT 2023",
+        "Sun Oct 01 07:16:17 EDT 2023",
+        "Wed Jul 19 04:05:03 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "04",
+          "year": "2022",
+          "text": "20220401",
+          "day": "01"
+        }
+      ],
+      "DatabaseTitleList": [
+        "",
+        "",
+        "ProQuest Business Collection (Alumni Edition)"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Dordrecht"
+        }
+      ],
+      "URI": [
+        "https://link.springer.com/article/10.1007/s10551-021-04746-y",
+        "https://search.proquest.com/docview/2647047920"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Springer Netherlands"
+        },
+        {
+          "name": "Springer"
+        },
+        {
+          "name": "Springer Nature B.V"
+        }
+      ],
+      "PQPubID": [
+        "6472"
+      ],
+      "PublicationSubtitle": [
+        "JBE"
+      ],
+      "AbstractList": [
+        "Keywords: Behavioral ethics; Leadership; Literature Leo Tolstoy was on to behavioral ethics before there was such as a thing as behavioral ethics. Three scenes from his magnum opus, War and Peace, demonstrate that Tolstoy diagnosed some of the same problems that occupy modern behavioral ethics: confirmation bias, slippery-slope reasoning, and illusions of control. However, whereas modern behavioral ethics has done more to diagnose problems than to prescribe solutions, Tolstoy's theories of moral psychology and leadership provide direction for human moral self-cultivation. This analysis of War and Peace also suggests that literary fiction can depict worlds at least as fertile as the real world for studying business ethics. Building upon this example, in an age and field which seems too often to prioritize scientific wisdom over that of the humanities, I speculate about how literary fiction can expand our research into more diverse actors and worlds of modern capitalism. Author Affiliation: (1) Opus College of Business, University of St. Thomas, 1000 LaSalle Ave., TMH 443, 55403, Minneapolis, MN, USA (a) cmmichaelson@stthomas.edu Article History: Registration Date: 01/13/2021 Received Date: 05/19/2020 Accepted Date: 01/13/2021 Online Date: 02/14/2021 Byline:",
+        "Leo Tolstoy was on to behavioral ethics before there was such as a thing as behavioral ethics. Three scenes from his magnum opus,\u000aWar and Peace\u000a, demonstrate that Tolstoy diagnosed some of the same problems that occupy modern behavioral ethics: confirmation bias, slippery-slope reasoning, and illusions of control. However, whereas modern behavioral ethics has done more to diagnose problems than to prescribe solutions, Tolstoy’s theories of moral psychology and leadership provide direction for human moral self-cultivation. This analysis of\u000aWar and Peace\u000aalso suggests that literary fiction can depict worlds at least as fertile as the real world for studying business ethics. Building upon this example, in an age and field which seems too often to prioritize scientific wisdom over that of the humanities, I speculate about how literary fiction can expand our research into more diverse actors and worlds of modern capitalism.",
+        "Leo Tolstoy was on to behavioral ethics before there was such as a thing as behavioral ethics. Three scenes from his magnum opus, War and Peace, demonstrate that Tolstoy diagnosed some of the same problems that occupy modern behavioral ethics: confirmation bias, slippery-slope reasoning, and illusions of control. However, whereas modern behavioral ethics has done more to diagnose problems than to prescribe solutions, Tolstoy’s theories of moral psychology and leadership provide direction for human moral self-cultivation. This analysis of War and Peace also suggests that literary fiction can depict worlds at least as fertile as the real world for studying business ethics. Building upon this example, in an age and field which seems too often to prioritize scientific wisdom over that of the humanities, I speculate about how literary fiction can expand our research into more diverse actors and worlds of modern capitalism."
+      ],
+      "ORCID": [
+        "0000-0001-7184-8306"
+      ],
+      "Author": [
+        "Michaelson, Christopher"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2020"
+      ],
+      "References_xml": [
+        {
+          "volume": "7",
+          "start-page": "411",
+          "issue": "5",
+          "year": "2012",
+          "end-page": "426",
+          "ident": "CR57",
+          "article-title": "Hindsight bias",
+          "publication-title": "Perspectives on Psychological Science",
+          "doi": "10.1177/1745691612454303",
+          "contributor": {
+            "fullname": "Roese"
+          },
+          "contributor": {
+            "fullname": "Vohs"
+          }
+        },
+        {
+          "volume": "339",
+          "start-page": "96",
+          "year": "2013",
+          "end-page": "98",
+          "ident": "CR54",
+          "article-title": "The end of history illusion",
+          "publication-title": "Science",
+          "doi": "10.1126/science.1229294",
+          "contributor": {
+            "fullname": "Quoidbach"
+          },
+          "contributor": {
+            "fullname": "Gilbert"
+          },
+          "contributor": {
+            "fullname": "Wilson"
+          }
+        },
+        {
+          "year": "2008",
+          "ident": "CR64",
+          "publication-title": "Nudge: Improving decisions about health, wealth, and happiness",
+          "contributor": {
+            "fullname": "Thaler"
+          },
+          "contributor": {
+            "fullname": "Sunstein"
+          }
+        },
+        {
+          "volume": "77",
+          "start-page": "335",
+          "year": "2008",
+          "end-page": "345",
+          "ident": "CR80",
+          "article-title": "Work and the most terrible life",
+          "publication-title": "Journal of Business Ethics",
+          "contributor": {
+            "fullname": "Michaelson"
+          }
+        },
+        {
+          "volume": "28",
+          "start-page": "363",
+          "issue": "3",
+          "year": "2003",
+          "end-page": "366",
+          "ident": "CR17",
+          "article-title": "Taking ethics seriously: A mission now more possible",
+          "publication-title": "Academy of Management Review",
+          "contributor": {
+            "fullname": "Donaldson"
+          }
+        },
+        {
+          "volume": "108",
+          "start-page": "814",
+          "issue": "4",
+          "year": "2001",
+          "end-page": "834",
+          "ident": "CR30",
+          "article-title": "The emotional dog and its rational tail",
+          "publication-title": "Psychology Review",
+          "contributor": {
+            "fullname": "Haidt"
+          }
+        },
+        {
+          "ident": "CR16"
+        },
+        {
+          "volume": "211",
+          "start-page": "453",
+          "issue": "4481",
+          "year": "1981",
+          "end-page": "458",
+          "ident": "CR71",
+          "article-title": "The framing of decisions and the psychology of choice",
+          "publication-title": "Science",
+          "contributor": {
+            "fullname": "Tversky"
+          },
+          "contributor": {
+            "fullname": "Kahneman"
+          }
+        },
+        {
+          "volume": "21",
+          "start-page": "447",
+          "issue": "4",
+          "year": "2019",
+          "end-page": "465",
+          "ident": "CR84",
+          "article-title": "A critical plot twist: Changing characters and foreshadowing the future of organizational storytelling",
+          "publication-title": "International Journal of Management Reviews",
+          "contributor": {
+            "fullname": "Beigi"
+          },
+          "contributor": {
+            "fullname": "Callahan"
+          },
+          "contributor": {
+            "fullname": "Michaelson"
+          }
+        },
+        {
+          "year": "1988",
+          "ident": "CR6",
+          "publication-title": "Tolstoy and the novel",
+          "contributor": {
+            "fullname": "Bayley"
+          }
+        },
+        {
+          "year": "1959",
+          "ident": "CR62",
+          "publication-title": "Tolstoy or Dostoevsky? An essay in the old criticism",
+          "contributor": {
+            "fullname": "Steiner"
+          }
+        },
+        {
+          "year": "1970",
+          "ident": "CR29",
+          "publication-title": "The servant as leader",
+          "contributor": {
+            "fullname": "Greenleaf"
+          }
+        },
+        {
+          "year": "2017",
+          "ident": "CR48",
+          "publication-title": "Cents and sensibility: What economics can learn from the humanities",
+          "contributor": {
+            "fullname": "Morson"
+          },
+          "contributor": {
+            "fullname": "Schapiro"
+          }
+        },
+        {
+          "year": "1985",
+          "ident": "CR73",
+          "publication-title": "L.N. Tolstoy: Life, work, and criticism",
+          "contributor": {
+            "fullname": "Wasiolek"
+          }
+        },
+        {
+          "ident": "CR35"
+        },
+        {
+          "year": "2005",
+          "ident": "CR63",
+          "publication-title": "Expert political judgment: How good is it? How can we know?",
+          "contributor": {
+            "fullname": "Tetlock"
+          }
+        },
+        {
+          "volume": "20",
+          "start-page": "378",
+          "issue": "3",
+          "year": "2009",
+          "end-page": "384",
+          "ident": "CR38",
+          "article-title": "Bounded ethicality: The perils of loss framing",
+          "publication-title": "Psychological Science",
+          "contributor": {
+            "fullname": "Kern"
+          },
+          "contributor": {
+            "fullname": "Chugh"
+          }
+        },
+        {
+          "volume": "1",
+          "start-page": "206",
+          "year": "2002",
+          "end-page": "218",
+          "ident": "CR1",
+          "article-title": "Double-loop learning, teaching, and research",
+          "publication-title": "Academy of Management Learning & Education",
+          "contributor": {
+            "fullname": "Argyris"
+          }
+        },
+        {
+          "year": "1978",
+          "ident": "CR76",
+          "publication-title": "Process and reality",
+          "contributor": {
+            "fullname": "Whitehead"
+          }
+        },
+        {
+          "year": "2006",
+          "ident": "CR5",
+          "publication-title": "Questions of character: Illuminating the heart of leadership through literature",
+          "contributor": {
+            "fullname": "Badaracco"
+          }
+        },
+        {
+          "year": "2011",
+          "ident": "CR37",
+          "publication-title": "Thinking, fast and slow",
+          "contributor": {
+            "fullname": "Kahneman"
+          }
+        },
+        {
+          "year": "1953",
+          "ident": "CR8",
+          "publication-title": "The hedgehog and the fox: An essay on Tolstoy’s view of history",
+          "contributor": {
+            "fullname": "Berlin"
+          }
+        },
+        {
+          "year": "1888",
+          "ident": "CR4",
+          "publication-title": "Count Leo Tolstoy. In Essays on Criticism",
+          "contributor": {
+            "fullname": "Arnold"
+          }
+        },
+        {
+          "year": "1996",
+          "ident": "CR40",
+          "publication-title": "Rogue trader: The original story of the banker who broke the system",
+          "contributor": {
+            "fullname": "Leeson"
+          }
+        },
+        {
+          "volume": "21",
+          "start-page": "589",
+          "year": "2000",
+          "end-page": "609",
+          "ident": "CR15",
+          "article-title": "Essai: Reflections on fiction, representation, and organization studies: An essay with special reference to the work of Jorge Luis Borges",
+          "publication-title": "Organization Studies",
+          "contributor": {
+            "fullname": "DeCock"
+          }
+        },
+        {
+          "ident": "CR67"
+        },
+        {
+          "year": "2016",
+          "ident": "CR21",
+          "publication-title": "Thank you for being late: An optimist’s guide to thriving in the age of accelerations",
+          "contributor": {
+            "fullname": "Friedman"
+          }
+        },
+        {
+          "year": "2010",
+          "ident": "CR23",
+          "publication-title": "Giving voice to values: How to speak your mind when you know what's right",
+          "contributor": {
+            "fullname": "Gentile"
+          }
+        },
+        {
+          "year": "2012",
+          "ident": "CR32",
+          "publication-title": "The righteous mind: Why good people are divided by politics and religion",
+          "contributor": {
+            "fullname": "Haidt"
+          }
+        },
+        {
+          "volume": "37",
+          "start-page": "9",
+          "issue": "2",
+          "year": "1996",
+          "end-page": "22",
+          "ident": "CR44",
+          "article-title": "Ethics for the 21st century: A decision-making approach",
+          "publication-title": "MIT Sloan Management Review",
+          "contributor": {
+            "fullname": "Messick"
+          },
+          "contributor": {
+            "fullname": "Bazerman"
+          }
+        },
+        {
+          "volume": "4",
+          "start-page": "129",
+          "issue": "2",
+          "year": "1994",
+          "end-page": "144",
+          "ident": "CR75",
+          "article-title": "Normative and empirical business ethics: Separation, marriage of convenience or marriage of necessity?",
+          "publication-title": "Business Ethics Quarterly",
+          "contributor": {
+            "fullname": "Weaver"
+          },
+          "contributor": {
+            "fullname": "Treviño"
+          }
+        },
+        {
+          "volume": "72",
+          "start-page": "106",
+          "issue": "2",
+          "year": "1994",
+          "end-page": "117",
+          "ident": "CR52",
+          "article-title": "Managing for organizational integrity",
+          "publication-title": "Harvard Business Review",
+          "contributor": {
+            "fullname": "Paine"
+          }
+        },
+        {
+          "volume": "40",
+          "start-page": "100",
+          "issue": "1",
+          "year": "2014",
+          "end-page": "129",
+          "ident": "CR74",
+          "article-title": "Moral intuition: Connecting current knowledge to future organizational research and practice",
+          "publication-title": "Journal of Management",
+          "contributor": {
+            "fullname": "Weaver"
+          },
+          "contributor": {
+            "fullname": "Reynolds"
+          },
+          "contributor": {
+            "fullname": "Brown"
+          }
+        },
+        {
+          "volume": "7",
+          "start-page": "33",
+          "issue": "3",
+          "year": "2017",
+          "ident": "CR46",
+          "article-title": "Making sense of a most popular metaphor in management: Towards a hedgefox scale for cognitive styles",
+          "publication-title": "Administrative Sciences",
+          "contributor": {
+            "fullname": "Meynhardt"
+          },
+          "contributor": {
+            "fullname": "Hermann"
+          },
+          "contributor": {
+            "fullname": "Anderer"
+          }
+        },
+        {
+          "year": "1985",
+          "ident": "CR77",
+          "publication-title": "Ethics and the limits of philosophy",
+          "contributor": {
+            "fullname": "Williams"
+          }
+        },
+        {
+          "volume": "16",
+          "start-page": "625",
+          "year": "1995",
+          "end-page": "649",
+          "ident": "CR53",
+          "article-title": "Telling organizational tales: On the role of narrative fiction in the study of organizations",
+          "publication-title": "Organization Studies",
+          "contributor": {
+            "fullname": "Phillips"
+          }
+        },
+        {
+          "year": "2006",
+          "ident": "CR22",
+          "publication-title": "Management education and the humanities",
+          "contributor": {
+            "fullname": "Gagliardi"
+          },
+          "contributor": {
+            "fullname": "Czarniawska"
+          }
+        },
+        {
+          "year": "1996",
+          "ident": "CR34",
+          "publication-title": "Organizational ethics and the good life",
+          "contributor": {
+            "fullname": "Hartman"
+          }
+        },
+        {
+          "ident": "CR36"
+        },
+        {
+          "year": "2001",
+          "ident": "CR14",
+          "publication-title": "Conflict of interest in the professions",
+          "contributor": {
+            "fullname": "Davis"
+          },
+          "contributor": {
+            "fullname": "Stark"
+          }
+        },
+        {
+          "volume": "47",
+          "start-page": "311",
+          "issue": "4",
+          "year": "2004",
+          "end-page": "328",
+          "ident": "CR20",
+          "article-title": "The professional conscience: A psychoanalytic study of moral character in Tolstoy’s",
+          "publication-title": "Journal of Business Ethics",
+          "contributor": {
+            "fullname": "Feldman"
+          }
+        },
+        {
+          "volume": "15",
+          "start-page": "586",
+          "year": "2016",
+          "end-page": "606",
+          "ident": "CR82",
+          "article-title": "A novel approach to business ethics education: Exploring how to live and work in the 21st century",
+          "publication-title": "Academy of Management Learning & Education",
+          "contributor": {
+            "fullname": "Michaelson"
+          }
+        },
+        {
+          "year": "1983",
+          "ident": "CR9",
+          "publication-title": "The rhetoric of fiction",
+          "contributor": {
+            "fullname": "Booth"
+          }
+        },
+        {
+          "year": "2011",
+          "ident": "CR7",
+          "publication-title": "Blind spots: Why we fail to do what’s right and what to do about it",
+          "contributor": {
+            "fullname": "Bazerman"
+          },
+          "contributor": {
+            "fullname": "Tenbrunsel"
+          }
+        },
+        {
+          "volume": "17",
+          "start-page": "39",
+          "issue": "1",
+          "year": "1992",
+          "end-page": "61",
+          "ident": "CR11",
+          "article-title": "The escalation of commitment to a failing course of action: Toward theoretical progress",
+          "publication-title": "Academy of Management Review",
+          "contributor": {
+            "fullname": "Brockner"
+          }
+        },
+        {
+          "volume": "9",
+          "start-page": "11",
+          "issue": "1",
+          "year": "1999",
+          "end-page": "29",
+          "ident": "CR61",
+          "article-title": "Game theory as a model for business and business ethics",
+          "publication-title": "Business Ethics Quarterly",
+          "contributor": {
+            "fullname": "Solomon"
+          }
+        },
+        {
+          "year": "1940",
+          "ident": "CR27",
+          "publication-title": "Because wisdom can’t be told",
+          "contributor": {
+            "fullname": "Gragg"
+          }
+        },
+        {
+          "volume": "4",
+          "start-page": "295",
+          "year": "1992",
+          "end-page": "311",
+          "ident": "CR33",
+          "article-title": "Intertextuality and reading: The text, the reader, the author, and the context",
+          "publication-title": "Linguistics and Education",
+          "contributor": {
+            "fullname": "Hartman"
+          }
+        },
+        {
+          "year": "1959",
+          "ident": "CR41",
+          "publication-title": "W. Somerset Maugham selects the world’s ten greatest novels",
+          "contributor": {
+            "fullname": "Maugham"
+          }
+        },
+        {
+          "volume": "342",
+          "start-page": "377",
+          "year": "2013",
+          "end-page": "380",
+          "ident": "CR39",
+          "article-title": "Reading literary fiction improves theory of mind",
+          "publication-title": "Science",
+          "contributor": {
+            "fullname": "Kidd"
+          },
+          "contributor": {
+            "fullname": "Castano"
+          }
+        },
+        {
+          "year": "2001",
+          "ident": "CR51",
+          "publication-title": "Upheavals of thought: The intelligence of emotions",
+          "contributor": {
+            "fullname": "Nussbaum"
+          }
+        },
+        {
+          "ident": "CR66"
+        },
+        {
+          "year": "1921",
+          "ident": "CR19",
+          "publication-title": "Tolstoi: The new spirit",
+          "contributor": {
+            "fullname": "Ellis"
+          }
+        },
+        {
+          "volume": "7",
+          "start-page": "167",
+          "year": "2005",
+          "end-page": "188",
+          "ident": "CR56",
+          "article-title": "Narrative, organizations and research",
+          "publication-title": "International Journal of Management Reviews",
+          "contributor": {
+            "fullname": "Rhodes"
+          },
+          "contributor": {
+            "fullname": "Brown"
+          }
+        },
+        {
+          "volume": "65",
+          "start-page": "635",
+          "year": "2014",
+          "end-page": "660",
+          "ident": "CR70",
+          "article-title": "(Un)ethical behavior in organizations",
+          "publication-title": "Annual Review of Psychology",
+          "doi": "10.1146/annurev-psych-113011-143745",
+          "contributor": {
+            "fullname": "Treviño"
+          },
+          "contributor": {
+            "fullname": "den Nieuwenboer"
+          },
+          "contributor": {
+            "fullname": "Kish-Gephart"
+          }
+        },
+        {
+          "year": "2008",
+          "ident": "CR2",
+          "publication-title": "Predictably irrational: The hidden forces that shape our decisions",
+          "contributor": {
+            "fullname": "Ariely"
+          }
+        },
+        {
+          "year": "1990",
+          "ident": "CR50",
+          "publication-title": "Love’s knowledge: Essays on philosophy and literature",
+          "contributor": {
+            "fullname": "Nussbaum"
+          }
+        },
+        {
+          "volume": "77",
+          "start-page": "730",
+          "year": "2010",
+          "end-page": "778",
+          "ident": "CR55",
+          "article-title": "The gambler’s and hot-hand fallacies: Theory and applications",
+          "publication-title": "Review of Economic Studies",
+          "contributor": {
+            "fullname": "Rabin"
+          },
+          "contributor": {
+            "fullname": "Vayanos"
+          }
+        },
+        {
+          "volume": "2",
+          "start-page": "37",
+          "year": "2012",
+          "end-page": "59",
+          "ident": "CR28",
+          "article-title": "Emotion and transportation into fact and fiction",
+          "publication-title": "Scientific Study of Literature",
+          "contributor": {
+            "fullname": "Green"
+          },
+          "contributor": {
+            "fullname": "Chatham"
+          },
+          "contributor": {
+            "fullname": "Sestir"
+          }
+        },
+        {
+          "year": "2014",
+          "ident": "CR69",
+          "publication-title": "Managing business ethics: Straight talk about how to do it right",
+          "contributor": {
+            "fullname": "Treviño"
+          },
+          "contributor": {
+            "fullname": "Nelson"
+          }
+        },
+        {
+          "year": "1982",
+          "ident": "CR12",
+          "article-title": "Gods and heaps",
+          "publication-title": "Language and Logos",
+          "contributor": {
+            "fullname": "Burnyeat"
+          },
+          "contributor": {
+            "fullname": "Schofield"
+          },
+          "contributor": {
+            "fullname": "Nussbaum"
+          }
+        },
+        {
+          "year": "1992",
+          "ident": "CR60",
+          "publication-title": "Ethics and excellence: Cooperation and integrity in business",
+          "contributor": {
+            "fullname": "Solomon"
+          }
+        },
+        {
+          "volume": "34",
+          "start-page": "63",
+          "year": "2014",
+          "end-page": "79",
+          "ident": "CR79",
+          "article-title": "Morality rebooted. Exploring simple fixes to our moral bugs",
+          "publication-title": "Research in Organizational Behavior",
+          "contributor": {
+            "fullname": "Zhang"
+          },
+          "contributor": {
+            "fullname": "Gino"
+          },
+          "contributor": {
+            "fullname": "Bazerman"
+          }
+        },
+        {
+          "volume": "142",
+          "start-page": "409",
+          "issue": "3",
+          "year": "2017",
+          "end-page": "412",
+          "ident": "CR83",
+          "article-title": "Virtual special issue on humanities and business ethics",
+          "publication-title": "Journal of Business Ethics",
+          "contributor": {
+            "fullname": "Michaelson"
+          }
+        },
+        {
+          "year": "1978",
+          "ident": "CR72",
+          "publication-title": "Tolstoy’s major fiction",
+          "contributor": {
+            "fullname": "Wasiolek"
+          }
+        },
+        {
+          "year": "2000",
+          "ident": "CR24",
+          "publication-title": "The tipping point: How little things can make big differences",
+          "contributor": {
+            "fullname": "Gladwell"
+          }
+        },
+        {
+          "volume": "19",
+          "start-page": "69",
+          "issue": "2",
+          "year": "2004",
+          "end-page": "81",
+          "ident": "CR68",
+          "article-title": "Managing to be ethical: Debunking five business ethics myths",
+          "publication-title": "Academy of Management Executive",
+          "contributor": {
+            "fullname": "Treviño"
+          },
+          "contributor": {
+            "fullname": "Brown"
+          }
+        },
+        {
+          "year": "1987",
+          "ident": "CR47",
+          "publication-title": "Hidden in plain view: Narrative and creative potentials in ‘War and Peace’",
+          "contributor": {
+            "fullname": "Morson"
+          }
+        },
+        {
+          "volume": "35",
+          "start-page": "255",
+          "issue": "2",
+          "year": "2014",
+          "end-page": "278",
+          "ident": "CR42",
+          "article-title": "Light in the darkness? Managers in the back office of a Kafkaesque bank",
+          "publication-title": "Organization Studies",
+          "contributor": {
+            "fullname": "McCabe"
+          }
+        },
+        {
+          "year": "2017",
+          "ident": "CR45",
+          "publication-title": "The ostrich paradox: Why we underprepare for hazards",
+          "contributor": {
+            "fullname": "Meyer"
+          },
+          "contributor": {
+            "fullname": "Kunreuther"
+          }
+        },
+        {
+          "ident": "CR65"
+        },
+        {
+          "year": "1994",
+          "ident": "CR18",
+          "publication-title": "Business as a humanity",
+          "contributor": {
+            "fullname": "Donaldson"
+          },
+          "contributor": {
+            "fullname": "Freeman"
+          }
+        },
+        {
+          "ident": "CR3"
+        },
+        {
+          "year": "2001",
+          "ident": "CR13",
+          "publication-title": "Good to great: Why some companies make the leap…and others don’t",
+          "contributor": {
+            "fullname": "Collins"
+          }
+        },
+        {
+          "volume": "39",
+          "start-page": "975",
+          "issue": "7",
+          "year": "2018",
+          "end-page": "994",
+          "ident": "CR58",
+          "article-title": "Fiction and organization studies",
+          "publication-title": "Organization Studies",
+          "contributor": {
+            "fullname": "Savage"
+          },
+          "contributor": {
+            "fullname": "Cornelissen"
+          },
+          "contributor": {
+            "fullname": "Franck"
+          }
+        },
+        {
+          "year": "2007",
+          "ident": "CR78",
+          "publication-title": "The top ten: Writers pick their favourite books",
+          "contributor": {
+            "fullname": "Zane"
+          }
+        },
+        {
+          "start-page": "117",
+          "year": "2002",
+          "end-page": "141",
+          "ident": "CR25",
+          "article-title": "Teaching and learning ethics by the case method",
+          "publication-title": "The Blackwell guide to business ethics",
+          "contributor": {
+            "fullname": "Goodpaster"
+          },
+          "contributor": {
+            "fullname": "Bowie"
+          }
+        },
+        {
+          "volume": "10",
+          "start-page": "7",
+          "issue": "1",
+          "year": "2000",
+          "end-page": "20",
+          "ident": "CR10",
+          "article-title": "Business ethics, philosophy, and the next 25 years",
+          "publication-title": "Business Ethics Quarterly",
+          "contributor": {
+            "fullname": "Bowie"
+          }
+        },
+        {
+          "volume": "40",
+          "start-page": "147",
+          "year": "2015",
+          "end-page": "149",
+          "ident": "CR81",
+          "article-title": "How reading novels can help management scholars cultivate ambiculturalism",
+          "publication-title": "Academy of Management Review",
+          "contributor": {
+            "fullname": "Michaelson"
+          }
+        },
+        {
+          "year": "2006",
+          "ident": "CR31",
+          "publication-title": "The happiness hypothesis: Finding modern truth in ancient wisdom",
+          "contributor": {
+            "fullname": "Haidt"
+          }
+        },
+        {
+          "ident": "CR59"
+        },
+        {
+          "volume": "5",
+          "start-page": "97",
+          "year": "1995",
+          "end-page": "116",
+          "ident": "CR49",
+          "article-title": "Managerial ethical leadership: Examples do matter",
+          "publication-title": "Business Ethics Quarterly",
+          "contributor": {
+            "fullname": "Murphy"
+          },
+          "contributor": {
+            "fullname": "Enderle"
+          }
+        },
+        {
+          "year": "2003",
+          "ident": "CR43",
+          "publication-title": "The smartest guys in the room: The amazing rise and scandalous fall of Enron",
+          "contributor": {
+            "fullname": "McLean"
+          },
+          "contributor": {
+            "fullname": "Elkind"
+          }
+        },
+        {
+          "volume": "211",
+          "start-page": "453",
+          "issue": "4481",
+          "year": "1981",
+          "ident": "4746_CR71",
+          "publication-title": "Science",
+          "doi": "10.1126/science.7455683",
+          "contributor": {
+            "fullname": "A Tversky"
+          }
+        },
+        {
+          "volume": "2",
+          "start-page": "37",
+          "year": "2012",
+          "ident": "4746_CR28",
+          "publication-title": "Scientific Study of Literature",
+          "doi": "10.1075/ssol.2.1.03gre",
+          "contributor": {
+            "fullname": "MC Green"
+          }
+        },
+        {
+          "volume-title": "Business as a humanity",
+          "year": "1994",
+          "ident": "4746_CR18"
+        },
+        {
+          "volume-title": "L.N. Tolstoy: Life, work, and criticism",
+          "year": "1985",
+          "ident": "4746_CR73",
+          "contributor": {
+            "fullname": "E Wasiolek"
+          }
+        },
+        {
+          "volume-title": "Process and reality",
+          "year": "1978",
+          "ident": "4746_CR76",
+          "contributor": {
+            "fullname": "AN Whitehead"
+          }
+        },
+        {
+          "ident": "4746_CR16"
+        },
+        {
+          "volume-title": "Tolstoi: The new spirit",
+          "year": "1921",
+          "ident": "4746_CR19",
+          "contributor": {
+            "fullname": "H Ellis"
+          }
+        },
+        {
+          "volume-title": "Management education and the humanities",
+          "year": "2006",
+          "ident": "4746_CR22",
+          "doi": "10.4337/9781845429928",
+          "contributor": {
+            "fullname": "P Gagliardi"
+          }
+        },
+        {
+          "volume-title": "Rogue trader: The original story of the banker who broke the system",
+          "year": "1996",
+          "ident": "4746_CR40",
+          "contributor": {
+            "fullname": "N Leeson"
+          }
+        },
+        {
+          "ident": "4746_CR3"
+        },
+        {
+          "volume-title": "Managing business ethics: Straight talk about how to do it right",
+          "year": "2014",
+          "ident": "4746_CR69",
+          "contributor": {
+            "fullname": "LK Treviño"
+          }
+        },
+        {
+          "ident": "4746_CR59"
+        },
+        {
+          "volume": "47",
+          "start-page": "311",
+          "issue": "4",
+          "year": "2004",
+          "ident": "4746_CR20",
+          "publication-title": "Journal of Business Ethics",
+          "doi": "10.1023/B:BUSI.0000021052.57865.7b",
+          "contributor": {
+            "fullname": "SP Feldman"
+          }
+        },
+        {
+          "start-page": "117",
+          "volume-title": "The Blackwell guide to business ethics",
+          "year": "2002",
+          "ident": "4746_CR25",
+          "contributor": {
+            "fullname": "KE Goodpaster"
+          }
+        },
+        {
+          "volume-title": "Because wisdom can’t be told",
+          "year": "1940",
+          "ident": "4746_CR27",
+          "contributor": {
+            "fullname": "CI Gragg"
+          }
+        },
+        {
+          "volume": "20",
+          "start-page": "378",
+          "issue": "3",
+          "year": "2009",
+          "ident": "4746_CR38",
+          "publication-title": "Psychological Science",
+          "doi": "10.1111/j.1467-9280.2009.02296.x",
+          "contributor": {
+            "fullname": "MC Kern"
+          }
+        },
+        {
+          "volume-title": "Thinking, fast and slow",
+          "year": "2011",
+          "ident": "4746_CR37",
+          "contributor": {
+            "fullname": "D Kahneman"
+          }
+        },
+        {
+          "volume": "72",
+          "start-page": "106",
+          "issue": "2",
+          "year": "1994",
+          "ident": "4746_CR52",
+          "publication-title": "Harvard Business Review",
+          "contributor": {
+            "fullname": "LS Paine"
+          }
+        },
+        {
+          "volume": "7",
+          "start-page": "411",
+          "issue": "5",
+          "year": "2012",
+          "ident": "4746_CR57",
+          "publication-title": "Perspectives on Psychological Science",
+          "doi": "10.1177/1745691612454303",
+          "contributor": {
+            "fullname": "NJ Roese"
+          }
+        },
+        {
+          "volume": "16",
+          "start-page": "625",
+          "year": "1995",
+          "ident": "4746_CR53",
+          "publication-title": "Organization Studies",
+          "doi": "10.1177/017084069501600408",
+          "contributor": {
+            "fullname": "N Phillips"
+          }
+        },
+        {
+          "volume-title": "The happiness hypothesis: Finding modern truth in ancient wisdom",
+          "year": "2006",
+          "ident": "4746_CR31",
+          "contributor": {
+            "fullname": "J Haidt"
+          }
+        },
+        {
+          "volume-title": "Upheavals of thought: The intelligence of emotions",
+          "year": "2001",
+          "ident": "4746_CR51",
+          "doi": "10.1017/CBO9780511840715",
+          "contributor": {
+            "fullname": "MC Nussbaum"
+          }
+        },
+        {
+          "volume": "40",
+          "start-page": "147",
+          "year": "2015",
+          "ident": "4746_CR81",
+          "publication-title": "Academy of Management Review",
+          "doi": "10.5465/amr.2014.0201",
+          "contributor": {
+            "fullname": "C Michaelson"
+          }
+        },
+        {
+          "volume-title": "Giving voice to values: How to speak your mind when you know what's right",
+          "year": "2010",
+          "ident": "4746_CR23",
+          "contributor": {
+            "fullname": "MC Gentile"
+          }
+        },
+        {
+          "volume": "77",
+          "start-page": "730",
+          "year": "2010",
+          "ident": "4746_CR55",
+          "publication-title": "Review of Economic Studies",
+          "doi": "10.1111/j.1467-937X.2009.00582.x",
+          "contributor": {
+            "fullname": "M Rabin"
+          }
+        },
+        {
+          "volume-title": "The smartest guys in the room: The amazing rise and scandalous fall of Enron",
+          "year": "2003",
+          "ident": "4746_CR43",
+          "contributor": {
+            "fullname": "B McLean"
+          }
+        },
+        {
+          "volume-title": "Hidden in plain view: Narrative and creative potentials in ‘War and Peace’",
+          "year": "1987",
+          "ident": "4746_CR47",
+          "contributor": {
+            "fullname": "GS Morson"
+          }
+        },
+        {
+          "ident": "4746_CR65"
+        },
+        {
+          "volume": "21",
+          "start-page": "447",
+          "issue": "4",
+          "year": "2019",
+          "ident": "4746_CR84",
+          "publication-title": "International Journal of Management Reviews",
+          "doi": "10.1111/ijmr.12203",
+          "contributor": {
+            "fullname": "M Beigi"
+          }
+        },
+        {
+          "volume": "28",
+          "start-page": "363",
+          "issue": "3",
+          "year": "2003",
+          "ident": "4746_CR17",
+          "publication-title": "Academy of Management Review",
+          "doi": "10.5465/amr.2003.10196688",
+          "contributor": {
+            "fullname": "T Donaldson"
+          }
+        },
+        {
+          "volume-title": "Love’s knowledge: Essays on philosophy and literature",
+          "year": "1990",
+          "ident": "4746_CR50",
+          "contributor": {
+            "fullname": "MC Nussbaum"
+          }
+        },
+        {
+          "volume-title": "The top ten: Writers pick their favourite books",
+          "year": "2007",
+          "ident": "4746_CR78"
+        },
+        {
+          "volume-title": "Blind spots: Why we fail to do what’s right and what to do about it",
+          "year": "2011",
+          "ident": "4746_CR7",
+          "doi": "10.1515/9781400837991",
+          "contributor": {
+            "fullname": "MH Bazerman"
+          }
+        },
+        {
+          "volume": "35",
+          "start-page": "255",
+          "issue": "2",
+          "year": "2014",
+          "ident": "4746_CR42",
+          "publication-title": "Organization Studies",
+          "doi": "10.1177/0170840613511928",
+          "contributor": {
+            "fullname": "D McCabe"
+          }
+        },
+        {
+          "volume-title": "Language and Logos",
+          "year": "1982",
+          "ident": "4746_CR12",
+          "contributor": {
+            "fullname": "MF Burnyeat"
+          }
+        },
+        {
+          "volume-title": "The ostrich paradox: Why we underprepare for hazards",
+          "year": "2017",
+          "ident": "4746_CR45",
+          "contributor": {
+            "fullname": "R Meyer"
+          }
+        },
+        {
+          "volume": "7",
+          "start-page": "167",
+          "year": "2005",
+          "ident": "4746_CR56",
+          "publication-title": "International Journal of Management Reviews",
+          "doi": "10.1111/j.1468-2370.2005.00112.x",
+          "contributor": {
+            "fullname": "C Rhodes"
+          }
+        },
+        {
+          "volume": "1",
+          "start-page": "206",
+          "year": "2002",
+          "ident": "4746_CR1",
+          "publication-title": "Academy of Management Learning & Education",
+          "doi": "10.5465/amle.2002.8509400",
+          "contributor": {
+            "fullname": "C Argyris"
+          }
+        },
+        {
+          "ident": "4746_CR66"
+        },
+        {
+          "volume": "77",
+          "start-page": "335",
+          "year": "2008",
+          "ident": "4746_CR80",
+          "publication-title": "Journal of Business Ethics",
+          "doi": "10.1007/s10551-007-9353-0",
+          "contributor": {
+            "fullname": "C Michaelson"
+          }
+        },
+        {
+          "volume": "21",
+          "start-page": "589",
+          "year": "2000",
+          "ident": "4746_CR15",
+          "publication-title": "Organization Studies",
+          "doi": "10.1177/0170840600213005",
+          "contributor": {
+            "fullname": "C DeCock"
+          }
+        },
+        {
+          "ident": "4746_CR36",
+          "doi": "10.1007/978-94-007-0375-9_1"
+        },
+        {
+          "volume": "15",
+          "start-page": "586",
+          "year": "2016",
+          "ident": "4746_CR82",
+          "publication-title": "Academy of Management Learning & Education",
+          "contributor": {
+            "fullname": "C Michaelson"
+          }
+        },
+        {
+          "volume-title": "The hedgehog and the fox: An essay on Tolstoy’s view of history",
+          "year": "1953",
+          "ident": "4746_CR8",
+          "contributor": {
+            "fullname": "I Berlin"
+          }
+        },
+        {
+          "volume": "108",
+          "start-page": "814",
+          "issue": "4",
+          "year": "2001",
+          "ident": "4746_CR30",
+          "publication-title": "Psychology Review",
+          "doi": "10.1037/0033-295X.108.4.814",
+          "contributor": {
+            "fullname": "J Haidt"
+          }
+        },
+        {
+          "volume": "40",
+          "start-page": "100",
+          "issue": "1",
+          "year": "2014",
+          "ident": "4746_CR74",
+          "publication-title": "Journal of Management",
+          "doi": "10.1177/0149206313511272",
+          "contributor": {
+            "fullname": "GR Weaver"
+          }
+        },
+        {
+          "volume": "19",
+          "start-page": "69",
+          "issue": "2",
+          "year": "2004",
+          "ident": "4746_CR68",
+          "publication-title": "Academy of Management Executive",
+          "contributor": {
+            "fullname": "LK Treviño"
+          }
+        },
+        {
+          "volume": "4",
+          "start-page": "129",
+          "issue": "2",
+          "year": "1994",
+          "ident": "4746_CR75",
+          "publication-title": "Business Ethics Quarterly",
+          "doi": "10.2307/3857485",
+          "contributor": {
+            "fullname": "GR Weaver"
+          }
+        },
+        {
+          "volume-title": "The righteous mind: Why good people are divided by politics and religion",
+          "year": "2012",
+          "ident": "4746_CR32",
+          "contributor": {
+            "fullname": "J Haidt"
+          }
+        },
+        {
+          "volume": "342",
+          "start-page": "377",
+          "year": "2013",
+          "ident": "4746_CR39",
+          "publication-title": "Science",
+          "doi": "10.1126/science.1239918",
+          "contributor": {
+            "fullname": "DE Kidd"
+          }
+        },
+        {
+          "volume": "7",
+          "start-page": "33",
+          "issue": "3",
+          "year": "2017",
+          "ident": "4746_CR46",
+          "publication-title": "Administrative Sciences",
+          "doi": "10.3390/admsci7030033",
+          "contributor": {
+            "fullname": "T Meynhardt"
+          }
+        },
+        {
+          "volume-title": "Tolstoy’s major fiction",
+          "year": "1978",
+          "ident": "4746_CR72",
+          "contributor": {
+            "fullname": "E Wasiolek"
+          }
+        },
+        {
+          "volume-title": "Predictably irrational: The hidden forces that shape our decisions",
+          "year": "2008",
+          "ident": "4746_CR2",
+          "contributor": {
+            "fullname": "D Ariely"
+          }
+        },
+        {
+          "volume-title": "Expert political judgment: How good is it? How can we know?",
+          "year": "2005",
+          "ident": "4746_CR63",
+          "contributor": {
+            "fullname": "PE Tetlock"
+          }
+        },
+        {
+          "volume-title": "Ethics and the limits of philosophy",
+          "year": "1985",
+          "ident": "4746_CR77",
+          "contributor": {
+            "fullname": "B Williams"
+          }
+        },
+        {
+          "volume-title": "The rhetoric of fiction",
+          "year": "1983",
+          "ident": "4746_CR9",
+          "doi": "10.7208/chicago/9780226065595.001.0001",
+          "contributor": {
+            "fullname": "WC Booth"
+          }
+        },
+        {
+          "volume-title": "Organizational ethics and the good life",
+          "year": "1996",
+          "ident": "4746_CR34",
+          "contributor": {
+            "fullname": "E Hartman"
+          }
+        },
+        {
+          "volume-title": "Conflict of interest in the professions",
+          "year": "2001",
+          "ident": "4746_CR14"
+        },
+        {
+          "volume": "9",
+          "start-page": "11",
+          "issue": "1",
+          "year": "1999",
+          "ident": "4746_CR61",
+          "publication-title": "Business Ethics Quarterly",
+          "doi": "10.2307/3857632",
+          "contributor": {
+            "fullname": "RC Solomon"
+          }
+        },
+        {
+          "volume": "5",
+          "start-page": "97",
+          "year": "1995",
+          "ident": "4746_CR49",
+          "publication-title": "Business Ethics Quarterly",
+          "doi": "10.2307/3857275",
+          "contributor": {
+            "fullname": "P Murphy"
+          }
+        },
+        {
+          "volume-title": "The tipping point: How little things can make big differences",
+          "year": "2000",
+          "ident": "4746_CR24",
+          "contributor": {
+            "fullname": "M Gladwell"
+          }
+        },
+        {
+          "volume": "10",
+          "start-page": "7",
+          "issue": "1",
+          "year": "2000",
+          "ident": "4746_CR10",
+          "publication-title": "Business Ethics Quarterly",
+          "doi": "10.2307/3857690",
+          "contributor": {
+            "fullname": "NE Bowie"
+          }
+        },
+        {
+          "volume-title": "Count Leo Tolstoy. In Essays on Criticism",
+          "year": "1888",
+          "ident": "4746_CR4",
+          "contributor": {
+            "fullname": "M Arnold"
+          }
+        },
+        {
+          "volume": "4",
+          "start-page": "295",
+          "year": "1992",
+          "ident": "4746_CR33",
+          "publication-title": "Linguistics and Education",
+          "doi": "10.1016/0898-5898(92)90005-H",
+          "contributor": {
+            "fullname": "DK Hartman"
+          }
+        },
+        {
+          "volume": "339",
+          "start-page": "96",
+          "year": "2013",
+          "ident": "4746_CR54",
+          "publication-title": "Science",
+          "doi": "10.1126/science.1229294",
+          "contributor": {
+            "fullname": "J Quoidbach"
+          }
+        },
+        {
+          "ident": "4746_CR67"
+        },
+        {
+          "volume": "37",
+          "start-page": "9",
+          "issue": "2",
+          "year": "1996",
+          "ident": "4746_CR44",
+          "publication-title": "MIT Sloan Management Review",
+          "contributor": {
+            "fullname": "DM Messick"
+          }
+        },
+        {
+          "volume-title": "The servant as leader",
+          "year": "1970",
+          "ident": "4746_CR29",
+          "contributor": {
+            "fullname": "RK Greenleaf"
+          }
+        },
+        {
+          "volume": "39",
+          "start-page": "975",
+          "issue": "7",
+          "year": "2018",
+          "ident": "4746_CR58",
+          "publication-title": "Organization Studies",
+          "doi": "10.1177/0170840617709309",
+          "contributor": {
+            "fullname": "P Savage"
+          }
+        },
+        {
+          "volume-title": "Thank you for being late: An optimist’s guide to thriving in the age of accelerations",
+          "year": "2016",
+          "ident": "4746_CR21",
+          "contributor": {
+            "fullname": "TL Friedman"
+          }
+        },
+        {
+          "volume-title": "Questions of character: Illuminating the heart of leadership through literature",
+          "year": "2006",
+          "ident": "4746_CR5",
+          "contributor": {
+            "fullname": "J Badaracco"
+          }
+        },
+        {
+          "volume": "17",
+          "start-page": "39",
+          "issue": "1",
+          "year": "1992",
+          "ident": "4746_CR11",
+          "publication-title": "Academy of Management Review",
+          "doi": "10.2307/258647",
+          "contributor": {
+            "fullname": "J Brockner"
+          }
+        },
+        {
+          "volume-title": "Good to great: Why some companies make the leap…and others don’t",
+          "year": "2001",
+          "ident": "4746_CR13",
+          "contributor": {
+            "fullname": "JC Collins"
+          }
+        },
+        {
+          "volume-title": "Cents and sensibility: What economics can learn from the humanities",
+          "year": "2017",
+          "ident": "4746_CR48",
+          "doi": "10.1515/9781400884841",
+          "contributor": {
+            "fullname": "GS Morson"
+          }
+        },
+        {
+          "volume-title": "W. Somerset Maugham selects the world’s ten greatest novels",
+          "year": "1959",
+          "ident": "4746_CR41",
+          "contributor": {
+            "fullname": "WS Maugham"
+          }
+        },
+        {
+          "volume": "142",
+          "start-page": "409",
+          "issue": "3",
+          "year": "2017",
+          "ident": "4746_CR83",
+          "publication-title": "Journal of Business Ethics",
+          "doi": "10.1007/s10551-017-3538-y",
+          "contributor": {
+            "fullname": "C Michaelson"
+          }
+        },
+        {
+          "volume-title": "Tolstoy or Dostoevsky? An essay in the old criticism",
+          "year": "1959",
+          "ident": "4746_CR62",
+          "contributor": {
+            "fullname": "G Steiner"
+          }
+        },
+        {
+          "ident": "4746_CR35"
+        },
+        {
+          "volume": "34",
+          "start-page": "63",
+          "year": "2014",
+          "ident": "4746_CR79",
+          "publication-title": "Research in Organizational Behavior",
+          "doi": "10.1016/j.riob.2014.10.002",
+          "contributor": {
+            "fullname": "T Zhang"
+          }
+        },
+        {
+          "volume-title": "Tolstoy and the novel",
+          "year": "1988",
+          "ident": "4746_CR6",
+          "contributor": {
+            "fullname": "J Bayley"
+          }
+        },
+        {
+          "volume-title": "Nudge: Improving decisions about health, wealth, and happiness",
+          "year": "2008",
+          "ident": "4746_CR64",
+          "contributor": {
+            "fullname": "RH Thaler"
+          }
+        },
+        {
+          "volume-title": "Ethics and excellence: Cooperation and integrity in business",
+          "year": "1992",
+          "ident": "4746_CR60",
+          "contributor": {
+            "fullname": "RC Solomon"
+          }
+        },
+        {
+          "volume": "65",
+          "start-page": "635",
+          "year": "2014",
+          "ident": "4746_CR70",
+          "publication-title": "Annual Review of Psychology",
+          "doi": "10.1146/annurev-psych-113011-143745",
+          "contributor": {
+            "fullname": "LK Treviño"
+          }
+        }
+      ],
+      "Snippet": [
+        ".... Three scenes from his magnum opus,\u000a<h>War and Peace</h>\u000a, demonstrate that Tolstoy diagnosed some of the same problems that occupy modern behavioral ethics...",
+        ".... Three scenes from his magnum opus, <h>War and Peace</h>, demonstrate that Tolstoy diagnosed some of the same problems that occupy modern behavioral ethics..."
+      ],
+      "PublicationTitle": [
+        "Journal of business ethics"
+      ],
+      "ProviderPackageCode": [
+        "CITATION",
+        "AAYXX"
+      ],
+      "PublicationTitleAbbrev": [
+        "J Bus Ethics"
+      ],
+      "Volume": [
+        "177"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Christopher",
+          "orcidid": "0000-0001-7184-8306",
+          "surname": "Michaelson",
+          "fullname": "Michaelson, Christopher",
+          "email": "cmmichaelson@stthomas.edu",
+          "organization": "\u000a Opus College of Business, University of St. Thomas\u000a "
+        }
+      ],
+      "Abstract": [
+        "Leo Tolstoy was on to behavioral ethics before there was such as a thing as behavioral ethics. Three scenes from his magnum opus,\u000aWar and Peace\u000a, demonstrate that Tolstoy diagnosed some of the same problems that occupy modern behavioral ethics: confirmation bias, slippery-slope reasoning, and illusions of control. However, whereas modern behavioral ethics has done more to diagnose problems than to prescribe solutions, Tolstoy’s theories of moral psychology and leadership provide direction for human moral self-cultivation. This analysis of\u000aWar and Peace\u000aalso suggests that literary fiction can depict worlds at least as fertile as the real world for studying business ethics. Building upon this example, in an age and field which seems too often to prioritize scientific wisdom over that of the humanities, I speculate about how literary fiction can expand our research into more diverse actors and worlds of modern capitalism."
+      ],
+      "Keywords": [
+        "Leadership",
+        "Behavioral ethics",
+        "Literature"
+      ],
+      "PublicationDate": [
+        "20220401"
+      ],
+      "PQID": [
+        "2647047920"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "Audience": [
+        "Academic"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/lc.gif&issn=0167-4544&client=summon"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/sc.gif&issn=0167-4544&client=summon"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/mc.gif&issn=0167-4544&client=summon"
+      ],
+      "Database_xml": [
+        {
+          "sequence": "1",
+          "dbid": "ALSLI",
+          "name": "Social Science Premium Collection",
+          "url": "https://login.ezproxy.princeton.edu/login?url=https://search.proquest.com/socialsciencepremium",
+          "sourceTypes": [
+            "Aggregation Database"
+          ]
+        }
+      ],
+      "link.rule.ids": [
+        "315,791,792,795,1660,21709,21715,28275,28276,33971,34104,41796,42865,44240,44314,52018"
+      ],
+      "linkProvider": [
+        "Springer Nature"
+      ],
+      "LinkModel": [
+        "DirectLink"
+      ],
+      "IEDL.DBID": [
+        "RSV"
+      ],
+      "BookMark": [
+        "eNp9kN9KwzAUh4MoOKcv4FXBG73oPGmTpvVuG_MPDPVC8TKk6emasbUz6YTd7TH09fYkxlXwzhMOgfD7TpKPkHMKAwogrh0FzmkIkW8mWBJuDkiPchGHkGTikPSAJiJknLFjcuLcHHxxynrkcYqqQOsqswpUXQTjSlmlW7SX7uomGGGlPkxj1SIYrZ2p0blg0lZGu8DUwW77-absHntGpXG3_TolR6VaODz73fvk9XbyMr4Pp093D-PhNNSMQRtqLHId60hhqjVgyniciaQETUWaAtNAUWUxxHkRFVGpqSq5YHHugznXTGRxn1x0c1e2eV-ja-W8WdvaXymjhAnvIIvApwZdaqYWKE1dNq3_nF8FLo1uaiyNPx8mWcZZSlPqgagDtG2cs1jKlTVLZTeSgvwRLTvR0ouWe9Fy46G4g5wP1zO0f2_5h_oG4o-BmA"
+      ],
+      "DatabaseName": [
+        "CrossRef",
+        "Academic OneFile (A&I only)",
+        "ProQuest Social Sciences Premium Collection【キャンパス外アクセス可】",
+        "ProQuest Central (Corporate)",
+        "PAIS Index",
+        "ABI/INFORM Collection",
+        "ABI/INFORM Global (PDF only)",
+        "ProQuest Central (purchase pre-March 2016)",
+        "ABI/INFORM Collection",
+        "Healthcare Administration Database (Alumni)",
+        "Psychology Database (Alumni)",
+        "Social Science Database (Alumni Edition)",
+        "ProQuest Pharma Collection",
+        "International Bibliography of the Social Sciences (IBSS)",
+        "Hospital Premium Collection",
+        "Hospital Premium Collection (Alumni Edition)",
+        "ProQuest Central (Alumni) (purchase pre-March 2016)",
+        "ABI/INFORM Collection (Alumni Edition)",
+        "ProQuest Research Library",
+        "Philosophy Collection",
+        "Philosophy Database",
+        "ProQuest Central (Alumni)",
+        "ProQuest Central UK/Ireland",
+        "Social Science Premium Collection",
+        "Arts Premium Collection",
+        "ProQuest Central Essentials",
+        "ProQuest Central",
+        "ProQuest One Business",
+        "PAIS International",
+        "PAIS International (Ovid)",
+        "Politics Collection",
+        "ProQuest Central",
+        "International Bibliography of the Social Sciences",
+        "Business Premium Collection (Alumni)",
+        "Health Research Premium Collection",
+        "ABI/INFORM Global (Corporate)",
+        "Health Research Premium Collection (Alumni)",
+        "ProQuest Central Student",
+        "ProQuest Research Library",
+        "International Bibliography of the Social Sciences",
+        "Art, Design & Architecture Collection",
+        "ProQuest Business Collection (Alumni Edition)",
+        "ProQuest Business Collection",
+        "DELNET Management Collection",
+        "ProQuest Politics Collection",
+        "ABI/INFORM Professional Advanced",
+        "ABI/INFORM Global",
+        "Healthcare Administration Database",
+        "Arts & Humanities Database",
+        "Political Science Database",
+        "Psychology Database",
+        "Research Library",
+        "Social Science Database",
+        "Research Library (Corporate)",
+        "One Business",
+        "ProQuest One Business (Alumni)",
+        "ProQuest One Academic Eastern Edition (DO NOT USE)",
+        "ProQuest One Academic",
+        "ProQuest One Academic UKI Edition",
+        "ProQuest One Psychology",
+        "ProQuest Central Basic",
+        "SIRS Editorial"
+      ],
+      "ParticipantIDs": [
+        "proquest_journals_2647047920",
+        "gale_infotracacademiconefile_A699548181",
+        "crossref_primary_10_1007_s10551_021_04746_y",
+        "springer_journals_10_1007_s10551_021_04746_y"
+      ],
+      "SummonAdditionalLinks": [
+        {
+          "databaseName": "Social Science Premium Collection",
+          "dbid": "ALSLI",
+          "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3JTsMwEB2xSMCFpSBRNvkGCKwmwU4bhEAtompRKiF2TpbjuIJLy1KEeuMz4Pf4Ejyp3VIQXDgmcZxYM57FfvMMsP7NHsT1Cm1UarWInR9XL-OQMl4qMoq5YiM6jvnpNb85soBCLIexInaWMTPXaVvhSnnBuO8ikqIH3sH9A8Wzo3CP1R6kMQrjJsD2-RiMl-OzuD6wyMMc38wWz9gSOhMzUAQqmH5ZSLtDDuq7mf6xX5q5oeoMtN3fZxjsPgoF2yptorgv-GxH9Pivsc7CtI1YSbmnYnMwols5mHCA-RyMxvIlB1Mn7kyELl44s9qdh4u4j5YmspWSQ0cRvfG0uUsqfZoA4rokPQw-uWuRj9e3vdv9K_mYvYnmW-8Vbvc_Xt8X4KJ6dH5Yo_YwB6oY8zpU6TRROyqQuqSUp0uMYyTU9JRvknCPKc_XMjL-NEmDNGgqXza5CW4S0zDhCpf_FoEwXeJhMeImRwyZNDd9k0-FqWSRSjyZqjxsOdGJ-x5ZhxjQMqOghRG0yAQtunlYR-kKnMkdM3BpCxLaLY2cWKIcIleeCWj8PKw4CQk7xZ_EQDx52HZKMXj8-3eX_u5tGaYCLLHI0EErMNZ5fNarMNnXpDWr3Z8lagRZ",
+          "priority": "102",
+          "providerName": "ProQuest"
+        }
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=War+and+Peace&rft.au=Hamilton%2C+Nigel&rft.date=2019-01-01&rft.pub=Houghton+Mifflin+Harcourt+Publishing+Company&rft.isbn=9780544876804&rft.volume=3&rft.externalDocID=EBC5752372",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV1La9tAEF7a9NDmlIchTpoiAnFPolppdyVBSLATO3KQ3ZK6oT2JtbxKTEMbIifgf99vpZUUh5ZSehGWrAeamZ2ZbzQPQt4_0wfxsGePelEUssnF4CoWNuOBz2yNFUfhRcwvv_JvfTN_NS_7_-nqXzBB4_TcLJnfVDvoulWd57isJk2dzM0Hdh1ncuiny2ECCDzpPILBzS5YX63DzqE3-F-pwTHIja7C_QfJqW-KA_gN-cEWEoTtM-e63q2GwpSplVphNpzXsRCTbT-em1zYKmKgi5RWIgaRHv-je3aM5llWdNTCkoLgLp5Gvla1UYk24d0B3oignBdcqU-vsSR1fl-_dwo30PV8GMeXfghQvNONR93ky7gLmTgf98-S6GN8Nhyff64DYi4FsqIFcq6eI0yHpPq562Rd5t-h_WEZFjkgy526v1XXP1cNqWu8g8kGeaV0ycgmeaF-bJFW2XllaXUs3dZXFqOTl9tk--jmGHS1QFeroOvRh5vjFrka9CenkW1mUthSZ5dxm2U0mHqKOqFL0wDqi3tchBKOIxxBmjk0ZVPqOiqTYeAqP0h56rueVCwTfKYV6g6xmAq48EMOrCuYZD4Mjs_ETLIwnTpylrbJwZPXTB5viw_neVLRQgTws9ukZd4-Kf-FdgbapW1iVbRIiutMlm_SMGX376fskTeN6Lwla4v7B7VPXtdr892fOfoLHaA3TQ",
+      "ExternalDocumentID": [
+        "9780544868540",
+        "EBC5752372",
+        "3184951"
+      ],
+      "IngestDate": [
+        "Wed Oct 04 10:17:31 EDT 2023",
+        "Fri Sep 15 15:49:50 EDT 2023",
+        "Sat Mar 04 17:29:42 EST 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "year": "2019",
+          "text": "2019"
+        }
+      ],
+      "PublicationSeriesTitle": [
+        "FDR at war"
+      ],
+      "Score": [
+        "45.270397"
+      ],
+      "DatabaseTitleList": [
+        "",
+        "",
+        ""
+      ],
+      "URI": [
+        "https://www.perlego.com/book/3184951/war-and-peace-fdrs-final-odyssey-d-day-to-yalta-19431945-pdf",
+        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=5752372",
+        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780544868540"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Boston"
+        }
+      ],
+      "PublicationPlace": [
+        "Boston"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "HarperCollins"
+        },
+        {
+          "name": "Houghton Mifflin Harcourt Publishing Company"
+        },
+        {
+          "name": "Houghton Mifflin Harcourt"
+        }
+      ],
+      "ID": [
+        "FETCH-LOGICAL-a19895-4f18b3e10921c896353569a5602731f01c4b120efa982e78c5c723ae4f65d3073"
+      ],
+      "Publisher": [
+        "HarperCollins",
+        "Houghton Mifflin Harcourt Publishing Company",
+        "Houghton Mifflin Harcourt"
+      ],
+      "AbstractList": [
+        "The stirring climax to Nigel Hamilton's three-part saga of FDR at war—proof that he was the Second World War's key strategist, even on his deathbed \"A first-class, lens-changing work.\" —James N. Mattis, former US secretary of defense Nigel Hamilton's celebrated trilogy culminates with a story of triumph and tragedy. Just as FDR was proven right by the D-day landings he had championed, so was he found to be mortally ill in the spring of 1944. He was the architect of a victorious peacethat he would not live to witness. Using hitherto unpublished documents and interviews, Hamilton rewrites the famous account of World War II strategy given by Winston Churchill in his memoirs. Seventy-five years after the D-day landings we finally get to see, close-up and in dramatic detail, who was responsible for rescuing, and insisting upon, the great American-led invasion of France in June 1944, and why the invasion was led by Eisenhower. As FDR's D-day triumph turns to personal tragedy, we watch with heartbreaking compassion the course of the disease, and how, in the months left him as US commander in chief, the dying president attempted at Hawaii, Quebec, and Yalta to prepare the United Nations for an American-backed postwar world order. Now we know: even on his deathbed, FDR was the war's great visionary.",
+        "The stirring climax to Nigel Hamilton's three-part saga of FDR at war--proof that he was WWII's key strategist, even on his deathbed.",
+        "To mark the 75th Anniversary of D-Day, the stirring climax to Nigel Hamilton's three-part saga of FDR at war-proof that he was WWII's key strategist, even on his deathbed. \"A first-class, lens-changing work.\" -James N. Mattis, former United States Secretary of Defense Nigel Hamilton's celebrated trilogy culminates with a story of triumph and tragedy. Just as FDR was proven right by the D-day landings he had championed, so was he found to be mortally ill in the spring of 1944. He was the architect of a victorious peace that he would not live to witness. Using hitherto unpublished documents and interviews, Hamilton rewrites the famous account of World War II strategy given by Winston Churchill in his memoirs. Seventy-five years after the D-day landings we finally get to see, close-up and in dramatic detail, who was responsible for rescuing, and insisting upon, the great American-led invasion of France in June 1944, and why the invasion was led by Eisenhower. As FDR's D-day triumph turns to personal tragedy, we watch with heartbreaking compassion the course of the disease, and how, in the months left him as US commander in chief, the dying president attempted at Hawaii, Quebec, and Yalta to prepare the United Nations for an American-backed postwar world order. Now we know: even on his deathbed, FDR was the war's great visionary."
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Nigel Hamilton"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "IsScholarly": [
+        "false"
+      ],
+      "Snippet": [
+        "The stirring climax to Nigel Hamilton's three-part saga of FDR at <h>war</h>—proof that he was the Second World <h>War's</h> key strategist, even on his deathbed \"A first-class, lens-changing work.\" —James N...",
+        "The stirring climax to Nigel Hamilton's three-part saga of FDR at <h>war</h>--proof that he was WWII's key strategist, even on his deathbed.",
+        ".... He was the architect of a victorious <h>peace</h> that he would not live to witness. Using hitherto unpublished documents and interviews, Hamilton rewrites the famous account of World <h>War</h> II strategy given by Winston Churchill in his memoirs..."
+      ],
+      "LCCallNum_Ident": [
+        "D753 .H365 2019"
+      ],
+      "GroupedDBID": [
+        "AABBV",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "AZZ",
+        "BBABE",
+        "CZZ",
+        "YSPEL"
+      ],
+      "SubjectTerms": [
+        "Roosevelt, Franklin D.-(Franklin Delano),-1882-1945",
+        "World War, 1939-1945",
+        "World War, 1939-1945-Diplomatic history",
+        "World War, 1939-1945-United States"
+      ],
+      "Discipline": [
+        "History & Archaeology"
+      ],
+      "Volume": [
+        "3"
+      ],
+      "ContentType": [
+        "eBook"
+      ],
+      "SourceType": [
+        "Aggregation Database",
+        "Publisher"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Hamilton, Nigel"
+        }
+      ],
+      "ISBN": [
+        "9780544868540",
+        "0544868544",
+        "0544876806",
+        "9780544876804"
+      ],
+      "EISBN": [
+        "9780544868540",
+        "0544868544"
+      ],
+      "Abstract": [
+        "The stirring climax to Nigel Hamilton's three-part saga of FDR at war—proof that he was the Second World War's key strategist, even on his deathbed \"A first-class, lens-changing work.\" —James N. Mattis, former US secretary of defense Nigel Hamilton's celebrated trilogy culminates with a story of triumph and tragedy. Just as FDR was proven right by the D-day landings he had championed, so was he found to be mortally ill in the spring of 1944. He was the architect of a victorious peacethat he would not live to witness. Using hitherto unpublished documents and interviews, Hamilton rewrites the famous account of World War II strategy given by Winston Churchill in his memoirs. Seventy-five years after the D-day landings we finally get to see, close-up and in dramatic detail, who was responsible for rescuing, and insisting upon, the great American-led invasion of France in June 1944, and why the invasion was led by Eisenhower. As FDR's D-day triumph turns to personal tragedy, we watch with heartbreaking compassion the course of the disease, and how, in the months left him as US commander in chief, the dying president attempted at Hawaii, Quebec, and Yalta to prepare the United Nations for an American-backed postwar world order. Now we know: even on his deathbed, FDR was the war's great visionary."
+      ],
+      "PublicationYear": [
+        "2019"
+      ],
+      "SourceID": [
+        "askewsholts",
+        "proquest",
+        "perlego"
+      ],
+      "SSID": [
+        "ssj0002160512"
+      ],
+      "Title": [
+        "<h>War And Peace</h>"
+      ],
+      "PublicationDate": [
+        "2019",
+        "2019-05-07"
+      ],
+      "PageCount": [
+        "608 pages"
+      ],
+      "Genre": [
+        "Electronic books"
+      ],
+      "OCLC": [
+        "1099350067"
+      ],
+      "Subtitle": [
+        "FDR's Final Odyssey: D-Day to Yalta, 1943–1945"
+      ],
+      "DEWEY": [
+        "940.532273"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-a19895-4f18b3e10921c896353569a5602731f01c4b120efa982e78c5c723ae4f65d3073"
+      ],
+      "PQID": [
+        "EBC5752372"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "thumbnail_m": [
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F8540%2F9780544868540.jpg"
+      ],
+      "thumbnail_l": [
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.perlego.com%2Fbooks%2FRM_Books%2Fhc_us_ca_qxrstywh%2F9780544868540.jpg"
+      ],
+      "link.rule.ids": [
+        "307,791,795,797"
+      ],
+      "linkProvider": [
+        "Library Catalog"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNpdj01Lw0AURUdEUWP-gYvuxEXgzbx587GsoVah0C5El2EyfVFsaDQT9e8bTDe6ulw4nMs9Erm3DkhrZxxpOP7XT8WFBO-RAIw9E3lKbwCgpAGS6lzkz6Gfzffb2YZD5Etx0oQ2cX7ITDzdLR7L-2K1Xj6U81URpHeeCt1IVyOPYiWj8wYJyfhABpRF2YCMupYKuAneKbYuUrQKA-vG0BbBYiZuJnFIO_5Or107pOqr5brrdqn6c2Bkryf2ve8-PjkN1S8WeT_0oa0WtyVZUjgOZOLqQHLf8ktXTTqUTnuS-ANdZk4Y"
+      ],
+      "ParticipantIDs": [
+        "askewsholts_vlebooks_9780544868540",
+        "proquest_ebookcentral_EBC5752372",
+        "perlego_books_3184951"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=The+Ecology+of+War+and+Peace&rft.au=Cusato%2C+Eliana&rft.date=2021-01-01&rft.pub=Cambridge+University+Press&rft.isbn=9781108837521&rft_id=info:doi/10.1017%2F9781108939812&rft.externalDocID=EBC6736720",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3dT9swELdWeIA-MUCCDVA0NHiKFuKvWEKgtqS0KC2IdQyeIjtxxDS0SYTP_55z4qQfY0LTXqImtSr37uy7c-73O4R2Z_aDqN92B-1eT5DRSfciYi6hASeuyRUH4iSi55f0KrR8n3nJ_2fQv6AEk6fndsm8gnYwuFVT5_hcdZo6_GFfsJtzJm_v7LwfQwo82nkABY9vQfXVOtz5jLv_azXwDOzGoHD_wXLqH4UH8BnsB65gQXCdCa7r27HxhElJzwTR5HdZVlqa_bM2hM59LoseTKY0TJZNuKvzA39v5vzgVWjYZPlHmWkatADksrSEM_-x75ZkTXacwCKwtdHTVNZhu2PKyLjvNVCDC8iV11rRoBV_G7bAVI6H4VHcO42O-sPjr_U5GcRfxqUWTZ7sFHxL1VVPyXKnGirwqSk0UVPmP8FZgCO5y6e9LbYhxGgJzWuDK3mP3ulfy6g5wQO5jBqRfFxB2yB1x0rd-Z05-9cHIHgHBO8Ugt__cn2wii664ajTc20PC1dC6hY8uQp7KUQJmVKcM-ZJT2iP61RxFSQBC3giSZoxRVXCPKyoYAnOqIGxaZ_qTKd4DTlEB5RxQSE3ZkQSDg6KE5ZKIhLlyTRZR58m_mf8cFO8aM_jShgEM8HfHEQY9teRU8koLr63JcLxWHUf3h7yES2OLW0Dzd3d3utNtFAv7K2_6_0FUyRGGw",
+      "ExternalDocumentID": [
+        "9781108944632",
+        "9781108943697",
+        "EBC6736720"
+      ],
+      "IngestDate": [
+        "Wed Oct 04 09:44:27 EDT 2023",
+        "Wed Oct 04 09:32:12 EDT 2023",
+        "Fri Jul 14 20:16:59 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "year": "2021",
+          "text": "2021"
+        }
+      ],
+      "Score": [
+        "45.22432"
+      ],
+      "DatabaseTitleList": [
+        "",
+        "",
+        ""
+      ],
+      "URI": [
+        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=6736720",
+        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9781108943697",
+        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9781108944632"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Cambridge"
+        }
+      ],
+      "PublicationPlace": [
+        "Cambridge"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Cambridge University Press"
+        }
+      ],
+      "ID": [
+        "FETCH-LOGICAL-a1188x-b30d036fbb77660a09e07edb7b8c8687ca4df6b5bc603b596c3f54331e25efed3"
+      ],
+      "Publisher": [
+        "Cambridge University Press"
+      ],
+      "DOI": [
+        "10.1017/9781108939812"
+      ],
+      "AbstractList": [
+        "Unpacks key assumptions about the 'environment', its relationship with violent conflict, and the justification for its protection underlying international law.",
+        "The connection between ecology and conflict has been the object of extensive study by political scientists and economists. From the contribution of natural resource 'scarcity' to violent unrest and armed conflict; to resource 'abundance' as an incentive for initiating and prolonging armed struggles; to dysfunctional resource management and environmental degradation as obstacles to peacebuilding, this literature has exerted a huge influence upon academic discussions and policy developments. While international law is often invoked as the solution to the socio-environmental challenges faced by conflict-affected countries, its relationship with the ecology of war and peace remains undertheorised. Drawing upon environmental justice perspectives and other theoretical traditions, the book unpacks and problematizes some of the assumptions that underlie the legal field. Through an analysis of the practice of international courts, the UN Security Council, and Truth Commissions, it shows how international law silences and even normalizes forms of structural and slow environmental violence."
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Cusato, Eliana"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2020"
+      ],
+      "IsScholarly": [
+        "false"
+      ],
+      "Snippet": [
+        "Unpacks key assumptions about the 'environment', its relationship with violent conflict, and the justification for its protection underlying international law.",
+        ".... While international law is often invoked as the solution to the socio-environmental challenges faced by conflict-affected countries, its relationship with the ecology of <h>war and peace</h> remains undertheorised..."
+      ],
+      "LCCallNum_Ident": [
+        "TD195.W29 C873 2021"
+      ],
+      "GroupedDBID": [
+        "38.",
+        "AABBV",
+        "AAHFW",
+        "AAVTX",
+        "ABCBY",
+        "ABMFC",
+        "ACWCN",
+        "ADHWD",
+        "ADZQR",
+        "AEDRW",
+        "AEOZT",
+        "AEWQY",
+        "AJXXZ",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ANJFW",
+        "BBABE",
+        "BFIBU",
+        "BOIVQ",
+        "CACVP",
+        "CAXDN",
+        "CCHSS",
+        "COXPH",
+        "DOZEN",
+        "EBACC",
+        "EDVGL",
+        "ESLSV",
+        "FH2",
+        "ICERG",
+        "IDFYU",
+        "IHRAH",
+        "OAEBV",
+        "OLDIN",
+        "ZXKUE"
+      ],
+      "SubjectTerms": [
+        "Environmental degradation",
+        "Environmental law, International",
+        "Liability for environmental damages",
+        "Nature",
+        "Nature-Effect of human beings on",
+        "Peace",
+        "Peace-Environmental aspects",
+        "War",
+        "War (International law)",
+        "War-Environmental aspects"
+      ],
+      "Discipline": [
+        "Engineering",
+        "Law"
+      ],
+      "ContentType": [
+        "eBook"
+      ],
+      "SourceType": [
+        "Aggregation Database",
+        "Publisher"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Cusato, Eliana"
+        }
+      ],
+      "ISBN": [
+        "1108837522",
+        "9781108837521"
+      ],
+      "EISBN": [
+        "1108944639",
+        "9781108944632",
+        "1108943691",
+        "9781108943697"
+      ],
+      "Abstract": [
+        "Unpacks key assumptions about the 'environment', its relationship with violent conflict, and the justification for its protection underlying international law."
+      ],
+      "PublicationYear": [
+        "2021"
+      ],
+      "SourceID": [
+        "askewsholts",
+        "proquest"
+      ],
+      "SSID": [
+        "ssj0002510006"
+      ],
+      "TableOfContents": [
+        "6 Truth Commissions: Conflicts over Extractive Resources and the Battle for Different Views of Nature -- 6.1 Introduction -- 6.2 A Brief Overview of Truth Commissions -- 6.3 Constructing the 'Truth' about Resource-Driven Wars in Sierra Leone, Liberia, and Timor-Leste -- 6.3.1 Setting the Stage: Natural Resources and Conflict Causes and Dynamics -- 6.3.2 Human Rights Abuses and 'Illegal' Resource Extraction -- 6.4 Three Paradigms of Responsibility -- 6.4.1 The Sierra Leonean TC: The Post-conflict State as the 'Main Agent of Change' -- 6.4.2 The Liberian TC: The 'Economic Crimes' Lens -- 6.4.3 The Timor-Leste TC: A Progressive Reading of Socio-economic and Nature Rights -- 6.5 Conclusion -- 7 Conclusion: Towards a Political Ecology of International Law -- 7.1 Reframing 'the Environment' and its Relation to Humanity in Rules Governing War -- 7.2 Embracing Complexity: Rethinking the 'Nexus' between Nature, Conflict, and Peace -- 7.3 Towards a Political Ecology of International Law -- Bibliography -- Index",
+        "Cover -- Half-title page -- Title page -- Copyright page -- Contents -- Acknowledgements -- 1 Introduction: International Law, Violence, and Visibility -- 1.1 International Law, Violence, and Visibility: War's Hidden Socio-ecological Legacy -- 1.2 Pushing the Conversation Forward -- 1.3 'New Wars' and the Environment -- 1.4 Slow and Structural Violence -- 1.5 Overview of Arguments -- Part I Concepts, Theories, and Debates -- 2 The Ecology of War and Peace: Unpacking the Assumptions -- 2.1 Introduction -- 2.2 The Place of the Environment within Peace and Conflict Studies -- 2.2.1 Of Scarcity, Greed, and Grievances: Nature and the Root Causes of Violent Conflict -- 2.2.2 'Illicit' Trade in Natural Resources and the Political Economy of Civil Wars -- 2.2.3 Environmental Peacebuilding and the Spectre of 'Liberal Peace' -- 2.3 Adding Environmental Justice to the Picture -- 2.4 Conclusion -- 3 Origins and Evolutions of Legal Debates on the Environment-Conflict 'Nexus' -- 3.1 Introduction -- 3.2 From Grotius to the Contemporary Jus in Bello: Necessity, Distinction, and Proportionality as the Standards for Environmental Protection -- 3.3 Reacting to Ecocide Perpetrated in the Vietnam War: Adding the 'Environment' to the Laws of Armed Conflict -- 3.4 The 1990-1 Gulf War and the Codification of Environmental War Crime in the Statute of the International Criminal Court -- 3.5 Interpretative Routes to Restrain 'Illegal' Resource Exploitation during Armed Conflict and Occupation -- 3.6 Beyond the Laws of Armed Conflict -- 3.6.1 Multilateral Environmental Agreements and Principles of Environmental Law: 'Greening' the Jus in Bello? -- 3.6.2 International Human Rights Law and the Environment: A Complicated Relationship -- 3.7 Conclusion -- Part II The Practice of International Law",
+        "4 War Crimes Tribunals and the International Court of Justice: Nature between Property Protection and Humanitarian Concerns -- 4.1 Introduction -- 4.2 International and Hybrid Criminal Tribunals -- 4.2.1 Post-World War II Tribunals and the Prosecution of Property Crimes -- 4.2.2 The NATO Bombing Campaign in Former Yugoslavia: The Environment as a 'Casualty' of Warfare -- 4.2.3 The Environment as the Means to Commit Humanitarian Atrocities -- 4.2.4 The Special Court for Sierra Leone, Natural Resources, and the Economic Motives for Armed Struggle -- 4.3 Two Different Paradigms of Justice: The Tension between International Criminal Justice and Environmental Justice -- 4.4 The International Court of Justice -- 4.4.1 The Nuclear Weapons Advisory Opinion: Slow Violence and Non Liquet -- 4.4.2 The Armed Activities Case (Congo v. Uganda) -- 4.5 Conclusion -- 5 The United Nations Security Council: From 'Conflict Resources' to Climate Change as a 'Threat' to International Peace and Security -- 5.1 Introduction -- 5.2 Sanctions and Resource-Driven Armed Conflict -- 5.2.1 A Few Words on Sanctions -- 5.2.2 The Evolving Objectives of Sanctions Targeting 'Conflict Resources': From Conflict Termination to Governance Interventions -- 5.3 The UNSC and the Global Regulation of Resource Extraction in Conflict Zones -- 5.4 Implementing Sanctions: Peacekeeping Operations and Panels of Experts -- 5.4.1 Securitising Resource Extraction -- 5.4.2 'Naming and Shaming' and Corporate Due Diligence -- 5.5 A Narrow and Short-Term Approach to Peace -- 5.5.1 Ignoring Conflict Root Causes -- 5.5.2 Overlooking Sustainability Challenges -- 5.6 Climate Change and International Peace and Security -- 5.6.1 Different Accounts of 'Climate Security' -- 5.6.2 Rethinking the Powers of the UNSC and Orthodox Approaches to Peace and Security -- 5.7 Conclusion"
+      ],
+      "Title": [
+        "The Ecology of <h>War and Peace</h>"
+      ],
+      "PublicationDate": [
+        "2021",
+        "2021-09-16",
+        "2021-09-01"
+      ],
+      "PageCount": [
+        "308"
+      ],
+      "OCLC": [
+        "1273974821"
+      ],
+      "Subtitle": [
+        "Marginalising Slow and Structural Violence in International Law"
+      ],
+      "DEWEY": [
+        "341.63"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-a1188x-b30d036fbb77660a09e07edb7b8c8687ca4df6b5bc603b596c3f54331e25efed3"
+      ],
+      "PQID": [
+        "EBC6736720"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "thumbnail_m": [
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F3697%2F9781108943697.jpg",
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F4632%2F9781108944632.jpg"
+      ],
+      "link.rule.ids": [
+        "307,791,795,797,28276"
+      ],
+      "linkProvider": [
+        "Library Catalog"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNqNj0tLAzEUhSOiqLVLdy5mJy5Gb3JncpOllvqAgi6KLockc2OxQ6NNff17x1b3bs7hg48DR4gjCWcSJJ1bMlKCsWiNVFviYA1VpdFub8Ag1Urt9qAILVVGyT0xzPkZAFQt-9T74ng642IcUpeevooUi0e3LNyiLe7ZBT4UO9F1mYe_PRAPV-Pp6Kac3F3fji4mpZPSmM_SI7SAOnpPpDU4sAzErSdvgtGGgqvaqH3tgwb0tdUBY10hSlY1R25xIE43wy7P-SPPUrfKzXvHPqV5bv6e_pxT_3VRW-rdk437skyvb5xXzVoLvFgtXdeML0eaUJMC_AabuFyy"
+      ],
+      "ParticipantIDs": [
+        "askewsholts_vlebooks_9781108944632",
+        "askewsholts_vlebooks_9781108943697",
+        "proquest_ebookcentral_EBC6736720"
+      ]
+    }
+  ],
+  "rollups": {
+    "image": {},
+    "reference": {},
+    "newspaper": {}
+  }
+}

@@ -7,7 +7,7 @@ RSpec.describe SummonApi do
   let(:summon_api) { described_class.new(query_terms:) }
 
   before do
-    stub_summon(query: 'forest', fixture: 'summon_api/summon_response.json')
+    stub_summon(query: 'forest', fixture: 'summon_api/forest.json')
   end
 
   it 'instantiates a Summon::Service' do
