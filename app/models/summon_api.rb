@@ -21,7 +21,8 @@ class SummonApi
       's.q': query_terms, # Lucene-style queries
       's.fvf': 'ContentType,Newspaper Article,true', # Excludes newspaper articles
       's.ho': 't', # Princeton holdings only
-      's.dym': 't' # Enables Did You Mean functionality
+      's.dym': 't', # Enables Did You Mean functionality
+      's.ps': 3 # Limits to three documents in response
     )
   end
 

@@ -19,12 +19,12 @@ RSpec.describe SummonApi do
   end
 
   it 'has a number' do
-    expect(summon_api.number).to eq(4_621_074)
+    expect(summon_api.number).to eq(4_621_075)
   end
 
   it 'has documents' do
     expect(summon_api.documents).to be_an_instance_of(Array)
-    expect(summon_api.documents.size).to eq(10)
+    expect(summon_api.documents.size).to eq(3)
     expect(summon_api.documents.first).to be_an_instance_of(Summon::Document)
   end
 
