@@ -6,6 +6,9 @@ namespace :summon do
   task test: :environment do
     summon_api = SummonApi.new(query_terms: 'forest')
     response = summon_api.service_response
-    puts response.documents.first.title
+
+    puts "Number of responses: #{response.record_count}"
+    puts "Query string: #{response.query.query_string}"
+    puts "First title: #{response.documents.first.title}"
   end
 end

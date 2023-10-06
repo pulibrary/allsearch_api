@@ -19,12 +19,20 @@ RSpec.describe SummonApi do
   end
 
   it 'has a number' do
-    expect(summon_api.number).to eq(409_543)
+    expect(summon_api.number).to eq(4_621_074)
   end
 
   it 'has documents' do
     expect(summon_api.documents).to be_an_instance_of(Array)
     expect(summon_api.documents.size).to eq(10)
     expect(summon_api.documents.first).to be_an_instance_of(Summon::Document)
+  end
+
+  it 'excludes Newspaper Articles' do
+    facet_value_filter = summon_api.service_response.query.facet_value_filters.first
+    expect(facet_value_filter.field_name).to eq('ContentType')
+    expect(facet_value_filter.negated?).to be(true)
+
+    expect(facet_value_filter.value).to eq('Newspaper Article')
   end
 end

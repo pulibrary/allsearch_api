@@ -15,8 +15,14 @@ class SummonApi
                                    secret_key: summon_config[:secret_key])
   end
 
+  # For documentation on query parameters, see https://developers.exlibrisgroup.com/summon/apis/SearchAPI/Query/Parameters/
   def service_response
-    service.search('s.q' => query_terms, 's.fvf' => 'ContentType,Book')
+    service.search(
+      's.q': query_terms, # Lucene-style queries
+      's.fvf': 'ContentType,Newspaper Article,true', # Excludes newspaper articles
+      's.ho': 't', # Princeton holdings only
+      's.dym': 't' # Enables Did You Mean functionality
+    )
   end
 
   def number

@@ -1,16 +1,18 @@
 {
   "version": "2.0.0",
-  "sessionId": "SUMMON-SESSION-LIB-MBHH94TJFVL6-65652-1",
-  "elapsedQueryTime": 12,
-  "queryTime": 332,
-  "internalSolrQueryTime": 352,
-  "totalRequestTime": 131,
-  "pageCount": 40955,
-  "recordCount": 409543,
+  "sessionId": "SUMMON-SESSION-LIB-MBHH94TJFVL6-38898-1",
+  "elapsedQueryTime": 633,
+  "queryTime": 510,
+  "internalSolrQueryTime": 596,
+  "totalRequestTime": 838,
+  "pageCount": 462108,
+  "recordCount": 4621074,
   "query": {
-    "queryString": "s.fvf=ContentType%2CBook%2Cf&s.normalized.subjects=f&s.secure=f&s.dailyCatalog=t&s.q=forest&s.rapido=f&s.shortenurl=f",
+    "queryString": "s.fvf=ContentType%2CNewspaper+Article%2Ct&s.normalized.subjects=f&s.secure=f&s.dailyCatalog=t&s.q=forest&s.dym=t&s.ho=t&s.rapido=f&s.shortenurl=f",
     "pageNumber": 1,
     "pageSize": 10,
+    "isDidYouMeanEnabled": true,
+    "isHoldingsOnlyEnabled": true,
     "textQueries": [
       {
         "textQuery": "forest",
@@ -23,8 +25,10 @@
     "facetValueFilters": [
       {
         "fieldName": "ContentType",
-        "value": "Book",
-        "removeCommand": "removeFacetValueFilter(ContentType,Book)"
+        "value": "Newspaper Article",
+        "isNegated": true,
+        "removeCommand": "removeFacetValueFilter(ContentType,Newspaper Article)",
+        "negateCommand": "negateFacetValueFilter(ContentType,Newspaper Article)"
       }
     ],
     "inclusiveFacetValueFilters": [],
@@ -43,30 +47,47 @@
       "isFullTextHit": false,
       "isPrint": false,
       "inHoldings": true,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=The+rainforests+of+Cameroon%3A+experience+and+evidence+from+a+decade+of+reform&rft.au=Topa%2C+Giuseppe&rft.date=2009-01-01&rft.isbn=9780821378786&rft.spage=xviii&rft.epage=xviii&rft_id=info:doi/10.1596%2F978-0-8213-7878-6&rft.externalDBID=NO_FULL_TEXT",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV1bb9MwFLZYkRhv3CQ6bn5hPKCItE4cey9IRc26KQM0ZWw8WWniogjRVc02sX_Pd3LvNgkhXqI6lePE3_Hxd-xzjhl7d0MfRAcT52gym2kvPgy_RdIBhfDHDtmKR_ow8o_P_O_T-tS6osr_R9G_AIHs9KIeMndEO1DcKvk5XjcnTX3M6w12WmdyR1-PDwxM4Hj3CgB3RUDfjMPdtyL8X6nBPcgNReH-g-S0D8UN_Ib84AoJwvUGuW6LnfDQ2RFgtJg1iiqI65cFyy4dQWybH7nce7D1yaRVrEryPrPkdE-VMP2CE3cr2auSqu7n6PLVym6sOOjeikNjeII4jATGuuorv99XeZ73ZtK2fEtN-1rWnhkUxz4SDj3KuSMl9ucvJjyJIhNPz-ItthVoNWD3T_dP40m7kAYSA4Wty9ye9UuJOrNS-5L1djaa_XCrUYowS6E_iw0bY7tMWDtPlj97dCN-xAYUgvKY3bPLJ-xBWIKwvn7KIuDCe7jw8wVvcNnjHSocqPAGFU6o8IRXqFCVCpVn7CScxp9mTn0chpNIVwTaSayW88XYFRnMwMy32hUisyKTqK3TkdRWpPhm63oLL1GgxkmqAg0L2Q-8ha_Fc8a9DHQ_G8NKnadeplUirPLACUHcUpW57pANq84wqyrZiRlJysgmfV8N2Zumfwx0EG0sJUt7flkYEcAqBlEesqjtNkNjsl0Xpg2wIie3EUP5zDf-M7066x_kEqGkGUsldv7a4Av2sBPQl2xwsb60r9h2q0Fe18LyB9nQa20",
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=The+Rainforests+of+Cameroon+%3A+Experience+and+Evidence+from+a+Decade+of+Reform&rft.au=Topa%2C+Giuseppe&rft.au=Karsenty%2C+Alain&rft.au=Megevand%2C+Carole&rft.au=Debroux%2C+Laurent&rft.series=Directions+in+Development&rft.date=2009-01-01&rft.pub=World+Bank&rft.isbn=9780821378786&rft_id=info:doi/10.1596%2F978-0-8213-7878-6&rft.externalDBID=n%2Fa&rft.externalDocID=oai_openknowledge_worldbank_org_10986_2683",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwrV1Lb9NAEF6lQaJwgoJEKY-9UE6G-O1FQoigpmlJJFRZLZystbOOIkQSxW1F_hs_jm_s9dpJewDBxbI3trPa-TzvmWXs9RY_GJ30rXF_OBRefDo4HwWWG0UCpgslXIjTkX_21f921On8qsthyKGVKWg-b8hOL_Qnc0u1A9WtUp7jut5p6sNMB9jJz9Szv5ydJDCB48NrELi5BOnr7_DwlTv4V9RgDLihKty_QI55KQZwDvzgCAThuKVcm8sGPBT5gUYLqVFURVw_FLTseelDaBokl8GHemvSqlhFgolR1n3V54SU4saVvSx11eMZ1ny5NJj6DOsawm9dVdzImQHsWE3VtU69LFNTzCPgk6DQz7q0u07foWVRxXvNyHWWfCsxasPJIbacHFViUV_Ov2-Yv1BfbBccp2qmfUMY-CLQ-R9ULW-7Ft1q3dJ4e0sgbrTeJmgZ92ZStrFNMY9ksZpS9D4KEieI3B22E4qoy-5cHF_EfePkg4IFYSLKvqN6qq7u-mSmrkPtmOzbG1PdMHt2zZ-3NKD4AetSVcxD1lHzPXb_43Sle7aoPXZ3UKJktX7ExgAObwGHL3JeA4e_4w1sOIjKa9hwgg2XvIINPVPB5jE7HxzFn4aW3rDDkr5wQDXlOBkEwiQVEz9Lg0BCPRWeTEMnV71A2f4kFBmNhDL38jAV9iTIhcrTzE_dMA_cJ4zLKLOD1OtJL4f1LmD_KoFfctgWdu6lYp-9rNckASuk-Jacq8VVkbghjHPo6_ts1KJTm34UhytmlL2S_Dltn_7f1x2wew3Cn7Hu5epKPWe7huu90CD6DTK1sGc",
       "ExternalDocumentID": [
-        "1604126558",
         "oai_openknowledge_worldbank_org_10986_2683"
-      ],
-      "LCCN": [
-        "2009005829"
       ],
       "DBID": [
         "VO9",
-        "OQ6",
         "8BJ",
         "FQK",
         "JBE"
       ],
-      "Score": [
-        "11.331528"
+      "IngestDate": [
+        "Wed Sep 27 01:29:08 EDT 2023",
+        "Fri Jul 28 07:13:31 EDT 2023"
       ],
-      "PublicationPlace": [
-        "Washington, DC"
+      "PublicationDate_xml": [
+        {
+          "year": "2009",
+          "text": "2009"
+        }
+      ],
+      "PublicationSeriesTitle": [
+        "Directions in Development"
+      ],
+      "Score": [
+        "11.33112"
+      ],
+      "DatabaseTitleList": [
+        ""
+      ],
+      "URI": [
+        "http://hdl.handle.net/10986/2683",
+        "https://search.proquest.com/docview/37260251"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "World Bank"
+        }
       ],
       "ID": [
-        "FETCH-LOGICAL-a60379-ae96bf203d559d5e9033de3d6ade9c169e3c082e04f4a8545ac879619574f593"
+        "FETCH-LOGICAL-a59209-e22c880db9d5cb66a43194ab72fe06e15d79c194a7af4f7b91d6f9efbc5b37f63"
       ],
       "GeographicLocations": [
         "Cameroon",
@@ -74,17 +95,38 @@
         "Sub-Saharan Africa",
         "Africa"
       ],
+      "PQPubID": [
+        "23473"
+      ],
       "Publisher": [
         "World Bank"
       ],
       "DOI": [
         "10.1596/978-0-8213-7878-6"
       ],
+      "AbstractList": [
+        "In 1994, the Government of Cameroon\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market-based, to support a more organized,\u000atransparent, and sustainable system for accessing and using\u000aforest resources. This report describes how these reforms\u000aplayed out in the rainforests of Cameroon. The intention is\u000ato provide a brief account of a complex process and identify\u000awhat worked, what did not, and what can be improved. The\u000abarriers to placing Cameroon's forests at the service\u000aof its people, its economy, and the environment originated\u000awith the extractive policies of successive colonial\u000aadministrations. The barriers were further consolidated\u000aafter independence through a system of political patronage\u000aand influence in which forest resources became a coveted\u000acurrency for political support. These deeply entangled\u000acommercial and political interests have only recently, and\u000areluctantly, started to diverge. In 1994, the government\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market based. The reforms changed the rules\u000adetermining who could gain access to forest resources, how\u000aaccess could be obtained, how those resources could be used,\u000aand who will benefit from their use. This report assesses\u000athe outcomes of reforms in forest-rich areas of Cameroon,\u000awhere the influence of industrial and political elites has\u000adominated since colonial times."
+      ],
       "Language": [
         "English"
       ],
+      "Author": [
+        "Topa, Giuseppe",
+        "Megevand, Carole",
+        "Debroux, Laurent",
+        "Karsenty, Alain"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
       "IsScholarly": [
         "false"
+      ],
+      "Snippet": [
+        "In 1994, the Government of Cameroon\u000aintroduced an array of <h>forest</h> policy reforms, both\u000aregulatory and market-based, to support a more organized,\u000atransparent, and sustainable system for accessing..."
       ],
       "GroupedDBID": [
         "089",
@@ -118,10 +160,12 @@
         "PQUKI",
         "VO9",
         "WGWTB",
-        "OQ6",
         "8BJ",
         "FQK",
         "JBE"
+      ],
+      "IsDoiOpenAccess": [
+        "true"
       ],
       "SubjectTerms": [
         "ACCESS TO FOREST",
@@ -132,7 +176,6 @@
         "AREAS FOR WILDLIFE",
         "AREAS OF FOREST",
         "BIODIVERSITY CONSERVATION",
-        "Biologische Vielfalt",
         "BOTANICAL GARDENS",
         "BUFFER ZONES",
         "BUSH MEAT",
@@ -172,7 +215,6 @@
         "EMISSIONS",
         "EMISSIONS FROM DEFORESTATION",
         "ENDANGERED SPECIES",
-        "Entwaldung (Raubbau)",
         "ENVIRONMENTAL",
         "ENVIRONMENTAL BENEFITS",
         "ENVIRONMENTAL IMPACT",
@@ -256,16 +298,11 @@
         "FORESTRY DEVELOPMENT",
         "FORESTRY LAW",
         "FORESTRY POLICY",
-        "Forests and forestry",
-        "Forstpolitik",
-        "Forstschäden",
-        "Forstwirtschaft",
         "GAME RESERVES",
         "GEOGRAPHIC INFORMATION",
         "GEOGRAPHIC INFORMATION SYSTEMS",
         "GLOBAL FOREST",
         "GREAT APE",
-        "Holzverarbeitung/Holzverarbeitende Industrie",
         "HUMAN ACTIVITY",
         "HUMID FORESTS",
         "HUNTING",
@@ -276,7 +313,6 @@
         "INDIGENOUS COMMUNITIES",
         "INDIGENOUS GROUPS",
         "ISSUES",
-        "Kamerun",
         "LAND MANAGEMENT",
         "LAND TENURE",
         "LOG EXPORTS",
@@ -285,7 +321,6 @@
         "LOGGING OPERATIONS",
         "LOGS",
         "MEDICINAL PLANTS",
-        "Nachhaltige Entwicklung",
         "NATIONAL FOREST DEVELOPMENT",
         "NATIONAL FOREST ESTATE",
         "NATIONAL FORESTRY",
@@ -294,10 +329,7 @@
         "NATURAL RESOURCE",
         "NATURAL RESOURCE MANAGEMENT",
         "NATURAL RESOURCES",
-        "Naturschutz",
-        "Natürliche Ressourcen",
         "NORTHERN FORESTS",
-        "Nutzungsrechte",
         "OIL",
         "OPPORTUNITY COSTS",
         "PLANT",
@@ -311,18 +343,14 @@
         "PUBLIC PARTICIPATION",
         "QUOTAS",
         "Rain forest",
-        "Rain forests",
         "RAINFOREST",
         "RAINFORESTS",
         "RANCHES",
         "REFORESTATION",
         "Reform",
-        "Regenwald",
-        "Ressourcenmanagement",
         "ROADS",
         "RURAL COMMUNITIES",
         "SET ASIDE",
-        "Soziale Forstwirtschaft",
         "SPECIES",
         "STATE FORESTS",
         "STRUCTURAL ADJUSTMENT",
@@ -346,13 +374,11 @@
         "TREES",
         "TROPICAL FOREST",
         "TROPICAL FORESTS",
-        "Tropischer Regenwald",
         "URBAN AREAS",
         "VALUE OF BIODIVERSITY",
         "VEGETATIVE COVER",
         "VILLAGE FOREST",
         "VILLAGES",
-        "Walderhaltung/Aufforstung",
         "WILDLIFE",
         "WILDLIFE CONSERVATION",
         "WILDLIFE RESERVES",
@@ -370,8 +396,32 @@
       ],
       "SourceType": [
         "Aggregation Database",
-        "Index Database",
         "Publisher"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Topa, Giuseppe"
+        },
+        {
+          "sequence": "2",
+          "fullname": "Karsenty, Alain"
+        },
+        {
+          "sequence": "3",
+          "fullname": "Megevand, Carole"
+        },
+        {
+          "sequence": "4",
+          "fullname": "Debroux, Laurent"
+        }
+      ],
+      "ISBN": [
+        "9780821378786",
+        "0821378783"
+      ],
+      "Abstract": [
+        "In 1994, the Government of Cameroon\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market-based, to support a more organized,\u000atransparent, and sustainable system for accessing and using\u000aforest resources. This report describes how these reforms\u000aplayed out in the rainforests of Cameroon. The intention is\u000ato provide a brief account of a complex process and identify\u000awhat worked, what did not, and what can be improved. The\u000abarriers to placing Cameroon's forests at the service\u000aof its people, its economy, and the environment originated\u000awith the extractive policies of successive colonial\u000aadministrations. The barriers were further consolidated\u000aafter independence through a system of political patronage\u000aand influence in which forest resources became a coveted\u000acurrency for political support. These deeply entangled\u000acommercial and political interests have only recently, and\u000areluctantly, started to diverge. In 1994, the government\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market based. The reforms changed the rules\u000adetermining who could gain access to forest resources, how\u000aaccess could be obtained, how those resources could be used,\u000aand who will benefit from their use. This report assesses\u000athe outcomes of reforms in forest-rich areas of Cameroon,\u000awhere the influence of industrial and political elites has\u000adominated since colonial times."
       ],
       "PublicationYear": [
         "2009"
@@ -381,7 +431,6 @@
       ],
       "SourceID": [
         "proquest",
-        "econis",
         "worldbank"
       ],
       "Copyright_xml": [
@@ -412,6 +461,13 @@
       "Title": [
         "The Rainforests of Cameroon : Experience and Evidence from a Decade of Reform"
       ],
+      "PublicationDate": [
+        "2009",
+        "20090101"
+      ],
+      "Genre": [
+        "Book"
+      ],
       "DatabaseTitle": [
         "International Bibliography of the Social Sciences (IBSS)"
       ],
@@ -428,103 +484,13 @@
         "ObjectType-Book-1"
       ],
       "MergedId": [
-        "FETCHMERGED-LOGICAL-a60379-ae96bf203d559d5e9033de3d6ade9c169e3c082e04f4a8545ac879619574f593"
-      ],
-      "Copyright": [
-        "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo World Bank"
-      ],
-      "IngestDate": [
-        "Wed Sep 27 01:29:08 EDT 2023",
-        "Sat Mar 04 13:29:12 EST 2023",
-        "Fri Jul 28 07:13:31 EDT 2023"
-      ],
-      "PublicationDate_xml": [
-        {
-          "year": "2009",
-          "text": "2009"
-        }
-      ],
-      "PublicationSeriesTitle": [
-        "Directions in Development"
-      ],
-      "DatabaseTitleList": [
-        ""
-      ],
-      "URI": [
-        "http://hdl.handle.net/10986/2683",
-        "http://www.econis.eu/PPNSET?PPN=1604126558",
-        "https://search.proquest.com/docview/37260251"
-      ],
-      "PublicationPlace_xml": [
-        {
-          "name": "Washington, DC"
-        }
-      ],
-      "Publisher_xml": [
-        {
-          "name": "World Bank"
-        }
-      ],
-      "PQPubID": [
-        "23473"
-      ],
-      "AbstractList": [
-        "In 1994, the Government of Cameroon\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market-based, to support a more organized,\u000atransparent, and sustainable system for accessing and using\u000aforest resources. This report describes how these reforms\u000aplayed out in the rainforests of Cameroon. The intention is\u000ato provide a brief account of a complex process and identify\u000awhat worked, what did not, and what can be improved. The\u000abarriers to placing Cameroon's forests at the service\u000aof its people, its economy, and the environment originated\u000awith the extractive policies of successive colonial\u000aadministrations. The barriers were further consolidated\u000aafter independence through a system of political patronage\u000aand influence in which forest resources became a coveted\u000acurrency for political support. These deeply entangled\u000acommercial and political interests have only recently, and\u000areluctantly, started to diverge. In 1994, the government\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market based. The reforms changed the rules\u000adetermining who could gain access to forest resources, how\u000aaccess could be obtained, how those resources could be used,\u000aand who will benefit from their use. This report assesses\u000athe outcomes of reforms in forest-rich areas of Cameroon,\u000awhere the influence of industrial and political elites has\u000adominated since colonial times."
-      ],
-      "Author": [
-        "Topa, Giuseppe",
-        "Megevand, Carole",
-        "Debroux, Laurent",
-        "Karsenty, Alain"
-      ],
-      "PublicationCentury": [
-        "2000"
-      ],
-      "PublicationDecade": [
-        "2000"
-      ],
-      "Snippet": [
-        "In 1994, the Government of Cameroon\u000aintroduced an array of <h>forest</h> policy reforms, both\u000aregulatory and market-based, to support a more organized,\u000atransparent, and sustainable system for accessing..."
-      ],
-      "IsDoiOpenAccess": [
-        "true"
-      ],
-      "Author_xml": [
-        {
-          "sequence": "1",
-          "fullname": "Topa, Giuseppe"
-        },
-        {
-          "sequence": "2",
-          "fullname": "Karsenty, Alain"
-        },
-        {
-          "sequence": "3",
-          "fullname": "Megevand, Carole"
-        },
-        {
-          "sequence": "4",
-          "fullname": "Debroux, Laurent"
-        }
-      ],
-      "ISBN": [
-        "9780821378786",
-        "0821378783",
-        "9780821379370",
-        "0821379372"
-      ],
-      "Abstract": [
-        "In 1994, the Government of Cameroon\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market-based, to support a more organized,\u000atransparent, and sustainable system for accessing and using\u000aforest resources. This report describes how these reforms\u000aplayed out in the rainforests of Cameroon. The intention is\u000ato provide a brief account of a complex process and identify\u000awhat worked, what did not, and what can be improved. The\u000abarriers to placing Cameroon's forests at the service\u000aof its people, its economy, and the environment originated\u000awith the extractive policies of successive colonial\u000aadministrations. The barriers were further consolidated\u000aafter independence through a system of political patronage\u000aand influence in which forest resources became a coveted\u000acurrency for political support. These deeply entangled\u000acommercial and political interests have only recently, and\u000areluctantly, started to diverge. In 1994, the government\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market based. The reforms changed the rules\u000adetermining who could gain access to forest resources, how\u000aaccess could be obtained, how those resources could be used,\u000aand who will benefit from their use. This report assesses\u000athe outcomes of reforms in forest-rich areas of Cameroon,\u000awhere the influence of industrial and political elites has\u000adominated since colonial times."
-      ],
-      "PublicationDate": [
-        "2009",
-        "20090101"
-      ],
-      "Genre": [
-        "Book"
+        "FETCHMERGED-LOGICAL-a59209-e22c880db9d5cb66a43194ab72fe06e15d79c194a7af4f7b91d6f9efbc5b37f63"
       ],
       "PQID": [
         "37260251"
+      ],
+      "Copyright": [
+        "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo World Bank"
       ],
       "IsPeerReviewed": [
         "false"
@@ -551,18 +517,16 @@
         "OpenURL"
       ],
       "BookMark": [
-        "eNpVj09PAyEQxUmMiVr7Abxx8rYKy8KCN1Prn6TGpNYzoctsXbsLK7RWv72s9aBchnnzey8zCJ1RckG5EpeqlBnJZE5ZVsr0FwdonDQyKIMgDtFJTogihMtcHaFxjG9keFJRqo7R4-IV8Nw0rvYB4iZiX-OJ6SB47_AVnn72EBpwFWDjLJ5-NPanqYPvsME3UBkLg2cOKaA7RYe1aSOMf-sIvdxOF5P7bPZ09zC5nmVGEFaqzIASyzonzHKuLAdFGLPArEhpqqJCAavSCUCKujCSF9xUslSCKl4WNVdshM73uX3w79u0t-6aWEHbGgd-GzUrc0FyThOI9yBU3jVR96HpTPjSVJCC5oJzmZDnPbLzobVL49ba9-DWzu9asCsI0PvYbHxyedP8n-k_nrDSlCgpdC4kY9-_YXuv"
+        "eNpVjstOwzAQRS0hJFDpB7Dzil3Aj8YPdqgUilSEVCq2kROPS2hiB7ul8PcklAXMZmbO3Hs1CJ1TcklzLa60VBnJFKM8k6qfxREa94wMZADiBI1TeiNDKU2pPkWPq1fAS1N7FyKkbcLB4alpIYbg8TWefXYQa_AVYOMtnn3U9mdxMbTY4FuojIXBs4Q-oD1Dx840Cca_fYRe7mar6TxbPN0_TG8Wmck1IzoDxiqliC21zatSCDPhVE9MKZkDIoDmVupqINK4iZOlplY4Da6s8pJLJ_gIXRyCuxjed_3jRVunCprGeAi7VHDJBGE57YXPB-E-xMaWxm-K0IHf-LBvwK4hQhdSvQ3xqwim_n8r_njiuqBEK1EwoTj_BkN_cKk"
       ],
       "DatabaseName": [
         "Open Knowledge Repository",
-        "ECONIS",
         "International Bibliography of the Social Sciences (IBSS)",
         "International Bibliography of the Social Sciences",
         "International Bibliography of the Social Sciences"
       ],
       "ParticipantIDs": [
         "proquest_miscellaneous_37260251",
-        "econis_primary_1604126558",
         "worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_2683"
       ]
     },
@@ -571,11 +535,10 @@
       "isFullTextHit": false,
       "isPrint": false,
       "inHoldings": true,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=At+Loggerheads%3F%3A+Agricultural+Expansion%2C+Poverty+Reduction%2C+and+Environment+in+the+Tropical+Forests&rft.date=2006-11-01&rft.isbn=9780821367353&rft_id=info:doi/10.1596%2F978-0-8213-6735-3&rft.externalDBID=NO_FULL_TEXT",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1JT-swEB4hkFgOj1VqeWxCQohDpNR2XOf0RKGloHAAle1kuXFSIVBBTeH3vxknDWE7wDHKZPE4nnwz83kGYP-DPYhOW955q9sNRe-scx1JDyFEwDzyFc_Dsyi4vA3u2sVGfgrrltE2YpP0zfDBJfRphRPuzHv2hLIoDatYgxN9PfC428HOiNZ33Lwo4yyEKYR0DhnJkqgqCu9MjnmR7fzyrguwYLIHNDhojMYZbUdCP_U-ewdI58pXzUmU7t_UWYThZIePI2aX1BSK2MUJQrsKabtS_fHXCliCmYR2SCzDVDJcgVlq7kkd41bhz-F4J3oaDJIRWnib_VuDq067d9T1ioYLnkGgwplHtWbQ_7AGj1RsE9YPfJzlvmhYY6QyCA_JRMQqFpylTdlMQy7iNLUyDK2f8hrsCIuA0jL0g_qxsKEyPFECUQdCg1hZ36_DbkWf-vXRJYUzXZkQiUK1XM36Oa-5oYOG8hH5MFmH7Ynitbu0ILHqdutIoHekWFUC1wolQMwweXrJNKOeFvic7yU41cPnnH8vIV3ytiHqcFDOj86HQP4UTgwNRfuaBkOsuUDj3fY-yn6S0c82rUP0Jkfd08q4KiWQsnuiXWiqB_7unK5cMxoQpUBJ3USVr__gFf_CvAsu4V-Z8Q2YHo9ekk2YKz_VLbeqtmDm5uSm1_oP-Zcifw",
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=At+Loggerheads%3F+Agricultural+Expansion%2C+Poverty+Reduction%2C+and+Environment+in+the+Tropical+Forests&rft.au=Chomitz%2C+Kenneth+M&rft.date=2007-01-01&rft.isbn=9780821367353&rft.spage=xvii+284p&rft.epage=xvii+284p&rft_id=info:doi/10.1596%2F978-0-8213-6735-3&rft.externalDBID=NO_FULL_TEXT",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1LT-MwEB6hrQTLgeUlUWALQkKIQ6TEdhznhCjbUlA4gCoeJ8tJ4wqBCmoKv58ZNw2BhcPuMfLEmtjxeB7fzAAcfJIHyVnbu2j3erHon3evE-lxpWI0XQhwEZ8n4dVteNcpE_nJrVt52whNkprRgwvo0wknvXPasyeWZWlYxQJO8PXQ4y6DnRGs7090WflZSKcQ0hlkREukqiy8M3vmZbTzy1kXYdEUDyhwUBhNig966ELF4RQ76a6k7i8YzRJ7HB67QqSQoy7LUaOrYbVrRR__-7uXoZFTYsQKzOWjVZinnp7UKG4Nlo4nu8nTcJiPUbAPiqN1uO52-ic9r-yz4BnJUBh6JorwaEuhmBkInmWoMgWZZCJUscmjgaWm1PhsGUPjiBnrSz_KUhlam6o0sD7fgF2jskCmwjfCotEVo9mSx1ZyiyphYEUaN2Gvto769dEFgwtd2wjpN2FntrzajZcIVd1pnwg0fRSrU-BBoOiGGeVPL4Vm1LACJ_ueglOxe8759xTSRWYD0YTDahf0lE8ylnD5iV_ta-KYIHGhxtn2P9P-RaOfB7YJyTsdtUarnKYUHSruCVOhqdj3hzFde2c8JLyAkjpCLW7zH1jcgp_Oc4RXLuPb8GMyfsl_w0L1Q7bckWlB4-b0pt9-A0S3F34",
       "ExternalDocumentID": [
         "9780821367360",
-        "518055426",
         "oai_openknowledge_worldbank_org_10986_7190",
         "10_1596_978_0_8213_6735_3",
         "EBC459782"
@@ -583,7 +546,6 @@
       "DBID": [
         "DUQ",
         "VO9",
-        "OQ6",
         "7ST",
         "7U6",
         "C1K",
@@ -595,13 +557,13 @@
         "DON"
       ],
       "Score": [
-        "10.729325"
+        "10.730908"
       ],
       "PublicationPlace": [
         "Herndon"
       ],
       "ID": [
-        "FETCH-LOGICAL-a63932-4519768da3938cde2b50ebeb41daa68a1610703c8c432f767f934cffd699d0f3"
+        "FETCH-LOGICAL-a62762-a773186482ad43cc9291c624589ae7df4082c62f229662af0607cb65ffb8b1f03"
       ],
       "Publisher": [
         "World Bank Publications",
@@ -623,9 +585,6 @@
       ],
       "IsScholarly": [
         "false"
-      ],
-      "EAN": [
-        "9780821367353"
       ],
       "GroupedDBID": [
         "089",
@@ -670,7 +629,6 @@
         "PLCCB",
         "PQEST",
         "PQUKI",
-        "OQ6",
         "7ST",
         "7U6",
         "C1K",
@@ -684,7 +642,6 @@
       "SubjectTerms": [
         "ABATEMENT",
         "Afforestation",
-        "Agrarboden",
         "AGRICULTURAL EXPANSION",
         "AGRICULTURAL FRONTIER",
         "AGRICULTURAL OUTPUT",
@@ -731,7 +688,6 @@
         "ECOSYSTEM MANAGEMENT",
         "ECOSYSTEMS",
         "EFFICIENT REGULATION",
-        "Entwaldung",
         "Environment",
         "ENVIRONMENTAL",
         "Environmental aspects",
@@ -781,7 +737,6 @@
         "FOREST USE",
         "FORESTRY",
         "Forestry - Economic aspects",
-        "Forstpolitik",
         "FUEL",
         "FUELWOOD",
         "GLOBAL CLIMATE CHANGE",
@@ -854,7 +809,6 @@
         "TIMBER RESOURCES",
         "TREE",
         "TREES",
-        "Tropen",
         "Tropical crops - Environmental aspects",
         "TROPICAL DEFORESTATION",
         "TROPICAL FOREST",
@@ -897,7 +851,6 @@
       ],
       "SourceType": [
         "Aggregation Database",
-        "Index Database",
         "Publisher",
         "Enrichment Source"
       ],
@@ -915,7 +868,6 @@
       "SourceID": [
         "proquest",
         "askewsholts",
-        "econis",
         "worldbank"
       ],
       "Copyright_xml": [
@@ -970,7 +922,7 @@
         "ObjectType-Book-2"
       ],
       "MergedId": [
-        "FETCHMERGED-LOGICAL-a63932-4519768da3938cde2b50ebeb41daa68a1610703c8c432f767f934cffd699d0f3"
+        "FETCHMERGED-LOGICAL-a62762-a773186482ad43cc9291c624589ae7df4082c62f229662af0607cb65ffb8b1f03"
       ],
       "Copyright": [
         "The International Bank for Reconstruction and Development / The World Bank 2006",
@@ -980,8 +932,7 @@
         "Tue Sep 26 22:40:36 EDT 2023",
         "Tue Sep 26 23:10:27 EDT 2023",
         "Tue Sep 26 22:09:36 EDT 2023",
-        "Thu Sep 21 19:55:37 EDT 2023",
-        "Sat Jan 09 19:52:00 EST 2021",
+        "Wed Oct 04 09:55:09 EDT 2023",
         "Fri Jul 28 07:13:40 EDT 2023",
         "Mon Jun 03 07:45:48 EDT 2019",
         "Thu Apr 07 19:59:12 EDT 2022",
@@ -998,17 +949,16 @@
       ],
       "DatabaseTitleList": [
         "",
-        "",
+        "Environment Abstracts",
         "",
         "",
         "PAIS International",
-        "Environment Abstracts"
+        ""
       ],
       "URI": [
         "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=459782",
         "http://elibrary.worldbank.org/doi/book/10.1596/978-0-8213-6735-3",
         "http://hdl.handle.net/10986/7190",
-        "http://www.econis.eu/PPNSET?PPN=518055426",
         "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780821367360",
         "https://search.proquest.com/docview/21031780",
         "https://search.proquest.com/docview/36627333",
@@ -1017,9 +967,6 @@
       "PublicationPlace_xml": [
         {
           "name": "Herndon"
-        },
-        {
-          "name": "Washington, DC"
         }
       ],
       "Publisher_xml": [
@@ -1041,10 +988,10 @@
       ],
       "AbstractList": [
         "Despite the vast number of books and reports on tropical deforestation, there's confusion about the causes of forest loss and forest poverty, and the effectiveness of policy responses. At Loggerheads seeks to describe ways to reconciles pressures for agricultural expansion in the tropics with the urgent needs for both forest conservation and poverty alleviation. It diagnoses the causes and impacts of forest loss and the reasons for the association of forests and poverty. It looks at how policies - modulated by local conditions - act simultaneously on deforestation and poverty, creating tradeoffs or complementarities, depending on the situation. The report brings to the surface problems that impede adoption of favourable policies, describing institutional and technological innovations that might help overcome these impediments.",
-        "There are many causes, consequences, and\u000aconnections of deforestation and forest poverty in the\u000atropical world. This report specifically addresses the\u000apotential dilemma of trade-offs between poverty reduction\u000aand environmental protection. It seeks to improve the\u000adiagnosis of forest problems and facilitate the prescription\u000aand application of solutions by focusing on both the causes\u000aand consequences of forest conversion to agriculture and on\u000athe nature and location of forest poverty. The first section\u000ais diagnostic, examining the drivers and consequences of\u000adeforestation and forest poverty. The second part looks at\u000ahow governance, institutions, and policies shape those\u000adrivers. It identifies opportunities for win-win policies.\u000aIn particular, anything that boosts labor demand outside\u000aagriculture will tend to reduce both poverty and\u000adeforestation. Additionally, promotion of some kinds of\u000aagroforestry can help to improve the ecological functions of\u000adegraded forests while boosting farm output and employment.\u000aThe report offers a systematic framework for thinking about\u000ahow to integrate forest management with rural development in\u000aa sustainable way.",
+        "Despite the vast number of books and reports on tropical deforestation, there's confusion about the causes of forest loss and forest poverty, and the effectiveness of policy responses. At Loggerheads seeks to describe ways to reconcile pressures for agricultural expansion in the tropics with the urgent needs for both forest conservation and poverty alleviation. It diagnoses the causes and impacts of forest loss and the reasons for the association of forests and poverty. It looks at how policies - modulated by local conditions - act simultaneously on deforestation and poverty, creating tradeoffs or complementarities, depending on the situation. The report brings to the surface problems that impede adoption of favourable policies, describing institutional and technological innovations that might help overcome these impediments.",
         "Seeks to describe ways to reconcile pressures for agricultural expansion in the tropics with the urgent needs for both forest conservation and poverty alleviation. This book looks at how policies - modulated by local conditions - act simultaneously on deforestation and poverty, creating tradeoffs or complementarities, depending on the situation.",
         "A report on agricultural expansion, environmental concerns in tropical forests, and poverty reduction, and how ecological, economic, and political aspects of tropical forests vary widely at both large and small scales. The spatial variation in deforestation and forest poverty is confronted by the author and the integration of results from recent econometric studies along with institutional studies finds that there is weak evidence of a causal link between deforestation and poverty, challenging conventional wisdom. Tables, Figures, Appendixes, References.",
-        "Despite the vast number of books and reports on tropical deforestation, there's confusion about the causes of forest loss and forest poverty, and the effectiveness of policy responses. At Loggerheads seeks to describe ways to reconcile pressures for agricultural expansion in the tropics with the urgent needs for both forest conservation and poverty alleviation. It diagnoses the causes and impacts of forest loss and the reasons for the association of forests and poverty. It looks at how policies - modulated by local conditions - act simultaneously on deforestation and poverty, creating tradeoffs or complementarities, depending on the situation. The report brings to the surface problems that impede adoption of favourable policies, describing institutional and technological innovations that might help overcome these impediments."
+        "There are many causes, consequences, and\u000aconnections of deforestation and forest poverty in the\u000atropical world. This report specifically addresses the\u000apotential dilemma of trade-offs between poverty reduction\u000aand environmental protection. It seeks to improve the\u000adiagnosis of forest problems and facilitate the prescription\u000aand application of solutions by focusing on both the causes\u000aand consequences of forest conversion to agriculture and on\u000athe nature and location of forest poverty. The first section\u000ais diagnostic, examining the drivers and consequences of\u000adeforestation and forest poverty. The second part looks at\u000ahow governance, institutions, and policies shape those\u000adrivers. It identifies opportunities for win-win policies.\u000aIn particular, anything that boosts labor demand outside\u000aagriculture will tend to reduce both poverty and\u000adeforestation. Additionally, promotion of some kinds of\u000aagroforestry can help to improve the ecological functions of\u000adegraded forests while boosting farm output and employment.\u000aThe report offers a systematic framework for thinking about\u000ahow to integrate forest management with rural development in\u000aa sustainable way."
       ],
       "Author": [
         "Bank, World",
@@ -1144,12 +1091,11 @@
         "D7Q"
       ],
       "BookMark": [
-        "eNqFkktP3DAUhV1VVAWKWLOiKySkBvx-rNAwogVppC7arq-c2BnSCXGIA6P-e2yCylPibqwjf-f6PozQHsFHRBh5bJQucKEpYYVUTBTsA9rCWSYl5cdHIfQntCmx0VxwyT6jnRj_4hw6abqJdmfj10VYLv1w6a2LJ1_QRm3b6Hcezm305_vZ7_l5sfj542I-WxRWMsNowQUxSmpnk9KV87QU2Je-5MRZK7UlkmCFWaUrzmitpKoN41VdO2mMwzXbRgdT3n4I1zc-jnDVxMq3re18uIkgU4kUE_4umNqliqV4D6QEM6I0TuDhBNq48ut4Gdoxwm3ryxBWEdJk_w8ys_sT66vQNRH6obmywz8QRGMhOJWJ-DUR6zC0rrTdCkLvu1UX1q13aa6-D7EZQzIF2zy_gyeeYQkkrUmCIia_i19mncojGPIHyGUChlwo5C1D7v_b25ZXKPTurQXcD6Dy3TjYFs5O51wkJ2V3qFa5Sg"
+        "eNqFUctKAzEUjYhircW1O1eC4GgeM3mspJb6gIILxW3IzCRtnTipk6nFvzdxxGfBuwmHnHvvuecAcIDgKcoEPROMJzDhGJGEMpIlZAPswggDonTzC2R8G_QoFDzNUkp2wMD7RxiLB4x7YH_YHk7cdKqbmValP98DW0ZZrwcfbx88XI7vR9fJ5PbqZjScJIpiRnGiGCOI05RjVaakKAQWqKA4zbhQmpUmDQICNhgLSrEykEJW5DQzJuc5MpD0wVE3eNG456X2rXya-0Jbq2rtll7SoBFDlP5LDPdiRkL9R8QIEsR4XH3cEZWv9MrPnG29fLE6d67yMlj76WTk3nXclWtsmau6km6h66p2K6vLYJteOD9vXfMqnZr__JPfepqpRCEFKhkScSr8PbVbjqCM-UYREsooQ8YQZbzuZH3LH6pclGaNGe_nFbpuG2Xl-GKUZqETkzc_Jq7g"
       ],
       "DatabaseName": [
         "World Bank e-Library",
         "Open Knowledge Repository",
-        "ECONIS",
         "Environment Abstracts",
         "Sustainability Science Abstracts",
         "Environmental Sciences and Pollution Management",
@@ -1165,7 +1111,6 @@
         "proquest_ebookcentral_EBC459782",
         "proquest_miscellaneous_21031780",
         "proquest_miscellaneous_60002014",
-        "econis_primary_518055426",
         "proquest_miscellaneous_36627333",
         "worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_7190",
         "worldbank_books_10_1596_978_0_8213_6735_3"
@@ -1176,41 +1121,31 @@
       "isFullTextHit": false,
       "isPrint": false,
       "inHoldings": true,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=The+world+atlas+of+trees+and+forests%3A+exploring+Earth%27s+forest+ecosystems&rft.au=White%2C+Peter&rft.au=Shugart%2C+Herman&rft.au=Chave%2C+Jerome&rft.au=Saatchi%2C+Sassan&rft.date=2022-05-17&rft.pub=Princeton+University+Press&rft.isbn=9780691235936&rft_id=info:doi/10.1515%2F9780691235936&rft.externalDocID=9780691235936",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV1ba9swFBZbwy592rrBuhtisPYhmPom2xqlYwkOSUhZSUO3PQnZcpp1oR11Gsi_3zmybMfJHjr2YmJbcoy_Y53vyOd8IuRwYzwYDTrWaaff5_5k2LsYBRZQCOZaGCue8uGIjb-zH7GZzc4L_T-s_gUQME7PzSvzl2oHrFvFPMdVudLU55_mAzvOM9nO2XggIASeHCwB4HoXoC_fw4OPXu9_rQaOgd1gFe4_WE51UTgAv8F-YAsWBNsNcl3t1sajtVTbcjGXOtsDv14Xes5Ac8GV6FS6rMrgi6VONQxzc7oNYW2-poa-vhZfIyf4fHZ3KYu6oT56icpYuzO5LCb4s0pSAdtLcB56JeL2ORB_097MW0DIi5KnYWVpZyXKWyWRjQjXDjhW8_JCJWVrvGdaGmOr3YaEduP8Q9IC2sejHdL6Mux87VYzcm4YhIETYeiOjd0AyJaRaCr3PaPSCn971LjoLtmV-S9wS-CyFqgge3Wt5k337hnOMnlGWhkWsjwnD7LrPfIo1vLkqz3yuKcBul29IN8AZ6pxphpnejOlGmcKONPj2YmB-vhodvKJVmBTDfZhXrfABrRG_CW56MWTbt8yK21Y0oHwCnxi5ge42ID0k4C7rlRsClQ6VSFPWRIlaaRYEPl-ioRWeSzxeWYrpljCp1L5Tui9ItRXEEooFyLgJPUVj6SXRT7wTSCF0N-298mHtWcklnOdDpCLxoPcJwwfndDBp0Dtcxh_BB65vBFXv8VYf49CtMQAC_CAWnmRwIvfrx8PoB9wsgg9m-5HS4yEvh-TEy3iTjcAqu45zuv73Pcb8rQ28rdkZ3F7l70jT6qx7L2xtj_jI5Kp",
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=The+World+Atlas+of+Trees+and+Forests&rft.au=Shugart%2C+Herman&rft.au=White%2C+Peter&rft.au=Saatchi%2C+Sassan&rft.au=Chave%2C+J%C3%A9r%C3%B4me&rft.date=2022-01-01&rft.pub=Princeton+University+Press&rft.isbn=9780691235936&rft_id=info:doi/10.1515%2F9780691235936&rft.externalDocID=EBC6976311",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3fa9swEBalodv61HaDdT-KKax7GKa2JCsWlJY6JKQhY6UxZXsysis3ZaWDOA3kv9-dLNt1MihlLyZShIz9nU930n13hHxd0Qfji8j9Hg2HksejwfVYuCwMJbguGHAhR-Pg6mfwq2_LbBZl_j9k_wII6KcX9pP5B9sBeasY57isKk2d3dkDdtxn8vzLq4sEXOD4aAEAN02AvvoOj76wwf9KDfSB3CAL9wWSU08KHfAb5AeuIEFwXTGu62YjPGWYzfn8Xploj3imdZnPGat5FvPaFp9MH29VSfwZopp_aPS8rb3XigGeKFD-ppLwtwkY7s3w3lQtyg398vDenOFH3CZTsBsTlK5sTFxWMK5xHlsurCck0nVlmQZlTaEHJvfF2riVHNn9qCfArmJI8u6AUSfDTdI5H0U_evV-G-2KrvBDdMxxJirAlLIJmKo2szlY4Z7HrTtuk21V_IZFBxakedFetZk1ReId0tHIT9klG_phj2z1Tdbx5R55VcIyW74lGEbjGPgcA5_zJ3cMfA7A55xMTy2CJ8fT03fketCPe0PXFsVwFebapy5y5W50SkMvTVngZyZAmErozTyOxQ-E5N1MsVRQ3RVS52EWhKniPFPgolDF3hNHhZkvUu4pnoOHLGFiLXPBcrDf_Zyncp8cPnngZHFvTu6LpPVW9olTvYfE_G_DiZMGjQ_PD_lI3jTC84lszmeP-jN5XSuBAwvkXylMTmA",
       "ExternalDocumentID": [
         "9780691235936",
-        "EBC6976311",
-        "R100000096-I012887301-00",
-        "R100000002-I031971838-00"
-      ],
-      "DBID": [
-        "3CS",
-        "JQU",
-        "CJCIN"
+        "EBC6976311"
       ],
       "IngestDate": [
-        "Thu Sep 21 18:46:02 EDT 2023",
-        "Thu Sep 21 21:48:49 EDT 2023",
-        "Fri Mar 17 02:47:46 EDT 2023",
-        "Thu Dec 08 01:40:30 EST 2022"
+        "Wed Oct 04 09:23:09 EDT 2023",
+        "Thu Sep 21 21:48:49 EDT 2023"
       ],
       "PublicationDate_xml": [
         {
           "year": "2022",
           "text": "2022"
-        },
-        {
-          "year": "2022",
-          "text": "©2022"
         }
       ],
       "Score": [
-        "10.554654"
+        "10.5537"
       ],
       "DatabaseTitleList": [
-        "",
-        "NDL-OPAC"
+        ""
+      ],
+      "URI": [
+        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=6976311",
+        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780691235936"
       ],
       "PublicationPlace_xml": [
         {
@@ -1220,17 +1155,13 @@
       "PublicationPlace": [
         "Princeton"
       ],
-      "URI": [
-        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=6976311",
-        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780691235936"
-      ],
       "Publisher_xml": [
         {
           "name": "Princeton University Press"
         }
       ],
       "ID": [
-        "FETCH-LOGICAL-a17722-8e460479a4b6922ad5f551cd79c5b8bc8d56844c0639d35b49e0d5d5b9fad4173"
+        "FETCH-LOGICAL-a18202-1468deb280bb351c4953329468c0418686947ca3b62e769ef8c58ba44ca81b2a3"
       ],
       "Publisher": [
         "Princeton University Press"
@@ -1239,17 +1170,16 @@
         "10.1515/9780691235936"
       ],
       "AbstractList": [
-        "A marvelously illustrated look at the world's diverse forests and their ecosystemsThe earth's forests are havens of nature supporting a diversity of life. Shaped by climate and geography, these vast and dynamic wooded spaces offer unique ecosystems that shelter complex and interdependent webs of flora, fungi, and animals. The World Atlas of Trees and Forests offers a beautiful introduction to what forests are, how they work, how they grow, and how we map, assess, and conserve them.Provides the most wide-ranging coverage of the world's forests availableTakes readers beneath the breathtaking variety of wooded canopies that span the globeProfiles a wealth of tree species, with enlightening and entertaining natural-history highlights along the wayFeatures stunning color photos, maps, and graphicsDraws on the latest cutting-edge research and technology, including satellite imagery",
-        "\"The earth's forests are havens of nature supporting a diversity of life. Shaped by climate and geography, these vast and dynamic wooded spaces offer unique ecosystems that shelter complex and interdependent webs of flora, fungi, and animals. The World Atlas of Trees and Forests offers a beautiful introduction to what forests are, how they work, how they grow, and how we map, assess, and conserve them\"--"
+        "A marvelously illustrated look at the world's diverse forests and their ecosystemsThe earth's forests are havens of nature supporting a diversity of life. Shaped by climate and geography, these vast and dynamic wooded spaces offer unique ecosystems that shelter complex and interdependent webs of flora, fungi, and animals. The World Atlas of Trees and Forests offers a beautiful introduction to what forests are, how they work, how they grow, and how we map, assess, and conserve them.Provides the most wide-ranging coverage of the world's forests availableTakes readers beneath the breathtaking variety of wooded canopies that span the globeProfiles a wealth of tree species, with enlightening and entertaining natural-history highlights along the wayFeatures stunning color photos, maps, and graphicsDraws on the latest cutting-edge research and technology, including satellite imagery"
       ],
       "Language": [
         "English"
       ],
       "Author": [
-        "and Jérôme Chave",
-        "Peter White",
-        "Herman Shugart",
-        "Sassan Saatchi"
+        "Shugart, Herman",
+        "White, Peter",
+        "Chave, Jérôme",
+        "Saatchi, Sassan"
       ],
       "PublicationCentury": [
         "2000"
@@ -1261,13 +1191,9 @@
         "false"
       ],
       "Snippet": [
-        "\"The earth's <h>forests</h> are havens of nature supporting a diversity of life. Shaped by climate and geography, these vast and dynamic wooded spaces offer unique eco...",
         "A marvelously illustrated look at the world's diverse <h>forests</h> and their ecosystemsThe earth's <h>forests</h> are havens of nature supporting a diversity of life..."
       ],
       "GroupedDBID": [
-        "3CS",
-        "JQU",
-        "CJCIN",
         "38.",
         "AABBV",
         "AAGED",
@@ -1295,17 +1221,14 @@
       ],
       "SubjectTerms": [
         "Forest ecology",
-        "Forests and forestry",
-        "Forests and forestry -- Maps",
-        "SCIENCE / Earth Sciences / Geography"
+        "Forests and forestry"
       ],
       "Discipline": [
         "Ecology",
         "Forestry"
       ],
       "ContentType": [
-        "eBook",
-        "Book"
+        "eBook"
       ],
       "SourceType": [
         "Aggregation Database",
@@ -1333,63 +1256,47 @@
         }
       ],
       "ISBN": [
-        "9780691235936",
         "0691226741",
-        "9780691226743",
-        "0691235937"
+        "9780691226743"
       ],
       "EISBN": [
         "9780691235936",
         "0691235937"
       ],
       "Abstract": [
-        "\"The earth's forests are havens of nature supporting a diversity of life. Shaped by climate and geography, these vast and dynamic wooded spaces offer unique ecosystems that shelter complex and interdependent webs of flora, fungi, and animals. The World Atlas of Trees and Forests offers a beautiful introduction to what forests are, how they work, how they grow, and how we map, assess, and conserve them\"--"
+        "A marvelously illustrated look at the world's diverse forests and their ecosystemsThe earth's forests are havens of nature supporting a diversity of life. Shaped by climate and geography, these vast and dynamic wooded spaces offer unique ecosystems that shelter complex and interdependent webs of flora, fungi, and animals. The World Atlas of Trees and Forests offers a beautiful introduction to what forests are, how they work, how they grow, and how we map, assess, and conserve them.Provides the most wide-ranging coverage of the world's forests availableTakes readers beneath the breathtaking variety of wooded canopies that span the globeProfiles a wealth of tree species, with enlightening and entertaining natural-history highlights along the wayFeatures stunning color photos, maps, and graphicsDraws on the latest cutting-edge research and technology, including satellite imagery"
       ],
       "PublicationYear": [
         "2022"
       ],
       "SourceID": [
         "askewsholts",
-        "proquest",
-        "jndl"
+        "proquest"
       ],
       "SSID": [
         "ssj0002767618"
       ],
       "Title": [
-        "The world atlas of trees and <h>forests</h> : exploring Earth's <h>forest</h> ecosystems"
+        "The World Atlas of Trees and <h>Forests</h>"
       ],
       "PublicationDate": [
         "2022",
-        "©2022",
-        "c2022",
         "2022-05-17"
       ],
       "PageCount": [
-        "400 pages : illustrations (chiefly color), color maps ; 32 cm"
+        "401"
       ],
       "OCLC": [
         "1317329981"
       ],
-      "DatabaseTitle": [
-        "NDL-OPAC",
-        "CiNii Books"
-      ],
-      "Notes": [
-        "ISBN : 9780691235936 (ebook)",
-        "表現種別 : still image",
-        "キャリア種別 : volume",
-        "表現種別 : text",
-        "機器種別 : unmediated",
-        "Includes bibliographical references and index",
-        "Other authors: Peter White, Sassan Saatchi, and Jérôme Chave",
-        "Includes bibliographical references (p. 391-393) and index"
+      "Subtitle": [
+        "Exploring Earth's <h>Forest</h> Ecosystems"
       ],
       "DEWEY": [
         "634.90223"
       ],
       "MergedId": [
-        "FETCHMERGED-LOGICAL-a17722-8e460479a4b6922ad5f551cd79c5b8bc8d56844c0639d35b49e0d5d5b9fad4173"
+        "FETCHMERGED-LOGICAL-a18202-1468deb280bb351c4953329468c0418686947ca3b62e769ef8c58ba44ca81b2a3"
       ],
       "PQID": [
         "EBC6976311"
@@ -1401,7 +1308,7 @@
         "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F5936%2F9780691235936.jpg"
       ],
       "link.rule.ids": [
-        "307,308,791,795,797,4083,25098,28276"
+        "307,791,795,797,25098,28276"
       ],
       "linkProvider": [
         "Walter de Gruyter"
@@ -1410,1303 +1317,349 @@
         "OpenURL"
       ],
       "BookMark": [
-        "eNqVj71PAzEMxYMQCCgd2bNVDIU4uXwhFqgKFCEhIcQa5S45-nE05XxQ-O-5tixlw4v17N-z_Ag5AXYGEuS51YYpC1xIK9QO6W7p3T96nxyBAC24tQYOSBdxyhjjWmkF5pDcP48jXaa6CtQ3lUeaStrUMSL180DLVEdskF7Q-LWoUj2Zv9Khr5txD393NBYJv7GJb3hM9kpfYez-9g55uRk-D-76D4-3o8HVQ9-D1pz3TcwUy7T1Wa4s5z7IUkoograFzE1emCCVybKCKWGDkHlmIwsyyNyWPmRtlA453Rz2OItLHKeqQfdZxTylGbqt9C3b27CLOr1_tA-7NVbEeVP7yg2vB8pqJQBa8nJDTuehcotUN94lP3ETRLeavCY3XbgnYOuyyo0YcGO0YOAY-6ed8dYuwGowwqzsP6JOiBQ"
-      ],
-      "DatabaseName": [
-        "NDL Search",
-        "NDL ONLINE",
-        "CiNii Books"
+        "eNpVj81LwzAYhyOi6GaP3nsQxEM1bz7eJMdZNhUGXooeS5KmDBcWbar--5bNy04_nh8P7wch10DvQYJ8MEpTNMC4NBxPSHHEp2S2B4ZKwDmZAQfFmTEaLkiR8wellClUCPqS3DSbUL6nIXblYow2l6kvmyGEXNpdV67SEPKYr8hZb2MOxX_Oydtq2dTP1fr16aVerCsLmlFWgUDdBcc0dY5L8MJIPi2eWk8FaNRohPKWO2RBoQm99lI7K4S3GhyzfE7uDoNt3obfvElxzO1PDC6lbW6Pnpzc24P7OaSv7-nMdq_5sBsHG9vlY41GIQfgfyMRUZE"
       ],
       "ParticipantIDs": [
         "askewsholts_vlebooks_9780691235936",
-        "proquest_ebookcentral_EBC6976311",
-        "jndl_porta_oai_iss_ndl_go_jp_R100000096_I012887301_00",
-        "jndl_porta_oai_iss_ndl_go_jp_R100000002_I031971838_00"
+        "proquest_ebookcentral_EBC6976311"
       ]
     },
     {
-      "hasFullText": false,
+      "hasFullText": true,
       "isFullTextHit": false,
       "isPrint": false,
-      "inHoldings": false,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=A+Legal+and+Institutional+Framework+for+Sustainable+Management+of+Forest+Resources+in+Southern+Sudan+%3A+Policy+note&rft.au=World+Bank&rft.date=2010-02-01&rft.pub=World+Bank&rft.externalDBID=n%2Fa&rft.externalDocID=oai_openknowledge_worldbank_org_10986_2978",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwrV1La8JAEB5qC32cWlvoE-ZSe5DQVKPEIhYtBpUIRUNpT0FNfFCIYGzBf9-ZTbJ50ENLvYRkCRv229nNzM43MwB3mf3A7LaUfqvTqWlWz3g1qwqpEJWSwrZiv9YzK4O3yns7LFfuB_n_OPqXJoHtdD9cMj9EO3DcKvMcN1GlqadF6GDncyb14WXQtckEtgpfNMHxI019tA4Lt2Xjv1JDbSQ3HIX7B8mRnVID3ZP80JUkiK4Z5Vo-htTlounOwiwC3Xi01GJEZC7BTxwmwq9iIg0roFzy019L74Bg3YpyfVx5bfjp0LbChxFBWuKit1zHPiJB72mNvI_kiQQ701PsjsxrqRTXmV9PKsk1T6I8SLRFwtgxdWIvVzP2k-tVu0Qmbw5yZa4FeiBfCOrpCH3AOoZdjhE5gR3Xy8NRc7YKM5i4edgPRr7anMKmiQJGJBgxBSNKGJFgxASMGMOIyynW542gv_r9vIESTVx4GKGJAk18xABLZCzPYGi0reeOkhhfctzsKfIXzK-wf4-Jeg6oOaTIOyWyP8cTzanpo7Kra6TtkUo20R1VvQBzm5-83G53V3AYS9I17E1pBbk3cCD3gm8RcHoe",
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=Instituting+Nature&rft.au=Mathews%2C+Andrew+S&rft.date=2011-11-04&rft.pub=The+MIT+Press&rft.isbn=9780262298537&rft_id=info:doi/10.7551%2Fmitpress%2F9780262016520.001.0001&rft.externalDocID=10_7551_mitpress_9780262016520_001_0001",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3da9swED-2Brb1ad3Kln3hDZY-mcaW_KGnUZeEtGQwSgjbk5E_tHZrM1icQv77_S6WnaQE9vVibNlny7rT6e70O4no6I4-GJ8l7sdkNFJycj6cjkNXxLGC68KAC3U-Di4-B18GdnfEeb3-H2f_ggnsp89tl9mR7cB5q4xzXDY7TX24shPsHGfqe58uzlK4wJPeLRi8vgTrm37Yey-G_ys1KIPccBbuX0hO-1IU4BzygyMkCMc7xnV72QDb7R_OvjKcebGJkG23B6-xkDZ2WrSRUA6GrgOHLIZQj1tQj9qrhFvm-wrjeLRLx0awsVDxm6tqhdStERZMwolRPgPlPF4U0lsPMC3sDw4HU6cNbbpFyfC61Vz4ferAMFPxHnVOTpJk2sbM-iCGxfaAjmw9jps3He-uwz7t6_l3tApGkmreQE5hRoBuO9i1PRRLa19MHlOn5KSTA7pXzp7QYb12y9LpObwwsF5tvrx8SgcbbHFqthzSdDiYnI5cu6eFq2OeFXcLzxReHngiz8LC1zLq57IUgTaR0WGGjpGVxmTQvKUpsiI3fq4jocMAbruQRRSJ5-ToOPfCTPa1NHBwFVzEUplQGJjfnpGZ6tK7jd9Ob69XE-9tc_swQWX424dYALr0bNVkaX3vW5pXVXB5WcxElzw0oi3_Q8Z2ydlo8nT3B52GD_V9i1FOB8mpEEIJKbv0tn0EupAnuPSs_LFANWC-KrjYffXiH2r3kh6tu8kr2qt-LsrX9LBVR2-sOP4CV-56Lw",
       "ExternalDocumentID": [
-        "oai_openknowledge_worldbank_org_10986_2978"
-      ],
-      "IngestDate": [
-        "Fri Jul 28 07:13:44 EDT 2023"
+        "9780262298537",
+        "9780262297646",
+        "EBC3339344",
+        "10_7551_mitpress_9780262016520_001_0001",
+        "j.ctt5hhdn3"
       ],
       "DBID": [
-        "VO9"
-      ],
-      "PublicationDate_xml": [
-        {
-          "month": "02",
-          "year": "2010",
-          "text": "2010-02-01",
-          "day": "01"
-        }
+        "8BJ",
+        "FQK",
+        "JBE"
       ],
       "Score": [
-        "10.034343"
-      ],
-      "DatabaseTitleList": [
-        ""
-      ],
-      "URI": [
-        "http://hdl.handle.net/10986/2978"
-      ],
-      "Publisher_xml": [
-        {
-          "name": "World Bank"
-        }
-      ],
-      "ID": [
-        "FETCH-worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_29780"
-      ],
-      "GeographicLocations": [
-        "Africa",
-        "Sudan"
-      ],
-      "Publisher": [
-        "World Bank"
-      ],
-      "AbstractList": [
-        "This policy note was prepared in\u000aresponse to a request from the Government of Southern Sudan\u000a(GoSS) for World Bank assistance in developing legislative\u000aand institutional policies and strategies that will take\u000aadvantage of the potential of the region's forest\u000aresources to contribute to poverty alleviation, food\u000asecurity, sustainable agriculture, economic growth, and to\u000aprotection of forest-related environmental services such as\u000aclimate, biodiversity, water, and wildlife resources. The\u000anote is intended to: (a) take stock of the current situation\u000aon the ground, including identifying the legislative,\u000ainstitutional, governance, and policy reforms needed to\u000acreate an enabling environment for both public and\u000aprivate-sector investment. This should help in contributing\u000ato improved understanding of the currently underutilized\u000apotential of Southern Sudan's forest resources; (b)\u000aanalyze what has worked and what has not worked prior to and\u000asince the signing of the Comprehensive Peace Agreement\u000a(CPA); and (c) suggest priority solutions and actions\u000atowards revitalizing the forestry sector. Key policy issues\u000aaddressed in this note include: 1) strengthening forest\u000aresource information and knowledge base; 2) developing a\u000acoherent legislative and policy framework, organizational\u000astructure, and capacity for the sector; 3) promoting\u000aparticipatory forest and woodland management; 4) enabling\u000aforest-based industries to thrive; 5) creating an enabling\u000aenvironment for attracting private-sector investment; 6)\u000aprotecting and enhancing forest-related environmental\u000aservices; 7) using technical approaches to conservation and\u000asustainable management of forest resources; and 8)\u000aintroducing predictable and sustainable long-term financing mechanisms."
-      ],
-      "Language": [
-        "English"
-      ],
-      "Author": [
-        "World Bank"
-      ],
-      "PublicationCentury": [
-        "2000"
-      ],
-      "PublicationDecade": [
-        "2010"
-      ],
-      "IsScholarly": [
-        "false"
-      ],
-      "Snippet": [
-        "...) for World Bank assistance in developing legislative\u000aand institutional policies and strategies that will take\u000aadvantage of the potential of the region's <h>forest</h>\u000aresources to contribute to poverty..."
-      ],
-      "GroupedDBID": [
-        "VO9"
-      ],
-      "SubjectTerms": [
-        "ACCESS TO FORESTS",
-        "ACCURATE INFORMATION",
-        "ACTION PLAN",
-        "ACTION PLANS",
-        "ACTIVE PARTICIPATION",
-        "AGRICULTURAL LAND",
-        "AGRICULTURAL PRODUCTION",
-        "AGRICULTURE",
-        "AGROFORESTRY",
-        "ANIMAL",
-        "ANIMAL RESOURCES",
-        "BIODIVERSITY",
-        "BIODIVERSITY CONSERVATION",
-        "BUSH MEAT",
-        "CALCULATION",
-        "CAPACITY OF FORESTS",
-        "CARBON",
-        "CARBON SEQUESTRATION",
-        "CLIMATE",
-        "CLIMATE CHANGE",
-        "CLIMATE CHANGE MITIGATION",
-        "COMMUNITY FOREST",
-        "COMMUNITY FORESTS",
-        "COMMUNITY PARTICIPATION",
-        "CONCESSION",
-        "CONCESSION AGREEMENTS",
-        "CONCESSION MANAGEMENT",
-        "CONCESSION RIGHTS",
-        "CONSERVATION OF BIODIVERSITY",
-        "CONSTRUCTION MATERIALS",
-        "COUNTRY'S FOREST RESOURCES",
-        "CRUDE OIL",
-        "DEFORESTATION",
-        "DEFORESTATION PRESSURES",
-        "DEMAND FOR TIMBER",
-        "DIVERGENCE",
-        "ECOSYSTEM",
-        "EFFECTIVE CONSERVATION",
-        "EMISSION",
-        "EMISSION REDUCTION",
-        "EMISSIONS",
-        "EMISSIONS FROM DEFORESTATION",
-        "EMISSIONS REDUCTIONS",
-        "EUCALYPTUS",
-        "FENCING",
-        "FIREWOOD",
-        "FODDER",
-        "FOOD SECURITY",
-        "FOREST ACT",
-        "FOREST ADMINISTRATION",
-        "FOREST ADMINISTRATIONS",
-        "FOREST BIOMASS",
-        "FOREST CARBON",
-        "FOREST CARBON STOCKS",
-        "FOREST COMMISSION",
-        "FOREST COMMUNITIES",
-        "FOREST COMPANIES",
-        "FOREST CONCESSION",
-        "FOREST CONCESSIONS",
-        "FOREST CONSERVATION",
-        "FOREST CORPORATION",
-        "FOREST COVER",
-        "FOREST DEGRADATION",
-        "FOREST DEPARTMENT",
-        "FOREST ECOSYSTEMS",
-        "FOREST ESTATE",
-        "FOREST EXPLOITATION",
-        "FOREST EXTENSION",
-        "FOREST FOODS",
-        "FOREST FUND",
-        "FOREST GOVERNANCE",
-        "FOREST GROWTH",
-        "FOREST GUARDS",
-        "FOREST HABITAT",
-        "FOREST HABITATS",
-        "FOREST HARVESTING",
-        "FOREST INDUSTRIES",
-        "FOREST INDUSTRY",
-        "FOREST INDUSTRY SECTOR",
-        "FOREST INSTITUTIONS",
-        "FOREST INVENTORIES",
-        "FOREST INVENTORY",
-        "FOREST INVESTMENT",
-        "FOREST LAND",
-        "FOREST LAND USE",
-        "FOREST LAW",
-        "FOREST LAW ENFORCEMENT",
-        "FOREST LAWS",
-        "FOREST LEGISLATION",
-        "FOREST MANAGEMENT PLANNING",
-        "FOREST MANAGEMENT PLANS",
-        "FOREST MANAGEMENT RESPONSIBILITIES",
-        "FOREST MANAGEMENT RESPONSIBILITY",
-        "FOREST MANAGEMENT SYSTEM",
-        "FOREST MANAGERS",
-        "FOREST OFFICERS",
-        "FOREST OUTCOMES",
-        "FOREST PLANNING",
-        "FOREST POLICIES",
-        "FOREST POLICY",
-        "FOREST PRODUCT",
-        "FOREST PROTECTION",
-        "FOREST RECOVERY",
-        "FOREST REFORMS",
-        "FOREST RESERVE",
-        "FOREST RESERVES",
-        "FOREST RESOURCE",
-        "FOREST RESOURCE ASSESSMENT",
-        "FOREST RESOURCE MANAGEMENT",
-        "FOREST RESOURCES",
-        "FOREST REVENUE",
-        "FOREST REVENUES",
-        "FOREST SECTOR",
-        "FOREST STAKEHOLDERS",
-        "FOREST TAXATION",
-        "FOREST TYPES",
-        "FOREST USERS",
-        "FORESTERS",
-        "FORESTRY",
-        "FORESTRY COMMISSION",
-        "FORESTRY DEPARTMENT",
-        "FORESTRY DEVELOPMENT",
-        "FORESTRY EDUCATION",
-        "FORESTRY EXTENSION",
-        "FORESTRY INSTITUTIONS",
-        "FORESTRY ISSUES",
-        "FORESTRY MANAGEMENT",
-        "FORESTRY SECTOR",
-        "FORESTRY TRAINING",
-        "FORESTS",
-        "FORESTS MANAGEMENT",
-        "GHG",
-        "GLOBAL GREENHOUSE GAS",
-        "GLOBAL WARMING",
-        "GRASSLAND",
-        "GREENHOUSE",
-        "HUNTING",
-        "HUNTING AREAS",
-        "ILLEGAL HARVESTING",
-        "ILLEGAL LOGGING",
-        "INDIGENOUS FOREST",
-        "INDIGENOUS FORESTS",
-        "INTERNATIONAL CENTER FOR RESEARCH IN AGROFORESTRY",
-        "LAKES",
-        "LAND ADMINISTRATION",
-        "LAND OWNERS",
-        "LAND POLICY",
-        "LAND TENURE",
-        "LAND USE PLANNING",
-        "LAND-USE",
-        "LIVESTOCK",
-        "LOGGING",
-        "LOGS",
-        "MEDICINAL PLANTS",
-        "MIGRATORY BIRDS",
-        "MORATORIUM",
-        "MOUNTAIN RANGES",
-        "MOUNTAINS",
-        "NATIONAL FOREST DEVELOPMENT",
-        "NATIONAL FOREST POLICY",
-        "NATURAL FORESTS",
-        "NATURAL RESOURCE",
-        "NATURAL RESOURCE MANAGEMENT",
-        "NATURAL RESOURCES",
-        "NATURAL RESOURCES MANAGEMENT",
-        "NITROGEN",
-        "PALM",
-        "PLANTATION FORESTS",
-        "PLANTING",
-        "PRESERVATION OF BIODIVERSITY",
-        "PROVINCIAL FOREST",
-        "SAVANNA",
-        "SAVANNAH WOODLANDS",
-        "SAWMILLING",
-        "SILVICULTURE",
-        "STATE FORESTS",
-        "STEWARDSHIP",
-        "SUSTAINABLE FOREST",
-        "SUSTAINABLE FOREST MANAGEMENT",
-        "SUSTAINABLE MANAGEMENT OF FOREST",
-        "SUSTAINABLE MANAGEMENT OF FORESTS",
-        "SWAMPS",
-        "TIMBER",
-        "TIMBER COMPANIES",
-        "TIMBER FOREST",
-        "TIMBER FOREST PRODUCT",
-        "TIMBER FOREST PRODUCTS",
-        "TIMBER FOREST RESOURCES",
-        "TIMBER HARVESTING",
-        "TIMBER INDUSTRY",
-        "TIMBER PRODUCTS",
-        "TIMBER SALES",
-        "TIMBER SPECIES",
-        "TIMBER SUPPLY",
-        "TIMBER UTILIZATION",
-        "TOURISM",
-        "TREE",
-        "TREE SPECIES",
-        "TREES",
-        "TROPICAL FOREST",
-        "TROPICAL VEGETATION",
-        "UNEP",
-        "WATERSHED",
-        "WETLAND AREA",
-        "WILDLIFE",
-        "WILDLIFE CONSERVATION",
-        "WILDLIFE RESOURCES",
-        "WOOD",
-        "WOOD INDUSTRY",
-        "WOOD PROCESSING",
-        "WOOD PRODUCTS",
-        "WOOD-BASED PANELS",
-        "WOODLAND",
-        "WOODLAND RESOURCES",
-        "WOODLANDS"
-      ],
-      "Discipline": [
-        "Forestry",
-        "Agriculture"
-      ],
-      "ContentType": [
-        "Book"
-      ],
-      "SourceType": [
-        "Publisher"
-      ],
-      "Author_xml": [
-        {
-          "sequence": "1",
-          "fullname": "World Bank"
-        }
-      ],
-      "Abstract": [
-        "This policy note was prepared in\u000aresponse to a request from the Government of Southern Sudan\u000a(GoSS) for World Bank assistance in developing legislative\u000aand institutional policies and strategies that will take\u000aadvantage of the potential of the region's forest\u000aresources to contribute to poverty alleviation, food\u000asecurity, sustainable agriculture, economic growth, and to\u000aprotection of forest-related environmental services such as\u000aclimate, biodiversity, water, and wildlife resources. The\u000anote is intended to: (a) take stock of the current situation\u000aon the ground, including identifying the legislative,\u000ainstitutional, governance, and policy reforms needed to\u000acreate an enabling environment for both public and\u000aprivate-sector investment. This should help in contributing\u000ato improved understanding of the currently underutilized\u000apotential of Southern Sudan's forest resources; (b)\u000aanalyze what has worked and what has not worked prior to and\u000asince the signing of the Comprehensive Peace Agreement\u000a(CPA); and (c) suggest priority solutions and actions\u000atowards revitalizing the forestry sector. Key policy issues\u000aaddressed in this note include: 1) strengthening forest\u000aresource information and knowledge base; 2) developing a\u000acoherent legislative and policy framework, organizational\u000astructure, and capacity for the sector; 3) promoting\u000aparticipatory forest and woodland management; 4) enabling\u000aforest-based industries to thrive; 5) creating an enabling\u000aenvironment for attracting private-sector investment; 6)\u000aprotecting and enhancing forest-related environmental\u000aservices; 7) using technical approaches to conservation and\u000asustainable management of forest resources; and 8)\u000aintroducing predictable and sustainable long-term financing mechanisms."
-      ],
-      "PublicationYear": [
-        "2010"
-      ],
-      "SourceID": [
-        "worldbank"
-      ],
-      "Copyright_xml": [
-        {
-          "notice": "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo/ World Bank"
-        }
-      ],
-      "GeographicLocations_xml": [
-        {
-          "name": "Sudan"
-        },
-        {
-          "name": "Africa"
-        }
-      ],
-      "IsOpenAccess": [
-        "true"
-      ],
-      "Title": [
-        "A Legal and Institutional Framework for Sustainable Management of <h>Forest</h> Resources in Southern Sudan : Policy note"
-      ],
-      "PublicationDate": [
-        "2010-02-01"
-      ],
-      "MergedId": [
-        "FETCHMERGED-worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_29780"
-      ],
-      "Notes": [
-        "Africa",
-        "Sudan"
-      ],
-      "Copyright": [
-        "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo/ World Bank"
-      ],
-      "IsPeerReviewed": [
-        "false"
-      ],
-      "OpenAccessLink": [
-        "http://hdl.handle.net/10986/2978"
-      ],
-      "link.rule.ids": [
-        "308,791"
-      ],
-      "LinkModel": [
-        "OpenURL"
-      ],
-      "BookMark": [
-        "eNq1jb0KwkAQhNNYiPoO-wKCWvjXiRgUFMTYH6vZxCPnruztIb69KSz0AaxmmI-Z6Wa6gj3VGAC5hB1H85bMC7dJrninp2gDlSgUKRp6xksgOCBjTXdiA6kgF6VocKIoSa8UwTMUkuxG2ppUIsMSjhL89QUsRv2sU2GINPhoLyvyzXm9HbZfobwgN04exA3LM1BZk9JDojfRlxP0v8x9dbR249FiPnWTxWw--s_qG0zTblk"
-      ],
-      "DatabaseName": [
-        "Open Knowledge Repository"
-      ],
-      "ParticipantIDs": [
-        "worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_2978"
-      ]
-    },
-    {
-      "hasFullText": false,
-      "isFullTextHit": false,
-      "isPrint": false,
-      "inHoldings": false,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=Romania+%3A+Forest+Sector+Rapid+Assessment&rft.au=World+Bank&rft.date=2014-01-01&rft.pub=Washington%2C+DC&rft.externalDBID=n%2Fa&rft.externalDocID=oai_openknowledge_worldbank_org_10986_17570",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHSBTQhTI11QX9HX0svHNCjCNNIVehRxMeT8P9DuX2AkgPrpxdAsg2W3A2jfKmidYyXspin7TOgEO2icycAwIMgzHtgFDlErA0YwgguMelg-VFM1dqM01QDFgOkGtAuXhJQDNxQoAGQD0w-QBKYgIInWuIZzYUd1g47FSASPF4Au7ywuAQ3MA7vn2kGJBZkp2o7w8zzhhTp4UY5TYl428jiCoQnaOAL87iZIYeeMqB9gc-Jo1QbKAdWgCIAPAsaDD3tNAtoYn1-UDprjtjCLBzZTzA2YGZiNQRd5csJVAOs9U2hlHiLIwALa4CHEwJSaJ8zA7ZheBD1-JFWYgQPi2aJKEQZ9aBgoWCnYZNhBxG30M-wUIAGhAA4IBURAiDKEuLmGOHvoIjkL2bmgyZniTNCShngSvGIgwaBgkgJsPKcYAft8SckmKZYWicapFibAFhawGZRskWJgIMngS1U7pahsnjQDFyIlyDCwpgHTbaosAyc8BwIAjEBGKA",
-      "ExternalDocumentID": [
-        "oai_openknowledge_worldbank_org_10986_17570"
-      ],
-      "IngestDate": [
-        "Fri Jul 28 07:13:53 EDT 2023"
-      ],
-      "DBID": [
-        "VO9"
-      ],
-      "PublicationDate_xml": [
-        {
-          "month": "01",
-          "year": "2014",
-          "text": "2014-01"
-        }
-      ],
-      "Score": [
-        "9.828939"
-      ],
-      "DatabaseTitleList": [
-        ""
-      ],
-      "URI": [
-        "http://hdl.handle.net/10986/17570"
-      ],
-      "Publisher_xml": [
-        {
-          "name": "Washington, DC"
-        }
-      ],
-      "ID": [
-        "FETCH-worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_175700"
-      ],
-      "GeographicLocations": [
-        "Romania",
-        "Europe and Central Asia"
-      ],
-      "Publisher": [
-        "Washington, DC"
-      ],
-      "AbstractList": [
-        "Romania relies on the European\u000aStructural and Investment Funds (ESIF) to achieve its\u000acommitments to the European Union (EU) 2020 targets. The use\u000aof the European Agriculture and Rural Development Fund\u000a(EARDF) requires that at least 30 percent of the budget\u000aallocated for rural development as part of the National\u000aRural Development Plan (NRDP) be spent on the environment\u000aand addressing climate change. The forest sector rapid\u000aassessment reviews key issues in the forest sector to\u000adetermine how the sector can contribute to mitigating and\u000aadapting to climate change. The assessment reviews the\u000asector ministries measures for the 2014-2020 structural\u000aoperational programs (SOPs) and NRDP to determine whether\u000athey are climate positive. The latter is an important\u000acondition for using EU structural cohesion funds (SCF) for\u000a2014-2020. The assessment identifies operational programs\u000aand sector plans that can support the climate change\u000aobjectives and fulfill the EU ex ante conditionalities for\u000athe SCF (2014-2020). The assessment also provides a basis\u000afor refining the measures in order to respond to the climate\u000achange requirement. The reimbursable advisory service phase\u000awill involve more in-depth work on the sector, offering more\u000aspecific recommendations."
-      ],
-      "Language": [
-        "English"
-      ],
-      "Author": [
-        "World Bank"
-      ],
-      "PublicationCentury": [
-        "2000"
-      ],
-      "PublicationDecade": [
-        "2010"
-      ],
-      "IsScholarly": [
-        "false"
-      ],
-      "Snippet": [
-        "...) be spent on the environment\u000aand addressing climate change. The <h>forest</h> sector rapid\u000aassessment reviews key issues in the <h>forest</h> sector to\u000adetermine how the sector can contribute to mitigating and\u000aadapting to climate change..."
-      ],
-      "GroupedDBID": [
-        "VO9"
-      ],
-      "SubjectTerms": [
-        "ABSORPTION",
-        "AFFORESTATION",
-        "AFFORESTATION EFFORTS",
-        "AFFORESTATION PROJECTS",
-        "AGRICULTURAL LAND",
-        "AGRICULTURAL LANDS",
-        "AGRICULTURAL PRODUCTION",
-        "AGRICULTURAL WASTE",
-        "AGRICULTURE",
-        "AIR",
-        "AIR TEMPERATURE",
-        "ALTITUDE",
-        "ANIMAL SPECIES",
-        "ARABLE LAND",
-        "AREA OF FOREST",
-        "AREAS OF FOREST",
-        "ASH",
-        "ATMOSPHERE",
-        "BIODIVERSITY CONSERVATION",
-        "BIODIVERSITY PROTECTION",
-        "BIOMASS",
-        "BIOMASS ENERGY",
-        "BIOSPHERE",
-        "BIRD SPECIES",
-        "BUSINESS AS USUAL SCENARIO",
-        "CARBON",
-        "CARBON DIOXIDE",
-        "CARBON ECONOMY",
-        "CARBON EMISSIONS",
-        "CARBON ENERGY",
-        "CARBON FOOTPRINT",
-        "CARBON POOLS",
-        "CARBON SEQUESTRATION",
-        "CARBON SINK",
-        "CARBON SINKS",
-        "CARBON STOCKS",
-        "CLEAN TECHNOLOGIES",
-        "CLIMATE",
-        "CLIMATE CHANGE",
-        "CLIMATE CHANGE MITIGATION",
-        "CLIMATIC CONDITIONS",
-        "CO2",
-        "CONIFEROUS FORESTS",
-        "CONSERVATION OF BIODIVERSITY",
-        "CONSTRUCTION",
-        "CROPLAND",
-        "CULTIVATION",
-        "DATA COLLECTION",
-        "DEGRADATION OF FORESTS",
-        "DEGRADED AREAS",
-        "DEGRADED ECOSYSTEMS",
-        "DEGRADED LAND",
-        "DEGRADED LANDS",
-        "DEMAND FOR TIMBER",
-        "DESERTIFICATION",
-        "DEVELOPMENT OF FORESTS",
-        "DROUGHT",
-        "DROUGHTS",
-        "ECOSYSTEM",
-        "ECOSYSTEM MANAGEMENT",
-        "EMISSION",
-        "EMISSION REDUCTION",
-        "EMISSION TRADING",
-        "EMISSION TRADING SYSTEM",
-        "EMISSIONS",
-        "ENDANGERED SPECIES",
-        "ENERGY MIX",
-        "ESTIMATES OF CARBON",
-        "EVAPOTRANSPIRATION",
-        "EXOTIC SPECIES",
-        "FERTILIZERS",
-        "FIREWOOD",
-        "FISHERIES",
-        "FLOOD PROTECTION",
-        "FLOODING",
-        "FLOODS",
-        "FODDER",
-        "FOREST",
-        "FOREST ADMINISTRATION",
-        "FOREST ADMINISTRATIONS",
-        "FOREST AREA",
-        "FOREST AREAS",
-        "FOREST ASSOCIATIONS",
-        "FOREST AUTHORITIES",
-        "FOREST BIODIVERSITY",
-        "FOREST COMPANIES",
-        "FOREST CONDITIONS",
-        "FOREST COVER",
-        "FOREST COVERAGE",
-        "FOREST DEVELOPMENT",
-        "FOREST ECOSYSTEMS",
-        "FOREST FIRES",
-        "FOREST FUND",
-        "FOREST GROWTH",
-        "FOREST HEALTH",
-        "FOREST INDUSTRY",
-        "FOREST INFRASTRUCTURE",
-        "FOREST INSPECTORATES",
-        "FOREST INSTITUTE",
-        "FOREST INVENTORY",
-        "FOREST LAND",
-        "FOREST LAND RESTITUTION",
-        "FOREST LANDS",
-        "FOREST LEGISLATION",
-        "FOREST MANAGEMENT",
-        "FOREST MANAGEMENT PLAN",
-        "FOREST MANAGEMENT PLANNING",
-        "FOREST MANAGEMENT PLANS",
-        "FOREST MANAGERS",
-        "FOREST OWNER",
-        "FOREST OWNERS",
-        "FOREST OWNERS ASSOCIATION",
-        "FOREST OWNERSHIP",
-        "FOREST PLOTS",
-        "FOREST PRODUCTS",
-        "FOREST PROTECTION",
-        "FOREST RESEARCH",
-        "FOREST RESOURCE",
-        "FOREST RESOURCE MANAGEMENT",
-        "FOREST RESOURCES",
-        "FOREST RESTITUTION",
-        "FOREST ROADS",
-        "FOREST SECTOR",
-        "FOREST SOILS",
-        "FOREST SPECIES",
-        "FOREST STAND",
-        "FOREST STANDS",
-        "FOREST STRATEGY",
-        "FOREST SYSTEMS",
-        "FOREST VEGETATION",
-        "FORESTRY",
-        "FORESTRY PLANNING",
-        "FORESTRY PRODUCTS",
-        "FORESTRY RESEARCH",
-        "FORESTRY SECTOR",
-        "FORESTS",
-        "FOSSIL FUELS",
-        "FRESHWATER",
-        "GEOGRAPHIC AREAS",
-        "GHG",
-        "GHGS",
-        "GREENHOUSE",
-        "GREENHOUSE GAS",
-        "GREENHOUSE GAS EMISSIONS",
-        "GREENHOUSE GASES",
-        "GROUND CARBON",
-        "GROWING SEASON",
-        "HUMIDITY",
-        "HUNTING",
-        "HYDROLOGICAL REGIME",
-        "INVASIVE SPECIES",
-        "INVERTEBRATES",
-        "IPCC",
-        "LAND ADMINISTRATION",
-        "LAND AREA",
-        "LAND AREAS",
-        "LAND DEGRADATION",
-        "LAND OWNERSHIP",
-        "LAND RECLAMATION",
-        "LAND REFORM",
-        "LAND RESTITUTION",
-        "LAND USE",
-        "LAND USE CHANGE",
-        "LOGGING",
-        "LOW-CARBON",
-        "MEADOWS",
-        "METEOROLOGY",
-        "MOUNTAINS",
-        "NATIONAL FOREST AREA",
-        "NATIONAL FOREST AUTHORITY",
-        "NATIONAL FOREST INVENTORY",
-        "NATIONAL FORESTRY",
-        "NATIONAL PARKS",
-        "NATURAL FORESTS",
-        "NATURAL HABITATS",
-        "NATURAL REGENERATION",
-        "NEGATIVE IMPACT",
-        "NUTRIENTS",
-        "ORGANIC CHEMICALS",
-        "PARKS",
-        "PASTURES",
-        "PLAINS",
-        "PLANTATIONS",
-        "PLANTING",
-        "PRECIPITATION",
-        "PRIMARY FORESTS",
-        "PRIVATE FORESTS",
-        "RAIN",
-        "RAINFALL",
-        "REFORESTATION",
-        "REGENERATION",
-        "RENEWABLE ENERGY",
-        "SANDY SOILS",
-        "SAWMILLING",
-        "SECONDARY FORESTS",
-        "SEEDLING PRODUCTION",
-        "SILVER",
-        "SOIL EROSION",
-        "SOLAR RADIATION",
-        "SPECIES COMPOSITION",
-        "STATE FOREST",
-        "STATE FORESTS",
-        "STATE  FORESTS",
-        "SUSTAINABLE FOREST",
-        "SUSTAINABLE FOREST MANAGEMENT",
-        "SUSTAINABLE MANAGEMENT OF FORESTS",
-        "TEMPERATE FOREST",
-        "TEMPERATE FOREST SOILS",
-        "TEMPERATE FORESTS",
-        "TEMPERATURE",
-        "TIMBER",
-        "TIMBER FOREST PRODUCTS",
-        "TIMBER HARVESTING",
-        "TIMBER SALES",
-        "TOPOGRAPHY",
-        "TREE SPECIES",
-        "TREES",
-        "WATERSHED",
-        "WATERSHED MANAGEMENT",
-        "WEATHER CONDITIONS",
-        "WETLAND",
-        "WETLANDS",
-        "WIND",
-        "WIND SPEED",
-        "WOOD",
-        "WOOD FURNITURE",
-        "WOOD INDUSTRY",
-        "WOOD PROCESSING",
-        "WOOD PROCESSING INDUSTRY",
-        "WOOD PRODUCTS",
-        "WOOD WASTE",
-        "WOOD WASTES",
-        "WOODY BIOMASS",
-        "WOODY SPECIES"
-      ],
-      "Discipline": [
-        "Forestry",
-        "Agriculture"
-      ],
-      "ContentType": [
-        "Book"
-      ],
-      "SourceType": [
-        "Publisher"
-      ],
-      "Author_xml": [
-        {
-          "sequence": "1",
-          "fullname": "World Bank"
-        }
-      ],
-      "Abstract": [
-        "Romania relies on the European\u000aStructural and Investment Funds (ESIF) to achieve its\u000acommitments to the European Union (EU) 2020 targets. The use\u000aof the European Agriculture and Rural Development Fund\u000a(EARDF) requires that at least 30 percent of the budget\u000aallocated for rural development as part of the National\u000aRural Development Plan (NRDP) be spent on the environment\u000aand addressing climate change. The forest sector rapid\u000aassessment reviews key issues in the forest sector to\u000adetermine how the sector can contribute to mitigating and\u000aadapting to climate change. The assessment reviews the\u000asector ministries measures for the 2014-2020 structural\u000aoperational programs (SOPs) and NRDP to determine whether\u000athey are climate positive. The latter is an important\u000acondition for using EU structural cohesion funds (SCF) for\u000a2014-2020. The assessment identifies operational programs\u000aand sector plans that can support the climate change\u000aobjectives and fulfill the EU ex ante conditionalities for\u000athe SCF (2014-2020). The assessment also provides a basis\u000afor refining the measures in order to respond to the climate\u000achange requirement. The reimbursable advisory service phase\u000awill involve more in-depth work on the sector, offering more\u000aspecific recommendations."
-      ],
-      "PublicationYear": [
-        "2014"
-      ],
-      "SourceID": [
-        "worldbank"
-      ],
-      "Copyright_xml": [
-        {
-          "notice": "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo"
-        }
-      ],
-      "GeographicLocations_xml": [
-        {
-          "name": "Europe and Central Asia"
-        },
-        {
-          "name": "Romania"
-        }
-      ],
-      "IsOpenAccess": [
-        "true"
-      ],
-      "Title": [
-        "Romania : <h>Forest</h> Sector Rapid Assessment"
-      ],
-      "PublicationDate": [
-        "2014-01"
-      ],
-      "MergedId": [
-        "FETCHMERGED-worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_175700"
-      ],
-      "Notes": [
-        "Romania",
-        "Europe and Central Asia"
-      ],
-      "Copyright": [
-        "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo"
-      ],
-      "IsPeerReviewed": [
-        "false"
-      ],
-      "OpenAccessLink": [
-        "http://hdl.handle.net/10986/17570"
-      ],
-      "link.rule.ids": [
-        "308,791"
-      ],
-      "LinkModel": [
-        "OpenURL"
-      ],
-      "BookMark": [
-        "eNrjZNAIys9NzMtMVLBScMsvSi0uUQhOTS7JL1IISizITFFwLC5OLS7OTc0r4WFgTUvMKU7lhdLcDCFuriHOHrrl-UU5KUmJednx-QWpedl5-eU5qSnpqUWpBfnFmUCTKuPzEzNR5eKR9BSlxxsaWFqYxRuam5obGNDIWABD11M1"
-      ],
-      "DatabaseName": [
-        "Open Knowledge Repository"
-      ],
-      "ParticipantIDs": [
-        "worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_17570"
-      ]
-    },
-    {
-      "hasFullText": false,
-      "isFullTextHit": false,
-      "isPrint": false,
-      "inHoldings": false,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=Forest&rft.au=DK&rft.series=See+How+They+Grow&rft.date=2022-02-03&rft.pub=DK+Children&rft.isbn=9780241533420&rft.externalDocID=9780241575390",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHSBTQhTI11QX9HX0svHNCjCNNIVer1gMeT8P9DuX2AkgPrpxdAsg2W3A2jfKmidYyXspin7TOgEO2icycAwIMgzHtgFDlErA0YwgguMelg-VFM1dqM01QDFgOkGtAuXhJQDNxQoAGQD0w-QBKYgIInWuIZzERd2FsMXxLhAhkJBVqYW2wanpmqDLqIDJrBK0NBVOfLAAbDPCVprbIxY_eENOT0ZtuUM1qc0ANXpxsYmRgaIKgK-cA8mD-zkWBowMzDDDhPLAg_TGQH7u6B7tOBGGEGPOIIbyc3AnVicDSy-gUV7CWjFuRm0Jg8RZGBNBW3vEGJgSs0TZhD3gQ7XFiuoKfjAT5guFmZgj8oHTziIMPDaZNhBwsNGP8NOlEHTzTXE2UMXyYL4shzwnHNxPIrDDSQYFExSgA3fFCNgfy0p2STF0iLRONXCBNg6AjZhki1SDAwkGZQIGyRFjCJpBi5E8MswsKYBU0eqLAMnPJ0DALHr-YI",
-      "ExternalDocumentID": [
-        "9780241575390"
-      ],
-      "IngestDate": [
-        "Tue Jun 20 05:55:45 EDT 2023"
-      ],
-      "PublicationDate_xml": [
-        {
-          "month": "02",
-          "year": "2022",
-          "text": "2022-02-03",
-          "day": "03"
-        }
-      ],
-      "PublicationSeriesTitle": [
-        "See How They Grow"
-      ],
-      "Score": [
-        "9.685877"
-      ],
-      "DatabaseTitleList": [
-        ""
-      ],
-      "URI": [
-        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780241575390"
-      ],
-      "Publisher_xml": [
-        {
-          "name": "DK Children"
-        }
-      ],
-      "ID": [
-        "FETCH-askewsholts_vlebooks_97802415753900"
-      ],
-      "Publisher": [
-        "DK Children"
-      ],
-      "AbstractList": [
-        "See how young forest animals grow and change in the first weeks and months of their lives with this series for little nature lovers. Everyone loves little animals and this ebook is a must for fans of furry forest creatures. This elegant ebook filled with beautiful photography follows baby animals through their early lives - from helpless newborns to confident, curious creatures on the cusp of adulthood. Meet a playful squirrel, a furry fox, and a delightful deer fawn and watch how they grow. A series of photographs shows each animal at different stages in its early life. See an owl hatch from its egg, a mouse before it has fur, and foxes learning to hunt. These ebooks are a delight to read aloud to preschool children or for young readers to pick up themselves. A must for all young fans of animals."
-      ],
-      "Language": [
-        "English"
-      ],
-      "Author": [
-        "DK"
-      ],
-      "PublicationCentury": [
-        "2000"
-      ],
-      "PublicationDecade": [
-        "2020"
-      ],
-      "IsScholarly": [
-        "false"
-      ],
-      "Snippet": [
-        "See how young <h>forest</h> animals grow and change in the first weeks and months of their lives with this series for little nature lovers..."
-      ],
-      "GroupedDBID": [
-        "38.",
-        "CZZ"
-      ],
-      "SubjectTerms": [
-        "Forest animals"
-      ],
-      "Discipline": [
-        "Zoology",
-        "Languages & Literatures"
-      ],
-      "ContentType": [
-        "eBook"
-      ],
-      "SourceType": [
-        "Aggregation Database"
-      ],
-      "Author_xml": [
-        {
-          "fullname": "DK"
-        }
-      ],
-      "ISBN": [
-        "9780241533420",
-        "0241533422"
-      ],
-      "EISBN": [
-        "9780241575390",
-        "0241575397"
-      ],
-      "Abstract": [
-        "See how young forest animals grow and change in the first weeks and months of their lives with this series for little nature lovers. Everyone loves little animals and this ebook is a must for fans of furry forest creatures. This elegant ebook filled with beautiful photography follows baby animals through their early lives - from helpless newborns to confident, curious creatures on the cusp of adulthood. Meet a playful squirrel, a furry fox, and a delightful deer fawn and watch how they grow. A series of photographs shows each animal at different stages in its early life. See an owl hatch from its egg, a mouse before it has fur, and foxes learning to hunt. These ebooks are a delight to read aloud to preschool children or for young readers to pick up themselves. A must for all young fans of animals."
-      ],
-      "PublicationYear": [
-        "2022"
-      ],
-      "SourceID": [
-        "askewsholts"
-      ],
-      "SSID": [
-        "ssj0002823384"
-      ],
-      "Title": [
-        "<h>Forest</h>"
-      ],
-      "PublicationDate": [
-        "2022-02-03"
-      ],
-      "PageCount": [
-        "24"
-      ],
-      "MergedId": [
-        "FETCHMERGED-askewsholts_vlebooks_97802415753900"
-      ],
-      "DEWEY": [
-        "591.73"
-      ],
-      "IsPeerReviewed": [
-        "false"
-      ],
-      "thumbnail_m": [
-        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F5390%2F9780241575390.jpg"
-      ],
-      "link.rule.ids": [
-        "307,791"
-      ],
-      "LinkModel": [
-        "OpenURL"
-      ],
-      "BookMark": [
-        "eNpjZOC1NLcwMDIxNDU3NbY0YEbwjY1NjAw4GHiLi7MMDAyMLIyMjS1MOBnY3PKLUotLeBhY0xJzilN5oTQ3g6aba4izh25icXZqeXFGfk5JcXxZTmpSfn52cTyKHQakqAUADZwqjQ"
-      ],
-      "ParticipantIDs": [
-        "askewsholts_vlebooks_9780241575390"
-      ]
-    },
-    {
-      "hasFullText": false,
-      "isFullTextHit": false,
-      "isPrint": false,
-      "inHoldings": false,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=Forest&rft.au=DK&rft.series=See+How+They+Grow&rft.date=2022-02-03&rft.pub=DK+Children&rft.isbn=9780241533420&rft.externalDocID=9780241574973",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHSBTQhTI11QX9HX0svHNCjCNNIVer1gMeT8P9DuX2AkgPrpxdAsg2W3A2jfKmidYyXspin7TOgEO2icycAwIMgzHtgFDlErA0YwgguMelg-VFM1dqM01QDFgOkGtAuXhJQDNxQoAGQD0w-QBKYgIInWuIZzERd2FsMXxLhAhkJBVqYW2wanpmqDLqIDJrBK0NBVOfLAAbDPCVprbIxY_eENOT0ZtuUM1qc0ANXpxsYmRgaIKgK-cA8mb25iaW7MzMAMO0wsCzxMZwTs74Lu0YIbYQQ94ghuJDcDd2JxNrD4BhbtJaAV5-bQmjxEkIE1FbS9Q4iBKTVPmEHcBzpcW6ygpuADP2G6WJiBPSofPOEgwsBrk2EHCQ8b_Qw7UQZNN9cQZw9dJAviy3LAc87F8SgON5BgUDBJATZ8U4yA_bWkZJMUS4tE41QLE2DrCNiESbZIMTCQZFAibJAUMYqkGbgQwS_DwJoGTB2psgyc8HQOAMCX-Zs",
-      "ExternalDocumentID": [
-        "9780241574973"
-      ],
-      "IngestDate": [
-        "Thu Sep 21 19:30:32 EDT 2023"
-      ],
-      "PublicationDate_xml": [
-        {
-          "month": "02",
-          "year": "2022",
-          "text": "2022-02-03",
-          "day": "03"
-        }
-      ],
-      "PublicationSeriesTitle": [
-        "See How They Grow"
-      ],
-      "Score": [
-        "9.685877"
-      ],
-      "DatabaseTitleList": [
-        ""
-      ],
-      "URI": [
-        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780241574973"
-      ],
-      "Publisher_xml": [
-        {
-          "name": "DK Children"
-        }
-      ],
-      "ID": [
-        "FETCH-askewsholts_vlebooks_97802415749730"
-      ],
-      "Publisher": [
-        "DK Children"
-      ],
-      "AbstractList": [
-        "See how young forest animals grow and change in the first weeks and months of their lives with this series for little nature lovers. Everyone loves little animals and this ebook is a must for fans of furry forest creatures. This elegant ebook filled with beautiful photography follows baby animals through their early lives - from helpless newborns to confident, curious creatures on the cusp of adulthood. Meet a playful squirrel, a furry fox, and a delightful deer fawn and watch how they grow. A series of photographs shows each animal at different stages in its early life. See an owl hatch from its egg, a mouse before it has fur, and foxes learning to hunt. These ebooks are a delight to read aloud to preschool children or for young readers to pick up themselves. A must for all young fans of animals."
-      ],
-      "Language": [
-        "English"
-      ],
-      "Author": [
-        "DK"
-      ],
-      "PublicationCentury": [
-        "2000"
-      ],
-      "PublicationDecade": [
-        "2020"
-      ],
-      "IsScholarly": [
-        "false"
-      ],
-      "Snippet": [
-        "See how young <h>forest</h> animals grow and change in the first weeks and months of their lives with this series for little nature lovers..."
-      ],
-      "GroupedDBID": [
-        "38.",
-        "CZZ"
-      ],
-      "SubjectTerms": [
-        "Forest animals"
-      ],
-      "Discipline": [
-        "Zoology",
-        "Languages & Literatures"
-      ],
-      "ContentType": [
-        "eBook"
-      ],
-      "SourceType": [
-        "Aggregation Database"
-      ],
-      "Author_xml": [
-        {
-          "fullname": "DK"
-        }
-      ],
-      "ISBN": [
-        "9780241533420",
-        "0241533422"
-      ],
-      "EISBN": [
-        "9780241574973",
-        "0241574978"
-      ],
-      "Abstract": [
-        "See how young forest animals grow and change in the first weeks and months of their lives with this series for little nature lovers. Everyone loves little animals and this ebook is a must for fans of furry forest creatures. This elegant ebook filled with beautiful photography follows baby animals through their early lives - from helpless newborns to confident, curious creatures on the cusp of adulthood. Meet a playful squirrel, a furry fox, and a delightful deer fawn and watch how they grow. A series of photographs shows each animal at different stages in its early life. See an owl hatch from its egg, a mouse before it has fur, and foxes learning to hunt. These ebooks are a delight to read aloud to preschool children or for young readers to pick up themselves. A must for all young fans of animals."
-      ],
-      "PublicationYear": [
-        "2022"
-      ],
-      "SourceID": [
-        "askewsholts"
-      ],
-      "SSID": [
-        "ssj0002823384"
-      ],
-      "Title": [
-        "<h>Forest</h>"
-      ],
-      "PublicationDate": [
-        "2022-02-03"
-      ],
-      "PageCount": [
-        "24"
-      ],
-      "MergedId": [
-        "FETCHMERGED-askewsholts_vlebooks_97802415749730"
-      ],
-      "DEWEY": [
-        "591.73"
-      ],
-      "IsPeerReviewed": [
-        "false"
-      ],
-      "thumbnail_m": [
-        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F4973%2F9780241574973.jpg"
-      ],
-      "link.rule.ids": [
-        "307,791"
-      ],
-      "LinkModel": [
-        "OpenURL"
-      ],
-      "BookMark": [
-        "eNpjZOC1NLcwMDIxNDU3sTQ3ZkbwjY1NjAw4GHiLi7MMDAyMLIyMjS1MOBnY3PKLUotLeBhY0xJzilN5oTQ3g6aba4izh25icXZqeXFGfk5JcXxZTmpSfn52cTyKHQakqAUAEj0qnw"
-      ],
-      "ParticipantIDs": [
-        "askewsholts_vlebooks_9780241574973"
-      ]
-    },
-    {
-      "hasFullText": false,
-      "isFullTextHit": false,
-      "isPrint": false,
-      "inHoldings": false,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=Forest&rft.au=Regan%2C+Lisa&rft.date=2022-01-01&rft.pub=Enslow+Publishing%2C+LLC&rft.isbn=9781978530843&rft.externalDocID=EBC30162113",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHSBTQhTI11QX9HX0svHNCjCNNIVevtTMeT8P9DuX2AkgPrpxdAsg2W3A2jfKmidYyXspin7TOgEO2icycAwIMgzHtgFDlErA0YwgguMelg-VFM1dqM01QDFgOkGtAuXhJQDNxQoAGQD0w-QBKYgIInWuIZzERd2FsMXxASlpkN3KGQWJyIPExgZoQ0TuOYV58D21oHHtsC6fGDnRkK6k4ZAbGpsYAE5OAntHGpXJ2dgYWAG7DAaMzMwI50iZmIJOiTO0gK0bQ5mgBn0NC24gahVnQW0_g4RZGBNBW3qEGJgSs0TYeC1ybCD-NBGP8NOlEHDzTXE2UMXpjMePIEMXbUaj-QgAwkGBZMUYEs2xQjYAUtKNkmxtEg0TrUwATZ3gG2SZIsUAwNJBkWC5kgRoUaagQsRvjIMrGnAyE6VZeCEJ1sAnDvqhw",
-      "ExternalDocumentID": [
-        "EBC30162113"
-      ],
-      "IngestDate": [
-        "Thu Sep 21 21:23:29 EDT 2023"
-      ],
-      "PublicationDate_xml": [
-        {
-          "year": "2022",
-          "text": "2022"
-        }
-      ],
-      "Score": [
-        "9.66685"
-      ],
-      "DatabaseTitleList": [
-        ""
-      ],
-      "URI": [
-        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=30162113"
-      ],
-      "PublicationPlace_xml": [
-        {
-          "name": "New York"
-        }
+        "9.719265"
       ],
       "PublicationPlace": [
-        "New York"
-      ],
-      "Publisher_xml": [
-        {
-          "name": "Enslow Publishing, LLC"
-        }
+        "Cambridge"
       ],
       "ID": [
-        "FETCH-proquest_ebookcentral_EBC301621130"
+        "FETCH-LOGICAL-a82742-d1fd1c513cb6d2a470c4e35af7fa6b898beffb307efdbdcf2ca73a6544634d773"
       ],
       "Publisher": [
-        "Enslow Publishing, LLC"
+        "The MIT Press",
+        "MIT Press"
       ],
-      "AbstractList": [
-        "Forests are filled with beautiful plants and cool creatures, and readers get an up-close look at them in this guide to a popular part of the great outdoors. Engaging main text and fun fact boxes deepen readers' understanding of basic life science concepts, while detailed illustrations and full-color photographs bring the beauty of forest life to readers. Hands-on, interactive learning is promoted through sidebars that highlight simple and enjoyable activities readers can do, as well as a quiz that fosters the development of reading comprehension skills."
+      "DOI": [
+        "10.7551/mitpress/9780262016520.001.0001"
       ],
       "Language": [
         "English"
       ],
-      "Author": [
-        "Regan, Lisa"
-      ],
-      "PublicationCentury": [
-        "2000"
-      ],
-      "PublicationDecade": [
-        "2020"
-      ],
       "IsScholarly": [
         "false"
       ],
-      "Snippet": [
-        "<h>Forests</h> are filled with beautiful plants and cool creatures, and readers get an up-close look at them in this guide to a popular part of the great outdoors..."
-      ],
       "GroupedDBID": [
+        "-VQ",
+        "-VX",
+        ".N2",
+        ".N8",
+        "05S",
+        "089",
+        "20A",
+        "38.",
+        "A4J",
         "AABBV",
+        "AADSE",
+        "AAIXT",
+        "AAJRE",
+        "AAKZA",
+        "AAMQX",
+        "AAOBU",
+        "AAYCG",
+        "ABARN",
+        "ABCYY",
+        "ABFDN",
+        "ABFEK",
+        "ABHES",
+        "ACKJY",
+        "ACLGP",
+        "ACLGV",
+        "ADJTR",
+        "ADVEM",
+        "AEFEZ",
+        "AEGYG",
+        "AERYV",
+        "AFCMX",
+        "AGGIE",
+        "AIGZA",
+        "AILDO",
+        "AIXPE",
+        "AJFER",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "AMYDA",
+        "ANUCU",
+        "AOFLF",
+        "AOURY",
+        "AQ.",
+        "AUGRB",
+        "AYLIX",
+        "AZZ",
         "BBABE",
-        "CZZ"
+        "BOTUK",
+        "BTNHK",
+        "CZZ",
+        "C~9",
+        "DHNOV",
+        "DNNHO",
+        "DUGUG",
+        "EBBCW",
+        "EBSCA",
+        "EBZNK",
+        "ECOWB",
+        "ECYUO",
+        "FILVX",
+        "FTZMX",
+        "GHDSN",
+        "HF4",
+        "IVK",
+        "IVL",
+        "JJU",
+        "MIJRL",
+        "MUSTB",
+        "MYL",
+        "NRCWT",
+        "O40",
+        "PQQKQ",
+        "Q6H",
+        "SUPCW",
+        "TI5",
+        "W2P",
+        "XI1",
+        "~I6",
+        "28",
+        "I6",
+        "N2",
+        "N8",
+        "PLCCB",
+        "PQEST",
+        "PQUKI",
+        "VQ",
+        "VX",
+        "28~",
+        "8BJ",
+        "FQK",
+        "JBE"
       ],
       "SubjectTerms": [
-        "Forest ecology"
-      ],
-      "ContentType": [
-        "eBook"
-      ],
-      "SourceType": [
-        "Publisher"
-      ],
-      "Edition": [
-        "1"
-      ],
-      "Author_xml": [
-        {
-          "sequence": "1",
-          "fullname": "Regan, Lisa"
-        }
-      ],
-      "ISBN": [
-        "9781978530843",
-        "1978530846"
-      ],
-      "EISBN": [
-        "1978530854",
-        "9781978530850"
-      ],
-      "Abstract": [
-        "Forests are filled with beautiful plants and cool creatures, and readers get an up-close look at them in this guide to a popular part of the great outdoors. Engaging main text and fun fact boxes deepen readers' understanding of basic life science concepts, while detailed illustrations and full-color photographs bring the beauty of forest life to readers. Hands-on, interactive learning is promoted through sidebars that highlight simple and enjoyable activities readers can do, as well as a quiz that fosters the development of reading comprehension skills."
-      ],
-      "PublicationYear": [
-        "2022"
-      ],
-      "SourceID": [
-        "proquest"
-      ],
-      "SSID": [
-        "ssib049119198"
-      ],
-      "TableOfContents": [
-        "Intro -- Cover -- Title Page -- Copyright -- CONTENTS -- WHAT IS A WOODLAND? -- FROM SEED TO TREE -- LIFE-GIVING LEAVES -- THROUGH THE SEASONS -- DECIDUOUS FORESTS -- EVERGREEN FORESTS -- WOODLAND CREATURES -- WOODLAND BIRDS -- WOODLAND FLOWERS -- WOODLAND WONDERS -- WHAT'S IN A LOG? -- FINDING FOOD -- PROTECTING OUR WOODLANDS -- QUIZ -- GLOSSARY -- INDEX -- FURTHER READING -- Back Cover"
-      ],
-      "Title": [
-        "<h>Forest</h>"
-      ],
-      "PublicationDate": [
-        "2022"
-      ],
-      "PageCount": [
-        "35"
-      ],
-      "OCLC": [
-        "1347027217"
-      ],
-      "MergedId": [
-        "FETCHMERGED-proquest_ebookcentral_EBC301621130"
-      ],
-      "PQID": [
-        "EBC30162113"
-      ],
-      "IsPeerReviewed": [
-        "false"
-      ],
-      "thumbnail_l": [
-        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781978530843/lc.gif&client=summon&freeimage=true"
-      ],
-      "thumbnail_s": [
-        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781978530843/sc.gif&client=summon&freeimage=true"
-      ],
-      "thumbnail_m": [
-        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781978530843/mc.gif&client=summon&freeimage=true"
-      ],
-      "link.rule.ids": [
-        "307,791"
-      ],
-      "LinkModel": [
-        "OpenURL"
-      ],
-      "BookMark": [
-        "eNpjZOAytDS3MDU2sDA1YWbgBbJhfBNjNqCksYm5gZG5kaE5BwNvcXFmkoGJpaGhpaGlBScDm1t-UWpxCQ8Da1piTnEqL5TmZtBwcw1x9tAtKMovLAUqiE9Nys_PTk7NKylKzIl3dXI2NjA0MzI0NDYgQSkA69YscQ"
-      ],
-      "ParticipantIDs": [
-        "proquest_ebookcentral_EBC30162113"
-      ]
-    },
-    {
-      "hasFullText": false,
-      "isFullTextHit": false,
-      "isPrint": false,
-      "inHoldings": false,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=Forest&rft.au=Gray%2C+Susan&rft.au=Bane%2C+Jeff&rft.date=2022-01-01&rft.pub=Cherry+Lake+Publishing&rft.isbn=9781668908938&rft.externalDocID=EBC29378425",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHSBTQhTI11QX9HX0svHNCjCNNIVehloMeT8P9DuX2AkgPrpxdAsg2W3A2jfKmidYyXspin7TOgEO2icycAwIMgzHtgFDlErA0YwgguMelg-VFM1dqM01QDFgOkGtAuXhJQDNxQoAGQD0w-QBKYgIInWuIZzERd2FsMXxLgXJVZirOBxgi6SBc0QIw8dGBmhDR04gw5_rNT2ScxORRr0QulgGpqZWYBmBiEnsKCdTO3q5AxsLJiDJvKYGZhh54qBqkBgrW8JDEfQRjqYAdDTjhAGolZ-ltAaPUSQgTUVtM1DiIEpNU-YgR1yJWclkOUKPsa7UoSB1ybDDhIONvoZdqIMGm6uIc4eujDT4sHTzNC1rfFIjjSQYFAwSQG2d1OMgN20pGSTFEuLRONUCxNgowjYckm2SDEwkGRQJGiOFBFqpBm4ECEuw8CaBkwSqbIMnPDEDQAXN_dZ",
-      "ExternalDocumentID": [
-        "EBC29378425"
-      ],
-      "IngestDate": [
-        "Thu Sep 21 22:08:13 EDT 2023"
-      ],
-      "PublicationDate_xml": [
-        {
-          "year": "2022",
-          "text": "2022"
-        }
-      ],
-      "Score": [
-        "9.637814"
-      ],
-      "DatabaseTitleList": [
-        ""
-      ],
-      "URI": [
-        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=29378425"
-      ],
-      "PublicationPlace_xml": [
-        {
-          "name": "Ann Arbor"
-        }
-      ],
-      "PublicationPlace": [
-        "Ann Arbor"
-      ],
-      "Publisher_xml": [
-        {
-          "name": "Cherry Lake Publishing"
-        }
-      ],
-      "ID": [
-        "FETCH-proquest_ebookcentral_EBC293784250"
-      ],
-      "Publisher": [
-        "Cherry Lake Publishing"
-      ],
-      "AbstractList": [
-        "\"Early readers will explore Earth's different habitats in this series. From their unique features to the creatures that inhabit them, these books examine each habitat in simple sentences that help develop word recognition and improve reading skills. Includes glossary and index. ATOS below 2\"-- Provided by publisher."
-      ],
-      "Language": [
-        "English"
-      ],
-      "Author": [
-        "Gray, Susan",
-        "Bane, Jeff"
-      ],
-      "PublicationCentury": [
-        "2000"
-      ],
-      "PublicationDecade": [
-        "2020"
-      ],
-      "IsScholarly": [
-        "false"
-      ],
-      "Snippet": [
-        "\"Early readers will explore Earth's different habitats in this series. From their unique features to the creatures that inhabit them, these books examine each..."
-      ],
-      "LCCallNum_Ident": [
-        "QH541.5.F6 G725 2023"
-      ],
-      "GroupedDBID": [
-        "AABBV",
-        "BBABE",
-        "CZZ"
-      ],
-      "SubjectTerms": [
-        "Forest ecology",
-        "Juvenile literature"
+        "Ecology",
+        "Ecology & Evolutionary Biology",
+        "Ecosystems & Habitats",
+        "Environment",
+        "Environmental",
+        "Environmental conditions",
+        "Environmental Science",
+        "Environmental Science (see also Chemistry",
+        "Ethnoecology-Mexico-Ixtlán de Juárez",
+        "Forest conservation",
+        "Forest conservation-Mexico-Ixtlán de Juárez",
+        "Forest management",
+        "Forest management-Mexico-Ixtlán de Juárez",
+        "Forests & Rainforests",
+        "Forests and forestry",
+        "Forests and forestry-Mexico-Ixtlán de Juárez",
+        "Government relations",
+        "Indigenous peoples",
+        "Indigenous populations",
+        "Industries",
+        "Industry",
+        "Ixtlán de Juárez (Mexico)-Environmental conditions",
+        "Ixtlán de Juárez (Mexico)-Politics and government",
+        "Ixtlán de Juárez (Mexico)-Social conditions",
+        "Ixtlán de Juárez",
+        "Ixtlán de Juárez (Mexico)",
+        "Knowledge",
+        "Mexico",
+        "NATURE",
+        "Politics and government",
+        "Regulation",
+        "SCIENCE",
+        "Social conditions",
+        "Zapotec",
+        "Zapotec Indians",
+        "Zapotec Indians-Industries-Mexico-Ixtlán de Juárez",
+        "Zapotec Indians-Mexico-Ixtlán de Juárez-Government relations",
+        "Zapotec Indians-Mexico-Ixtlán de Juárez-Social conditions"
       ],
       "Discipline": [
-        "Biology",
+        "History & Archaeology",
         "Ecology"
       ],
       "ContentType": [
-        "eBook"
+        "eBook",
+        "Book"
       ],
       "SourceType": [
+        "Aggregation Database",
         "Publisher"
+      ],
+      "EISBN": [
+        "0262298538",
+        "9780262298537",
+        "0262297647",
+        "9780262297646"
+      ],
+      "PublicationYear": [
+        "2011",
+        "2013"
+      ],
+      "StartPage": [
+        "xii"
+      ],
+      "SourceID": [
+        "proquest",
+        "askewsholts",
+        "projectmuse",
+        "mit",
+        "jstor"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "2011 Massachusetts Institute of Technology"
+        },
+        {
+          "notice": " "
+        }
+      ],
+      "SSID": [
+        "ssj0000551505"
+      ],
+      "TableOfContents": [
+        "Front Matter\u000aTable of Contents\u000aSeries Foreword\u000aAcknowledgments\u000aGlossary of Institutions\u000a1: Introduction\u000a2: Building Forestry in Mexico:\u000a3: The Sierra Juárez of Oaxaca:\u000a4: Forestry Comes to Oaxaca:\u000a5: Industrial Forestry, Watershed Control, and the Rise of Community Forestry, 1956–2001\u000a6: The Mexican Forest Service:\u000a7: The Acrobatics of Transparency and Obscurity:\u000a8: Working the Indigenous Industrial\u000a9: Conclusion\u000aAppendix\u000aNotes\u000aReferences\u000aIndex",
+        "Cover\u000aTitle Page, Copyright\u000aContents\u000aSeries Foreword\u000aAcknowledgments\u000aGlossary of Institutions\u000a1. Introduction\u000a2. Building Forestry in Mexico: Ambitious Regulations and Popular Evasions\u000a3. The Sierra Juárez of Oaxaca: Mobile Landscapes, Political Economy, and the Fires of War\u000a4. Forestry Comes to Oaxaca: Bureaucrats, Gangsters, and Indigenous Communities, 1926 – 1956\u000a5. Industrial Forestry, Watershed Control, and the Rise of Community Forestry, 1956–2001\u000a6. The Mexican Forest Service: Knowledge, Ignorance, and Power\u000a7. The Acrobatics of Transparency and Obscurity: Forestry Regulations Travel to Oaxaca\u000a8. Working the Indigenous Industrial\u000a9. Conclusion\u000aAppendix\u000aNotes\u000aReferences\u000aIndex",
+        "Intro -- Contents -- Series Foreword -- Acknowledgments -- Glossary of Institutions -- Chapter 1. Introduction -- Setting the Stage -- Uncertain Authority -- Indigenous Bureaucracy in Oaxaca -- State-Making and the Production of Knowledge and Ignorance -- Making Things Technical, Making Things Political -- Writing Resistance Into History: Nature, Culture, and Human Agency -- Methods -- Chapter 2. Building Forestry in Mexico: Ambitious Regulations and Popular Evasions -- A Brief History of Mexican Forests -- Revolution and Environmental Order -- Mexican Environmentalism and the Valley of Mexico -- Regulating Forests -- Dangerous Papers: Transport Documents and Burning Permits -- Forest Industrialization as Progress, 1940 - 1972 -- The Decline of Industrial Forestry and the Rise of Community Forestry -- Foresters' Careers: From State Employees to Private Entrepreneurs -- Bureaucratic Transparency and the Opacity of Local Knowledge -- Political Culture: Stable Discourses and Unstable Institutions -- Chapter 3. The Sierra Juárez of Oaxaca: Mobile Landscapes, Political Economy, and the Fires of War -- The Environment of the Sierra Juárez: Topography, Climate, Vegetation, and Cultivation -- Conquest, Demographic Collapse, and Commodity Production -- The Sierra Ju á rez as Military Landscape -- Making Communal Territory in the Sierra Juárez -- The Mining Boom of the Nineteenth Century -- Impacts of Fire and Grazing on Nineteenth-Century Landscapes -- Unleashing the Fires of War: Revolution in the Sierra, 1912 - 1925 -- Mobile Pines and Changing Forests -- Landscapes in Motion: Pines, Oaks, and Fires -- Chapter 4. Forestry Comes to Oaxaca: Bureaucrats, Gangsters, and Indigenous Communities, 1926 - 1956 -- Forestry Comes to Oaxaca -- Cárdenas in Oaxaca: Community Politics and Environmental Restoration",
+        "Zapotec Views of Forests and Agriculture Before the Arrival of Industrial Logging -- Relationship Between Forests and Climate -- The Impact of the Forest Service Between 1930 and 1956 -- Fire Suppression and Climate Control in the Sierra -- State Nature Rituals: The Día del Árbol -- Logging in the Sierra, 1934-1956 -- Biological Impacts of Logging -- The Defeat of State Elites and the Rise of Industrial Logging -- Traveling Theories: Official Ideology and Popular Understandings ofForests -- Chapter 5. Industrial Forestry, Watershed Control, and the Rise of Community Forestry, 1956-2001 -- The Floods of 1944 and the Creation of the Papaloapan Commission -- Industrial Forestry Arrives in Oaxaca -- Forestry Meets Resistance: Negotiations over Logging -- Economic and Ecological Impact of Logging, 1958-1982 -- The Struggle Against FAPATUX and the Rise of Community Forestry -- Indigenous Identity and the Struggle for Control of the Forests -- Land Use Change in Ixtlán, 1945 - 2001: The Decline of Agriculture -- Fire Becomes Wild as People Become Urban: The Decline of Agriculture and the Rise of Forestry -- Community Forestry: Resistance, Hybridization, or Appropriation? -- Imposing Degradation Histories on the State -- Traditional Agroecological Knowledge as a Critique of Modern Forestry -- Discourse, Power, and Memory -- Chapter 6. The Mexican Forest Service: Knowledge, Ignorance, and Power -- Conventional Knowledge at the Convention: Bureaucratic Authority and the Rhetoric of Numbers -- State Power and the Danger of Public Secrets -- Representing Success, Silencing Failure: Rhetoric of Fire and Firewood -- Knowledge-Making in the Labyrinth: Bureaucratic Careers and the Danger of Reports -- Portraits of Three Functionaries -- Institutional Instability and Personal Uncertainty -- Translating and Obscuring within the Bureaucracy",
+        "Obscurity, Numbers, and Translations -- Regulations, Representations, and Alliances: Fire Control, Firewood Cutting, and Tree Planting -- Fire and Firewood Regulations: Performing a Knowing Institution -- Conclusions -- Chapter 7. The Acrobatics of Transparency and Obscurity: Forestry Regulations Travel to Oaxaca -- Institutional Ecologies in Oaxaca -- Daily Paperwork at Headquarters -- Tricky Allies -- Corruption Stories and Professional Life -- Acrobatics of Transparency: Fire, Firewood, and Management Plans -- Fire, Firewood, and the Rhetoric of Transparency -- State-Making and Knowledge -- Chapter 8. Working the Indigenous Industrial -- Traveling to Ixtlán -- Making Knowledge by Appealing to Other Places -- Community and Indigeneity -- Politics and Cargos -- Office Holding -- Building Bureaucracy in the Forest -- Alliance Building and Brokerage -- State and Community Alliances -- Conclusions -- Chapter 9. Conclusion -- Appendix -- Notes -- References -- Index"
+      ],
+      "Title": [
+        "Instituting Nature"
+      ],
+      "PageCount": [
+        "320"
+      ],
+      "OCLC": [
+        "768348244"
+      ],
+      "DatabaseTitle": [
+        "International Bibliography of the Social Sciences (IBSS)"
+      ],
+      "EndPage": [
+        "xii"
+      ],
+      "Subtitle": [
+        "Authority, Expertise, and Power in Mexican <h>Forests</h>"
+      ],
+      "Notes": [
+        "SourceType-Books-1",
+        "ObjectType-Book-1"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-a82742-d1fd1c513cb6d2a470c4e35af7fa6b898beffb307efdbdcf2ca73a6544634d773"
+      ],
+      "Copyright": [
+        "2011 Massachusetts Institute of Technology"
+      ],
+      "IngestDate": [
+        "Wed Sep 27 00:45:03 EDT 2023",
+        "Wed Oct 04 10:05:03 EDT 2023",
+        "Wed Oct 04 10:29:40 EDT 2023",
+        "Fri Sep 29 06:44:01 EDT 2023",
+        "Thu Sep 15 19:48:19 EDT 2022",
+        "Sun Jul 17 11:46:57 EDT 2022",
+        "Fri Sep 29 00:40:38 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "11",
+          "year": "2011",
+          "text": "20111104",
+          "day": "04"
+        }
+      ],
+      "PublicationSeriesTitle": [
+        "Politics, Science, and the Environment"
+      ],
+      "DatabaseTitleList": [
+        "",
+        "International Bibliography of the Social Sciences (IBSS)",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "URI": [
+        "https://www.jstor.org/stable/j.ctt5hhdn3",
+        "http://dx.doi.org/10.7551/mitpress/9780262016520.001.0001",
+        "https://muse.jhu.edu/book/19766",
+        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=3339344",
+        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780262297646",
+        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780262298537",
+        "https://search.proquest.com/docview/1151917409"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Cambridge"
+        }
+      ],
+      "Publisher_xml": [
+        {
+          "name": "The MIT Press"
+        },
+        {
+          "name": "MIT Press"
+        }
+      ],
+      "PQPubID": [
+        "23473"
+      ],
+      "AbstractList": [
+        "Here, Mathews describes Mexico's efforts over the past hundred years to manage its forests through forestry science and biodiversity conservation. He shows that transparent knowledge was produced by encounters between the relatively weak forestry bureaucracy and the indigenous people who manage and own the pine forests of Mexico.",
+        "Greater knowledge and transparency are often promoted as the keys to solving a wide array of governance problems. In Instituting Nature, Andrew Mathews describes Mexico's efforts over the past hundred years to manage its forests through forestry science and biodiversity conservation. He shows that transparent knowledge was produced not by official declarations or scientists' expertise but by encounters between the relatively weak forestry bureaucracy and the indigenous people who manage and own the pine forests of Mexico. Mathews charts the performances, collusions, complicities, and evasions that characterize the forestry bureaucracy. He shows that the authority of forestry officials is undermined by the tension between local realities and national policy; officials must juggle sweeping knowledge claims and mundane concealments, ambitious regulations and routine rule breaking. Moving from government offices in Mexico City to forests in the state of Oaxaca, Mathews describes how the science of forestry and bureaucratic practices came to Oaxaca in the 1930s and how local environmental and political contexts set the stage for local resistance. He tells how the indigenous Zapotec people learned the theory and practice of industrial forestry as employees and then put these skills to use when they become the owners and managers of the area's pine forests--eventually incorporating forestry into their successful claims for autonomy from the state. Despite the apparently small scale and local contexts of this balancing act between the power of forestry regulations and the resistance of indigenous communities, Mathews shows that it has large implications--for how we understand the modern state, scientific knowledge, and power and for the global carbon markets for which Mexican forests might become valuable. Summary reprinted by permission of MIT Press",
+        "A study of how encounters between forestry bureaucrats and indigenous forest managers in Mexico produced official knowledge about forests and the state.\u000aGreater knowledge and transparency are often promoted as the keys to solving a wide array of governance problems. In Instituting Nature, Andrew Mathews describes Mexico's efforts over the past hundred years to manage its forests through forestry science and biodiversity conservation. He shows that transparent knowledge was produced not by official declarations or scientists' expertise but by encounters between the relatively weak forestry bureaucracy and the indigenous people who manage and own the pine forests of Mexico. Mathews charts the performances, collusions, complicities, and evasions that characterize the forestry bureaucracy. He shows that the authority of forestry officials is undermined by the tension between local realities and national policy; officials must juggle sweeping knowledge claims and mundane concealments, ambitious regulations and routine rule breaking. Moving from government offices in Mexico City to forests in the state of Oaxaca, Mathews describes how the science of forestry and bureaucratic practices came to Oaxaca in the 1930s and how local environmental and political contexts set the stage for local resistance. He tells how the indigenous Zapotec people learned the theory and practice of industrial forestry as employees and then put these skills to use when they become the owners and managers of the area's pine forests—eventually incorporating forestry into their successful claims for autonomy from the state. Despite the apparently small scale and local contexts of this balancing act between the power of forestry regulations and the resistance of indigenous communities, Mathews shows that it has large implications—for how we understand the modern state, scientific knowledge, and power and for the global carbon markets for which Mexican forests might become valuable.",
+        "A study of how encounters between forestry bureaucrats and indigenous forest managers in Mexico produced official knowledge about forests and the state.",
+        "A study of how encounters between forestry bureaucrats and indigenous forest managers in Mexico produced official knowledge about forests and the state.Greater knowledge and transparency are often promoted as the keys to solving a wide array of governance problems. In Instituting Nature, Andrew Mathews describes Mexico's efforts over the past hundred years to manage its forests through forestry science and biodiversity conservation. He shows that transparent knowledge was produced not by official declarations or scientists' expertise but by encounters between the relatively weak forestry bureaucracy and the indigenous people who manage and own the pine forests of Mexico. Mathews charts the performances, collusions, complicities, and evasions that characterize the forestry bureaucracy. He shows that the authority of forestry officials is undermined by the tension between local realities and national policy; officials must juggle sweeping knowledge claims and mundane concealments, ambitious regulations and routine rule breaking. Moving from government offices in Mexico City to forests in the state of Oaxaca, Mathews describes how the science of forestry and bureaucratic practices came to Oaxaca in the 1930s and how local environmental and political contexts set the stage for local resistance. He tells how the indigenous Zapotec people learned the theory and practice of industrial forestry as employees and then put these skills to use when they become the owners and managers of the area's pine forests-eventually incorporating forestry into their successful claims for autonomy from the state. Despite the apparently small scale and local contexts of this balancing act between the power of forestry regulations and the resistance of indigenous communities, Mathews shows that it has large implications-for how we understand the modern state, scientific knowledge, and power and for the global carbon markets for which Mexican forests might become valuable.",
+        "Greater knowledge and transparency are often promoted as the keys to solving a wide array of governance problems. In Instituting Nature, Andrew Mathews describes Mexico's efforts over the past hundred years to manage its forests through forestry science and biodiversity conservation. He shows that transparent knowledge was produced not by official declarations or scientists' expertise but by encounters between the relatively weak forestry bureaucracy and the indigenous people who manage and own the pine forests of Mexico. Mathews charts the performances, collusions, complicities, and evasions that characterize the forestry bureaucracy. He shows that the authority of forestry officials is undermined by the tension between local realities and national policy; officials must juggle sweeping knowledge claims and mundane concealments, ambitious regulations and routine rule breaking. Moving from government offices in Mexico City to forests in the state of Oaxaca, Mathews describes how the science of forestry and bureaucratic practices came to Oaxaca in the 1930s and how local environmental and political contexts set the stage for local resistance. He tells how the indigenous Zapotec people learned the theory and practice of industrial forestry as employees and then put these skills to use when they become the owners and managers of the area's pine forests--eventually incorporating forestry into their successful claims for autonomy from the state. Despite the apparently small scale and local contexts of this balancing act between the power of forestry regulations and the resistance of indigenous communities, Mathews shows that it has large implications--for how we understand the modern state, scientific knowledge, and power and for the global carbon markets for which Mexican forests might become valuable.The hardcover edition does not include a dust jacket."
+      ],
+      "Author": [
+        "Mathews, Andrew S"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "Snippet": [
+        ".... In Instituting Nature, Andrew Mathews describes Mexico's efforts over the past hundred years to manage its <h>forests</h> through forestry science and biodiversity conservation...",
+        "A study of how encounters between forestry bureaucrats and indigenous <h>forest</h> managers in Mexico produced official knowledge about <h>forests</h> and the state...",
+        "A study of how encounters between forestry bureaucrats and indigenous <h>forest</h> managers in Mexico produced official knowledge about <h>forests</h> and the state.",
+        "A study of how encounters between forestry bureaucrats and indigenous <h>forest</h> managers in Mexico produced official knowledge about <h>forests</h>...",
+        "Here, Mathews describes Mexico's efforts over the past hundred years to manage its <h>forests</h> through forestry science and biodiversity conservation..."
+      ],
+      "ProviderPackageCode": [
+        "MIJRL"
+      ],
+      "LCCallNum_Ident": [
+        "F1221.Z3 M373 2011"
+      ],
+      "LCCallNum": [
+        "F1221.Z3M373 2011"
       ],
       "Edition": [
         "1"
@@ -2714,140 +1667,121 @@
       "Author_xml": [
         {
           "sequence": "1",
-          "fullname": "Gray, Susan"
-        },
-        {
-          "sequence": "2",
-          "fullname": "Bane, Jeff"
+          "fullname": "Mathews, Andrew S"
         }
       ],
       "ISBN": [
-        "9781668908938",
-        "166890893X"
-      ],
-      "EISBN": [
-        "9781668913710",
-        "1668913712"
+        "0262516446",
+        "9780262516440",
+        "9780262016520",
+        "0262016524"
       ],
       "Abstract": [
-        "\"Early readers will explore Earth's different habitats in this series. From their unique features to the creatures that inhabit them, these books examine each habitat in simple sentences that help develop word recognition and improve reading skills. Includes glossary and index. ATOS below 2\"-- Provided by publisher."
-      ],
-      "PublicationYear": [
-        "2022"
-      ],
-      "SourceID": [
-        "proquest"
-      ],
-      "SSID": [
-        "ssj0002669004"
-      ],
-      "TableOfContents": [
-        "Cover -- Title page -- Copyright Page -- Table of Containts -- Trees! -- Glossary -- Index -- Back Cover"
-      ],
-      "Title": [
-        "<h>Forest</h>"
+        "Greater knowledge and transparency are often promoted as the keys to solving a wide array of governance problems. In Instituting Nature, Andrew Mathews describes Mexico's efforts over the past hundred years to manage its forests through forestry science and biodiversity conservation. He shows that transparent knowledge was produced not by official declarations or scientists' expertise but by encounters between the relatively weak forestry bureaucracy and the indigenous people who manage and own the pine forests of Mexico. Mathews charts the performances, collusions, complicities, and evasions that characterize the forestry bureaucracy. He shows that the authority of forestry officials is undermined by the tension between local realities and national policy; officials must juggle sweeping knowledge claims and mundane concealments, ambitious regulations and routine rule breaking. Moving from government offices in Mexico City to forests in the state of Oaxaca, Mathews describes how the science of forestry and bureaucratic practices came to Oaxaca in the 1930s and how local environmental and political contexts set the stage for local resistance. He tells how the indigenous Zapotec people learned the theory and practice of industrial forestry as employees and then put these skills to use when they become the owners and managers of the area's pine forests--eventually incorporating forestry into their successful claims for autonomy from the state. Despite the apparently small scale and local contexts of this balancing act between the power of forestry regulations and the resistance of indigenous communities, Mathews shows that it has large implications--for how we understand the modern state, scientific knowledge, and power and for the global carbon markets for which Mexican forests might become valuable.The hardcover edition does not include a dust jacket."
       ],
       "PublicationDate": [
-        "2022"
+        "20111104",
+        "2011",
+        "2011-11-04",
+        "2013-06-26",
+        "20110101"
       ],
-      "PageCount": [
-        "28"
-      ],
-      "OCLC": [
-        "1336989048"
-      ],
-      "MergedId": [
-        "FETCHMERGED-proquest_ebookcentral_EBC293784250"
+      "Genre": [
+        "Book"
       ],
       "DEWEY": [
-        "577.3"
+        "333.75/16097274"
       ],
       "PQID": [
-        "EBC29378425"
+        "EBC3339344"
       ],
       "IsPeerReviewed": [
         "false"
       ],
-      "thumbnail_l": [
-        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781668908938/lc.gif&client=summon&freeimage=true"
-      ],
-      "thumbnail_s": [
-        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781668908938/sc.gif&client=summon&freeimage=true"
-      ],
       "thumbnail_m": [
-        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781668908938/mc.gif&client=summon&freeimage=true"
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fmuse.jhu.edu%2Fbook%2F19766%2Fimage%2Ffront_cover.jpg%3Fformat%3D180",
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F7646%2F9780262297646.jpg",
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F8537%2F9780262298537.jpg"
       ],
       "link.rule.ids": [
-        "307,791"
+        "307,308,791,795,797,798,25098,28276"
+      ],
+      "linkProvider": [
+        "ProQuest Ebooks"
       ],
       "LinkModel": [
         "OpenURL"
       ],
       "BookMark": [
-        "eNpjZOC1NLcwNDOzsDQ0Njc0YEbwDSwsjS3YGLgMjY3NLIFcEwsOBt7i4iwDAwMjMzNLAwMTTgY2t_yi1OISHgbWtMSc4lReKM3NoOHmGuLsoVtQlF9YClQQn5qUn5-dnJpXUpSYE-_q5GxkaWxuYWJkakCCUgBMmi0d"
+        "eNqNkU9PwjAYh2uMRkQufgDjDT0A_d_uqASVhOjFeG26rpWNseHa6de3MDxgYuKhado8v_d92weAIYJjwRiarPOwaaz3k0RIiDmGiDMMxxCiuCA6AufbW5xIRuRxd2CIU8pPQU9wSajElJ6BgfdF5GEsySDrgct55UMe2pBX79fPOrSNvQAnTpfeDvZ7H7w9zF6nT6PFy-N8ercYaYkFxaMMuQwZhohJeYY1FdBQS5h2wmmeykSm1rmUQGFdlmbGYaMF0ZzFmQjNhCB9cNMV3jT1R2t9UOvcG1uWurJ16xVCDCVIUJhE9LZDtV_ZL7-sy-DVZ2nTul55tf-S3ePFf1nB4xx9MPw1wg4ztgqNLtXsfkoISQilB2RhTVi33qo_-suOjMpUByCothLVj0R1IFFFf2orMUavumjhQ93sw4UyIbDlMqsI-QYdq5YG"
+      ],
+      "DatabaseName": [
+        "International Bibliography of the Social Sciences (IBSS)",
+        "International Bibliography of the Social Sciences",
+        "International Bibliography of the Social Sciences"
       ],
       "ParticipantIDs": [
-        "proquest_ebookcentral_EBC29378425"
+        "proquest_miscellaneous_1151917409",
+        "askewsholts_vlebooks_9780262298537",
+        "askewsholts_vlebooks_9780262297646",
+        "proquest_ebookcentral_EBC3339344",
+        "projectmuse_ebooks_9780262298537",
+        "mit_books_10_7551_mitpress_9780262016520_001_0001",
+        "jstor_books_j_ctt5hhdn3"
       ]
     },
     {
-      "hasFullText": false,
+      "hasFullText": true,
       "isFullTextHit": false,
       "isPrint": false,
-      "inHoldings": false,
-      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=China+Forest+Policy+%3A+Deepening+the+Transition%2C+Broadening+the+Relationship&rft.au=World+Bank&rft.date=2010-05-01&rft.pub=World+Bank&rft.externalDBID=n%2Fa&rft.externalDocID=oai_openknowledge_worldbank_org_10986_2993",
-      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHSBTQhTI11QX9HX0svHNCjCNNIVeulnMeT8P9DuX2AkgPrpxdAsg2W3A2jfKmidYyXspin7TOgEO2icycAwIMgzHtgFDlErA0YwgguMelg-VFM1dqM01QDFgOkGtAuXhJQDNxQoAGQD0w-QBKYgIInWuIZzoWcWgG7V1gZd21lcog05Ohg8duCSCrozF7bDClzPgZd8QVJJfmIKQhK-yg66Shqy_he0cscpMS8bebABMk-ONNiApgzl9Gq0WgXl_GpQ_MDHCOPBZ8EmAQ2Jzy9KB02BW5jFA2tFY2YGZmPQNZ-ccAU8oBoRWteHCDKwgPZ_CDEwpeYJM3A7phdBTydJFWYQc0VsC0zMUYCWi8XCDByQoCqqFGEIAoedgk2GHUTMRj_DTgEShApWCvAAVACGkQIiAHUUEMEHlkIOPlGGYDfXEGcPXSQvIXsVNO8DNCa_qDKe-GAwkGBQMEkBNstTjIC9yaRkkxRLi0TjVAsTYNsN2MBKtkgxMJBk8KGmlVLUNU6agQuReGQYWNOA-SFVloETnrMBZklmRQ",
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Forest&rft.jtitle=Clinical+chemistry+%28Baltimore%2C+Md.%29&rft.au=Rifai%2C+Nader&rft.date=2019-04-01&rft.pub=American+Association+for+Clinical+Chemistry%2C+Inc&rft.issn=0009-9147&rft.eissn=1530-8561&rft.volume=65&rft.issue=4&rft.spage=606&rft_id=info:doi/10.1373%2Fclinchem.2018.299735&rft.externalDocID=A625789922",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV1La8JAEB5ahbZQSl_QN16qp0RDngtiMUGJoqWEUNpeJLUJCsWC2kL_fWfc3SRVD5ZeQhLC7iYzO7sz-b4ZgMqSPeh1XKXv-j4zwm77sWcpuuMwdF0IcMG6PTN4Mp9bIpo94_n_iP2LQiA_fSamzBq2A_FWCef4LStN3Y3FD3aKM9W0h6AzQBc4LH-hgLNLFL2ch-Vbvf1frcF7qDfEwv2D5qSN4g08R_3BI2oQHjfSIarbOfsVvPckkXIoC8XRFtWN3udjidjtv6m58EIwTnjB63uCTOdjDBrLQVMyWD_am5zKLFCQaaee7HQFwUmbOLSoPK2mGksrW1Mck2dhl2aYl4wQ6mbkbKq1SEmwaut1m3JOEIGUXplQeo6Ki6vN058sZdFuWmSbKAnvNhTRzbTNAhRdL_BfMhatvagLmg5YEC2xm-q6TsQajgu3KXYj4SEcCDei1OQyO4KteHIMO30BlDiB_fqowaVXr44ap6C2W6HnK9TUgF5vPo2GkaBGfExiys41yAavn0Epcoaa9WrUIiNB95ahgxizxNIT3HxrifHKzqGyYWsXGz95CXuZXlxBYT79jK9hN52qN-Jj_gAdUjzO",
       "ExternalDocumentID": [
-        "oai_openknowledge_worldbank_org_10986_2993"
+        "A625789922"
+      ],
+      "Issue": [
+        "4"
       ],
       "IngestDate": [
-        "Fri Jul 28 07:13:44 EDT 2023"
-      ],
-      "DBID": [
-        "VO9"
+        "Fri Sep 15 04:17:59 EDT 2023"
       ],
       "PublicationDate_xml": [
         {
-          "month": "05",
-          "year": "2010",
-          "text": "2010-05-01",
+          "month": "04",
+          "year": "2019",
+          "text": "20190401",
           "day": "01"
         }
       ],
       "Score": [
-        "9.63556"
-      ],
-      "DatabaseTitleList": [
-        ""
-      ],
-      "URI": [
-        "http://hdl.handle.net/10986/2993"
+        "9.414324"
       ],
       "Publisher_xml": [
         {
-          "name": "World Bank"
+          "name": "American Association for Clinical Chemistry, Inc"
         }
       ],
       "ID": [
-        "FETCH-worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_29930"
+        "FETCH-gale_infotracacademiconefile_A6257899223"
       ],
-      "GeographicLocations": [
-        "East Asia and Pacific",
-        "Asia",
-        "China",
-        "East Asia"
+      "DOI": [
+        "10.1373/clinchem.2018.299735"
       ],
       "Publisher": [
-        "World Bank"
-      ],
-      "AbstractList": [
-        "A pattern of forest area loss followed\u000aby a period of reforestation is representative of the forest\u000atransition process. Forest transition has been observed in\u000amany countries and is a feature of the development process.\u000aChina reached its inflection point earlier and faster than\u000amost other countries that have gone through the transition.\u000aThe report describes the success of reforms to forest\u000aresource tenure in collective forest areas. These reforms,\u000awhich collectively amount to the largest transfer of forest\u000aassets in history, have effectively extended forest\u000aownership to a million, mostly poor, rural households. These\u000areforms have increased forest-based incomes, have increased\u000atimber harvests, and have done so sustainably by virtue of\u000aincreasing planting and forest management and resource\u000aprotection effort. The World Bank work in China's\u000aforestry sector has been successful. However, the\u000adevelopments discussed in this report raise new\u000aopportunities and challenges. It is no longer clear, for\u000aexample, that World Bank loans are especially important in\u000arelation to the financing of commercial plantations. While\u000athe Bank has begun to move its plantation financing to\u000apublic goods, or ecological plantings, these are other\u000aopportunities. This report brings together findings from\u000aBank-supported studies with experience gleaned from Bank\u000asupport of over $1 billion in forestry projects. Chapter one\u000aintroduces the contents and approach of the report. Chapter\u000atwo summarizes key data and information of China's\u000aforest sector and resources. Chapter three presents findings\u000aon collective forest tenure reform and chapter four,\u000apotential forest supply. Chapter five concludes with\u000afindings to clarify choices and options available to the\u000aWorld Bank and China for moving ahead in forestry."
+        "American Association for Clinical Chemistry, Inc"
       ],
       "Language": [
         "English"
       ],
+      "EISSN": [
+        "1530-8561"
+      ],
       "Author": [
-        "World Bank"
+        "Rifai, Nader"
+      ],
+      "ISSN": [
+        "0009-9147"
       ],
       "PublicationCentury": [
         "2000"
@@ -2856,301 +1790,2076 @@
         "2010"
       ],
       "IsScholarly": [
-        "false"
+        "true"
       ],
-      "Snippet": [
-        "A pattern of <h>forest</h> area loss followed\u000aby a period of reforestation is representative of the <h>forest</h>\u000atransition process..."
+      "PublicationTitle": [
+        "Clinical chemistry (Baltimore, Md.)"
       ],
       "GroupedDBID": [
-        "VO9"
-      ],
-      "SubjectTerms": [
-        "AFFORESTATION",
-        "AGRARIAN LAND REFORM",
-        "AGRICULTURAL LAND",
-        "AGRICULTURAL LANDS",
-        "AGRICULTURAL PRODUCTION",
-        "AGRICULTURAL SECTOR",
-        "AGRICULTURE",
-        "ALLOCATION OF LAND",
-        "AREA OF FOREST",
-        "BAMBOO",
-        "BARREN LAND",
-        "BASES",
-        "BIODIVERSITY",
-        "BIODIVERSITY VALUE",
-        "BIRD",
-        "BIRD MIGRATION",
-        "BREEDING",
-        "BURNING",
-        "CALCULATION",
-        "CANOPY",
-        "CARBON",
-        "CARBON SEQUESTRATION",
-        "CARBON SINK",
-        "CLEAR CUTTING",
-        "CLIMATE",
-        "CLIMATE CHANGE",
-        "COMMERCIAL FORESTS",
-        "COMMERCIAL LOGGING",
-        "COMMERCIALLY VALUABLE FORESTS",
-        "COMMUNITY FOREST",
-        "COMMUNITY FOREST MANAGEMENT",
-        "COMPENSATION PROGRAM",
-        "CONSERVATION",
-        "CULTIVATED AREA",
-        "CULTIVATED LAND",
-        "DEFORESTATION",
-        "DEMAND FOR TIMBER",
-        "DESERTIFICATION",
-        "DETERMINANTS",
-        "DEVELOPMENT OF FORESTRY",
-        "DOMESTIC CONSUMPTION",
-        "ENVIRONMENTAL DAMAGE",
-        "ENVIRONMENTAL ECONOMICS",
-        "ENVIRONMENTAL GOALS",
-        "ENVIRONMENTAL PROTECTION",
-        "ENVIRONMENTAL SCIENCES",
-        "ENVIRONMENTAL SERVICES",
-        "ETHNIC COMMUNITIES",
-        "EXTINCTION",
-        "FIELD SURVEY",
-        "FIRE PREVENTION",
-        "FOREST",
-        "FOREST AREA",
-        "FOREST AREAS",
-        "FOREST AUTHORITIES",
-        "FOREST BOUNDARY",
-        "FOREST CHANGE",
-        "FOREST CLEARING",
-        "FOREST COMMUNITIES",
-        "FOREST COVER",
-        "FOREST COVERAGE",
-        "FOREST DATA",
-        "FOREST DEGRADATION",
-        "FOREST DEPLETION",
-        "FOREST DEVELOPMENT",
-        "FOREST ECOSYSTEM",
-        "FOREST ECOSYSTEMS",
-        "FOREST ENTERPRISES",
-        "FOREST FIRE",
-        "FOREST FIRES",
-        "FOREST GROWTH",
-        "FOREST HARVESTING",
-        "FOREST INDUSTRIES",
-        "FOREST INVENTORY",
-        "FOREST LAW",
-        "FOREST LOGGING",
-        "FOREST MANAGEMENT",
-        "FOREST MANAGEMENT PLAN",
-        "FOREST MANAGEMENT PLANS",
-        "FOREST OPERATIONS",
-        "FOREST OWNERS",
-        "FOREST OWNERSHIP",
-        "FOREST PEOPLES",
-        "FOREST PLANTATION",
-        "FOREST PLANTATIONS",
-        "FOREST PLOT",
-        "FOREST POLICIES",
-        "FOREST POLICY",
-        "FOREST PRODUCTION",
-        "FOREST PROPERTY",
-        "FOREST PROTECTION",
-        "FOREST REFORMS",
-        "FOREST REGULATIONS",
-        "FOREST RESOURCE",
-        "FOREST RESOURCES",
-        "FOREST RESTORATION",
-        "FOREST SECTOR GOVERNANCE",
-        "FOREST STOCK",
-        "FOREST STRUCTURE",
-        "FOREST SUPPLY",
-        "FOREST TRANSITION",
-        "FOREST TYPE",
-        "FOREST TYPES",
-        "FOREST USE",
-        "FORESTRY",
-        "FORESTRY ACTIVITIES",
-        "FORESTRY AGENCIES",
-        "FORESTRY INDUSTRIES",
-        "FORESTRY PLANNING",
-        "FORESTRY PROGRAMS",
-        "FORESTRY PROJECTS",
-        "FORESTRY SECTOR",
-        "FORESTRY STATISTICS",
-        "FORESTRY SUBSECTOR",
-        "FRESH WATER",
-        "GEOGRAPHIC DISTRIBUTION",
-        "GLOBAL CARBON EMISSIONS",
-        "GLOBAL FOREST",
-        "GLOBAL FOREST RESOURCES",
-        "GLOBAL FOREST RESOURCES ASSESSMENT",
-        "GRASSLAND",
-        "INDUSTRIAL WOOD PRODUCTS",
-        "ISSUES",
-        "LAND AREA",
-        "LAND AREAS",
-        "LAND FOR AFFORESTATION",
-        "LAND LAW",
-        "LAND MANAGEMENT",
-        "LAND OWNERS",
-        "LAND OWNERSHIP",
-        "LAND RIGHTS",
-        "LAND TENURE",
-        "LAND USE",
-        "LAND VALUE",
-        "LANDSCAPE",
-        "LIVESTOCK",
-        "LOGGING",
-        "LOGS",
-        "MANAGED FORESTS",
-        "MATURE FORESTS",
-        "MEDICINAL PLANTS",
-        "MOUNTAINS",
-        "NATIONAL FOREST",
-        "NATIONAL FOREST ESTATE",
-        "NATIONAL FOREST INVENTORY",
-        "NATIONAL FOREST POLICY",
-        "NATIONAL PARKS",
-        "NATURAL ECOSYSTEMS",
-        "NATURAL FOREST",
-        "NATURAL FORESTS",
-        "NATURE RESERVE",
-        "NATURE RESERVES",
-        "PASTURE",
-        "PLANT",
-        "PLANTATION FOREST",
-        "PLANTATION FORESTS",
-        "PLANTING",
-        "RAINFALL",
-        "RATES OF DEFORESTATION",
-        "REFORESTATION",
-        "REGENERATION",
-        "RIVER VALLEYS",
-        "SOIL EROSION",
-        "STATE FOREST",
-        "STATE FOREST ADMINISTRATION",
-        "STATE FOREST SECTOR",
-        "STATE FORESTRY",
-        "STATE FORESTRY ADMINISTRATION",
-        "SUSTAINABLE FOREST",
-        "SUSTAINABLE FOREST MANAGEMENT",
-        "SUSTAINABLE MANAGEMENT",
-        "SUSTAINABLE MANAGEMENT OF FOREST",
-        "TEMPERATURE",
-        "TIMBER",
-        "TIMBER FOREST",
-        "TIMBER FOREST PRODUCTS",
-        "TIMBER FORESTS",
-        "TIMBER HARVEST",
-        "TIMBER HARVESTING",
-        "TIMBER HARVESTS",
-        "TIMBER PLANTATIONS",
-        "TIMBER PRODUCTION",
-        "TIMBER SUPPLY",
-        "TOURISM",
-        "TREE",
-        "TREE PLANTING",
-        "TREE SPECIES",
-        "TREES",
-        "UNSUSTAINABLE LOGGING",
-        "USE OF FORESTS",
-        "VEGETATION",
-        "VILLAGE FOREST",
-        "VILLAGES",
-        "WEATHER",
-        "WILD ANIMALS",
-        "WILDLIFE",
-        "WILDLIFE PROTECTION",
-        "WOOD",
-        "WOOD PRODUCTS"
+        "---",
+        "-~X",
+        ".55",
+        "04C",
+        "18M",
+        "29B",
+        "2WC",
+        "4.4",
+        "53G",
+        "5GY",
+        "5RE",
+        "5VS",
+        "5WD",
+        "6J9",
+        "7RV",
+        "7X7",
+        "88E",
+        "88I",
+        "8AO",
+        "8C1",
+        "8FE",
+        "8FG",
+        "8FH",
+        "8FI",
+        "8FJ",
+        "8R4",
+        "8R5",
+        "AABZA",
+        "AACZT",
+        "AAPBV",
+        "AAPQZ",
+        "AAPXW",
+        "AAQQT",
+        "AAVAP",
+        "ABJCF",
+        "ABLYK",
+        "ABOCM",
+        "ABPPZ",
+        "ABPQP",
+        "ABPTD",
+        "ABSGY",
+        "ABSQV",
+        "ABUWG",
+        "ABWST",
+        "ABXZS",
+        "ACGOD",
+        "ACIHN",
+        "ACIWK",
+        "ACPRK",
+        "ACYHN",
+        "ADBBV",
+        "ADGZP",
+        "ADIPN",
+        "ADVEK",
+        "AEAQA",
+        "AELWJ",
+        "AENEX",
+        "AETBJ",
+        "AFFZL",
+        "AFGWE",
+        "AFKRA",
+        "AFRAH",
+        "AFUVZ",
+        "AGINJ",
+        "AGQXC",
+        "AGUTN",
+        "AHMBA",
+        "AIMBJ",
+        "AJEEA",
+        "AKALU",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ALXQX",
+        "AZQEC",
+        "BAWUL",
+        "BCRHZ",
+        "BENPR",
+        "BGLVJ",
+        "BHPHI",
+        "BKEYQ",
+        "BKSAR",
+        "BPHCQ",
+        "BTFSW",
+        "BVXVI",
+        "BYORX",
+        "C45",
+        "CASEJ",
+        "CCPQU",
+        "CS3",
+        "D1I",
+        "DIK",
+        "DU5",
+        "DWQXO",
+        "E3Z",
+        "EBD",
+        "EBS",
+        "EIHBH",
+        "EJD",
+        "EMOBN",
+        "ENERS",
+        "EX3",
+        "F5P",
+        "F9R",
+        "FECEO",
+        "FHSFR",
+        "FLUFQ",
+        "FOEOM",
+        "FOTVD",
+        "FQBLK",
+        "FYUFA",
+        "GAUVT",
+        "H13",
+        "HCIFZ",
+        "H~9",
+        "IAO",
+        "IEA",
+        "IGS",
+        "IH2",
+        "IHR",
+        "IHW",
+        "INH",
+        "INIJC",
+        "INR",
+        "ITC",
+        "KB.",
+        "KBUDW",
+        "KOP",
+        "KQ8",
+        "KSI",
+        "KSN",
+        "L7B",
+        "LK5",
+        "M1P",
+        "M2P",
+        "M7R",
+        "ML-",
+        "NAPCQ",
+        "NOMLY",
+        "OAUYM",
+        "OBOKY",
+        "OCZFY",
+        "OK1",
+        "OPAEJ",
+        "OVD",
+        "OWPYF",
+        "PCBAR",
+        "PDBOC",
+        "PQQKQ",
+        "PROAC",
+        "PSQYO",
+        "PV9",
+        "Q2X",
+        "R0Z",
+        "RHF",
+        "RHI",
+        "RNS",
+        "ROX",
+        "RUSNO",
+        "RZL",
+        "S0X",
+        "SJN",
+        "SV3",
+        "TCC",
+        "TEORI",
+        "TR2",
+        "TWZ",
+        "U5U",
+        "UCJ",
+        "UKHRP",
+        "UNMZH",
+        "W8F",
+        "WH7",
+        "WOQ",
+        "WOW",
+        "X7M",
+        "YBU",
+        "YHG",
+        "YSK",
+        "YWH",
+        "YXANX",
+        "ZA5",
+        "ZCG"
       ],
       "Discipline": [
-        "Forestry",
-        "Agriculture",
-        "Environmental Sciences"
+        "Medicine"
+      ],
+      "Volume": [
+        "65"
       ],
       "ContentType": [
-        "Book"
+        "Journal Article"
       ],
       "SourceType": [
-        "Publisher"
+        "Aggregation Database"
       ],
       "Author_xml": [
         {
           "sequence": "1",
-          "fullname": "World Bank"
+          "fullname": "Rifai, Nader"
         }
       ],
-      "Abstract": [
-        "A pattern of forest area loss followed\u000aby a period of reforestation is representative of the forest\u000atransition process. Forest transition has been observed in\u000amany countries and is a feature of the development process.\u000aChina reached its inflection point earlier and faster than\u000amost other countries that have gone through the transition.\u000aThe report describes the success of reforms to forest\u000aresource tenure in collective forest areas. These reforms,\u000awhich collectively amount to the largest transfer of forest\u000aassets in history, have effectively extended forest\u000aownership to a million, mostly poor, rural households. These\u000areforms have increased forest-based incomes, have increased\u000atimber harvests, and have done so sustainably by virtue of\u000aincreasing planting and forest management and resource\u000aprotection effort. The World Bank work in China's\u000aforestry sector has been successful. However, the\u000adevelopments discussed in this report raise new\u000aopportunities and challenges. It is no longer clear, for\u000aexample, that World Bank loans are especially important in\u000arelation to the financing of commercial plantations. While\u000athe Bank has begun to move its plantation financing to\u000apublic goods, or ecological plantings, these are other\u000aopportunities. This report brings together findings from\u000aBank-supported studies with experience gleaned from Bank\u000asupport of over $1 billion in forestry projects. Chapter one\u000aintroduces the contents and approach of the report. Chapter\u000atwo summarizes key data and information of China's\u000aforest sector and resources. Chapter three presents findings\u000aon collective forest tenure reform and chapter four,\u000apotential forest supply. Chapter five concludes with\u000afindings to clarify choices and options available to the\u000aWorld Bank and China for moving ahead in forestry."
-      ],
       "PublicationYear": [
-        "2010"
+        "2019"
+      ],
+      "StartPage": [
+        "606"
       ],
       "SourceID": [
-        "worldbank"
+        "gale"
       ],
       "Copyright_xml": [
         {
-          "notice": "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo/ World Bank"
+          "notice": "COPYRIGHT 2019 American Association for Clinical Chemistry, Inc."
         }
       ],
-      "GeographicLocations_xml": [
-        {
-          "name": "East Asia and Pacific"
-        },
-        {
-          "name": "Asia"
-        },
-        {
-          "name": "East Asia"
-        },
-        {
-          "name": "China"
-        }
-      ],
-      "IsOpenAccess": [
-        "true"
+      "SSID": [
+        "ssj0004786"
       ],
       "Title": [
-        "China <h>Forest</h> Policy : Deepening the Transition, Broadening the Relationship"
+        "<h>Forest</h>"
       ],
       "PublicationDate": [
-        "2010-05-01"
+        "20190401"
       ],
       "MergedId": [
-        "FETCHMERGED-worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_29930"
-      ],
-      "Notes": [
-        "East Asia and Pacific",
-        "Asia",
-        "China",
-        "East Asia"
+        "FETCHMERGED-gale_infotracacademiconefile_A6257899223"
       ],
       "Copyright": [
-        "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo/ World Bank"
+        "COPYRIGHT 2019 American Association for Clinical\u000aChemistry, Inc."
+      ],
+      "Audience": [
+        "Academic"
       ],
       "IsPeerReviewed": [
-        "false"
+        "true"
       ],
-      "OpenAccessLink": [
-        "http://hdl.handle.net/10986/2993"
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/lc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/sc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/mc.gif&issn=0009-9147&client=summon"
       ],
       "link.rule.ids": [
-        "308,791"
+        "315,791,792,795,28275,28276"
+      ],
+      "linkProvider": [
+        "Oxford University Press"
       ],
       "LinkModel": [
         "OpenURL"
       ],
       "BookMark": [
-        "eNq1zEEKwkAMheFuXIh6hxxAoSqIdWm1CG5E3Q_RxjZ0SEqmUHp7KwjqAVy9xcf7h9ExLVkQMjUKDZzU872DDeyIahKWApqS4GoogRtWmcLWFPMPncnjC0LJ9TgaPNAHmrx3FF2y_TU9zFo1n99QKqd9tRJtPeUFGdXaZ9U6p8i_5r4-Vrh5nKxXbpEky_g_1Schfl_V"
-      ],
-      "DatabaseName": [
-        "Open Knowledge Repository"
+        "eNqVi1sKAiEYRn-iIrvsoC1oXsbbY0RDC-g9xLQMZ4Rx9k8-tIH4Hg7nwAdwZJQwocXJ5zT6dxgIp8wQbq0WcgGISUGxkYotAVFKLbas0xvY1vpp2mmjEKz7MoU672EVXa7h8OMOSH-9X2745XJ4pDGWeXK-7RmG5MsYYmr9rLjUxlrOxd-HL5SkNEE"
       ],
       "ParticipantIDs": [
-        "worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_2993"
+        "gale_infotracacademiconefile_A625789922"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Forest&rft.jtitle=Clinical+chemistry+%28Baltimore%2C+Md.%29&rft.au=Rifai%2C+Nader&rft.date=2019-04-01&rft.pub=Oxford+University+Press&rft.issn=0009-9147&rft.eissn=1530-8561&rft.volume=65&rft.issue=4&rft.spage=606&rft.epage=606&rft_id=info:doi/10.1373%2Fclinchem.2018.299735",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHSNLSwsgV0X0IILSy8f06AI00hX6IJC0HYYaBTDSkZwcZ2SnwwaKdcHVmaGoL3bZib2BYW6oLujQHOs0Is0mBlYjUD3ebMwsHo4e7pFIfZHmoNvfAS1J4CZ28QcuoXO2NxYH7T_EBg6oD3phhZ6wLLZHHrxG7xYNoPWNW4CDPkwJ4IXWsOXmoBG4JJTgU01pEXYsNMcKfKQIAM_tFmq4AhJR0IMTKl5wgwcvtCJdxEGXpsMO9AtnsUlNvoZdqIMym6uIc4eujDL4qFJsjgeYZOxBINCokWyoVmSiUGiSRqwj2QJ7GWkWqaZGacBW3CGaSZJlpIMMviMkMIvLc3ABQxPS8gKFxkGlpKi0lRZBk54QMkxsDo5B3lEgWhXv4AgOWiMAQC9raSQ",
+      "linkToHtml": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHSNLSwsgV0X0IILSy8f06AI00hX6JhbMXRlJaxYBJfVKfnJoGFyfWBNZgjauG1mYl9QqAu6OAo0wQq9RYOZgdUEWBmasDCwOrn6BQQhNkeag697BDUmgDnbxBy6f87Y3FgftPkQGDSgDemGFnrAgtkceusbvEw2g1Y0bgIMOTD3gVdZw9eZgIbfklOB7TSkFdiwoxzJ940gAz-0QargCElBQgxMqXnCDBy-0Cl3EQZemww70P2dxSU2-hl2ogzKbq4hzh66MMvioYmxOB5hk7EEg0KiRbKhWZKJQaJJGrB3ZAnsX6RappkZpwHbboZpJkmWkgwy-IyQwi8tz8DpEeLrE-_j6ectzcAFDFhLyDoXGQaWkqLSVFkGTniIyUGjCgDKQqIj",
+      "Issue": [
+        "4"
+      ],
+      "IngestDate": [
+        "Tue Sep 19 06:59:33 EDT 2023"
+      ],
+      "DBID": [
+        "3V.",
+        "4U-",
+        "7QO",
+        "7RV",
+        "7TM",
+        "7U7",
+        "7X7",
+        "7XB",
+        "88E",
+        "88I",
+        "8AO",
+        "8C1",
+        "8FD",
+        "8FE",
+        "8FG",
+        "8FI",
+        "8FJ",
+        "8FK",
+        "ABJCF",
+        "ABUWG",
+        "AFKRA",
+        "AZQEC",
+        "BENPR",
+        "BGLVJ",
+        "BHPHI",
+        "BKSAR",
+        "C1K",
+        "D1I",
+        "DWQXO",
+        "FR3",
+        "FYUFA",
+        "GHDGH",
+        "GNUQQ",
+        "HCIFZ",
+        "K9.",
+        "KB.",
+        "KB0",
+        "M0S",
+        "M1P",
+        "M2P",
+        "NAPCQ",
+        "P64",
+        "PCBAR",
+        "PDBOC",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "Q9U",
+        "RC3",
+        "S0X"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "04",
+          "year": "2019",
+          "text": "20190401",
+          "day": "01"
+        }
+      ],
+      "Score": [
+        "9.414324"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Washington"
+        }
+      ],
+      "URI": [
+        "https://search.proquest.com/docview/2231316764"
+      ],
+      "PublicationPlace": [
+        "Washington"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Oxford University Press"
+        }
+      ],
+      "ID": [
+        "FETCH-proquest_journals_22313167643"
+      ],
+      "GeographicLocations": [
+        "New York",
+        "Utah"
+      ],
+      "PQPubID": [
+        "47786"
+      ],
+      "DOI": [
+        "10.1373/clinchem.2018.299735"
+      ],
+      "Publisher": [
+        "Oxford University Press"
+      ],
+      "Language": [
+        "English"
+      ],
+      "EISSN": [
+        "1530-8561"
+      ],
+      "Author": [
+        "Rifai, Nader"
+      ],
+      "ISSN": [
+        "0009-9147"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "PublicationTitle": [
+        "Clinical chemistry (Baltimore, Md.)"
+      ],
+      "GroupedDBID": [
+        "---",
+        "-~X",
+        ".55",
+        "04C",
+        "18M",
+        "29B",
+        "2WC",
+        "3V.",
+        "4.4",
+        "4U-",
+        "53G",
+        "5GY",
+        "5RE",
+        "5VS",
+        "5WD",
+        "6J9",
+        "7QO",
+        "7RV",
+        "7TM",
+        "7U7",
+        "7X7",
+        "7XB",
+        "88E",
+        "88I",
+        "8AO",
+        "8C1",
+        "8FD",
+        "8FE",
+        "8FG",
+        "8FH",
+        "8FI",
+        "8FJ",
+        "8FK",
+        "8R4",
+        "8R5",
+        "AABZA",
+        "AACZT",
+        "AAPBV",
+        "AAPQZ",
+        "AAPXW",
+        "AAQQT",
+        "AAVAP",
+        "ABJCF",
+        "ABLYK",
+        "ABOCM",
+        "ABPPZ",
+        "ABPQP",
+        "ABPTD",
+        "ABSGY",
+        "ABSQV",
+        "ABUWG",
+        "ABWST",
+        "ABXZS",
+        "ACGOD",
+        "ACIHN",
+        "ACIWK",
+        "ACPRK",
+        "ACYHN",
+        "ADBBV",
+        "ADGZP",
+        "ADIPN",
+        "ADVEK",
+        "AEAQA",
+        "AELWJ",
+        "AENEX",
+        "AETBJ",
+        "AFFZL",
+        "AFGWE",
+        "AFKRA",
+        "AFRAH",
+        "AFUVZ",
+        "AGINJ",
+        "AGQXC",
+        "AGUTN",
+        "AHMBA",
+        "AIMBJ",
+        "AJEEA",
+        "AKALU",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ALXQX",
+        "AZQEC",
+        "BAWUL",
+        "BCRHZ",
+        "BENPR",
+        "BGLVJ",
+        "BHPHI",
+        "BKEYQ",
+        "BKSAR",
+        "BPHCQ",
+        "BTFSW",
+        "BVXVI",
+        "BYORX",
+        "C1K",
+        "C45",
+        "CASEJ",
+        "CCPQU",
+        "CS3",
+        "D1I",
+        "DIK",
+        "DU5",
+        "DWQXO",
+        "E3Z",
+        "EBD",
+        "EBS",
+        "EIHBH",
+        "EJD",
+        "EMOBN",
+        "ENERS",
+        "EX3",
+        "F5P",
+        "F9R",
+        "FECEO",
+        "FHSFR",
+        "FLUFQ",
+        "FOEOM",
+        "FOTVD",
+        "FQBLK",
+        "FR3",
+        "FYUFA",
+        "GAUVT",
+        "H13",
+        "HCIFZ",
+        "H~9",
+        "IAO",
+        "IEA",
+        "IGS",
+        "IH2",
+        "IHR",
+        "IHW",
+        "INH",
+        "INIJC",
+        "INR",
+        "ITC",
+        "K9.",
+        "KB.",
+        "KBUDW",
+        "KOP",
+        "KQ8",
+        "KSI",
+        "KSN",
+        "L7B",
+        "LK5",
+        "M1P",
+        "M2P",
+        "M7R",
+        "ML-",
+        "NAPCQ",
+        "NOMLY",
+        "OAUYM",
+        "OBOKY",
+        "OCZFY",
+        "OK1",
+        "OPAEJ",
+        "OVD",
+        "OWPYF",
+        "P64",
+        "PCBAR",
+        "PDBOC",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "PROAC",
+        "PSQYO",
+        "PV9",
+        "Q2X",
+        "Q9U",
+        "R0Z",
+        "RC3",
+        "RHF",
+        "RHI",
+        "RNS",
+        "ROX",
+        "RUSNO",
+        "RZL",
+        "S0X",
+        "SJN",
+        "SV3",
+        "TCC",
+        "TEORI",
+        "TR2",
+        "TWZ",
+        "U5U",
+        "UCJ",
+        "UKHRP",
+        "UNMZH",
+        "W8F",
+        "WH7",
+        "WOQ",
+        "WOW",
+        "X7M",
+        "YBU",
+        "YHG",
+        "YSK",
+        "YWH",
+        "YXANX",
+        "ZA5",
+        "ZCG"
+      ],
+      "Volume": [
+        "65"
+      ],
+      "Discipline": [
+        "Medicine"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Nader",
+          "surname": "Rifai",
+          "fullname": "Rifai, Nader"
+        }
+      ],
+      "PublicationYear": [
+        "2019"
+      ],
+      "StartPage": [
+        "606"
+      ],
+      "SourceID": [
+        "proquest"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright American Association for Clinical Chemistry Apr 2019"
+        }
+      ],
+      "GeographicLocations_xml": [
+        {
+          "name": "New York"
+        },
+        {
+          "name": "Utah"
+        }
+      ],
+      "SSID": [
+        "ssj0004786"
+      ],
+      "Title": [
+        "<h>Forest</h>"
+      ],
+      "PublicationDate": [
+        "20190401"
+      ],
+      "DatabaseTitle": [
+        "University Readers",
+        "ProQuest Central Student",
+        "Technology Collection",
+        "Technology Research Database",
+        "ProQuest Central Essentials",
+        "SIRS Editorial",
+        "Materials Science Collection",
+        "Nucleic Acids Abstracts",
+        "ProQuest Health & Medical Complete (Alumni)",
+        "ProQuest Central (Alumni Edition)",
+        "SciTech Premium Collection",
+        "ProQuest Pharma Collection",
+        "Environmental Sciences and Pollution Management",
+        "ProQuest Central",
+        "Earth, Atmospheric & Aquatic Science Collection",
+        "Genetics Abstracts",
+        "Health Research Premium Collection",
+        "Biotechnology Research Abstracts",
+        "Health and Medicine Complete (Alumni Edition)",
+        "Natural Science Collection",
+        "ProQuest Central Korea",
+        "Materials Science Database",
+        "ProQuest Medical Library (Alumni)",
+        "ProQuest Materials Science Collection",
+        "ProQuest Public Health",
+        "ProQuest Science Journals (Alumni Edition)",
+        "ProQuest Central Basic",
+        "Toxicology Abstracts",
+        "ProQuest Science Journals",
+        "ProQuest One Academic Eastern Edition",
+        "Earth, Atmospheric & Aquatic Science Database",
+        "ProQuest Nursing & Allied Health Source",
+        "ProQuest Hospital Collection",
+        "ProQuest Technology Collection",
+        "Health Research Premium Collection (Alumni)",
+        "ProQuest SciTech Collection",
+        "ProQuest Hospital Collection (Alumni)",
+        "Biotechnology and BioEngineering Abstracts",
+        "Nursing & Allied Health Premium",
+        "ProQuest Health & Medical Complete",
+        "ProQuest Medical Library",
+        "ProQuest One Academic UKI Edition",
+        "Materials Science & Engineering Collection",
+        "ProQuest Nursing & Allied Health Source (Alumni)",
+        "Engineering Research Database",
+        "ProQuest One Academic",
+        "ProQuest Central (Alumni)"
+      ],
+      "EndPage": [
+        "606"
+      ],
+      "MergedId": [
+        "FETCHMERGED-proquest_journals_22313167643"
+      ],
+      "PQID": [
+        "2231316764"
+      ],
+      "Copyright": [
+        "Copyright American Association for Clinical Chemistry Apr 2019"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/lc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/sc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/mc.gif&issn=0009-9147&client=summon"
+      ],
+      "Database_xml": [
+        {
+          "sequence": "1",
+          "dbid": "BENPR",
+          "name": "ProQuest Central",
+          "url": "https://login.ezproxy.princeton.edu/login?url=https://search.proquest.com/central",
+          "sourceTypes": [
+            "Aggregation Database"
+          ]
+        }
+      ],
+      "link.rule.ids": [
+        "315,791,792,795,21709,21714,28275,28276,34104,34875,44314,44649"
+      ],
+      "linkProvider": [
+        "ProQuest"
+      ],
+      "LinkModel": [
+        "DirectLink"
+      ],
+      "IEDL.DBID": [
+        "HCIFZ"
+      ],
+      "BookMark": [
+        "eNpjYJAxNNAzNDY31k_OycxLzkjN1TMyMLTQM7K0NDc2ZWLgNDQ1NtC1MDUzZGHgNDAwsNS1NDQx52DgKi7OAnJNzC3MOBnY3PKLUotLeBhY0xJzilN5oTQ3g7Kba4izh25BUX5hKVBBfFZ-aVEeUCreyMjY0NjQzNzMxJg4VQAw1ivd"
+      ],
+      "DatabaseName": [
+        "ProQuest Central (Corporate)",
+        "University Readers",
+        "Biotechnology Research Abstracts",
+        "ProQuest Nursing and Allied Health Journals",
+        "Nucleic Acids Abstracts",
+        "Toxicology Abstracts",
+        "Health & Medical Collection",
+        "ProQuest Central (purchase pre-March 2016)",
+        "Medical Database (Alumni Edition)",
+        "Science Database (Alumni Edition)",
+        "ProQuest Pharma Collection",
+        "Public Health Database",
+        "Technology Research Database",
+        "ProQuest SciTech Collection",
+        "ProQuest Technology Collection",
+        "Hospital Premium Collection",
+        "Hospital Premium Collection (Alumni Edition)",
+        "ProQuest Central (Alumni) (purchase pre-March 2016)",
+        "Materials Science & Engineering Collection",
+        "ProQuest Central (Alumni)",
+        "ProQuest Central UK/Ireland",
+        "ProQuest Central Essentials",
+        "ProQuest Central",
+        "Technology Collection",
+        "Natural Science Collection",
+        "Earth, Atmospheric & Aquatic Science Collection",
+        "Environmental Sciences and Pollution Management",
+        "ProQuest Materials Science Collection",
+        "ProQuest Central",
+        "Engineering Research Database",
+        "Health Research Premium Collection",
+        "Health Research Premium Collection (Alumni)",
+        "ProQuest Central Student",
+        "SciTech Premium Collection",
+        "ProQuest Health & Medical Complete (Alumni)",
+        "Materials Science Database",
+        "Nursing & Allied Health Database (Alumni Edition)",
+        "ProQuest Health & Medical Collection",
+        "Medical Database",
+        "Science Database (ProQuest)",
+        "Nursing & Allied Health Premium",
+        "Biotechnology and BioEngineering Abstracts",
+        "Earth, Atmospheric & Aquatic Science Database",
+        "Materials Science Collection",
+        "ProQuest One Academic Eastern Edition (DO NOT USE)",
+        "ProQuest One Academic",
+        "ProQuest One Academic UKI Edition",
+        "ProQuest Central Basic",
+        "Genetics Abstracts",
+        "SIRS Editorial"
+      ],
+      "ParticipantIDs": [
+        "proquest_journals_2231316764"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Forest&rft.jtitle=Clinical+chemistry+%28Baltimore%2C+Md.%29&rft.au=Rifai%2C+Nader&rft.date=2019-04-01&rft.pub=American+Association+for+Clinical+Chemistry%2C+Inc&rft.issn=0009-9147&rft.eissn=1530-8561&rft.volume=65&rft.issue=4&rft.spage=606&rft_id=info:doi/10.1373%2Fclinchem.2018.299735&rft.externalDocID=A625789922",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3rS8NADA-6gQoivsDHlIE4P3Vb6fNgTNay0Y1NpBRRv4w9WjYQP6xT8L832d21dRtD8Utpr3CPJpdL0l8SgLsledBtO0rP8TymB53WU9dUNNtmaLoQ4IJ1uob_bLw0hTc75vn_KPoXiUB2eiy2zJpoB4pbJZzjl6w0dT8VP9jJz1RVH_12H03goPSJBE4fkfRyH5ZutdZ_uQbbkG8oCvcPnJN0ig14j_yDV-QgvP6Kh6huZ_zDee_KQMqRLBRHKqozeJtPJWK3Ny5n3Av-NOIFrx8IMp31MagsA01JYf0obzIss0BBJoO6ctAVBCcpcShReVrNciilbFWxDZ6FXYphXjJCsJuekanmIiXBqqzXLMo5QQGktGRC6dllPFwtnv5kKYt2wyTZREl4tyGPZqZl5CDvuL73mkbRWou6oMmERaAlDlNZN4g4w_HgtoQ2EhzCgTAjig1OsyPYCt-PYacngBInsF-b1Dn1apVJ_RRuWs3A9RTqqk_Lm8-o4FQ86qcz1s6gOLBHqjnUqwM9QpuWoVUYssjUItS41UgfsnMobOriYvPrS9hLyV6A3Hz2EV7BbrITr8W3-gZuqi-Y",
+      "ExternalDocumentID": [
+        "A625789922"
+      ],
+      "Issue": [
+        "4"
+      ],
+      "IngestDate": [
+        "Fri Sep 01 00:24:21 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "04",
+          "year": "2019",
+          "text": "20190401",
+          "day": "01"
+        }
+      ],
+      "Score": [
+        "9.414324"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "American Association for Clinical Chemistry, Inc"
+        }
+      ],
+      "ID": [
+        "FETCH-gale_infotracmisc_A6257899223"
+      ],
+      "DOI": [
+        "10.1373/clinchem.2018.299735"
+      ],
+      "Publisher": [
+        "American Association for Clinical Chemistry, Inc"
+      ],
+      "Language": [
+        "English"
+      ],
+      "EISSN": [
+        "1530-8561"
+      ],
+      "Author": [
+        "Rifai, Nader"
+      ],
+      "ISSN": [
+        "0009-9147"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "PublicationTitle": [
+        "Clinical chemistry (Baltimore, Md.)"
+      ],
+      "GroupedDBID": [
+        "---",
+        "-~X",
+        ".55",
+        "04C",
+        "18M",
+        "29B",
+        "2WC",
+        "4.4",
+        "53G",
+        "5GY",
+        "5RE",
+        "5VS",
+        "5WD",
+        "6J9",
+        "7RV",
+        "7X7",
+        "88E",
+        "88I",
+        "8AO",
+        "8C1",
+        "8FE",
+        "8FG",
+        "8FH",
+        "8FI",
+        "8FJ",
+        "8R4",
+        "8R5",
+        "AABZA",
+        "AACZT",
+        "AAPBV",
+        "AAPQZ",
+        "AAPXW",
+        "AAQQT",
+        "AAVAP",
+        "ABJCF",
+        "ABLYK",
+        "ABOCM",
+        "ABPPZ",
+        "ABPQP",
+        "ABPTD",
+        "ABQIS",
+        "ABSGY",
+        "ABSQV",
+        "ABUWG",
+        "ABWST",
+        "ABXZS",
+        "ACGOD",
+        "ACIHN",
+        "ACIWK",
+        "ACPRK",
+        "ADBBV",
+        "ADGZP",
+        "ADIPN",
+        "ADVEK",
+        "AEAQA",
+        "AELNO",
+        "AELWJ",
+        "AENEX",
+        "AETBJ",
+        "AFFZL",
+        "AFGWE",
+        "AFKRA",
+        "AFRAH",
+        "AFUVZ",
+        "AGINJ",
+        "AGQXC",
+        "AGUTN",
+        "AGVJH",
+        "AHMBA",
+        "AIMBJ",
+        "AJEEA",
+        "AKALU",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ALXQX",
+        "AZQEC",
+        "BAWUL",
+        "BCRHZ",
+        "BENPR",
+        "BGLVJ",
+        "BHPHI",
+        "BKEYQ",
+        "BKSAR",
+        "BPHCQ",
+        "BTFSW",
+        "BVXVI",
+        "BYORX",
+        "C45",
+        "CASEJ",
+        "CCPQU",
+        "CS3",
+        "D1I",
+        "DIK",
+        "DU5",
+        "DWQXO",
+        "E3Z",
+        "EBD",
+        "EBS",
+        "EIHBH",
+        "EJD",
+        "EMOBN",
+        "ENERS",
+        "EX3",
+        "F5P",
+        "F9R",
+        "FECEO",
+        "FHSFR",
+        "FLUFQ",
+        "FOEOM",
+        "FOTVD",
+        "FQBLK",
+        "FYUFA",
+        "GAUVT",
+        "H13",
+        "HCIFZ",
+        "H~9",
+        "IAO",
+        "IEA",
+        "IGS",
+        "IH2",
+        "IHR",
+        "IHW",
+        "INH",
+        "INIJC",
+        "INR",
+        "ITC",
+        "KB.",
+        "KBUDW",
+        "KOP",
+        "KQ8",
+        "KSI",
+        "KSN",
+        "L7B",
+        "LK5",
+        "M1P",
+        "M2P",
+        "M7R",
+        "ML-",
+        "NAPCQ",
+        "NOMLY",
+        "OAUYM",
+        "OBOKY",
+        "OCZFY",
+        "OK1",
+        "OPAEJ",
+        "OVD",
+        "OWPYF",
+        "PCBAR",
+        "PDBOC",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "PROAC",
+        "PSQYO",
+        "PV9",
+        "Q2X",
+        "R0Z",
+        "RHF",
+        "RHI",
+        "RNS",
+        "ROX",
+        "RUSNO",
+        "RZL",
+        "S0X",
+        "SJN",
+        "SV3",
+        "TCC",
+        "TEORI",
+        "TR2",
+        "TWZ",
+        "U5U",
+        "UCJ",
+        "UKHRP",
+        "UNMZH",
+        "W8F",
+        "WH7",
+        "WOQ",
+        "WOW",
+        "X7M",
+        "YBU",
+        "YHG",
+        "YSK",
+        "YWH",
+        "YXANX",
+        "ZA5",
+        "ZCG"
+      ],
+      "Discipline": [
+        "Medicine"
+      ],
+      "Volume": [
+        "65"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Rifai, Nader"
+        }
+      ],
+      "PublicationYear": [
+        "2019"
+      ],
+      "StartPage": [
+        "606"
+      ],
+      "SourceID": [
+        "gale"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "COPYRIGHT 2019 American Association for Clinical Chemistry, Inc."
+        }
+      ],
+      "SSID": [
+        "ssj0004786"
+      ],
+      "Title": [
+        "<h>Forest</h>"
+      ],
+      "PublicationDate": [
+        "20190401"
+      ],
+      "MergedId": [
+        "FETCHMERGED-gale_infotracmisc_A6257899223"
+      ],
+      "Copyright": [
+        "COPYRIGHT 2019 American Association for Clinical\u000aChemistry, Inc."
+      ],
+      "Audience": [
+        "Academic"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/lc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/sc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/mc.gif&issn=0009-9147&client=summon"
+      ],
+      "link.rule.ids": [
+        "315,791,792,795,28275,28276"
+      ],
+      "linkProvider": [
+        "Oxford University Press"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNpjYJAxNNAzNDY31k_OycxLzkjN1TMyMLTQM7K0NDc2ZWLgNDQ1NtC1MDUzZGHgNDAwsNS1NDQx52DgKi7OAnJNzC3MOBnY3PKLUotLeBhY0xJzilN5oTQ3g7Kba4izh256Yk5qfGZeWn5JUWJybmZxcryjmZGpuYWlpZGRMXGqABtOK3E"
+      ],
+      "ParticipantIDs": [
+        "gale_infotracmisc_A625789922"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Forest&rft.jtitle=Clinical+chemistry+%28Baltimore%2C+Md.%29&rft.au=Rifai%2C+Nader&rft.date=2019-04-01&rft.pub=American+Association+for+Clinical+Chemistry%2C+Inc&rft.issn=0009-9147&rft.eissn=1530-8561&rft.volume=65&rft.issue=4&rft.spage=606&rft.externalDBID=n%2Fa&rft.externalDocID=A625789922",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHSNLSwsgV0X0IILSy8f06AI00hX6MWoxZDz_0C7f4GRAOqnF0OzDJbdDqB9q6B1jpWwm6bsM6ET7KBxJgPDgCDPeGAXOEStDBjBCC4w6mH5UE3V2I3SVAMUA6Yb0C5cElIO3FCgAJANTD9AEpiCgCRRaQh0b2cxyuC9M2wjZTLsojhQE9UpMackE7Zi1zdFD2l4ISgzDXLhtR9oyTTyGIOhJdLSFMSyfmB5g5RkwKsg4ZY6wyzFWMEJasQBS1TIsZp6qbBS1kDXwhRyCjusGIZcGQFNbiZIZaqZAZazstHqMPjKQkczUBkEOmyXmYHZ2NCUhYHVyTnIIwqxV9YcfPsn3FnQqhhY_1pAGxUhggz80N6AgiMk6IUYmFLzhBk4fKHrHUQYeG0y7CCRYKOfYSfKoObmGuLsoQsyKh6ygxWeAOIRbjKWYFBItEg2NEsyMUg0SQP2Ti2B_btUyzQz4zRg29kwzSTJUpJBnoApUgRVSDNwIaJRhoGlpKg0VZaBE56z5KChAgBScCXU",
+      "ExternalDocumentID": [
+        "A625789922"
+      ],
+      "Issue": [
+        "4"
+      ],
+      "IngestDate": [
+        "Tue Mar 21 17:44:07 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "04",
+          "year": "2019",
+          "text": "20190401",
+          "day": "01"
+        }
+      ],
+      "Score": [
+        "9.414324"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "American Association for Clinical Chemistry, Inc"
+        }
+      ],
+      "ID": [
+        "FETCH-gale_healthsolutions_A6257899223"
+      ],
+      "Publisher": [
+        "American Association for Clinical Chemistry, Inc"
+      ],
+      "Language": [
+        "English"
+      ],
+      "EISSN": [
+        "1530-8561"
+      ],
+      "Author": [
+        "Rifai, Nader"
+      ],
+      "ISSN": [
+        "0009-9147"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "PublicationTitle": [
+        "Clinical chemistry (Baltimore, Md.)"
+      ],
+      "GroupedDBID": [
+        "---",
+        "-~X",
+        ".55",
+        "04C",
+        "18M",
+        "29B",
+        "2WC",
+        "4.4",
+        "53G",
+        "5GY",
+        "5RE",
+        "5VS",
+        "6J9",
+        "7RV",
+        "7X7",
+        "88E",
+        "88I",
+        "8AO",
+        "8C1",
+        "8FE",
+        "8FG",
+        "8FH",
+        "8FI",
+        "8FJ",
+        "8R4",
+        "8R5",
+        "AABZA",
+        "AACZT",
+        "AAPBV",
+        "AAPQZ",
+        "AAPXW",
+        "AAQQT",
+        "AAVAP",
+        "ABFLS",
+        "ABJCF",
+        "ABLYK",
+        "ABOCM",
+        "ABPPZ",
+        "ABPTD",
+        "ABQIS",
+        "ABSGY",
+        "ABSQV",
+        "ABUWG",
+        "ABWST",
+        "ACGOD",
+        "ACIHN",
+        "ACIWK",
+        "ACPRK",
+        "ADBBV",
+        "ADGKP",
+        "ADGZP",
+        "ADIPN",
+        "ADVEK",
+        "AEAQA",
+        "AELNO",
+        "AELWJ",
+        "AENEX",
+        "AETBJ",
+        "AFFZL",
+        "AFGWE",
+        "AFKRA",
+        "AFRAH",
+        "AFUVZ",
+        "AFXAL",
+        "AGINJ",
+        "AGQXC",
+        "AGUTN",
+        "AGVJH",
+        "AHMBA",
+        "AIMBJ",
+        "AJEEA",
+        "AKALU",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "AZQEC",
+        "BAWUL",
+        "BCRHZ",
+        "BENPR",
+        "BGLVJ",
+        "BHPHI",
+        "BKEYQ",
+        "BKSAR",
+        "BPHCQ",
+        "BTFSW",
+        "BVXVI",
+        "BYORX",
+        "C45",
+        "CASEJ",
+        "CS3",
+        "D1I",
+        "DIK",
+        "DU5",
+        "DWQXO",
+        "E3Z",
+        "EBD",
+        "EBS",
+        "EIHBH",
+        "EJD",
+        "EMOBN",
+        "ENERS",
+        "EX3",
+        "F5P",
+        "F9R",
+        "FECEO",
+        "FHSFR",
+        "FOEOM",
+        "FOTVD",
+        "FQBLK",
+        "FYUFA",
+        "GAUVT",
+        "H13",
+        "HCIFZ",
+        "H~9",
+        "IAO",
+        "IEA",
+        "IGS",
+        "IH2",
+        "IHR",
+        "IHW",
+        "INH",
+        "INIJC",
+        "INR",
+        "ITC",
+        "KB.",
+        "KOP",
+        "KQ8",
+        "KSI",
+        "KSN",
+        "L7B",
+        "LK5",
+        "M1P",
+        "M2P",
+        "M7R",
+        "ML-",
+        "NAPCQ",
+        "NOMLY",
+        "OK1",
+        "OVD",
+        "PCBAR",
+        "PDBOC",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "PROAC",
+        "PSQYO",
+        "PV9",
+        "Q2X",
+        "R0Z",
+        "RHF",
+        "RHI",
+        "RNS",
+        "ROX",
+        "RUSNO",
+        "RZL",
+        "S0X",
+        "SJN",
+        "SV3",
+        "TCC",
+        "TEORI",
+        "TR2",
+        "TWZ",
+        "U5U",
+        "UCJ",
+        "UKHRP",
+        "UNMZH",
+        "W8F",
+        "WH7",
+        "WOQ",
+        "WOW",
+        "X7M",
+        "YBU",
+        "YHG",
+        "YSK",
+        "YWH",
+        "YXANX",
+        "ZA5",
+        "ZCG"
+      ],
+      "Discipline": [
+        "Medicine"
+      ],
+      "Volume": [
+        "65"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Rifai, Nader"
+        }
+      ],
+      "PublicationYear": [
+        "2019"
+      ],
+      "StartPage": [
+        "606"
+      ],
+      "SourceID": [
+        "gale"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "COPYRIGHT 2019 American Association for Clinical Chemistry, Inc."
+        }
+      ],
+      "SSID": [
+        "ssj0004786"
+      ],
+      "Title": [
+        "<h>Forest</h>"
+      ],
+      "PublicationDate": [
+        "20190401"
+      ],
+      "MergedId": [
+        "FETCHMERGED-gale_healthsolutions_A6257899223"
+      ],
+      "Copyright": [
+        "COPYRIGHT 2019 American Association for Clinical\u000aChemistry, Inc."
+      ],
+      "Audience": [
+        "Academic"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/lc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/sc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/mc.gif&issn=0009-9147&client=summon"
+      ],
+      "link.rule.ids": [
+        "315,791,792,795"
+      ],
+      "linkProvider": [
+        "Oxford University Press"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNpjYuA0NDU20LUwNTNkYeA0MDCw1LU0NDHnYOAqLs4Cck3MLcw4Gdjc8otSi0t4GFjTEnOKU3mhNDeDmptriLOHbnpiTmp8RmpiTklGcX5OaUlmfl5xvKOZkam5haWlkZEx0QoBwCQm6g"
+      ],
+      "ParticipantIDs": [
+        "gale_healthsolutions_A625789922"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Forest&rft.jtitle=Clinical+chemistry+%28Baltimore%2C+Md.%29&rft.au=Rifai%2C+Nader&rft.date=2019-04-01&rft.issn=0009-9147&rft.eissn=1530-8561&rft.volume=65&rft.issue=4&rft.spage=606&rft.epage=606&rft_id=info:doi/10.1373%2Fclinchem.2018.299735&rft.externalDBID=n%2Fa&rft.externalDocID=10_1373_clinchem_2018_299735",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpR3ZSsNAcNAWVBDxAm_6Yn1KmpBzoVRMaUhLKxKCqC-hrQkNiIitgn_vTHc3TWsRiy9LdglDNjM7184BcLXAD7ptT-l5QcDMqOPfd23FcF2GpgsFXLBO1wofrMeWuGsf8_p_lP2LSCA7fSyOzJJsB8pbpTjHL9lp6joTF-zkZ9L0u7AdowkcVT8RwbMpol6ew-ql4f-XanAN6YaycFegnBwoLuAz0g-OSEE4_omGqG_neM5535SJlEPZKI5UVK__MslkxG7vWS24F8Is5Q2vbylkuuhj0FkhNEXyTYZskdfGVBPJKjXFtXgpdclLed8HQTNmgTHaml2QsWL2g30bDpWRoJxQ2gUF3rkqykuHVzSZr5a9IMXy2MLpFZ1jxBJKTFBiDmUdymhiOlYJyl4zDJ5mGbTOtCdovk-RZIlwasu-pqDEoOBmQhuJdmFHmBGVG46zPVhLXvdhoycCJQ5guz5qcOzVa6PGIZh-K2oGigQXv_EiI_Fv2zCOoNJ3h7o9MLW-maKRy9BMTFhqGymq4HpqDtgxrAbzZMX3T2FrRilnUJq8fyTnsJkf3gvxi78BgC0_Pw",
+      "ExternalDocumentID": [
+        "10_1373_clinchem_2018_299735"
+      ],
+      "Issue": [
+        "4"
+      ],
+      "IngestDate": [
+        "Sun Oct 01 05:16:08 EDT 2023"
+      ],
+      "DBID": [
+        "AAYXX",
+        "CITATION"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "04",
+          "year": "2019",
+          "text": "2019-04-01",
+          "day": "01"
+        }
+      ],
+      "Score": [
+        "9.414324"
+      ],
+      "ID": [
+        "FETCH-crossref_primary_10_1373_clinchem_2018_2997353"
+      ],
+      "DOI": [
+        "10.1373/clinchem.2018.299735"
+      ],
+      "Language": [
+        "English"
+      ],
+      "EISSN": [
+        "1530-8561"
+      ],
+      "Author": [
+        "Rifai, Nader"
+      ],
+      "ISSN": [
+        "0009-9147"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "PublicationTitle": [
+        "Clinical chemistry (Baltimore, Md.)"
+      ],
+      "ProviderPackageCode": [
+        "CITATION",
+        "AAYXX"
+      ],
+      "GroupedDBID": [
+        "---",
+        "-~X",
+        ".55",
+        "04C",
+        "18M",
+        "29B",
+        "2WC",
+        "4.4",
+        "53G",
+        "5GY",
+        "5RE",
+        "5VS",
+        "5WD",
+        "6J9",
+        "7RV",
+        "7X7",
+        "88E",
+        "88I",
+        "8AO",
+        "8C1",
+        "8FE",
+        "8FG",
+        "8FH",
+        "8FI",
+        "8FJ",
+        "8R4",
+        "8R5",
+        "AABZA",
+        "AACZT",
+        "AAPBV",
+        "AAPQZ",
+        "AAPXW",
+        "AAQQT",
+        "AAVAP",
+        "AAYXX",
+        "ABJCF",
+        "ABLYK",
+        "ABOCM",
+        "ABPPZ",
+        "ABPQP",
+        "ABPTD",
+        "ABSGY",
+        "ABSQV",
+        "ABUWG",
+        "ABWST",
+        "ABXZS",
+        "ACGOD",
+        "ACIHN",
+        "ACIWK",
+        "ACPRK",
+        "ACYHN",
+        "ADBBV",
+        "ADGZP",
+        "ADIPN",
+        "ADVEK",
+        "AEAQA",
+        "AELWJ",
+        "AENEX",
+        "AETBJ",
+        "AFFZL",
+        "AFGWE",
+        "AFKRA",
+        "AFRAH",
+        "AGINJ",
+        "AGQXC",
+        "AGUTN",
+        "AHMBA",
+        "AIMBJ",
+        "AJEEA",
+        "AKALU",
+        "AKPLA",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ALXQX",
+        "AZQEC",
+        "BAWUL",
+        "BCRHZ",
+        "BENPR",
+        "BGLVJ",
+        "BHPHI",
+        "BKEYQ",
+        "BKSAR",
+        "BPHCQ",
+        "BTFSW",
+        "BVXVI",
+        "BYORX",
+        "C45",
+        "CASEJ",
+        "CCPQU",
+        "CITATION",
+        "CS3",
+        "D1I",
+        "DIK",
+        "DU5",
+        "DWQXO",
+        "E3Z",
+        "EBD",
+        "EBS",
+        "EIHBH",
+        "EJD",
+        "EMOBN",
+        "ENERS",
+        "EX3",
+        "F5P",
+        "F9R",
+        "FECEO",
+        "FHSFR",
+        "FLUFQ",
+        "FOEOM",
+        "FOTVD",
+        "FQBLK",
+        "FYUFA",
+        "GAUVT",
+        "H13",
+        "HCIFZ",
+        "H~9",
+        "IAO",
+        "IEA",
+        "IGS",
+        "IH2",
+        "IHR",
+        "IHW",
+        "INH",
+        "INIJC",
+        "INR",
+        "ITC",
+        "KB.",
+        "KBUDW",
+        "KOP",
+        "KQ8",
+        "KSI",
+        "KSN",
+        "L7B",
+        "LK5",
+        "M1P",
+        "M2P",
+        "M7R",
+        "ML-",
+        "NAPCQ",
+        "NOMLY",
+        "OAUYM",
+        "OBOKY",
+        "OCZFY",
+        "OK1",
+        "OPAEJ",
+        "OVD",
+        "OWPYF",
+        "PCBAR",
+        "PDBOC",
+        "PQQKQ",
+        "PROAC",
+        "PSQYO",
+        "PV9",
+        "Q2X",
+        "R0Z",
+        "RHF",
+        "RHI",
+        "RNS",
+        "ROX",
+        "RUSNO",
+        "RZL",
+        "S0X",
+        "SJN",
+        "SV3",
+        "TCC",
+        "TEORI",
+        "TR2",
+        "TWZ",
+        "U5U",
+        "UCJ",
+        "UKHRP",
+        "UNMZH",
+        "W8F",
+        "WH7",
+        "WOQ",
+        "WOW",
+        "X7M",
+        "YBU",
+        "YHG",
+        "YSK",
+        "YWH",
+        "YXANX",
+        "ZA5",
+        "ZCG"
+      ],
+      "Discipline": [
+        "Medicine"
+      ],
+      "Volume": [
+        "65"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Nader",
+          "surname": "Rifai",
+          "fullname": "Rifai, Nader",
+          "organization": "\u000a Boston Children's Hospital, Boston, MA\u000a "
+        }
+      ],
+      "PublicationYear": [
+        "2019"
+      ],
+      "StartPage": [
+        "606"
+      ],
+      "SourceID": [
+        "crossref"
+      ],
+      "SSID": [
+        "ssj0004786"
+      ],
+      "Title": [
+        "<h>Forest</h>"
+      ],
+      "PublicationDate": [
+        "2019-04-01"
+      ],
+      "DatabaseTitle": [
+        "CrossRef"
+      ],
+      "EndPage": [
+        "606"
+      ],
+      "MergedId": [
+        "FETCHMERGED-crossref_primary_10_1373_clinchem_2018_2997353"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/lc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/sc.gif&issn=0009-9147&client=summon"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/mc.gif&issn=0009-9147&client=summon"
+      ],
+      "link.rule.ids": [
+        "315,791,792,795,28275,28276"
+      ],
+      "linkProvider": [
+        "Oxford University Press"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNpjYJAxNNAzNDY31k_OycxLzkjN1TMyMLTQM7K0NDc2ZWLgNDQ1NtC1MDUzZGHgNDAwsNS1NDQx52DgKi7OAnJNzC3MOBnY3PKLUotLeBhY0xJzilN5oTQ3g4mba4izh25yUX5xcVFqWnxBUWZuYlFlvKFBPMjOeJid8SA74yF2GpOpDQDtSDbl"
+      ],
+      "DatabaseName": [
+        "CrossRef"
+      ],
+      "ParticipantIDs": [
+        "crossref_primary_10_1373_clinchem_2018_299735"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=Forest+Dynamics%2C+Growth+and+Yield&rft.au=Pretzsch%2C+Hans&rft.date=2008-12-21&rft.pub=Springer+Berlin+Heidelberg&rft.isbn=9783540883067&rft_id=info:doi/10.1007%2F978-3-540-88307-4&rft.externalDocID=151296",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3ra9swED_Wvftp6wb1uocZrCt0ZrYlOxKUjqRJ6hQ3G21W1k9C8YOOjQ6irJD99TtZsvOgHRv7Yiwjm0N3Pt2d7ncH8HZFH6SDjnfcSRJOR0f9szT2CGMcXRedcMGP0ujkS3Tes31alan_p9G_yATtpyv7y1yDdtC4VZ3nOKs7TX34ag_YdZzJDz6dDAS6wKPtK2TwfIisr__D7Tek_79Sg89QbjQK9x8kp_koPsB7lB-8ogThdcW4bobzhp1quts17epN8Bz9dQuDO9dZb41OnRTTX8o0lErk5XIYgemUjHAeRqjDiLt_qLJlo0SMaTfjWvW7mnGhp7Ysime5qnVlaMRrsNbi6DJvttPjtvg8bKPEHA57XZF8TLuD4eFpEy5Dq6WFysaicyoSgntN4MqQVB9a27rBSySsw7pU33DfwD1lqrQRIpXU2NMlz2LhMBy3YmtkjB7BnUIjTx7DreJyA-52fqDdPtuA-4YZk9kT2Nm72DejvfcX-27NnneuYY6LzHEr5jyFs35vdJB4ttWFJ9GCZb4XlmEWssyPc4lGYeFLHhAS5iWLsjzy84AWLOJhOSbjAn1ybfUylmcMtWkeZJxmZBNcybIgHlNf0hL9Xo6eY8HLmJRolQclHXMHXi-sgbj6Xp3HK7GwiC3qwFa9NALF2dRNVyLSiGPqO_CqXi1RvW1TiEWvc0B1LUbigHvjjJhowFrgwE69zsJQUNfORkoEEUiLqIgR9NnfT92Ch3O5fg63p5OfxQt40GiTlzdL2W-i8mj_",
+      "ExternalDocumentID": [
+        "9783540883074",
+        "151296",
+        "EBC6311261",
+        "EBC450943",
+        "5347940"
+      ],
+      "DBID": [
+        "I4C"
+      ],
+      "IngestDate": [
+        "Wed Oct 04 09:56:29 EDT 2023",
+        "Wed Aug 30 14:59:29 EDT 2023",
+        "Thu Sep 21 21:22:06 EDT 2023",
+        "Thu Sep 21 21:28:49 EDT 2023",
+        "Tue Sep 12 23:39:09 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "year": "2009",
+          "text": "2009"
+        }
+      ],
+      "Score": [
+        "9.3181095"
+      ],
+      "DatabaseTitleList": [
+        "",
+        "",
+        ""
+      ],
+      "URI": [
+        "http://digital.casalini.it/9783540883074",
+        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=450943",
+        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=6311261",
+        "http://link.springer.com/10.1007/978-3-540-88307-4",
+        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9783540883074"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Netherlands"
+        },
+        {
+          "name": "Berlin"
+        },
+        {
+          "name": "Berlin, Heidelberg"
+        }
+      ],
+      "PublicationPlace": [
+        "Berlin, Heidelberg"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Springer Nature"
+        },
+        {
+          "name": "Springer Berlin / Heidelberg"
+        },
+        {
+          "name": "Springer Berlin Heidelberg"
+        },
+        {
+          "name": "Springer"
+        }
+      ],
+      "ID": [
+        "FETCH-LOGICAL-a45680-2f2c28c06da065e0a91332df85cd50d14e8592fb3be184456188dc8794d1c94c3"
+      ],
+      "Publisher": [
+        "Springer Nature",
+        "Springer Berlin / Heidelberg",
+        "Springer Berlin Heidelberg",
+        "Springer"
+      ],
+      "DOI": [
+        "10.1007/978-3-540-88307-4"
+      ],
+      "AbstractList": [
+        "The aim of this book is to improve the understanding of forest dynamics and the sustainable management of forest ecosystems. This indispensable resource is intended as both a reference work for forest managers and a study text for students.",
+        "This text aims to improve the understanding of forest dynamics and the sustainable management of forest ecosystems. Within the framework of ecosystem management, it presents methods for measuring, analysing and modelling pure and mixed forest stands."
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Pretzsch, Hans"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "IsScholarly": [
+        "false"
+      ],
+      "Snippet": [
+        "The aim of this book is to improve the understanding of <h>forest</h> dynamics and the sustainable management of <h>forest</h> ecosystems...",
+        "This text aims to improve the understanding of <h>forest</h> dynamics and the sustainable management of <h>forest</h> ecosystems..."
+      ],
+      "LCCallNum_Ident": [
+        "SD"
+      ],
+      "GroupedDBID": [
+        "-7M",
+        "-7R",
+        "-BG",
+        "-T.",
+        "089",
+        "0D2",
+        "0DA",
+        "0DV",
+        "0E8",
+        "20A",
+        "38.",
+        "8V7",
+        "A4I",
+        "A4J",
+        "AABBV",
+        "AAHMI",
+        "ABMNI",
+        "ACBCY",
+        "ACSQW",
+        "ADJCL",
+        "ADVHH",
+        "AEKFX",
+        "AETDV",
+        "AEZAY",
+        "AFDZQ",
+        "AICLB",
+        "AJRTE",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "AZZ",
+        "BBABE",
+        "CZZ",
+        "E6I",
+        "I4C",
+        "IEZ",
+        "JJU",
+        "LQF",
+        "MYL",
+        "NUC",
+        "NUV",
+        "SAL",
+        "SBO",
+        "SZJJV",
+        "TPJZQ",
+        "UR4",
+        "UZ6",
+        "Z7U"
+      ],
+      "SubjectTerms": [
+        "Biomedical and Life Sciences",
+        "Computer simulation",
+        "Environmental Management",
+        "Forest dynamics",
+        "Forest ecology",
+        "Forest management",
+        "Forestry",
+        "Landscape Ecology",
+        "Life Sciences",
+        "Monitoring/Environmental Analysis",
+        "Orchards, fruits, forestry",
+        "Plant Sciences"
+      ],
+      "Discipline": [
+        "Architecture",
+        "Forestry",
+        "Botany",
+        "Law",
+        "Biology",
+        "Ecology",
+        "Social Welfare & Social Work",
+        "Environmental Sciences"
+      ],
+      "ContentType": [
+        "eBook"
+      ],
+      "SourceType": [
+        "Aggregation Database",
+        "Publisher"
+      ],
+      "Edition": [
+        "1"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Pretzsch, Hans"
+        }
+      ],
+      "ISBN": [
+        "9783540883074",
+        "354088307X",
+        "9783540883067",
+        "3540883061"
+      ],
+      "EISBN": [
+        "9783540883074",
+        "354088307X"
+      ],
+      "Abstract": [
+        "The aim of this book is to improve the understanding of forest dynamics and the sustainable management of forest ecosystems. This indispensable resource is intended as both a reference work for forest managers and a study text for students."
+      ],
+      "PublicationYear": [
+        "2009",
+        "2008"
+      ],
+      "SourceID": [
+        "askewsholts",
+        "springer",
+        "proquest",
+        "casalini"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Springer-Verlag Berlin Heidelberg 2009"
+        }
+      ],
+      "SSID": [
+        "ssj0000157048"
+      ],
+      "Title": [
+        "<h>Forest</h> Dynamics, Growth and Yield"
+      ],
+      "PublicationDate": [
+        "2009",
+        "20081221",
+        "2009-02-01"
+      ],
+      "PageCount": [
+        "670"
+      ],
+      "OCLC": [
+        "432709145"
+      ],
+      "Subtitle": [
+        "From Measurement to Model"
+      ],
+      "DEWEY": [
+        "634"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-a45680-2f2c28c06da065e0a91332df85cd50d14e8592fb3be184456188dc8794d1c94c3"
+      ],
+      "PQID": [
+        "EBC450943"
+      ],
+      "Copyright": [
+        "Springer-Verlag Berlin Heidelberg 2009"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "thumbnail_s": [
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fmedia.springernature.com%2Fw306%2Fspringer-static%2Fcover-hires%2Fbook%2F978-3-540-88307-4"
+      ],
+      "thumbnail_m": [
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F3074%2F9783540883074.jpg"
+      ],
+      "link.rule.ids": [
+        "307,791,795,797,28276"
+      ],
+      "linkProvider": [
+        "Library Catalog"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNqFkE9LAzEQxSOiKLUfwNvqQRGMnfzbzR61tlUoeBHBU0iTbLt2u6mb1eK3N-160YtzGebxew_eIHRK4IYAZIM8k5hhwQFLySDDfA_1o8aishP4_p_7EB1zRjPICRdHqB_CG8QhIgMuj9HZ2DcutMn9V61XpQnXyaTxm3aR6Nomr6Wr7Ak6KHQVXP9n99DLePQ8fMDTp8nj8HaKNRepBEwLaqg0kFoNqXCgc8IYtYUUxgqwhDspclrM2MwRyaOHSGmNzHJuicm5YT101QXrsHSbsPBVG9Rn5WbeL4P61Smyg44N66as565RHUVAbb-0pRVTkVc7g9o6LjvHuvHvH7Gy2gUbV7eNrtTobpgyQmhKInnxD8kF5JxF8LwDjQ66KutSrXzt541eL4ISjMdqwL4BX9F5Zw"
+      ],
+      "DatabaseName": [
+        "Torrossa Single Purchase Catalogue"
+      ],
+      "ParticipantIDs": [
+        "askewsholts_vlebooks_9783540883074",
+        "springer_books_10_1007_978_3_540_88307_4",
+        "proquest_ebookcentral_EBC6311261",
+        "proquest_ebookcentral_EBC450943",
+        "casalini_monographs_5347940"
       ]
     }
   ],

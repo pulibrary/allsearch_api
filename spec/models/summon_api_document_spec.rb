@@ -20,6 +20,6 @@ RSpec.describe SummonApiDocument do
     expect(summon_api_document.id).to eq('10.1596/978-0-8213-7878-6')
     expect(summon_api_document.type).to eq('Book')
     expect(summon_api_document.description).to include('In 1994, the Government of Cameroon')
-    expect(summon_api_document.url).to include('princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV1bb9M')
+    expect(summon_api_document.url).to include('princeton.summon.serialssolutions.com/2.0.0/link/0/')
   end
 end

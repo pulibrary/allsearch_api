@@ -38,7 +38,7 @@ module FixtureHelpers
   end
 
   def stub_summon(query:, fixture:)
-    q_string = "http://api.summon.serialssolutions.com/2.0.0/search?s.fvf=ContentType,Book&s.q=#{query}"
+    q_string = "http://api.summon.serialssolutions.com/2.0.0/search?s.dym=t&s.fvf=ContentType,Newspaper%20Article,true&s.ho=t&s.q=#{query}"
     stub_request(:get, q_string)
       .to_return(status: 200,
                  body: file_fixture(fixture),
