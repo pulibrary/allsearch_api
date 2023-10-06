@@ -19,10 +19,10 @@ gem 'pg_search'
 gem 'rack-cors'
 gem 'railties'
 gem 'rswag'
-gem 'whenever', require: false
-
+gem 'summon'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'whenever', require: false
 
 group :development do
   gem 'bcrypt_pbkdf'
