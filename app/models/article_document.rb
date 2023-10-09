@@ -2,7 +2,7 @@
 
 # This class is responsible for getting relevant
 # metadata from the Summon::Documents
-class SummonApiDocument < Document
+class ArticleDocument < Document
   delegate :abstract, to: :document
   delegate :end_page, to: :document
   delegate :issue, to: :document

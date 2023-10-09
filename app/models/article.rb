@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This class is responsible for querying the Summon API, aka "Articles+"
-class SummonApi
+class Article
   include ActiveModel::API
   include Parsed
   attr_reader :query_terms, :service
