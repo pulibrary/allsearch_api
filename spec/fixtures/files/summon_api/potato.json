@@ -1,0 +1,3505 @@
+{
+  "version": "2.0.0",
+  "sessionId": "SUMMON-SESSION-LIB-MBHH94TJFVL6-50991-1",
+  "elapsedQueryTime": 185,
+  "queryTime": 161,
+  "internalSolrQueryTime": 167,
+  "totalRequestTime": 279,
+  "pageCount": 332734,
+  "recordCount": 998201,
+  "query": {
+    "queryString": "s.fvf=ContentType%2CNewspaper+Article%2Ct&s.normalized.subjects=f&s.secure=f&s.dailyCatalog=t&s.q=potato&s.dym=t&s.ho=t&s.rapido=f&s.ps=3&s.shortenurl=f",
+    "pageNumber": 1,
+    "pageSize": 3,
+    "isDidYouMeanEnabled": true,
+    "isHoldingsOnlyEnabled": true,
+    "textQueries": [
+      {
+        "textQuery": "potato",
+        "removeCommand": "removeTextQuery(potato)"
+      }
+    ],
+    "searchTerms": [],
+    "textFilters": [],
+    "rangeFilters": [],
+    "facetValueFilters": [
+      {
+        "fieldName": "ContentType",
+        "value": "Newspaper Article",
+        "isNegated": true,
+        "removeCommand": "removeFacetValueFilter(ContentType,Newspaper Article)",
+        "negateCommand": "negateFacetValueFilter(ContentType,Newspaper Article)"
+      }
+    ],
+    "inclusiveFacetValueFilters": [],
+    "facetValueGroupFilters": [],
+    "facetFields": [],
+    "rangeFacetFields": [],
+    "sort": []
+  },
+  "facetFields": [],
+  "rangeFacetFields": [],
+  "didYouMeanSuggestions": [],
+  "recommendationLists": {},
+  "documents": [
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Potato&rft.jtitle=Plants+%28Basel%29&rft.au=Quandahor%2C+Peter&rft.au=Gou%2C+Yuping&rft.au=Lin%2C+Chunyan&rft.au=Liu%2C+Changzhong&rft.date=2022-10-01&rft.pub=MDPI+AG&rft.issn=2223-7747&rft.eissn=2223-7747&rft.volume=11&rft.issue=20&rft_id=info:doi/10.3390%2Fplants11202757&rft.externalDocID=A746375591",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3dS9xAEF-KFipIsVaotooI6oOkmtvN7gZEuVPPOz3p9QxFn45NsvcBJRHvIpx_vTPJ5sPWB8WXcFmWTXIzOzu_2d_MErL7jz3otBvWVaPVcpl30fzT4RasUa5tIVa8ci86Tu_GuT0zWQSTrP4fZv-CEBCnT8yUeSHbAfNWkec4y0-aOh6bDXaMMx3Y3V67DxDY23kAAZe3IPp8Hu5s0-Z7tQbaQG8wC_cNmlMMCg3wG_QHrqBBcH2VDnVjcEXjqv-KZxxN00BtA5a_v5U4wu8EYxKjDP0_Y_2ex0lq6JO7fJlEAtDY7PYn0axCCxonhgMQDR9HselughKAZ3N6myEmnXbbe_Xz0pahFwKOfFZc86d-oS03xnZF6dI0uf-MPKUusiLv0g8GdxE3XkW5nBUkw7pgnApATACO5wFZCmR8_rq0ixAcOssyPRy3eJWsrCc-Yf_5-GbFrvge3hL5bEDDZj2T0BfyQUfL5GMDpBPNvpLFw9FRJqnD_dHRCvGaZ95JyzKnXFhDQWEaCA0Yzw0ZDWyppORChUqzQPqyFgoqNA8HrmY8dJUesANlp_WHfF9SGfBQBPQb2QQv02fc50o6NcYlV_Dhjq8Vq_mBEyi1Srbw5ftY7yNCQtFQJZNJv33d65d_0irZNZ0G8fReBcrkZ8SRxhJhlZ5rrxnuO1koFeMHmZveJ3qdfCom90Ya_dhIJfIE8rxG9w",
+      "ExternalDocumentID": [
+        "A746375591"
+      ],
+      "Issue": [
+        "20"
+      ],
+      "IngestDate": [
+        "Fri Sep 15 03:57:58 EDT 2023",
+        "Sat Apr 22 18:18:06 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "10",
+          "year": "2022",
+          "text": "20221001",
+          "day": "01"
+        }
+      ],
+      "Score": [
+        "15.124716"
+      ],
+      "DatabaseTitleList": [
+        ""
+      ],
+      "Publisher_xml": [
+        {
+          "name": "MDPI AG"
+        }
+      ],
+      "ID": [
+        "FETCH-LOGICAL-g731-17e1189d43c18a8867adae4c8b82d737e6df9e46d9aef40a127385bb838c6d7c3"
+      ],
+      "GeographicLocations": [
+        "China"
+      ],
+      "DOI": [
+        "10.3390/plants11202757"
+      ],
+      "Publisher": [
+        "MDPI AG"
+      ],
+      "AbstractList": [
+        "This study was conducted to determine the aphicidal effect of a leaf extract of the Atlantic potato cultivar on the performance of green peach aphids. Three concentrations of the leaf extract (100, 75, and 50% potato extract), synthetic pesticide (Beta cypermethrin 4.5%), and distilled water (control) treatments were applied in a greenhouse experiment. The results showed that the synthetic pesticide, which was used as a standard check, caused the maximum aphid mortality, followed by the 100% potato leaf extract. Compared with the other botanical treatments, the 100% extract produced low mean rates of survival, aphids’ average daily reproduction, the number of nymphs per plant, and the number of nymphs per adult. This treatment also increased the accumulation of hydrogen Peroxide (H[sub.2]O[sub.2]) and malondialdehyde (MDA), glutathione-s-transferase, mixed-function oxidase, and carboxylesterase content in the green peach aphid. Moreover, the 100% extract also protected the host plants against green peach aphid attacks by demonstrating higher chlorophyll content, net photosynthesis, above-ground fresh weight, and above-ground dry weight of the host plant. This study demonstrates that the highest concentration of potato (Atlantic cultivar) leaf extract (100% extract) could be used as the appropriate dosage for the control of green peach aphids on potatoes, which could greatly reduce the use of synthetic insecticides and promote ecosystem sustainability."
+      ],
+      "Language": [
+        "English"
+      ],
+      "EISSN": [
+        "2223-7747"
+      ],
+      "Author": [
+        "Gou, Yuping",
+        "Lin, Chunyan",
+        "Liu, Changzhong",
+        "Quandahor, Peter"
+      ],
+      "ISSN": [
+        "2223-7747"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2020"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "Snippet": [
+        "This study was conducted to determine the aphicidal effect of a leaf extract of the Atlantic <h>potato</h> cultivar on the performance of green peach aphids..."
+      ],
+      "PublicationTitle": [
+        "Plants (Basel)"
+      ],
+      "GroupedDBID": [
+        "5VS",
+        "7X2",
+        "7XC",
+        "8FE",
+        "8FH",
+        "AADQD",
+        "AAPBV",
+        "ADBBV",
+        "AFKRA",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "AOIJS",
+        "ATCPS",
+        "BBNVY",
+        "BCNDV",
+        "BENPR",
+        "BHPHI",
+        "DKF",
+        "ECGQY",
+        "GROUPED_DOAJ",
+        "HCIFZ",
+        "HYE",
+        "IAG",
+        "IAO",
+        "IGH",
+        "ISR",
+        "KQ8",
+        "LK8",
+        "M0K",
+        "M48",
+        "M7P",
+        "M~E",
+        "OK1",
+        "PATMY",
+        "PIMPY",
+        "PROAC",
+        "PYCSY",
+        "RPM",
+        "CCPQU",
+        "MODMG"
+      ],
+      "SubjectTerms": [
+        "Aphididae",
+        "Chlorophyll",
+        "Ecosystems",
+        "Food contamination",
+        "Glutathione transferase",
+        "Insect pests",
+        "Insecticides",
+        "Oxidases",
+        "Pesticide resistance",
+        "Photosynthesis",
+        "Potatoes"
+      ],
+      "Discipline": [
+        "Botany"
+      ],
+      "Volume": [
+        "11"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Quandahor, Peter"
+        },
+        {
+          "sequence": "2",
+          "fullname": "Gou, Yuping"
+        },
+        {
+          "sequence": "3",
+          "fullname": "Lin, Chunyan"
+        },
+        {
+          "sequence": "4",
+          "fullname": "Liu, Changzhong"
+        }
+      ],
+      "Abstract": [
+        "This study was conducted to determine the aphicidal effect of a leaf extract of the Atlantic potato cultivar on the performance of green peach aphids. Three concentrations of the leaf extract (100, 75, and 50% potato extract), synthetic pesticide (Beta cypermethrin 4.5%), and distilled water (control) treatments were applied in a greenhouse experiment. The results showed that the synthetic pesticide, which was used as a standard check, caused the maximum aphid mortality, followed by the 100% potato leaf extract. Compared with the other botanical treatments, the 100% extract produced low mean rates of survival, aphids’ average daily reproduction, the number of nymphs per plant, and the number of nymphs per adult. This treatment also increased the accumulation of hydrogen Peroxide (H[sub.2]O[sub.2]) and malondialdehyde (MDA), glutathione-s-transferase, mixed-function oxidase, and carboxylesterase content in the green peach aphid. Moreover, the 100% extract also protected the host plants against green peach aphid attacks by demonstrating higher chlorophyll content, net photosynthesis, above-ground fresh weight, and above-ground dry weight of the host plant. This study demonstrates that the highest concentration of potato (Atlantic cultivar) leaf extract (100% extract) could be used as the appropriate dosage for the control of green peach aphids on potatoes, which could greatly reduce the use of synthetic insecticides and promote ecosystem sustainability."
+      ],
+      "PublicationYear": [
+        "2022"
+      ],
+      "SourceID": [
+        "gale"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "COPYRIGHT 2022 MDPI AG"
+        }
+      ],
+      "GeographicLocations_xml": [
+        {
+          "name": "China"
+        }
+      ],
+      "SSID": [
+        "ssj0000800816"
+      ],
+      "Title": [
+        "<h>Potato</h>"
+      ],
+      "PublicationDate": [
+        "20221001"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-g731-17e1189d43c18a8867adae4c8b82d737e6df9e46d9aef40a127385bb838c6d7c3"
+      ],
+      "Copyright": [
+        "COPYRIGHT 2022 MDPI AG"
+      ],
+      "Audience": [
+        "Academic"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/lc.gif&issn=2223-7747&client=summon"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/sc.gif&issn=2223-7747&client=summon"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/mc.gif&issn=2223-7747&client=summon"
+      ],
+      "link.rule.ids": [
+        "315,791,792,795,875,28275,28276"
+      ],
+      "linkProvider": [
+        "Universitätsbibliothek Regensburg"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNpVjFtLAzEQhYNYsbR99T_4sDWTyWayj6V4KRQU7XuZzWVZWXfFRPDnG9CH9szAGYbvHCFuQK4RG3n3OfCYE4CSimq6EHOlFFZEmi5P7muxSuldFtmyYObi6mXKnKelmEUeUlj9-0IcHu4P26dq__y42272VUcIFVAAsI3X6MCytYbYc9DOtlZ5QgrGxyZo4xsOUUsGRWjrtrVonfHkcCHWf7UdD-HYj3HKX-zK-PDRu2kMsS__DWmDVNcNlMDtWaAwOfzkjr9TOu7eXk_ZX-YXSI0"
+      ],
+      "ParticipantIDs": [
+        "gale_infotracacademiconefile_A746375591",
+        "gale_incontextgauss_ISR_A746375591"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=An+inducible+potato+%28E%2CE%29%E2%80%90farnesol+synthase+confers+tolerance+against+bacterial+pathogens+in+potato+and+tobacco&rft.jtitle=The+Plant+journal+%3A+for+cell+and+molecular+biology&rft.au=Dwivedi%2C+Varun&rft.au=Kumar%2C+Sarma+Rajeev&rft.au=Shilpashree%2C+H.+B.&rft.au=Krishna%2C+Ram&rft.date=2022-09-01&rft.issn=0960-7412&rft.eissn=1365-313X&rft.volume=111&rft.issue=5&rft.spage=1308&rft.epage=1323&rft_id=info:doi/10.1111%2Ftpj.15890&rft.externalDocID=TPJ15890",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1fa9swED_KKHQva7sN5rYr6l7aQk1jR3JsKIWkJGQhZaWkZXsykiw3hWCH2Hno0_oR-hn3SXbnf6SBQdmbQbIsS7q730mn3wEcr-mD8feefd0bDgM-GQ3ux56NNipwbPIVr4PRWNz-FL_6K9m-SoqIZs-NhKNQ2STjUmW1nJ_nc5Rz4QfksKPVp7wNzo-r5gih0y65oxCi22g23YpW6NWbr4zRukpegatuZW8G2_BQd7MItm7CTWgXThuEayuB2DWj43_91A58qCAp65ZraBc2TPIRNnspwsanT_C7mzD025f6Uc0Mu5hezrEgTy_Op5fspH_WP_3z_BLLBWrMdMaypySfol1kurhImLE8nRlK3WGYfJCPCEWZKumh8YOUDDnF9Zth-2sNyyRipGm0Tj_D3aA_uRraVdYGW7cRi9m6JVpxHCmtg5YbROi5G6G4E7m8HTtOzHkUc58bH5GoInp9D-0h5yoi2h309kz7CzCETYp7ypO-cLnne5IjLlJGcldpoaW04Fs9b-G8ZOUIa28GRzAsRtCCY5rRkCQ1X0gtqwsHaWKI8yrsdhzRIXeWW3BQT3pYiXAWuh309rCQCwuOmmIUPjpRkYlJl1iHqHICIgG04KSY1H93J5zcjIqHvbdX3Yf3Ll23KGLaDuBdvliar7DVLLbDYsn_BXhGB0k",
+      "linkToPdf": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1ba9swFD6MdWx76a4wr12r7aUdzDR2JMeGUki6hDRLtzKy0T0JSZabQrBD4jz0qfsJ-437JTvHN9LAYOzNIFmWpXP5ji7fATjYsAfjs5573hsOIz4ZDb6PAxd9VOS5FCueR6Ox-HopfvTXsn2VFBHNmhspR2GyScfncVLr-VE-Rz0XYYQB-xYP_A4lbvC-nDZ7CJ12SR6FGN1Fv-lXvEJ3Xr3jjTZt8hpe9SuHM3gCV3U_i9PWzXkTWoYzFvHa2knsmtLxv_7qKWxXmJR1SyF6Bvds-hwe9DLEjTcv4LabMgzcV-Zazyw7np7MsSDPjo-mJ-yw_6H__vfPX4laoMnMZmx5k-ZTdIzMFDcJlyzPZpZyd1imrtQ1YlGmS35o_CBlQ85QgJfY_kbDKo0ZmRpjspfwbdCfnA7dKm2Da9oIxlzTEq0kibUxUcuPYgzdrdDci33eTjwv4TxOeMhtiFBUE79-gA6Rcx0T7w6Ge7b9ChjiJs0DHahQ-DwIA8URGGmruK-NMEo58K6eNzkvaTlkHc7gCMpiBB04oBmVpKr5QhlV3TjIUkukV7Lb8USH4lnuwG496bLS4aVEiQoR33EuHHjbFKP20ZaKSm22wjrElRMRC6ADh8Wk_r07cnIxKh5e_3vVfXh48XEgx2efP-3AY5-uXhTn23bhfr5Y2TfwqJG7vUL6_wDBugob",
+      "linkToHtml": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV3dixMxEB_EE84Xzy9w9dToy53gct1tsh9wHLRHS69uVaSKPoUkm7UHZbe024d70j_Bv9G_xJn94q4giG8LyWazmczMb5LJLwBHO_YguRi6s-FkEvP5dPwlCVz0UbHnUqw4i6eJ-PRVfBs1iZV0HKamiOjW3Eg5KpNNOk5r0q2in5QrVHQRxRix7_HAD0kvvQ_n3SZC2K_ZoxCku-g4_YZY6MarN9zRrlG-Blj9xuOMD2DRdrRKt-4STmgdzlgEbNdSsVtOx__7rftwr0GlbFBPowdwy-YP4c6wQOR49Qh-DHKGofvWXOqlZaeLsxUWlMXpyeKMHY_ejt78_vkrU2s0msWSba7ycoGukZnqLOGGlcXS0u0dlqnv6hLRKNM1QzR-kO5DLnAKb7D9nYZVnjIyNsYUj-HzeDQ_n7jNxQ2u6SMcc01P9LIs1cbEPT9OMXi3QnMv9Xk_87yM8zTjEbcRglFNDPsBukTOdUrMOxjw2f4TYIicNA90oCLh8yAKFEdopK3ivjbCKOXA61ZwclUTc8g2oMERlNUIOnBEIpWkrOVaGdWcOShyS7RXchB6IqSIljtw2EpdNlq8kX6IAR8WcuHAq64Y9Y82VVRuiy3WIbacmHgAHTiupPr37sj5x2n18PTfq76E_cl8lsjk4v27Z3DXp9MXVYrbIdwu11v7HPa7mfeimv9_AN5lC2w",
+      "ExternalDocumentID": [
+        "A715707174",
+        "10_1111_tpj_15890",
+        "TPJ15890"
+      ],
+      "Issue": [
+        "5"
+      ],
+      "DBID": [
+        "AAYXX",
+        "CITATION",
+        "BSHEE",
+        "7QO",
+        "7QP",
+        "7QR",
+        "7TM",
+        "8FD",
+        "FR3",
+        "M7N",
+        "P64",
+        "RC3",
+        "7X8"
+      ],
+      "Score": [
+        "14.048728"
+      ],
+      "PublicationPlace": [
+        "Oxford"
+      ],
+      "ID": [
+        "FETCH-LOGICAL-c3610-c050ffdbcc9029deb2e5b41d243f11f44df484e8150b0857699044bd3578140e3"
+      ],
+      "DOI": [
+        "10.1111/tpj.15890"
+      ],
+      "Publisher": [
+        "Wiley Subscription Services, Inc",
+        "Blackwell Publishing Ltd"
+      ],
+      "Language": [
+        "English"
+      ],
+      "EISSN": [
+        "1365-313X"
+      ],
+      "ISSN": [
+        "0960-7412"
+      ],
+      "Cites_doi": [
+        "10.1186/s12864-015-1598-x",
+        "10.1104/pp.104.044388",
+        "10.3390/molecules23061370",
+        "10.1126/science.1171661",
+        "10.1104/pp.113.224279",
+        "10.1093/oxfordjournals.pcp.a029633",
+        "10.1016/j.pbi.2003.09.005",
+        "10.1016/j.jplph.2014.01.007",
+        "10.1016/j.plantsci.2014.09.008",
+        "10.1016/j.jplph.2009.04.003",
+        "10.1111/pbi.12347",
+        "10.1111/nph.14637",
+        "10.1146/annurev-phyto-081211-172950",
+        "10.1080/15592324.2015.1028704",
+        "10.1111/pbi.12914",
+        "10.1111/nph.14663",
+        "10.1038/srep09682",
+        "10.1104/pp.111.176545",
+        "10.1007/s10886-006-9107-y",
+        "10.1016/j.jplph.2015.12.008",
+        "10.1016/j.phytochem.2006.05.027",
+        "10.1111/j.1365-313X.2010.04235.x",
+        "10.1073/pnas.0605423104",
+        "10.1016/j.phytochem.2007.04.008",
+        "10.1111/pce.13602",
+        "10.1111/j.1574-6968.2007.01042.x",
+        "10.1093/molbev/mst197",
+        "10.1042/bj20031572",
+        "10.1101/gad.14.12.1485",
+        "10.1104/pp.108.117663",
+        "10.1104/pp.111.189217",
+        "10.1186/s12870-019-2025-2",
+        "10.1016/S0040-4039(00)02031-1",
+        "10.1111/j.1365-313X.2008.03496.x",
+        "10.1104/pp.17.00879",
+        "10.1038/srep44126",
+        "10.1007/BF00980064",
+        "10.3852/09-176",
+        "10.1104/pp.104.038703",
+        "10.1038/s41589-019-0287-5",
+        "10.1055/s-2005-872705",
+        "10.1111/j.1365-313X.2011.04520.x",
+        "10.1093/mp/sst058",
+        "10.1046/j.1365-313x.2001.01097.x",
+        "10.1094/MPMI-21-11-1482",
+        "10.1199/tab.0039",
+        "10.1016/j.pep.2015.11.019",
+        "10.1093/jxb/eri285",
+        "10.1016/j.plantsci.2015.07.007",
+        "10.1016/S0960-9822(00)00639-4",
+        "10.1038/nature10158",
+        "10.1073/pnas.96.23.13080",
+        "10.1126/science.227.4691.1229",
+        "10.1016/j.febslet.2010.05.045",
+        "10.1111/ppl.13199",
+        "10.1104/pp.014605",
+        "10.1104/pp.008326",
+        "10.1093/pcp/pci122",
+        "10.1055/s-2003-44722",
+        "10.1104/pp.123.4.1257",
+        "10.1111/j.1469-8137.2011.04001.x",
+        "10.1007/s11103-015-0381-3",
+        "10.1016/j.plantsci.2005.11.007",
+        "10.1007/s00425-003-1039-y",
+        "10.1111/pce.12169"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "GroupedDBID": [
+        "---",
+        "-DZ",
+        ".3N",
+        ".GA",
+        ".Y3",
+        "05W",
+        "08R",
+        "0R~",
+        "10A",
+        "123",
+        "1OC",
+        "24P",
+        "29O",
+        "2WC",
+        "31~",
+        "33P",
+        "36B",
+        "3SF",
+        "4.4",
+        "50Y",
+        "50Z",
+        "51W",
+        "51X",
+        "52M",
+        "52N",
+        "52O",
+        "52P",
+        "52S",
+        "52T",
+        "52U",
+        "52W",
+        "52X",
+        "53G",
+        "5HH",
+        "5LA",
+        "5VS",
+        "66C",
+        "702",
+        "7PT",
+        "8-0",
+        "8-1",
+        "8-3",
+        "8-4",
+        "8-5",
+        "8UM",
+        "930",
+        "A03",
+        "AAESR",
+        "AAEVG",
+        "AAHHS",
+        "AANLZ",
+        "AAONW",
+        "AASGY",
+        "AAXRX",
+        "AAZKR",
+        "ABCQN",
+        "ABCUV",
+        "ABEML",
+        "ABHUG",
+        "ABPTK",
+        "ABPVW",
+        "ABWRO",
+        "ACAHQ",
+        "ACCFJ",
+        "ACCZN",
+        "ACFBH",
+        "ACGFS",
+        "ACIWK",
+        "ACNCT",
+        "ACPOU",
+        "ACPRK",
+        "ACSCC",
+        "ACXBN",
+        "ACXME",
+        "ACXQS",
+        "ADAWD",
+        "ADBBV",
+        "ADDAD",
+        "ADEOM",
+        "ADIZJ",
+        "ADKYN",
+        "ADMGS",
+        "ADOZA",
+        "ADXAS",
+        "ADZMN",
+        "AEEZP",
+        "AEGXH",
+        "AEIGN",
+        "AEIMD",
+        "AENEX",
+        "AEQDE",
+        "AEUQT",
+        "AEUYR",
+        "AFBPY",
+        "AFEBI",
+        "AFGKR",
+        "AFPWT",
+        "AFRAH",
+        "AFVGU",
+        "AFZJQ",
+        "AGJLS",
+        "AIURR",
+        "AIWBW",
+        "AJBDE",
+        "AJXKR",
+        "ALAGY",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ALUQN",
+        "AMBMR",
+        "AMYDB",
+        "ATUGU",
+        "AUFTA",
+        "AZBYB",
+        "AZVAB",
+        "BAFTC",
+        "BAWUL",
+        "BFHJK",
+        "BHBCM",
+        "BMNLL",
+        "BMXJE",
+        "BNHUX",
+        "BROTX",
+        "BRXPI",
+        "BY8",
+        "C45",
+        "CAG",
+        "COF",
+        "CS3",
+        "D-E",
+        "D-F",
+        "DCZOG",
+        "DIK",
+        "DPXWK",
+        "DR2",
+        "DRFUL",
+        "DRSTM",
+        "DU5",
+        "E3Z",
+        "EBS",
+        "ECGQY",
+        "EJD",
+        "ESX",
+        "F00",
+        "F01",
+        "F04",
+        "F5P",
+        "FIJ",
+        "G-S",
+        "G.N",
+        "GODZA",
+        "H.T",
+        "H.X",
+        "HF~",
+        "HZI",
+        "HZ~",
+        "IHE",
+        "IPNFZ",
+        "IX1",
+        "J0M",
+        "K48",
+        "LATKE",
+        "LC2",
+        "LC3",
+        "LEEKS",
+        "LH4",
+        "LITHE",
+        "LOXES",
+        "LP6",
+        "LP7",
+        "LUTES",
+        "LW6",
+        "LYRES",
+        "MEWTI",
+        "MK4",
+        "MRFUL",
+        "MRSTM",
+        "MSFUL",
+        "MSSTM",
+        "MXFUL",
+        "MXSTM",
+        "N04",
+        "N05",
+        "N9A",
+        "NF~",
+        "O66",
+        "O9-",
+        "OK1",
+        "OVD",
+        "P2P",
+        "P2W",
+        "P2X",
+        "P4D",
+        "PQEST",
+        "PQQKQ",
+        "Q.N",
+        "Q11",
+        "QB0",
+        "R.K",
+        "ROL",
+        "RX1",
+        "SUPJJ",
+        "TEORI",
+        "TR2",
+        "UB1",
+        "UMP",
+        "W8V",
+        "W99",
+        "WBKPD",
+        "WH7",
+        "WIH",
+        "WIK",
+        "WIN",
+        "WNSPC",
+        "WOHZO",
+        "WQJ",
+        "WRC",
+        "WXSBR",
+        "WYISQ",
+        "XG1",
+        "YFH",
+        "YUY",
+        "ZZTAW",
+        "~IA",
+        "~KM",
+        "~WT",
+        "AAYXX",
+        "CITATION",
+        "BSHEE",
+        "7QO",
+        "7QP",
+        "7QR",
+        "7TM",
+        "8FD",
+        "FR3",
+        "M7N",
+        "P64",
+        "RC3",
+        "7X8"
+      ],
+      "SubjectTerms": [
+        "Analysis",
+        "Bacteria",
+        "Biosynthesis",
+        "Cytosol",
+        "Defense",
+        "Farnesol",
+        "farnesol synthase",
+        "Fusion protein",
+        "Genes",
+        "Jasmonic acid",
+        "Leaves",
+        "Localization",
+        "Methyl jasmonate",
+        "Nicotiana tabacum",
+        "Pathogenesis",
+        "Pathogenic microorganisms",
+        "Pathogens",
+        "Phytosterols",
+        "Plant bacterial diseases",
+        "Plant species",
+        "potato",
+        "Potatoes",
+        "Pseudocnus syracusanus",
+        "Pseudomonas syringae",
+        "Ralstonia solanacearum",
+        "Sesquiterpenes",
+        "Solanum tuberosum",
+        "Terpene synthase",
+        "Tobacco",
+        "Vegetables"
+      ],
+      "Discipline": [
+        "Botany"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "References": [
+        "2007; 104",
+        "2017; 7",
+        "2006; 32",
+        "2019; 15",
+        "2010; 102",
+        "1992; 18",
+        "2010; 584",
+        "2019; 19",
+        "2006; 170",
+        "2008; 148",
+        "1999; 40",
+        "2014; 171",
+        "2013; 6",
+        "2010; 63",
+        "2011; 156",
+        "2011; 475",
+        "2001; 42",
+        "2015; 89",
+        "2004; 378",
+        "2004; 135",
+        "2000; 14",
+        "2006; 67",
+        "2000; 10",
+        "2003; 6",
+        "2009; 166",
+        "2011; 66",
+        "2002; 269",
+        "2008; 21",
+        "1999; 96",
+        "2008; 279",
+        "2000; 123",
+        "2016; 191",
+        "2014; 164",
+        "2007; 68",
+        "2009; 324",
+        "2015; 13",
+        "2003; 217",
+        "2015; 16",
+        "2015; 5",
+        "2002; 130",
+        "2015; 10",
+        "2002; 1",
+        "2006; 8",
+        "1985; 227",
+        "2001; 27",
+        "2008; 55",
+        "2017; 175",
+        "2018; 23",
+        "2016; 120",
+        "2017; 215",
+        "2003; 131",
+        "2005; 46",
+        "2012; 50",
+        "2014; 229",
+        "2019; 42",
+        "2012; 193",
+        "2013; 30",
+        "2021; 171",
+        "2014; 37",
+        "2015; 239",
+        "2012; 158",
+        "2018; 16",
+        "2005; 56",
+        "2006; 103",
+        "e_1_2_7_5_1",
+        "e_1_2_7_3_1",
+        "e_1_2_7_9_1",
+        "e_1_2_7_7_1",
+        "e_1_2_7_19_1",
+        "e_1_2_7_60_1",
+        "e_1_2_7_62_1",
+        "e_1_2_7_15_1",
+        "e_1_2_7_41_1",
+        "e_1_2_7_64_1",
+        "e_1_2_7_13_1",
+        "e_1_2_7_43_1",
+        "e_1_2_7_66_1",
+        "e_1_2_7_11_1",
+        "e_1_2_7_45_1",
+        "e_1_2_7_47_1",
+        "e_1_2_7_26_1",
+        "e_1_2_7_49_1",
+        "e_1_2_7_28_1",
+        "e_1_2_7_50_1",
+        "e_1_2_7_25_1",
+        "e_1_2_7_31_1",
+        "e_1_2_7_52_1",
+        "e_1_2_7_23_1",
+        "e_1_2_7_33_1",
+        "e_1_2_7_54_1",
+        "e_1_2_7_21_1",
+        "e_1_2_7_35_1",
+        "e_1_2_7_56_1",
+        "e_1_2_7_37_1",
+        "e_1_2_7_58_1",
+        "Eigenbrode S.D. (e_1_2_7_17_1) 2002; 269",
+        "e_1_2_7_39_1",
+        "e_1_2_7_6_1",
+        "e_1_2_7_4_1",
+        "e_1_2_7_8_1",
+        "e_1_2_7_18_1",
+        "e_1_2_7_16_1",
+        "e_1_2_7_40_1",
+        "e_1_2_7_61_1",
+        "e_1_2_7_2_1",
+        "e_1_2_7_14_1",
+        "e_1_2_7_42_1",
+        "e_1_2_7_63_1",
+        "e_1_2_7_12_1",
+        "e_1_2_7_44_1",
+        "e_1_2_7_65_1",
+        "e_1_2_7_10_1",
+        "e_1_2_7_46_1",
+        "e_1_2_7_67_1",
+        "e_1_2_7_48_1",
+        "e_1_2_7_27_1",
+        "e_1_2_7_29_1",
+        "e_1_2_7_51_1",
+        "e_1_2_7_30_1",
+        "e_1_2_7_53_1",
+        "e_1_2_7_24_1",
+        "e_1_2_7_32_1",
+        "e_1_2_7_55_1",
+        "e_1_2_7_22_1",
+        "e_1_2_7_34_1",
+        "e_1_2_7_57_1",
+        "e_1_2_7_20_1",
+        "e_1_2_7_36_1",
+        "e_1_2_7_59_1",
+        "e_1_2_7_38_1"
+      ],
+      "SourceType": [
+        "Aggregation Database",
+        "Publisher"
+      ],
+      "PublicationYear": [
+        "2022"
+      ],
+      "StartPage": [
+        "1308"
+      ],
+      "SourceID": [
+        "proquest",
+        "gale",
+        "crossref",
+        "wiley"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "2022 Society for Experimental Biology and John Wiley & Sons Ltd."
+        },
+        {
+          "notice": "COPYRIGHT 2022 Wiley Subscription Services, Inc."
+        },
+        {
+          "notice": "Copyright © 2022 John Wiley & Sons Ltd and the Society for Experimental Biology"
+        }
+      ],
+      "SSID": [
+        "ssj0017364"
+      ],
+      "Title": [
+        "An inducible <h>potato</h> (E,E)‐farnesol synthase confers tolerance against bacterial pathogens in <h>potato</h> and tobacco"
+      ],
+      "CitedBy_id": [
+        "crossref_primary_10_3390_ijms241713343",
+        "crossref_primary_10_3390_kinasesphosphatases1030010"
+      ],
+      "PageCount": [
+        "16"
+      ],
+      "DatabaseTitle": [
+        "CrossRef",
+        "Genetics Abstracts",
+        "Biotechnology Research Abstracts",
+        "Technology Research Database",
+        "Algology Mycology and Protozoology Abstracts (Microbiology C)",
+        "Nucleic Acids Abstracts",
+        "Chemoreception Abstracts",
+        "Engineering Research Database",
+        "Calcium & Calcified Tissue Abstracts",
+        "Biotechnology and BioEngineering Abstracts",
+        "MEDLINE - Academic"
+      ],
+      "EndPage": [
+        "1323"
+      ],
+      "Notes": [
+        "ObjectType-Article-1",
+        "SourceType-Scholarly Journals-1",
+        "ObjectType-Feature-2"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-c3610-c050ffdbcc9029deb2e5b41d243f11f44df484e8150b0857699044bd3578140e3"
+      ],
+      "Copyright": [
+        "2022 Society for Experimental Biology and John Wiley & Sons Ltd.",
+        "COPYRIGHT 2022 Wiley Subscription Services, Inc.",
+        "Copyright © 2022 John Wiley & Sons Ltd and the Society for Experimental Biology"
+      ],
+      "IngestDate": [
+        "Wed Sep 27 00:36:24 EDT 2023",
+        "Tue Sep 19 12:02:19 EDT 2023",
+        "Fri Sep 15 04:03:55 EDT 2023",
+        "Tue Sep 05 10:30:23 EDT 2023",
+        "Tue May 02 11:49:39 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "09",
+          "year": "2022",
+          "text": "September 2022"
+        }
+      ],
+      "DatabaseTitleList": [
+        "",
+        "CrossRef",
+        "",
+        "Genetics Abstracts"
+      ],
+      "URI": [
+        "https://onlinelibrary.wiley.com/doi/abs/10.1111/tpj.15890",
+        "https://search.proquest.com/docview/2708617445",
+        "https://search.proquest.com/docview/2684098285"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Oxford"
+        }
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Wiley Subscription Services, Inc"
+        },
+        {
+          "name": "Blackwell Publishing Ltd"
+        }
+      ],
+      "PQPubID": [
+        "31702"
+      ],
+      "AbstractList": [
+        "Keywords: defense; farnesol synthase; phytosterols; potato; Pseudomonas syringae; Ralstonia solanacearum; terpene synthase; tobacco SUMMARY Terpene synthases (TPSs) have diverse biological functions in plants. Though the roles of TPSs in herbivore defense are well established in many plant species, their role in bacterial defense has been scarce and is emerging. Through functional genomics, here we report the in planta role of potato (Solanum tuberosum) terpene synthase (StTPS18) in bacterial defense. Expression of StTPS18 was highest in leaves and was induced in response to Pseudomonas syringae and methyl jasmonate treatments. The recombinant StTPS18 exhibited bona fide (E,E)-farnesol synthase activity forming a sesquiterpenoid, (E,E)-farnesol as the sole product, utilising (E,E)-farnesyl diphosphate (FPP). Subcellular localization of GFP fusion protein revealed that StTPS18 is localized to the cytosol. Silencing and overexpression of StTPS18 in potato resulted in reduced and enhanced tolerance, respectively, to bacterial pathogens P. syringae and Ralstonia solanacearum. Bacterial growth assay using medium containing (E,E)-farnesol significantly inhibited P. syringae growth. Moreover, StTPS18 overexpressing transgenic potato and Nicotiana tabacum leaves, and (E,E)-farnesol and P. syringae infiltrated potato leaves exhibited elevated expression of sterol pathway and members of pathogenesis-related genes with enhanced phytosterol accumulation. Interestingly, enhanced phytosterols in .sup.13C.sub.3-(E,E)-farnesol infiltrated potato leaves were devoid of any noticeable .sup.13C labeling, indicating no direct utilization of (E,E)-farnesol in phytosterols formation. Furthermore, leaves of StTPS18 overexpressing transgenic lines had no detectable (E,E)-farnesol similar to the control plant, and emitted lower levels of sesquiterpenes than the control. These findings point towards an indirect involvement of StTPS18 and its product (E,E)-farnesol in bacterial defense through upregulation of phytosterol biosynthesis and defense genes. CAPTION(S): FigureS1. RT-qPCR analysis of 18 putative full-length TPSs (identified from potato genome) in Pseudomonas syringae and buffer infiltrated potato leaves. FigureS2. In silico expression of StTPS18 in different tissues. Fragments Per Kilobase of transcript per Million mapped reads (FPKM) values were taken from the potato genome sequencing consortium and plotted as comparative expression. FigureS3. Vector maps of different constructs used for biochemical and in planta characterization of StTPS18 in this study. FigureS4. Expression and purification analysis of recombinant StTPS18. FigureS5. TPS assay using recombinant StTPS18 with GPP and GGPP substrates in presence of different metal ions. FigureS6. Multiple sequence alignment of StTPS18 with previously characterized farnesol synthases from other plant species. FigureS7. Analysis of terpenes emitted by StTPS18 overexpressing lines and wild-type. FigureS8. Generation of transgenic potato using overexpression (pBI121::StTPS18) (a) and silencing (pBI121::StTPS18AS) (b) constructs. FigureS9. Bacterial growth assay in WT and StTPS18 overexpressing transgenic potato leaves. FigureS10. Effect of (E,E)-farnesol infiltration on sterol pathway and defense genes in tobacco leaves. FigureS11. Effect of 13C3-(E,E)-farnesol infiltration on phytosterol formation in potato leaves. FigureS12. Mass spectra analysis of phytosterols identified in control, 13C3-farnesol, and farnesol infiltrated potato leaves FigureS13. Analysis of 13C3-(E,E)-farnesol utilization in phytosterol formation in potato leaves. FigureS14. Generation and screening of transgenic tobacco lines overexpressing StTPS18. FigureS15. Expression analysis of phytosterol pathway and PR genes in wild-type (WT), pBI121, and StTPS18 transgenic tobacco lines. FigureS16. Analysis of phytosterols in transgenic tobacco overexpressing StTPS18. FigureS17. GC-MS analysis of volatiles extracted using CaCl2 from transgenic StTPS18 (line StTPS18_t6) and pBI121 control tobacco plants. TableS1. List of terpene synthases (TPS) identified in potato genome, their accession IDs, and location in the potato genome. TableS2. Representative gene models of all identified terpene synthases in the potato genome. TableS3. GenBank accession numbers of TPSs used in the phylogenetic tree of Figure3a. TableS4. Prediction of subcellular targeting signals in StTPS18 protein. TableS5. List of oligonucleotide primers used in the study. TableS6. List of potato and tobacco genes used in this study for qPCR with their GenBank accession numbers. TableS7. List of identified compounds and their RRI values from transgenic potato line (StTPS18_p5) and WT plants Byline: Varun Dwivedi, Sarma Rajeev Kumar, H. B. Shilpashree, Ram Krishna, Srinivas Rao, Ajit K. Shasany, Shannon B. Olsson, Dinesh A. Nagegowda",
+        "SUMMARY Terpene synthases (TPSs) have diverse biological functions in plants. Though the roles of TPSs in herbivore defense are well established in many plant species, their role in bacterial defense has been scarce and is emerging. Through functional genomics, here we report the in planta role of potato ( Solanum tuberosum ) terpene synthase (StTPS18) in bacterial defense. Expression of StTPS18 was highest in leaves and was induced in response to Pseudomonas syringae and methyl jasmonate treatments. The recombinant StTPS18 exhibited bona fide ( E,E )‐farnesol synthase activity forming a sesquiterpenoid, ( E,E )‐farnesol as the sole product, utilising ( E,E )‐farnesyl diphosphate (FPP). Subcellular localization of GFP fusion protein revealed that StTPS18 is localized to the cytosol. Silencing and overexpression of StTPS18 in potato resulted in reduced and enhanced tolerance, respectively, to bacterial pathogens P. syringae and Ralstonia solanacearum . Bacterial growth assay using medium containing ( E,E )‐farnesol significantly inhibited P. syringae growth. Moreover, StTPS18 overexpressing transgenic potato and Nicotiana tabacum leaves, and ( E,E )‐farnesol and P. syringae infiltrated potato leaves exhibited elevated expression of sterol pathway and members of pathogenesis‐related genes with enhanced phytosterol accumulation. Interestingly, enhanced phytosterols in 13 C 3 ‐( E,E )‐farnesol infiltrated potato leaves were devoid of any noticeable 13 C labeling, indicating no direct utilization of ( E,E )‐farnesol in phytosterols formation. Furthermore, leaves of StTPS18 overexpressing transgenic lines had no detectable ( E,E )‐farnesol similar to the control plant, and emitted lower levels of sesquiterpenes than the control. These findings point towards an indirect involvement of StTPS18 and its product ( E,E )‐farnesol in bacterial defense through upregulation of phytosterol biosynthesis and defense genes.\u000aSignificance Statement Here we show that a pathogen‐responsive potato sesquiterpene synthase forming ( E,E )‐farnesol confers indirect defense against bacterial pathogens through induced phytosterol biosynthesis and defense response in potato and tobacco. The findings demonstrate an indirect role of ( E,E )‐farnesol in plant biotic stress tolerance.",
+        "SUMMARY\u000aTerpene synthases (TPSs) have diverse biological functions in plants. Though the roles of TPSs in herbivore defense are well established in many plant species, their role in bacterial defense has been scarce and is emerging. Through functional genomics, here we report the in planta role of potato (Solanum tuberosum) terpene synthase (StTPS18) in bacterial defense. Expression of StTPS18 was highest in leaves and was induced in response to Pseudomonas syringae and methyl jasmonate treatments. The recombinant StTPS18 exhibited bona fide (E,E)‐farnesol synthase activity forming a sesquiterpenoid, (E,E)‐farnesol as the sole product, utilising (E,E)‐farnesyl diphosphate (FPP). Subcellular localization of GFP fusion protein revealed that StTPS18 is localized to the cytosol. Silencing and overexpression of StTPS18 in potato resulted in reduced and enhanced tolerance, respectively, to bacterial pathogens P. syringae and Ralstonia solanacearum. Bacterial growth assay using medium containing (E,E)‐farnesol significantly inhibited P. syringae growth. Moreover, StTPS18 overexpressing transgenic potato and Nicotiana tabacum leaves, and (E,E)‐farnesol and P. syringae infiltrated potato leaves exhibited elevated expression of sterol pathway and members of pathogenesis‐related genes with enhanced phytosterol accumulation. Interestingly, enhanced phytosterols in 13C3‐(E,E)‐farnesol infiltrated potato leaves were devoid of any noticeable 13C labeling, indicating no direct utilization of (E,E)‐farnesol in phytosterols formation. Furthermore, leaves of StTPS18 overexpressing transgenic lines had no detectable (E,E)‐farnesol similar to the control plant, and emitted lower levels of sesquiterpenes than the control. These findings point towards an indirect involvement of StTPS18 and its product (E,E)‐farnesol in bacterial defense through upregulation of phytosterol biosynthesis and defense genes.\u000aSignificance Statement\u000aHere we show that a pathogen‐responsive potato sesquiterpene synthase forming (E,E)‐farnesol confers indirect defense against bacterial pathogens through induced phytosterol biosynthesis and defense response in potato and tobacco. The findings demonstrate an indirect role of (E,E)‐farnesol in plant biotic stress tolerance.",
+        "SUMMARY Terpene synthases (TPSs) have diverse biological functions in plants. Though the roles of TPSs in herbivore defense are well established in many plant species, their role in bacterial defense has been scarce and is emerging. Through functional genomics, here we report the in planta role of potato (Solanum tuberosum) terpene synthase (StTPS18) in bacterial defense. Expression of StTPS18 was highest in leaves and was induced in response to Pseudomonas syringae and methyl jasmonate treatments. The recombinant StTPS18 exhibited bona fide (E,E)‐farnesol synthase activity forming a sesquiterpenoid, (E,E)‐farnesol as the sole product, utilising (E,E)‐farnesyl diphosphate (FPP). Subcellular localization of GFP fusion protein revealed that StTPS18 is localized to the cytosol. Silencing and overexpression of StTPS18 in potato resulted in reduced and enhanced tolerance, respectively, to bacterial pathogens P. syringae and Ralstonia solanacearum. Bacterial growth assay using medium containing (E,E)‐farnesol significantly inhibited P. syringae growth. Moreover, StTPS18 overexpressing transgenic potato and Nicotiana tabacum leaves, and (E,E)‐farnesol and P. syringae infiltrated potato leaves exhibited elevated expression of sterol pathway and members of pathogenesis‐related genes with enhanced phytosterol accumulation. Interestingly, enhanced phytosterols in 13C3‐(E,E)‐farnesol infiltrated potato leaves were devoid of any noticeable 13C labeling, indicating no direct utilization of (E,E)‐farnesol in phytosterols formation. Furthermore, leaves of StTPS18 overexpressing transgenic lines had no detectable (E,E)‐farnesol similar to the control plant, and emitted lower levels of sesquiterpenes than the control. These findings point towards an indirect involvement of StTPS18 and its product (E,E)‐farnesol in bacterial defense through upregulation of phytosterol biosynthesis and defense genes."
+      ],
+      "ORCID": [
+        "0000-0002-9418-8918"
+      ],
+      "Author": [
+        "Kumar, Sarma Rajeev",
+        "Dwivedi, Varun",
+        "Shilpashree, H. B.",
+        "Rao, Srinivas",
+        "Krishna, Ram",
+        "Olsson, Shannon B.",
+        "Shasany, Ajit K.",
+        "Nagegowda, Dinesh A."
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2020"
+      ],
+      "GrantInformation_xml": [
+        {
+          "fundername": "Department of Science and Technology, Govt of India",
+          "funderid": "SR/FT/LS‐038/2009"
+        }
+      ],
+      "References_xml": [
+        {
+          "volume": "239",
+          "start-page": "56",
+          "year": "2015",
+          "end-page": "66",
+          "article-title": "Precursor feeding studies and molecular characterization of geraniol synthase establish the limiting role of geraniol in monoterpene indole alkaloid biosynthesis in leaves",
+          "publication-title": "Plant Science"
+        },
+        {
+          "volume": "10",
+          "start-page": "R601",
+          "year": "2000",
+          "end-page": "R604",
+          "article-title": "Plant development: a role for sterols in embryogenesis",
+          "publication-title": "Current Biology"
+        },
+        {
+          "volume": "42",
+          "start-page": "2827",
+          "year": "2019",
+          "end-page": "2843",
+          "article-title": "Roles of plant volatiles in defence against microbial pathogens and microbial exploitation of volatiles",
+          "publication-title": "Plant, Cell & Environment"
+        },
+        {
+          "volume": "37",
+          "start-page": "451",
+          "issue": "2",
+          "year": "2014",
+          "end-page": "461",
+          "article-title": "Jasmonate induction of the monoterpene linalool confers resistance to rice bacterial blight and its biosynthesis is regulated by JAZ protein in rice",
+          "publication-title": "Plant, Cell and Environment"
+        },
+        {
+          "volume": "15",
+          "start-page": "583",
+          "year": "2019",
+          "end-page": "588",
+          "article-title": "Natural fumigation as a mechanism for volatile transport between flower organs",
+          "publication-title": "Nature Chemical Biology"
+        },
+        {
+          "volume": "227",
+          "start-page": "1229",
+          "year": "1985",
+          "end-page": "1231",
+          "article-title": "A simple and general method for transferring genes into plants",
+          "publication-title": "Science"
+        },
+        {
+          "volume": "6",
+          "start-page": "1531",
+          "year": "2013",
+          "end-page": "1549",
+          "article-title": "Heteromeric and homomeric geranyl diphosphate synthases from and their role in monoterpene indole alkaloid biosynthesis",
+          "publication-title": "Molecular Plant"
+        },
+        {
+          "volume": "42",
+          "start-page": "655",
+          "year": "2001",
+          "end-page": "657",
+          "article-title": "Incorporation of all‐trans‐farnesol into sterols and ubiquinone in L. cv Bright Yellow‐2 cell cultures",
+          "publication-title": "Tetrahedron Letters"
+        },
+        {
+          "volume": "6",
+          "start-page": "530",
+          "year": "2003",
+          "end-page": "535",
+          "article-title": "Protein farnesylation in plants‐‐conserved mechanisms but different targets",
+          "publication-title": "Current Opinion in Plant Biology"
+        },
+        {
+          "volume": "215",
+          "start-page": "1115",
+          "year": "2017",
+          "end-page": "1131",
+          "article-title": "A WRKY transcription factor from regulates triterpenoid withanolide accumulation and biotic stress tolerance through modulation of phytosterol and defense pathways",
+          "publication-title": "The New Phytologist"
+        },
+        {
+          "volume": "191",
+          "start-page": "120",
+          "year": "2016",
+          "end-page": "126",
+          "article-title": "Rice terpene synthase 24 (OsTPS24) encodes a jasmonate‐responsive monoterpene synthase that produces an antibacterial γ‐terpinene against rice pathogen",
+          "publication-title": "Journal of Plant Physiology"
+        },
+        {
+          "volume": "16",
+          "start-page": "1778",
+          "year": "2018",
+          "end-page": "1787",
+          "article-title": "The rice terpene synthase gene OsTPS19 functions as an ( )‐limonene synthase in planta, and its overexpression leads to enhanced resistance to the blast fungus ",
+          "publication-title": "Plant Biotechnology Journal"
+        },
+        {
+          "volume": "18",
+          "start-page": "1083",
+          "year": "1992",
+          "end-page": "1091",
+          "article-title": "Effects of some natural volatile compounds on the pathogenic fungi and ",
+          "publication-title": "Journal of Chemical Ecology"
+        },
+        {
+          "volume": "56",
+          "start-page": "2907",
+          "year": "2005",
+          "end-page": "2914",
+          "article-title": "Housekeeping gene selection for real‐time RT‐PCR normalization in potato during biotic and abiotic stress",
+          "publication-title": "Journal of Experimental Botany"
+        },
+        {
+          "volume": "27",
+          "start-page": "315",
+          "year": "2001",
+          "end-page": "324",
+          "article-title": "Expression of Clarkia S‐linalool synthase in transgenic petunia plants results in the accumulation of S‐linalyl‐β‐d‐glucopyranoside",
+          "publication-title": "The Plant Journal"
+        },
+        {
+          "volume": "135",
+          "start-page": "1956",
+          "year": "2004",
+          "end-page": "1966",
+          "article-title": "Characterization of a root‐specific Arabidopsis terpene synthase responsible for the formation of the volatile monoterpene 1,8‐cineole",
+          "publication-title": "Plant Physiology"
+        },
+        {
+          "volume": "40",
+          "start-page": "993",
+          "year": "1999",
+          "end-page": "998",
+          "article-title": "cDNA cloning of sesquiterpene cyclase and squalene synthase, and expression of the genes in potato tuber infected with ",
+          "publication-title": "Plant and Cell Physiology"
+        },
+        {
+          "volume": "55",
+          "start-page": "224",
+          "year": "2008",
+          "end-page": "239",
+          "article-title": "Two nearly identical terpene synthases catalyze the formation of nerolidol and linalool in snapdragon flowers",
+          "publication-title": "The Plant Journal"
+        },
+        {
+          "volume": "156",
+          "start-page": "793",
+          "year": "2011",
+          "end-page": "802",
+          "article-title": "Terpene down‐regulation in orange reveals the role of fruit aromas in mediating interactions with insect herbivores and pathogens",
+          "publication-title": "Plant Physiology"
+        },
+        {
+          "volume": "32",
+          "start-page": "1755",
+          "year": "2006",
+          "end-page": "1768",
+          "article-title": "Compatible and incompatible Xanthomonas infections differentially affect herbivore‐induced volatile emission by pepper plants",
+          "publication-title": "Journal of Chemical Ecology"
+        },
+        {
+          "volume": "7",
+          "start-page": "44126",
+          "year": "2017",
+          "article-title": "Transcriptomic insight into terpenoid and carbazole alkaloid biosynthesis, and functional characterization of two terpene synthases in curry tree ( )",
+          "publication-title": "Scientific Reports"
+        },
+        {
+          "volume": "102",
+          "start-page": "311",
+          "year": "2010",
+          "end-page": "318",
+          "article-title": "Farnesol induces apoptosis and oxidative stress in the fungal pathogen ",
+          "publication-title": "Mycologia"
+        },
+        {
+          "volume": "158",
+          "start-page": "1789",
+          "year": "2012",
+          "end-page": "1802",
+          "article-title": "Phytosterols play a key role in plant innate immunity against bacterial pathogens by regulating nutrient efflux into the apoplast",
+          "publication-title": "Plant Physiology"
+        },
+        {
+          "volume": "193",
+          "start-page": "997",
+          "year": "2012",
+          "end-page": "1008",
+          "article-title": "The major volatile organic compound emitted from flowers, the sesquiterpene (E)‐β‐caryophyllene, is a defense against a bacterial pathogen",
+          "publication-title": "The New Phytologist"
+        },
+        {
+          "volume": "8",
+          "start-page": "1",
+          "year": "2006",
+          "end-page": "10",
+          "article-title": "Fine‐tuning plant defence signalling: salicylate versus jasmonate",
+          "publication-title": "Plant Biology (Stuttgart, Germany)"
+        },
+        {
+          "volume": "23",
+          "start-page": "1370",
+          "year": "2018",
+          "article-title": "Functional characterisation of new sesquiterpene synthase from the malaysian herbal plant, ",
+          "publication-title": "Molecules"
+        },
+        {
+          "volume": "164",
+          "start-page": "321",
+          "year": "2014",
+          "end-page": "339",
+          "article-title": "Terpene down‐regulation triggers defense responses in transgenic orange leading to resistance against fungal pathogens",
+          "publication-title": "Plant Physiology"
+        },
+        {
+          "volume": "378",
+          "start-page": "889",
+          "year": "2004",
+          "end-page": "898",
+          "article-title": "Plant sterol biosynthesis: identification of two distinct families of sterol 4‐alpha‐methyl oxidases",
+          "publication-title": "Biochemical Journal"
+        },
+        {
+          "volume": "89",
+          "start-page": "451",
+          "year": "2015",
+          "end-page": "462",
+          "article-title": "Investigating sesquiterpene biosynthesis in : molecular cloning and functional characterization of ( )‐farnesol and α‐bisabolene synthases",
+          "publication-title": "Plant Molecular Biology"
+        },
+        {
+          "volume": "475",
+          "start-page": "189",
+          "year": "2011",
+          "end-page": "195",
+          "article-title": "Genome sequence and analysis of the tuber crop potato",
+          "publication-title": "Nature"
+        },
+        {
+          "volume": "215",
+          "start-page": "1132",
+          "year": "2017",
+          "end-page": "1143",
+          "article-title": "Expansion of sesquiterpene biosynthetic gene clusters in pepper confers nonhost resistance to the Irish potato famine pathogen",
+          "publication-title": "The New Phytologist"
+        },
+        {
+          "volume": "279",
+          "start-page": "259",
+          "year": "2008",
+          "end-page": "264",
+          "article-title": "Inhibition of growth and development by farnesol",
+          "publication-title": "FEMS Microbiology Letters"
+        },
+        {
+          "volume": "67",
+          "start-page": "1520",
+          "year": "2006",
+          "end-page": "1529",
+          "article-title": "Analysis of defensive responses activated by volatile allo‐ocimene treatment in ",
+          "publication-title": "Phytochemistry"
+        },
+        {
+          "volume": "21",
+          "start-page": "1482",
+          "year": "2008",
+          "end-page": "1497",
+          "article-title": " elicits emission of the terpenoid (E, E)‐4, 8, 12‐trimethyl‐1, 3, 7, 11‐tridecatetraene in Arabidopsis leaves via jasmonate signaling and expression of the terpene synthase TPS4",
+          "publication-title": "Molecular Plant‐Microbe Interactions"
+        },
+        {
+          "volume": "324",
+          "start-page": "746",
+          "year": "2009",
+          "end-page": "748",
+          "article-title": "Plant‐microbe interactions: chemical diversity in plant defense",
+          "publication-title": "Science"
+        },
+        {
+          "volume": "1",
+          "year": "2002",
+          "article-title": "The interaction",
+          "publication-title": "The Arabidopsis Book"
+        },
+        {
+          "volume": "19",
+          "start-page": "1",
+          "year": "2019",
+          "end-page": "18",
+          "article-title": "Identification and functional characterization of three new terpene synthase genes involved in chemical defense and abiotic stresses in ",
+          "publication-title": "BMC Plant Biology"
+        },
+        {
+          "volume": "120",
+          "start-page": "1",
+          "year": "2016",
+          "end-page": "6",
+          "article-title": "Cloning, expression and functional characterization of two sesquiterpene synthase genes from moso bamboo ( )",
+          "publication-title": "Protein Expression and Purification"
+        },
+        {
+          "volume": "68",
+          "start-page": "1632",
+          "year": "2007",
+          "end-page": "1641",
+          "article-title": "The rice (E)‐β‐caryophyllene synthase (OsTPS3) accounts for the major inducible volatile sesquiterpenes",
+          "publication-title": "Phytochemistry"
+        },
+        {
+          "volume": "175",
+          "start-page": "1455",
+          "year": "2017",
+          "end-page": "1468",
+          "article-title": "Selinene volatiles are essential precursors for maize defense promoting fungal pathogen resistance",
+          "publication-title": "Plant Physiology"
+        },
+        {
+          "volume": "123",
+          "start-page": "1257",
+          "year": "2000",
+          "end-page": "1268",
+          "article-title": "Farnesol‐induced cell death and stimulation of 3‐hydroxy‐3‐methylglutaryl‐coenzyme A reductase activity in tobacco cv bright yellow‐2 cells",
+          "publication-title": "Plant Physiology"
+        },
+        {
+          "volume": "46",
+          "start-page": "1093",
+          "year": "2005",
+          "end-page": "1102",
+          "article-title": "Volatile C6‐aldehydes and allo‐ocimene activate defense genes and induce resistance against in ",
+          "publication-title": "Plant and Cell Physiology"
+        },
+        {
+          "volume": "10",
+          "year": "2015",
+          "article-title": "Resistance to pathogens in terpene down‐regulated orange fruits inversely correlates with the accumulation of D‐limonene in peel oil glands",
+          "publication-title": "Plant Signaling & Behavior"
+        },
+        {
+          "volume": "5",
+          "start-page": "9682",
+          "year": "2015",
+          "article-title": "A terpenoid phytoalexin plays a role in basal defense of against Potato virus X",
+          "publication-title": "Scientific Reports"
+        },
+        {
+          "volume": "30",
+          "start-page": "2725",
+          "year": "2013",
+          "end-page": "2729",
+          "article-title": "MEGA6: molecular evolutionary genetics analysis version 6.0",
+          "publication-title": "Molecular Biology and Evolution"
+        },
+        {
+          "volume": "96",
+          "start-page": "13080",
+          "year": "1999",
+          "end-page": "13085",
+          "article-title": "Farnesol is utilized for isoprenoid biosynthesis in plant cells via farnesyl pyrophosphate formed by successive monophosphorylation reactions",
+          "publication-title": "Proceedings of the National Academy of Sciences USA"
+        },
+        {
+          "volume": "16",
+          "start-page": "1",
+          "year": "2015",
+          "end-page": "18",
+          "article-title": "The Eucalyptus terpene synthase gene family",
+          "publication-title": "BMC Genomics"
+        },
+        {
+          "volume": "148",
+          "start-page": "348",
+          "year": "2008",
+          "end-page": "357",
+          "article-title": "A novel role for protein farnesylation in plant innate immunity",
+          "publication-title": "Plant Physiology"
+        },
+        {
+          "volume": "171",
+          "start-page": "625",
+          "year": "2014",
+          "end-page": "632",
+          "article-title": "Isolation of jasmonate‐induced sesquiterpene synthase of rice: product of which has an antifungal activity against ",
+          "publication-title": "Journal of Plant Physiology"
+        },
+        {
+          "volume": "229",
+          "start-page": "154",
+          "year": "2014",
+          "end-page": "166",
+          "article-title": "Characterization of three linalool synthase genes from Marc. and analysis of linalool‐mediated resistance against subsp. citri and in citrus leaves and fruits",
+          "publication-title": "Plant Science"
+        },
+        {
+          "volume": "171",
+          "start-page": "7",
+          "year": "2021",
+          "end-page": "21",
+          "article-title": "Functional characterization of a defense‐responsive bulnesol/elemol synthase from potato",
+          "publication-title": "Physiologia Plantarum"
+        },
+        {
+          "volume": "63",
+          "start-page": "254",
+          "year": "2010",
+          "end-page": "268",
+          "article-title": "A role for β‐sitosterol to stigmasterol conversion in plant‐pathogen interactions: stigmasterol promotes plant susceptibility",
+          "publication-title": "The Plant Journal"
+        },
+        {
+          "volume": "170",
+          "start-page": "732",
+          "year": "2006",
+          "end-page": "738",
+          "article-title": "Efficient production of transgenic potato ( ) plants via ‐mediated transformation",
+          "publication-title": "Plant Science"
+        },
+        {
+          "volume": "14",
+          "start-page": "1485",
+          "year": "2000",
+          "end-page": "1497",
+          "article-title": "A critical role of sterols in embryonic patterning and meristem programming revealed by the fackel mutants of ",
+          "publication-title": "Genes & Development"
+        },
+        {
+          "volume": "166",
+          "start-page": "1700",
+          "year": "2009",
+          "end-page": "1704",
+          "article-title": "Characterization of a sabinene synthase gene from rough lemon ( )",
+          "publication-title": "Journal of Plant Physiology"
+        },
+        {
+          "volume": "103",
+          "start-page": "1129",
+          "year": "2006",
+          "end-page": "1134",
+          "article-title": "The products of a single maize sesquiterpene synthase form a volatile defense signal that attracts natural enemies of maize herbivores",
+          "publication-title": "Proceedings of the National Academy of Sciences USA"
+        },
+        {
+          "volume": "217",
+          "start-page": "767",
+          "year": "2003",
+          "end-page": "775",
+          "article-title": "Differential volatile emissions and salicylic acid levels from tobacco plants in response to different strains of ",
+          "publication-title": "Planta"
+        },
+        {
+          "volume": "135",
+          "start-page": "47",
+          "year": "2004",
+          "end-page": "58",
+          "article-title": "Proton‐transfer‐reaction mass spectrometry as a new tool for real time analysis of root‐secreted volatile organic compounds in Arabidopsis",
+          "publication-title": "Plant Physiology"
+        },
+        {
+          "volume": "584",
+          "start-page": "2965",
+          "year": "2010",
+          "end-page": "2973",
+          "article-title": "Plant volatile terpenoid metabolism: biosynthetic genes, transcriptional regulation and subcellular compartmentation",
+          "publication-title": "FEBS Letters"
+        },
+        {
+          "volume": "131",
+          "start-page": "1258",
+          "year": "2003",
+          "end-page": "1269",
+          "article-title": "Sterols regulate development and gene expression in Arabidopsis",
+          "publication-title": "Plant Physiology"
+        },
+        {
+          "volume": "104",
+          "start-page": "1075",
+          "year": "2007",
+          "end-page": "1080",
+          "article-title": "Arabidopsis systemic immunity uses conserved defense signaling pathways and is mediated by jasmonates",
+          "publication-title": "Proceedings of the National Academy of Sciences USA"
+        },
+        {
+          "volume": "13",
+          "start-page": "1287",
+          "year": "2015",
+          "end-page": "1299",
+          "article-title": "Virus‐induced gene silencing of squalene synthase negatively regulates sterol and defence‐related genes resulting in reduced withanolides and biotic stress tolerance",
+          "publication-title": "Plant Biotechnology Journal"
+        },
+        {
+          "volume": "130",
+          "start-page": "2049",
+          "year": "2002",
+          "end-page": "2060",
+          "publication-title": "Plant Physiology,"
+        },
+        {
+          "volume": "66",
+          "start-page": "212",
+          "year": "2011",
+          "end-page": "229",
+          "article-title": "The family of terpene synthases in plants: a mid‐size family of genes for specialized metabolism that is highly diversified throughout the kingdom: terpene synthase family",
+          "publication-title": "The Plant Journal"
+        },
+        {
+          "volume": "50",
+          "start-page": "155",
+          "year": "2012",
+          "end-page": "173",
+          "article-title": "Plant defense compounds: systems approaches to metabolic analysis",
+          "publication-title": "Annual Review of Phytopathology"
+        },
+        {
+          "volume": "269",
+          "start-page": "45500",
+          "year": "2002",
+          "end-page": "45460",
+          "article-title": "Volatiles from potato plants infected with potato leafroll virus attract and arrest the virus vector, (Homoptera: Aphididae)",
+          "publication-title": "Proceedings of the Royal Society of London. Series B, Biological Sciences"
+        },
+        {
+          "ident": "e_1_2_7_35_1",
+          "doi": "10.1186/s12864-015-1598-x"
+        },
+        {
+          "ident": "e_1_2_7_8_1",
+          "doi": "10.1104/pp.104.044388"
+        },
+        {
+          "ident": "e_1_2_7_50_1",
+          "doi": "10.3390/molecules23061370"
+        },
+        {
+          "ident": "e_1_2_7_5_1",
+          "doi": "10.1126/science.1171661"
+        },
+        {
+          "ident": "e_1_2_7_48_1",
+          "doi": "10.1104/pp.113.224279"
+        },
+        {
+          "ident": "e_1_2_7_65_1",
+          "doi": "10.1093/oxfordjournals.pcp.a029633"
+        },
+        {
+          "ident": "e_1_2_7_18_1",
+          "doi": "10.1016/j.pbi.2003.09.005"
+        },
+        {
+          "ident": "e_1_2_7_60_1",
+          "doi": "10.1016/j.jplph.2014.01.007"
+        },
+        {
+          "ident": "e_1_2_7_54_1",
+          "doi": "10.1016/j.plantsci.2014.09.008"
+        },
+        {
+          "ident": "e_1_2_7_34_1",
+          "doi": "10.1016/j.jplph.2009.04.003"
+        },
+        {
+          "ident": "e_1_2_7_55_1",
+          "doi": "10.1111/pbi.12347"
+        },
+        {
+          "ident": "e_1_2_7_37_1",
+          "doi": "10.1111/nph.14637"
+        },
+        {
+          "ident": "e_1_2_7_33_1",
+          "doi": "10.1146/annurev-phyto-081211-172950"
+        },
+        {
+          "ident": "e_1_2_7_49_1",
+          "doi": "10.1080/15592324.2015.1028704"
+        },
+        {
+          "ident": "e_1_2_7_10_1",
+          "doi": "10.1111/pbi.12914"
+        },
+        {
+          "ident": "e_1_2_7_56_1",
+          "doi": "10.1111/nph.14663"
+        },
+        {
+          "ident": "e_1_2_7_38_1",
+          "doi": "10.1038/srep09682"
+        },
+        {
+          "ident": "e_1_2_7_47_1",
+          "doi": "10.1104/pp.111.176545"
+        },
+        {
+          "ident": "e_1_2_7_7_1",
+          "doi": "10.1007/s10886-006-9107-y"
+        },
+        {
+          "ident": "e_1_2_7_66_1",
+          "doi": "10.1016/j.jplph.2015.12.008"
+        },
+        {
+          "ident": "e_1_2_7_32_1",
+          "doi": "10.1016/j.phytochem.2006.05.027"
+        },
+        {
+          "ident": "e_1_2_7_20_1",
+          "doi": "10.1111/j.1365-313X.2010.04235.x"
+        },
+        {
+          "ident": "e_1_2_7_62_1",
+          "doi": "10.1073/pnas.0605423104"
+        },
+        {
+          "ident": "e_1_2_7_12_1",
+          "doi": "10.1016/j.phytochem.2007.04.008"
+        },
+        {
+          "ident": "e_1_2_7_22_1",
+          "doi": "10.1111/pce.13602"
+        },
+        {
+          "ident": "e_1_2_7_53_1",
+          "doi": "10.1111/j.1574-6968.2007.01042.x"
+        },
+        {
+          "ident": "e_1_2_7_58_1",
+          "doi": "10.1093/molbev/mst197"
+        },
+        {
+          "ident": "e_1_2_7_14_1",
+          "doi": "10.1042/bj20031572"
+        },
+        {
+          "ident": "e_1_2_7_29_1",
+          "doi": "10.1101/gad.14.12.1485"
+        },
+        {
+          "ident": "e_1_2_7_19_1",
+          "doi": "10.1104/pp.108.117663"
+        },
+        {
+          "ident": "e_1_2_7_63_1",
+          "doi": "10.1104/pp.111.189217"
+        },
+        {
+          "ident": "e_1_2_7_67_1",
+          "doi": "10.1186/s12870-019-2025-2"
+        },
+        {
+          "ident": "e_1_2_7_23_1",
+          "doi": "10.1016/S0040-4039(00)02031-1"
+        },
+        {
+          "ident": "e_1_2_7_43_1",
+          "doi": "10.1111/j.1365-313X.2008.03496.x"
+        },
+        {
+          "ident": "e_1_2_7_15_1",
+          "doi": "10.1104/pp.17.00879"
+        },
+        {
+          "ident": "e_1_2_7_41_1",
+          "doi": "10.1038/srep44126"
+        },
+        {
+          "ident": "e_1_2_7_21_1",
+          "doi": "10.1007/BF00980064"
+        },
+        {
+          "ident": "e_1_2_7_39_1",
+          "doi": "10.3852/09-176"
+        },
+        {
+          "ident": "e_1_2_7_57_1",
+          "doi": "10.1104/pp.104.038703"
+        },
+        {
+          "ident": "e_1_2_7_6_1",
+          "doi": "10.1038/s41589-019-0287-5"
+        },
+        {
+          "ident": "e_1_2_7_4_1",
+          "doi": "10.1055/s-2005-872705"
+        },
+        {
+          "ident": "e_1_2_7_9_1",
+          "doi": "10.1111/j.1365-313X.2011.04520.x"
+        },
+        {
+          "volume": "269",
+          "start-page": "45500",
+          "year": "2002",
+          "ident": "e_1_2_7_17_1",
+          "article-title": "Volatiles from potato plants infected with potato leafroll virus attract and arrest the virus vector, Myzus persicae (Homoptera: Aphididae)",
+          "publication-title": "Proceedings of the Royal Society of London. Series B, Biological Sciences",
+          "contributor": {
+            "fullname": "Eigenbrode S.D."
+          }
+        },
+        {
+          "ident": "e_1_2_7_46_1",
+          "doi": "10.1093/mp/sst058"
+        },
+        {
+          "ident": "e_1_2_7_40_1",
+          "doi": "10.1046/j.1365-313x.2001.01097.x"
+        },
+        {
+          "ident": "e_1_2_7_2_1",
+          "doi": "10.1094/MPMI-21-11-1482"
+        },
+        {
+          "ident": "e_1_2_7_30_1",
+          "doi": "10.1199/tab.0039"
+        },
+        {
+          "ident": "e_1_2_7_11_1",
+          "doi": "10.1016/j.pep.2015.11.019"
+        },
+        {
+          "ident": "e_1_2_7_44_1",
+          "doi": "10.1093/jxb/eri285"
+        },
+        {
+          "ident": "e_1_2_7_36_1",
+          "doi": "10.1016/j.plantsci.2015.07.007"
+        },
+        {
+          "ident": "e_1_2_7_13_1",
+          "doi": "10.1016/S0960-9822(00)00639-4"
+        },
+        {
+          "ident": "e_1_2_7_64_1",
+          "doi": "10.1038/nature10158"
+        },
+        {
+          "ident": "e_1_2_7_61_1",
+          "doi": "10.1073/pnas.96.23.13080"
+        },
+        {
+          "ident": "e_1_2_7_26_1",
+          "doi": "10.1126/science.227.4691.1229"
+        },
+        {
+          "ident": "e_1_2_7_42_1",
+          "doi": "10.1016/j.febslet.2010.05.045"
+        },
+        {
+          "ident": "e_1_2_7_16_1",
+          "doi": "10.1111/ppl.13199"
+        },
+        {
+          "ident": "e_1_2_7_24_1",
+          "doi": "10.1104/pp.014605"
+        },
+        {
+          "ident": "e_1_2_7_51_1",
+          "doi": "10.1104/pp.008326"
+        },
+        {
+          "ident": "e_1_2_7_31_1",
+          "doi": "10.1093/pcp/pci122"
+        },
+        {
+          "ident": "e_1_2_7_52_1",
+          "doi": "10.1055/s-2003-44722"
+        },
+        {
+          "ident": "e_1_2_7_25_1",
+          "doi": "10.1104/pp.123.4.1257"
+        },
+        {
+          "ident": "e_1_2_7_28_1",
+          "doi": "10.1111/j.1469-8137.2011.04001.x"
+        },
+        {
+          "ident": "e_1_2_7_45_1",
+          "doi": "10.1007/s11103-015-0381-3"
+        },
+        {
+          "ident": "e_1_2_7_3_1",
+          "doi": "10.1016/j.plantsci.2005.11.007"
+        },
+        {
+          "ident": "e_1_2_7_27_1",
+          "doi": "10.1007/s00425-003-1039-y"
+        },
+        {
+          "ident": "e_1_2_7_59_1",
+          "doi": "10.1111/pce.12169"
+        }
+      ],
+      "Snippet": [
+        ".... Through functional genomics, here we report the in planta role of <h>potato</h> (Solanum tuberosum) terpene synthase (StTPS18) in bacterial defense...",
+        ".... Through functional genomics, here we report the in planta role of <h>potato</h> ( Solanum tuberosum ) terpene synthase (StTPS18) in bacterial defense...",
+        "Keywords: defense; farnesol synthase; phytosterols; <h>potato</h>; Pseudomonas syringae..."
+      ],
+      "PublicationTitle": [
+        "The Plant journal : for cell and molecular biology"
+      ],
+      "ProviderPackageCode": [
+        "CITATION",
+        "AAYXX"
+      ],
+      "Volume": [
+        "111"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Varun",
+          "surname": "Dwivedi",
+          "fullname": "Dwivedi, Varun",
+          "organization": "\u000a Molecular Plant Biology and Biotechnology Lab, CSIR‐Central Institute of Medicinal and Aromatic Plants, Research Centre\u000a "
+        },
+        {
+          "sequence": "2",
+          "givenname": "Sarma Rajeev",
+          "surname": "Kumar",
+          "fullname": "Kumar, Sarma Rajeev",
+          "organization": "\u000a Molecular Plant Biology and Biotechnology Lab, CSIR‐Central Institute of Medicinal and Aromatic Plants, Research Centre\u000a "
+        },
+        {
+          "sequence": "3",
+          "givenname": "H. B.",
+          "surname": "Shilpashree",
+          "fullname": "Shilpashree, H. B.",
+          "organization": "\u000a Molecular Plant Biology and Biotechnology Lab, CSIR‐Central Institute of Medicinal and Aromatic Plants, Research Centre\u000a "
+        },
+        {
+          "sequence": "4",
+          "givenname": "Ram",
+          "surname": "Krishna",
+          "fullname": "Krishna, Ram",
+          "organization": "\u000a Biotechnology Division, CSIR‐Central Institute of Medicinal and Aromatic Plants\u000a "
+        },
+        {
+          "sequence": "5",
+          "givenname": "Srinivas",
+          "surname": "Rao",
+          "fullname": "Rao, Srinivas",
+          "organization": "\u000a Tata Institute of Fundamental Research\u000a "
+        },
+        {
+          "sequence": "6",
+          "givenname": "Ajit K.",
+          "surname": "Shasany",
+          "fullname": "Shasany, Ajit K.",
+          "organization": "\u000a Biotechnology Division, CSIR‐Central Institute of Medicinal and Aromatic Plants\u000a ",
+          "organization": "\u000a ICAR‐National Institute for Plant Biotechnology\u000a "
+        },
+        {
+          "sequence": "7",
+          "givenname": "Shannon B.",
+          "surname": "Olsson",
+          "fullname": "Olsson, Shannon B.",
+          "organization": "\u000a Tata Institute of Fundamental Research\u000a "
+        },
+        {
+          "sequence": "8",
+          "givenname": "Dinesh A.",
+          "orcidid": "0000-0002-9418-8918",
+          "surname": "Nagegowda",
+          "fullname": "Nagegowda, Dinesh A.",
+          "email": "da.nagegowda@cimap.res.in",
+          "organization": "\u000a Molecular Plant Biology and Biotechnology Lab, CSIR‐Central Institute of Medicinal and Aromatic Plants, Research Centre\u000a "
+        }
+      ],
+      "Abstract": [
+        "SUMMARY\u000aTerpene synthases (TPSs) have diverse biological functions in plants. Though the roles of TPSs in herbivore defense are well established in many plant species, their role in bacterial defense has been scarce and is emerging. Through functional genomics, here we report the in planta role of potato (Solanum tuberosum) terpene synthase (StTPS18) in bacterial defense. Expression of StTPS18 was highest in leaves and was induced in response to Pseudomonas syringae and methyl jasmonate treatments. The recombinant StTPS18 exhibited bona fide (E,E)‐farnesol synthase activity forming a sesquiterpenoid, (E,E)‐farnesol as the sole product, utilising (E,E)‐farnesyl diphosphate (FPP). Subcellular localization of GFP fusion protein revealed that StTPS18 is localized to the cytosol. Silencing and overexpression of StTPS18 in potato resulted in reduced and enhanced tolerance, respectively, to bacterial pathogens P. syringae and Ralstonia solanacearum. Bacterial growth assay using medium containing (E,E)‐farnesol significantly inhibited P. syringae growth. Moreover, StTPS18 overexpressing transgenic potato and Nicotiana tabacum leaves, and (E,E)‐farnesol and P. syringae infiltrated potato leaves exhibited elevated expression of sterol pathway and members of pathogenesis‐related genes with enhanced phytosterol accumulation. Interestingly, enhanced phytosterols in 13C3‐(E,E)‐farnesol infiltrated potato leaves were devoid of any noticeable 13C labeling, indicating no direct utilization of (E,E)‐farnesol in phytosterols formation. Furthermore, leaves of StTPS18 overexpressing transgenic lines had no detectable (E,E)‐farnesol similar to the control plant, and emitted lower levels of sesquiterpenes than the control. These findings point towards an indirect involvement of StTPS18 and its product (E,E)‐farnesol in bacterial defense through upregulation of phytosterol biosynthesis and defense genes.\u000aSignificance Statement\u000aHere we show that a pathogen‐responsive potato sesquiterpene synthase forming (E,E)‐farnesol confers indirect defense against bacterial pathogens through induced phytosterol biosynthesis and defense response in potato and tobacco. The findings demonstrate an indirect role of (E,E)‐farnesol in plant biotic stress tolerance."
+      ],
+      "PublicationDate": [
+        "September 2022"
+      ],
+      "Genre": [
+        "article"
+      ],
+      "PQID": [
+        "2708617445"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "Audience": [
+        "Academic"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/lc.gif&issn=0960-7412&client=summon"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/sc.gif&issn=0960-7412&client=summon"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/mc.gif&issn=0960-7412&client=summon"
+      ],
+      "link.rule.ids": [
+        "315,791,792,795,1430,28275,28276,46270,46271"
+      ],
+      "linkProvider": [
+        "Wiley-Blackwell"
+      ],
+      "LinkModel": [
+        "DirectLink"
+      ],
+      "IEDL.DBID": [
+        "1OC"
+      ],
+      "BookMark": [
+        "eNp1kdFqFDEUhgdRcK1e-AYBb1pwticzySRzuZS1KgW9qOBdyGROtllmk2mSpeydj-Az9klMHb0RzLkIHL7vJ-SvqrcU1rScyzzv15TLHp5VK9p2vG5p-_15tYK-g1ow2rysXqW0B6Ci7diqut944vx4NG6YkMwh6xzI-fb99uLxx0-ro8cUJpJOPt_phMQEbzEmksOEUXuDRO-08ymTQZuM0emJzDrfhR36VIL_Jmo_FqcwJryuXlg9JXzz5z6rvn3Y3l59rG--XH-62tzUpu0o1AY4WDsOxvTQ9CMODfKB0bFhraXUMjZaJhlKymEAyUXX98DYMLZcSMoA27PqfMmdY7g_Ysrq4JLBadIewzGpppMMetlIXtB3_6D7cIy-vE41AmRHBWNP1HqhdnpC5bwNOWpTZsSDKx-D1pX9RlAuQBSlCBeLYGJIKaJVc3QHHU-KgnpqS5W21O-2Cnu5sA8l5PR_UN1-_bwYvwBI95bj"
+      ],
+      "DatabaseName": [
+        "CrossRef",
+        "Academic OneFile (A&I only)",
+        "Biotechnology Research Abstracts",
+        "Calcium & Calcified Tissue Abstracts",
+        "Chemoreception Abstracts",
+        "Nucleic Acids Abstracts",
+        "Technology Research Database",
+        "Engineering Research Database",
+        "Algology Mycology and Protozoology Abstracts (Microbiology C)",
+        "Biotechnology and BioEngineering Abstracts",
+        "Genetics Abstracts",
+        "MEDLINE - Academic"
+      ],
+      "ParticipantIDs": [
+        "proquest_miscellaneous_2684098285",
+        "proquest_journals_2708617445",
+        "gale_infotracacademiconefile_A715707174",
+        "crossref_primary_10_1111_tpj_15890",
+        "wiley_primary_10_1111_tpj_15890_TPJ15890"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Eradication+of+Potato+Virus+S%2C+Potato+Virus+A%2C+and+Potato+Virus+M+From+Infected+in+vitro-Grown+Potato+Shoots+Using+in+vitro+Therapies&rft.jtitle=Frontiers+in+plant+science&rft.au=Bettoni%2C+Jean+Carlos&rft.au=Mathew%2C+Liya&rft.au=Pathirana%2C+Ranjith&rft.au=Wiedow%2C+Claudia&rft.date=2022-05-19&rft.pub=Frontiers+Media+S.A&rft.eissn=1664-462X&rft.volume=13&rft_id=info:doi/10.3389%2Ffpls.2022.878733&rft_id=info%3Apmid%2F35665190&rft.externalDBID=PMC9161163",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1ba9swFBbtGGwvYze27FK0pzGo4_gmWVAKTUmWdgkra1a2J6ObG0NjBdcZ7Ofsn-5ItsMS8rQXP-iChL4j6_ukoyOEPu78D6YXQ282nExYPL8c30yJB2sUCzyrFWfscpp8-5H8HB2gpLsO4_z2pSj65d2yXxYL5165Wkq_cxXzr2bnwGoCoBL-ITqkUfqPSm9ielviQ5tTSdBgzM9XdzY2dxj2U7DQyL6eEwGRAfoy2FqQXNz-fWRz12eyiSjlFqHxU_SkZY_4rOniM3Sgy-fo4dAAw_v9Av0ZVVy1e3DY5PhkcXoFWbU58Ren-Kao1vf4-nhv8tkx5qXamzXD48os8YXz2tIKFyX-VdSV8T5bBb9T5XphTH2PnSPCpiSeu0teoMlfou_j0fx84rVPMHgSiFPtKZ3mIlAgSiiRUTjQkocBjEGuSChB-YAaghSaE5ApcaA000CnBrkeKKYjqBi9Rhg4kIiJIDxNwpikhMdAcoTmcShkIjnvoU8dANmqCbGRgTSxuGUWt8ziljW49dDQIrQpZ4NjuwRT3WatfcD6n6YKmK6ijMdCEqGBE0HXhGSKUgUNfujwzWAy2RMSXmqzhpYIje2lmTDooVcN3pumOnvpIbplCVt92c4B43UBu1tjffPfNd-ix3YQrNdCwN6hB3W11u_RI7v1KzVohCO3lQDfr1-CIzcX_gIzOQ-b",
+      "linkToPdf": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnZ1ba9swFMfFbmx7GbuxpbtpT2NQx_FNtqAUmi5e0iUjrFnpnoxubgyNFVxnsI-zb7oj2QlNyNNeJQsJnWPr95eOjxD6tPM9GI_6zqQ_HNJwdpZejIkDaxT1HKMVJ_RsHP24jH4Nbt32ZeP2BS-65fWiWxZzG165XAh3HSrmTienQDUeoIS7lLl7F92PQgD9W1q9yext8CduziZBiVE3X16bDN2-303ATwNzh04AOAMQ09talmz2_n3IuRs52eSVsktR-hQ9aRkSnzQDfYbuqPI5etDXwHl_XqC_g4rJdicO6xwfzY-nUFXrI3d-jC-KanWDzw_3Fp8cYlbKvVUTnFZ6gUc2dktJXJT4d1FX2vlqdPxOk_O51vUNtuEImyfxzP7qBcr8JfqZDmanQ6e9iMERgE-1I1WSc0-CNImJCPyeEsz3YA5ySXwB-gc0EZTEOQGxEnpSUQVQ1ctVT1IVQMPgNcJAQjwknLAk8kOSEBYC6nDFQp-LSDDWQZ_XBsiWTaKNDASKsVtm7JYZu2WN3Tqobyy0ec6kyLYFurrKWi8BCkgSCbwrY8pCLghXQEYwNC6ojGMJHX5c2zeDV8qck7BS6RX0ROLQ_Drjex30qrH3pqu1v3RQvOUJW2PZrgEXtmm7W5c9-O-WH9DD6Zc0G4--f3uDHpv5MGEMHn2L7tXVSr1Dj8xesFAgGt7bV-EfnVASIA",
+      "linkToHtml": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1ba9swFBbdBdqXsRtb2nXTnsagjmNbli0ohaYkSzp7lDUr25ORJbkxNHZwncF-zv5pj2Q7LCFPe9UFCX1H0vdJR0cIfdpaD6Lp0IqHkwkjs8vxTUQt2KOYY2mtGLPLyP_-0_812kN-9xzG-O2LNO8Xd4t-kc-Ne-VyIezOVcy-ii-A1ThAJexH6IlPCPP-0elNVG9NfYLmXhJUGLOz5Z2Ozu26_RBs1NP_53hAZYDADDa2JBO5fxfd3PaabGJKmW1o_Bw9a_kjPm86-QLtqeIlejosgeP9eYX-jiou21M4XGb4dH52BVl1eWrPz_BNXq3u8fXJzuTzE8wLuTMrxuOqXOCp8dtSEucF_p3XVWl90Rp-q8r1vCzre2xcEdYl8cw88wJV_hr9GI9mFxOr_YTBEkCdakuqMEsdCbIkoMJzB0pw14ExyCR1BWgf0EOQEmQUhApxpGIKCNUgUwPJlAcVvbcIAwtKCU0pD32X0JByAjQnVZy4qfAF5z30uQMgWTZBNhIQJxq3ROOWaNySBrceGmqE1uV0eGyTUFa3SWshwADCUALXlQHjJBU0VcCKoGupYDIIJDT4scM3gemk70h4ocoVtEQDop_NuE4PvWnwXjfV2UsPBRuWsNGXzRwwXxOyuzXXw_-u-QHtT2ZxlETTb1-P0IEeEO3D4LB36HFdrdQx2tcHwUKBYnhv5sIDv9gRDQ",
+      "ExternalDocumentID": [
+        "oai_doaj_org_article_ba88d115d79a4bc6be910e9ebc9d77da",
+        "10_3389_fpls_2022_878733",
+        "35665190"
+      ],
+      "DBID": [
+        "NPM",
+        "AAYXX",
+        "CITATION",
+        "7X8",
+        "5PM",
+        "DOA"
+      ],
+      "AuthorAffiliation_xml": [
+        {
+          "name": "1 The New Zealand Institute for Plant and Food Research Limited, Food Industry Science Centre , Palmerston North , New Zealand"
+        },
+        {
+          "name": "2 Plant Health and Environment Laboratory, Ministry for Primary Industries , Auckland , New Zealand"
+        }
+      ],
+      "PublicationTitleAlternate": [
+        "Front Plant Sci"
+      ],
+      "Score": [
+        "13.632004"
+      ],
+      "PublicationPlace": [
+        "Switzerland"
+      ],
+      "ID": [
+        "FETCH-LOGICAL-c392t-de8fb1d57676c320eca21dcefd62c666260ca27f618241de9e6230fe0d9e3b1d3"
+      ],
+      "DOI": [
+        "10.3389/fpls.2022.878733"
+      ],
+      "Publisher": [
+        "Frontiers Media S.A"
+      ],
+      "Language": [
+        "English"
+      ],
+      "EISSN": [
+        "1664-462X"
+      ],
+      "ISSN": [
+        "1664-462X"
+      ],
+      "Cites_doi": [
+        "10.1073/pnas.0605777103",
+        "10.1007/978-3-030-28683-5_11",
+        "10.1007/s11627-017-9839-0",
+        "10.1080/01140671.1998.9514060",
+        "10.1094/MPMI-09-12-0219-R",
+        "10.1016/j.agsy.2021.103144",
+        "10.1094/PHYTO-08-20-0354-FI",
+        "10.1016/s0166-0934(01)00381-0",
+        "10.1080/03015521.1978.10426293",
+        "10.1016/j.jviromet.2012.09.004",
+        "10.1111/aab.12646",
+        "10.1111/j.1744-7348.2008.00308.x",
+        "10.1016/j.scienta.2019.01.027",
+        "10.1111/ppa.12439",
+        "10.1016/j.jviromet.2006.12.012",
+        "10.32607/actanaturae.11026",
+        "10.1111/ppa.13466",
+        "10.1111/aab.12459",
+        "10.1016/j.cropro.2011.04.001",
+        "10.1007/978-3-030-64414-7_5",
+        "10.5511/plantbiotechnology.12.0215a",
+        "10.1186/s13007-017-0238-7",
+        "10.1094/PHYTO-07-19-0250-FI",
+        "10.1016/j.cryobiol.2005.11.003",
+        "10.1007/978-3-030-28683-5_9",
+        "10.1016/j.jbiotec.2018.01.014",
+        "10.1007/s00253-018-9405-7",
+        "10.1186/s13007-018-0355-y",
+        "10.3390/plants10040670",
+        "10.17660/ActaHortic.2015.1083.2",
+        "10.30843/nzpp.2012.65.5366",
+        "10.3389/fpls.2020.01092",
+        "10.1094/PHYTO-96-1263",
+        "10.1007/s11248-016-9976-y",
+        "10.2307/2685469",
+        "10.5376/bm.2012.03.0005",
+        "10.1007/BF02852870",
+        "10.3390/plants10102190",
+        "10.1111/j.1744-7348.1997.tb05785.x",
+        "10.1016/j.tplants.2008.11.010",
+        "10.3390/agronomy10020260",
+        "10.1007/s11540-021-09501-4",
+        "10.1111/j.1399-3054.1962.tb08052.x",
+        "10.5897/AJPS2016.1497",
+        "10.1007/s11540-006-9011-4",
+        "10.1111/aab.12250",
+        "10.17660/ActaHortic.2015.1083.64",
+        "10.1111/ppa.13565",
+        "10.1186/s13007-018-0312-9",
+        "10.7740/KJCS.2014.59.4.498",
+        "10.1007/s00299-020-02572-6",
+        "10.1007/s11627-017-9846-1",
+        "10.1111/j.1364-3703.2007.00456.x",
+        "10.1111/j.1399-3054.1965.tb06874.x",
+        "10.15389/agrobiology.2017.1.95eng",
+        "10.1007/s40858-019-00321-z",
+        "10.21273/HORTSCI13958-19",
+        "10.1016/j.scienta.2019.02.033",
+        "10.1007/s10658-021-02400-x",
+        "10.1007/s12230-014-9394-8",
+        "10.1007/s10658-018-1485-9",
+        "10.1007/978-3-030-28683-5_4",
+        "10.1007/BF00232130",
+        "10.1590/0100-29452016833",
+        "10.1007/s11240-020-01829-y",
+        "10.1007/s12230-019-09720-z",
+        "10.3126/njst.v7i0.528",
+        "10.17660/ActaHortic.2019.1234.4",
+        "10.1094/PDIS-04-11-0305",
+        "10.1094/PDIS-11-17-1753-RE",
+        "10.1007/s11240-020-01846-x",
+        "10.1016/B978-044451018-1/50070-1",
+        "10.1007/s10722-016-0460-6",
+        "10.3390/plants11050582",
+        "10.1016/j.jviromet.2015.04.032",
+        "10.1007/s11540-020-09455-z",
+        "10.15761/VRR.1000122",
+        "10.1007/s11240-013-0327-x",
+        "10.1007/s11540-018-9394-z"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "AuthorAffiliation": [
+        "1 The New Zealand Institute for Plant and Food Research Limited, Food Industry Science Centre , Palmerston North , New Zealand",
+        "2 Plant Health and Environment Laboratory, Ministry for Primary Industries , Auckland , New Zealand"
+      ],
+      "GroupedDBID": [
+        "5VS",
+        "9T4",
+        "AAFWJ",
+        "AAKDD",
+        "ABPTK",
+        "ACGFO",
+        "ACGFS",
+        "ACXDI",
+        "ADBBV",
+        "ADRAZ",
+        "AENEX",
+        "AFPKN",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "AOIJS",
+        "BCNDV",
+        "EBD",
+        "ECGQY",
+        "GROUPED_DOAJ",
+        "GX1",
+        "HYE",
+        "IAO",
+        "IEA",
+        "IGS",
+        "IPNFZ",
+        "ISR",
+        "ITC",
+        "KQ8",
+        "M48",
+        "M~E",
+        "NPM",
+        "OK1",
+        "RIG",
+        "RNS",
+        "RPM",
+        "AAYXX",
+        "CITATION",
+        "7X8",
+        "5PM"
+      ],
+      "SubjectTerms": [
+        "chemotherapy",
+        "cryopreservation",
+        "cryotherapy",
+        "high-health plants",
+        "Plant Science",
+        "shoot tips",
+        "thermotherapy"
+      ],
+      "Discipline": [
+        "Botany"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "References": [
+        "Nasir (ref49) 2010; 22",
+        "AlMaarri (ref4) 2012; 29",
+        "Gong (ref31) 2019; 96",
+        "Bettoni (ref11); 54",
+        "Kushnarenko (ref36) 2017; 53",
+        "Fletcher (ref27) 2012; 65",
+        "Sakai (ref61) 1990; 9",
+        "Bettoni (ref10) 2022; 11",
+        "Priegnitz (ref58) 2020; 63",
+        "Wang (ref75) 2021; 178",
+        "Mathew (ref44) 2021; 144",
+        "Nyalugwe (ref51) 2012; 96",
+        "Wakasa (ref71) 2020; 39",
+        "Tian (ref65) 2013; 26",
+        "Linsmaier (ref42) 1965; 18",
+        "Menzel (ref45) 2002; 99",
+        "Dhital (ref20) 2007; 7",
+        "Bettoni (ref12); 10",
+        "Li (ref40) 2013; 114",
+        "Moreno (ref46) 2020; 110",
+        "Bi (ref14) 2018; 173",
+        "Wang (ref79) 2009; 154",
+        "Volmer (ref70) 2017; 53",
+        "Bettoni (ref7); 144",
+        "Kim (ref34) 2006; 27",
+        "Wang (ref73) 2008; 9",
+        "(ref24) 2021",
+        "García-Cano (ref30) 2006; 96",
+        "Faccioli (ref22) 1998",
+        "Zhao (ref87) 2018; 102",
+        "Khan (ref33) 2015; 221",
+        "Naik (ref48) 2003; 30",
+        "Wasilewska-Nascimento (ref82) 2020; 10",
+        "Antonova (ref5) 2017; 52",
+        "Valkonen (ref67) 2008; 130",
+        "Fuentes (ref29) 2021; 111",
+        "Murashige (ref47) 1962; 15",
+        "Priegnitz (ref57) 2019; 62",
+        "Ellis (ref21) 2020",
+        "Agresti (ref3) 1998; 52",
+        "Brunt (ref17) 2011",
+        "(ref56) 2021",
+        "Li (ref38) 2016; 168",
+        "Souza (ref62) 2020; 45",
+        "Fang (ref23) 2005; 46",
+        "Awasthi (ref6) 2017; 1",
+        "Wang (ref80) 2009; 14",
+        "Bettoni (ref8) 2016; 38",
+        "Wright (ref84) 1977; 54",
+        "Quazi (ref59) 1978; 6",
+        "Pathirana (ref55) 2015; 1083",
+        "Devaux (ref19) 2021; 64",
+        "Cui (ref18) 2015; 1083",
+        "Li (ref39); 102",
+        "Valkonen (ref66) 2007",
+        "Botermans (ref15) 2013; 187",
+        "Wang (ref76); 71",
+        "Volk (ref69) 2016; 64",
+        "Bettoni (ref9) 2018; 269",
+        "Farhadi-Tooli (ref25) 2022; 162",
+        "Farnham (ref26) 2006; 103",
+        "Orbegozo (ref53) 2016; 25",
+        "Waswa (ref83) 2017; 11",
+        "Adolf (ref1) 2020",
+        "Wang (ref81); 14",
+        "Wang (ref72)",
+        "Pathirana (ref54) 2019; 1234",
+        "Fletcher (ref28) 1988; 26",
+        "Nazarov (ref50) 2020; 12",
+        "Bradshaw (ref16) 2021",
+        "Wang (ref74); 14",
+        "Wang (ref77) 2006; 49",
+        "Kreuze (ref35) 2020",
+        "Rubio (ref60) 2020; 11",
+        "Agindotan (ref2) 2007; 142",
+        "Magyar-Tábori (ref43) 2021; 10",
+        "Thomas-Sharma (ref64) 2016; 65",
+        "Li (ref37); 152",
+        "Lin (ref41) 2014; 91",
+        "Onofre (ref52) 2021; 191",
+        "Wang (ref78) 2011; 30",
+        "Bettoni (ref13); 250",
+        "Yi (ref85) 2014; 59",
+        "Jianming (ref32) 2012; 3",
+        "Tang (ref63) 2017; 13",
+        "Zhang (ref86) 2019; 249",
+        "Volk (ref68) 2006; 52"
+      ],
+      "SourceType": [
+        "Open Website",
+        "Open Access Repository",
+        "Aggregation Database",
+        "Index Database"
+      ],
+      "PublicationYear": [
+        "2022"
+      ],
+      "StartPage": [
+        "878733"
+      ],
+      "SourceID": [
+        "doaj",
+        "pubmedcentral",
+        "proquest",
+        "crossref",
+        "pubmed"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright © 2022 Bettoni, Mathew, Pathirana, Wiedow, Hunter, McLachlan, Khan, Tang and Nadarajan."
+        },
+        {
+          "notice": "Copyright © 2022 Bettoni, Mathew, Pathirana, Wiedow, Hunter, McLachlan, Khan, Tang and Nadarajan. 2022 Bettoni, Mathew, Pathirana, Wiedow, Hunter, McLachlan, Khan, Tang and Nadarajan"
+        }
+      ],
+      "SSID": [
+        "ssj0000500997"
+      ],
+      "IsOpenAccess": [
+        "true"
+      ],
+      "Title": [
+        "Eradication of <h>Potato</h> Virus S , <h>Potato</h> Virus A , and <h>Potato</h> Virus M From Infected in vitro -Grown <h>Potato</h> Shoots Using in vitro Therapies"
+      ],
+      "CitedBy_id": [
+        "crossref_primary_10_3390_plants11152038",
+        "crossref_primary_10_3389_fpls_2023_1163270",
+        "crossref_primary_10_3390_horticulturae8100929",
+        "crossref_primary_10_1186_s12864_023_09406_1",
+        "crossref_primary_10_3390_horticulturae8111013",
+        "crossref_primary_10_3390_biology12060838",
+        "crossref_primary_10_1007_s11240_022_02425_y",
+        "crossref_primary_10_3390_plants11192624"
+      ],
+      "DatabaseTitle": [
+        "PubMed",
+        "CrossRef",
+        "MEDLINE - Academic"
+      ],
+      "EndPage": [
+        "878733"
+      ],
+      "Notes": [
+        "ObjectType-Article-1",
+        "SourceType-Scholarly Journals-1",
+        "ObjectType-Feature-2",
+        "Reviewed by: Giorgio Gambino, Institute for Sustainable Plant Protection (CNR), Italy; Svetlana Kushnarenko, Institute of Plant Biology and Biotechnology, Kazakhstan",
+        "Edited by: Walter Chitarra, Council for Agricultural and Economics Research (CREA), Italy",
+        "This article was submitted to Plant Biotechnology, a section of the journal Frontiers in Plant Science",
+        "Present address: Ranjith Pathirana, Plant & Food Research Australia Pty Ltd., Waite Institute, Urrbrae, SA, Australia",
+        "These authors share first authorship"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-c392t-de8fb1d57676c320eca21dcefd62c666260ca27f618241de9e6230fe0d9e3b1d3"
+      ],
+      "Copyright": [
+        "Copyright © 2022 Bettoni, Mathew, Pathirana, Wiedow, Hunter, McLachlan, Khan, Tang and Nadarajan.",
+        "Copyright © 2022 Bettoni, Mathew, Pathirana, Wiedow, Hunter, McLachlan, Khan, Tang and Nadarajan. 2022 Bettoni, Mathew, Pathirana, Wiedow, Hunter, McLachlan, Khan, Tang and Nadarajan"
+      ],
+      "BackLink": [
+        "https://www.ncbi.nlm.nih.gov/pubmed/35665190$$D View this record in MEDLINE/PubMed"
+      ],
+      "License": [
+        "Copyright © 2022 Bettoni, Mathew, Pathirana, Wiedow, Hunter, McLachlan, Khan, Tang and Nadarajan.",
+        "This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms."
+      ],
+      "IngestDate": [
+        "Tue Jan 24 23:18:29 EST 2023",
+        "Fri Sep 01 02:33:17 EDT 2023",
+        "Wed Sep 27 01:55:58 EDT 2023",
+        "Tue Sep 05 07:31:13 EDT 2023",
+        "Thu Nov 24 22:12:16 EST 2022"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "05",
+          "year": "2022",
+          "text": "2022-05-19",
+          "day": "19"
+        }
+      ],
+      "DatabaseTitleList": [
+        "",
+        "",
+        "PubMed",
+        "CrossRef"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Switzerland"
+        }
+      ],
+      "URI": [
+        "https://www.ncbi.nlm.nih.gov/pubmed/35665190",
+        "https://search.proquest.com/docview/2674006821",
+        "https://pubmed.ncbi.nlm.nih.gov/PMC9161163",
+        "https://doaj.org/article/ba88d115d79a4bc6be910e9ebc9d77da"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Frontiers Media S.A"
+        }
+      ],
+      "PQPubID": [
+        "23479"
+      ],
+      "AbstractList": [
+        "Certain viruses dramatically affect yield and quality of potatoes and have proved difficult to eradicate with current approaches. Here, we describe a reliable and efficient virus eradication method that is high throughput and more efficacious at producing virus-free potato plants than current reported methods. Thermotherapy, chemotherapy, and cryotherapy treatments were tested alone and in combination for ability to eradicate single and mixed Potato virus S (PVS), Potato virus A (PVA), and Potato virus M (PVM) infections from three potato cultivars. Chemotherapy treatments were undertaken on in vitro shoot segments for four weeks in culture medium supplemented with 100 mg L−1 ribavirin. Thermotherapy on in vitro shoot segments was applied for two weeks at 40°C (day) and 28°C (night) with a 16 h photoperiod. Plant vitrification solution 2 (PVS2) and cryotherapy treatments included a shoot tip preculture followed by exposure to PVS2 either without or with liquid nitrogen (LN, cryotherapy) treatment. The virus status of control and recovered plants following therapies was assessed in post-regeneration culture after 3 months and then retested in plants after they had been growing in a greenhouse for a further 3 months. Microtuber production was investigated using in vitro virus-free and virus-infected segments. We found that thermotherapy and cryotherapy (60 min PVS2 + LN) used alone were not effective in virus eradication, while chemotherapy was better but with variable efficacy (20–100%). The most effective result (70–100% virus eradication) was obtained by combining chemotherapy with cryotherapy, or by consecutive chemotherapy, combined chemotherapy and thermotherapy, then cryotherapy treatments irrespective of cultivar. Regrowth following the two best virus eradication treatments was similar ranging from 8.6 to 29% across the three cultivars. The importance of virus removal on yield was reflected in “Dunluce” free of PVS having higher numbers of microtubers and in “V500’ free of PVS and PVA having a greater proportion of microtubers > 5 mm. Our improved procedure has potential for producing virus-free planting material for the potato industry. It could also underpin the global exchange of virus-free germplasm for conservation and breeding programs.",
+        "Certain viruses dramatically affect yield and quality of potatoes and have proved difficult to eradicate with current approaches. Here, we describe a reliable and efficient virus eradication method that is high throughput and more efficacious at producing virus-free potato plants than current reported methods. Thermotherapy, chemotherapy, and cryotherapy treatments were tested alone and in combination for ability to eradicate single and mixed\u000aPotato virus S\u000a(PVS),\u000aPotato virus A\u000a(PVA), and\u000aPotato virus M\u000a(PVM) infections from three potato cultivars. Chemotherapy treatments were undertaken on\u000ain vitro\u000ashoot segments for four weeks in culture medium supplemented with 100 mg L\u000a−1\u000aribavirin. Thermotherapy on\u000ain vitro\u000ashoot segments was applied for two weeks at 40°C (day) and 28°C (night) with a 16 h photoperiod. Plant vitrification solution 2 (PVS2) and cryotherapy treatments included a shoot tip preculture followed by exposure to PVS2 either without or with liquid nitrogen (LN, cryotherapy) treatment. The virus status of control and recovered plants following therapies was assessed in post-regeneration culture after 3 months and then retested in plants after they had been growing in a greenhouse for a further 3 months. Microtuber production was investigated using\u000ain vitro\u000avirus-free and virus-infected segments. We found that thermotherapy and cryotherapy (60 min PVS2 + LN) used alone were not effective in virus eradication, while chemotherapy was better but with variable efficacy (20–100%). The most effective result (70–100% virus eradication) was obtained by combining chemotherapy with cryotherapy, or by consecutive chemotherapy, combined chemotherapy and thermotherapy, then cryotherapy treatments irrespective of cultivar. Regrowth following the two best virus eradication treatments was similar ranging from 8.6 to 29% across the three cultivars. The importance of virus removal on yield was reflected in “Dunluce” free of PVS having higher numbers of microtubers and in “V500’ free of PVS and PVA having a greater proportion of microtubers > 5 mm. Our improved procedure has potential for producing virus-free planting material for the potato industry. It could also underpin the global exchange of virus-free germplasm for conservation and breeding programs.",
+        "Certain viruses dramatically affect yield and quality of potatoes and have proved difficult to eradicate with current approaches. Here, we describe a reliable and efficient virus eradication method that is high throughput and more efficacious at producing virus-free potato plants than current reported methods. Thermotherapy, chemotherapy, and cryotherapy treatments were tested alone and in combination for ability to eradicate single and mixed\u000a(PVS),\u000a(PVA), and\u000a(PVM) infections from three potato cultivars. Chemotherapy treatments were undertaken on\u000ashoot segments for four weeks in culture medium supplemented with 100 mg L\u000aribavirin. Thermotherapy on\u000ashoot segments was applied for two weeks at 40°C (day) and 28°C (night) with a 16 h photoperiod. Plant vitrification solution 2 (PVS2) and cryotherapy treatments included a shoot tip preculture followed by exposure to PVS2 either without or with liquid nitrogen (LN, cryotherapy) treatment. The virus status of control and recovered plants following therapies was assessed in post-regeneration culture after 3 months and then retested in plants after they had been growing in a greenhouse for a further 3 months. Microtuber production was investigated using\u000avirus-free and virus-infected segments. We found that thermotherapy and cryotherapy (60 min PVS2 + LN) used alone were not effective in virus eradication, while chemotherapy was better but with variable efficacy (20-100%). The most effective result (70-100% virus eradication) was obtained by combining chemotherapy with cryotherapy, or by consecutive chemotherapy, combined chemotherapy and thermotherapy, then cryotherapy treatments irrespective of cultivar. Regrowth following the two best virus eradication treatments was similar ranging from 8.6 to 29% across the three cultivars. The importance of virus removal on yield was reflected in \"Dunluce\" free of PVS having higher numbers of microtubers and in \"V500' free of PVS and PVA having a greater proportion of microtubers > 5 mm. Our improved procedure has potential for producing virus-free planting material for the potato industry. It could also underpin the global exchange of virus-free germplasm for conservation and breeding programs."
+      ],
+      "Author": [
+        "Mathew, Liya",
+        "Bettoni, Jean Carlos",
+        "McLachlan, Andrew",
+        "Tang, Joe",
+        "Khan, Subuhi",
+        "Nadarajan, Jayanthi",
+        "Wiedow, Claudia",
+        "Hunter, Donald A",
+        "Pathirana, Ranjith"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2020"
+      ],
+      "GrantInformation_xml": [
+        {
+          "fundername": ";"
+        }
+      ],
+      "Snippet": [
+        "Certain viruses dramatically affect yield and quality of <h>potatoes</h> and have proved difficult to eradicate with current approaches..."
+      ],
+      "References_xml": [
+        {
+          "volume": "103",
+          "start-page": "18828",
+          "year": "2006",
+          "ident": "ref26",
+          "article-title": "Artificial evolution extends the spectrum of viruses that are targeted by a disease–resistance gene from potato",
+          "publication-title": "Proc. Natl. Acad. Sci. U. S. A.",
+          "doi": "10.1073/pnas.0605777103",
+          "contributor": {
+            "fullname": "Farnham"
+          }
+        },
+        {
+          "start-page": "389",
+          "volume-title": "The Potato Crop.",
+          "year": "2020",
+          "ident": "ref35",
+          "article-title": "Viral diseases in potato",
+          "doi": "10.1007/978-3-030-28683-5_11",
+          "contributor": {
+            "fullname": "Kreuze"
+          }
+        },
+        {
+          "volume": "53",
+          "start-page": "425",
+          "year": "2017",
+          "ident": "ref36",
+          "article-title": "Combined ribavirin treatment and cryotherapy for efficient potato virus M and potato virus S eradication in potato (Solanum tuberosum L.) in vitro shoots. In vitro cell",
+          "publication-title": "Dev. Biol. Plant",
+          "doi": "10.1007/s11627-017-9839-0",
+          "contributor": {
+            "fullname": "Kushnarenko"
+          }
+        },
+        {
+          "year": "2021",
+          "ident": "ref24"
+        },
+        {
+          "volume": "26",
+          "start-page": "249",
+          "year": "1988",
+          "ident": "ref28",
+          "article-title": "Potato germplasm: in vitro storage and virus reduction",
+          "publication-title": "N. Z. J. Crop. Hortic. Sci.",
+          "doi": "10.1080/01140671.1998.9514060",
+          "contributor": {
+            "fullname": "Fletcher"
+          }
+        },
+        {
+          "volume": "26",
+          "start-page": "297",
+          "year": "2013",
+          "ident": "ref65",
+          "article-title": "Genetic determinants of potato virus Y required to overcome or trigger hypersensitive resistance to PVY strain group O controlled by the gene Ny in potato",
+          "publication-title": "Mol. Plant-Microbe Interact.",
+          "doi": "10.1094/MPMI-09-12-0219-R",
+          "contributor": {
+            "fullname": "Tian"
+          }
+        },
+        {
+          "volume": "191",
+          "start-page": "103144",
+          "year": "2021",
+          "ident": "ref52",
+          "article-title": "An integrated seed health strategy and phytosanitary risk assessment: potato in the republic of Georgia",
+          "publication-title": "Agric. Syst.",
+          "doi": "10.1016/j.agsy.2021.103144",
+          "contributor": {
+            "fullname": "Onofre"
+          }
+        },
+        {
+          "volume": "111",
+          "start-page": "217",
+          "year": "2021",
+          "ident": "ref29",
+          "article-title": "Potato virus A isolates from three continents: their biological properties, phylogenetics, and prehistory",
+          "publication-title": "Phytopathology",
+          "doi": "10.1094/PHYTO-08-20-0354-FI",
+          "contributor": {
+            "fullname": "Fuentes"
+          }
+        },
+        {
+          "volume": "99",
+          "start-page": "81",
+          "year": "2002",
+          "ident": "ref45",
+          "article-title": "Detection of four apple viruses by multiplex RT-PCR assays with coamplification of plant mRNA as internal control",
+          "publication-title": "J. Virol. Methods",
+          "doi": "10.1016/s0166-0934(01)00381-0",
+          "contributor": {
+            "fullname": "Menzel"
+          }
+        },
+        {
+          "volume": "6",
+          "start-page": "305",
+          "year": "1978",
+          "ident": "ref59",
+          "article-title": "Pathogen-free potato plants regenerated from meristem-tip cultures",
+          "publication-title": "N. Z. J. Exp. Agric.",
+          "doi": "10.1080/03015521.1978.10426293",
+          "contributor": {
+            "fullname": "Quazi"
+          }
+        },
+        {
+          "volume": "187",
+          "start-page": "43",
+          "year": "2013",
+          "ident": "ref15",
+          "article-title": "Development and validation of a real-time RT-PCR assay for generic detection of pospiviroids",
+          "publication-title": "J. Virol. Methods",
+          "doi": "10.1016/j.jviromet.2012.09.004",
+          "contributor": {
+            "fullname": "Botermans"
+          }
+        },
+        {
+          "volume": "178",
+          "start-page": "442",
+          "year": "2021",
+          "ident": "ref75",
+          "article-title": "Combining thermotherapy with meristem culture for improved eradication of onion yellow dwarf virus and shallot latent virus from infected in vitro-cultured shallot shoots",
+          "publication-title": "Ann. Appl. Biol.",
+          "doi": "10.1111/aab.12646",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "volume": "154",
+          "start-page": "351",
+          "year": "2009",
+          "ident": "ref79",
+          "article-title": "Cryotherapy of shoot tips: a technique for pathogen eradication to produce healthy planting materials and prepare healthy plant genetic resources for cryopreservation",
+          "publication-title": "Ann. Appl. Biol.",
+          "doi": "10.1111/j.1744-7348.2008.00308.x",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "volume": "249",
+          "start-page": "7",
+          "year": "2019",
+          "ident": "ref86",
+          "article-title": "In vitro therapies for virus elimination of potato-valuable germplasm in Norway",
+          "publication-title": "Sci. Hortic.",
+          "doi": "10.1016/j.scienta.2019.01.027",
+          "contributor": {
+            "fullname": "Zhang"
+          }
+        },
+        {
+          "volume": "65",
+          "start-page": "3",
+          "year": "2016",
+          "ident": "ref64",
+          "article-title": "Seed degeneration in potato: the need for an integrated seed health strategy to mitigate the problem in developing countries",
+          "publication-title": "Plant Pathol.",
+          "doi": "10.1111/ppa.12439",
+          "contributor": {
+            "fullname": "Thomas-Sharma"
+          }
+        },
+        {
+          "volume": "142",
+          "start-page": "1",
+          "year": "2007",
+          "ident": "ref2",
+          "article-title": "Simultaneous detection of potato viruses, PLRV, PVA, PVX and PVY from dormant potato tubers by TaqMan® real-time RT-PCR",
+          "publication-title": "J. Virol. Methods",
+          "doi": "10.1016/j.jviromet.2006.12.012",
+          "contributor": {
+            "fullname": "Agindotan"
+          }
+        },
+        {
+          "volume": "12",
+          "start-page": "46",
+          "year": "2020",
+          "ident": "ref50",
+          "article-title": "Infectious plant diseases: etiology, current status, problems and prospects in plant protection",
+          "publication-title": "Acta Nat.",
+          "doi": "10.32607/actanaturae.11026",
+          "contributor": {
+            "fullname": "Nazarov"
+          }
+        },
+        {
+          "volume": "71",
+          "start-page": "494",
+          "ident": "ref76",
+          "article-title": "Double-edged effects of the cryogenic technique for virus eradication and preservation in shallot shoot tips",
+          "publication-title": "Plant Pathol.",
+          "doi": "10.1111/ppa.13466",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "volume": "173",
+          "start-page": "261",
+          "year": "2018",
+          "ident": "ref14",
+          "article-title": "Shoot tip cryotherapy for efficient eradication of grapevine leafroll-associated virus-3 from diseased grapevine in vitro plants",
+          "publication-title": "Ann. Appl. Biol.",
+          "doi": "10.1111/aab.12459",
+          "contributor": {
+            "fullname": "Bi"
+          }
+        },
+        {
+          "volume": "30",
+          "start-page": "1117",
+          "year": "2011",
+          "ident": "ref78",
+          "article-title": "Potato viruses in China",
+          "publication-title": "Crop Prot.",
+          "doi": "10.1016/j.cropro.2011.04.001",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "volume": "30",
+          "start-page": "267",
+          "year": "2003",
+          "ident": "ref48",
+          "article-title": "Micropropagation in potato seed production: need to revise seed certification standards",
+          "publication-title": "J. Indian Potato Assoc.",
+          "contributor": {
+            "fullname": "Naik"
+          }
+        },
+        {
+          "start-page": "247",
+          "volume-title": "Potato Breeding: Theory and Practice.",
+          "year": "2021",
+          "ident": "ref16",
+          "article-title": "Improving resistance to diseases and pests: a dynamic situation",
+          "doi": "10.1007/978-3-030-64414-7_5",
+          "contributor": {
+            "fullname": "Bradshaw"
+          }
+        },
+        {
+          "volume": "29",
+          "start-page": "237",
+          "year": "2012",
+          "ident": "ref4",
+          "article-title": "Evaluation of some therapies and meristem culture to eliminate potato Y potyvirus from infected potato plants",
+          "publication-title": "Plant Biotechnol.",
+          "doi": "10.5511/plantbiotechnology.12.0215a",
+          "contributor": {
+            "fullname": "AlMaarri"
+          }
+        },
+        {
+          "volume": "46",
+          "start-page": "119",
+          "year": "2005",
+          "ident": "ref23",
+          "article-title": "Utilization of single nodal cuttings and therapies for eradication of double-infected potato viruses (PLRV and PVY) from in vitro plantlets of potato (Solanum tuberosum)",
+          "publication-title": "J. Kor. Soc. Hortic. Sci.",
+          "contributor": {
+            "fullname": "Fang"
+          }
+        },
+        {
+          "volume": "13",
+          "start-page": "85",
+          "year": "2017",
+          "ident": "ref63",
+          "article-title": "Selection and validation of reference genes for RT-qPCR analysis in potato under abiotic stress",
+          "publication-title": "Plant Methods",
+          "doi": "10.1186/s13007-017-0238-7",
+          "contributor": {
+            "fullname": "Tang"
+          }
+        },
+        {
+          "volume": "110",
+          "start-page": "29",
+          "year": "2020",
+          "ident": "ref46",
+          "article-title": "When viruses play team sports: mixed infections in plants",
+          "publication-title": "Phytopathology",
+          "doi": "10.1094/PHYTO-07-19-0250-FI",
+          "contributor": {
+            "fullname": "Moreno"
+          }
+        },
+        {
+          "volume": "52",
+          "start-page": "305",
+          "year": "2006",
+          "ident": "ref68",
+          "article-title": "Survival of mint shoot tips after exposure to cryoprotectant solution components",
+          "publication-title": "Cryobiology",
+          "doi": "10.1016/j.cryobiol.2005.11.003",
+          "contributor": {
+            "fullname": "Volk"
+          }
+        },
+        {
+          "start-page": "307",
+          "volume-title": "The Potato Crop.",
+          "year": "2020",
+          "ident": "ref1",
+          "article-title": "Fungal, oomycete, plasmodiophorid diseases of potato",
+          "doi": "10.1007/978-3-030-28683-5_9",
+          "contributor": {
+            "fullname": "Adolf"
+          }
+        },
+        {
+          "volume": "269",
+          "start-page": "1",
+          "year": "2018",
+          "ident": "ref9",
+          "article-title": "Cryotherapy by encapsulation-dehydration is effective for in vitro eradication of latent viruses from ‘Marubakaido’ apple rootstock",
+          "publication-title": "J. Biotechnol.",
+          "doi": "10.1016/j.jbiotec.2018.01.014",
+          "contributor": {
+            "fullname": "Bettoni"
+          }
+        },
+        {
+          "volume": "102",
+          "start-page": "10743",
+          "ident": "ref39",
+          "article-title": "Long-term preservation of potato leafroll virus, potato virus S, and potato spindle tuber viroid in cryopreserved shoot tips",
+          "publication-title": "Appl. Microbiol. Biotechnol.",
+          "doi": "10.1007/s00253-018-9405-7",
+          "contributor": {
+            "fullname": "Li"
+          }
+        },
+        {
+          "volume": "14",
+          "start-page": "87",
+          "ident": "ref74",
+          "article-title": "In vitro thermotherapy-based methods for plant virus eradication",
+          "publication-title": "Plant Methods",
+          "doi": "10.1186/s13007-018-0355-y",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "year": "2021",
+          "ident": "ref56"
+        },
+        {
+          "volume": "10",
+          "start-page": "670",
+          "year": "2021",
+          "ident": "ref43",
+          "article-title": "Phytotoxicity and other adverse effects on the in vitro shoot cultures caused by virus elimination treatments: reasons and solutions",
+          "publication-title": "Plan. Theory",
+          "doi": "10.3390/plants10040670",
+          "contributor": {
+            "fullname": "Magyar-Tábori"
+          }
+        },
+        {
+          "volume": "1083",
+          "start-page": "35",
+          "year": "2015",
+          "ident": "ref18",
+          "article-title": "Plant pathogen eradication by cryotherapy of shoot tips: development, achievements and prospective",
+          "publication-title": "Acta Hortic.",
+          "doi": "10.17660/ActaHortic.2015.1083.2",
+          "contributor": {
+            "fullname": "Cui"
+          }
+        },
+        {
+          "volume": "65",
+          "start-page": "197",
+          "year": "2012",
+          "ident": "ref27",
+          "article-title": "A virus survey of New Zealand fresh, process and seed potato crops during 2010-11",
+          "publication-title": "N. Z. Plant Prot.",
+          "doi": "10.30843/nzpp.2012.65.5366",
+          "contributor": {
+            "fullname": "Fletcher"
+          }
+        },
+        {
+          "volume": "11",
+          "start-page": "1092",
+          "year": "2020",
+          "ident": "ref60",
+          "article-title": "Detection of plant viruses and disease management: relevance of genetic diversity and evolution",
+          "publication-title": "Front. Plant Sci.",
+          "doi": "10.3389/fpls.2020.01092",
+          "contributor": {
+            "fullname": "Rubio"
+          }
+        },
+        {
+          "start-page": "346",
+          "volume-title": "Plant Virus Diseases Control.",
+          "year": "1998",
+          "ident": "ref22",
+          "article-title": "Virus elimination by meristem tip culture and tip micrografting",
+          "contributor": {
+            "fullname": "Faccioli"
+          }
+        },
+        {
+          "volume": "96",
+          "start-page": "1263",
+          "year": "2006",
+          "ident": "ref30",
+          "article-title": "Synergistic interaction between tomato chlorosis virus and tomato spotted wilt virus results in breakdown of resistance in tomato",
+          "publication-title": "Phytopathology",
+          "doi": "10.1094/PHYTO-96-1263",
+          "contributor": {
+            "fullname": "García-Cano"
+          }
+        },
+        {
+          "volume": "25",
+          "start-page": "813",
+          "year": "2016",
+          "ident": "ref53",
+          "article-title": "Marker-free PLRV resistant potato mediated by Cre-loxP excision and RNAi",
+          "publication-title": "Transgenic Res.",
+          "doi": "10.1007/s11248-016-9976-y",
+          "contributor": {
+            "fullname": "Orbegozo"
+          }
+        },
+        {
+          "volume": "52",
+          "start-page": "119",
+          "year": "1998",
+          "ident": "ref3",
+          "article-title": "Approximate is better than “exact” for interval estimation of binomial proportions",
+          "publication-title": "Am. Stat.",
+          "doi": "10.2307/2685469",
+          "contributor": {
+            "fullname": "Agresti"
+          }
+        },
+        {
+          "volume": "3",
+          "start-page": "34",
+          "year": "2012",
+          "ident": "ref32",
+          "article-title": "Can cryopreservation eliminate the potato virus X (PVX) and potato spindle tuber viroid (PSTVd)?",
+          "publication-title": "Biosci. Meth.",
+          "doi": "10.5376/bm.2012.03.0005",
+          "contributor": {
+            "fullname": "Jianming"
+          }
+        },
+        {
+          "volume": "54",
+          "start-page": "147",
+          "year": "1977",
+          "ident": "ref84",
+          "article-title": "The effect of separate infections by potato viruses X and S on netted gem potato",
+          "publication-title": "Am. Potato J.",
+          "doi": "10.1007/BF02852870",
+          "contributor": {
+            "fullname": "Wright"
+          }
+        },
+        {
+          "volume": "10",
+          "start-page": "2190",
+          "ident": "ref12",
+          "article-title": "Grapevine shoot tip cryopreservation and cryotherapy: secure storage of disease-free plants",
+          "publication-title": "Plants",
+          "doi": "10.3390/plants10102190",
+          "contributor": {
+            "fullname": "Bettoni"
+          }
+        },
+        {
+          "volume": "130",
+          "start-page": "91",
+          "year": "2008",
+          "ident": "ref67",
+          "article-title": "Novel resistances to four potyviruses in tuber-bearing potato species, and temperature-sensitive expression of hypersensitive resistance to potato virus Y",
+          "publication-title": "Ann. Appl. Biol.",
+          "doi": "10.1111/j.1744-7348.1997.tb05785.x",
+          "contributor": {
+            "fullname": "Valkonen"
+          }
+        },
+        {
+          "volume": "14",
+          "start-page": "119",
+          "year": "2009",
+          "ident": "ref80",
+          "article-title": "Cryotherapy of shoot tips: novel pathogen eradication method",
+          "publication-title": "Trends Plant Sci.",
+          "doi": "10.1016/j.tplants.2008.11.010",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "volume": "10",
+          "start-page": "260",
+          "year": "2020",
+          "ident": "ref82",
+          "article-title": "Challenges in the production of high-quality seed potatoes (Solanum tuberosum L.) in the tropics and subtropics",
+          "publication-title": "Agron.",
+          "doi": "10.3390/agronomy10020260",
+          "contributor": {
+            "fullname": "Wasilewska-Nascimento"
+          }
+        },
+        {
+          "volume": "64",
+          "start-page": "681",
+          "year": "2021",
+          "ident": "ref19",
+          "article-title": "The potato of the future: opportunities and challenges in sustainable Agri-food systems",
+          "publication-title": "Potato Res.",
+          "doi": "10.1007/s11540-021-09501-4",
+          "contributor": {
+            "fullname": "Devaux"
+          }
+        },
+        {
+          "volume": "15",
+          "start-page": "473",
+          "year": "1962",
+          "ident": "ref47",
+          "article-title": "A revised medium for rapid growth and bio assays with tobacco tissue cultures",
+          "publication-title": "Physiol. Planta.",
+          "doi": "10.1111/j.1399-3054.1962.tb08052.x",
+          "contributor": {
+            "fullname": "Murashige"
+          }
+        },
+        {
+          "volume": "22",
+          "start-page": "63",
+          "year": "2010",
+          "ident": "ref49",
+          "article-title": "Strategies to control potato virus Y under in vitro conditions",
+          "publication-title": "Pak. J. Phytopathol.",
+          "contributor": {
+            "fullname": "Nasir"
+          }
+        },
+        {
+          "volume": "11",
+          "start-page": "61",
+          "year": "2017",
+          "ident": "ref83",
+          "article-title": "Effect of thermotherapy duration, virus type and cultivar interactions on elimination of potato viruses X and S in infected seed stocks",
+          "publication-title": "African J. Plant Sci.",
+          "doi": "10.5897/AJPS2016.1497",
+          "contributor": {
+            "fullname": "Waswa"
+          }
+        },
+        {
+          "volume": "49",
+          "start-page": "119",
+          "year": "2006",
+          "ident": "ref77",
+          "article-title": "Cryotherapy of potato shoot tips for efficient elimination of potato leafroll virus (PLRV) and potato virus Y (PVY)",
+          "publication-title": "Potato Res.",
+          "doi": "10.1007/s11540-006-9011-4",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "volume": "168",
+          "start-page": "142",
+          "year": "2016",
+          "ident": "ref38",
+          "article-title": "Shoot tip culture and cryopreservation for eradication of apple stem pitting virus (ASPV) and apple stem grooving virus (ASGV) from apple rootstocks ‘M9’ and ‘M26’",
+          "publication-title": "Ann. Appl. Biol.",
+          "doi": "10.1111/aab.12250",
+          "contributor": {
+            "fullname": "Li"
+          }
+        },
+        {
+          "volume": "1083",
+          "start-page": "491",
+          "year": "2015",
+          "ident": "ref55",
+          "article-title": "Removal of leafroll viruses from infected grapevine plants by droplet vitrification",
+          "publication-title": "Acta Hortic.",
+          "doi": "10.17660/ActaHortic.2015.1083.64",
+          "contributor": {
+            "fullname": "Pathirana"
+          }
+        },
+        {
+          "start-page": "1",
+          "ident": "ref72",
+          "article-title": "Shoot tip cryotherapy for plant pathogen eradication",
+          "publication-title": "Plant Pathol.",
+          "doi": "10.1111/ppa.13565",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "volume": "14",
+          "start-page": "47",
+          "ident": "ref81",
+          "article-title": "Cryopreservation of virus: a novel biotechnology for long-term preservation of virus in shoot tips",
+          "publication-title": "Plant Methods",
+          "doi": "10.1186/s13007-018-0312-9",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "volume": "59",
+          "start-page": "498",
+          "year": "2014",
+          "ident": "ref85",
+          "article-title": "Eliminating potato virus Y (PVY) and potato leaf roll virus (PLRV) using cryotherapy of in vitro-grown potato shoot tips",
+          "publication-title": "Korean J. Crop Sci.",
+          "doi": "10.7740/KJCS.2014.59.4.498",
+          "contributor": {
+            "fullname": "Yi"
+          }
+        },
+        {
+          "volume": "27",
+          "start-page": "223",
+          "year": "2006",
+          "ident": "ref34",
+          "article-title": "Cryopreservation of potato cultivated varieties and wild species: critical factors in droplet vitrification",
+          "publication-title": "Cryo Lett.",
+          "contributor": {
+            "fullname": "Kim"
+          }
+        },
+        {
+          "volume": "39",
+          "start-page": "1415",
+          "year": "2020",
+          "ident": "ref71",
+          "article-title": "Rapid analysis of GBSS1 and Vinv genes expressed in potato tubers using microtubers produced in liquid culture medium",
+          "publication-title": "Plant Cell Rep.",
+          "doi": "10.1007/s00299-020-02572-6",
+          "contributor": {
+            "fullname": "Wakasa"
+          }
+        },
+        {
+          "volume": "53",
+          "start-page": "309",
+          "year": "2017",
+          "ident": "ref70",
+          "article-title": "A large-scale viability assessment of the potato cryobanks at the international potato center (CIP). In vitro cell",
+          "publication-title": "Dev. Biol. Plant",
+          "doi": "10.1007/s11627-017-9846-1",
+          "contributor": {
+            "fullname": "Volmer"
+          }
+        },
+        {
+          "volume": "9",
+          "start-page": "237",
+          "year": "2008",
+          "ident": "ref73",
+          "article-title": "Combined thermotherapy and cryotherapy for efficient virus eradication: relation of virus distribution, subcellular changes, cell survival and viral RNA degradation in shoot tips",
+          "publication-title": "Mol. Plant Pathol.",
+          "doi": "10.1111/j.1364-3703.2007.00456.x",
+          "contributor": {
+            "fullname": "Wang"
+          }
+        },
+        {
+          "volume": "18",
+          "start-page": "100",
+          "year": "1965",
+          "ident": "ref42",
+          "article-title": "Organic growth factor requirements of tobacco tissue cultures",
+          "publication-title": "Physiol. Plant.",
+          "doi": "10.1111/j.1399-3054.1965.tb06874.x",
+          "contributor": {
+            "fullname": "Linsmaier"
+          }
+        },
+        {
+          "volume": "52",
+          "start-page": "95",
+          "year": "2017",
+          "ident": "ref5",
+          "article-title": "Eradication of viruses in microplants of three cultivated potato species (Solanun tuberosum L., S. phureja Juz. & bulk., S. stenotomum Juz. & Buk.) using combined thermos-chemotherapy method",
+          "publication-title": "Agric. Biol.",
+          "doi": "10.15389/agrobiology.2017.1.95eng",
+          "contributor": {
+            "fullname": "Antonova"
+          }
+        },
+        {
+          "volume": "45",
+          "start-page": "148",
+          "year": "2020",
+          "ident": "ref62",
+          "article-title": "Droplet-vitrification cryotherapy for eradication of apple stem grooving virus and apple stem pitting virus from “Marubakaido” apple rootstock",
+          "publication-title": "Trop. Plant Pathol.",
+          "doi": "10.1007/s40858-019-00321-z",
+          "contributor": {
+            "fullname": "Souza"
+          }
+        },
+        {
+          "volume": "54",
+          "start-page": "976",
+          "ident": "ref11",
+          "article-title": "Cryopreservation of 12 Vitis species using apical shoot tips derived from plants grown in vitro",
+          "publication-title": "HortSciece",
+          "doi": "10.21273/HORTSCI13958-19",
+          "contributor": {
+            "fullname": "Bettoni"
+          }
+        },
+        {
+          "volume": "250",
+          "start-page": "12",
+          "ident": "ref13",
+          "article-title": "Eradication of latent viruses from apple cultivar ‘Monalisa’ shoot tips using droplet-vitrification cryotherapy",
+          "publication-title": "Sci. Hortic.",
+          "doi": "10.1016/j.scienta.2019.02.033",
+          "contributor": {
+            "fullname": "Bettoni"
+          }
+        },
+        {
+          "volume": "162",
+          "start-page": "31",
+          "year": "2022",
+          "ident": "ref25",
+          "article-title": "Droplet-vitrification cryotherapy and thermotherapy as efficient tools for the eradication of apple chlorotic leaf spot virus and apple stem grooving virus from virus-infected quince in vitro cultures",
+          "publication-title": "Eur. J. Plant Pathol.",
+          "doi": "10.1007/s10658-021-02400-x",
+          "contributor": {
+            "fullname": "Farhadi-Tooli"
+          }
+        },
+        {
+          "volume": "91",
+          "start-page": "642",
+          "year": "2014",
+          "ident": "ref41",
+          "article-title": "Effect of potato virus S infection on late blight resistance in potato",
+          "publication-title": "Am. J. Potato Res.",
+          "doi": "10.1007/s12230-014-9394-8",
+          "contributor": {
+            "fullname": "Lin"
+          }
+        },
+        {
+          "volume": "152",
+          "start-page": "417",
+          "ident": "ref37",
+          "article-title": "Growth, microtuber production and physiological metabolism in virus-free and virus-infected potato in vitro plantlets grown under NaCl-induced salt stress",
+          "publication-title": "Eur. J. Plant Pathol.",
+          "doi": "10.1007/s10658-018-1485-9",
+          "contributor": {
+            "fullname": "Li"
+          }
+        },
+        {
+          "start-page": "109",
+          "volume-title": "The Potato Crop.",
+          "year": "2020",
+          "ident": "ref21",
+          "article-title": "Ex situ conservation of potato [Solanum section Petota (Solanaceae)] genetic resources in genebanks",
+          "doi": "10.1007/978-3-030-28683-5_4",
+          "contributor": {
+            "fullname": "Ellis"
+          }
+        },
+        {
+          "start-page": "65",
+          "volume-title": "Virus and virus-like diseases of potatoes and production of seed-potatoes.",
+          "year": "2011",
+          "ident": "ref17",
+          "article-title": "The main viruses infecting potato crops",
+          "contributor": {
+            "fullname": "Brunt"
+          }
+        },
+        {
+          "volume": "9",
+          "start-page": "30",
+          "year": "1990",
+          "ident": "ref61",
+          "article-title": "Cryopreservation of nucellar cells of navel orange (Citrus sinensis Osb. Var. brasiliensis Tanaka) by vitrification",
+          "publication-title": "Plant Cell Rep.",
+          "doi": "10.1007/BF00232130",
+          "contributor": {
+            "fullname": "Sakai"
+          }
+        },
+        {
+          "volume": "38",
+          "start-page": "e-833",
+          "year": "2016",
+          "ident": "ref8",
+          "article-title": "Cryotherapy: a new technique to obtain grapevine plants free of viruses",
+          "publication-title": "Rev. Bras. Frutic.",
+          "doi": "10.1590/0100-29452016833",
+          "contributor": {
+            "fullname": "Bettoni"
+          }
+        },
+        {
+          "volume": "144",
+          "start-page": "133",
+          "year": "2021",
+          "ident": "ref44",
+          "article-title": "Efficiency of eradication of raspberry bushy dwarf virus from infected raspberry (Rubus idaeus) by in vitro chemotherapy, thermotherapy and cryotherapy and their combinations",
+          "publication-title": "Plant Cell Tissue Organ Cult.",
+          "doi": "10.1007/s11240-020-01829-y",
+          "contributor": {
+            "fullname": "Mathew"
+          }
+        },
+        {
+          "volume": "96",
+          "start-page": "379",
+          "year": "2019",
+          "ident": "ref31",
+          "article-title": "Major in vitro techniques for potato virus elimination and post eradication detection methods. A review",
+          "publication-title": "Am. J. Potato Res.",
+          "doi": "10.1007/s12230-019-09720-z",
+          "contributor": {
+            "fullname": "Gong"
+          }
+        },
+        {
+          "volume": "7",
+          "start-page": "1",
+          "year": "2007",
+          "ident": "ref20",
+          "article-title": "Utilization of shoot cuttings for elimination of PLRV and PVY by thermotherapy and chemotherapy from potato (Solanum tuberosum L.)",
+          "publication-title": "Nepal J. Sci. Technol.",
+          "doi": "10.3126/njst.v7i0.528",
+          "contributor": {
+            "fullname": "Dhital"
+          }
+        },
+        {
+          "volume": "1234",
+          "start-page": "29",
+          "year": "2019",
+          "ident": "ref54",
+          "article-title": "Cryopreservation and cryotherapy research on horticultural crops in New Zealand",
+          "publication-title": "Acta Hortc.",
+          "doi": "10.17660/ActaHortic.2019.1234.4",
+          "contributor": {
+            "fullname": "Pathirana"
+          }
+        },
+        {
+          "volume": "96",
+          "start-page": "43",
+          "year": "2012",
+          "ident": "ref51",
+          "article-title": "Biological properties of potato virus X in potato: effects of mixed infection with potato virus S and resistance phenotypes in cultivars from three continents",
+          "publication-title": "Plant Dis.",
+          "doi": "10.1094/PDIS-04-11-0305",
+          "contributor": {
+            "fullname": "Nyalugwe"
+          }
+        },
+        {
+          "volume": "102",
+          "start-page": "1574",
+          "year": "2018",
+          "ident": "ref87",
+          "article-title": "Combining thermotherapy with cryotherapy for efficient eradication of apple stem grooving virus from infected in-vitro-cultured apple shoots",
+          "publication-title": "Plant Dis.",
+          "doi": "10.1094/PDIS-11-17-1753-RE",
+          "contributor": {
+            "fullname": "Zhao"
+          }
+        },
+        {
+          "volume": "144",
+          "start-page": "21",
+          "ident": "ref7",
+          "article-title": "Challenges in implementing plant shoot tip cryopreservation technologies",
+          "publication-title": "Plant Cell Tissue Organ. Cult.",
+          "doi": "10.1007/s11240-020-01846-x",
+          "contributor": {
+            "fullname": "Bettoni"
+          }
+        },
+        {
+          "start-page": "619",
+          "volume-title": "Potato Biology and Biotechnology: Advances and Perspectives.",
+          "year": "2007",
+          "ident": "ref66",
+          "article-title": "Potato viruses: economical losses and biotechnological potential",
+          "doi": "10.1016/B978-044451018-1/50070-1",
+          "contributor": {
+            "fullname": "Valkonen"
+          }
+        },
+        {
+          "volume": "64",
+          "start-page": "1613",
+          "year": "2016",
+          "ident": "ref69",
+          "article-title": "Probabilistic Viability Calculations for cryopreserving vegetatively propagated collections in genebanks",
+          "publication-title": "Genet. Resources Crop Evol.",
+          "doi": "10.1007/s10722-016-0460-6",
+          "contributor": {
+            "fullname": "Volk"
+          }
+        },
+        {
+          "volume": "11",
+          "start-page": "582",
+          "year": "2022",
+          "ident": "ref10",
+          "article-title": "Thermotherapy followed by shoot tip cryotherapy eradicates latent viruses and apple hammerhead viroid from in vitro apple rootstocks",
+          "publication-title": "Plan. Theory",
+          "doi": "10.3390/plants11050582",
+          "contributor": {
+            "fullname": "Bettoni"
+          }
+        },
+        {
+          "volume": "221",
+          "start-page": "100",
+          "year": "2015",
+          "ident": "ref33",
+          "article-title": "Development of a duplex one-step RT-qPCR assay for the simultaneous detection of apple scar skin viroid and plant RNA internal control",
+          "publication-title": "J. Virol. Methods",
+          "doi": "10.1016/j.jviromet.2015.04.032",
+          "contributor": {
+            "fullname": "Khan"
+          }
+        },
+        {
+          "volume": "63",
+          "start-page": "507",
+          "year": "2020",
+          "ident": "ref58",
+          "article-title": "Potato yield and yield components as affected by positive selection during several generations of seed multiplication in southwestern Uganda",
+          "publication-title": "Potato Res.",
+          "doi": "10.1007/s11540-020-09455-z",
+          "contributor": {
+            "fullname": "Priegnitz"
+          }
+        },
+        {
+          "volume": "1",
+          "start-page": "1",
+          "year": "2017",
+          "ident": "ref6",
+          "article-title": "Current status of viral diseases of potato and their eco-friendly management – a critical review",
+          "publication-title": "Virol. Res. Rev.",
+          "doi": "10.15761/VRR.1000122",
+          "contributor": {
+            "fullname": "Awasthi"
+          }
+        },
+        {
+          "volume": "114",
+          "start-page": "313",
+          "year": "2013",
+          "ident": "ref40",
+          "article-title": "Potato leafroll virus (PLRV) and potato virus Y (PVY) influence vegetative growth, physiological metabolism, and microtuber production of in vitro-grown shoots of potato (Solanum tuberosum L.)",
+          "publication-title": "Plant. Cell. Tiss. Org.",
+          "doi": "10.1007/s11240-013-0327-x",
+          "contributor": {
+            "fullname": "Li"
+          }
+        },
+        {
+          "volume": "62",
+          "start-page": "1",
+          "year": "2019",
+          "ident": "ref57",
+          "article-title": "Impact of positive selection on incidence of different viruses during multiple generations of potato seed tubers in Uganda",
+          "publication-title": "Potato Res.",
+          "doi": "10.1007/s11540-018-9394-z",
+          "contributor": {
+            "fullname": "Priegnitz"
+          }
+        }
+      ],
+      "PublicationTitle": [
+        "Frontiers in plant science"
+      ],
+      "ProviderPackageCode": [
+        "CITATION",
+        "AAYXX"
+      ],
+      "IsDoiOpenAccess": [
+        "true"
+      ],
+      "Volume": [
+        "13"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Jean Carlos",
+          "surname": "Bettoni",
+          "fullname": "Bettoni, Jean Carlos",
+          "organization": "\u000a The New Zealand Institute for Plant and Food Research Limited, Food Industry Science Centre, Palmerston North, New Zealand\u000a "
+        },
+        {
+          "sequence": "2",
+          "givenname": "Liya",
+          "surname": "Mathew",
+          "fullname": "Mathew, Liya",
+          "organization": "\u000a The New Zealand Institute for Plant and Food Research Limited, Food Industry Science Centre, Palmerston North, New Zealand\u000a "
+        },
+        {
+          "sequence": "3",
+          "givenname": "Ranjith",
+          "surname": "Pathirana",
+          "fullname": "Pathirana, Ranjith",
+          "organization": "\u000a The New Zealand Institute for Plant and Food Research Limited, Food Industry Science Centre, Palmerston North, New Zealand\u000a "
+        },
+        {
+          "sequence": "4",
+          "givenname": "Claudia",
+          "surname": "Wiedow",
+          "fullname": "Wiedow, Claudia",
+          "organization": "\u000a The New Zealand Institute for Plant and Food Research Limited, Food Industry Science Centre, Palmerston North, New Zealand\u000a "
+        },
+        {
+          "sequence": "5",
+          "givenname": "Donald A",
+          "surname": "Hunter",
+          "fullname": "Hunter, Donald A",
+          "organization": "\u000a The New Zealand Institute for Plant and Food Research Limited, Food Industry Science Centre, Palmerston North, New Zealand\u000a "
+        },
+        {
+          "sequence": "6",
+          "givenname": "Andrew",
+          "surname": "McLachlan",
+          "fullname": "McLachlan, Andrew",
+          "organization": "\u000a The New Zealand Institute for Plant and Food Research Limited, Food Industry Science Centre, Palmerston North, New Zealand\u000a "
+        },
+        {
+          "sequence": "7",
+          "givenname": "Subuhi",
+          "surname": "Khan",
+          "fullname": "Khan, Subuhi",
+          "organization": "\u000a Plant Health and Environment Laboratory, Ministry for Primary Industries, Auckland, New Zealand\u000a "
+        },
+        {
+          "sequence": "8",
+          "givenname": "Joe",
+          "surname": "Tang",
+          "fullname": "Tang, Joe",
+          "organization": "\u000a Plant Health and Environment Laboratory, Ministry for Primary Industries, Auckland, New Zealand\u000a "
+        },
+        {
+          "sequence": "9",
+          "givenname": "Jayanthi",
+          "surname": "Nadarajan",
+          "fullname": "Nadarajan, Jayanthi",
+          "organization": "\u000a The New Zealand Institute for Plant and Food Research Limited, Food Industry Science Centre, Palmerston North, New Zealand\u000a "
+        }
+      ],
+      "Abstract": [
+        "Certain viruses dramatically affect yield and quality of potatoes and have proved difficult to eradicate with current approaches. Here, we describe a reliable and efficient virus eradication method that is high throughput and more efficacious at producing virus-free potato plants than current reported methods. Thermotherapy, chemotherapy, and cryotherapy treatments were tested alone and in combination for ability to eradicate single and mixed\u000a(PVS),\u000a(PVA), and\u000a(PVM) infections from three potato cultivars. Chemotherapy treatments were undertaken on\u000ashoot segments for four weeks in culture medium supplemented with 100 mg L\u000aribavirin. Thermotherapy on\u000ashoot segments was applied for two weeks at 40°C (day) and 28°C (night) with a 16 h photoperiod. Plant vitrification solution 2 (PVS2) and cryotherapy treatments included a shoot tip preculture followed by exposure to PVS2 either without or with liquid nitrogen (LN, cryotherapy) treatment. The virus status of control and recovered plants following therapies was assessed in post-regeneration culture after 3 months and then retested in plants after they had been growing in a greenhouse for a further 3 months. Microtuber production was investigated using\u000avirus-free and virus-infected segments. We found that thermotherapy and cryotherapy (60 min PVS2 + LN) used alone were not effective in virus eradication, while chemotherapy was better but with variable efficacy (20-100%). The most effective result (70-100% virus eradication) was obtained by combining chemotherapy with cryotherapy, or by consecutive chemotherapy, combined chemotherapy and thermotherapy, then cryotherapy treatments irrespective of cultivar. Regrowth following the two best virus eradication treatments was similar ranging from 8.6 to 29% across the three cultivars. The importance of virus removal on yield was reflected in \"Dunluce\" free of PVS having higher numbers of microtubers and in \"V500' free of PVS and PVA having a greater proportion of microtubers > 5 mm. Our improved procedure has potential for producing virus-free planting material for the potato industry. It could also underpin the global exchange of virus-free germplasm for conservation and breeding programs."
+      ],
+      "Keywords": [
+        "Solanum tuberosum",
+        "shoot tips",
+        "high-health plants",
+        "microtubers",
+        "thermotherapy",
+        "cryotherapy",
+        "chemotherapy",
+        "cryopreservation"
+      ],
+      "PublicationDate": [
+        "2022-05-19"
+      ],
+      "Genre": [
+        "Journal Article"
+      ],
+      "PQID": [
+        "2674006821"
+      ],
+      "PMID": [
+        "35665190"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/lc.gif&issn=1664-462X&client=summon"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/sc.gif&issn=1664-462X&client=summon"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=/mc.gif&issn=1664-462X&client=summon"
+      ],
+      "Database_xml": [
+        {
+          "sequence": "1",
+          "dbid": "DOA",
+          "name": "DOAJ Open Access Journals",
+          "url": "https://www.doaj.org/",
+          "sourceTypes": [
+            "Open Website"
+          ]
+        }
+      ],
+      "OpenAccessLink": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9161163/"
+      ],
+      "link.rule.ids": [
+        "230,315,738,791,792,795,875,896,2128,28275,28276,54493,54495"
+      ],
+      "linkProvider": [
+        "National Library of Medicine"
+      ],
+      "LinkModel": [
+        "DirectLink"
+      ],
+      "IEDL.DBID": [
+        "RPM"
+      ],
+      "BookMark": [
+        "eNpVks1uEzEUhUcIRKvSPSvkJQsm9c_M9XiDVFVtidQKpLaIneWx7ySuJuNgO0W8AY-NQ9rSeGPr-JzPV_KpqveMzoTo1MmwHtOMU85nneykEK-qQwbQ1A3wH69fnA-q45TuaVktpUrJt9WBaAFapuhh9ec8GuetyT5MJAzkW8gmB_Ldx00iN-TTvnBaBDO5ffGaXMSwIvNpQJvRET-RB59jIPVlDL-mJ_PNMoScyF3y0-K_53aJ0aw9pnfVm8GMCY8f96Pq7uL89uxLffX1cn52elVboXiuHXZDz1wrQYIVnKI1nDmLgwNuAYADLYocgHW8YQ4VAhd0QOoUihIUR9V8x3XB3Ot19CsTf-tgvP4nhLjQJmZvR9S96TrHWOukMk1voUfFaCH2VjkpnSmszzvWetOvsEwx5WjGPej-zeSXehEetGLAGIgC-PgIiOHnBlPWK58sjqOZMGyS5iAbSqHjrFjpzmpjSCni8PwMo3rbB73tg972Qe_6UCIfXo73HHj6ffEXUWGzog"
+      ],
+      "DatabaseName": [
+        "PubMed",
+        "CrossRef",
+        "MEDLINE - Academic",
+        "PubMed Central (Full Participant titles)",
+        "DOAJ Directory of Open Access Journals"
+      ],
+      "ParticipantIDs": [
+        "doaj_primary_oai_doaj_org_article_ba88d115d79a4bc6be910e9ebc9d77da",
+        "pubmedcentral_primary_oai_pubmedcentral_nih_gov_9161163",
+        "proquest_miscellaneous_2674006821",
+        "crossref_primary_10_3389_fpls_2022_878733",
+        "pubmed_primary_35665190"
+      ],
+      "SummonAdditionalLinks": [
+        {
+          "databaseName": "DOAJ Directory of Open Access Journals",
+          "dbid": "DOA",
+          "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwrV1bS8MwFA4igr6IN7TeiE8iWLdeljYwBCebUzYQnaJPJbeygbaj6wR_jv_Uk6Yb2xj44msuJOQ77fm-5OQEofOF_0HnvmF3G-029XsPrdcOscFHUcfWWrFLHzq1p7fae3PmtS8dFmYyBJu1q3AWhhKYiwwo87kgXIGPU1RxQWUQyJIdhTN6yiT21uwnMEeTIMRoJR5-6ATdrnsVgpl63pwrKjL2L6OZi9GSJpdU4X5aW2iz5I34xkx2G62oZAetNVLgdt-76KeZMVnuvuE0xvX-9SNU5Wm90r_Gr4NsPMLPl0uLby4xS-TSqi5uZeknvi_itZTEgwR_DfIste-0dl_o8txP03yEixCEaUvcK653gRrfQy-tZu-2bZePL9gCKFNuSxXG3JEgRwIiPLeqBHMdWINYEleA5gEdBCVBTECg-I4EOIBIVWNVlVR50NE7QBjYD_cJJyysuT4JCfOB3nDFfJeLmmDMQhcTAKKhSa4RgSjRYEUarEiDFRmwLNTQCE3b6bTYRQFYSlRaSvSXpVjobIJvBJ-RPhthiUrHMBIJfH1dxnUstG_wng7lAeUFolu1UDBnCXNzma9JBv0iVTeQbwcY7-F_TP4Ibej10KELDj1Gq3k2VidoXe__CgVC4bSw_19COQ7z",
+          "priority": "102",
+          "providerName": "Directory of Open Access Journals"
+        }
+      ]
+    }
+  ],
+  "rollups": {
+    "image": {},
+    "reference": {},
+    "newspaper": {}
+  }
+}

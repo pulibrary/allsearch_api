@@ -3,11 +3,13 @@
 # This class is responsible for getting relevant
 # metadata from the Summon::Documents
 class SummonApiDocument < Document
-  delegate :start_page, to: :document
+  delegate :abstract, to: :document
   delegate :end_page, to: :document
-  # Boolean whether or not the document is available with fulltext
-  delegate :fulltext, to: :document
+  delegate :issue, to: :document
+  delegate :publication_title, to: :document
   delegate :publisher, to: :document
+  delegate :start_page, to: :document
+  delegate :volume, to: :document
 
   def title
     full_sanitizer = Rails::HTML5::FullSanitizer.new
@@ -37,10 +39,31 @@ class SummonApiDocument < Document
   end
 
   def doc_keys
-    [:publication_date, :start_page, :end_page, :fulltext]
+    [:publication_date, :publication_year, :start_page, :end_page, :fulltext_available, :abstract,
+     :publication_title, :volume, :issue, :isxn]
+  end
+
+  def fulltext_available
+    document.fulltext
+  end
+
+  def isxn
+    (isbn + issn).compact
+  end
+
+  def isbn
+    (document.src['ISBN'].presence || [])
+  end
+
+  def issn
+    (document.src['ISSN'].presence || [])
   end
 
   def publication_date
     document.publication_date.text
+  end
+
+  def publication_year
+    document.publication_date.year
   end
 end
