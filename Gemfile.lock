@@ -214,6 +214,8 @@ GEM
     sshkit (1.21.5)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    summon (2.0.5)
+      json
     thor (1.2.2)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -262,6 +264,7 @@ DEPENDENCIES
   rswag
   rubocop-rails
   rubocop-rspec
+  summon
   tzinfo-data
   webmock
   whenever

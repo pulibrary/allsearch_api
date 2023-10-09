@@ -1,0 +1,1333 @@
+{
+  "version": "2.0.0",
+  "sessionId": "SUMMON-SESSION-LIB-MBHH94TJFVL6-42525-1",
+  "elapsedQueryTime": 484,
+  "queryTime": 464,
+  "internalSolrQueryTime": 470,
+  "totalRequestTime": 566,
+  "pageCount": 1540359,
+  "recordCount": 4621075,
+  "query": {
+    "queryString": "s.fvf=ContentType%2CNewspaper+Article%2Ct&s.normalized.subjects=f&s.secure=f&s.dailyCatalog=t&s.q=forest&s.dym=t&s.ho=t&s.rapido=f&s.ps=3&s.shortenurl=f",
+    "pageNumber": 1,
+    "pageSize": 3,
+    "isDidYouMeanEnabled": true,
+    "isHoldingsOnlyEnabled": true,
+    "textQueries": [
+      {
+        "textQuery": "forest",
+        "removeCommand": "removeTextQuery(forest)"
+      }
+    ],
+    "searchTerms": [],
+    "textFilters": [],
+    "rangeFilters": [],
+    "facetValueFilters": [
+      {
+        "fieldName": "ContentType",
+        "value": "Newspaper Article",
+        "isNegated": true,
+        "removeCommand": "removeFacetValueFilter(ContentType,Newspaper Article)",
+        "negateCommand": "negateFacetValueFilter(ContentType,Newspaper Article)"
+      }
+    ],
+    "inclusiveFacetValueFilters": [],
+    "facetValueGroupFilters": [],
+    "facetFields": [],
+    "rangeFacetFields": [],
+    "sort": []
+  },
+  "facetFields": [],
+  "rangeFacetFields": [],
+  "didYouMeanSuggestions": [],
+  "recommendationLists": {},
+  "documents": [
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=The+rainforests+of+Cameroon%3A+experience+and+evidence+from+a+decade+of+reform&rft.au=Topa%2C+Giuseppe&rft.date=2009-01-01&rft.isbn=9780821378786&rft.spage=xviii&rft.epage=xviii&rft_id=info:doi/10.1596%2F978-0-8213-7878-6&rft.externalDBID=NO_FULL_TEXT",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3Nb9MwFLdYkRg3viQ2vnxhHFBEEzdOzAWpqFk3ZYCmsI1TZNc2ihBd1bCJ_fe8lzhOuk1CiEtUu3Ic-ff8_L5NyJtr_CA_mAZH0_lcTIrD7CTnAZBJFAeoKx6Jwzw-Pou_zdytdXVb_w-zfwEE1NNrt2VuyXbAvFWMc7zqbpr6UDkHO9qZxuGX44MSVOBi7xIA7psAfbcP916z7H-pBvqAbjAL9x8ox78UOuA30A88gYLgeU249s2eePDuCJBo4dSo2ySunwak7CYQxPj6yI3vwbibSdtcFflWGwy6x0Fw_IJM3FuyV42oul_Bkq9WZsPiIAYWh07xBMEhZLDX0yHz-31ZVdXgJPXtG2w6FtxFZmAee8gCfFVwS0nsT5_L7Guel8XsrNgiW4lIR-Tu6f5pMfWGNBBigGGLpran-yjmKiv5j3TubJj23Y1JN1SL7aZOrZLLHwMpo3hARph58pDcMctH5F7WrP366jHJAQ46gIOeW9rB8Z72YFAAg3ZgUASDStqCgUNaMJ6Qk2xWfJwH7haMQMYigtU3UbQALquV0PFCcS5B5hMTqZLImjE3YawTscCeRNqJTZQINbfCWLWIFUssZ08JFUIn2obcapFOTGSU5JFiUlttU2iMd8irbhFK4C_oNJJLc35RlywBjReE4B2S-7Upcb95my86t-oKQ0JKrFW-8V85GLP-juEOKS8jnrLdv074jNzvie85Gf1aX5gXZNtzh5eOEP4Ai4tjVg",
+      "ExternalDocumentID": [
+        "oai_openknowledge_worldbank_org_10986_2683"
+      ],
+      "DBID": [
+        "VO9",
+        "8BJ",
+        "FQK",
+        "JBE"
+      ],
+      "IngestDate": [
+        "Wed Sep 27 01:29:08 EDT 2023",
+        "Fri Jul 28 07:13:31 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "year": "2009",
+          "text": "2009"
+        }
+      ],
+      "PublicationSeriesTitle": [
+        "Directions in Development"
+      ],
+      "Score": [
+        "11.33112"
+      ],
+      "DatabaseTitleList": [
+        ""
+      ],
+      "URI": [
+        "http://hdl.handle.net/10986/2683",
+        "https://search.proquest.com/docview/37260251"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "World Bank"
+        }
+      ],
+      "ID": [
+        "FETCH-LOGICAL-a59209-e22c880db9d5cb66a43194ab72fe06e15d79c194a7af4f7b91d6f9efbc5b37f63"
+      ],
+      "GeographicLocations": [
+        "Cameroon",
+        "West Africa",
+        "Sub-Saharan Africa",
+        "Africa"
+      ],
+      "PQPubID": [
+        "23473"
+      ],
+      "Publisher": [
+        "World Bank"
+      ],
+      "DOI": [
+        "10.1596/978-0-8213-7878-6"
+      ],
+      "AbstractList": [
+        "In 1994, the Government of Cameroon\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market-based, to support a more organized,\u000atransparent, and sustainable system for accessing and using\u000aforest resources. This report describes how these reforms\u000aplayed out in the rainforests of Cameroon. The intention is\u000ato provide a brief account of a complex process and identify\u000awhat worked, what did not, and what can be improved. The\u000abarriers to placing Cameroon's forests at the service\u000aof its people, its economy, and the environment originated\u000awith the extractive policies of successive colonial\u000aadministrations. The barriers were further consolidated\u000aafter independence through a system of political patronage\u000aand influence in which forest resources became a coveted\u000acurrency for political support. These deeply entangled\u000acommercial and political interests have only recently, and\u000areluctantly, started to diverge. In 1994, the government\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market based. The reforms changed the rules\u000adetermining who could gain access to forest resources, how\u000aaccess could be obtained, how those resources could be used,\u000aand who will benefit from their use. This report assesses\u000athe outcomes of reforms in forest-rich areas of Cameroon,\u000awhere the influence of industrial and political elites has\u000adominated since colonial times."
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Topa, Giuseppe",
+        "Megevand, Carole",
+        "Debroux, Laurent",
+        "Karsenty, Alain"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "IsScholarly": [
+        "false"
+      ],
+      "Snippet": [
+        "In 1994, the Government of Cameroon\u000aintroduced an array of <h>forest</h> policy reforms, both\u000aregulatory and market-based, to support a more organized,\u000atransparent, and sustainable system for accessing..."
+      ],
+      "GroupedDBID": [
+        "089",
+        "A4J",
+        "AABBV",
+        "ABARN",
+        "ABIAV",
+        "ABQPQ",
+        "ACLGV",
+        "ADNEN",
+        "ADVEM",
+        "AERYV",
+        "AFOJC",
+        "AJFER",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "AMYDA",
+        "AUKZS",
+        "AZZ",
+        "BBABE",
+        "CZZ",
+        "D7Q",
+        "DUQ",
+        "DUQQQ",
+        "GEOUK",
+        "HF4",
+        "IVN",
+        "MYL",
+        "PLCCB",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "VO9",
+        "WGWTB",
+        "8BJ",
+        "FQK",
+        "JBE"
+      ],
+      "IsDoiOpenAccess": [
+        "true"
+      ],
+      "SubjectTerms": [
+        "ACCESS TO FOREST",
+        "ACTION PLAN",
+        "AGRICULTURE",
+        "AGROFORESTRY",
+        "AMAZON BASIN",
+        "AREAS FOR WILDLIFE",
+        "AREAS OF FOREST",
+        "BIODIVERSITY CONSERVATION",
+        "BOTANICAL GARDENS",
+        "BUFFER ZONES",
+        "BUSH MEAT",
+        "Cameroon",
+        "CARBON",
+        "CLIMATE",
+        "CLIMATE CHANGE",
+        "COMMERCIAL FORESTS",
+        "COMMERCIAL LOGGING",
+        "COMMUNITY FOREST",
+        "COMMUNITY FOREST MANAGEMENT",
+        "COMMUNITY FORESTRY",
+        "COMMUNITY FORESTS",
+        "COMMUNITY HUNTING ZONES",
+        "COMMUNITY PARTICIPATION",
+        "CONCESSION",
+        "CONCESSION HOLDERS",
+        "CONSERVATION AREAS",
+        "CONSERVATION EFFORTS",
+        "CONSERVATION ESTATE",
+        "CONSERVATION INITIATIVES",
+        "CONSERVATION OBJECTIVES",
+        "CONSERVATION OF NATURE",
+        "CONSERVATION STRATEGY",
+        "CONSERVE BIODIVERSITY",
+        "DEBT",
+        "DEFORESTATION",
+        "DEFORESTATION RATES",
+        "DEGRADATION",
+        "DOMESTIC CONSUMPTION",
+        "DRIVERS OF DEFORESTATION",
+        "ECOLOGICAL STABILITY",
+        "ECOLOGICAL ZONES",
+        "ECONOMIC EFFECTS",
+        "ECONOMIC GROWTH",
+        "ECOSYSTEM MANAGEMENT",
+        "EMISSIONS",
+        "EMISSIONS FROM DEFORESTATION",
+        "ENDANGERED SPECIES",
+        "ENVIRONMENTAL",
+        "ENVIRONMENTAL BENEFITS",
+        "ENVIRONMENTAL IMPACT",
+        "ENVIRONMENTAL IMPACT ASSESSMENTS",
+        "ENVIRONMENTAL ISSUES",
+        "ENVIRONMENTAL POLICY",
+        "ENVIRONMENTAL SERVICES",
+        "ENVIRONMENTAL STEWARDSHIP",
+        "ENVIRONMENTAL SUSTAINABILITY",
+        "EQUILIBRIUM",
+        "EXPENDITURES",
+        "EXPORT DUTIES",
+        "EXPORT INDUSTRY",
+        "EXTRACTIVE ACTIVITIES",
+        "FARMS",
+        "FAUNA",
+        "FINANCIAL RESOURCES",
+        "FLORA",
+        "FOREST",
+        "FOREST ACTIVITIES",
+        "FOREST ADMINISTRATION",
+        "FOREST AREA",
+        "FOREST AREAS",
+        "FOREST BIODIVERSITY",
+        "FOREST CODE",
+        "FOREST COMMUNITIES",
+        "FOREST CONCESSION",
+        "FOREST CONCESSIONAIRES",
+        "FOREST CONCESSIONS",
+        "FOREST CONSERVATION",
+        "FOREST CONTROL",
+        "FOREST COVER",
+        "FOREST ECOSYSTEM",
+        "FOREST ECOSYSTEMS",
+        "FOREST ESTATE",
+        "FOREST GOVERNANCE",
+        "FOREST HARVEST",
+        "FOREST HARVESTING",
+        "FOREST INDUSTRY",
+        "FOREST INSTITUTIONS",
+        "FOREST INVENTORY",
+        "FOREST LAND",
+        "FOREST LANDS",
+        "FOREST LANDSCAPE",
+        "FOREST LAW",
+        "FOREST LAW ENFORCEMENT",
+        "FOREST MANAGEMENT",
+        "FOREST MANAGEMENT PLAN",
+        "FOREST MANAGEMENT PLANS",
+        "FOREST MANAGEMENT POLICY",
+        "FOREST MANAGEMENT UNITS",
+        "FOREST MONITORING",
+        "FOREST OPERATIONS",
+        "FOREST PLANTATIONS",
+        "FOREST POLICIES",
+        "FOREST POLICY",
+        "FOREST PRODUCTION",
+        "FOREST PRODUCTS",
+        "FOREST REFORMS",
+        "FOREST REGENERATION",
+        "FOREST REGIME",
+        "FOREST REGULATIONS",
+        "FOREST RESERVES",
+        "FOREST RESOURCE",
+        "FOREST RESOURCE MANAGEMENT",
+        "FOREST RESOURCES",
+        "FOREST REVENUE",
+        "FOREST REVENUES",
+        "FOREST SECTOR",
+        "FOREST SPECIALIST",
+        "FOREST STEWARDSHIP",
+        "FOREST SUSTAINABILITY",
+        "FOREST TAXATION",
+        "FOREST USE",
+        "FOREST USERS",
+        "FOREST WATCH",
+        "FOREST ZONES",
+        "FOREST ZONING",
+        "FOREST ZONING PLAN",
+        "FORESTRY",
+        "FORESTRY DEVELOPMENT",
+        "FORESTRY LAW",
+        "FORESTRY POLICY",
+        "GAME RESERVES",
+        "GEOGRAPHIC INFORMATION",
+        "GEOGRAPHIC INFORMATION SYSTEMS",
+        "GLOBAL FOREST",
+        "GREAT APE",
+        "HUMAN ACTIVITY",
+        "HUMID FORESTS",
+        "HUNTING",
+        "HUNTING AREAS",
+        "HUNTING ZONES",
+        "ILLEGAL EXPLOITATION",
+        "ILLEGAL LOGGING",
+        "INDIGENOUS COMMUNITIES",
+        "INDIGENOUS GROUPS",
+        "ISSUES",
+        "LAND MANAGEMENT",
+        "LAND TENURE",
+        "LOG EXPORTS",
+        "LOGGING",
+        "LOGGING CONCESSIONS",
+        "LOGGING OPERATIONS",
+        "LOGS",
+        "MEDICINAL PLANTS",
+        "NATIONAL FOREST DEVELOPMENT",
+        "NATIONAL FOREST ESTATE",
+        "NATIONAL FORESTRY",
+        "NATIONAL FORESTS",
+        "NATIONAL PARKS",
+        "NATURAL RESOURCE",
+        "NATURAL RESOURCE MANAGEMENT",
+        "NATURAL RESOURCES",
+        "NORTHERN FORESTS",
+        "OIL",
+        "OPPORTUNITY COSTS",
+        "PLANT",
+        "POACHING",
+        "POLITICAL ECONOMY",
+        "POPULATION DENSITY",
+        "POPULATION GROWTH",
+        "POTENTIAL INVESTORS",
+        "PRIMARY FORESTS",
+        "PRIVATE FORESTS",
+        "PUBLIC PARTICIPATION",
+        "QUOTAS",
+        "Rain forest",
+        "RAINFOREST",
+        "RAINFORESTS",
+        "RANCHES",
+        "REFORESTATION",
+        "Reform",
+        "ROADS",
+        "RURAL COMMUNITIES",
+        "SET ASIDE",
+        "SPECIES",
+        "STATE FORESTS",
+        "STRUCTURAL ADJUSTMENT",
+        "SUSTAINABLE DEVELOPMENT",
+        "SUSTAINABLE FOREST",
+        "SUSTAINABLE FOREST MANAGEMENT",
+        "SUSTAINABLE MANAGEMENT",
+        "SUSTAINABLE SYSTEM",
+        "SUSTAINABLE USE",
+        "TAX REVENUE",
+        "TERMS OF TRADE",
+        "TIMBER",
+        "TIMBER COMPANIES",
+        "TIMBER HARVEST",
+        "TIMBER INDUSTRY",
+        "TIMBER MARKET",
+        "TIMBER PRICES",
+        "TIMBER PRODUCTION",
+        "TIMBER PRODUCTS",
+        "TREE",
+        "TREES",
+        "TROPICAL FOREST",
+        "TROPICAL FORESTS",
+        "URBAN AREAS",
+        "VALUE OF BIODIVERSITY",
+        "VEGETATIVE COVER",
+        "VILLAGE FOREST",
+        "VILLAGES",
+        "WILDLIFE",
+        "WILDLIFE CONSERVATION",
+        "WILDLIFE RESERVES",
+        "WILDLIFE SANCTUARIES",
+        "WOOD",
+        "WOOD PRODUCTS",
+        "ZOOLOGICAL GARDENS"
+      ],
+      "Discipline": [
+        "Agriculture",
+        "Forestry"
+      ],
+      "ContentType": [
+        "Book"
+      ],
+      "SourceType": [
+        "Aggregation Database",
+        "Publisher"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Topa, Giuseppe"
+        },
+        {
+          "sequence": "2",
+          "fullname": "Karsenty, Alain"
+        },
+        {
+          "sequence": "3",
+          "fullname": "Megevand, Carole"
+        },
+        {
+          "sequence": "4",
+          "fullname": "Debroux, Laurent"
+        }
+      ],
+      "ISBN": [
+        "9780821378786",
+        "0821378783"
+      ],
+      "Abstract": [
+        "In 1994, the Government of Cameroon\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market-based, to support a more organized,\u000atransparent, and sustainable system for accessing and using\u000aforest resources. This report describes how these reforms\u000aplayed out in the rainforests of Cameroon. The intention is\u000ato provide a brief account of a complex process and identify\u000awhat worked, what did not, and what can be improved. The\u000abarriers to placing Cameroon's forests at the service\u000aof its people, its economy, and the environment originated\u000awith the extractive policies of successive colonial\u000aadministrations. The barriers were further consolidated\u000aafter independence through a system of political patronage\u000aand influence in which forest resources became a coveted\u000acurrency for political support. These deeply entangled\u000acommercial and political interests have only recently, and\u000areluctantly, started to diverge. In 1994, the government\u000aintroduced an array of forest policy reforms, both\u000aregulatory and market based. The reforms changed the rules\u000adetermining who could gain access to forest resources, how\u000aaccess could be obtained, how those resources could be used,\u000aand who will benefit from their use. This report assesses\u000athe outcomes of reforms in forest-rich areas of Cameroon,\u000awhere the influence of industrial and political elites has\u000adominated since colonial times."
+      ],
+      "PublicationYear": [
+        "2009"
+      ],
+      "StartPage": [
+        "xviii"
+      ],
+      "SourceID": [
+        "proquest",
+        "worldbank"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo World Bank"
+        }
+      ],
+      "GeographicLocations_xml": [
+        {
+          "name": "Cameroon"
+        },
+        {
+          "name": "West Africa"
+        },
+        {
+          "name": "Sub-Saharan Africa"
+        },
+        {
+          "name": "Africa"
+        }
+      ],
+      "SSID": [
+        "ssj0000089119"
+      ],
+      "IsOpenAccess": [
+        "true"
+      ],
+      "Title": [
+        "The Rainforests of Cameroon : Experience and Evidence from a Decade of Reform"
+      ],
+      "PublicationDate": [
+        "2009",
+        "20090101"
+      ],
+      "Genre": [
+        "Book"
+      ],
+      "DatabaseTitle": [
+        "International Bibliography of the Social Sciences (IBSS)"
+      ],
+      "EndPage": [
+        "xviii"
+      ],
+      "Notes": [
+        "Cameroon",
+        "West Africa",
+        "Sub-Saharan Africa",
+        "Africa",
+        "Directions in Development ; environment and sustainable development",
+        "SourceType-Books-1",
+        "ObjectType-Book-1"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-a59209-e22c880db9d5cb66a43194ab72fe06e15d79c194a7af4f7b91d6f9efbc5b37f63"
+      ],
+      "PQID": [
+        "37260251"
+      ],
+      "Copyright": [
+        "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo World Bank"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9780821378786/lc.gif&client=summon&freeimage=true"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9780821378786/sc.gif&client=summon&freeimage=true"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9780821378786/mc.gif&client=summon&freeimage=true"
+      ],
+      "OpenAccessLink": [
+        "http://hdl.handle.net/10986/2683"
+      ],
+      "link.rule.ids": [
+        "308,791,795,798,4083,28276"
+      ],
+      "linkProvider": [
+        "World Bank"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNpVjstOwzAQRS0hJFDpB7Dzil3Aj8YPdqgUilSEVCq2kROPS2hiB7ul8PcklAXMZmbO3Hs1CJ1TcklzLa60VBnJFKM8k6qfxREa94wMZADiBI1TeiNDKU2pPkWPq1fAS1N7FyKkbcLB4alpIYbg8TWefXYQa_AVYOMtnn3U9mdxMbTY4FuojIXBs4Q-oD1Dx840Cca_fYRe7mar6TxbPN0_TG8Wmck1IzoDxiqliC21zatSCDPhVE9MKZkDIoDmVupqINK4iZOlplY4Da6s8pJLJ_gIXRyCuxjed_3jRVunCprGeAi7VHDJBGE57YXPB-E-xMaWxm-K0IHf-LBvwK4hQhdSvQ3xqwim_n8r_njiuqBEK1EwoTj_BkN_cKk"
+      ],
+      "DatabaseName": [
+        "Open Knowledge Repository",
+        "International Bibliography of the Social Sciences (IBSS)",
+        "International Bibliography of the Social Sciences",
+        "International Bibliography of the Social Sciences"
+      ],
+      "ParticipantIDs": [
+        "proquest_miscellaneous_37260251",
+        "worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_2683"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=At+loggerheads%3F%3A+agricultural+expansion%2C+poverty+reduction%2C+and+environment+in+the+tropical+forests&rft.au=Chomitz%2C+Kenneth+M&rft.au=Buys%2C+Piet&rft.date=2007-01-01&rft.isbn=9780821367353&rft.spage=xvii&rft.epage=xvii&rft_id=info:doi/10.1596%2F978-0-8213-6735-3&rft.externalDBID=NO_FULL_TEXT",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1Lj9MwEB4hKrH0wPKSKLClQkKIQ6TEThznhGi3pVTZA6jqwslyErtCXbWrpuX3M-Om2bS7e4CjlS_WxIkn8_g8A_DxSB-k3_reRX88TsLpZDRLhYefCYs88hUvkkka_fgZ_RpWB_kprFtH24hNkunlwiX0aYeT3bnr2ZOIqjSsZAEn-nrkcXeCnRGt7zz-XsdZyKYIhXPICEtQWRXe2Y95le28c9Y2tHW5QIWDymhTHtihJ7WEO-6k-yWNTmG5P9jj-Ng1I4UCdblBi67B1W4Uffzv534KLUMHI57BA7N8Do-opyc1insBT75seulqPjdrVOxF-fklzEbD6WDsVX0WPC0YKkNPxzFubRFKpouQ5zmaTEEuWBjJRJu4sNSUGseWMXSOmLa-8OM8E5G1mcwC6_NX0EuSApGBsEUiQ8NMhnNnXBe2sBIHfgfeN9ZR_blyyeBSNV6EQNC7_fIqd71iqKphfxCi6yNZE4EbgbIbemlW21IxaliBk92P4FTsnnN-P0K4zGwQduBT_RbUTk5ylnD5SV7lK5KYKHGRwtk-HGNvYdR1YTuQ3uCoNVodNKXsUPmbOBWKin0fXFONe9Zz4gtIoWK04l7_g4hv4LGLHOEvl_G38HCz3pozOKk_yK7bMl1oXX69nPb_Ap7OGPI",
+      "ExternalDocumentID": [
+        "9780821367360",
+        "oai_openknowledge_worldbank_org_10986_7190",
+        "10_1596_978_0_8213_6735_3",
+        "EBC459782"
+      ],
+      "DBID": [
+        "DUQ",
+        "VO9",
+        "7ST",
+        "7U6",
+        "C1K",
+        "8BJ",
+        "FQK",
+        "JBE",
+        "7TQ",
+        "DHY",
+        "DON"
+      ],
+      "Score": [
+        "10.730908"
+      ],
+      "PublicationPlace": [
+        "Herndon"
+      ],
+      "ID": [
+        "FETCH-LOGICAL-a62762-a773186482ad43cc9291c624589ae7df4082c62f229662af0607cb65ffb8b1f03"
+      ],
+      "Publisher": [
+        "World Bank Publications",
+        "The World Bank",
+        "Washington, DC: World Bank",
+        "World Bank"
+      ],
+      "DOI": [
+        "10.1596/978-0-8213-6735-3"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Editor": [
+        "Wertz-Kanounnikoff, Sheila",
+        "De Luca, Giacomo",
+        "Thomas, Timothy S",
+        "Buys, Piet"
+      ],
+      "IsScholarly": [
+        "false"
+      ],
+      "GroupedDBID": [
+        "089",
+        "20A",
+        "35M",
+        "38.",
+        "A4J",
+        "AABBV",
+        "ABARN",
+        "ABIAV",
+        "ABQPQ",
+        "ACLGV",
+        "ADNEN",
+        "ADVEM",
+        "AERYV",
+        "AFGPE",
+        "AFOJC",
+        "AIJWT",
+        "AJFER",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "AMYDA",
+        "AMYDF",
+        "AUKZS",
+        "AZZ",
+        "BBABE",
+        "CZZ",
+        "D7Q",
+        "DNNHO",
+        "DUQ",
+        "DUQQQ",
+        "FEAQG",
+        "GEOUK",
+        "HF4",
+        "IVN",
+        "MYL",
+        "PQQKQ",
+        "VO9",
+        "WGWTB",
+        "AJQRB",
+        "ANXQM",
+        "BIXZQ",
+        "PLCCB",
+        "PQEST",
+        "PQUKI",
+        "7ST",
+        "7U6",
+        "C1K",
+        "8BJ",
+        "FQK",
+        "JBE",
+        "7TQ",
+        "DHY",
+        "DON"
+      ],
+      "SubjectTerms": [
+        "ABATEMENT",
+        "Afforestation",
+        "AGRICULTURAL EXPANSION",
+        "AGRICULTURAL FRONTIER",
+        "AGRICULTURAL OUTPUT",
+        "AGRICULTURAL PRODUCTS",
+        "AGRICULTURE",
+        "AGROFORESTRY",
+        "AMPHIBIAN",
+        "AMPHIBIAN SPECIES",
+        "ANNUAL DEFORESTATION",
+        "BEAR",
+        "BIODIVERSITY",
+        "BIODIVERSITY CONSERVATION",
+        "BIODIVERSITY LOSS",
+        "BIODIVERSITY LOSSES",
+        "BIODIVERSITY PROTECTION",
+        "BRAZILIAN AMAZON",
+        "CARBON",
+        "CARBON DIOXIDE",
+        "CARBON DIOXIDE EMISSIONS",
+        "CASH CROPS",
+        "CENTER FOR INTERNATIONAL FORESTRY RESEARCH",
+        "CLIMATE",
+        "CLIMATE CHANGE",
+        "COLLECTIVE ACTION",
+        "COMMERCIAL LOGGING",
+        "COMMON PROPERTY",
+        "COMMUNITY",
+        "COMMUNITY FOREST",
+        "COMMUNITY FOREST MANAGEMENT",
+        "COMMUNITY FORESTRY",
+        "COMMUNITY FORESTS",
+        "CONSERVATION ACTIONS",
+        "CONSERVATION PROJECTS",
+        "DEFORESTATION",
+        "DEFORESTATION RATES",
+        "DEGRADATION",
+        "DEGRADED FORESTS",
+        "DRY SEASON",
+        "ECONOMIC DEVELOPMENT",
+        "ECONOMIC VALUE",
+        "ECONOMICS",
+        "ECONOMIES OF SCALE",
+        "ECOSYSTEM",
+        "ECOSYSTEM MANAGEMENT",
+        "ECOSYSTEMS",
+        "EFFICIENT REGULATION",
+        "Environment",
+        "ENVIRONMENTAL",
+        "Environmental aspects",
+        "ENVIRONMENTAL DAMAGE",
+        "ENVIRONMENTAL DAMAGES",
+        "ENVIRONMENTAL ECONOMICS",
+        "ENVIRONMENTAL ISSUES",
+        "ENVIRONMENTAL MANAGEMENT",
+        "ENVIRONMENTAL PROBLEMS",
+        "ENVIRONMENTAL PROTECTION",
+        "ENVIRONMENTAL VALUES",
+        "EXPLOITATION",
+        "EXTERNALITIES",
+        "EXTINCTION",
+        "EXTINCTIONS",
+        "FAUNA",
+        "FOREST",
+        "FOREST AREAS",
+        "FOREST CHANGE",
+        "FOREST CONCESSIONS",
+        "FOREST CONDITIONS",
+        "FOREST CONSERVATION",
+        "FOREST CONVERSION",
+        "FOREST COVER",
+        "FOREST DEGRADATION",
+        "FOREST DESTRUCTION",
+        "FOREST DWELLERS",
+        "FOREST ESTATE",
+        "FOREST EXPLOITATION",
+        "FOREST FIRES",
+        "FOREST FRAGMENTATION",
+        "FOREST GOVERNANCE",
+        "FOREST LAND",
+        "FOREST LOSS",
+        "FOREST MANAGEMENT",
+        "FOREST MANAGERS",
+        "FOREST OWNERS",
+        "FOREST OWNERSHIP",
+        "FOREST POLICY",
+        "FOREST PRODUCTS",
+        "FOREST REGULATIONS",
+        "FOREST RESOURCES",
+        "FOREST SECTOR",
+        "FOREST STEWARDSHIP",
+        "FOREST STRATEGY",
+        "FOREST TYPES",
+        "FOREST USE",
+        "FORESTRY",
+        "Forestry - Economic aspects",
+        "FUEL",
+        "FUELWOOD",
+        "GLOBAL CLIMATE CHANGE",
+        "GREENHOUSE GASES",
+        "ILLEGAL LOGGING",
+        "INCOME",
+        "LAND COVER",
+        "LAND MANAGEMENT",
+        "LAND MANAGERS",
+        "LAND OWNERSHIP",
+        "LAND RIGHTS",
+        "LAND USE",
+        "LEOPARD",
+        "LOGGING",
+        "LOGGING CONCESSIONS",
+        "MAMMAL SPECIES",
+        "MEDIATION",
+        "NATIONAL PARK",
+        "NATURAL FOREST",
+        "NATURAL FOREST MANAGEMENT",
+        "NATURAL FORESTS",
+        "OIL",
+        "OPPORTUNITY COSTS",
+        "PALM",
+        "PASTURE",
+        "PASTURES",
+        "PLANT",
+        "PLANT SPECIES",
+        "PLANTATION FORESTRY",
+        "POLLINATION",
+        "POLLINATORS",
+        "POLLUTION",
+        "POPULATION DENSITIES",
+        "POPULATION DENSITY",
+        "Poverty",
+        "POVERTY ALLEVIATION",
+        "PRESENT VALUE",
+        "PRIVATE FORESTS",
+        "PRIVATE PROPERTY",
+        "PRODUCTIVITY",
+        "PROPERTY RIGHTS",
+        "PUBLIC GOODS",
+        "RAINFALL",
+        "RANCHERS",
+        "REMOTE FORESTS",
+        "RESERVES",
+        "RIVER",
+        "ROAD CONSTRUCTION",
+        "ROAD NETWORK",
+        "ROADS",
+        "ROUTE",
+        "RURAL DEVELOPMENT",
+        "SAVANNA",
+        "SAVANNA WOODLANDS",
+        "SAVANNAS",
+        "SECONDARY FORESTS",
+        "Social aspects",
+        "SOILS",
+        "SPECIES",
+        "STATE FORESTS",
+        "SUBTROPICAL FORESTS",
+        "SUSTAINABLE DEVELOPMENT",
+        "SUSTAINABLE FORESTRY",
+        "SUSTAINABLE MANAGEMENT",
+        "SUSTAINABLE MANAGEMENT OF FORESTS",
+        "TENURE",
+        "TIMBER",
+        "TIMBER EXPLOITATION",
+        "TIMBER PRICES",
+        "TIMBER RESOURCES",
+        "TREE",
+        "TREES",
+        "Tropical crops - Environmental aspects",
+        "TROPICAL DEFORESTATION",
+        "TROPICAL FOREST",
+        "TROPICAL FORESTS",
+        "Tropics",
+        "WAGES",
+        "WATERSHED",
+        "WEATHER PATTERNS",
+        "WILDLIFE",
+        "WILLINGNESS TO PAY",
+        "WOOD",
+        "WOODLANDS"
+      ],
+      "Discipline": [
+        "Agriculture",
+        "Forestry",
+        "Economics"
+      ],
+      "ContentType": [
+        "eBook",
+        "Book"
+      ],
+      "Editor_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Buys, Piet"
+        },
+        {
+          "sequence": "2",
+          "fullname": "De Luca, Giacomo"
+        },
+        {
+          "sequence": "3",
+          "fullname": "Thomas, Timothy S"
+        },
+        {
+          "sequence": "4",
+          "fullname": "Wertz-Kanounnikoff, Sheila"
+        }
+      ],
+      "SourceType": [
+        "Aggregation Database",
+        "Publisher",
+        "Enrichment Source"
+      ],
+      "EISBN": [
+        "0821367366",
+        "9780821367360"
+      ],
+      "PublicationYear": [
+        "2006",
+        "2007"
+      ],
+      "StartPage": [
+        "xvii"
+      ],
+      "SourceID": [
+        "proquest",
+        "askewsholts",
+        "worldbank"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "The International Bank for Reconstruction and Development / The World Bank 2006"
+        },
+        {
+          "notice": "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo World Bank"
+        }
+      ],
+      "SSID": [
+        "ssj0000085462"
+      ],
+      "IsOpenAccess": [
+        "true"
+      ],
+      "TableOfContents": [
+        "A.3 Forest Management and Tenure -- B.1 GLC2000 Land Cover Categories",
+        "Intro -- Contents -- Foreword -- Acknowledgments -- Abbreviations and Acronyms -- Overview -- Why Are Tropical Forests a Concern? -- This Report's Aims, Audience, and Scope -- This Report's Arguments and Structure -- Setting the Stage: Two Contrasting Cases of Poverty, Wealth, Biodiversity, and Deforestation -- Poverty, Biodiversity Loss, and Deforestation in Madagascar -- Wealth, Biodiversity Loss, and Deforestation in Brazil's Cerrado -- Part I: The Where and Why of Deforestation and Forest Poverty -- 1. Forests Differ -- Three Stylized Forest Types -- From Stylized Types to Mapped Domains -- The Uneven Distribution of Forest Populations -- Trends in Forest Change -- Threatened Species-Concentrated in Less-remote Areas and Mosaiclands -- Summary -- 2. Incentives and Constraints Shape Forest Outcomes -- The View from the Forest Plot: Comparing the Returns to Forestry and Agriculture -- How Do Agroclimate, Prices, Technology, Tenure, and Other Factors Affect Deforestation and Income? -- Forest Trajectories: Roads, Markets, and Rights Shape Outcomes for Environment and Income -- Summary -- 3. Poverty in Forests Stems from Remoteness and Lack of Rights -- Poverty Rates and Poverty Density: Two Ways of Viewing Poor Areas -- Remote Forests-High Poverty Rates, Low Poverty Densities -- Incomes of Forest Dwellers Depend on Rights and Access to Forestlands -- Forests, Poverty, and Deforestation: Ambiguous Relationships -- Summary -- 4. Deforestation Imposes Geographically Varied Environmental Damages -- Biodiversity Loss-A Local and Global Concern -- How Does Deforestation Affect Water, Air, and Weather? -- Deforestation Spurs Climate Change -- Forest Loss-Sometimes Irreversible -- Summary -- Part II: Institutional and Policy Responses -- 5. Improving Forest Governance -- Who Should Have Rights over Forests? Which Rights?",
+        "How Should Society Balance Environmental Services against Production of Food, Fiber, and Wood? -- Balancing Interests while Enforcing Commitments -- Catalytic Innovations in Institutions and Technology -- Summary -- 6. Local and National Policies: Framing Rights and Incentives for Forest Management -- The Challenge of Forest Confl ict -- Forest Rights and Restrictions-A Range of Possibilities -- Public Management of Forests: Protected Areas and Concessions -- Community Control of Forests-Balancing Rights and Responsibilities -- Private Property-Especially in Mosaiclands -- Other Development Policies with Forest Spillovers -- Summary -- 7. Mobilizing Global Interests for Forest Conservation -- Forest Carbon Finance: An Ungrasped Opportunity -- Why Carbon Finance Makes Sense for Climate -- Why Carbon Finance Makes Sense for Forests and Rural Development -- Financing Avoided Deforestation: Problems and Solutions -- Implementing Incentives for Avoided Deforestation -- Related Opportunities for Biodiversity Conservation -- Summary -- 8. Conclusions and Recommendations -- International Level -- National Level -- Accelerating the Forest Transition -- Appendix A: Tables -- A.1 Findings of Studies Assessing How Road Proximity Affects Deforestation -- A.2 Findings of Studies on How Roads Affect Development -- A.3 Forest Management and Tenure -- Appendix B: Data and Methods -- References -- Index -- Boxes -- 1 Unreliable Generalizations about Deforestation and Poverty -- 2 The World Bank's Forest Strategy -- 3 This Report's Recommendations -- 1.1 This Report's Geographic Scope -- 1.2 Mapping the Domains and Tallying Their Populations -- 2.1 The Forest Transition -- 4.1 Forest Fragmentation Can Trigger Local Ecological Collapse -- 4.2 Trees and Carbon: Lessons from Biology for Forest Policy -- 6.1 Cameroon: A Nexus of Institutional Reform",
+        "1.5 Domains in Latin American and Caribbean Tropical Forest Biomes -- 1.6 Domains in Latin American and Caribbean Tropical Savanna Biomes -- 1.7 Hotspots of Tropical Deforestation -- 1.8 Imminent Extinction Hotspots -- 3.1a Poverty Rates for Brazil -- 3.1b Poverty Densities for Brazil -- 3.2 Amazônian Deforestation 2000-03 Showing Rates and Predominant Clearing Size -- 3.3 Amazônian Deforestation Rates and Rural Illiteracy Densities -- 3.4 Poverty, Forests, and Deforestation in Kalimantan -- 3.5 Poverty, Forests, and Deforestation in Sulawesi -- 3.6 Forest Cover, Deforestation, and Poverty in Madagascar -- 4.1 Mortality Risks from Landslides -- Tables -- 1 Alternative Bundles of Forest Rights -- 1.2 Stylized Forest Types Have Equivalents in Mapped Domains -- 1.3 Forest Populations and Areas Vary by Continent, Biome, Domain, and Remoteness, 2000 -- 1.4 Estimated Annual Deforestation Is Highest in Latin America and Asia, 1990-97 -- 1.5 During the 1990s Savannas and Asian Forests Experienced Considerable Degradation -- 2.1 Land Values in Forested Areas Vary Enormously -- 2.2 Predictions of How Changes in Local Variables Will Affect the Environment and Welfare -- 2.3 Five Trajectories of Forest Cover, Income, and Population -- 3.1 How Does Increasing Remoteness from Markets Affect Poverty and the Environment? -- 4.1 Externalities of Deforestation Vary by Location of Source and Impact -- 6.1 Examples of Forest Ownership and Use Restrictions -- 6.2 Integrated Conservation-Development Project Interventions Have a Mixed Record -- 6.3 Latin American Countries Impose Varying Restrictions on Deforestation of Private Property -- 7.1 Policies to Reward Avoided Deforestation Can Have Synergistic Effects -- A.1 Findings of Studies Assessing How Road Proximity Affects Deforestation -- A.2 Findings of Studies on How Roads Affect Development",
+        "6.2 Self-assembling Biodiversity Corridors: Reconciling Voluntary Participation Decisions with Landscape-level Goals -- 8.1 This Report's Recommendations -- Figures -- 1 Structure of This Report's Arguments -- 1.1 Forests Vary Greatly in Population Density, 2000 -- 1.2 Africa and Latin America Have Higher Degradation on Better Soils, 1990-2000 -- 1.3 The Incidence of Threatened Amphibian Species Is Much Higher in Nonremote Areas -- 1.4 Imminent Extinction Sites Are Concentrated Near Cities -- 2.1 Deforestation in Brazilian Amazônia Is Shaped by Rainfall and Farmgate Prices of Beef, 2001-03 -- 2.2 A Stylized Model of How Land Use Changes with Remoteness -- 2.3 As Remoteness Increases, Mosaiclands Are Displaced by Forests, 2000 -- 3.1 Extreme Rural Poverty Increases with Travel Time to Managua -- 3.2 Rural Population Density Decreases with Travel Time to Managua -- 3.3 Forest Cover Increases with Travel Time to Managua -- 3.4 Most Deforestation in Brazilian Amazônia Reflects Large- and Medium-scale Clearing, August 2000 to July 2003 -- 3.5 Illiteracy and Forest Cover Have No Clear Link in India -- 4.1 Guatemala Critical Watersheds Have High Poverty Rates -- 4.2 Deforestation Would Be Unprofi table in Many Land Systems at Modest Carbon Prices -- 5.1 Optimizing the Mix of Agricultural Output and Biodiversity -- 5.2 Indonesians Favor Some Restrictions on Forest Exploitation -- 6.1 Protected Areas Have Grown Rapidly in Tropical and Subtropical Forests -- 6.2 Recent Decades Have Seen Little Change in the Remoteness of New Protected Areas -- 8.1 Some Forested Countries Will See Shrinking Rural Populations -- Maps -- 1.1 This Report's Focus: Tropical Forests and Savanna Woodlands -- 1.2 Domains in Africa's Tropical Forest Biomes -- 1.3 Domains in Africa's Tropical Savanna Biomes -- 1.4 Domains in Asia's Tropical Forest Biomes"
+      ],
+      "Title": [
+        "At Loggerheads?"
+      ],
+      "PageCount": [
+        "308"
+      ],
+      "OCLC": [
+        "609845463"
+      ],
+      "DatabaseTitle": [
+        "Environment Abstracts",
+        "Sustainability Science Abstracts",
+        "Environmental Sciences and Pollution Management",
+        "International Bibliography of the Social Sciences (IBSS)",
+        "PAIS International"
+      ],
+      "EndPage": [
+        "xvii"
+      ],
+      "Subtitle": [
+        "Agricultural Expansion, Poverty Reduction, and Environment in the Tropical <h>Forests</h>"
+      ],
+      "Notes": [
+        "World Bank Policy Research Report",
+        "SourceType-Books-1",
+        "ObjectType-Book-1",
+        "ObjectType-Government & Official Document-3",
+        "ObjectType-News-1",
+        "ObjectType-Book-2"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-a62762-a773186482ad43cc9291c624589ae7df4082c62f229662af0607cb65ffb8b1f03"
+      ],
+      "Copyright": [
+        "The International Bank for Reconstruction and Development / The World Bank 2006",
+        "CC BY 3.0 IGO http://creativecommons.org/licenses/by/3.0/igo World Bank"
+      ],
+      "IngestDate": [
+        "Tue Sep 26 22:40:36 EDT 2023",
+        "Tue Sep 26 23:10:27 EDT 2023",
+        "Tue Sep 26 22:09:36 EDT 2023",
+        "Wed Oct 04 09:55:09 EDT 2023",
+        "Fri Jul 28 07:13:40 EDT 2023",
+        "Mon Jun 03 07:45:48 EDT 2019",
+        "Thu Apr 07 19:59:12 EDT 2022",
+        "Thu Sep 21 22:56:21 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "year": "2006",
+          "text": "2006"
+        }
+      ],
+      "PublicationSeriesTitle": [
+        "Policy Research Reports"
+      ],
+      "DatabaseTitleList": [
+        "",
+        "",
+        "Environment Abstracts",
+        "",
+        "PAIS International",
+        ""
+      ],
+      "URI": [
+        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=459782",
+        "http://elibrary.worldbank.org/doi/book/10.1596/978-0-8213-6735-3",
+        "http://hdl.handle.net/10986/7190",
+        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780821367360",
+        "https://search.proquest.com/docview/21031780",
+        "https://search.proquest.com/docview/36627333",
+        "https://search.proquest.com/docview/60002014"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Herndon"
+        }
+      ],
+      "Publisher_xml": [
+        {
+          "name": "World Bank Publications"
+        },
+        {
+          "name": "The World Bank"
+        },
+        {
+          "name": "Washington, DC: World Bank"
+        },
+        {
+          "name": "World Bank"
+        }
+      ],
+      "PQPubID": [
+        "23462"
+      ],
+      "AbstractList": [
+        "Despite the vast number of books and reports on tropical deforestation, there's confusion about the causes of forest loss and forest poverty, and the effectiveness of policy responses. At Loggerheads seeks to describe ways to reconciles pressures for agricultural expansion in the tropics with the urgent needs for both forest conservation and poverty alleviation. It diagnoses the causes and impacts of forest loss and the reasons for the association of forests and poverty. It looks at how policies - modulated by local conditions - act simultaneously on deforestation and poverty, creating tradeoffs or complementarities, depending on the situation. The report brings to the surface problems that impede adoption of favourable policies, describing institutional and technological innovations that might help overcome these impediments.",
+        "Despite the vast number of books and reports on tropical deforestation, there's confusion about the causes of forest loss and forest poverty, and the effectiveness of policy responses. At Loggerheads seeks to describe ways to reconcile pressures for agricultural expansion in the tropics with the urgent needs for both forest conservation and poverty alleviation. It diagnoses the causes and impacts of forest loss and the reasons for the association of forests and poverty. It looks at how policies - modulated by local conditions - act simultaneously on deforestation and poverty, creating tradeoffs or complementarities, depending on the situation. The report brings to the surface problems that impede adoption of favourable policies, describing institutional and technological innovations that might help overcome these impediments.",
+        "Seeks to describe ways to reconcile pressures for agricultural expansion in the tropics with the urgent needs for both forest conservation and poverty alleviation. This book looks at how policies - modulated by local conditions - act simultaneously on deforestation and poverty, creating tradeoffs or complementarities, depending on the situation.",
+        "A report on agricultural expansion, environmental concerns in tropical forests, and poverty reduction, and how ecological, economic, and political aspects of tropical forests vary widely at both large and small scales. The spatial variation in deforestation and forest poverty is confronted by the author and the integration of results from recent econometric studies along with institutional studies finds that there is weak evidence of a causal link between deforestation and poverty, challenging conventional wisdom. Tables, Figures, Appendixes, References.",
+        "There are many causes, consequences, and\u000aconnections of deforestation and forest poverty in the\u000atropical world. This report specifically addresses the\u000apotential dilemma of trade-offs between poverty reduction\u000aand environmental protection. It seeks to improve the\u000adiagnosis of forest problems and facilitate the prescription\u000aand application of solutions by focusing on both the causes\u000aand consequences of forest conversion to agriculture and on\u000athe nature and location of forest poverty. The first section\u000ais diagnostic, examining the drivers and consequences of\u000adeforestation and forest poverty. The second part looks at\u000ahow governance, institutions, and policies shape those\u000adrivers. It identifies opportunities for win-win policies.\u000aIn particular, anything that boosts labor demand outside\u000aagriculture will tend to reduce both poverty and\u000adeforestation. Additionally, promotion of some kinds of\u000aagroforestry can help to improve the ecological functions of\u000adegraded forests while boosting farm output and employment.\u000aThe report offers a systematic framework for thinking about\u000ahow to integrate forest management with rural development in\u000aa sustainable way."
+      ],
+      "Author": [
+        "Bank, World",
+        "Buys, Piet"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "Snippet": [
+        "Despite the vast number of books and reports on tropical deforestation, there's confusion about the causes of <h>forest</h> loss and <h>forest</h> poverty, and the effectiveness of policy responses...",
+        "There are many causes, consequences, and\u000aconnections of deforestation and <h>forest</h> poverty in the\u000atropical world...",
+        "Seeks to describe ways to reconcile pressures for agricultural expansion in the tropics with the urgent needs for both <h>forest</h> conservation and poverty alleviation...",
+        "A report on agricultural expansion, environmental concerns in tropical <h>forests</h>, and poverty reduction, and how ecological, economic, and political aspects of tropical <h>forests</h> vary widely at both large and small scales..."
+      ],
+      "LCCallNum_Ident": [
+        "SD418.3.T76 -- C46 2007eb"
+      ],
+      "IsDoiOpenAccess": [
+        "true"
+      ],
+      "Edition": [
+        "1"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Bank, World"
+        },
+        {
+          "sequence": "2",
+          "fullname": "Buys, Piet"
+        }
+      ],
+      "ISBN": [
+        "0821367358",
+        "9780821367353"
+      ],
+      "Abstract": [
+        "Despite the vast number of books and reports on tropical deforestation, there's confusion about the causes of forest loss and forest poverty, and the effectiveness of policy responses. At Loggerheads seeks to describe ways to reconciles pressures for agricultural expansion in the tropics with the urgent needs for both forest conservation and poverty alleviation. It diagnoses the causes and impacts of forest loss and the reasons for the association of forests and poverty. It looks at how policies - modulated by local conditions - act simultaneously on deforestation and poverty, creating tradeoffs or complementarities, depending on the situation. The report brings to the surface problems that impede adoption of favourable policies, describing institutional and technological innovations that might help overcome these impediments."
+      ],
+      "Keywords": [
+        "FOREST POVERTY",
+        "ENVIRONMENTAL DAMAGES",
+        "PRIVATE PROPERTY",
+        "DEFORESTATION",
+        "CARBON",
+        "LAND USE",
+        "ENVIRONMENTAL",
+        "FOREST MANAGEMENT",
+        "CLIMATE CHANGE",
+        "FOREST LOSS",
+        "INCOME",
+        "FORESTRY",
+        "AGRICULTURAL EXPANSION"
+      ],
+      "PublicationDate": [
+        "2006",
+        "10-23-2006",
+        "2007",
+        "2006-11-28",
+        "20061101",
+        "20070101"
+      ],
+      "Genre": [
+        "Book",
+        "Government & Official Document",
+        "News"
+      ],
+      "DEWEY": [
+        "333.75"
+      ],
+      "PQID": [
+        "EBC459782"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "thumbnail_m": [
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F7360%2F9780821367360.jpg"
+      ],
+      "OpenAccessLink": [
+        "http://hdl.handle.net/10986/7190"
+      ],
+      "link.rule.ids": [
+        "307,308,791,795,797,798,4083,4124,4125,19290,19291,19300,28276"
+      ],
+      "linkProvider": [
+        "World Bank"
+      ],
+      "LinkModel": [
+        "DirectLink"
+      ],
+      "IEDL.DBID": [
+        "D7Q"
+      ],
+      "BookMark": [
+        "eNqFUctKAzEUjYhircW1O1eC4GgeM3mspJb6gIILxW3IzCRtnTipk6nFvzdxxGfBuwmHnHvvuecAcIDgKcoEPROMJzDhGJGEMpIlZAPswggDonTzC2R8G_QoFDzNUkp2wMD7RxiLB4x7YH_YHk7cdKqbmValP98DW0ZZrwcfbx88XI7vR9fJ5PbqZjScJIpiRnGiGCOI05RjVaakKAQWqKA4zbhQmpUmDQICNhgLSrEykEJW5DQzJuc5MpD0wVE3eNG456X2rXya-0Jbq2rtll7SoBFDlP5LDPdiRkL9R8QIEsR4XH3cEZWv9MrPnG29fLE6d67yMlj76WTk3nXclWtsmau6km6h66p2K6vLYJteOD9vXfMqnZr__JPfepqpRCEFKhkScSr8PbVbjqCM-UYREsooQ8YQZbzuZH3LH6pclGaNGe_nFbpuG2Xl-GKUZqETkzc_Jq7g"
+      ],
+      "DatabaseName": [
+        "World Bank E-Library Journals",
+        "Open Knowledge Repository",
+        "Environment Abstracts",
+        "Sustainability Science Abstracts",
+        "Environmental Sciences and Pollution Management",
+        "International Bibliography of the Social Sciences (IBSS)",
+        "International Bibliography of the Social Sciences",
+        "International Bibliography of the Social Sciences",
+        "PAIS Index",
+        "PAIS International",
+        "PAIS International (Ovid)"
+      ],
+      "ParticipantIDs": [
+        "askewsholts_vlebooks_9780821367360",
+        "proquest_ebookcentral_EBC459782",
+        "proquest_miscellaneous_21031780",
+        "proquest_miscellaneous_60002014",
+        "proquest_miscellaneous_36627333",
+        "worldbank_openknowledgerepository_oai_openknowledge_worldbank_org_10986_7190",
+        "worldbank_books_10_1596_978_0_8213_6735_3"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.title=The+World+Atlas+of+Trees+and+Forests&rft.au=Shugart%2C+Herman&rft.au=White%2C+Peter&rft.au=Saatchi%2C+Sassan&rft.au=Chave%2C+J%C3%A9r%C3%B4me&rft.date=2022-01-01&rft.pub=Princeton+University+Press&rft.isbn=9780691235936&rft_id=info:doi/10.1515%2F9780691235936&rft.externalDocID=EBC6976311",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3fa9swEBajYWvztLWF_tiGGbR7GKaObMsWhI46JKQhpaUxZX0ysi03paWFOA3kv9-dLNt1UihjL8aShY39nU930n13hPxc0Qfj88C8CIZD7oSjwc2YmSAm1DXRV7zgo7F7_ce97esym3mR_w_ZvwAC-um5_mXeYDsgbxXjHJdlpanf93qDHdeZrM7V9XkELnB4vACA6yZAX_6Hx0f24H-lBvpAbpCF-w-SU90UOuAc5AeOIEFwXDGuq2YtPEWYzdn8Uahoj3AmZZHPGat55vPKFp9MX-5EQfwZopp_qvW8rr3XiAGeCFD-qpLwrwkY7vXw3lQsigX9YvNe7eEHjk6moBcmKF1ZmLgqYVzjPDZcWItxpOvyIg3KmkJ3Ve6LtXErObL7QY-BXWUjybsFRh33N0jrbBRc9qr1Nuoxj3V8dMzxTpSBKaUTMJVtW-dghWeeNJ7YJm2RP8CkAxPSPG_O2rY2RcLPpCWRn_KFfJBP2-RjX2UdX26TTwUss-UOwTAaQ8FnKPiM58xQ8BkAn9GdnmoEuyfT011yM-iHvaGpi2KYAnPtUxO5cqmMqW_Fse12EhUgTDn0JpaDxQ8Yd7xE2DGj0mNcZn7i-rFwnESAi0KFvUcMzlMvzTosS7nvSCpjwWhsizRLMx8a1j758eqFo8Wj2rnPo8ZX2SdG-R0idV2HE0c1GgfvDzkkW7XwfCUb89mL_EY2KyXwXQP5F8-vT9Q",
+      "ExternalDocumentID": [
+        "9780691235936",
+        "EBC6976311"
+      ],
+      "IngestDate": [
+        "Wed Oct 04 09:23:09 EDT 2023",
+        "Thu Sep 21 21:48:49 EDT 2023"
+      ],
+      "PublicationDate_xml": [
+        {
+          "year": "2022",
+          "text": "2022"
+        }
+      ],
+      "Score": [
+        "10.5537"
+      ],
+      "DatabaseTitleList": [
+        ""
+      ],
+      "URI": [
+        "https://ebookcentral.proquest.com/lib/[SITE_ID]/detail.action?docID=6976311",
+        "https://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9780691235936"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Princeton"
+        }
+      ],
+      "PublicationPlace": [
+        "Princeton"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Princeton University Press"
+        }
+      ],
+      "ID": [
+        "FETCH-LOGICAL-a18202-1468deb280bb351c4953329468c0418686947ca3b62e769ef8c58ba44ca81b2a3"
+      ],
+      "Publisher": [
+        "Princeton University Press"
+      ],
+      "DOI": [
+        "10.1515/9780691235936"
+      ],
+      "AbstractList": [
+        "A marvelously illustrated look at the world's diverse forests and their ecosystemsThe earth's forests are havens of nature supporting a diversity of life. Shaped by climate and geography, these vast and dynamic wooded spaces offer unique ecosystems that shelter complex and interdependent webs of flora, fungi, and animals. The World Atlas of Trees and Forests offers a beautiful introduction to what forests are, how they work, how they grow, and how we map, assess, and conserve them.Provides the most wide-ranging coverage of the world's forests availableTakes readers beneath the breathtaking variety of wooded canopies that span the globeProfiles a wealth of tree species, with enlightening and entertaining natural-history highlights along the wayFeatures stunning color photos, maps, and graphicsDraws on the latest cutting-edge research and technology, including satellite imagery"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Shugart, Herman",
+        "White, Peter",
+        "Chave, Jérôme",
+        "Saatchi, Sassan"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2020"
+      ],
+      "IsScholarly": [
+        "false"
+      ],
+      "Snippet": [
+        "A marvelously illustrated look at the world's diverse <h>forests</h> and their ecosystemsThe earth's <h>forests</h> are havens of nature supporting a diversity of life..."
+      ],
+      "GroupedDBID": [
+        "38.",
+        "AABBV",
+        "AAGED",
+        "AAUSU",
+        "AAZEP",
+        "ABONK",
+        "ACKJY",
+        "ADDXO",
+        "AEDVL",
+        "AEIAB",
+        "AFRFP",
+        "AHBYR",
+        "AJBOC",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "BBABE",
+        "BFRBX",
+        "CZZ",
+        "DGVNY",
+        "E06",
+        "ECYUO",
+        "FILVX",
+        "HELXT",
+        "MUSTB",
+        "~I6"
+      ],
+      "SubjectTerms": [
+        "Forest ecology",
+        "Forests and forestry"
+      ],
+      "Discipline": [
+        "Ecology",
+        "Forestry"
+      ],
+      "ContentType": [
+        "eBook"
+      ],
+      "SourceType": [
+        "Aggregation Database",
+        "Publisher"
+      ],
+      "Edition": [
+        "1"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Shugart, Herman"
+        },
+        {
+          "sequence": "2",
+          "fullname": "White, Peter"
+        },
+        {
+          "sequence": "3",
+          "fullname": "Saatchi, Sassan"
+        },
+        {
+          "sequence": "4",
+          "fullname": "Chave, Jérôme"
+        }
+      ],
+      "ISBN": [
+        "0691226741",
+        "9780691226743"
+      ],
+      "EISBN": [
+        "9780691235936",
+        "0691235937"
+      ],
+      "Abstract": [
+        "A marvelously illustrated look at the world's diverse forests and their ecosystemsThe earth's forests are havens of nature supporting a diversity of life. Shaped by climate and geography, these vast and dynamic wooded spaces offer unique ecosystems that shelter complex and interdependent webs of flora, fungi, and animals. The World Atlas of Trees and Forests offers a beautiful introduction to what forests are, how they work, how they grow, and how we map, assess, and conserve them.Provides the most wide-ranging coverage of the world's forests availableTakes readers beneath the breathtaking variety of wooded canopies that span the globeProfiles a wealth of tree species, with enlightening and entertaining natural-history highlights along the wayFeatures stunning color photos, maps, and graphicsDraws on the latest cutting-edge research and technology, including satellite imagery"
+      ],
+      "PublicationYear": [
+        "2022"
+      ],
+      "SourceID": [
+        "askewsholts",
+        "proquest"
+      ],
+      "SSID": [
+        "ssj0002767618"
+      ],
+      "Title": [
+        "The World Atlas of Trees and <h>Forests</h>"
+      ],
+      "PublicationDate": [
+        "2022",
+        "2022-05-17"
+      ],
+      "PageCount": [
+        "401"
+      ],
+      "OCLC": [
+        "1317329981"
+      ],
+      "Subtitle": [
+        "Exploring Earth's <h>Forest</h> Ecosystems"
+      ],
+      "DEWEY": [
+        "634.90223"
+      ],
+      "MergedId": [
+        "FETCHMERGED-LOGICAL-a18202-1468deb280bb351c4953329468c0418686947ca3b62e769ef8c58ba44ca81b2a3"
+      ],
+      "PQID": [
+        "EBC6976311"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "thumbnail_m": [
+        "http://princeton.summon.serialssolutions.com/2.0.0/image/custom?url=https%3A%2F%2Fwww.askewsandholts.com%2Fuploads%2Fproduct%2Fimages%2Ffull%2F5936%2F9780691235936.jpg"
+      ],
+      "link.rule.ids": [
+        "307,791,795,797,25098,28276"
+      ],
+      "linkProvider": [
+        "Walter de Gruyter"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNpVj81LwzAYhyOi6GaP3nsQxEM1bz7eJMdZNhUGXooeS5KmDBcWbar--5bNy04_nh8P7wch10DvQYJ8MEpTNMC4NBxPSHHEp2S2B4ZKwDmZAQfFmTEaLkiR8wellClUCPqS3DSbUL6nIXblYow2l6kvmyGEXNpdV67SEPKYr8hZb2MOxX_Oydtq2dTP1fr16aVerCsLmlFWgUDdBcc0dY5L8MJIPi2eWk8FaNRohPKWO2RBoQm99lI7K4S3GhyzfE7uDoNt3obfvElxzO1PDC6lbW6Pnpzc24P7OaSv7-nMdq_5sBsHG9vlY41GIQfgfyMRUZE"
+      ],
+      "ParticipantIDs": [
+        "askewsholts_vlebooks_9780691235936",
+        "proquest_ebookcentral_EBC6976311"
+      ]
+    }
+  ],
+  "rollups": {
+    "image": {},
+    "reference": {},
+    "newspaper": {}
+  }
+}

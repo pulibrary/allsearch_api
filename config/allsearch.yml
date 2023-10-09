@@ -25,7 +25,9 @@ default: &default
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
       collection: "pulmap"
-
+  summon:
+    access_id: 'princeton'
+    secret_key: <%= ENV['SUMMON_SECRET_KEY'] || 'summon-secret-key' %>
 development:
   <<: *default
   catalog:

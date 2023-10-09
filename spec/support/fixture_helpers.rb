@@ -36,4 +36,12 @@ module FixtureHelpers
       )
       .to_return(status: 200, body: file_fixture(fixture))
   end
+
+  def stub_summon(query:, fixture:)
+    q_string = "http://api.summon.serialssolutions.com/2.0.0/search?s.dym=t&s.fvf=ContentType,Newspaper%20Article,true&s.ho=t&s.ps=3&s.q=#{query}"
+    stub_request(:get, q_string)
+      .to_return(status: 200,
+                 body: file_fixture(fixture),
+                 headers: { 'Content-Type': 'application/json' })
+  end
 end

@@ -1,0 +1,821 @@
+{
+  "version": "2.0.0",
+  "sessionId": "SUMMON-SESSION-LIB-MBHH94TJFVL6-45121-1",
+  "elapsedQueryTime": 4,
+  "queryTime": 152,
+  "internalSolrQueryTime": 155,
+  "totalRequestTime": 24,
+  "pageCount": 93,
+  "recordCount": 278,
+  "query": {
+    "queryString": "s.fvf=ContentType%2CNewspaper+Article%2Ct&s.normalized.subjects=f&s.secure=f&s.dailyCatalog=t&s.q=bad+bin+bash+script&s.dym=t&s.ho=t&s.rapido=f&s.ps=3&s.shortenurl=f",
+    "pageNumber": 1,
+    "pageSize": 3,
+    "isDidYouMeanEnabled": true,
+    "isHoldingsOnlyEnabled": true,
+    "textQueries": [
+      {
+        "textQuery": "bad bin bash script",
+        "removeCommand": "removeTextQuery(bad bin bash script)"
+      }
+    ],
+    "searchTerms": [],
+    "textFilters": [],
+    "rangeFilters": [],
+    "facetValueFilters": [
+      {
+        "fieldName": "ContentType",
+        "value": "Newspaper Article",
+        "isNegated": true,
+        "removeCommand": "removeFacetValueFilter(ContentType,Newspaper Article)",
+        "negateCommand": "negateFacetValueFilter(ContentType,Newspaper Article)"
+      }
+    ],
+    "inclusiveFacetValueFilters": [],
+    "facetValueGroupFilters": [],
+    "facetFields": [],
+    "rangeFacetFields": [],
+    "sort": []
+  },
+  "facetFields": [],
+  "rangeFacetFields": [],
+  "didYouMeanSuggestions": [],
+  "recommendationLists": {},
+  "documents": [
+    {
+      "hasFullText": true,
+      "isFullTextHit": true,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Bash+scripting+tips+that+can+save+time+on+Linux&rft.jtitle=Network+World+%28Online%29&rft.au=Henry-Stocker%2C+Sandra&rft.date=2023-02-20&rft.pub=Foundry&rft.eissn=1944-7655",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHRNgJWMoS6or-hr6eVjGhRhGukKXVAI2g4DjWJYyQgurlPyk0Ej5fpG5ubAJAjMFJb2BYW6oLujQHOs0Is0mBlYQeeRA9M2q5OrX0AQfKzFyMzcyNjYAKO4BdchbgIM-TCrwQuo4UtIQCNryanAJhjS4mrYKY0UOVSQQRJYE6WkKiANzSk4QlKKEANTap4wA7cv_NTWYhEGM5sMO6fE4gwb_Qw7BWhxkpeuUJJZUKxQkpFYogCMBoXixLJUBdCN9ApA04A92dIKUQYlN9cQZw9dmBPjoRMR8QjnGUswKBhamBkbmKSlGhimpZokWaQlJqcapVkapSWbpaRYmloYSjJI4zFBCq-sNAMX6IZ28C5wAxkGlpKi0lRZBk542MpBIwtIezh7ukUBAI_8rjs",
+      "linkToHtml": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwY2BQRysPfDyddH2dPDwsTUK83MJ8zHRNgJWMoS6or-hr6eVjGhRhGukKHXMrhq6shBWL4LI6JT8ZNEyub2RuDkx_wBxhaV9QqAu6OAo0wQq9RYOZgdUEWBmasDCwOrn6BQTBB1qMzMyNjI0NMMpacAXiJsCQA7MXvHoavn4ENKyWnApsfyGtrIYd0Ui-KwUZJIF1UEqqAtKgnIIjJI0IMTCl5gkzcPvCz2stFmEws8mwc0oszrDRz7BTgBYkeekKJZkFxQolGYklCsAIUChOLEtVAN1FrwA0DdiHLa0QZVBycw1x9tCFOTEeOgURj3CesQSDgqGFmbGBSVqqgWFaqkmSRVpicqpRmqVRWrJZSoqlqYWhJIM0HhOk8MrKM3B6hPj6xPt4-nlLM3CB7mkH7wU3kGFgKSkqTZVl4IQHshw01gCtga1g",
+      "IngestDate": [
+        "Sat May 06 21:39:39 EDT 2023"
+      ],
+      "DBID": [
+        "3V.",
+        "7RQ",
+        "7XB",
+        "8AL",
+        "8FE",
+        "8FG",
+        "8FK",
+        "ABUWG",
+        "AFKRA",
+        "ARAPS",
+        "AZQEC",
+        "BENPR",
+        "BGLVJ",
+        "DWQXO",
+        "GNUQQ",
+        "HCIFZ",
+        "JQ2",
+        "K7-",
+        "M0N",
+        "P5Z",
+        "P62",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "PRINS",
+        "Q9U",
+        "U9A"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "02",
+          "year": "2023",
+          "text": "20230220",
+          "day": "20"
+        }
+      ],
+      "Score": [
+        "18.5608"
+      ],
+      "DatabaseTitleList": [
+        "Advanced Technologies & Aerospace Collection"
+      ],
+      "URI": [
+        "https://search.proquest.com/docview/2778323769"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Southborough"
+        }
+      ],
+      "PublicationPlace": [
+        "Southborough"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Foundry"
+        }
+      ],
+      "ID": [
+        "FETCH-proquest_reports_27783237693"
+      ],
+      "PQPubID": [
+        "38280"
+      ],
+      "Publisher": [
+        "Foundry"
+      ],
+      "AbstractList": [
+        "A set -u command works the same. #!/bin/bash # exit script if an unset variable is used set -o nounset # welcome user with a greeting echo $greeting echo -n \"Enter name of file to be evaluated: \" read filename If you run the script as is, you’ll run into the issue shown below and never be prompted for the file to be processed: $ ck_nounset ./ck_nounset: line 7: greeting: unbound variable Working with quotes In a lot of cases, it doesn’t matter if you use single quotes, double quotes, or no quotes at all. Wrap-Up Theres more advice about building reliable and easily maintainable scripts including learning to script on Linux using bash, many ways to loop using bash, and how to loop forever in bash. Next read this: * 9 career-boosting Wi-Fi certifications * What is MPLS, and why isn't it dead yet? * 11 ways to list and sort files on Linux * 5 free network-vulnerability scanners * How-to measure enterprise Wi-Fi speeds"
+      ],
+      "Language": [
+        "English"
+      ],
+      "EISSN": [
+        "1944-7655"
+      ],
+      "Author": [
+        "Henry-Stocker, Sandra"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2020"
+      ],
+      "IsScholarly": [
+        "false"
+      ],
+      "Snippet": [
+        "A set -u command works the same. #!/<h>bin</h>/<h>bash</h> # exit <h>script</h> if an unset variable is used set -o nounset..."
+      ],
+      "PublicationTitle": [
+        "Network World (Online)"
+      ],
+      "GroupedDBID": [
+        "3V.",
+        "7RQ",
+        "7XB",
+        "8AL",
+        "8FE",
+        "8FG",
+        "8FK",
+        "ABUWG",
+        "AFKRA",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ARAPS",
+        "AZQEC",
+        "BENPR",
+        "BGLVJ",
+        "BPHCQ",
+        "DWQXO",
+        "HCIFZ",
+        "JQ2",
+        "K6V",
+        "K7-",
+        "M0N",
+        "P62",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "PRINS",
+        "PROAC",
+        "Q9U",
+        "U9A"
+      ],
+      "SubjectTerms": [
+        "Linux"
+      ],
+      "Discipline": [
+        "Mathematics"
+      ],
+      "ContentType": [
+        "Trade Publication Article"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Sandra",
+          "surname": "Henry-Stocker",
+          "fullname": "Henry-Stocker, Sandra"
+        }
+      ],
+      "Abstract": [
+        "A set -u command works the same. #!/bin/bash # exit script if an unset variable is used set -o nounset # welcome user with a greeting echo $greeting echo -n \"Enter name of file to be evaluated: \" read filename If you run the script as is, you’ll run into the issue shown below and never be prompted for the file to be processed: $ ck_nounset ./ck_nounset: line 7: greeting: unbound variable Working with quotes In a lot of cases, it doesn’t matter if you use single quotes, double quotes, or no quotes at all. Wrap-Up Theres more advice about building reliable and easily maintainable scripts including learning to script on Linux using bash, many ways to loop using bash, and how to loop forever in bash. Next read this: * 9 career-boosting Wi-Fi certifications * What is MPLS, and why isn't it dead yet? * 11 ways to list and sort files on Linux * 5 free network-vulnerability scanners * How-to measure enterprise Wi-Fi speeds"
+      ],
+      "PublicationYear": [
+        "2023"
+      ],
+      "SourceID": [
+        "proquest"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright Foundry Feb 20, 2023"
+        }
+      ],
+      "SSID": [
+        "ssj0002672330"
+      ],
+      "Title": [
+        "<h>Bash</h> scripting tips that can save time on Linux"
+      ],
+      "PublicationDate": [
+        "20230220"
+      ],
+      "Genre": [
+        "News"
+      ],
+      "DatabaseTitle": [
+        "Advanced Technologies & Aerospace Collection",
+        "ProQuest Computing",
+        "Computer Science Database",
+        "ProQuest Central Student",
+        "Technology Collection",
+        "ProQuest Central Basic",
+        "ProQuest Advanced Technologies & Aerospace Collection",
+        "ProQuest Central Essentials",
+        "ProQuest Computing (Alumni Edition)",
+        "ProQuest Computer Science Collection",
+        "ProQuest One Academic Eastern Edition",
+        "ProQuest Central (Alumni Edition)",
+        "SciTech Premium Collection",
+        "ProQuest Technology Collection",
+        "ProQuest SciTech Collection",
+        "ProQuest Central China",
+        "ProQuest Central",
+        "Advanced Technologies & Aerospace Database",
+        "ProQuest Career and Technical Education",
+        "ProQuest One Academic UKI Edition",
+        "ProQuest Central Korea",
+        "ProQuest One Academic",
+        "ProQuest Central (Alumni)",
+        "Career and Technical Education (Alumni Edition)"
+      ],
+      "Subtitle": [
+        "Here are some steps you can take to ensure that your <h>bash scripts</h> work as intended and are easy to update"
+      ],
+      "MergedId": [
+        "FETCHMERGED-proquest_reports_27783237693"
+      ],
+      "PQID": [
+        "2778323769"
+      ],
+      "Copyright": [
+        "Copyright Foundry Feb 20, 2023"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "Database_xml": [
+        {
+          "sequence": "1",
+          "dbid": "BENPR",
+          "name": "ProQuest Central",
+          "url": "https://login.ezproxy.princeton.edu/login?url=https://search.proquest.com/central",
+          "sourceTypes": [
+            "Aggregation Database"
+          ]
+        }
+      ],
+      "link.rule.ids": [
+        "313,791,795,802,21829,21834,34107,34878,44314,44649"
+      ],
+      "linkProvider": [
+        "ProQuest"
+      ],
+      "LinkModel": [
+        "DirectLink"
+      ],
+      "IEDL.DBID": [
+        "BENPR"
+      ],
+      "BookMark": [
+        "eNpjYuA0tDQx0TU3MzXlYOAtLs4yMDAwMjM3MjY24GTQd0oszlAoTi7KLCjJzEtXKMksKFYoyUgsUUhOzFMoTixLBQrlpirk5yn4ZOaVVvAwsKYl5hSn8kJpbgYlN9cQZw_dgqL8wtLU4pL4otSC_KKS4ngjc3MLYyNjczNLY6IUAQCdjjGo"
+      ],
+      "DatabaseName": [
+        "ProQuest Central (Corporate)",
+        "Career & Technical Education Database",
+        "ProQuest Central (purchase pre-March 2016)",
+        "Computing Database (Alumni Edition)",
+        "ProQuest SciTech Collection",
+        "ProQuest Technology Collection",
+        "ProQuest Central (Alumni) (purchase pre-March 2016)",
+        "ProQuest Central (Alumni)",
+        "ProQuest Central UK/Ireland",
+        "Advanced Technologies & Aerospace Collection",
+        "ProQuest Central Essentials",
+        "ProQuest Central",
+        "Technology Collection",
+        "ProQuest Central Korea",
+        "ProQuest Central Student",
+        "SciTech Premium Collection",
+        "ProQuest Computer Science Collection",
+        "Computer Science Database",
+        "Computing Database",
+        "Advanced Technologies & Aerospace Database",
+        "ProQuest Advanced Technologies & Aerospace Collection",
+        "ProQuest One Academic Eastern Edition (DO NOT USE)",
+        "ProQuest One Academic",
+        "ProQuest One Academic UKI Edition",
+        "ProQuest Central China",
+        "ProQuest Central Basic"
+      ],
+      "ParticipantIDs": [
+        "proquest_reports_2778323769"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": true,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.title=Linux&rft.atitle=Writing+Simple+Script+Utilities&rft.date=2015-01-20&rft.pub=John+Wiley+%26+Sons%2C+Inc&rft.isbn=9781118983843&rft.spage=643&rft.epage=679&rft_id=info:doi/10.1002%2F9781119209409.ch24&rft.externalDocID=10.1002%2F9781119209409.ch24",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV1LT8JAEJ4IHjQefCbiK70IB630RbObEExQCCAEQ-rr1CC0oQcJETDqr3emu6UUjAnxsuk2m91tZnZ2ZzvfNwC5BXvQrJfVVrlW45bTqD42bdXCTUZXyVds8Uaz0HkuvFRkArex4P8j9C8Kgfz0sVwyv6AdCLdKcY5fUaap60D-YKd7Jk2_79RddIGd7AcKOK6i6KN1mD03q__VGnyHekMo3BU0Z9YpvsBn1B8sUYOwXDhcJ69xBTo6GE4_5zXqifiPiL87eAsjEEN7c_EwoejaKBRR3h_oFKqnGlps25cDdJJRmMLTRJPIODOZZc5ZO1vWxMZpi6wwSzZZcLyKPrhBfH38qjcQyOkFruu_mqcgxTQrDevt9m3lLrIZ6L1xYtWL79UsE_dbHiaFklOWREvxJ0jwFI6UXx5nzksx5DHD2YEtgp4ohAnB-e7Cmjfcg-0o8YYi7fA-ZKUoFCEKpTgoCWkU84OSMpPIAZjVinNTU8OR3PC_-NgVDNKGm5iTS3MKC_MQFJ3Zpmb5nqb7nvXK_G7PM3xu-D273-cFpmfgcpUuM5BLNE82-w5Goumo7x-t1vExbMa6dgLpyfvUO4WN2dI-k2L8AcwmPSY",
+      "ExternalDocumentID": [
+        "10.1002/9781119209409.ch24"
+      ],
+      "IngestDate": [
+        "Wed Nov 27 04:57:37 EST 2019",
+        "Thu Jun 02 19:25:53 EDT 2022"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "01",
+          "year": "2015",
+          "text": "2015-01-20",
+          "day": "20"
+        }
+      ],
+      "Score": [
+        "13.810829"
+      ],
+      "DatabaseTitleList": [
+        ""
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Indianapolis, IN, USA"
+        }
+      ],
+      "URI": [
+        "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119209409.ch24"
+      ],
+      "PublicationPlace": [
+        "Indianapolis, IN, USA"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "John Wiley & Sons, Inc"
+        }
+      ],
+      "ID": [
+        "FETCH-wiley_ebooks_10_1002_9781119209409_ch24_ch243"
+      ],
+      "DOI": [
+        "10.1002/9781119209409.ch24"
+      ],
+      "Publisher": [
+        "John Wiley & Sons, Inc"
+      ],
+      "AbstractList": [
+        "The typical Linux system administrator has many various jobs to do daily, from monitoring disk space to backing up important files to managing user accounts. Shell script utilities can make these tasks much easier. This chapter demonstrates some of the capabilities you have writing script utilities in the bash shell. It also demonstrates two methods for using shell scripts to archive data on the Linux system. The chapter shows how to create an automated shell script that can take snapshots of specified directories and keep an archive of your data's past versions. Managing user accounts is much more than just adding, modifying, and deleting accounts. The chapter explains how to use the du command to determine disk space consumption. The sed and gawk commands are used to retrieve specific information from the data."
+      ],
+      "Editor": [
+        "Bresnahan, Christine",
+        "Blum, Richard"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "IsScholarly": [
+        "false"
+      ],
+      "Snippet": [
+        ".... Shell <h>script</h> utilities can make these tasks much easier. This chapter demonstrates some of the capabilities you have writing <h>script</h> utilities in the <h>bash</h> shell..."
+      ],
+      "PublicationTitle": [
+        "Linux"
+      ],
+      "GroupedDBID": [
+        "38.",
+        "3XM",
+        "6XM",
+        "AABBV",
+        "ABAEO",
+        "ABARN",
+        "ABIAV",
+        "ABIGN",
+        "ABQPQ",
+        "ABQPW",
+        "ABYOB",
+        "ACIQC",
+        "ACLGV",
+        "ADVEM",
+        "AERYV",
+        "AFOJC",
+        "AJFER",
+        "AKHYG",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ALTAS",
+        "AWAER",
+        "AZZ",
+        "BBABE",
+        "BFMIH",
+        "BPBUR",
+        "CZZ",
+        "DRU",
+        "ERSLE",
+        "FAMPF",
+        "GEOUK",
+        "IPJKO",
+        "IVK",
+        "IWL",
+        "JFSCD",
+        "JJU",
+        "LQKAK",
+        "LWYJN",
+        "LYPXV",
+        "MEDSZ",
+        "MPPRW",
+        "MYL",
+        "NK1",
+        "NK2",
+        "OHILO",
+        "OODEK",
+        "OTAXI",
+        "PLCCB",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "W1A",
+        "YPLAZ",
+        "ZEEST"
+      ],
+      "SubjectTerms": [
+        "bash shell",
+        "disk space",
+        "du command",
+        "gawk command",
+        "Linux system",
+        "script utilities",
+        "sed command",
+        "shell script programming",
+        "user accounts"
+      ],
+      "Discipline": [
+        "Computer Science"
+      ],
+      "ContentType": [
+        "Book Chapter"
+      ],
+      "Editor_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Richard",
+          "surname": "Blum",
+          "fullname": "Blum, Richard"
+        },
+        {
+          "sequence": "2",
+          "givenname": "Christine",
+          "surname": "Bresnahan",
+          "fullname": "Bresnahan, Christine"
+        }
+      ],
+      "SourceType": [
+        "Enrichment Source",
+        "Publisher"
+      ],
+      "ISBN": [
+        "111898384X",
+        "9781118983843"
+      ],
+      "EISBN": [
+        "9781119209409",
+        "1119209404"
+      ],
+      "Abstract": [
+        "The typical Linux system administrator has many various jobs to do daily, from monitoring disk space to backing up important files to managing user accounts. Shell script utilities can make these tasks much easier. This chapter demonstrates some of the capabilities you have writing script utilities in the bash shell. It also demonstrates two methods for using shell scripts to archive data on the Linux system. The chapter shows how to create an automated shell script that can take snapshots of specified directories and keep an archive of your data's past versions. Managing user accounts is much more than just adding, modifying, and deleting accounts. The chapter explains how to use the du command to determine disk space consumption. The sed and gawk commands are used to retrieve specific information from the data."
+      ],
+      "PublicationYear": [
+        "2015"
+      ],
+      "StartPage": [
+        "643"
+      ],
+      "SourceID": [
+        "wiley"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright © 2015 John Wiley & Sons, Inc., Indianapolis, Indiana"
+        }
+      ],
+      "SSID": [
+        "ssj0001434719",
+        "ssib025990876"
+      ],
+      "Title": [
+        "Writing Simple <h>Script</h> Utilities"
+      ],
+      "PublicationDate": [
+        "2015-01-20"
+      ],
+      "PageCount": [
+        "36"
+      ],
+      "Genre": [
+        "chapter"
+      ],
+      "EndPage": [
+        "679"
+      ],
+      "MergedId": [
+        "FETCHMERGED-wiley_ebooks_10_1002_9781119209409_ch24_ch243"
+      ],
+      "Copyright": [
+        "Copyright © 2015 John Wiley & Sons, Inc., Indianapolis, Indiana"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781118983843/mc.gif&client=summon&freeimage=true"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781118983843/lc.gif&client=summon&freeimage=true"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781118983843/sc.gif&client=summon&freeimage=true"
+      ],
+      "link.rule.ids": [
+        "790,791,795,804,28276"
+      ],
+      "linkProvider": [
+        "O'Reilly Media, Inc"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNpjYJAyNNAzNDAw0rc0tzA0NLQ0MrA0MbDUS84wMmFk4EURZGbgAnIsLC2MLUwiOBh4i4uzDAwMDE2MTcwNLTkZ5MOLMksy89IVgjNzC3JSFYKTizILShRCSzJzgOKpxTwMrGmJOcWpvFCam8HYzTXE2UO3PDMntTI-NSk_P7s43tAgHuSceBSb40HOARPG5OrSw6ILVXVVZgFER0FKmjEAmHdLeg"
+      ],
+      "ParticipantIDs": [
+        "wiley_ebooks_10_1002_9781119209409_ch24_ch24"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": true,
+      "isPrint": false,
+      "inHoldings": true,
+      "openUrl": "institution=01PRI_INST&vid=01PRI_INST%3AServices&%3Fctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.title=Linux&rft.atitle=Creating+Fun+Little+Shell+Scripts&rft.date=2015-01-20&rft.pub=John+Wiley+%26+Sons%2C+Inc&rft.isbn=9781118983843&rft.spage=709&rft.epage=737&rft_id=info:doi/10.1002%2F9781119209409.ch26&rft.externalDocID=10.1002%2F9781119209409.ch26",
+      "link": "http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3PT8IwFH5RPGg8-DMRf2UXwUQn2zpgTQgmIAsgBEOI0dOisAmXhQgY9a_3vbVjG-iBeGlgadou3-vXvu69rwDZBT5oNSpqu1Kvc7PXtB9bBdXERUZXyVds82Yr333KP9fkFYUTof9H2b8IAvnpEzllfsl2oLxVinP8Cm-auh3JD-x0zqTpD92Ggy5wL_OBAEd_EfpwHmYumP1fq8FnaDeUhbuC5cwbxQf4G-0HS7QgLBc218ljXJEdPfJnn3GLqgb7S__typ75JLYxpTBEiiNFgiDqSZwg6BSspxpaxO7LITrJOEzhayIpWtxilslifFfUeGzpLAr9liVWFiqvog1ukGIfv-kPjQUJbOmT_F19HdYtzUzBRqdzV7sPWQP9N066etHJmslwxeXBtVByyFJqKXoFmT6FPeWW-4n5KUxuNHq7sE3JJwplheB492DN9fdhJ7x6Q5FMfACXIRgKgqEIMJQADKU0LEs8Srlh-RCYXetV62rQlxN8G584QkXacBKjcmhUQcGOQNGtAtNMz9V0zzVfLe-l7xoeN7x-YTDgeUtPw_UqTaYhm6ierPY9Gouq44F3vFrDJ7AVWdsppKbvM_cMNufT-1wC-QPrwj3S",
+      "ExternalDocumentID": [
+        "10.1002/9781119209409.ch26"
+      ],
+      "IngestDate": [
+        "Wed Nov 27 04:57:36 EST 2019",
+        "Thu Jun 02 19:25:53 EDT 2022"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "01",
+          "year": "2015",
+          "text": "2015-01-20",
+          "day": "20"
+        }
+      ],
+      "Score": [
+        "13.580628"
+      ],
+      "DatabaseTitleList": [
+        ""
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Indianapolis, IN, USA"
+        }
+      ],
+      "URI": [
+        "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119209409.ch26"
+      ],
+      "PublicationPlace": [
+        "Indianapolis, IN, USA"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "John Wiley & Sons, Inc"
+        }
+      ],
+      "ID": [
+        "FETCH-wiley_ebooks_10_1002_9781119209409_ch26_ch263"
+      ],
+      "DOI": [
+        "10.1002/9781119209409.ch26"
+      ],
+      "Publisher": [
+        "John Wiley & Sons, Inc"
+      ],
+      "AbstractList": [
+        "This chapter shows how to put some of the shell‐scripting information to use for fun little bash shell scripts. It demonstrates how to send a message to another user on the Linux system. The script can be used to check whether the user is logged on to the system and whether the user is allowed to send a message. After those checks are made, the passed message is sent using the write command. Included are some suggestions for modifying this script, which improve our shell‐scripting abilities. The chapter then walks us through obtaining website information using the wget utility. The script uses several utilities to pull out the actual quote text. Familiar commands include sed, grep, gawk, and the tee command. The chapter ends with a very fun and simple script for sending ourselves a text message, exploring the curl utility, along with SMS concepts."
+      ],
+      "Editor": [
+        "Bresnahan, Christine",
+        "Blum, Richard"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "IsScholarly": [
+        "false"
+      ],
+      "Snippet": [
+        "This chapter shows how to put some of the shell‐scripting information to use for fun little <h>bash</h> shell <h>scripts</h>..."
+      ],
+      "PublicationTitle": [
+        "Linux"
+      ],
+      "GroupedDBID": [
+        "38.",
+        "3XM",
+        "6XM",
+        "AABBV",
+        "ABAEO",
+        "ABARN",
+        "ABIAV",
+        "ABIGN",
+        "ABQPQ",
+        "ABQPW",
+        "ABYOB",
+        "ACIQC",
+        "ACLGV",
+        "ADVEM",
+        "AERYV",
+        "AFOJC",
+        "AJFER",
+        "AKHYG",
+        "ALMA_UNASSIGNED_HOLDINGS",
+        "ALTAS",
+        "AWAER",
+        "AZZ",
+        "BBABE",
+        "BFMIH",
+        "BPBUR",
+        "CZZ",
+        "DRU",
+        "ERSLE",
+        "FAMPF",
+        "GEOUK",
+        "IPJKO",
+        "IVK",
+        "IWL",
+        "JFSCD",
+        "JJU",
+        "LQKAK",
+        "LWYJN",
+        "LYPXV",
+        "MEDSZ",
+        "MPPRW",
+        "MYL",
+        "NK1",
+        "NK2",
+        "OHILO",
+        "OODEK",
+        "OTAXI",
+        "PLCCB",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "W1A",
+        "YPLAZ",
+        "ZEEST"
+      ],
+      "SubjectTerms": [
+        "bash shell scripts",
+        "gawk",
+        "Linux system",
+        "sed",
+        "short message service"
+      ],
+      "Discipline": [
+        "Computer Science"
+      ],
+      "ContentType": [
+        "Book Chapter"
+      ],
+      "Editor_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Richard",
+          "surname": "Blum",
+          "fullname": "Blum, Richard"
+        },
+        {
+          "sequence": "2",
+          "givenname": "Christine",
+          "surname": "Bresnahan",
+          "fullname": "Bresnahan, Christine"
+        }
+      ],
+      "SourceType": [
+        "Enrichment Source",
+        "Publisher"
+      ],
+      "ISBN": [
+        "111898384X",
+        "9781118983843"
+      ],
+      "EISBN": [
+        "9781119209409",
+        "1119209404"
+      ],
+      "Abstract": [
+        "This chapter shows how to put some of the shell‐scripting information to use for fun little bash shell scripts. It demonstrates how to send a message to another user on the Linux system. The script can be used to check whether the user is logged on to the system and whether the user is allowed to send a message. After those checks are made, the passed message is sent using the write command. Included are some suggestions for modifying this script, which improve our shell‐scripting abilities. The chapter then walks us through obtaining website information using the wget utility. The script uses several utilities to pull out the actual quote text. Familiar commands include sed, grep, gawk, and the tee command. The chapter ends with a very fun and simple script for sending ourselves a text message, exploring the curl utility, along with SMS concepts."
+      ],
+      "PublicationYear": [
+        "2015"
+      ],
+      "StartPage": [
+        "709"
+      ],
+      "SourceID": [
+        "wiley"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright © 2015 John Wiley & Sons, Inc., Indianapolis, Indiana"
+        }
+      ],
+      "SSID": [
+        "ssj0001434719",
+        "ssib025990876"
+      ],
+      "Title": [
+        "Creating Fun Little Shell <h>Scripts</h>"
+      ],
+      "PublicationDate": [
+        "2015-01-20"
+      ],
+      "PageCount": [
+        "29"
+      ],
+      "Genre": [
+        "chapter"
+      ],
+      "EndPage": [
+        "737"
+      ],
+      "MergedId": [
+        "FETCHMERGED-wiley_ebooks_10_1002_9781119209409_ch26_ch263"
+      ],
+      "Copyright": [
+        "Copyright © 2015 John Wiley & Sons, Inc., Indianapolis, Indiana"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "thumbnail_m": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781118983843/mc.gif&client=summon&freeimage=true"
+      ],
+      "thumbnail_l": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781118983843/lc.gif&client=summon&freeimage=true"
+      ],
+      "thumbnail_s": [
+        "http://covers-cdn.summon.serialssolutions.com/index.aspx?isbn=9781118983843/sc.gif&client=summon&freeimage=true"
+      ],
+      "link.rule.ids": [
+        "790,791,795,804,28276"
+      ],
+      "linkProvider": [
+        "O'Reilly Media, Inc"
+      ],
+      "LinkModel": [
+        "OpenURL"
+      ],
+      "BookMark": [
+        "eNpjYJAyNNAzNDAw0rc0tzA0NLQ0MrA0MbDUS84wMmNk4EURZGbgAnIsLC2MLUwiOBh4i4uzDAwMDE2MTcwNLTkZFJ2LUhNLMvPSFdxK8xR8MktKclIVgjNSc3IUgpOLMgtKinkYWNMSc4pTeaE0N4Oxm2uIs4dueWZOamV8alJ-fnZxvKFBPMhB8Sh2x4McBCaMydWlh0UXquqqzAKIjoKUNGMA-QxLzQ"
+      ],
+      "ParticipantIDs": [
+        "wiley_ebooks_10_1002_9781119209409_ch26_ch26"
+      ]
+    }
+  ],
+  "rollups": {
+    "image": {},
+    "reference": {},
+    "newspaper": {}
+  }
+}
