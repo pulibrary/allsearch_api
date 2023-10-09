@@ -36,6 +36,7 @@ RSpec.describe ArticleDocument do
     end
 
     it 'has the expected_values' do
+      expect(article_document.title).to eq('Potato')
       expect(article_document.publication_title).to eq('Plants (Basel)')
       expect(article_document.publication_date).to eq('20221001')
       expect(article_document.publication_year).to eq(2022)
