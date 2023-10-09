@@ -27,7 +27,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development do
   gem 'bcrypt_pbkdf'
   gem 'capistrano', require: false
-  gem 'capistrano-bundler'
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-passenger', require: false
   gem 'capistrano-rails', require: false
   gem 'ed25519'
   gem 'puma', '~> 5.0'
