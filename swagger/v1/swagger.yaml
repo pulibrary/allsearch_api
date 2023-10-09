@@ -20,11 +20,28 @@ paths:
       responses:
         '200':
           description: successful
+  "/search/article?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query the Summon API, aka Articles+
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/article?query={query}"
+      tags:
+      - Article
+      description: Searches the Summon API using a query term. Excludes Newspaper
+        Articles and items not held by PUL
+      responses:
+        '200':
+          description: successful
   "/search/best-bet?query={query}":
     parameters:
     - name: query
       in: path
-      description: A string to query the Best-Bets
+      description: A string to query the Best Bets
       required: true
       schema:
         type: string
@@ -96,7 +113,7 @@ paths:
       summary: "/search/libanswers?query={query}"
       tags:
       - Libanswers
-      description: 'Searches the Libanswers FAQs using a query term'
+      description: Searches the Libanswers FAQs using a query term
       responses:
         '200':
           description: successful
@@ -125,7 +142,7 @@ paths:
       schema:
         type: string
     get:
-      summary: "/search/database?query={query}"
+      summary: search/database?query={query}
       tags:
       - Library Databases
       description: Searches for relevant Library Databases using a query term
