@@ -12,15 +12,20 @@ namespace :solr do
     `rm -rf pul_solr-main main.zip`
   end
 
-  desc 'Load sample data from the sample-data directory'
-  task load_sample_data: :environment do
+  desc "Load each service's sample data from the sample-data directory"
+  task load_sample_data: :environment do |_task, _args|
     %w[catalog dpul findingaids pulmap].each do |service|
-      lando_host = ENV.fetch("lando_#{service}_solr_conn_host", nil)
-      lando_port = ENV.fetch("lando_#{service}_solr_conn_port", nil)
-      lando_url = "http://#{lando_host}:#{lando_port}/solr/#{service}/update?commit=true"
-      `curl -X POST -H 'Content-Type: application/json' \
-        '#{lando_url}' --data-binary @sample-data/#{service}.json`
+      system("rake solr:load_sample_data_file[#{service},#{service}.json]")
     end
+  end
+
+  desc 'Load an arbitrary sample data file from the sample-data directory'
+  task :load_sample_data_file, [:service, :filename] => :environment do |_task, args|
+    lando_host = ENV.fetch("lando_#{args.service}_solr_conn_host", nil)
+    lando_port = ENV.fetch("lando_#{args.service}_solr_conn_port", nil)
+    lando_url = "http://#{lando_host}:#{lando_port}/solr/#{args.service}/update?commit=true"
+    `curl -X POST -H 'Content-Type: application/json' \
+      '#{lando_url}' --data-binary @sample-data/#{args.filename}`
   end
 
   desc 'Create new sample data file from staging solr'
