@@ -31,7 +31,7 @@ group :development do
   gem 'capistrano-passenger', require: false
   gem 'capistrano-rails', require: false
   gem 'ed25519'
-  gem 'puma', '~> 5.0'
+  gem 'puma'
 end
 
 group :development, :test do
