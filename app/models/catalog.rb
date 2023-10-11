@@ -14,7 +14,8 @@ class Catalog
   end
 
   def solr_fields
-    %w[id title_display author_display pub_created_display format holdings_1display]
+    %w[id title_display author_display pub_created_display format holdings_1display electronic_portfolio_s
+       electronic_access_1display]
   end
 
   def solr_sort

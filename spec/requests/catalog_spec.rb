@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/catalog' do
   it 'returns json' do
-    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
       .to_return(status: 200, body: file_fixture('solr/catalog/rubix.json'))
     get '/search/catalog?query=rubix'
 
@@ -14,7 +14,7 @@ RSpec.describe 'GET /search/catalog' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
         .to_return(status: 200, body: file_fixture('solr/catalog/rubix.json'))
     end
 
@@ -75,7 +75,7 @@ RSpec.describe 'GET /search/catalog' do
 
   context 'without a publisher in records' do
     before do
-      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=pangulubalang&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=pangulubalang&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
         .to_return(status: 200, body: file_fixture('solr/catalog/pangulubalang.json'))
     end
 
@@ -95,7 +95,7 @@ RSpec.describe 'GET /search/catalog' do
 
   context 'with weird search strings' do
     before do
-      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=What%20if%20%22I%20quote%22%20my%20search?&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=What%20if%20%22I%20quote%22%20my%20search?&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
         .to_return(status: 200, body: file_fixture('solr/catalog/what_if.json'))
     end
 
@@ -111,7 +111,7 @@ RSpec.describe 'GET /search/catalog' do
 
   context 'with CJK characters' do
     before do
-      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display&q=%E8%A7%A6%E7%89%A9%E7%94%9F%E6%83%85%E8%AF%9D%E9%81%93%E5%8D%97&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=%E8%A7%A6%E7%89%A9%E7%94%9F%E6%83%85%E8%AF%9D%E9%81%93%E5%8D%97&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
         .to_return(status: 200, body: file_fixture('solr/catalog/触物生情话道南.json'))
     end
 
@@ -123,6 +123,21 @@ RSpec.describe 'GET /search/catalog' do
       expect(response).to be_successful
       response_body = JSON.parse(response.body, symbolize_names: true)
       expect(response_body[:number]).to be(81)
+    end
+  end
+
+  context 'with an electronic resource' do
+    before do
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=Didgeridoo%20Mania&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+        .to_return(status: 200, body: file_fixture('solr/catalog/didgeridoo_mania.json'))
+    end
+
+    it 'includes the resource_url in other_fields' do
+      get '/search/catalog?query=Didgeridoo+Mania'
+
+      expect(response).to be_successful
+      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(response_body[:records].first[:other_fields][:resource_url]).to eq('https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53763462940006421&Force_direct=true')
     end
   end
 end

@@ -1,0 +1,35 @@
+{
+    "responseHeader":{
+      "status":0,
+      "QTime":22,
+      "params":{
+        "q":"Didgeridoo Mania",
+        "fl":"id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display",
+        "sort":"score desc, pub_date_start_sort desc, title_sort asc",
+        "rows":"3",
+        "facet":"false"}},
+    "response":{"numFound":5,"start":0,"docs":[
+        {
+          "id":"99125150663606421",
+          "title_display":"Didgeridoo-Mania.",
+          "pub_created_display":["[Place of publication not identified] : ARC Music Productions, 3689."],
+          "format":["Audio"],
+          "electronic_portfolio_s":["{\"desc\":null,\"title\":\"Music Online: Contemporary World Music - All Titles\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53763462940006421&Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[]}"]},
+        {
+          "id":"99110192973506421",
+          "author_display":["Corter, David"],
+          "title_display":"Didgeridoo mania II / David Corter.",
+          "pub_created_display":["East Grinstead, West Sussex, Great Britain : ARC Music, [p2003]",
+            "copyright 2003"],
+          "format":["Audio"],
+          "electronic_access_1display":"{\"https://princeton.naxosmusiclibrary.com/world/catalogue/item.asp?cid=EUCD1819\":[\"princeton.naxosmusiclibrary.com\"]}",
+          "electronic_portfolio_s":["{\"desc\":null,\"title\":\"Online Content\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53818140150006421&Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[]}"]},
+        {
+          "id":"99125282956606421",
+          "title_display":"Didgeridoo Mania II: David Corter.",
+          "pub_created_display":["Australia : ARC Music Productions, 2003."],
+          "format":["Audio"],
+          "electronic_portfolio_s":["{\"desc\":null,\"title\":\"Music Online: Contemporary World Music - All Titles\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53792307830006421&Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[]}"]}]
+    }
+}
+  

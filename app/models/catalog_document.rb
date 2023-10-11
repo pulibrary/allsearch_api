@@ -35,7 +35,7 @@ class CatalogDocument < Document
   end
 
   def doc_keys
-    [:call_number, :library]
+    [:call_number, :library, :resource_url]
   end
 
   def first_holding
@@ -51,5 +51,15 @@ class CatalogDocument < Document
 
   def library
     first_holding['library']
+  end
+
+  def resource_url
+    portfolio_string = document[:electronic_portfolio_s]&.first
+    electronic_access = document[:electronic_access_1display]
+    if portfolio_string.present?
+      JSON.parse(portfolio_string)['url']
+    elsif electronic_access.present?
+      JSON.parse(electronic_access)&.keys&.first
+    end
   end
 end
