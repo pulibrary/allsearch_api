@@ -1400,5 +1400,527 @@
         "call_number_locator_display": [
             "DVD"
         ]
+    },
+    {
+        "id": "99125150663606421",
+        "numeric_id_b": true,
+        "author_citation_display": [
+            "Artists, Various",
+            "Corter, David"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[\"Artists, Various\",\"Corter, David\"],\"translators\":[],\"editors\":[],\"compilers\":[]}",
+        "author_s": [
+            "Artists, Various",
+            "Corter, David"
+        ],
+        "title_display": "Didgeridoo-Mania.",
+        "title_t": [
+            "Didgeridoo-Mania."
+        ],
+        "title_citation_display": [
+            "Didgeridoo-Mania"
+        ],
+        "compiled_created_t": [
+            "Didgeridoo-Mania."
+        ],
+        "pub_created_display": [
+            "[Place of publication not identified] : ARC Music Productions, 3689."
+        ],
+        "pub_created_s": [
+            "[Place of publication not identified] : ARC Music Productions, 3689."
+        ],
+        "pub_citation_display": [
+            "Place of publication not identified: ARC Music Productions"
+        ],
+        "pub_date_display": [
+            "3689"
+        ],
+        "pub_date_start_sort": 3689,
+        "cataloged_tdt": "2020-06-20T20:16:43Z",
+        "format": [
+            "Audio"
+        ],
+        "description_display": [
+            "1 online resource (66 minutes)"
+        ],
+        "description_t": [
+            "1 online resource (66 minutes)"
+        ],
+        "number_of_pages_citation_display": [
+            "1 online resource (66 minutes)"
+        ],
+        "notes_display": [
+            "Title from resource description page (viewed April 28, 2017)."
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_code_s": [
+            "eng"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "related_name_json_1display": "{\"Producer\":[\"Artists, Various\"],\"Performer\":[\"Corter, David\"]}",
+        "oclc_s": [
+            "689525057"
+        ],
+        "other_version_s": [
+            "ocn689525057"
+        ],
+        "electronic_portfolio_s": [
+            "{\"desc\":null,\"title\":\"Music Online: Contemporary World Music - All Titles\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53763462940006421\u0026Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[]}"
+        ]
+    },
+    {
+        "id": "9980787463506421",
+        "numeric_id_b": true,
+        "author_display": [
+            "Corter, David"
+        ],
+        "author_citation_display": [
+            "Corter, David",
+            "Shuman, David",
+            "Szekely, Michael",
+            "Estep, Byron",
+            "Cossin, David",
+            "Reed, Bradfort",
+            "Nastasia, Nina",
+            "McDonough, John",
+            "Bowen, Chris",
+            "Rodriguez, Craig"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[\"Shuman, David\",\"Szekely, Michael\",\"Estep, Byron\",\"Cossin, David\",\"Reed, Bradfort\",\"Nastasia, Nina\",\"McDonough, John\",\"Bowen, Chris\",\"Rodriguez, Craig\"],\"translators\":[],\"editors\":[],\"compilers\":[],\"primary_author\":\"Corter, David\"}",
+        "author_s": [
+            "Corter, David",
+            "Shuman, David",
+            "Szekely, Michael",
+            "Estep, Byron",
+            "Cossin, David",
+            "Reed, Bradfort",
+            "Nastasia, Nina",
+            "McDonough, John",
+            "Bowen, Chris",
+            "Rodriguez, Craig"
+        ],
+        "marc_relator_display": [
+            "Author"
+        ],
+        "title_display": "Didgeridoo mania [electronic resource] / David Corter.",
+        "title_t": [
+            "Didgeridoo mania [electronic resource] / David Corter."
+        ],
+        "title_citation_display": [
+            "Didgeridoo mania"
+        ],
+        "compiled_created_t": [
+            "Didgeridoo mania [electronic resource] / David Corter."
+        ],
+        "pub_created_display": [
+            "Clearwater, FL : ARC Music Inc., p1997."
+        ],
+        "pub_created_s": [
+            "Clearwater, FL : ARC Music Inc., p1997."
+        ],
+        "pub_citation_display": [
+            "Clearwater, FL: ARC Music Inc"
+        ],
+        "pub_date_display": [
+            "1997"
+        ],
+        "pub_date_start_sort": 1997,
+        "cataloged_tdt": "2021-07-21T03:06:42Z",
+        "format": [
+            "Audio"
+        ],
+        "electronic_access_1display": "{\"https://princeton.naxosmusiclibrary.com/catalogue/item.asp?cid=EUCD1432\":[\"princeton.naxosmusiclibrary.com\"]}",
+        "description_display": [
+            "1 online resource (1 sound file)."
+        ],
+        "description_t": [
+            "1 online resource (1 sound file)."
+        ],
+        "number_of_pages_citation_display": [
+            "1 online resource (1 sound file)."
+        ],
+        "geocode_display": [
+            "Australia"
+        ],
+        "series_display": [
+            "Naxos Music Library."
+        ],
+        "more_in_this_series_t": [
+            "Naxos Music Library"
+        ],
+        "related_record_info_display": [
+            "Source record:"
+        ],
+        "notes_display": [
+            "Includes explanatory notes in English, Spanish, French and German in container."
+        ],
+        "date_place_event_notes_display": [
+            "Recorded at Studio 45 in Hartford, CT, and at Innovative Music, New York and Didgeridav Studio in Brooklyn."
+        ],
+        "source_desc_notes_display": [
+            "Description based on hard copy version record."
+        ],
+        "participant_performer_display": [
+            "David Corter, bull-roarer ; David Corter, clay whistle ; David Corter, didjeridu ; David Corter, jew's harp ; David Shuman, double bass ; Michael Szekely, percussion ; Byron Estep, acoustic guitar ; David Cossin, tube ; Bradfort Reed, electronics ; David Corter, bamboo flute ; David Corter, gong ; David Cossin, berimbau ; Nina Nastasia, vocals ; David Corter, guitar ; David Cossin, hadgini drum ; John McDonough, trumpet ; David Corter, bowed cymbals ; David Corter, boomerang ; David Corter, tanpura ; David Cossin, djembe ; Byron Estep, electric guitar ; Byron Estep, steel guitar ; Chris Bowen, talking drum ; Chris Bowen, thumb piano ; David Cossin, bowls ; Craig Rodriguez, electronics ; Craig Rodriguez, percussion."
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_code_s": [
+            "eng"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "contents_display": [
+            "Sun-go-down (3:49) -- Gizra (5:55) -- The King Brown (4:58) -- Butcher bird and the dingo (4:16) -- Outside the haus tambaran (4:25) -- Within the current (3:50) -- The shadow of whom (1:54) -- Ballad of the domdens (5:34) -- Frontier intruders (5:08) -- Sand reflection (4:12) -- Prelude (2:53) -- Final call (5:46) -- How loud the silence is (12:29)"
+        ],
+        "lc_subject_display": [
+            "Folk music—Australia",
+            "Didjeridu music",
+            "World music"
+        ],
+        "subject_facet": [
+            "Folk music—Australia",
+            "Didjeridu music",
+            "World music",
+            "Folk music"
+        ],
+        "lcgft_s": [
+            "Folk music"
+        ],
+        "related_name_json_1display": "{\"\":[\"Shuman, David\"],\"Instrumentalist\":[\"Szekely, Michael\",\"Estep, Byron\",\"Cossin, David\",\"Reed, Bradfort\",\"Nastasia, Nina\",\"McDonough, John\",\"Bowen, Chris\",\"Rodriguez, Craig\"]}",
+        "publisher_no_display": [
+            "EUCD1432"
+        ],
+        "standard_no_1display": "{\"International Standard Recording Code\":[\"GBCKG0800595\",\"GBCKG0800596\",\"GBCKG0800597\",\"GBCKG0800598\",\"GBCKG0800599\",\"GBCKG0800600\",\"GBCKG0800601\",\"GBCKG0800602\",\"GBCKG0800603\",\"GBCKG0800604\",\"GBCKG0800605\",\"GBCKG0800606\",\"GBCKG0800607\"]}",
+        "other_version_s": [
+            "ocn178675921"
+        ],
+        "name_title_browse_s": [
+            "Corter, David. Didgeridoo mania"
+        ],
+        "electronic_portfolio_s": [
+            "{\"desc\":null,\"title\":\"Online Content\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53882576950006421\u0026Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[]}"
+        ]
+    },
+    {
+        "id": "9980652183506421",
+        "numeric_id_b": true,
+        "author_display": [
+            "Corter, David"
+        ],
+        "author_citation_display": [
+            "Corter, David"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[],\"translators\":[],\"editors\":[],\"compilers\":[],\"primary_author\":\"Corter, David\"}",
+        "author_s": [
+            "Corter, David"
+        ],
+        "marc_relator_display": [
+            "Author"
+        ],
+        "title_display": "Didgeridoo mania II [electronic resource] / David Corter.",
+        "title_t": [
+            "Didgeridoo mania II [electronic resource] / David Corter."
+        ],
+        "title_citation_display": [
+            "Didgeridoo mania II"
+        ],
+        "compiled_created_t": [
+            "Didgeridoo mania II [electronic resource] / David Corter."
+        ],
+        "pub_created_display": [
+            "East Grinstead, West Sussex, Great Britain : ARC Music, pc2003."
+        ],
+        "pub_created_s": [
+            "East Grinstead, West Sussex, Great Britain : ARC Music, pc2003."
+        ],
+        "pub_citation_display": [
+            "East Grinstead, West Sussex, Great Britain: ARC Music"
+        ],
+        "pub_date_display": [
+            "2003"
+        ],
+        "pub_date_start_sort": 2003,
+        "cataloged_tdt": "2021-07-20T20:33:06Z",
+        "format": [
+            "Audio"
+        ],
+        "electronic_access_1display": "{\"https://princeton.naxosmusiclibrary.com/catalogue/item.asp?cid=EUCD1819\":[\"princeton.naxosmusiclibrary.com\"]}",
+        "description_display": [
+            "1 online resource (1 sound file)."
+        ],
+        "description_t": [
+            "1 online resource (1 sound file)."
+        ],
+        "number_of_pages_citation_display": [
+            "1 online resource (1 sound file)."
+        ],
+        "geocode_display": [
+            "Australia"
+        ],
+        "series_display": [
+            "Naxos Music Library."
+        ],
+        "more_in_this_series_t": [
+            "Naxos Music Library"
+        ],
+        "related_record_info_display": [
+            "Source record:"
+        ],
+        "summary_note_display": [
+            "Details in English; texte présentation en Français; information in Deutsch; texto en Español incluido."
+        ],
+        "source_desc_notes_display": [
+            "Description based on hard copy version record."
+        ],
+        "participant_performer_display": [
+            "David Corter (didgeridoos, synths/rodes piano, clavinet/organ, drums, electric guitar, bass, berimbau, clapsticks, bullroarer, noise); Byron Estep (12-string acoustic guitar, electric guitar, National resophonic guitar); Ian Pai (drum set, percussion, synths, noise, bass); Josh Mathews (drum set)."
+        ],
+        "language_code_s": [
+            "zxx"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "contents_display": [
+            "That heavenly glory (7:07) -- Goin' walkabout (6:38) -- Fallling rain (1:40) -- Mouth of the desert (4:34) -- No purpose (8:43) -- Dusk (2:32) -- Didge from Utopia (8:00) -- Gotta go (6:29) -- Dreams in the bush (1:45) -- Before we're done (9:33) -- Corroboree for the elder (10:21)."
+        ],
+        "lc_subject_display": [
+            "Didjeridu music",
+            "Didjeridu and percussion music",
+            "Popular music—Australia"
+        ],
+        "subject_facet": [
+            "Didjeridu music",
+            "Didjeridu and percussion music",
+            "Popular music—Australia"
+        ],
+        "other_title_display": [
+            "Didgeridoo mania 2",
+            "Didgeridoo mania two"
+        ],
+        "alt_title_246_display": [
+            "Didgeridoo mania 2",
+            "Didgeridoo mania two"
+        ],
+        "publisher_no_display": [
+            "EUCD1819"
+        ],
+        "standard_no_1display": "{\"International Standard Recording Code\":[\"GBCKG0800608\",\"GBCKG0800609\",\"GBCKG0800610\",\"GBCKG0800611\",\"GBCKG0800612\",\"GBCKG0800613\",\"GBCKG0800614\",\"GBCKG0800615\",\"GBCKG0800616\",\"GBCKG0800617\",\"GBCKG0800618\"]}",
+        "other_version_s": [
+            "ocm61286846"
+        ],
+        "name_title_browse_s": [
+            "Corter, David. Didgeridoo mania II"
+        ],
+        "electronic_portfolio_s": [
+            "{\"desc\":null,\"title\":\"Online Content\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53814499170006421\u0026Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[]}"
+        ]
+    },
+    {
+        "id": "99110192973506421",
+        "numeric_id_b": true,
+        "author_display": [
+            "Corter, David"
+        ],
+        "author_citation_display": [
+            "Corter, David"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[],\"translators\":[],\"editors\":[],\"compilers\":[],\"primary_author\":\"Corter, David\"}",
+        "author_s": [
+            "Corter, David"
+        ],
+        "marc_relator_display": [
+            "Author"
+        ],
+        "title_display": "Didgeridoo mania II / David Corter.",
+        "title_t": [
+            "Didgeridoo mania II / David Corter."
+        ],
+        "title_citation_display": [
+            "Didgeridoo mania II"
+        ],
+        "compiled_created_t": [
+            "Didgeridoo mania II / David Corter."
+        ],
+        "pub_created_display": [
+            "East Grinstead, West Sussex, Great Britain : ARC Music, [p2003]",
+            "copyright 2003"
+        ],
+        "pub_created_s": [
+            "East Grinstead, West Sussex, Great Britain : ARC Music, [p2003]",
+            "copyright 2003"
+        ],
+        "pub_citation_display": [
+            "East Grinstead, West Sussex, Great Britain: ARC Music"
+        ],
+        "pub_date_display": [
+            "2003"
+        ],
+        "pub_date_start_sort": 2003,
+        "cataloged_tdt": "2021-07-20T20:56:40Z",
+        "format": [
+            "Audio"
+        ],
+        "electronic_access_1display": "{\"https://princeton.naxosmusiclibrary.com/world/catalogue/item.asp?cid=EUCD1819\":[\"princeton.naxosmusiclibrary.com\"]}",
+        "description_display": [
+            "1 online resource (1 sound file)"
+        ],
+        "description_t": [
+            "1 online resource (1 sound file)"
+        ],
+        "number_of_pages_citation_display": [
+            "1 online resource (1 sound file)"
+        ],
+        "geocode_display": [
+            "Australia"
+        ],
+        "series_display": [
+            "Naxos Music Library."
+        ],
+        "more_in_this_series_t": [
+            "Naxos Music Library"
+        ],
+        "related_record_info_display": [
+            "Source record:"
+        ],
+        "summary_note_display": [
+            "Details in English; texte présentation en Français; information in Deutsch; texto en Español incluido."
+        ],
+        "source_desc_notes_display": [
+            "Hard copy version record."
+        ],
+        "participant_performer_display": [
+            "David Corter (didgeridoos, synths/rodes piano, clavinet/organ, drums, electric guitar, bass, berimbau, clapsticks, bullroarer, noise); Byron Estep (12-string acoustic guitar, electric guitar, National resophonic guitar); Ian Pai (drum set, percussion, synths, noise, bass); Josh Mathews (drum set)."
+        ],
+        "language_code_s": [
+            "zxx"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "contents_display": [
+            "That heavenly glory (7:07) -- Goin' walkabout (6:38) -- Fallling rain (1:40) -- Mouth of the desert (4:34) -- No purpose (8:43) -- Dusk (2:32) -- Didge from Utopia (8:00) -- Gotta go (6:29) -- Dreams in the bush (1:45) -- Before we're done (9:33) -- Corroboree for the elder (10:21)."
+        ],
+        "lc_subject_display": [
+            "Didjeridu music",
+            "Didjeridu and percussion music",
+            "Popular music—Australia"
+        ],
+        "subject_facet": [
+            "Didjeridu music",
+            "Didjeridu and percussion music",
+            "Popular music—Australia",
+            "Folk music"
+        ],
+        "lcgft_s": [
+            "Folk music"
+        ],
+        "other_title_display": [
+            "Didgeridoo mania 2",
+            "Didgeridoo mania two"
+        ],
+        "alt_title_246_display": [
+            "Didgeridoo mania 2",
+            "Didgeridoo mania two"
+        ],
+        "publisher_no_display": [
+            "EUCD1819"
+        ],
+        "standard_no_1display": "{\"International Standard Recording Code\":[\"GBCKG0800608\",\"GBCKG0800609\",\"GBCKG0800610\",\"GBCKG0800611\",\"GBCKG0800612\",\"GBCKG0800613\",\"GBCKG0800614\",\"GBCKG0800615\",\"GBCKG0800616\",\"GBCKG0800617\",\"GBCKG0800618\"]}",
+        "other_version_s": [
+            "ocm61286846"
+        ],
+        "name_title_browse_s": [
+            "Corter, David. Didgeridoo mania II"
+        ],
+        "electronic_portfolio_s": [
+            "{\"desc\":null,\"title\":\"Online Content\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53818140150006421\u0026Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[]}"
+        ]
+    },
+    {
+        "id": "99125282956606421",
+        "numeric_id_b": true,
+        "author_citation_display": [
+            "Corter, David",
+            "Estep, Bryon",
+            "Pai, Ian",
+            "Mathews, Josh"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[\"Corter, David\",\"Corter, David\",\"Estep, Bryon\",\"Pai, Ian\",\"Mathews, Josh\"],\"translators\":[],\"editors\":[],\"compilers\":[]}",
+        "author_s": [
+            "Corter, David",
+            "Estep, Bryon",
+            "Pai, Ian",
+            "Mathews, Josh"
+        ],
+        "title_display": "Didgeridoo Mania II: David Corter.",
+        "title_t": [
+            "Didgeridoo Mania II: David Corter."
+        ],
+        "title_citation_display": [
+            "Didgeridoo Mania II: David Corter"
+        ],
+        "compiled_created_t": [
+            "Didgeridoo Mania II: David Corter."
+        ],
+        "pub_created_display": [
+            "Australia : ARC Music Productions, 2003."
+        ],
+        "pub_created_s": [
+            "Australia : ARC Music Productions, 2003."
+        ],
+        "pub_citation_display": [
+            "Australia: ARC Music Productions"
+        ],
+        "pub_date_display": [
+            "2003"
+        ],
+        "pub_date_start_sort": 2003,
+        "cataloged_tdt": "2020-06-20T20:16:43Z",
+        "format": [
+            "Audio"
+        ],
+        "description_display": [
+            "1 online resource (68 minutes)"
+        ],
+        "description_t": [
+            "1 online resource (68 minutes)"
+        ],
+        "number_of_pages_citation_display": [
+            "1 online resource (68 minutes)"
+        ],
+        "notes_display": [
+            "Title from resource description page (viewed April 28, 2017)."
+        ],
+        "date_place_event_notes_display": [
+            "Performed Melody Blind Studio",
+            "Recorded Melody Blind Studio, NY"
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_code_s": [
+            "eng"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "related_name_json_1display": "{\"Producer\":[\"Corter, David\"],\"Performer\":[\"Corter, David\",\"Estep, Bryon\",\"Pai, Ian\",\"Mathews, Josh\"]}",
+        "oclc_s": [
+            "689525057"
+        ],
+        "other_version_s": [
+            "ocn689525057"
+        ],
+        "electronic_portfolio_s": [
+            "{\"desc\":null,\"title\":\"Music Online: Contemporary World Music - All Titles\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53792307830006421\u0026Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[]}"
+        ]
     }
 ]
