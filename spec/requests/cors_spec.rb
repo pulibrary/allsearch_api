@@ -20,6 +20,16 @@ describe 'CORS' do
     end
   end
 
+  context 'when request comes from http://localhost:5173' do
+    let(:header) { 'http://localhost:5173' }
+
+    it 'reflects the origin as the Access-Control-Allow-Origin, ' \
+       'telling the browser that requests are allowed' do
+      get '/search/dpul?query=cats', headers: { HTTP_ORIGIN: header }
+      expect(response.headers['Access-Control-Allow-Origin']).to eq(header)
+    end
+  end
+
   context 'when request comes from https://allsearch.princeton.edu' do
     let(:header) { 'https://allsearch.princeton.edu' }
 
