@@ -14,7 +14,8 @@ class Findingaids
   end
 
   def solr_fields
-    %w[id collection_ssm creator_ssm level_ssm scopecontent_ssm repository_ssm extent_ssm accessrestrict_ssm]
+    %w[id collection_ssm creator_ssm level_ssm scopecontent_ssm
+       repository_ssm extent_ssm accessrestrict_ssm normalized_date_ssm]
   end
 
   def solr_sort

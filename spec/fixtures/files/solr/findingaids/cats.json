@@ -13,6 +13,7 @@
   "response":{"numFound":325,"start":0,"docs":[
       {
         "id":"TC125",
+        "normalized_date_ssm":["1920s -1950s"],
         "collection_ssm":["Edward Anthony Papers, 1920s -1950s"],
         "repository_ssm":["Manuscripts Division"],
         "creator_ssm":["Anthony, Edward, 1895-1971"],
@@ -23,6 +24,7 @@
         "level_ssm":["collection"]},
       {
         "id":"C0969",
+        "normalized_date_ssm":["1886-1880"],
         "collection_ssm":["Massachusetts Elementary School Student Compositions Collection, 1866-1880"],
         "repository_ssm":["Manuscripts Division"],
         "creator_ssm":["Princeton University. Library. Special Collections"],
@@ -33,6 +35,7 @@
         "level_ssm":["collection"]},
       {
         "id":"MC142",
+        "normalized_date_ssm":["1916-1962 (mostly 1941-1955)"],
         "collection_ssm":["Whiting Willauer Papers, 1916-1962 (mostly 1941-1955)"],
         "repository_ssm":["Public Policy Papers"],
         "creator_ssm":["Willauer, Whiting, 1906-1962"],
