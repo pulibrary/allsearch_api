@@ -37,7 +37,7 @@ class FindingaidsDocument < Document
   end
 
   def doc_keys
-    [:repository, :extent, :access_restriction]
+    [:access_restriction, :date, :extent, :repository]
   end
 
   def repository
@@ -50,5 +50,9 @@ class FindingaidsDocument < Document
 
   def access_restriction
     document[:accessrestrict_ssm]&.first
+  end
+
+  def date
+    document[:normalized_date_ssm]&.first
   end
 end
