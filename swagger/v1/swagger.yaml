@@ -20,6 +20,49 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 263
+                records:
+                - title: Two cats
+                  creator: Theophile-Alexandre Steinlen, 1859–1923; born Lausanne,
+                    Switzerland; died Paris, France
+                  id: '6463'
+                  type: artobjects
+                  url: https://artmuseum.princeton.edu/collections/objects/6463
+                  other_fields:
+                    credit_line: Bequest of Dan Fellows Platt, Class of 1895
+                    medium: Graphite
+                    dimensions: 25.1 × 26.2 cm. (9 7/8 × 10 5/16 in.)
+                    primary_image: https://puam-loris.aws.princeton.edu/loris/INV34694.jp2
+                    object_number: x1948-1210
+                - title: Cats Tales
+                  creator: Peter Finnemore, British (Welsh), born 1963
+                  id: '40016'
+                  type: artobjects
+                  url: https://artmuseum.princeton.edu/collections/objects/40016
+                  other_fields:
+                    credit_line: Gift of the artist
+                    medium: Gelatin silver print
+                    dimensions: "image: 19.8 x 28.1 cm (7 13/16 x 11 1/16 in.)\r\nsheet:
+                      27.5 x 33 cm (10 13/16 x 13 in.)"
+                    primary_image: https://puam-loris.aws.princeton.edu/loris/INV11648.jp2
+                    object_number: 2001-158
+                - title: Two Cats
+                  creator: Francisco Toledo, 1940–2019, born Juchitan, Oaxaca, Mexico;
+                    died Oaxaca City, Mexico; active Oaxaca City
+                  id: '40222'
+                  type: artobjects
+                  url: https://artmuseum.princeton.edu/collections/objects/40222
+                  other_fields:
+                    credit_line: Bequest of David L. Meginnity, Class of 1958
+                    medium: "Recto: Black ink and watercolor \r\nVerso: Black ink
+                      and watercolor"
+                    dimensions: 28 x 38 cm (11 x 14 15/16 in.)
+                    primary_image: https://puam-loris.aws.princeton.edu/loris/PUAMSTU2018-1959213.jp2
+                    object_number: 2001-120
+                more: https://artmuseum.princeton.edu/search/collections?mainSearch=%22cats%22
   "/search/article?query={query}":
     parameters:
     - name: query
@@ -37,6 +80,111 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 998201
+                records:
+                - title: Potato
+                  creator: Quandahor, Peter
+                  publisher: MDPI AG
+                  id: 10.3390/plants11202757
+                  type: Journal Article
+                  description: This study was conducted to determine the aphicidal
+                    effect of a leaf extract of the Atlantic <h>potato</h> cultivar
+                    on the performance of green peach aphids...
+                  url: http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3dS9xAEF-KFipIsVaotooI6oOkmtvN7gZEuVPPOz3p9QxFn45NsvcBJRHvIpx_vTPJ5sPWB8WXcFmWTXIzOzu_2d_MErL7jz3otBvWVaPVcpl30fzT4RasUa5tIVa8ci86Tu_GuT0zWQSTrP4fZv-CEBCnT8yUeSHbAfNWkec4y0-aOh6bDXaMMx3Y3V67DxDY23kAAZe3IPp8Hu5s0-Z7tQbaQG8wC_cNmlMMCg3wG_QHrqBBcH2VDnVjcEXjqv-KZxxN00BtA5a_v5U4wu8EYxKjDP0_Y_2ex0lq6JO7fJlEAtDY7PYn0axCCxonhgMQDR9HselughKAZ3N6myEmnXbbe_Xz0pahFwKOfFZc86d-oS03xnZF6dI0uf-MPKUusiLv0g8GdxE3XkW5nBUkw7pgnApATACO5wFZCmR8_rq0ixAcOssyPRy3eJWsrCc-Yf_5-GbFrvge3hL5bEDDZj2T0BfyQUfL5GMDpBPNvpLFw9FRJqnD_dHRCvGaZ95JyzKnXFhDQWEaCA0Yzw0ZDWyppORChUqzQPqyFgoqNA8HrmY8dJUesANlp_WHfF9SGfBQBPQb2QQv02fc50o6NcYlV_Dhjq8Vq_mBEyi1Srbw5ftY7yNCQtFQJZNJv33d65d_0irZNZ0G8fReBcrkZ8SRxhJhlZ5rrxnuO1koFeMHmZveJ3qdfCom90Ya_dhIJfIE8rxG9w
+                  other_fields:
+                    publication_date: '20221001'
+                    publication_year: 2022
+                    fulltext_available: true
+                    abstract: This study was conducted to determine the aphicidal
+                      effect of a leaf extract of the Atlantic potato cultivar on
+                      the performance of green peach aphids. Three concentrations
+                      of the leaf extract (100, 75, and 50% potato extract), synthetic
+                      pesticide (Beta cypermethrin 4.5%), and distilled water (control)
+                      treatments were applied in a greenhouse experiment. The results
+                      showed that the synthetic pesticide, which was used as a standard
+                      check, caused the maximum aphid mortality, followed by the 100%
+                      potato leaf extract. Compared with the other botanical treatments,
+                      the 100% extract produced low mean rates of survival, aphids’
+                      average daily reproduction, the number of nymphs per plant,
+                      and the number of nymphs per adult. This treatment also increased
+                      the accumulation of hydrogen Peroxide (H[sub.2]O[sub.2]) and
+                      malondialdehyde (MDA), glutathione-s-transferase, mixed-function
+                      oxidase, and carboxylesterase content in the green peach aphid.
+                      Moreover, the 100% extract also protected the host plants against
+                      green peach aphid attacks by demonstrating higher chlorophyll
+                      content, net photosynthesis, above-ground fresh weight, and
+                      above-ground dry weight of the host plant. This study demonstrates
+                      that the highest concentration of potato (Atlantic cultivar)
+                      leaf extract (100% extract) could be used as the appropriate
+                      dosage for the control of green peach aphids on potatoes, which
+                      could greatly reduce the use of synthetic insecticides and promote
+                      ecosystem sustainability.
+                    publication_title: Plants (Basel)
+                    volume: '11'
+                    issue: '20'
+                    isxn:
+                    - 2223-7747
+                - title: An inducible potato (E,E)‐farnesol synthase confers tolerance
+                    against bacterial pathogens in potato and tobacco
+                  creator: Dwivedi, Varun
+                  publisher: Wiley Subscription Services, Inc
+                  id: 10.1111/tpj.15890
+                  type: Journal Article
+                  description: ".... Through functional genomics, here we report the
+                    in planta role of <h>potato</h> (Solanum tuberosum) terpene synthase
+                    (StTPS18) in bacterial defense..."
+                  url: http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1fa9swED_KKHQva7sN5rYr6l7aQk1jR3JsKIWkJGQhZaWkZXsykiw3hWCH2Hno0_oR-hn3SXbnf6SBQdmbQbIsS7q730mn3wEcr-mD8feefd0bDgM-GQ3ux56NNipwbPIVr4PRWNz-FL_6K9m-SoqIZs-NhKNQ2STjUmW1nJ_nc5Rz4QfksKPVp7wNzo-r5gih0y65oxCi22g23YpW6NWbr4zRukpegatuZW8G2_BQd7MItm7CTWgXThuEayuB2DWj43_91A58qCAp65ZraBc2TPIRNnspwsanT_C7mzD025f6Uc0Mu5hezrEgTy_Op5fspH_WP_3z_BLLBWrMdMaypySfol1kurhImLE8nRlK3WGYfJCPCEWZKumh8YOUDDnF9Zth-2sNyyRipGm0Tj_D3aA_uRraVdYGW7cRi9m6JVpxHCmtg5YbROi5G6G4E7m8HTtOzHkUc58bH5GoInp9D-0h5yoi2h309kz7CzCETYp7ypO-cLnne5IjLlJGcldpoaW04Fs9b-G8ZOUIa28GRzAsRtCCY5rRkCQ1X0gtqwsHaWKI8yrsdhzRIXeWW3BQT3pYiXAWuh309rCQCwuOmmIUPjpRkYlJl1iHqHICIgG04KSY1H93J5zcjIqHvbdX3Yf3Ll23KGLaDuBdvliar7DVLLbDYsn_BXhGB0k
+                  other_fields:
+                    publication_date: September 2022
+                    publication_year: 2022
+                    start_page: '1308'
+                    end_page: '1323'
+                    fulltext_available: true
+                    abstract: |-
+                      SUMMARY
+                      Terpene synthases (TPSs) have diverse biological functions in plants. Though the roles of TPSs in herbivore defense are well established in many plant species, their role in bacterial defense has been scarce and is emerging. Through functional genomics, here we report the in planta role of potato (Solanum tuberosum) terpene synthase (StTPS18) in bacterial defense. Expression of StTPS18 was highest in leaves and was induced in response to Pseudomonas syringae and methyl jasmonate treatments. The recombinant StTPS18 exhibited bona fide (E,E)‐farnesol synthase activity forming a sesquiterpenoid, (E,E)‐farnesol as the sole product, utilising (E,E)‐farnesyl diphosphate (FPP). Subcellular localization of GFP fusion protein revealed that StTPS18 is localized to the cytosol. Silencing and overexpression of StTPS18 in potato resulted in reduced and enhanced tolerance, respectively, to bacterial pathogens P. syringae and Ralstonia solanacearum. Bacterial growth assay using medium containing (E,E)‐farnesol significantly inhibited P. syringae growth. Moreover, StTPS18 overexpressing transgenic potato and Nicotiana tabacum leaves, and (E,E)‐farnesol and P. syringae infiltrated potato leaves exhibited elevated expression of sterol pathway and members of pathogenesis‐related genes with enhanced phytosterol accumulation. Interestingly, enhanced phytosterols in 13C3‐(E,E)‐farnesol infiltrated potato leaves were devoid of any noticeable 13C labeling, indicating no direct utilization of (E,E)‐farnesol in phytosterols formation. Furthermore, leaves of StTPS18 overexpressing transgenic lines had no detectable (E,E)‐farnesol similar to the control plant, and emitted lower levels of sesquiterpenes than the control. These findings point towards an indirect involvement of StTPS18 and its product (E,E)‐farnesol in bacterial defense through upregulation of phytosterol biosynthesis and defense genes.
+                      Significance Statement
+                      Here we show that a pathogen‐responsive potato sesquiterpene synthase forming (E,E)‐farnesol confers indirect defense against bacterial pathogens through induced phytosterol biosynthesis and defense response in potato and tobacco. The findings demonstrate an indirect role of (E,E)‐farnesol in plant biotic stress tolerance.
+                    publication_title: 'The Plant journal : for cell and molecular
+                      biology'
+                    volume: '111'
+                    issue: '5'
+                    isxn:
+                    - '0960-7412'
+                - title: Eradication of Potato Virus S , Potato Virus A , and Potato
+                    Virus M From Infected in vitro -Grown Potato Shoots Using in vitro
+                    Therapies
+                  creator: Bettoni, Jean Carlos
+                  publisher: Frontiers Media S.A
+                  id: 10.3389/fpls.2022.878733
+                  type: Journal Article
+                  description: Certain viruses dramatically affect yield and quality
+                    of <h>potatoes</h> and have proved difficult to eradicate with
+                    current approaches...
+                  url: http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1ba9swFBbtGGwvYze27FK0pzGo4_gmWVAKTUmWdgkra1a2J6ObG0NjBdcZ7Ofsn-5ItsMS8rQXP-iChL4j6_ukoyOEPu78D6YXQ282nExYPL8c30yJB2sUCzyrFWfscpp8-5H8HB2gpLsO4_z2pSj65d2yXxYL5165Wkq_cxXzr2bnwGoCoBL-ITqkUfqPSm9ielviQ5tTSdBgzM9XdzY2dxj2U7DQyL6eEwGRAfoy2FqQXNz-fWRz12eyiSjlFqHxU_SkZY_4rOniM3Sgy-fo4dAAw_v9Av0ZVVy1e3DY5PhkcXoFWbU58Ren-Kao1vf4-nhv8tkx5qXamzXD48os8YXz2tIKFyX-VdSV8T5bBb9T5XphTH2PnSPCpiSeu0teoMlfou_j0fx84rVPMHgSiFPtKZ3mIlAgSiiRUTjQkocBjEGuSChB-YAaghSaE5ApcaA000CnBrkeKKYjqBi9Rhg4kIiJIDxNwpikhMdAcoTmcShkIjnvoU8dANmqCbGRgTSxuGUWt8ziljW49dDQIrQpZ4NjuwRT3WatfcD6n6YKmK6ijMdCEqGBE0HXhGSKUgUNfujwzWAy2RMSXmqzhpYIje2lmTDooVcN3pumOnvpIbplCVt92c4B43UBu1tjffPfNd-ix3YQrNdCwN6hB3W11u_RI7v1KzVohCO3lQDfr1-CIzcX_gIzOQ-b
+                  other_fields:
+                    publication_date: '2022-05-19'
+                    publication_year: 2022
+                    start_page: '878733'
+                    end_page: '878733'
+                    fulltext_available: true
+                    abstract: |-
+                      Certain viruses dramatically affect yield and quality of potatoes and have proved difficult to eradicate with current approaches. Here, we describe a reliable and efficient virus eradication method that is high throughput and more efficacious at producing virus-free potato plants than current reported methods. Thermotherapy, chemotherapy, and cryotherapy treatments were tested alone and in combination for ability to eradicate single and mixed
+                      (PVS),
+                      (PVA), and
+                      (PVM) infections from three potato cultivars. Chemotherapy treatments were undertaken on
+                      shoot segments for four weeks in culture medium supplemented with 100 mg L
+                      ribavirin. Thermotherapy on
+                      shoot segments was applied for two weeks at 40°C (day) and 28°C (night) with a 16 h photoperiod. Plant vitrification solution 2 (PVS2) and cryotherapy treatments included a shoot tip preculture followed by exposure to PVS2 either without or with liquid nitrogen (LN, cryotherapy) treatment. The virus status of control and recovered plants following therapies was assessed in post-regeneration culture after 3 months and then retested in plants after they had been growing in a greenhouse for a further 3 months. Microtuber production was investigated using
+                      virus-free and virus-infected segments. We found that thermotherapy and cryotherapy (60 min PVS2 + LN) used alone were not effective in virus eradication, while chemotherapy was better but with variable efficacy (20-100%). The most effective result (70-100% virus eradication) was obtained by combining chemotherapy with cryotherapy, or by consecutive chemotherapy, combined chemotherapy and thermotherapy, then cryotherapy treatments irrespective of cultivar. Regrowth following the two best virus eradication treatments was similar ranging from 8.6 to 29% across the three cultivars. The importance of virus removal on yield was reflected in "Dunluce" free of PVS having higher numbers of microtubers and in "V500' free of PVS and PVA having a greater proportion of microtubers > 5 mm. Our improved procedure has potential for producing virus-free planting material for the potato industry. It could also underpin the global exchange of virus-free germplasm for conservation and breeding programs.
+                    publication_title: Frontiers in plant science
+                    volume: '13'
+                    isxn:
+                    - 1664-462X
+                more: https://princeton.summon.serialssolutions.com/search?s.fvf=ContentType%2CNewspaper+Article%2Ct&s.normalized.subjects=f&s.secure=f&s.dailyCatalog=t&s.q=potato&s.dym=t&s.ho=t&s.rapido=f&s.ps=3&s.shortenurl=f
   "/search/best-bet?query={query}":
     parameters:
     - name: query
@@ -53,6 +201,11 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 0
+                records: []
   "/search/catalog?query={query}":
     parameters:
     - name: query
@@ -69,6 +222,38 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 7
+                records:
+                - title: 'Rub''ix qatinamit = El canto del pueblo : Estudiantina del
+                    Instituto Indígena de Santiago / [Oscar Azmitia, Manuel Salazar].'
+                  creator: Azmitia, Oscar
+                  publisher: "[Guatemala] : El Instituto, [199-]"
+                  id: SCSB-11568989
+                  type: Book
+                  url: https://catalog.princeton.edu/catalog/SCSB-11568989
+                  other_fields:
+                    call_number: ML421.I55 A96 1990z
+                    library: ReCAP
+                - title: 'COVID-19 and minority health access : illustrating symptomatic
+                    cases from reported minority communities and healthcare gaps due
+                    to COVID-19.'
+                  publisher: "[Lawrence, Mass.] : Rubix Life Sciences, 2020."
+                  id: '99122566163506421'
+                  type: Book
+                  url: https://catalog.princeton.edu/catalog/99122566163506421
+                  other_fields: {}
+                - title: Perspectives.
+                  publisher: 'Chicago, IL : Cedille Records, [2022]'
+                  id: '99126854831206421'
+                  type: Audio
+                  url: https://catalog.princeton.edu/catalog/99126854831206421
+                  other_fields:
+                    call_number: CD- 53772
+                    library: Mendel Music Library
+                more: https://catalog.princeton.edu/catalog?q=rubix&search_field=all_fields
   "/search/dpul?query={query}":
     parameters:
     - name: query
@@ -85,6 +270,39 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 238
+                records:
+                - title: 'Robinson Crusoe, The clever cats, &c. : a picture-book for
+                    the nursery ; containing sixteen coloured illustrations'
+                  creator: Defoe, Daniel, 1661?-1731
+                  publisher: 'London ; Edinburgh ; New York : Thomas Nelson & Sons,
+                    [not after 1888]'
+                  id: '02578b4e2ccf4497f1426a3ab7e11464'
+                  type: Book
+                  url: https://dpul.princeton.edu/catalog/02578b4e2ccf4497f1426a3ab7e11464
+                  other_fields:
+                    collection: Lloyd E. Cotsen
+                - title: "[Cat near fishbowl]."
+                  creator: Isoda, Koryūsai, active 1764-1788
+                  publisher: n.d.
+                  id: c68aa97b019a52478cc7dc6396336158
+                  type: Visual material
+                  url: https://dpul.princeton.edu/catalog/c68aa97b019a52478cc7dc6396336158
+                  other_fields:
+                    collection: Treasures of the Graphic Arts Collection
+                - title: Sinn-en-Minne-Beelden. Emblemata Amores Moresque. Emblemes,
+                    touchants les Amoues et les Moeurs [engraved title].
+                  creator: Cats, Jacob, 1577-1660
+                  publisher: Middelburg. [Hans vander Hellen (Hellenius). 1618].
+                  id: 7aadb58d17a19c532e38e4ff99cb95e9
+                  type: Book
+                  url: https://dpul.princeton.edu/catalog/7aadb58d17a19c532e38e4ff99cb95e9
+                  other_fields:
+                    collection: Lloyd E. Cotsen
+                more: https://dpul.princeton.edu/catalog?q=cats&search_field=all_fields
   "/search/findingaids?query={query}":
     parameters:
     - name: query
@@ -101,6 +319,72 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 325
+                records:
+                - title: Edward Anthony Papers, 1920s -1950s
+                  creator: Anthony, Edward, 1895-1971
+                  id: TC125
+                  type: collection
+                  description: Contains several manuscripts, including a 528-page
+                    autobiography, "My Big Cats" co-authored with Clyde Beatty about
+                    animal training in the circus, and a collection of poems. Also
+                    included are a few letters, a calendar date book for 1928, and
+                    other miscellanea.
+                  url: https://findingaids.princeton.edu/catalog/TC125
+                  other_fields:
+                    access_restriction: Collection is open for research use.
+                    date: 1920s -1950s
+                    extent: 2 boxes and 0.8 linear feet
+                    repository: Manuscripts Division
+                - title: Massachusetts Elementary School Student Compositions Collection,
+                    1866-1880
+                  creator: Princeton University. Library. Special Collections
+                  id: C0969
+                  type: collection
+                  description: Consists of 65 short, elementary school compositions
+                    written by children from Wilbraham, Massachusetts from 1866 to
+                    1880, though most are undated. Some of the compositions are on
+                    topics such as the battle of Bunker Hill, Christmas, farming,
+                    the Fourth of July, the schoolroom, or time pieces; however, the
+                    majority describes animals, both domestic and wild, including
+                    cats, dogs, foxes, squirrels, woodchucks, birds, and horses. The
+                    collection reflects a variety of penmanship styles, as well as
+                    differing abilities to express ideas through writing.
+                  url: https://findingaids.princeton.edu/catalog/C0969
+                  other_fields:
+                    access_restriction: Collection is open for research use.
+                    date: 1886-1880
+                    extent: 1 box and 0.2 linear feet
+                    repository: Manuscripts Division
+                - title: Whiting Willauer Papers, 1916-1962 (mostly 1941-1955)
+                  creator: Willauer, Whiting, 1906-1962
+                  id: MC142
+                  type: collection
+                  description: Consists of papers of Willauer (Princeton Class of
+                    1928) relating mainly to his official, semi-official, and private
+                    concerns in China during and after World War II when he was executive
+                    secretary (1941-1944) for China Defense Supplies, Inc., which
+                    purchased airplanes for Claire Lee Chennault's American Volunteer
+                    Group known as the "Flying Tigers;" director (1944-1945) of the
+                    Far East branch of the Foreign Economic Administration; and president
+                    and vice-chairman of the board of the Civil Air Transport (CAT)
+                    company in China, co-founded with Chennault. Included are Willauer's
+                    annotations to his papers and autobiographical notes, correspondence,
+                    articles, speeches, and interviews by and about him, photographs,
+                    CAT manuals, and a flight logbook for 1943-1944. Major correspondents
+                    include Joseph Alsop, Marshall Bannell, Claire L. Chennault, Thomas
+                    Corcoran, T. V. Soong, Charles L. Stillman, L. K. Taylor, Edward
+                    Warner, Erik Watts, Louise Willauer (wife), and William S. Youngman.
+                  url: https://findingaids.princeton.edu/catalog/MC142
+                  other_fields:
+                    access_restriction: Collection is open for research use.
+                    date: 1916-1962 (mostly 1941-1955)
+                    extent: 10 boxes and 1 folder
+                    repository: Public Policy Papers
+                more: https://findingaids.princeton.edu/catalog?q=cats&search_field=all_fields
   "/search/libanswers?query={query}":
     parameters:
     - name: query
@@ -117,6 +401,24 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 2
+                records:
+                - title: Color printer?
+                  id: '11559'
+                  type: FAQ
+                  url: https://faq.library.princeton.edu/faq/11559
+                  other_fields:
+                    topics: Library Information and Policies and Technology
+                - title: Printing from laptop to a library printer?
+                  id: '11210'
+                  type: FAQ
+                  url: https://faq.library.princeton.edu/econ/faq/11210
+                  other_fields:
+                    topics: Technical issues
+                more: https://faq.library.princeton.edu/search/?t=0&q=printer
   "/search/libguides?query={query}":
     parameters:
     - name: query
@@ -133,6 +435,37 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 59
+                records:
+                - title: Asian American Studies
+                  creator: Steven Knowlton
+                  publisher: Princeton University Library
+                  id: '84140'
+                  type: General Purpose Guide
+                  description: A guide to print and electronic resources in Princeton
+                    University Library.
+                  url: https://libguides.princeton.edu/asianamericans
+                  other_fields: {}
+                - title: East Asian Studies Links
+                  creator: Martin Heijdra
+                  publisher: Princeton University Library
+                  id: '361989'
+                  type: Topic Guide
+                  description: Links to East Asian Resources
+                  url: https://libguides.princeton.edu/eallinks
+                  other_fields: {}
+                - title: South Asian Studies
+                  creator: Ellen Ambrosone
+                  publisher: Princeton University Library
+                  id: '929471'
+                  type: Subject Guide
+                  description: ''
+                  url: https://libguides.princeton.edu/sas
+                  other_fields: {}
+                more: https://libguides.princeton.edu/srch.php?q=Asian American Studies
   "/search/database?query={query}":
     parameters:
     - name: query
@@ -149,6 +482,12 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 0
+                records: []
+                more: https://libguides.princeton.edu/az.php?q=oxford%20music
   "/search/pulmap?query={query}":
     parameters:
     - name: query
@@ -165,5 +504,50 @@ paths:
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                number: 16
+                records:
+                - title: Indiana.
+                  publisher: Scribner
+                  type: JPEG
+                  description: 'Shows railroads and canals.; Compiled according to
+                    Census of 1880 and latest surveys.; From: Encyclopaedia Britannica,
+                    9th ed. Vol. XII, plate VII. Scale approximately 1:2,000,000'
+                  url: https://maps.princeton.edu/catalog/
+                  other_fields:
+                    rights: Public
+                - title: 'South America : wall-atlas'
+                  creator: Guyot, A. (Arnold), 1807-1884
+                  publisher: 'New York : Published by Scribner, Armstrong & Co. ...
+                    [between 1871 and 1879].'
+                  id: princeton-6682x6396
+                  type: TIFF
+                  description: '"Card series." Relief shown by hachures and form lines.
+                    "Entered according to Act of Congress in the year 1865 by Charles
+                    Scribner & Co. ..." Inset: Profiles from west to east. Wall map.
+                    Scribner, Armstrong, & Co. flourished ca. 1871-1879. cf. Tooley''s
+                    dictionary of mapmakers.'
+                  url: https://maps.princeton.edu/catalog/princeton-6682x6396
+                  other_fields:
+                    rights: Public
+                    layer_geom_type: Image
+                - title: 'Africa : wall-atlas'
+                  creator: Guyot, A. (Arnold), 1807-1884
+                  publisher: 'New York : Scribner, Armstrong, & Co. [between 1871
+                    and 1879].'
+                  id: princeton-2b88qf00b
+                  type: TIFF
+                  description: '"Card series." Relief shown by hachures and form lines.
+                    "Entered according to Act of Congress in the year 1865 by Charles
+                    Scribner & Co. ..." Insets: Profiles from north to south -- Profiles
+                    from east to west. Wall map. Scribner, Armstrong, & Co. flourished
+                    ca. 1871-1879. cf. Tooley''s dictionary of mapmakers.'
+                  url: https://maps.princeton.edu/catalog/princeton-2b88qf00b
+                  other_fields:
+                    rights: Public
+                    layer_geom_type: Image
+                more: https://maps.princeton.edu/catalog?q=scribner&search_field=all_fields
 servers:
 - url: "/"
