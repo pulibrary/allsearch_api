@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ServiceController < ApplicationController
+  rescue_from ActionController::ParameterMissing, with: :show_query_errors
   attr_reader :query
 
   def show
@@ -19,8 +20,11 @@ class ServiceController < ApplicationController
           .strip
   end
 
-  def show_query_errors(exception)
-    render json: { error: exception.message }, status: :bad_request
+  def show_query_errors
+    render json: { error: {
+      code: 'QUERY_IS_EMPTY',
+      message: 'The query param must contain non-whitespace characters.'
+    } }, status: :bad_request
   end
 
   def special_characters

@@ -15,17 +15,39 @@ RSpec.describe 'article' do
       produces 'application/json'
       description 'Searches the Summon API using a query term. Excludes Newspaper Articles and items not held by PUL'
 
+      after do |example|
+        example.metadata[:response][:content] = {
+          'application/json' => {
+            example: JSON.parse(response.body, symbolize_names: true)
+          }
+        }
+      end
+
       response(200, 'successful') do
         let(:query) { 'potato' }
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-
         run_test!
+      end
+
+      response(400, 'with an empty search query') do
+        let(:query) { '' }
+        run_test! do |response|
+          data = JSON.parse(response.body, symbolize_names: true)
+          expect(data[:error]).to eq({
+                                       code: 'QUERY_IS_EMPTY',
+                                       message: 'The query param must contain non-whitespace characters.'
+                                     })
+        end
+      end
+
+      response(400, 'with a search query that only contains whitespace') do
+        let(:query) { "\t  \n " }
+        run_test! do |response|
+          data = JSON.parse(response.body, symbolize_names: true)
+          expect(data[:error]).to eq({
+                                       code: 'QUERY_IS_EMPTY',
+                                       message: 'The query param must contain non-whitespace characters.'
+                                     })
+        end
       end
     end
   end
