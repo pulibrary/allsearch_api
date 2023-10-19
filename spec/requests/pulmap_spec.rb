@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/pulmap' do
   it 'returns json' do
-    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulmap/select?facet=false&fl=uuid,dc_title_s,dc_creator_sm,dc_publisher_s,dc_format_s,dc_description_s,dc_rights_s,layer_geom_type_s&q=scribner&rows=3&sort=score%20desc')
+    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulmap/select?facet=false&fl=layer_slug_s,dc_title_s,dc_creator_sm,dc_publisher_s,dc_format_s,dc_description_s,dc_rights_s,layer_geom_type_s&q=scribner&rows=3&sort=score%20desc')
       .to_return(status: 200, body: file_fixture('solr/pulmap/scribner.json'))
     get '/search/pulmap?query=scribner'
 
@@ -14,7 +14,7 @@ RSpec.describe 'GET /search/pulmap' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulmap/select?facet=false&fl=uuid,dc_title_s,dc_creator_sm,dc_publisher_s,dc_format_s,dc_description_s,dc_rights_s,layer_geom_type_s&q=scribner&rows=3&sort=score%20desc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulmap/select?facet=false&fl=layer_slug_s,dc_title_s,dc_creator_sm,dc_publisher_s,dc_format_s,dc_description_s,dc_rights_s,layer_geom_type_s&q=scribner&rows=3&sort=score%20desc')
         .to_return(status: 200, body: file_fixture('solr/pulmap/scribner.json'))
     end
 

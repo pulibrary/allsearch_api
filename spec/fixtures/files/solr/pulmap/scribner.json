@@ -1,72 +1,92 @@
 {
-    "responseHeader":{
-      "zkConnected":true,
-      "status":0,
-      "QTime":0,
-      "params":{
-        "ps":"0",
-        "indent":"2",
-        "echoParams":"all",
-        "fl":"uuid,dc_title_s,dc_creator_sm,dc_publisher_s,dc_format_s,dc_description_s,dc_rights_s,layer_geom_type_s",
-        "publisher_qf":"\n        dc_publisher_ti^5\n        dc_creator_tmi\n      ",
-        "subject_qf":"\n        dc_subject_tmi\n        dct_spatial_tmi\n      ",
-        "_forwardedCount":"1",
-        "tie":"0.01",
-        "defType":"edismax",
-        "qf":"\n        text^1\n        dc_description_ti^2\n        dc_creator_tmi^3\n        dc_publisher_ti^3\n        dct_isPartOf_tmi^4\n        dc_subject_tmi^5\n        dct_spatial_tmi^5\n        dct_temporal_tmi^5\n        dc_title_ti^6\n        dc_rights_ti^7\n        dct_provenance_ti^8\n        layer_geom_type_ti^9\n        layer_slug_ti^10\n        dc_identifier_ti^10\n      ",
-        "title_qf":"\n        dc_title_ti^10\n        dct_isPartOf_tmi\n      ",
-        "wt":"json",
-        "mm":"1<-1 3<50% 6<90%",
-        "qs":"1",
-        "q.alt":"*:*",
-        "facet.field":["dct_isPartOf_sm",
-          "dct_provenance_s",
-          "dct_spatial_sm",
-          "dc_creator_sm",
-          "dc_format_s",
-          "dc_language_s",
-          "dc_publisher_s",
-          "dc_rights_s",
-          "dc_subject_sm",
-          "layer_geom_type_s",
-          "solr_year_i"],
-        "publisher_pf":"\n        dc_publisher_ti^5\n        dc_creator_tmi\n      ",
-        "subject_pf":"\n        dc_subject_tmi\n        dct_spatial_tmi\n      ",
-        "start":"0",
-        "sort":"score desc",
-        "rows":"3",
-        "q":"scribner",
-        "facet.limit":"10",
-        "spellcheck":"true",
-        "pf":"\n        text^1\n        dc_description_ti^2\n        dc_creator_tmi^3\n        dc_publisher_ti^3\n        dct_isPartOf_tmi^4\n        dc_subject_tmi^5\n        dct_spatial_tmi^5\n        dct_temporal_tmi^5\n        dc_title_ti^6\n        dc_rights_ti^7\n        dct_provenance_ti^8\n        layer_geom_type_ti^9\n        layer_slug_ti^10\n        dc_identifier_ti^10\n      ",
-        "title_pf":"\n        dc_title_ti^10\n        dct_isPartOf_tmi\n      ",
-        "facet.mincount":"1",
-        "facet":"false"}},
-    "response":{"numFound":16,"start":0,"docs":[
-        {
-          "dc_rights_s":"Public",
-          "dc_title_s":"Indiana.",
-          "dc_description_s":"Shows railroads and canals.; Compiled according to Census of 1880 and latest surveys.; From: Encyclopaedia Britannica, 9th ed. Vol. XII, plate VII. Scale approximately 1:2,000,000",
-          "dc_format_s":"JPEG",
-          "dc_publisher_s":"Scribner"},
-        {
-          "uuid":"princeton-6682x6396",
-          "dc_title_s":"South America : wall-atlas",
-          "dc_rights_s":"Public",
-          "dc_description_s":"\"Card series.\" Relief shown by hachures and form lines. \"Entered according to Act of Congress in the year 1865 by Charles Scribner & Co. ...\" Inset: Profiles from west to east. Wall map. Scribner, Armstrong, & Co. flourished ca. 1871-1879. cf. Tooley's dictionary of mapmakers.",
-          "dc_creator_sm":["Guyot, A. (Arnold), 1807-1884"],
-          "dc_publisher_s":"New York : Published by Scribner, Armstrong & Co. ... [between 1871 and 1879].",
-          "layer_geom_type_s":"Image",
-          "dc_format_s":"TIFF"},
-        {
-          "uuid":"princeton-2b88qf00b",
-          "dc_title_s":"Africa : wall-atlas",
-          "dc_rights_s":"Public",
-          "dc_description_s":"\"Card series.\" Relief shown by hachures and form lines. \"Entered according to Act of Congress in the year 1865 by Charles Scribner & Co. ...\" Insets: Profiles from north to south -- Profiles from east to west. Wall map. Scribner, Armstrong, & Co. flourished ca. 1871-1879. cf. Tooley's dictionary of mapmakers.",
-          "dc_creator_sm":["Guyot, A. (Arnold), 1807-1884"],
-          "dc_publisher_s":"New York : Scribner, Armstrong, & Co. [between 1871 and 1879].",
-          "layer_geom_type_s":"Image",
-          "dc_format_s":"TIFF"}]
-    },
-    "spellcheck":{
-      "suggestions":[]}}
+  "responseHeader": {
+    "zkConnected": true,
+    "status": 0,
+    "QTime": 2,
+    "params": {
+      "ps": "0",
+      "indent": "2",
+      "echoParams": "all",
+      "fl": "layer_slug_s,dc_title_s,dc_creator_sm,dc_publisher_s,dc_format_s,dc_description_s,dc_rights_s,layer_geom_type_s",
+      "publisher_qf": "\n        dc_publisher_ti^5\n        dc_creator_tmi\n      ",
+      "subject_qf": "\n        dc_subject_tmi\n        dct_spatial_tmi\n      ",
+      "_forwardedCount": "1",
+      "tie": "0.01",
+      "defType": "edismax",
+      "qf": "\n        text^1\n        dc_description_ti^2\n        dc_creator_tmi^3\n        dc_publisher_ti^3\n        dct_isPartOf_tmi^4\n        dc_subject_tmi^5\n        dct_spatial_tmi^5\n        dct_temporal_tmi^5\n        dc_title_ti^6\n        dc_rights_ti^7\n        dct_provenance_ti^8\n        layer_geom_type_ti^9\n        layer_slug_ti^10\n        dc_identifier_ti^10\n      ",
+      "title_qf": "\n        dc_title_ti^10\n        dct_isPartOf_tmi\n      ",
+      "wt": "json",
+      "mm": "1<-1 3<50% 6<90%",
+      "qs": "1",
+      "q.alt": "*:*",
+      "facet.field": [
+        "dct_isPartOf_sm",
+        "dct_provenance_s",
+        "dct_spatial_sm",
+        "dc_creator_sm",
+        "dc_format_s",
+        "dc_language_s",
+        "dc_publisher_s",
+        "dc_rights_s",
+        "dc_subject_sm",
+        "layer_geom_type_s",
+        "solr_year_i"
+      ],
+      "publisher_pf": "\n        dc_publisher_ti^5\n        dc_creator_tmi\n      ",
+      "subject_pf": "\n        dc_subject_tmi\n        dct_spatial_tmi\n      ",
+      "start": "0",
+      "sort": "score desc",
+      "rows": "3",
+      "q": "scribner",
+      "facet.limit": "10",
+      "spellcheck": "true",
+      "pf": "\n        text^1\n        dc_description_ti^2\n        dc_creator_tmi^3\n        dc_publisher_ti^3\n        dct_isPartOf_tmi^4\n        dc_subject_tmi^5\n        dct_spatial_tmi^5\n        dct_temporal_tmi^5\n        dc_title_ti^6\n        dc_rights_ti^7\n        dct_provenance_ti^8\n        layer_geom_type_ti^9\n        layer_slug_ti^10\n        dc_identifier_ti^10\n      ",
+      "title_pf": "\n        dc_title_ti^10\n        dct_isPartOf_tmi\n      ",
+      "facet.mincount": "1",
+      "facet": "false"
+    }
+  },
+  "response": {
+    "numFound": 16,
+    "start": 0,
+    "docs": [
+      {
+        "dc_rights_s": "Public",
+        "dc_title_s": "Indiana.",
+        "layer_slug_s": "70a5c49d-bc87-4789-8dc0-c605a397e698",
+        "dc_description_s": "Shows railroads and canals.; Compiled according to Census of 1880 and latest surveys.; From: Encyclopaedia Britannica, 9th ed. Vol. XII, plate VII. Scale approximately 1:2,000,000",
+        "dc_format_s": "JPEG",
+        "dc_publisher_s": "Scribner"
+      },
+      {
+        "layer_slug_s": "princeton-6682x6396",
+        "dc_title_s": "South America : wall-atlas",
+        "dc_rights_s": "Public",
+        "dc_description_s": "\"Card series.\" Relief shown by hachures and form lines. \"Entered according to Act of Congress in the year 1865 by Charles Scribner & Co. ...\" Inset: Profiles from west to east. Wall map. Scribner, Armstrong, & Co. flourished ca. 1871-1879. cf. Tooley's dictionary of mapmakers.",
+        "dc_creator_sm": [
+          "Guyot, A. (Arnold), 1807-1884"
+        ],
+        "dc_publisher_s": "New York : Published by Scribner, Armstrong & Co. ... [between 1871 and 1879].",
+        "layer_geom_type_s": "Image",
+        "dc_format_s": "TIFF"
+      },
+      {
+        "layer_slug_s": "princeton-2b88qf00b",
+        "dc_title_s": "Africa : wall-atlas",
+        "dc_rights_s": "Public",
+        "dc_description_s": "\"Card series.\" Relief shown by hachures and form lines. \"Entered according to Act of Congress in the year 1865 by Charles Scribner & Co. ...\" Insets: Profiles from north to south -- Profiles from east to west. Wall map. Scribner, Armstrong, & Co. flourished ca. 1871-1879. cf. Tooley's dictionary of mapmakers.",
+        "dc_creator_sm": [
+          "Guyot, A. (Arnold), 1807-1884"
+        ],
+        "dc_publisher_s": "New York : Scribner, Armstrong, & Co. [between 1871 and 1879].",
+        "layer_geom_type_s": "Image",
+        "dc_format_s": "TIFF"
+      }
+    ]
+  },
+  "spellcheck": {
+    "suggestions": [
+      
+    ]
+  }
+}
