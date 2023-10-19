@@ -69,7 +69,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
   "/search/article?query={query}":
     parameters:
@@ -199,7 +199,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
   "/search/best-bet?query={query}":
     parameters:
@@ -228,7 +228,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
   "/search/catalog?query={query}":
     parameters:
@@ -284,7 +284,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
   "/search/dpul?query={query}":
     parameters:
@@ -341,7 +341,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
   "/search/findingaids?query={query}":
     parameters:
@@ -431,7 +431,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
   "/search/libanswers?query={query}":
     parameters:
@@ -473,7 +473,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
   "/search/libguides?query={query}":
     parameters:
@@ -528,7 +528,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
   "/search/database?query={query}":
     parameters:
@@ -558,7 +558,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
   "/search/pulmap?query={query}":
     parameters:
@@ -627,7 +627,7 @@ paths:
             application/json:
               example:
                 error:
-                  code: QUERY_IS_EMPTY
+                  problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
 servers:
 - url: "/"

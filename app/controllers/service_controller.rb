@@ -22,7 +22,7 @@ class ServiceController < ApplicationController
 
   def show_query_errors
     render json: { error: {
-      code: 'QUERY_IS_EMPTY',
+      problem: 'QUERY_IS_EMPTY',
       message: 'The query param must contain non-whitespace characters.'
     } }, status: :bad_request
   end

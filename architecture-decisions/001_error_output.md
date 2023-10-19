@@ -35,22 +35,33 @@ need to know how to handle:
     on the load balancer
     * 429 Too Many Requests
     * 500 Internal Server Error
-* For any of these status codes except 200, we will return a JSON
-object in the following format:
+* For any of these status codes except 200, the response body will
+be in the following format:
     ```
     {
         error: {
-            code: "QUERY_IS_EMPTY",
+            problem: "QUERY_IS_EMPTY",
             message: "The query param must contain non-whitespace characters."
         }
     }
     ```
-    The codes should be unlikely to change over time, so that client
-    applications can rely on them.
-    The message should offer helpful troubleshooting information, with
-    the audience of client application developers.
-* We will make sure that errors make it through the load balancer, rather
-than being converted into the generic "Looks like something went wrong!" page.
+    The `problem` string will provide additional information about what caused the
+    error, beyond what is provided by the HTTP status code.  Client applications
+    should be able to rely on the `problem` string, so these strings should be
+    succinct and not change over time.
+
+    The `message` string should offer helpful troubleshooting information, with
+    the audience of client application developers.  Client applications should
+    not base any logic on these `message` strings, since they may be verbose and
+    change over time.
+
+    The `problem` and `message` don't have a 1:1 relationship with the HTTP status
+    code.  For example, the HTTP status code 400 could refer to a wide range of
+    potential `problems`, not just `QUERY_IS_EMPTY`.  If our application sends a
+    400 response, it should also send a more specific `problem` and `message`.
+* We will make sure that these JSON response bodies make it through the load
+balancer, rather than being converted into the generic "Looks like something
+went wrong!" page.
 * For any errors produced at the application level,
 we will include an example of the error response in
 swagger.

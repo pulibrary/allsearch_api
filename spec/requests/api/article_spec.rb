@@ -33,7 +33,7 @@ RSpec.describe 'article' do
         run_test! do |response|
           data = JSON.parse(response.body, symbolize_names: true)
           expect(data[:error]).to eq({
-                                       code: 'QUERY_IS_EMPTY',
+                                       problem: 'QUERY_IS_EMPTY',
                                        message: 'The query param must contain non-whitespace characters.'
                                      })
         end
@@ -44,7 +44,7 @@ RSpec.describe 'article' do
         run_test! do |response|
           data = JSON.parse(response.body, symbolize_names: true)
           expect(data[:error]).to eq({
-                                       code: 'QUERY_IS_EMPTY',
+                                       problem: 'QUERY_IS_EMPTY',
                                        message: 'The query param must contain non-whitespace characters.'
                                      })
         end
