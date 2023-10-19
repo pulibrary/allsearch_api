@@ -21,7 +21,9 @@ class Document
   private
 
   def other_fields
-    doc_keys&.index_with { |key| send(key) }&.compact
+    doc_keys&.index_with { |key| send(key) }
+            &.compact
+            &.transform_values(&:to_s)
   end
 
   attr_reader :document

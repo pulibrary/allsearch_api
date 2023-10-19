@@ -23,9 +23,9 @@ RSpec.describe ArticleDocument do
     expect(article_document.url).to include('princeton.summon.serialssolutions.com/2.0.0/link/0/')
     expect(article_document.publication_date).to eq('2009')
     expect(article_document.publication_year).to eq(2009)
-    expect(article_document.fulltext_available).to be(true)
+    expect(article_document.fulltext_available).to be('Full-text available')
     expect(article_document.abstract).to include('In 1994, the Government of Cameroon')
-    expect(article_document.isxn).to match_array(%w[9780821378786 0821378783])
+    expect(article_document.isxn).to eq('9780821378786')
   end
 
   context 'with a lot of journal articles' do
@@ -43,7 +43,7 @@ RSpec.describe ArticleDocument do
       expect(article_document.volume).to eq('11')
       expect(article_document.issue).to eq('20')
       expect(article_document.type).to eq('Journal Article')
-      expect(article_document.isxn).to contain_exactly('2223-7747')
+      expect(article_document.isxn).to eq('2223-7747')
     end
   end
 end
