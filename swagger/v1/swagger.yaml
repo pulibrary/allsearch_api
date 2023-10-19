@@ -63,6 +63,14 @@ paths:
                     primary_image: https://puam-loris.aws.princeton.edu/loris/PUAMSTU2018-1959213.jp2
                     object_number: 2001-120
                 more: https://artmuseum.princeton.edu/search/collections?mainSearch=%22cats%22
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
   "/search/article?query={query}":
     parameters:
     - name: query
@@ -182,6 +190,14 @@ paths:
                     volume: '13'
                     isxn: 1664-462X
                 more: https://princeton.summon.serialssolutions.com/search?s.fvf=ContentType%2CNewspaper+Article%2Ct&s.normalized.subjects=f&s.secure=f&s.dailyCatalog=t&s.q=potato&s.dym=t&s.ho=t&s.rapido=f&s.ps=3&s.shortenurl=f
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
   "/search/best-bet?query={query}":
     parameters:
     - name: query
@@ -203,6 +219,14 @@ paths:
               example:
                 number: 0
                 records: []
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
   "/search/catalog?query={query}":
     parameters:
     - name: query
@@ -251,6 +275,14 @@ paths:
                     call_number: CD- 53772
                     library: Mendel Music Library
                 more: https://catalog.princeton.edu/catalog?q=rubix&search_field=all_fields
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
   "/search/dpul?query={query}":
     parameters:
     - name: query
@@ -300,6 +332,14 @@ paths:
                   other_fields:
                     collection: Lloyd E. Cotsen
                 more: https://dpul.princeton.edu/catalog?q=cats&search_field=all_fields
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
   "/search/findingaids?query={query}":
     parameters:
     - name: query
@@ -382,6 +422,14 @@ paths:
                     extent: 10 boxes and 1 folder
                     repository: Public Policy Papers
                 more: https://findingaids.princeton.edu/catalog?q=cats&search_field=all_fields
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
   "/search/libanswers?query={query}":
     parameters:
     - name: query
@@ -416,6 +464,14 @@ paths:
                   other_fields:
                     topics: Technical issues
                 more: https://faq.library.princeton.edu/search/?t=0&q=printer
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
   "/search/libguides?query={query}":
     parameters:
     - name: query
@@ -463,6 +519,14 @@ paths:
                   url: https://libguides.princeton.edu/sas
                   other_fields: {}
                 more: https://libguides.princeton.edu/srch.php?q=Asian American Studies
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
   "/search/database?query={query}":
     parameters:
     - name: query
@@ -485,6 +549,14 @@ paths:
                 number: 0
                 records: []
                 more: https://libguides.princeton.edu/az.php?q=oxford%20music
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
   "/search/pulmap?query={query}":
     parameters:
     - name: query
@@ -546,5 +618,13 @@ paths:
                     rights: Public
                     layer_geom_type: Image
                 more: https://maps.princeton.edu/catalog?q=scribner&search_field=all_fields
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
 servers:
 - url: "/"
