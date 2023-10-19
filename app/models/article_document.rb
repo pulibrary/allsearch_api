@@ -44,11 +44,11 @@ class ArticleDocument < Document
   end
 
   def fulltext_available
-    document.fulltext
+    document.fulltext ? 'Full-text available' : nil
   end
 
   def isxn
-    (isbn + issn).compact
+    (isbn + issn).compact.first
   end
 
   def isbn

@@ -16,9 +16,9 @@ RSpec.describe 'GET /search/database' do
                      'Includes entries from Grove dictionaries of jazz and opera as well.',
         url: 'https://libguides.princeton.edu/resource/3970',
         other_fields: {
-          subjects: ['Biographical Sources', 'Dance', 'Music', 'Music Literature', 'Theater'],
-          alternative_titles: ['Grove Music Online (now part of Oxford Music Online)',
-                               'New Grove Dictionary of Music and Musicians (now part of Oxford Music Online)']
+          subjects: 'Biographical Sources, Dance, Music, Music Literature, Theater',
+          alternative_titles: 'Grove Music Online (now part of Oxford Music Online), ' \
+                              'New Grove Dictionary of Music and Musicians (now part of Oxford Music Online)'
         }
       ]
     }

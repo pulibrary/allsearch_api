@@ -37,10 +37,10 @@ class LibraryDatabaseDocument < Document
   end
 
   def subjects
-    document.subjects
+    document.subjects&.join(', ')
   end
 
   def alternative_titles
-    document.alt_names
+    document.alt_names&.join(', ')
   end
 end

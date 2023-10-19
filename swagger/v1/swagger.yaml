@@ -96,8 +96,8 @@ paths:
                   url: http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwpV3dS9xAEF-KFipIsVaotooI6oOkmtvN7gZEuVPPOz3p9QxFn45NsvcBJRHvIpx_vTPJ5sPWB8WXcFmWTXIzOzu_2d_MErL7jz3otBvWVaPVcpl30fzT4RasUa5tIVa8ci86Tu_GuT0zWQSTrP4fZv-CEBCnT8yUeSHbAfNWkec4y0-aOh6bDXaMMx3Y3V67DxDY23kAAZe3IPp8Hu5s0-Z7tQbaQG8wC_cNmlMMCg3wG_QHrqBBcH2VDnVjcEXjqv-KZxxN00BtA5a_v5U4wu8EYxKjDP0_Y_2ex0lq6JO7fJlEAtDY7PYn0axCCxonhgMQDR9HselughKAZ3N6myEmnXbbe_Xz0pahFwKOfFZc86d-oS03xnZF6dI0uf-MPKUusiLv0g8GdxE3XkW5nBUkw7pgnApATACO5wFZCmR8_rq0ixAcOssyPRy3eJWsrCc-Yf_5-GbFrvge3hL5bEDDZj2T0BfyQUfL5GMDpBPNvpLFw9FRJqnD_dHRCvGaZ95JyzKnXFhDQWEaCA0Yzw0ZDWyppORChUqzQPqyFgoqNA8HrmY8dJUesANlp_WHfF9SGfBQBPQb2QQv02fc50o6NcYlV_Dhjq8Vq_mBEyi1Srbw5ftY7yNCQtFQJZNJv33d65d_0irZNZ0G8fReBcrkZ8SRxhJhlZ5rrxnuO1koFeMHmZveJ3qdfCom90Ya_dhIJfIE8rxG9w
                   other_fields:
                     publication_date: '20221001'
-                    publication_year: 2022
-                    fulltext_available: true
+                    publication_year: '2022'
+                    fulltext_available: Full-text available
                     abstract: This study was conducted to determine the aphicidal
                       effect of a leaf extract of the Atlantic potato cultivar on
                       the performance of green peach aphids. Three concentrations
@@ -125,8 +125,7 @@ paths:
                     publication_title: Plants (Basel)
                     volume: '11'
                     issue: '20'
-                    isxn:
-                    - 2223-7747
+                    isxn: 2223-7747
                 - title: An inducible potato (E,E)‐farnesol synthase confers tolerance
                     against bacterial pathogens in potato and tobacco
                   creator: Dwivedi, Varun
@@ -139,10 +138,10 @@ paths:
                   url: http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1fa9swED_KKHQva7sN5rYr6l7aQk1jR3JsKIWkJGQhZaWkZXsykiw3hWCH2Hno0_oR-hn3SXbnf6SBQdmbQbIsS7q730mn3wEcr-mD8feefd0bDgM-GQ3ux56NNipwbPIVr4PRWNz-FL_6K9m-SoqIZs-NhKNQ2STjUmW1nJ_nc5Rz4QfksKPVp7wNzo-r5gih0y65oxCi22g23YpW6NWbr4zRukpegatuZW8G2_BQd7MItm7CTWgXThuEayuB2DWj43_91A58qCAp65ZraBc2TPIRNnspwsanT_C7mzD025f6Uc0Mu5hezrEgTy_Op5fspH_WP_3z_BLLBWrMdMaypySfol1kurhImLE8nRlK3WGYfJCPCEWZKumh8YOUDDnF9Zth-2sNyyRipGm0Tj_D3aA_uRraVdYGW7cRi9m6JVpxHCmtg5YbROi5G6G4E7m8HTtOzHkUc58bH5GoInp9D-0h5yoi2h309kz7CzCETYp7ypO-cLnne5IjLlJGcldpoaW04Fs9b-G8ZOUIa28GRzAsRtCCY5rRkCQ1X0gtqwsHaWKI8yrsdhzRIXeWW3BQT3pYiXAWuh309rCQCwuOmmIUPjpRkYlJl1iHqHICIgG04KSY1H93J5zcjIqHvbdX3Yf3Ll23KGLaDuBdvliar7DVLLbDYsn_BXhGB0k
                   other_fields:
                     publication_date: September 2022
-                    publication_year: 2022
+                    publication_year: '2022'
                     start_page: '1308'
                     end_page: '1323'
-                    fulltext_available: true
+                    fulltext_available: Full-text available
                     abstract: |-
                       SUMMARY
                       Terpene synthases (TPSs) have diverse biological functions in plants. Though the roles of TPSs in herbivore defense are well established in many plant species, their role in bacterial defense has been scarce and is emerging. Through functional genomics, here we report the in planta role of potato (Solanum tuberosum) terpene synthase (StTPS18) in bacterial defense. Expression of StTPS18 was highest in leaves and was induced in response to Pseudomonas syringae and methyl jasmonate treatments. The recombinant StTPS18 exhibited bona fide (E,E)‐farnesol synthase activity forming a sesquiterpenoid, (E,E)‐farnesol as the sole product, utilising (E,E)‐farnesyl diphosphate (FPP). Subcellular localization of GFP fusion protein revealed that StTPS18 is localized to the cytosol. Silencing and overexpression of StTPS18 in potato resulted in reduced and enhanced tolerance, respectively, to bacterial pathogens P. syringae and Ralstonia solanacearum. Bacterial growth assay using medium containing (E,E)‐farnesol significantly inhibited P. syringae growth. Moreover, StTPS18 overexpressing transgenic potato and Nicotiana tabacum leaves, and (E,E)‐farnesol and P. syringae infiltrated potato leaves exhibited elevated expression of sterol pathway and members of pathogenesis‐related genes with enhanced phytosterol accumulation. Interestingly, enhanced phytosterols in 13C3‐(E,E)‐farnesol infiltrated potato leaves were devoid of any noticeable 13C labeling, indicating no direct utilization of (E,E)‐farnesol in phytosterols formation. Furthermore, leaves of StTPS18 overexpressing transgenic lines had no detectable (E,E)‐farnesol similar to the control plant, and emitted lower levels of sesquiterpenes than the control. These findings point towards an indirect involvement of StTPS18 and its product (E,E)‐farnesol in bacterial defense through upregulation of phytosterol biosynthesis and defense genes.
@@ -152,8 +151,7 @@ paths:
                       biology'
                     volume: '111'
                     issue: '5'
-                    isxn:
-                    - '0960-7412'
+                    isxn: '0960-7412'
                 - title: Eradication of Potato Virus S , Potato Virus A , and Potato
                     Virus M From Infected in vitro -Grown Potato Shoots Using in vitro
                     Therapies
@@ -167,10 +165,10 @@ paths:
                   url: http://princeton.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1ba9swFBbtGGwvYze27FK0pzGo4_gmWVAKTUmWdgkra1a2J6ObG0NjBdcZ7Ofsn-5ItsMS8rQXP-iChL4j6_ukoyOEPu78D6YXQ282nExYPL8c30yJB2sUCzyrFWfscpp8-5H8HB2gpLsO4_z2pSj65d2yXxYL5165Wkq_cxXzr2bnwGoCoBL-ITqkUfqPSm9ielviQ5tTSdBgzM9XdzY2dxj2U7DQyL6eEwGRAfoy2FqQXNz-fWRz12eyiSjlFqHxU_SkZY_4rOniM3Sgy-fo4dAAw_v9Av0ZVVy1e3DY5PhkcXoFWbU58Ren-Kao1vf4-nhv8tkx5qXamzXD48os8YXz2tIKFyX-VdSV8T5bBb9T5XphTH2PnSPCpiSeu0teoMlfou_j0fx84rVPMHgSiFPtKZ3mIlAgSiiRUTjQkocBjEGuSChB-YAaghSaE5ApcaA000CnBrkeKKYjqBi9Rhg4kIiJIDxNwpikhMdAcoTmcShkIjnvoU8dANmqCbGRgTSxuGUWt8ziljW49dDQIrQpZ4NjuwRT3WatfcD6n6YKmK6ijMdCEqGBE0HXhGSKUgUNfujwzWAy2RMSXmqzhpYIje2lmTDooVcN3pumOnvpIbplCVt92c4B43UBu1tjffPfNd-ix3YQrNdCwN6hB3W11u_RI7v1KzVohCO3lQDfr1-CIzcX_gIzOQ-b
                   other_fields:
                     publication_date: '2022-05-19'
-                    publication_year: 2022
+                    publication_year: '2022'
                     start_page: '878733'
                     end_page: '878733'
-                    fulltext_available: true
+                    fulltext_available: Full-text available
                     abstract: |-
                       Certain viruses dramatically affect yield and quality of potatoes and have proved difficult to eradicate with current approaches. Here, we describe a reliable and efficient virus eradication method that is high throughput and more efficacious at producing virus-free potato plants than current reported methods. Thermotherapy, chemotherapy, and cryotherapy treatments were tested alone and in combination for ability to eradicate single and mixed
                       (PVS),
@@ -182,8 +180,7 @@ paths:
                       virus-free and virus-infected segments. We found that thermotherapy and cryotherapy (60 min PVS2 + LN) used alone were not effective in virus eradication, while chemotherapy was better but with variable efficacy (20-100%). The most effective result (70-100% virus eradication) was obtained by combining chemotherapy with cryotherapy, or by consecutive chemotherapy, combined chemotherapy and thermotherapy, then cryotherapy treatments irrespective of cultivar. Regrowth following the two best virus eradication treatments was similar ranging from 8.6 to 29% across the three cultivars. The importance of virus removal on yield was reflected in "Dunluce" free of PVS having higher numbers of microtubers and in "V500' free of PVS and PVA having a greater proportion of microtubers > 5 mm. Our improved procedure has potential for producing virus-free planting material for the potato industry. It could also underpin the global exchange of virus-free germplasm for conservation and breeding programs.
                     publication_title: Frontiers in plant science
                     volume: '13'
-                    isxn:
-                    - 1664-462X
+                    isxn: 1664-462X
                 more: https://princeton.summon.serialssolutions.com/search?s.fvf=ContentType%2CNewspaper+Article%2Ct&s.normalized.subjects=f&s.secure=f&s.dailyCatalog=t&s.q=potato&s.dym=t&s.ho=t&s.rapido=f&s.ps=3&s.shortenurl=f
   "/search/best-bet?query={query}":
     parameters:
