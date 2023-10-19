@@ -6,7 +6,7 @@ class PulmapDocument < Document
   private
 
   def id
-    document[:uuid]
+    document[:layer_slug_s]
   end
 
   def url

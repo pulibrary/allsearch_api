@@ -18,7 +18,7 @@ class Pulmap
   end
 
   def solr_fields
-    %w[uuid dc_title_s dc_creator_sm dc_publisher_s dc_format_s dc_description_s dc_rights_s layer_geom_type_s]
+    %w[layer_slug_s dc_title_s dc_creator_sm dc_publisher_s dc_format_s dc_description_s dc_rights_s layer_geom_type_s]
   end
 
   def solr_sort
