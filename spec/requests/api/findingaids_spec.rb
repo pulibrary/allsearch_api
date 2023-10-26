@@ -4,7 +4,7 @@ require 'swagger_helper'
 
 RSpec.describe 'findingaids' do
   before do
-    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_ssm,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm,normalized_date_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_ssm:collection')
+    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_ssm,abstract_ssm,repository_ssm,extent_ssm,accessrestrict_ssm,normalized_date_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_ssm:collection')
       .to_return(status: 200, body: file_fixture('solr/findingaids/cats.json'))
   end
 

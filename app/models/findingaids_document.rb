@@ -33,7 +33,7 @@ class FindingaidsDocument < Document
 
   # This field may contain html
   def description
-    document[:scopecontent_ssm]&.first
+    document[:abstract_ssm]&.first
   end
 
   def doc_keys

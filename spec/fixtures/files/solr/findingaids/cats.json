@@ -2,17 +2,18 @@
   "responseHeader":{
     "zkConnected":true,
     "status":0,
-    "QTime":4,
+    "QTime":3,
     "params":{
       "q":"cats",
-      "fl":"id,collection_ssm,creator_ssm,level_ssm,scopecontent_ssm,repository_ssm,extent_ssm,accessrestrict_ssm",
-      "sort":"score desc, title_sort asc",
+      "fl":"id,collection_ssm,creator_ssm,level_ssm,abstract_ssm,repository_ssm,extent_ssm,accessrestrict_ssm,normalized_date_ssm",
       "fq":"level_ssm:collection",
+      "sort":"score desc, title_sort asc",
       "rows":"3",
       "facet":"false"}},
   "response":{"numFound":325,"start":0,"docs":[
       {
         "id":"TC125",
+        "level_ssm":["collection"],
         "normalized_date_ssm":["1920s -1950s"],
         "collection_ssm":["Edward Anthony Papers, 1920s -1950s"],
         "repository_ssm":["Manuscripts Division"],
@@ -20,21 +21,21 @@
         "extent_ssm":["2 boxes",
           "0.8 linear feet"],
         "accessrestrict_ssm":["Collection is open for research use."],
-        "scopecontent_ssm":["Contains several manuscripts, including a 528-page autobiography, \"My Big Cats\" co-authored with Clyde Beatty about animal training in the circus, and a collection of poems. Also included are a few letters, a calendar date book for 1928, and other miscellanea."],
-        "level_ssm":["collection"]},
+        "abstract_ssm":["Edward Anthony was a noted writer and publisher in the twentieth century, known primarily for his light verse. His papers include several manuscripts, including an autobiography co-authored with Clyde Beatty about circus animal training and a collection of poems. A few miscellaneous papers, such as letters and a date book from 1928 complete the collection."]},
       {
         "id":"C0969",
-        "normalized_date_ssm":["1886-1880"],
+        "level_ssm":["collection"],
+        "normalized_date_ssm":["1866-1880"],
         "collection_ssm":["Massachusetts Elementary School Student Compositions Collection, 1866-1880"],
         "repository_ssm":["Manuscripts Division"],
         "creator_ssm":["Princeton University. Library. Special Collections"],
         "extent_ssm":["1 box",
           "0.2 linear feet"],
         "accessrestrict_ssm":["Collection is open for research use."],
-        "scopecontent_ssm":["Consists of 65 short, elementary school compositions written by children from Wilbraham, Massachusetts from 1866 to 1880, though most are undated. Some of the compositions are on topics such as the battle of Bunker Hill, Christmas, farming, the Fourth of July, the schoolroom, or time pieces; however, the majority describes animals, both domestic and wild, including cats, dogs, foxes, squirrels, woodchucks, birds, and horses. The collection reflects a variety of penmanship styles, as well as differing abilities to express ideas through writing."],
-        "level_ssm":["collection"]},
+        "abstract_ssm":["The Massachusetts Elementary School Student Compositions Collection consists of short, nineteenth-century essays on a variety of topics written by children from Wilbraham, Massachusetts."]},
       {
         "id":"MC142",
+        "level_ssm":["collection"],
         "normalized_date_ssm":["1916-1962 (mostly 1941-1955)"],
         "collection_ssm":["Whiting Willauer Papers, 1916-1962 (mostly 1941-1955)"],
         "repository_ssm":["Public Policy Papers"],
@@ -42,9 +43,7 @@
         "extent_ssm":["10 boxes",
           "1 folder"],
         "accessrestrict_ssm":["Collection is open for research use."],
-        "scopecontent_ssm":["Consists of papers of Willauer (Princeton Class of 1928) relating mainly to his official, semi-official, and private concerns in China during and after World War II when he was executive secretary (1941-1944) for China Defense Supplies, Inc., which purchased airplanes for Claire Lee Chennault's American Volunteer Group known as the \"Flying Tigers;\" director (1944-1945) of the Far East branch of the Foreign Economic Administration; and president and vice-chairman of the board of the Civil Air Transport (CAT) company in China, co-founded with Chennault. Included are Willauer's annotations to his papers and autobiographical notes, correspondence, articles, speeches, and interviews by and about him, photographs, CAT manuals, and a flight logbook for 1943-1944. Major correspondents include Joseph Alsop, Marshall Bannell, Claire L. Chennault, Thomas Corcoran, T. V. Soong, Charles L. Stillman, L. K. Taylor, Edward Warner, Erik Watts, Louise Willauer (wife), and William S. Youngman.",
-          "Also present are some limited materials pertaining to his earlier career as an admiralty lawyer (1931-1938) with a New York City law firm, attorney for the Civil Aeronautics Board and the Dept. of Justice, and, later, as ambassador to Honduras (1954-1958) and to Costa Rica (1958-1961)."],
-        "level_ssm":["collection"]}]
+        "abstract_ssm":["The papers of Whiting Willauer (1906-1962) reflect Willauer's entire career, but focus most strongly on the period from 1941 to 1954 when Willauer was in China and worked for China Defense Supplies, Inc. (1941-1944), the Foreign Economic Administration (1944-1945), the United Nations Relief and Rehabilitation Administration [NRRA] (1946-1947), and Civil Air Transport, Inc. (1946-1954). The papers also document his positions as an admiralty lawyer for the New York City law firm, Bingham, Dana and Gould (1931-1938), as Attorney, Criminal Division at the Department of Justice and Special Assistant to United States Attorney General (1929-1940), Special Counsel for the Federal Power Commission (1941), and his appointments as United States Ambassador to Honduras (1954-1958) and Costa Rica (1958-1961). In addition, materials which reflect Willauer's role as a delegate to the Organization of American States' Meetings of Foreign Ministers (August 1960) and to the United Nations General Assembly (October 1960) are found in the papers."]}]
   },
   "spellcheck":{
     "suggestions":[],
