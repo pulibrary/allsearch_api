@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/dpul' do
   it 'returns json' do
-    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&q=cats&rows=3&sort=score%20desc')
+    stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&group=true&group.facet=true&group.field=content_metadata_iiif_manifest_field_ssi&group.limit=1&group.main=true&q=cats&rows=3&sort=score%20desc')
       .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
     get '/search/dpul?query=cats'
 
@@ -14,7 +14,7 @@ RSpec.describe 'GET /search/dpul' do
 
   context 'with a search term' do
     before do
-      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&q=cats&rows=3&sort=score%20desc')
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&group=true&group.facet=true&group.field=content_metadata_iiif_manifest_field_ssi&group.limit=1&group.main=true&q=cats&rows=3&sort=score%20desc')
         .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
     end
 
@@ -43,9 +43,11 @@ RSpec.describe 'GET /search/dpul' do
 
       expect(response_body.keys).to contain_exactly(:number, :more, :records)
       expect(response_body[:number]).to eq(expected_response[:number])
-      expect(response_body[:records].first.keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
+      expect(response_body[:records].first.keys).to contain_exactly(:title, :publisher, :id, :type, :url,
                                                                     :other_fields)
-      expect(response_body[:records].first).to match(expected_response[:records].first)
+      expect(response_body[:records].second.keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
+                                                                     :other_fields)
+      expect(response_body[:records].second).to match(expected_response[:records].first)
     end
 
     it 'only returns the first three records' do

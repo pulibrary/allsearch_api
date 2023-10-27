@@ -1,77 +1,80 @@
 {
-    "responseHeader": {
-      "zkConnected": true,
-      "status": 0,
-      "QTime": 1,
-      "params": {
-        "q": "cats",
-        "fl": "id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim",
-        "rows": "3",
-        "facet": "false"
-      }
-    },
-    "response": {
-      "numFound": 238,
-      "start": 0,
-      "docs": [
-        {
-          "id": "02578b4e2ccf4497f1426a3ab7e11464",
-          "readonly_collections_tesim": [
-            "Lloyd E. Cotsen"
-          ],
-          "readonly_title_ssim": [
-            "Robinson Crusoe, The clever cats, &c. : a picture-book for the nursery ; containing sixteen coloured illustrations"
-          ],
-          "readonly_creator_ssim": [
-            "Defoe, Daniel, 1661?-1731"
-          ],
-          "readonly_format_ssim": [
-            "Book"
-          ],
-          "readonly_publisher_ssim": [
-            "London ; Edinburgh ; New York : Thomas Nelson & Sons, [not after 1888]"
-          ]
-        },
-        {
-          "id": "c68aa97b019a52478cc7dc6396336158",
-          "readonly_collections_tesim": [
-            "Treasures of the Graphic Arts Collection"
-          ],
-          "readonly_title_ssim": [
-            "[Cat near fishbowl]."
-          ],
-          "readonly_creator_ssim": [
-            "Isoda, Koryūsai, active 1764-1788"
-          ],
-          "readonly_format_ssim": [
-            "Visual material"
-          ],
-          "readonly_publisher_ssim": [
-            "n.d."
-          ]
-        },
-        {
-          "id": "7aadb58d17a19c532e38e4ff99cb95e9",
-          "readonly_collections_tesim": [
-            "Lloyd E. Cotsen"
-          ],
-          "readonly_title_ssim": [
-            "Sinn-en-Minne-Beelden. Emblemata Amores Moresque. Emblemes, touchants les Amoues et les Moeurs [engraved title]."
-          ],
-          "readonly_creator_ssim": [
-            "Cats, Jacob, 1577-1660"
-          ],
-          "readonly_format_ssim": [
-            "Book"
-          ],
-          "readonly_publisher_ssim": [
-            "Middelburg. [Hans vander Hellen (Hellenius). 1618]."
-          ]
-        }
-      ]
-    },
-    "spellcheck": {
-      "suggestions": [],
-      "correctlySpelled": true
+  "responseHeader": {
+    "zkConnected": true,
+    "status": 0,
+    "QTime": 2,
+    "params": {
+      "q": "cats",
+      "group.main": "true",
+      "fl": "id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim",
+      "group.limit": "1",
+      "group.facet": "true",
+      "sort": "score desc",
+      "rows": "3",
+      "facet": "false",
+      "group.field": "content_metadata_iiif_manifest_field_ssi",
+      "group": "true"
     }
+  },
+  "response": {
+    "numFound": 238,
+    "start": 0,
+    "docs": [
+      {
+        "id": "84d1831552336b47327c35ec3a9e91ca",
+        "readonly_collections_tesim": [
+          "Latin American Ephemera"
+        ],
+        "readonly_title_ssim": [
+          "Super Cats. Catamaran Sailing Cruises. Barbados."
+        ],
+        "readonly_publisher_ssim": [
+          "Super Cats Catamaran Cruise"
+        ],
+        "readonly_format_ssim": [
+          "Flyers"
+        ]
+      },
+      {
+        "id": "02578b4e2ccf4497f1426a3ab7e11464",
+        "readonly_collections_tesim": [
+          "Lloyd E. Cotsen"
+        ],
+        "readonly_title_ssim": [
+          "Robinson Crusoe, The clever cats, &c. : a picture-book for the nursery ; containing sixteen coloured illustrations"
+        ],
+        "readonly_creator_ssim": [
+          "Defoe, Daniel, 1661?-1731"
+        ],
+        "readonly_format_ssim": [
+          "Book"
+        ],
+        "readonly_publisher_ssim": [
+          "London ; Edinburgh ; New York : Thomas Nelson & Sons, [not after 1888]"
+        ]
+      },
+      {
+        "id": "c68aa97b019a52478cc7dc6396336158",
+        "readonly_collections_tesim": [
+          "Treasures of the Graphic Arts Collection"
+        ],
+        "readonly_title_ssim": [
+          "[Cat near fishbowl]."
+        ],
+        "readonly_creator_ssim": [
+          "Isoda, Koryūsai, active 1764-1788"
+        ],
+        "readonly_format_ssim": [
+          "Visual material"
+        ],
+        "readonly_publisher_ssim": [
+          "n.d."
+        ]
+      }
+    ]
+  },
+  "spellcheck": {
+    "suggestions": [],
+    "correctlySpelled": true
   }
+}

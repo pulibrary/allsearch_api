@@ -21,4 +21,8 @@ class Dpul
   def solr_sort
     'score desc'
   end
+
+  def extra_solr_params
+    'group=true&group.main=true&group.limit=1&group.field=content_metadata_iiif_manifest_field_ssi&group.facet=true'
+  end
 end
