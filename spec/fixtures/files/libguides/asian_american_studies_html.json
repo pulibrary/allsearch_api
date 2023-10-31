@@ -1,0 +1,2746 @@
+[
+    {
+        "id": 84140,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 92727,
+        "group_id": 2462,
+        "name": "Asian American Studies",
+        "description": "A guide to print and electronic resources in <a href=\"library.princeton.edu\">Princeton University Library</a>.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2009-11-05 15:49:32",
+        "created": "2009-10-30 21:43:19",
+        "updated": "2022-09-08 17:35:20",
+        "slug_id": 90650,
+        "nav_type": 2,
+        "count_hit": 654,
+        "slug": "asianamericans",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84140",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/asianamericans",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "92727",
+            "first_name": "Steven",
+            "last_name": "Knowlton",
+            "email": "steven.knowlton@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "https:\/\/libguides.princeton.edu\/prf.php?account_id=92727",
+            "created_by": "231",
+            "created": "2016-04-01 18:37:19",
+            "updated": "2022-06-15 12:36:26"
+        },
+        "subjects": [
+            {
+                "id": 222720,
+                "name": "Asian American",
+                "slug_id": 2810919
+            },
+            {
+                "id": 213426,
+                "name": "Asian American Studies",
+                "slug_id": 2566031
+            }
+        ],
+        "tags": [
+            {
+                "id": 61019,
+                "text": "asian_americans"
+            }
+        ]
+    },
+    {
+        "id": 361989,
+        "type_id": 4,
+        "site_id": 77,
+        "owner_id": 15648,
+        "group_id": 1893,
+        "name": "East Asian Studies Links",
+        "description": "Links to East Asian Resources",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2015-09-10 16:33:44",
+        "created": "2015-08-10 17:05:08",
+        "updated": "2017-04-04 14:14:37",
+        "slug_id": 587842,
+        "nav_type": 1,
+        "count_hit": 162,
+        "slug": "eallinks",
+        "status_label": "Published",
+        "type_label": "Topic Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=361989",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/eallinks",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15648",
+            "first_name": "Martin",
+            "last_name": "Heijdra",
+            "email": "mheijdra@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2008-08-19 21:39:08",
+            "updated": "2021-05-17 16:26:17"
+        },
+        "subjects": [
+            {
+                "id": 213434,
+                "name": "Chinese Studies",
+                "slug_id": 2580078
+            },
+            {
+                "id": 213443,
+                "name": "East Asian Studies",
+                "slug_id": 2580090
+            },
+            {
+                "id": 213471,
+                "name": "Japanese Studies",
+                "slug_id": 2580126
+            },
+            {
+                "id": 213474,
+                "name": "Korean Studies",
+                "slug_id": 2580133
+            }
+        ],
+        "tags": [
+            {
+                "id": 61242,
+                "text": "chinese"
+            },
+            {
+                "id": 61237,
+                "text": "cjk"
+            },
+            {
+                "id": 61238,
+                "text": "eal"
+            },
+            {
+                "id": 61239,
+                "text": "east_asian"
+            },
+            {
+                "id": 61240,
+                "text": "japanese"
+            },
+            {
+                "id": 61202,
+                "text": "korean"
+            },
+            {
+                "id": 61241,
+                "text": "reference"
+            },
+            {
+                "id": 61056,
+                "text": "research"
+            }
+        ]
+    },
+    {
+        "id": 929471,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 197597,
+        "group_id": 1911,
+        "name": "South Asian Studies",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2019-05-20 15:41:30",
+        "created": "2019-04-11 18:39:17",
+        "updated": "2022-08-11 13:27:01",
+        "slug_id": 1760133,
+        "nav_type": 2,
+        "count_hit": 990,
+        "slug": "sas",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=929471",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/sas",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "197597",
+            "first_name": "Ellen",
+            "last_name": "Ambrosone",
+            "email": "ea9@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2019-01-04 20:03:17",
+            "updated": "2023-02-21 16:13:16"
+        },
+        "subjects": [
+            {
+                "id": 213498,
+                "name": "South Asian Studies",
+                "slug_id": 2812297
+            }
+        ]
+    },
+    {
+        "id": 84056,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 92727,
+        "group_id": 1889,
+        "name": "African American Studies",
+        "description": "Primary and selected secondary sources for research in African American Studies at Princeton University.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2016-08-15 13:35:24",
+        "created": "2008-07-14 19:11:29",
+        "updated": "2022-07-12 18:10:30",
+        "slug_id": 90588,
+        "nav_type": 2,
+        "count_hit": 4398,
+        "slug": "aas",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84056",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/aas",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "92727",
+            "first_name": "Steven",
+            "last_name": "Knowlton",
+            "email": "steven.knowlton@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "https:\/\/libguides.princeton.edu\/prf.php?account_id=92727",
+            "created_by": "231",
+            "created": "2016-04-01 18:37:19",
+            "updated": "2022-06-15 12:36:26"
+        },
+        "subjects": [
+            {
+                "id": 222711,
+                "name": "African American",
+                "slug_id": 2810652
+            },
+            {
+                "id": 213328,
+                "name": "African American Studies",
+                "slug_id": 2556818
+            }
+        ],
+        "tags": [
+            {
+                "id": 61042,
+                "text": "african_american"
+            },
+            {
+                "id": 61092,
+                "text": "civil_rights"
+            },
+            {
+                "id": 61043,
+                "text": "history"
+            },
+            {
+                "id": 61093,
+                "text": "newspapers"
+            },
+            {
+                "id": 61095,
+                "text": "primary_sources"
+            },
+            {
+                "id": 61094,
+                "text": "race"
+            },
+            {
+                "id": 61025,
+                "text": "religion"
+            },
+            {
+                "id": 61034,
+                "text": "women"
+            }
+        ]
+    },
+    {
+        "id": 84595,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 15648,
+        "group_id": 1893,
+        "name": "East Asian Library Electronic Resources",
+        "description": "Comprehensive listing and description of databases available through the East Asian Library",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2015-09-10 16:34:01",
+        "created": "2012-09-21 21:14:49",
+        "updated": "2020-08-18 16:02:37",
+        "slug_id": 90950,
+        "nav_type": 1,
+        "count_hit": 4036,
+        "slug": "ealdbs",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84595",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/ealdbs",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15648",
+            "first_name": "Martin",
+            "last_name": "Heijdra",
+            "email": "mheijdra@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2008-08-19 21:39:08",
+            "updated": "2021-05-17 16:26:17"
+        },
+        "subjects": [
+            {
+                "id": 213434,
+                "name": "Chinese Studies",
+                "slug_id": 2580078
+            },
+            {
+                "id": 213443,
+                "name": "East Asian Studies",
+                "slug_id": 2580090
+            },
+            {
+                "id": 213471,
+                "name": "Japanese Studies",
+                "slug_id": 2580126
+            },
+            {
+                "id": 213474,
+                "name": "Korean Studies",
+                "slug_id": 2580133
+            }
+        ],
+        "tags": [
+            {
+                "id": 61242,
+                "text": "chinese"
+            },
+            {
+                "id": 61237,
+                "text": "cjk"
+            },
+            {
+                "id": 61239,
+                "text": "east_asian"
+            },
+            {
+                "id": 61240,
+                "text": "japanese"
+            },
+            {
+                "id": 61202,
+                "text": "korean"
+            },
+            {
+                "id": 61241,
+                "text": "reference"
+            },
+            {
+                "id": 61056,
+                "text": "research"
+            }
+        ]
+    },
+    {
+        "id": 1071063,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 169352,
+        "group_id": 1893,
+        "name": "Chinese Studies Resources - by type",
+        "description": "Detailed directory of resources in Chinese Studies listed by type of resource",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2021-11-03 20:28:23",
+        "created": "2020-08-21 20:38:07",
+        "updated": "2022-08-09 14:23:11",
+        "slug_id": 2173572,
+        "nav_type": 2,
+        "count_hit": 1402,
+        "slug": "chinese_studies_resources",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1071063",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/chinese_studies_resources",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "169352",
+            "first_name": "Joshua",
+            "last_name": "Seufert",
+            "email": "jseufert@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2018-03-06 14:07:18",
+            "updated": "2020-04-16 20:13:55"
+        },
+        "subjects": [
+            {
+                "id": 213434,
+                "name": "Chinese Studies",
+                "slug_id": 2580078
+            },
+            {
+                "id": 213443,
+                "name": "East Asian Studies",
+                "slug_id": 2580090
+            }
+        ],
+        "tags": [
+            {
+                "id": 666983,
+                "text": "Chinese studies"
+            },
+            {
+                "id": 666985,
+                "text": "directory"
+            },
+            {
+                "id": 61205,
+                "text": "electronic_resources"
+            }
+        ]
+    },
+    {
+        "id": 244484,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 231,
+        "group_id": 1898,
+        "name": "American Politics",
+        "description": "A guide to statistics, data, and documentary sources in American politics available to researchers at Princeton University.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2015-10-13 17:26:56",
+        "created": "2015-04-10 15:14:17",
+        "updated": "2023-04-20 18:31:42",
+        "slug_id": 324096,
+        "nav_type": 2,
+        "count_hit": 2619,
+        "slug": "politics\/american",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=244484",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/politics\/american",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "231",
+            "first_name": "Jeremy",
+            "last_name": "Darrington",
+            "email": "jdarring@princeton.edu",
+            "title": "Politics Librarian",
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2014-02-20 01:12:59",
+            "updated": "2021-01-19 21:48:03"
+        },
+        "subjects": [
+            {
+                "id": 213493,
+                "name": "Politics",
+                "slug_id": 2812289
+            },
+            {
+                "id": 222716,
+                "name": "Politics - American",
+                "slug_id": 2786498
+            }
+        ]
+    },
+    {
+        "id": 921974,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 197597,
+        "group_id": 1911,
+        "name": "SAS 328\/COM 352\/ASA 328: South Asian American Literature and Film",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2019-03-28 13:42:02",
+        "created": "2019-03-13 18:36:34",
+        "updated": "2019-04-10 15:33:09",
+        "slug_id": 1744066,
+        "nav_type": 2,
+        "count_hit": 143,
+        "slug": "sas328",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=921974",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/sas328",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "197597",
+            "first_name": "Ellen",
+            "last_name": "Ambrosone",
+            "email": "ea9@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2019-01-04 20:03:17",
+            "updated": "2023-02-21 16:13:16"
+        }
+    },
+    {
+        "id": 513803,
+        "type_id": 4,
+        "site_id": 77,
+        "owner_id": 15649,
+        "group_id": 1893,
+        "name": "Classical Historiography for Chinese History",
+        "description": "Research guide for Chinese Historiography",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2016-08-24 15:26:06",
+        "created": "2016-06-16 12:23:23",
+        "updated": "2020-07-07 13:36:14",
+        "slug_id": 857653,
+        "nav_type": 2,
+        "count_hit": 8938,
+        "slug": "chinese-historiography",
+        "status_label": "Published",
+        "type_label": "Topic Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=513803",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/chinese-historiography",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15649",
+            "first_name": "Tom",
+            "last_name": "Ventimiglia",
+            "email": "tventimi@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2008-08-19 21:42:01",
+            "updated": "2019-05-16 19:18:36"
+        },
+        "subjects": [
+            {
+                "id": 213434,
+                "name": "Chinese Studies",
+                "slug_id": 2580078
+            },
+            {
+                "id": 213443,
+                "name": "East Asian Studies",
+                "slug_id": 2580090
+            }
+        ],
+        "tags": [
+            {
+                "id": 657122,
+                "text": "China"
+            },
+            {
+                "id": 657123,
+                "text": "historiography"
+            },
+            {
+                "id": 61043,
+                "text": "history"
+            },
+            {
+                "id": 657124,
+                "text": "references"
+            }
+        ]
+    },
+    {
+        "id": 1326247,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 15649,
+        "group_id": 1893,
+        "name": "Chinese Intellectual History",
+        "description": "An Extended Bibliography",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2023-06-07 19:54:15",
+        "created": "2023-06-07 01:32:23",
+        "updated": "2023-06-07 19:54:15",
+        "slug_id": 2831054,
+        "nav_type": 2,
+        "count_hit": 508,
+        "slug": "chinese-intellectual-history",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1326247",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/chinese-intellectual-history",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15649",
+            "first_name": "Tom",
+            "last_name": "Ventimiglia",
+            "email": "tventimi@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2008-08-19 21:42:01",
+            "updated": "2019-05-16 19:18:36"
+        },
+        "subjects": [
+            {
+                "id": 213434,
+                "name": "Chinese Studies",
+                "slug_id": 2580078
+            },
+            {
+                "id": 213443,
+                "name": "East Asian Studies",
+                "slug_id": 2580090
+            }
+        ],
+        "tags": [
+            {
+                "id": 666983,
+                "text": "Chinese studies"
+            }
+        ]
+    },
+    {
+        "id": 84534,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 92727,
+        "group_id": 1889,
+        "name": "African American Studies: Primary Sources",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2012-08-23 18:58:46",
+        "created": "2012-08-21 21:12:32",
+        "updated": "2016-05-11 19:46:56",
+        "slug_id": 164303,
+        "nav_type": 2,
+        "count_hit": 1579,
+        "slug": "aasps",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84534",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/aasps",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "92727",
+            "first_name": "Steven",
+            "last_name": "Knowlton",
+            "email": "steven.knowlton@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "https:\/\/libguides.princeton.edu\/prf.php?account_id=92727",
+            "created_by": "231",
+            "created": "2016-04-01 18:37:19",
+            "updated": "2022-06-15 12:36:26"
+        },
+        "subjects": [
+            {
+                "id": 213328,
+                "name": "African American Studies",
+                "slug_id": 2556818
+            }
+        ]
+    },
+    {
+        "id": 727329,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 92727,
+        "group_id": 1889,
+        "name": "AAS 300 Junior Paper Seminar",
+        "description": "Guide to using library resources to prepare your Junior Paper in African American Studies",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2019-09-09 20:02:48",
+        "created": "2017-09-18 15:04:50",
+        "updated": "2019-09-09 20:02:48",
+        "slug_id": 1304630,
+        "nav_type": 2,
+        "count_hit": 210,
+        "slug": "AAS300",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=727329",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/AAS300",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "92727",
+            "first_name": "Steven",
+            "last_name": "Knowlton",
+            "email": "steven.knowlton@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "https:\/\/libguides.princeton.edu\/prf.php?account_id=92727",
+            "created_by": "231",
+            "created": "2016-04-01 18:37:19",
+            "updated": "2022-06-15 12:36:26"
+        }
+    },
+    {
+        "id": 1166422,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 201788,
+        "group_id": 0,
+        "name": "Indigenous Studies",
+        "description": "This guide points to library resources helpful for Indigenous studies",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2021-10-15 14:31:01",
+        "created": "2021-08-03 19:27:09",
+        "updated": "2022-06-16 19:30:06",
+        "slug_id": 2397170,
+        "nav_type": 0,
+        "count_hit": 691,
+        "slug": "IndigenousStudies",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1166422",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/IndigenousStudies",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "201788",
+            "first_name": "Anu",
+            "last_name": "Vedantham",
+            "email": "vedanthm@princeton.edu",
+            "title": "Assistant University Librarian for Teaching, Research and Social Sciences",
+            "nickname": "Anu",
+            "signature": "-- \nAnu Vedantham, EdD (she\/her\/hers)\nAssistant University Librarian for Research Services\nPrinceton University Library (PUL)\nA-18-J Firestone Library\nOne Washington Road\nPrinceton, NJ 08544\n \n609-258-8769\n<a href=\"mailto:anuv@princeton.edu\">anuv@princeton.edu<\/a>\n<a href=\"http:\/\/libcal.princeton.edu\/appointment\/52617\">Make an appointment with me<.a>\n<a href=\"https:\/\/scholar.princeton.edu\/anu\">My Website<\/a>\nORCID: <a href=\"https:\/\/orcid.org\/0000-0002-1576-915X\">0000-0002-1576-915X<\/a>",
+            "created_by": "9093",
+            "created": "2019-02-07 18:17:30",
+            "updated": "2022-09-05 19:16:01"
+        },
+        "subjects": [
+            {
+                "id": 222730,
+                "name": "Indigenous Studies",
+                "slug_id": 2812186
+            },
+            {
+                "id": 222722,
+                "name": "Native American",
+                "slug_id": 2811159
+            }
+        ]
+    },
+    {
+        "id": 84624,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 15655,
+        "group_id": 1911,
+        "name": "SAS 321 The Politics of Pakistan",
+        "description": "Guide for Profs. Zia Mian and Christophe Jaffrelot's Fall 2015 course",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2012-12-26 03:08:32",
+        "created": "2012-11-04 05:16:11",
+        "updated": "2015-12-08 09:47:06",
+        "slug_id": 0,
+        "nav_type": 1,
+        "count_hit": 79,
+        "slug": "",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84624",
+        "friendly_url": "",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15655",
+            "first_name": "David",
+            "last_name": "Magier",
+            "email": "dmagier@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2009-07-08 19:59:27",
+            "updated": "2022-11-09 18:49:51"
+        }
+    },
+    {
+        "id": 84303,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 15655,
+        "group_id": 1911,
+        "name": "Journalism in South Asia",
+        "description": "Journalism in and about South Asia",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2011-09-26 06:28:24",
+        "created": "2011-09-20 14:58:14",
+        "updated": "2015-12-03 09:01:23",
+        "slug_id": 0,
+        "nav_type": 1,
+        "count_hit": 36,
+        "slug": "",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84303",
+        "friendly_url": "",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15655",
+            "first_name": "David",
+            "last_name": "Magier",
+            "email": "dmagier@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2009-07-08 19:59:27",
+            "updated": "2022-11-09 18:49:51"
+        },
+        "tags": [
+            {
+                "id": 61129,
+                "text": "journalism"
+            }
+        ]
+    },
+    {
+        "id": 1006760,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 197597,
+        "group_id": 1912,
+        "name": "WRI 161\/162: Speaking American",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2020-03-05 14:25:51",
+        "created": "2020-02-27 14:55:41",
+        "updated": "2021-04-12 13:19:40",
+        "slug_id": 1971392,
+        "nav_type": 1,
+        "count_hit": 1243,
+        "slug": "american",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1006760",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/american",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "197597",
+            "first_name": "Ellen",
+            "last_name": "Ambrosone",
+            "email": "ea9@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2019-01-04 20:03:17",
+            "updated": "2023-02-21 16:13:16"
+        }
+    },
+    {
+        "id": 84689,
+        "type_id": 4,
+        "site_id": 77,
+        "owner_id": 15677,
+        "group_id": 1893,
+        "name": "Guide for Japanese Antiquarian Materials ",
+        "description": "Guide for Japanese Antiquarian Materials ",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2015-03-27 14:00:22",
+        "created": "2013-06-17 14:07:22",
+        "updated": "2015-10-27 13:29:00",
+        "slug_id": 91025,
+        "nav_type": 1,
+        "count_hit": 147,
+        "slug": "japanese_antiquarian_materials_guide",
+        "status_label": "Published",
+        "type_label": "Topic Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84689",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/japanese_antiquarian_materials_guide",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15677",
+            "first_name": "Setsuko",
+            "last_name": "Noguchi",
+            "email": "snoguchi@princeton.edu",
+            "title": "Japanese Studies Librarian",
+            "nickname": "",
+            "signature": "snoguchi@princeton.edu",
+            "created_by": "0",
+            "created": "2013-05-24 21:37:13",
+            "updated": "2020-06-25 16:35:50"
+        },
+        "tags": [
+            {
+                "id": 61041,
+                "text": "japanese_antiquarian_materials japanese_rare_books"
+            }
+        ]
+    },
+    {
+        "id": 84828,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 255203,
+        "group_id": 1908,
+        "name": "Near East Collections: Syriac Studies",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2015-01-14 19:21:17",
+        "created": "2014-04-14 20:33:46",
+        "updated": "2020-07-16 15:16:50",
+        "slug_id": 109699,
+        "nav_type": 1,
+        "count_hit": 153,
+        "slug": "syriac",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84828",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/syriac",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "255203",
+            "first_name": "Deborah",
+            "last_name": "Schlein",
+            "email": "dschlein@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2020-07-16 15:14:00",
+            "updated": "2020-07-16 15:14:00"
+        },
+        "subjects": [
+            {
+                "id": 213486,
+                "name": "Near Eastern Studies",
+                "slug_id": 2812270
+            }
+        ]
+    },
+    {
+        "id": 84228,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 15655,
+        "group_id": 1911,
+        "name": "Narratives of Rebellion",
+        "description": "Guide to the Revolts of 1857 in Colonial India",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2011-02-10 16:26:58",
+        "created": "2011-02-07 22:39:37",
+        "updated": "2015-12-08 09:47:05",
+        "slug_id": 0,
+        "nav_type": 1,
+        "count_hit": 854,
+        "slug": "",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84228",
+        "friendly_url": "",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15655",
+            "first_name": "David",
+            "last_name": "Magier",
+            "email": "dmagier@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2009-07-08 19:59:27",
+            "updated": "2022-11-09 18:49:51"
+        },
+        "tags": [
+            {
+                "id": 61127,
+                "text": "archives"
+            },
+            {
+                "id": 61043,
+                "text": "history"
+            },
+            {
+                "id": 61075,
+                "text": "princeton_university"
+            }
+        ]
+    },
+    {
+        "id": 1258622,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 255203,
+        "group_id": 1908,
+        "name": "Near Eastern and Islamic Studies",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2023-01-11 19:01:02",
+        "created": "2022-08-11 14:22:05",
+        "updated": "2023-01-12 20:59:46",
+        "slug_id": 0,
+        "nav_type": 2,
+        "count_hit": 296,
+        "slug": "",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1258622",
+        "friendly_url": "",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "255203",
+            "first_name": "Deborah",
+            "last_name": "Schlein",
+            "email": "dschlein@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2020-07-16 15:14:00",
+            "updated": "2020-07-16 15:14:00"
+        },
+        "subjects": [
+            {
+                "id": 213424,
+                "name": "Archives \/ Manuscripts",
+                "slug_id": 2566029
+            },
+            {
+                "id": 222714,
+                "name": "Art &  Archaeology",
+                "slug_id": 2783794
+            },
+            {
+                "id": 222718,
+                "name": "History",
+                "slug_id": 2810926
+            },
+            {
+                "id": 213473,
+                "name": "Judaic Studies",
+                "slug_id": 2580131
+            },
+            {
+                "id": 213477,
+                "name": "Law",
+                "slug_id": 2580137
+            },
+            {
+                "id": 213482,
+                "name": "Medieval History",
+                "slug_id": 2580142
+            },
+            {
+                "id": 213486,
+                "name": "Near Eastern Studies",
+                "slug_id": 2812270
+            },
+            {
+                "id": 213489,
+                "name": "Numismatics",
+                "slug_id": 0
+            },
+            {
+                "id": 213495,
+                "name": "Religion",
+                "slug_id": 2812292
+            }
+        ]
+    },
+    {
+        "id": 1076284,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 92727,
+        "group_id": 1889,
+        "name": "AAS Senior Colloquium",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2020-09-03 18:24:25",
+        "created": "2020-09-03 18:16:51",
+        "updated": "2020-09-03 18:24:25",
+        "slug_id": 0,
+        "nav_type": 2,
+        "count_hit": 39,
+        "slug": "",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1076284",
+        "friendly_url": "",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "92727",
+            "first_name": "Steven",
+            "last_name": "Knowlton",
+            "email": "steven.knowlton@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "https:\/\/libguides.princeton.edu\/prf.php?account_id=92727",
+            "created_by": "231",
+            "created": "2016-04-01 18:37:19",
+            "updated": "2022-06-15 12:36:26"
+        }
+    },
+    {
+        "id": 84377,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 255203,
+        "group_id": 1908,
+        "name": "Near East Collections: Manuscript Resources at Princeton University and Beyond",
+        "description": "This guide will introduce you to our Near East Manuscript Collections and available resources at Princeton University. The guide also provides useful information and links for other manuscript collections and resources worldwide.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2018-09-05 18:31:39",
+        "created": "2012-01-20 22:58:06",
+        "updated": "2020-07-16 15:16:37",
+        "slug_id": 90802,
+        "nav_type": 1,
+        "count_hit": 270,
+        "slug": "NEC_manuscripts",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84377",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/NEC_manuscripts",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "255203",
+            "first_name": "Deborah",
+            "last_name": "Schlein",
+            "email": "dschlein@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2020-07-16 15:14:00",
+            "updated": "2020-07-16 15:14:00"
+        },
+        "subjects": [
+            {
+                "id": 213486,
+                "name": "Near Eastern Studies",
+                "slug_id": 2812270
+            }
+        ]
+    },
+    {
+        "id": 1110403,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 197597,
+        "group_id": 0,
+        "name": "Global Social Responses to Covid-19 Web Archive (Ivy Plus Libraries Confederation)",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2021-02-27 16:09:22",
+        "created": "2021-01-04 14:49:28",
+        "updated": "2021-02-27 16:09:22",
+        "slug_id": 2243793,
+        "nav_type": 2,
+        "count_hit": 238,
+        "slug": "covid-ivy",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1110403",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/covid-ivy",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "197597",
+            "first_name": "Ellen",
+            "last_name": "Ambrosone",
+            "email": "ea9@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2019-01-04 20:03:17",
+            "updated": "2023-02-21 16:13:16"
+        },
+        "subjects": [
+            {
+                "id": 213420,
+                "name": "African Studies",
+                "slug_id": 2566024
+            },
+            {
+                "id": 213434,
+                "name": "Chinese Studies",
+                "slug_id": 2580078
+            },
+            {
+                "id": 213443,
+                "name": "East Asian Studies",
+                "slug_id": 2580090
+            },
+            {
+                "id": 213464,
+                "name": "Health",
+                "slug_id": 2580118
+            },
+            {
+                "id": 213471,
+                "name": "Japanese Studies",
+                "slug_id": 2580126
+            },
+            {
+                "id": 213474,
+                "name": "Korean Studies",
+                "slug_id": 2580133
+            },
+            {
+                "id": 213475,
+                "name": "Latin American & Iberian Studies",
+                "slug_id": 2580135
+            },
+            {
+                "id": 213486,
+                "name": "Near Eastern Studies",
+                "slug_id": 2812270
+            },
+            {
+                "id": 222728,
+                "name": "Slavic, Eastern European & Eurasian Studies",
+                "slug_id": 2812299
+            },
+            {
+                "id": 213498,
+                "name": "South Asian Studies",
+                "slug_id": 2812297
+            },
+            {
+                "id": 222710,
+                "name": "World",
+                "slug_id": 2811158
+            }
+        ]
+    },
+    {
+        "id": 1004938,
+        "type_id": 5,
+        "site_id": 77,
+        "owner_id": 9093,
+        "group_id": 21886,
+        "name": "Content on Homepage",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2020-09-18 14:16:01",
+        "created": "2020-02-20 19:10:16",
+        "updated": "2021-07-08 16:37:39",
+        "slug_id": 0,
+        "nav_type": 0,
+        "count_hit": 0,
+        "slug": "",
+        "status_label": "Published",
+        "type_label": "Internal Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1004938",
+        "friendly_url": "",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "9093",
+            "first_name": "Kevin",
+            "last_name": "Reiss",
+            "email": "kr2@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "231",
+            "created": "2014-05-30 14:01:12",
+            "updated": "2022-06-08 17:09:11"
+        }
+    },
+    {
+        "id": 1243706,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 299093,
+        "group_id": 1891,
+        "name": "Camp Datacamp for SPIA Juniors and Seniors-- Summer 2022",
+        "description": "Datacamp Zotero Librarian support",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2022-05-31 14:11:34",
+        "created": "2022-05-31 13:53:14",
+        "updated": "2022-06-03 18:55:33",
+        "slug_id": 2594788,
+        "nav_type": 2,
+        "count_hit": 99,
+        "slug": "datacamp",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1243706",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/datacamp",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "299093",
+            "first_name": "Ameet",
+            "last_name": "Doshi",
+            "email": "ameet.doshi@princeton.edu",
+            "title": "Head, Donald E. Stokes Library",
+            "nickname": "",
+            "signature": "",
+            "created_by": "56356",
+            "created": "2021-09-20 13:06:52",
+            "updated": "2022-02-24 20:48:04"
+        }
+    },
+    {
+        "id": 1273664,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 299093,
+        "group_id": 1899,
+        "name": "SPI298\/299 Policy: Authority, Incentive, Persuasion...and Implementation",
+        "description": "policy",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2022-10-04 16:45:48",
+        "created": "2022-10-04 13:25:51",
+        "updated": "2022-10-04 16:45:48",
+        "slug_id": 2685277,
+        "nav_type": 1,
+        "count_hit": 32,
+        "slug": "policy_marquis",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1273664",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/policy_marquis",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "299093",
+            "first_name": "Ameet",
+            "last_name": "Doshi",
+            "email": "ameet.doshi@princeton.edu",
+            "title": "Head, Donald E. Stokes Library",
+            "nickname": "",
+            "signature": "",
+            "created_by": "56356",
+            "created": "2021-09-20 13:06:52",
+            "updated": "2022-02-24 20:48:04"
+        }
+    },
+    {
+        "id": 1204318,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 299093,
+        "group_id": 1899,
+        "name": "Template for Public Policy Resource Guide (background)",
+        "description": "SPIA JP Thesis fall2022",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2022-09-20 18:16:02",
+        "created": "2021-12-20 15:21:13",
+        "updated": "2022-09-20 18:37:10",
+        "slug_id": 2494518,
+        "nav_type": 2,
+        "count_hit": 174,
+        "slug": "SPIAundergradsS23",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1204318",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/SPIAundergradsS23",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "299093",
+            "first_name": "Ameet",
+            "last_name": "Doshi",
+            "email": "ameet.doshi@princeton.edu",
+            "title": "Head, Donald E. Stokes Library",
+            "nickname": "",
+            "signature": "",
+            "created_by": "56356",
+            "created": "2021-09-20 13:06:52",
+            "updated": "2022-02-24 20:48:04"
+        }
+    },
+    {
+        "id": 1206878,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 299093,
+        "group_id": 1899,
+        "name": "Public Policy Resource Guide from Stokes Library",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2022-07-19 15:53:16",
+        "created": "2022-01-09 15:06:58",
+        "updated": "2023-01-23 20:15:31",
+        "slug_id": 2501747,
+        "nav_type": 1,
+        "count_hit": 1224,
+        "slug": "policy",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1206878",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/policy",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "299093",
+            "first_name": "Ameet",
+            "last_name": "Doshi",
+            "email": "ameet.doshi@princeton.edu",
+            "title": "Head, Donald E. Stokes Library",
+            "nickname": "",
+            "signature": "",
+            "created_by": "56356",
+            "created": "2021-09-20 13:06:52",
+            "updated": "2022-02-24 20:48:04"
+        },
+        "subjects": [
+            {
+                "id": 213494,
+                "name": "Public Policy",
+                "slug_id": 2812291
+            }
+        ],
+        "tags": [
+            {
+                "id": 653657,
+                "text": "Public Policy"
+            }
+        ]
+    },
+    {
+        "id": 1096827,
+        "type_id": 4,
+        "site_id": 77,
+        "owner_id": 194572,
+        "group_id": 2484,
+        "name": "Professional Organizations for Graduate Students",
+        "description": "This guide presents a curated list of the top professional organizations arranged by academic division and discipline.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2021-01-14 13:59:23",
+        "created": "2020-11-04 14:36:29",
+        "updated": "2021-01-14 13:59:23",
+        "slug_id": 2210445,
+        "nav_type": 2,
+        "count_hit": 799,
+        "slug": "gradprofessionalorgs",
+        "status_label": "Published",
+        "type_label": "Topic Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1096827",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/gradprofessionalorgs",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "194572",
+            "first_name": "Jennifer",
+            "last_name": "Hunter",
+            "email": "jah6@princeton.edu",
+            "title": "Head of Firestone General Service Operations",
+            "nickname": "Jen",
+            "signature": "Jen Hunter, Head of Firestone General Service Operations",
+            "created_by": "17693",
+            "created": "2018-11-27 23:31:31",
+            "updated": "2021-12-02 21:07:28"
+        }
+    },
+    {
+        "id": 206681,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 72693,
+        "group_id": 23692,
+        "name": "Architecture Research Basecamp",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2015-01-10 23:12:45",
+        "created": "2015-01-10 20:37:34",
+        "updated": "2020-11-03 18:27:15",
+        "slug_id": 259608,
+        "nav_type": 1,
+        "count_hit": 460,
+        "slug": "architecture_basecamp",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=206681",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/architecture_basecamp",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "72693",
+            "first_name": "Gabriella",
+            "last_name": "Karl-Johnson",
+            "email": "gjk@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "231",
+            "created": "2015-09-29 15:12:44",
+            "updated": "2022-02-07 20:32:42"
+        }
+    },
+    {
+        "id": 1088285,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 15640,
+        "group_id": 0,
+        "name": "Open Access Week 2020",
+        "description": "This guide offers a list of events to be held at PUL during Open Access Week 2020, October 19-25. OA Week is an international event that offers an opportunity to highlight OA-related initiatives and push for open and free access to research.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2020-10-12 19:14:53",
+        "created": "2020-10-07 22:34:22",
+        "updated": "2020-10-12 19:14:53",
+        "slug_id": 2188542,
+        "nav_type": 2,
+        "count_hit": 20,
+        "slug": "oaweek2020",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1088285",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/oaweek2020",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15640",
+            "first_name": "Rebecca",
+            "last_name": "Friedman",
+            "email": "rfriedma@princeton.edu",
+            "title": "Assistant Art Librarian",
+            "nickname": "",
+            "signature": "Rebecca K. Friedman\nAssistant Librarian\nMarquand Library of Art & Archaeology",
+            "created_by": "0",
+            "created": "2007-10-25 22:59:07",
+            "updated": "2022-08-11 14:33:17"
+        },
+        "tags": [
+            {
+                "id": 612008,
+                "text": "oa week"
+            },
+            {
+                "id": 610553,
+                "text": "open access"
+            }
+        ]
+    },
+    {
+        "id": 1180455,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 197597,
+        "group_id": 0,
+        "name": "URB 378 \/ ARC 344 \/ SAS 378 \/ HUM 378: South Asian Migrations",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2021-10-12 15:01:57",
+        "created": "2021-09-21 13:35:11",
+        "updated": "2021-10-12 15:01:57",
+        "slug_id": 2435597,
+        "nav_type": 2,
+        "count_hit": 10,
+        "slug": "SAmigrations",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1180455",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/SAmigrations",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "197597",
+            "first_name": "Ellen",
+            "last_name": "Ambrosone",
+            "email": "ea9@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2019-01-04 20:03:17",
+            "updated": "2023-02-21 16:13:16"
+        }
+    },
+    {
+        "id": 1035877,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 6766,
+        "group_id": 1897,
+        "name": "National, Indigenous, World &amp; Ethnic Music: A Guide to Research and Resources",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2020-04-30 18:46:30",
+        "created": "2020-04-30 18:39:35",
+        "updated": "2021-06-04 13:52:22",
+        "slug_id": 2041335,
+        "nav_type": 0,
+        "count_hit": 112,
+        "slug": "world-music",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1035877",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/world-music",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "6766",
+            "first_name": "Darwin",
+            "last_name": "Scott",
+            "email": "dfscott@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "231",
+            "created": "2014-05-13 16:29:28",
+            "updated": "2020-08-29 21:50:27"
+        },
+        "subjects": [
+            {
+                "id": 213485,
+                "name": "Music",
+                "slug_id": 2812269
+            },
+            {
+                "id": 222706,
+                "name": "Music Literature",
+                "slug_id": 2810910
+            }
+        ]
+    },
+    {
+        "id": 1330766,
+        "type_id": 4,
+        "site_id": 77,
+        "owner_id": 194572,
+        "group_id": 0,
+        "name": "Firestone Library Virtual Tour",
+        "description": "Welcome to the virtual, self-guided tour of Firestone Library! Use this as you make your way around the building to learn more about this branch of Princeton University Library.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2023-09-01 14:14:36",
+        "created": "2023-06-29 17:56:31",
+        "updated": "2023-09-01 14:19:05",
+        "slug_id": 2844902,
+        "nav_type": 0,
+        "count_hit": 366,
+        "slug": "firestonetour",
+        "status_label": "Published",
+        "type_label": "Topic Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1330766",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/firestonetour",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "194572",
+            "first_name": "Jennifer",
+            "last_name": "Hunter",
+            "email": "jah6@princeton.edu",
+            "title": "Head of Firestone General Service Operations",
+            "nickname": "Jen",
+            "signature": "Jen Hunter, Head of Firestone General Service Operations",
+            "created_by": "17693",
+            "created": "2018-11-27 23:31:31",
+            "updated": "2021-12-02 21:07:28"
+        }
+    },
+    {
+        "id": 979881,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 92727,
+        "group_id": 1912,
+        "name": "WRI 133\/134 Educational Equities",
+        "description": "This page provides links to databases and books that students may find useful in researching the D3",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2019-10-29 19:22:27",
+        "created": "2019-10-29 18:48:02",
+        "updated": "2020-02-03 21:39:38",
+        "slug_id": 1899807,
+        "nav_type": 2,
+        "count_hit": 388,
+        "slug": "WRI133-134",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=979881",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/WRI133-134",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "92727",
+            "first_name": "Steven",
+            "last_name": "Knowlton",
+            "email": "steven.knowlton@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "https:\/\/libguides.princeton.edu\/prf.php?account_id=92727",
+            "created_by": "231",
+            "created": "2016-04-01 18:37:19",
+            "updated": "2022-06-15 12:36:26"
+        }
+    },
+    {
+        "id": 1058794,
+        "type_id": 4,
+        "site_id": 77,
+        "owner_id": 15647,
+        "group_id": 1885,
+        "name": "Princeton ARCH Program",
+        "description": "A guide to the Princeton ARCH Program",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2020-07-15 20:29:57",
+        "created": "2020-07-15 14:44:13",
+        "updated": "2020-07-15 20:29:57",
+        "slug_id": 2105981,
+        "nav_type": 2,
+        "count_hit": 444,
+        "slug": "ARCH",
+        "status_label": "Published",
+        "type_label": "Topic Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1058794",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/ARCH",
+        "thumbnail_url": "https:\/\/libguides.princeton.edu\/ld.php?screenshot=bafihje.png&cb=1695331035",
+        "owner": {
+            "id": "15647",
+            "first_name": "Mudd",
+            "last_name": "Library",
+            "email": "mudd@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "Seeley G. Mudd Manuscript Library Staff",
+            "created_by": "0",
+            "created": "2008-08-12 19:43:19",
+            "updated": "2023-04-20 19:46:00"
+        }
+    },
+    {
+        "id": 1347929,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 100533,
+        "group_id": 1886,
+        "name": "HIS 400 - S06: Surveillance",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2023-09-15 20:42:04",
+        "created": "2023-09-13 18:44:41",
+        "updated": "2023-09-15 20:42:04",
+        "slug_id": 2903353,
+        "nav_type": 2,
+        "count_hit": 6,
+        "slug": "surveillance",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1347929",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/surveillance",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "100533",
+            "first_name": "Alain",
+            "last_name": "St. Pierre",
+            "email": "apierre@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "231",
+            "created": "2016-06-07 19:02:40",
+            "updated": "2020-06-23 16:57:40"
+        }
+    },
+    {
+        "id": 1270495,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 100533,
+        "group_id": 1886,
+        "name": "HIS 400-S04: Islands",
+        "description": "Junior Seminar",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2022-09-28 19:09:05",
+        "created": "2022-09-21 19:58:58",
+        "updated": "2022-09-28 19:09:05",
+        "slug_id": 2678568,
+        "nav_type": 2,
+        "count_hit": 19,
+        "slug": "Islands",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1270495",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/Islands",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "100533",
+            "first_name": "Alain",
+            "last_name": "St. Pierre",
+            "email": "apierre@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "231",
+            "created": "2016-06-07 19:02:40",
+            "updated": "2020-06-23 16:57:40"
+        }
+    },
+    {
+        "id": 1251807,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 113022,
+        "group_id": 2474,
+        "name": "LGBTQIA Periodical and Ephemera Collection",
+        "description": "\r\nThis collection is comprised of LGBTQIA materials including: periodicals, magazines, ephemera and monographs. The collection is international in scope, largely concentrated from the 1950's to the early 2000's.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2022-08-19 14:22:17",
+        "created": "2022-07-12 18:28:01",
+        "updated": "2022-09-15 17:18:56",
+        "slug_id": 2624886,
+        "nav_type": 2,
+        "count_hit": 629,
+        "slug": "LGBTQIA-Collections",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1251807",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/LGBTQIA-Collections",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "113022",
+            "first_name": "Sara",
+            "last_name": "Howard",
+            "email": "sahoward@princeton.edu",
+            "title": "Librarian for Gender & Sexuality Studies and Student Engagement",
+            "nickname": "",
+            "signature": "sahoward@princeton.edu",
+            "created_by": "231",
+            "created": "2016-09-15 15:32:16",
+            "updated": "2020-09-07 15:44:29"
+        }
+    },
+    {
+        "id": 1298870,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 100533,
+        "group_id": 1886,
+        "name": "HIS 400: Gender, Sexuality, and Colonialism",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2023-02-10 16:02:44",
+        "created": "2023-02-03 14:18:47",
+        "updated": "2023-02-10 16:02:44",
+        "slug_id": 2755560,
+        "nav_type": 2,
+        "count_hit": 205,
+        "slug": "Gender_Sexuality_and_Colonialism",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1298870",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/Gender_Sexuality_and_Colonialism",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "100533",
+            "first_name": "Alain",
+            "last_name": "St. Pierre",
+            "email": "apierre@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "231",
+            "created": "2016-06-07 19:02:40",
+            "updated": "2020-06-23 16:57:40"
+        }
+    },
+    {
+        "id": 84701,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 231,
+        "group_id": 1898,
+        "name": "Political Opinion & Survey Data Sources",
+        "description": "Sources for United States and international public opinion results and data, with an emphasis on political topics",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2014-01-10 18:50:24",
+        "created": "2013-08-10 21:41:21",
+        "updated": "2022-09-01 13:49:39",
+        "slug_id": 91036,
+        "nav_type": 2,
+        "count_hit": 5495,
+        "slug": "politics\/opinion",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84701",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/politics\/opinion",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "231",
+            "first_name": "Jeremy",
+            "last_name": "Darrington",
+            "email": "jdarring@princeton.edu",
+            "title": "Politics Librarian",
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2014-02-20 01:12:59",
+            "updated": "2021-01-19 21:48:03"
+        },
+        "subjects": [
+            {
+                "id": 213493,
+                "name": "Politics",
+                "slug_id": 2812289
+            },
+            {
+                "id": 222716,
+                "name": "Politics - American",
+                "slug_id": 2786498
+            },
+            {
+                "id": 219942,
+                "name": "Politics - Comparative\/International Relations",
+                "slug_id": 2787183
+            }
+        ]
+    },
+    {
+        "id": 141560,
+        "type_id": 5,
+        "site_id": 77,
+        "owner_id": 15627,
+        "group_id": 4522,
+        "name": "Princeton University Library RIS\/CD\/Stokes Training Series",
+        "description": "Princeton University Library - RIS\/CD\/Stokes Training Series",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2014-09-19 17:56:22",
+        "created": "2014-09-19 22:42:31",
+        "updated": "2016-09-15 17:27:35",
+        "slug_id": 170355,
+        "nav_type": 1,
+        "count_hit": 8,
+        "slug": "RISCDTraining",
+        "status_label": "Published",
+        "type_label": "Internal Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=141560",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/RISCDTraining",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15627",
+            "first_name": "Bobray",
+            "last_name": "Bordelon",
+            "email": "bordelon@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2007-09-24 03:38:39",
+            "updated": "2023-09-17 17:26:27"
+        }
+    },
+    {
+        "id": 84219,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 92727,
+        "group_id": 1886,
+        "name": "Twentieth-century U.S. society and politics",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2010-11-09 18:59:51",
+        "created": "2010-11-09 22:27:17",
+        "updated": "2016-04-01 18:53:34",
+        "slug_id": 108720,
+        "nav_type": 2,
+        "count_hit": 3246,
+        "slug": "history\/modernUS",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84219",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/history\/modernUS",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "92727",
+            "first_name": "Steven",
+            "last_name": "Knowlton",
+            "email": "steven.knowlton@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "https:\/\/libguides.princeton.edu\/prf.php?account_id=92727",
+            "created_by": "231",
+            "created": "2016-04-01 18:37:19",
+            "updated": "2022-06-15 12:36:26"
+        },
+        "tags": [
+            {
+                "id": 74138,
+                "text": "Primary sources"
+            }
+        ]
+    },
+    {
+        "id": 711181,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 6766,
+        "group_id": 0,
+        "name": "Theater: A Guide to Research and Resources",
+        "description": "This guide serves as a basic starting point to find key resources for studying and researching theater and drama at Princeton.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2017-08-30 19:45:00",
+        "created": "2017-08-14 03:13:19",
+        "updated": "2023-07-18 19:22:45",
+        "slug_id": 1268077,
+        "nav_type": 2,
+        "count_hit": 1817,
+        "slug": "theater",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=711181",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/theater",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "6766",
+            "first_name": "Darwin",
+            "last_name": "Scott",
+            "email": "dfscott@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "231",
+            "created": "2014-05-13 16:29:28",
+            "updated": "2020-08-29 21:50:27"
+        },
+        "subjects": [
+            {
+                "id": 213501,
+                "name": "Theater",
+                "slug_id": 2812340
+            }
+        ]
+    },
+    {
+        "id": 84202,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 15640,
+        "group_id": 1890,
+        "name": "Studio Art Library Resources",
+        "description": "A short description of the collections, tools, and research help available to Studio Art enthusiasts.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2010-11-04 21:14:16",
+        "created": "2010-10-01 00:57:13",
+        "updated": "2015-12-08 09:47:05",
+        "slug_id": 90687,
+        "nav_type": 1,
+        "count_hit": 671,
+        "slug": "studioart",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84202",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/studioart",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15640",
+            "first_name": "Rebecca",
+            "last_name": "Friedman",
+            "email": "rfriedma@princeton.edu",
+            "title": "Assistant Art Librarian",
+            "nickname": "",
+            "signature": "Rebecca K. Friedman\nAssistant Librarian\nMarquand Library of Art & Archaeology",
+            "created_by": "0",
+            "created": "2007-10-25 22:59:07",
+            "updated": "2022-08-11 14:33:17"
+        },
+        "subjects": [
+            {
+                "id": 222714,
+                "name": "Art &  Archaeology",
+                "slug_id": 2783794
+            }
+        ],
+        "tags": [
+            {
+                "id": 61080,
+                "text": "architecture"
+            },
+            {
+                "id": 61038,
+                "text": "art"
+            },
+            {
+                "id": 61155,
+                "text": "ceramics"
+            },
+            {
+                "id": 61156,
+                "text": "drawing"
+            },
+            {
+                "id": 61157,
+                "text": "painting"
+            },
+            {
+                "id": 61150,
+                "text": "photography"
+            },
+            {
+                "id": 61158,
+                "text": "printmaking"
+            },
+            {
+                "id": 61159,
+                "text": "sculpture"
+            },
+            {
+                "id": 61160,
+                "text": "studio_art"
+            },
+            {
+                "id": 61161,
+                "text": "video"
+            }
+        ]
+    },
+    {
+        "id": 84246,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 92727,
+        "group_id": 1886,
+        "name": "History of women, gender & sexuality",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2011-03-02 16:41:47",
+        "created": "2011-03-02 21:58:01",
+        "updated": "2016-04-01 18:50:45",
+        "slug_id": 108726,
+        "nav_type": 2,
+        "count_hit": 1821,
+        "slug": "history\/women",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84246",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/history\/women",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "92727",
+            "first_name": "Steven",
+            "last_name": "Knowlton",
+            "email": "steven.knowlton@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "https:\/\/libguides.princeton.edu\/prf.php?account_id=92727",
+            "created_by": "231",
+            "created": "2016-04-01 18:37:19",
+            "updated": "2022-06-15 12:36:26"
+        }
+    },
+    {
+        "id": 140123,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 231,
+        "group_id": 1898,
+        "name": "Politics Research Guide",
+        "description": "An annotated guide to both free and restricted resources for research in political science for Princeton University students, faculty, and researchers",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2014-09-16 15:49:24",
+        "created": "2014-09-16 20:15:01",
+        "updated": "2023-03-29 17:50:42",
+        "slug_id": 167873,
+        "nav_type": 2,
+        "count_hit": 5719,
+        "slug": "politics",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=140123",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/politics",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "231",
+            "first_name": "Jeremy",
+            "last_name": "Darrington",
+            "email": "jdarring@princeton.edu",
+            "title": "Politics Librarian",
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2014-02-20 01:12:59",
+            "updated": "2021-01-19 21:48:03"
+        },
+        "subjects": [
+            {
+                "id": 213493,
+                "name": "Politics",
+                "slug_id": 2812289
+            },
+            {
+                "id": 222716,
+                "name": "Politics - American",
+                "slug_id": 2786498
+            },
+            {
+                "id": 219942,
+                "name": "Politics - Comparative\/International Relations",
+                "slug_id": 2787183
+            }
+        ]
+    },
+    {
+        "id": 748342,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 6766,
+        "group_id": 15812,
+        "name": "Dance: A Guide to Research and Resources",
+        "description": "This guide serves as a basic starting point to find key resources for studying and researching dance, ballet, choreography, and related subjects at Princeton.",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2017-11-07 03:15:26",
+        "created": "2017-11-02 02:37:30",
+        "updated": "2023-05-23 16:16:43",
+        "slug_id": 1350306,
+        "nav_type": 2,
+        "count_hit": 1504,
+        "slug": "dance",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=748342",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/dance",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "6766",
+            "first_name": "Darwin",
+            "last_name": "Scott",
+            "email": "dfscott@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "231",
+            "created": "2014-05-13 16:29:28",
+            "updated": "2020-08-29 21:50:27"
+        },
+        "subjects": [
+            {
+                "id": 213439,
+                "name": "Dance",
+                "slug_id": 2580084
+            }
+        ]
+    },
+    {
+        "id": 1215083,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 197597,
+        "group_id": 0,
+        "name": "SAS 355\/ANT 395\/ENV 381\/URB 355: Coastal Justice: Ecologies, Societies, Infrastructures in South Asia",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2022-02-15 15:52:27",
+        "created": "2022-02-07 17:55:40",
+        "updated": "2022-02-15 15:52:27",
+        "slug_id": 2523181,
+        "nav_type": 2,
+        "count_hit": 24,
+        "slug": "coastalSA",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1215083",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/coastalSA",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "197597",
+            "first_name": "Ellen",
+            "last_name": "Ambrosone",
+            "email": "ea9@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2019-01-04 20:03:17",
+            "updated": "2023-02-21 16:13:16"
+        }
+    },
+    {
+        "id": 1077369,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 197597,
+        "group_id": 0,
+        "name": "HIS 436\/SAS 436: Working Class Lives on the Indian Subcontinent",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2020-09-14 18:03:47",
+        "created": "2020-09-08 16:01:01",
+        "updated": "2020-09-14 18:03:47",
+        "slug_id": 2160584,
+        "nav_type": 2,
+        "count_hit": 13,
+        "slug": "labor",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1077369",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/labor",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "197597",
+            "first_name": "Ellen",
+            "last_name": "Ambrosone",
+            "email": "ea9@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2019-01-04 20:03:17",
+            "updated": "2023-02-21 16:13:16"
+        }
+    },
+    {
+        "id": 84749,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 231,
+        "group_id": 1898,
+        "name": "POL Dept. Orientation",
+        "description": "Information, tools, and resources for using the library effectively for students and faculty",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2014-09-15 12:02:30",
+        "created": "2013-09-12 23:06:57",
+        "updated": "2023-01-27 17:15:50",
+        "slug_id": 2750628,
+        "nav_type": 2,
+        "count_hit": 99,
+        "slug": "politics\/orientation",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84749",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/politics\/orientation",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "231",
+            "first_name": "Jeremy",
+            "last_name": "Darrington",
+            "email": "jdarring@princeton.edu",
+            "title": "Politics Librarian",
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2014-02-20 01:12:59",
+            "updated": "2021-01-19 21:48:03"
+        },
+        "subjects": [
+            {
+                "id": 213493,
+                "name": "Politics",
+                "slug_id": 2812289
+            },
+            {
+                "id": 222716,
+                "name": "Politics - American",
+                "slug_id": 2786498
+            },
+            {
+                "id": 219942,
+                "name": "Politics - Comparative\/International Relations",
+                "slug_id": 2787183
+            }
+        ]
+    },
+    {
+        "id": 84031,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 15637,
+        "group_id": 12570,
+        "name": "Population Research",
+        "description": "Resources for Population Research",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2019-01-23 17:25:26",
+        "created": "2007-12-11 03:07:47",
+        "updated": "2022-07-11 14:10:02",
+        "slug_id": 1684838,
+        "nav_type": 2,
+        "count_hit": 4227,
+        "slug": "population_research",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84031",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/population_research",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15637",
+            "first_name": "Joann",
+            "last_name": "Donatiello",
+            "email": "jdonatie@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "jdonatie@princeton.edu",
+            "created_by": "0",
+            "created": "2007-10-11 00:19:37",
+            "updated": "2022-11-14 22:36:34"
+        },
+        "subjects": [
+            {
+                "id": 214527,
+                "name": "Population Research",
+                "slug_id": 2580068
+            }
+        ],
+        "tags": [
+            {
+                "id": 611427,
+                "text": "Census"
+            },
+            {
+                "id": 611426,
+                "text": "Demography"
+            },
+            {
+                "id": 611425,
+                "text": "Population"
+            }
+        ]
+    },
+    {
+        "id": 1194968,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 183381,
+        "group_id": 2475,
+        "name": "Face Image Databases",
+        "description": "An A-Z directory of databases of face stimulus images for use in behavioral research",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2021-11-08 15:41:50",
+        "created": "2021-11-08 15:13:57",
+        "updated": "2021-11-08 21:18:33",
+        "slug_id": 2469936,
+        "nav_type": 2,
+        "count_hit": 15554,
+        "slug": "facedatabases",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1194968",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/facedatabases",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "183381",
+            "first_name": "Meghan",
+            "last_name": "Testerman",
+            "email": "meghant@princeton.edu",
+            "title": "Open Research and Scholarship Librarian, Head of Princeton Research Data Service",
+            "nickname": "",
+            "signature": "",
+            "created_by": "20705",
+            "created": "2018-08-20 15:15:55",
+            "updated": "2023-09-01 19:25:27"
+        },
+        "tags": [
+            {
+                "id": 61074,
+                "text": "neuroscience"
+            },
+            {
+                "id": 61076,
+                "text": "psychology"
+            }
+        ]
+    },
+    {
+        "id": 84231,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 100533,
+        "group_id": 1886,
+        "name": "South & East Asia: primary sources",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2011-02-11 20:05:33",
+        "created": "2011-02-11 21:59:51",
+        "updated": "2016-06-07 19:14:55",
+        "slug_id": 108713,
+        "nav_type": 2,
+        "count_hit": 788,
+        "slug": "history\/Asia",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84231",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/history\/Asia",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "100533",
+            "first_name": "Alain",
+            "last_name": "St. Pierre",
+            "email": "apierre@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "231",
+            "created": "2016-06-07 19:02:40",
+            "updated": "2020-06-23 16:57:40"
+        },
+        "tags": [
+            {
+                "id": 74138,
+                "text": "Primary sources"
+            }
+        ]
+    },
+    {
+        "id": 84135,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 15627,
+        "group_id": 1888,
+        "name": "Health, Crime, and other Socioeconomic Data - Fall 2022",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2009-10-13 20:04:38",
+        "created": "2009-10-13 17:44:32",
+        "updated": "2022-09-12 10:58:41",
+        "slug_id": 90645,
+        "nav_type": 2,
+        "count_hit": 198,
+        "slug": "SocioEconomicData",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84135",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/SocioEconomicData",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15627",
+            "first_name": "Bobray",
+            "last_name": "Bordelon",
+            "email": "bordelon@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2007-09-24 03:38:39",
+            "updated": "2023-09-17 17:26:27"
+        },
+        "tags": [
+            {
+                "id": 61145,
+                "text": "crime"
+            },
+            {
+                "id": 61062,
+                "text": "data"
+            },
+            {
+                "id": 61063,
+                "text": "economics"
+            },
+            {
+                "id": 61144,
+                "text": "health"
+            },
+            {
+                "id": 61051,
+                "text": "jp"
+            },
+            {
+                "id": 61052,
+                "text": "senior_thesis"
+            },
+            {
+                "id": 61091,
+                "text": "statistics"
+            }
+        ]
+    },
+    {
+        "id": 1224427,
+        "type_id": 2,
+        "site_id": 77,
+        "owner_id": 299093,
+        "group_id": 1899,
+        "name": "SPIA 593z: The New Authoritarianism and the Challenge to Democracy ",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2022-08-16 18:24:27",
+        "created": "2022-03-10 14:52:19",
+        "updated": "2022-08-16 18:24:27",
+        "slug_id": 2545478,
+        "nav_type": 2,
+        "count_hit": 132,
+        "slug": "SPI593z",
+        "status_label": "Published",
+        "type_label": "Course Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1224427",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/SPI593z",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "299093",
+            "first_name": "Ameet",
+            "last_name": "Doshi",
+            "email": "ameet.doshi@princeton.edu",
+            "title": "Head, Donald E. Stokes Library",
+            "nickname": "",
+            "signature": "",
+            "created_by": "56356",
+            "created": "2021-09-20 13:06:52",
+            "updated": "2022-02-24 20:48:04"
+        },
+        "subjects": [
+            {
+                "id": 213494,
+                "name": "Public Policy",
+                "slug_id": 2812291
+            }
+        ]
+    },
+    {
+        "id": 84215,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 15628,
+        "group_id": 0,
+        "name": "BT Home LibGuide",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2018-10-24 12:43:18",
+        "created": "2010-11-03 18:57:33",
+        "updated": "2022-08-25 10:16:55",
+        "slug_id": 90696,
+        "nav_type": 2,
+        "count_hit": 295,
+        "slug": "rbivens",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84215",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/rbivens",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15628",
+            "first_name": "Wayne",
+            "last_name": "Bivens-Tatum",
+            "email": "rbivens@princeton.edu",
+            "title": "Librarian for Philosophy, Religion, & Anthropology",
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2007-09-24 04:02:56",
+            "updated": "2022-08-24 15:26:33"
+        }
+    },
+    {
+        "id": 84058,
+        "type_id": 3,
+        "site_id": 77,
+        "owner_id": 15627,
+        "group_id": 1888,
+        "name": "Basic Sources of International Economic Statistics",
+        "description": "",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2008-07-21 18:14:58",
+        "created": "2008-07-21 21:32:57",
+        "updated": "2022-08-09 15:07:56",
+        "slug_id": 90590,
+        "nav_type": 2,
+        "count_hit": 2426,
+        "slug": "internationalecon",
+        "status_label": "Published",
+        "type_label": "Subject Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=84058",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/internationalecon",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "15627",
+            "first_name": "Bobray",
+            "last_name": "Bordelon",
+            "email": "bordelon@princeton.edu",
+            "title": null,
+            "nickname": "",
+            "signature": "",
+            "created_by": "0",
+            "created": "2007-09-24 03:38:39",
+            "updated": "2023-09-17 17:26:27"
+        },
+        "tags": [
+            {
+                "id": 61062,
+                "text": "data"
+            },
+            {
+                "id": 61063,
+                "text": "economics"
+            },
+            {
+                "id": 61051,
+                "text": "jp"
+            },
+            {
+                "id": 61052,
+                "text": "senior_thesis"
+            },
+            {
+                "id": 61091,
+                "text": "statistics"
+            }
+        ]
+    },
+    {
+        "id": 1163041,
+        "type_id": 1,
+        "site_id": 77,
+        "owner_id": 229389,
+        "group_id": 2467,
+        "name": "Theater Collections at Firestone Library's Special Collections Department",
+        "description": "A guide to the collections of Special Collections Firestone's former Theater Division",
+        "redirect_url": "",
+        "status": 1,
+        "published": "2022-10-26 15:41:05",
+        "created": "2021-07-20 18:54:41",
+        "updated": "2023-02-01 16:44:45",
+        "slug_id": 2700426,
+        "nav_type": 1,
+        "count_hit": 42,
+        "slug": "SpecialCollectionsTheaterDivision",
+        "status_label": "Published",
+        "type_label": "General Purpose Guide",
+        "url": "https:\/\/libguides.princeton.edu\/c.php?g=1163041",
+        "friendly_url": "https:\/\/libguides.princeton.edu\/SpecialCollectionsTheaterDivision",
+        "thumbnail_url": "",
+        "owner": {
+            "id": "229389",
+            "first_name": "Adrienne",
+            "last_name": "Rusinko",
+            "email": "arusinko@princeton.edu",
+            "title": "",
+            "nickname": "",
+            "signature": "",
+            "created_by": "18385",
+            "created": "2019-12-06 20:45:14",
+            "updated": "2021-07-12 14:17:35"
+        }
+    }
+]

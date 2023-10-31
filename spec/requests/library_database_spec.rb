@@ -90,4 +90,27 @@ RSpec.describe 'GET /search/database' do
     expect(response_body[:records][1][:title]).to eq('Oxford Bibliographies: Music')
     expect(response_body[:records][2][:title]).to eq('Oxford Music Online')
   end
+
+  context 'with html in the description' do
+    let(:libjobs_response) { file_fixture('libjobs/library-databases-html.csv') }
+    let(:description) do
+      'Biographical articles for composers, performers, librettists, conductors and others. ' \
+        'Includes entries from Grove dictionaries of jazz and opera as well.'
+    end
+
+    before do
+      stub_request(:get, 'https://lib-jobs.princeton.edu/library-databases.csv')
+        .to_return(status: 200, body: libjobs_response)
+      LibraryDatabaseLoadingService.new.run
+    end
+
+    it 'removes html from the description' do
+      get '/search/database?query=oxford music'
+
+      expect(response).to be_successful
+      response_body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response_body[:records].first[:description]).to eq(description)
+    end
+  end
 end
