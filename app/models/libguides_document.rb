@@ -24,7 +24,7 @@ class LibguidesDocument < Document
   end
 
   def description
-    document['description']
+    ActionView::Base.full_sanitizer.sanitize(document['description'])
   end
 
   def url

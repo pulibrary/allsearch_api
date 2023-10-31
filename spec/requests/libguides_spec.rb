@@ -43,4 +43,21 @@ RSpec.describe 'GET /search/libguides' do
       expect(response_body[:records].count).to eq(3)
     end
   end
+
+  context 'with html in the description' do
+    let(:description) { 'A guide to print and electronic resources in Princeton University Library.' }
+
+    before do
+      stub_libguides(query: 'Asian%20American%20studies', fixture: 'libguides/asian_american_studies_html.json')
+    end
+
+    it 'removes html tags' do
+      get '/search/libguides?query=Asian+American+studies'
+
+      expect(response).to be_successful
+      response_body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response_body[:records].first[:description]).to eq(description)
+    end
+  end
 end
