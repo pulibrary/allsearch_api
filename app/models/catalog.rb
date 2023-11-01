@@ -10,7 +10,7 @@ class Catalog
   def initialize(query_terms:)
     @query_terms = query_terms
     @service = 'catalog'
-    @service_response = solr_service_response(query_terms:)
+    @service_response = solr_service_response
   end
 
   def solr_fields

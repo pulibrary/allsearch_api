@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ServiceController < ApplicationController
+  rescue_from AllsearchError, with: :show_allsearch_error
   rescue_from ActionController::ParameterMissing, with: :show_query_errors
   attr_reader :query
 
@@ -18,6 +19,14 @@ class ServiceController < ApplicationController
     params.require(:query).gsub(/[#{Regexp.escape(special_characters)}]/, ' ')
           .gsub(/\s+/, ' ')
           .strip
+  end
+
+  # :reek:FeatureEnvy
+  def show_allsearch_error(exception)
+    render json: { error: {
+      problem: exception.problem,
+      message: exception.message
+    } }, status: :internal_server_error
   end
 
   def show_query_errors
