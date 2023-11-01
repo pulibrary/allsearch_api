@@ -7,6 +7,7 @@ class LibraryWebsite
 
   def initialize(query_terms:)
     @query_terms = query_terms
+    @website_config = Rails.application.config_for(:allsearch)[:library_website]
   end
 
   def documents
@@ -25,15 +26,11 @@ class LibraryWebsite
   private
 
   def more_link
-    "https://#{website_config[:host]}/search?keys=#{query_terms}"
+    "https://#{@website_config[:host]}/search?keys=#{query_terms}"
   end
 
   def uri
-    URI::HTTPS.build(host: website_config[:host],
-                     path: website_config[:path])
-  end
-
-  def website_config
-    Rails.application.config_for(:allsearch)[:library_website]
+    URI::HTTPS.build(host: @website_config[:host],
+                     path: @website_config[:path])
   end
 end
