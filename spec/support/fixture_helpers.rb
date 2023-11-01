@@ -44,4 +44,13 @@ module FixtureHelpers
                  body: file_fixture(fixture),
                  headers: { 'Content-Type': 'application/json' })
   end
+
+  def stub_website(query:, fixture:)
+    url = 'https://library.psb-prod.princeton.edu/ps-library/search/results'
+    stub_request(:post, url)
+      .with(body: { 'search' => query })
+      .to_return(status: 200,
+                 body: file_fixture(fixture),
+                 headers: { 'Content-Type': 'application/json' })
+  end
 end
