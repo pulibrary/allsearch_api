@@ -198,6 +198,14 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
+        '500':
+          description: when we can't authenticate to the summon API
+          content:
+            application/json:
+              example:
+                error:
+                  problem: UPSTREAM_ERROR
+                  message: Could not authenticate to the upstream Summon service
   "/search/best-bet?query={query}":
     parameters:
     - name: query

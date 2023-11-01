@@ -11,6 +11,9 @@ AllCops:
     - 'solr/**/*'
     - 'vendor/bundle/**/*'
 
+Naming/RescuedExceptionsVariableName:
+  PreferredName: error
+
 RSpec/ExampleLength:
   Enabled: false
 
