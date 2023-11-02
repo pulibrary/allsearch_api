@@ -476,6 +476,15 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
+        '500':
+          description: when the system can't authenticate with libanswers
+          content:
+            application/json:
+              example:
+                error:
+                  problem: UPSTREAM_ERROR
+                  message: Could not generate a valid authentication token with upstream
+                    service.
   "/search/libguides?query={query}":
     parameters:
     - name: query
@@ -531,6 +540,15 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
+        '500':
+          description: when the system can't authenticate with libguides
+          content:
+            application/json:
+              example:
+                error:
+                  problem: UPSTREAM_ERROR
+                  message: Could not generate a valid authentication token with upstream
+                    service.
   "/search/database?query={query}":
     parameters:
     - name: query
