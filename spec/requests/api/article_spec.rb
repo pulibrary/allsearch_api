@@ -5,6 +5,9 @@ require 'swagger_helper'
 RSpec.describe 'article' do
   before do
     stub_summon(query: 'potato', fixture: 'article/potato.json')
+    stub_request(:get,
+                 'http://api.summon.serialssolutions.com/2.0.0/search?s.dym=t&s.fvf=ContentType,Newspaper%20Article,true&s.ho=t&s.ps=3&s.q=some_search')
+      .to_return(status: 401)
   end
 
   path '/search/article?query={query}' do
@@ -46,6 +49,18 @@ RSpec.describe 'article' do
           expect(data[:error]).to eq({
                                        problem: 'QUERY_IS_EMPTY',
                                        message: 'The query param must contain non-whitespace characters.'
+                                     })
+        end
+      end
+
+      response(500, "when we can't authenticate to the summon API") do
+        let(:query) { 'some_search' }
+
+        run_test! do |response|
+          data = JSON.parse(response.body, symbolize_names: true)
+          expect(data[:error]).to eq({
+                                       problem: 'UPSTREAM_ERROR',
+                                       message: 'Could not authenticate to the upstream Summon service'
                                      })
         end
       end

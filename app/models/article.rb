@@ -24,6 +24,8 @@ class Article
       's.dym': 't', # Enables Did You Mean functionality
       's.ps': 3 # Limits to three documents in response
     )
+  rescue Summon::Transport::TransportError => error
+    handle_summon_error(error)
   end
 
   def number
@@ -33,5 +35,18 @@ class Article
   def more_link
     URI::HTTPS.build(host: 'princeton.summon.serialssolutions.com', path: '/search',
                      query: service_response.query.query_string)
+  end
+
+  private
+
+  # :reek:FeatureEnvy
+  def handle_summon_error(error)
+    message = if error.is_a? Summon::Transport::AuthorizationError
+                'Could not authenticate to the upstream Summon service'
+              else
+                error.message
+              end
+    raise AllsearchError.new(problem: 'UPSTREAM_ERROR',
+                             msg: message)
   end
 end
