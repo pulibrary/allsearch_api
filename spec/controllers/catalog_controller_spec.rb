@@ -22,4 +22,36 @@ RSpec.describe CatalogController do
     get :show, params: { query: "war   and\tpeace" }
     expect(controller.query.query_terms).to eq('war and peace')
   end
+
+  context 'when service returns a Net::HTTP exception' do
+    before do
+      allow(Catalog).to receive(:new).and_raise(Net::HTTPFatalError.new('Some info', ''))
+    end
+
+    it 'handles Net::HTTP exceptions' do
+      get :show, params: { query: '123' }
+      expect(response).to have_http_status(:internal_server_error)
+      data = JSON.parse(response.body, symbolize_names: true)
+      expect(data[:error]).to eq({
+                                   problem: 'UPSTREAM_ERROR',
+                                   message: 'Query to upstream failed with Net::HTTPFatalError, message: Some info'
+                                 })
+    end
+  end
+
+  context 'when we have some kind of error' do
+    before do
+      allow(Catalog).to receive(:new).and_raise(ArgumentError)
+    end
+
+    it 'handles it' do
+      get :show, params: { query: '123' }
+      expect(response).to have_http_status(:internal_server_error)
+      data = JSON.parse(response.body, symbolize_names: true)
+      expect(data[:error]).to eq({
+                                   problem: 'APPLICATION_ERROR',
+                                   message: 'This application threw ArgumentError'
+                                 })
+    end
+  end
 end

@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class ServiceController < ApplicationController
+  rescue_from StandardError, with: :show_standard_error
+  rescue_from Timeout::Error, Errno::ECONNRESET, Net::ProtocolError, with: :show_http_error
   rescue_from AllsearchError, with: :show_allsearch_error
-  rescue_from ActionController::ParameterMissing, with: :show_query_errors
+  rescue_from ActionController::ParameterMissing, with: :show_query_error
   attr_reader :query
 
   def show
@@ -21,19 +23,37 @@ class ServiceController < ApplicationController
           .strip
   end
 
-  # :reek:FeatureEnvy
-  def show_allsearch_error(exception)
-    render json: { error: {
-      problem: exception.problem,
-      message: exception.message
-    } }, status: :internal_server_error
+  def show_standard_error(exception)
+    render_error(problem: 'APPLICATION_ERROR',
+                 message: "This application threw #{exception.class}",
+                 status: :internal_server_error)
   end
 
-  def show_query_errors
+  # :reek:FeatureEnvy
+  def show_http_error(exception)
+    render_error(problem: 'UPSTREAM_ERROR',
+                 message: "Query to upstream failed with #{exception.class}, message: #{exception.message}",
+                 status: :internal_server_error)
+  end
+
+  # :reek:FeatureEnvy
+  def show_allsearch_error(exception)
+    render_error(problem: exception.problem,
+                 message: exception.message,
+                 status: :internal_server_error)
+  end
+
+  def show_query_error
+    render_error(problem: 'QUERY_IS_EMPTY',
+                 message: 'The query param must contain non-whitespace characters.',
+                 status: :bad_request)
+  end
+
+  def render_error(problem:, message:, status:)
     render json: { error: {
-      problem: 'QUERY_IS_EMPTY',
-      message: 'The query param must contain non-whitespace characters.'
-    } }, status: :bad_request
+      problem:,
+      message:
+    } }, status:
   end
 
   def special_characters
