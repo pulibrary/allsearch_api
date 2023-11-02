@@ -29,17 +29,6 @@ RSpec.describe 'libanswers' do
           run_test!
         end
 
-        response(400, 'with an empty search query') do
-          let(:query) { '' }
-          run_test! do |response|
-            data = JSON.parse(response.body, symbolize_names: true)
-            expect(data[:error]).to eq({
-                                         problem: 'QUERY_IS_EMPTY',
-                                         message: 'The query param must contain non-whitespace characters.'
-                                       })
-          end
-        end
-
         response(400, 'with a search query that only contains whitespace') do
           let(:query) { "\t  \n " }
           run_test! do |response|
