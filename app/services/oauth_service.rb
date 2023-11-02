@@ -9,7 +9,12 @@ class OAuthService
   end
 
   def new_token
-    JSON.parse(response.body)['access_token']
+    token = JSON.parse(response.body)['access_token']
+    unless token
+      raise AllsearchError.new(problem: 'UPSTREAM_ERROR',
+                               msg: 'Could not generate a valid authentication token with upstream service.')
+    end
+    token
   end
 
   def expiration_time

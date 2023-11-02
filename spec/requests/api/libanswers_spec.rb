@@ -3,10 +3,6 @@
 require 'swagger_helper'
 
 RSpec.describe 'libanswers' do
-  before do
-    stub_libanswers(query: 'printer', fixture: 'libanswers/printer.json')
-  end
-
   path '/search/libanswers?query={query}' do
     parameter name: 'query', in: :path, type: :string, description: 'A string to query Libanswers'
     get('/search/libanswers?query={query}') do
@@ -23,29 +19,40 @@ RSpec.describe 'libanswers' do
         }
       end
 
-      response(200, 'successful') do
-        let(:query) { 'printer' }
-        run_test!
-      end
+      describe 'with valid authentication' do
+        before do
+          stub_libanswers(query: 'printer', fixture: 'libanswers/printer.json')
+        end
 
-      response(400, 'with an empty search query') do
-        let(:query) { '' }
-        run_test! do |response|
-          data = JSON.parse(response.body, symbolize_names: true)
-          expect(data[:error]).to eq({
-                                       problem: 'QUERY_IS_EMPTY',
-                                       message: 'The query param must contain non-whitespace characters.'
-                                     })
+        response(200, 'successful') do
+          let(:query) { 'printer' }
+          run_test!
+        end
+
+        response(400, 'with a search query that only contains whitespace') do
+          let(:query) { "\t  \n " }
+          run_test! do |response|
+            data = JSON.parse(response.body, symbolize_names: true)
+            expect(data[:error]).to eq({
+                                         problem: 'QUERY_IS_EMPTY',
+                                         message: 'The query param must contain non-whitespace characters.'
+                                       })
+          end
         end
       end
 
-      response(400, 'with a search query that only contains whitespace') do
-        let(:query) { "\t  \n " }
+      response(500, "when the system can't authenticate with libanswers") do
+        let(:query) { 'some_query' }
+        before do
+          stub_request(:post, 'https://faq.library.princeton.edu/api/1.1/oauth/token')
+            .to_return(status: 400, body: '{"error":"The client credentials are invalid"}')
+        end
+
         run_test! do |response|
           data = JSON.parse(response.body, symbolize_names: true)
           expect(data[:error]).to eq({
-                                       problem: 'QUERY_IS_EMPTY',
-                                       message: 'The query param must contain non-whitespace characters.'
+                                       problem: 'UPSTREAM_ERROR',
+                                       message: 'Could not generate a valid authentication token with upstream service.'
                                      })
         end
       end
