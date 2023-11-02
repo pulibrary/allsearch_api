@@ -64,7 +64,7 @@ RSpec.describe 'GET /search/pulmap' do
   end
 
   context 'without a search term' do
-    it 'returns a 422 unprocessable response' do
+    it 'returns a 400 bad request' do
       get '/search/pulmap?query='
 
       expect(response).to be_bad_request
