@@ -20,6 +20,9 @@ default: &default
   libguides:
     client_id: <%= ENV['LIBGUIDES_CLIENT_ID'] || 'ABC' %>
     client_secret: <%= ENV['LIBGUIDES_CLIENT_SECRET'] || '12345' %>
+  library_website:
+    host: "library.psb-prod.princeton.edu"
+    path: "/ps-library/search/results"
   pulmap:
     solr: 
       host: "lib-solr8-prod.princeton.edu"
@@ -71,6 +74,8 @@ staging:
       host: "lib-solr8-staging.princeton.edu"
       port: 8983
       collection: "pulfalight-staging"
+  library_website:
+    host: "library.psb-test.princeton.edu"
 
 test:
   <<: *default
