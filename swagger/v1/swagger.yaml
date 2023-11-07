@@ -657,5 +657,153 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
+  "/search/website?query={query}":
+    parameters:
+    - name: query
+      in: path
+      description: A string to query the Library Website
+      required: true
+      schema:
+        type: string
+    get:
+      summary: "/search/article?query={query}"
+      tags:
+      - Library Website
+      description: Searches the Library Website using a query term.
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+                number: 4
+                records:
+                - title: Third Level Page Two
+                  id: '151'
+                  type: ps_basic_page
+                  description: "Nullam eget diam faucibus elit lobortis viverra a
+                    vel justo. Sed eget massa auctor.\r\n"
+                  url: https://library.psb-prod.princeton.edu/services/sample-service-section-content/second-sub-page/third-level-page-two
+                  other_fields: {}
+                - title: First Sub-Page
+                  id: '131'
+                  type: ps_basic_page
+                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Integer rhoncus id dolor non tempus. Vestibulum quam nisi,
+                    semper at dui vitae, bibendum accumsan augue. Nullam faucibus
+                    augue faucibus nisl aliquam, non semper ipsum dignissim. Pellentesque
+                    ornare augue nunc, non posuere justo iaculis at. Praesent tincidunt
+                    venenatis fermentum. Etiam pharetra lacus ligula. Interdum et
+                    malesuada fames ac ante ipsum primis in faucibus. Proin sit amet
+                    ex lacus.\r\n\r\nPraesent ac eleifend magna. Etiam at felis suscipit,
+                    euismod lorem sit amet, congue sem. Vivamus non lorem eu mi gravida
+                    pellentesque. Sed pulvinar et arcu vel pellentesque. Fusce tincidunt
+                    purus justo, ut placerat nisl accumsan nec. Mauris eu vehicula
+                    nisi, ut mollis massa. In euismod ac libero et efficitur. Cras
+                    vel lacus ac tortor finibus consequat. Nullam eu justo eu neque
+                    ultrices auctor eget gravida lectus. Sed vel est odio. In sed
+                    nibh gravida, pellentesque augue et, consectetur magna. Interdum
+                    et malesuada fames ac ante ipsum primis in faucibus. Phasellus
+                    vehicula arcu bibendum eleifend imperdiet. Etiam varius metus
+                    erat, in aliquet felis viverra in. In quis facilisis magna.\r\n\r\nAliquam
+                    at ipsum vitae sapien dignissim auctor at ut nunc. Mauris ac nunc
+                    at tellus hendrerit venenatis. Ut non lorem congue, consectetur
+                    enim quis, luctus tortor. Praesent finibus dapibus vestibulum.
+                    Curabitur ut hendrerit justo. Fusce vitae metus semper, iaculis
+                    dolor efficitur, sagittis nisi. Maecenas semper nulla non augue
+                    ultrices, id porta risus tempus. Nam ultricies bibendum auctor.
+                    Fusce dolor sapien, gravida ut mattis accumsan, aliquet quis augue.
+                    Vestibulum efficitur aliquet dapibus. Mauris quis sagittis est,
+                    id efficitur ipsum.\r\n\r\nAliquam eleifend lacus quam, et placerat
+                    orci eleifend vitae. Nullam ex diam, fermentum sed placerat in,
+                    dapibus at eros. Vivamus auctor vitae lectus non pretium. Interdum
+                    et malesuada fames ac ante ipsum primis in faucibus. Mauris accumsan
+                    commodo est sit amet gravida. Phasellus nec odio viverra, varius
+                    tortor eu, placerat mauris. Nam sit amet sem eu dolor consectetur
+                    molestie eget pretium metus. Donec enim augue, tincidunt nec tincidunt
+                    ac, condimentum a lectus. Donec vel bibendum est, vitae consequat
+                    lorem. Nunc sed eleifend sem, vel dapibus dui. Proin et libero
+                    egestas, aliquet lacus at, molestie ex.\r\n"
+                  url: https://library.psb-prod.princeton.edu/services/sample-service-section-content/first-sub-page
+                  other_fields: {}
+                - title: Test Page
+                  id: '261'
+                  type: ps_basic_page
+                  description: "Heading 2\r\n\r\nLorem ipsum dolor sit amet Data and
+                    Statistical Services adipiscing elit molestie fermentum, nam diam
+                    per sem curae primis nisl pretium mattis morbi, porttitor ornare
+                    augue ridiculus et est pharetra feugiat. Odio ut suspendisse scelerisque
+                    porttitor accumsan dignissim ligula eros, nulla pharetra velit
+                    malesuada diam curae vel massa, habitant facilisi pulvinar himenaeos
+                    est nisi phasellus. Condimentum nostra proin dignissim nisl orci
+                    convallis non semper in, sem leo primis vel nisi fringilla felis
+                    lacus varius, augue tortor fames torquent natoque taciti dictumst
+                    neque. Ante ornare purus nostra rhoncus pharetra enim sed, etiam
+                    et eget torquent pretium ultricies pellentesque, ad a cum tempor
+                    gravida fringilla. Eleifend rutrum convallis fames est senectus
+                    potenti mus egestas, faucibus per etiam tempor enim ac hac lectus,
+                    tristique morbi himenaeos dapibus integer vitae habitant.\r\n\r\nHeading
+                    2\r\n\r\nLorem ipsum dolor sit amet consectetur adipiscing elit
+                    molestie fermentum, nam diam per sem curae primis nisl pretium
+                    mattis morbi, porttitor ornare augue ridiculus et est pharetra
+                    feugiat. Odio ut suspendisse scelerisque porttitor accumsan dignissim
+                    ligula eros, nulla pharetra velit malesuada diam curae vel massa,
+                    habitant facilisi pulvinar himenaeos est nisi phasellus. Condimentum
+                    nostra proin dignissim nisl orci convallis non semper in, sem
+                    leo primis vel nisi fringilla felis lacus varius, augue tortor
+                    fames torquent natoque taciti dictumst neque. Ante ornare purus
+                    nostra rhoncus pharetra enim sed, etiam et eget torquent pretium
+                    ultricies pellentesque, ad a cum tempor gravida fringilla. Eleifend
+                    rutrum convallis fames est senectus potenti mus egestas, faucibus
+                    per etiam tempor enim ac hac lectus, tristique morbi himenaeos
+                    dapibus integer vitae habitant.\r\n\r\nHeading 3\r\n\r\nLorem
+                    ipsum dolor sit amet consectetur adipiscing elit molestie fermentum,
+                    nam diam per sem curae primis nisl pretium mattis morbi, porttitor
+                    ornare augue ridiculus et est pharetra feugiat.\r\n\r\n\r\n\tLorem
+                    ipsum dolor sit amet consectetur adipiscing elit\r\n\tLorem ipsum
+                    dolor sit amet consectetur adipiscing elit\r\n\r\n\r\nHeading
+                    4\r\n\r\nLorem ipsum dolor sit amet consectetur adipiscing elit
+                    molestie fermentum, nam diam per sem curae primis nisl pretium
+                    mattis morbi, porttitor ornare augue ridiculus et est pharetra
+                    feugiat.\r\n\r\nHeading 5\r\n\r\nLorem ipsum dolor sit amet consectetur
+                    adipiscing elit molestie fermentum, nam diam per sem curae primis
+                    nisl pretium mattis morbi, porttitor ornare augue ridiculus et
+                    est pharetra feugiat.\r\n\r\nHeading 6\r\n\r\nLorem ipsum dolor
+                    sit amet consectetur adipiscing elit molestie fermentum, nam diam
+                    per sem curae primis nisl pretium mattis morbi, porttitor ornare
+                    augue ridiculus et est pharetra feugiat.\r\n\r\n\r\n\r\n\r\nHeading
+                    2\r\n\r\nLorem ipsum dolor sit amet consectetur adipiscing elit
+                    molestie fermentum, nam diam per sem curae primis nisl pretium
+                    mattis morbi, porttitor ornare augue ridiculus et est pharetra
+                    feugiat. Odio ut suspendisse scelerisque porttitor accumsan dignissim
+                    ligula eros, nulla pharetra velit malesuada diam curae vel massa,
+                    habitant facilisi pulvinar himenaeos est nisi phasellus. Condimentum
+                    nostra proin dignissim nisl orci convallis non semper in, sem
+                    leo primis vel nisi fringilla felis lacus varius, augue tortor
+                    fames torquent natoque taciti dictumst neque.\r\n\r\n\r\n\t\r\n\tLorem
+                    ipsum dolor sit amet, consectetur adipiscing elit nascetur facilisi,
+                    ridiculus egestas maecenas.\r\n\t\r\n\t\r\n\tLorem ipsum dolor
+                    sit amet, consectetur adipiscing elit nascetur facilisi, ridiculus
+                    egestas maecenas.\r\n\t\r\n\r\n\r\nHeading 2\r\n\r\nLorem ipsum
+                    dolor sit amet consectetur adipiscing elit molestie fermentum,
+                    nam diam per sem curae primis nisl pretium mattis morbi, porttitor
+                    ornare augue ridiculus et est pharetra feugiat. Odio ut suspendisse
+                    scelerisque porttitor accumsan dignissim ligula eros, nulla pharetra
+                    velit malesuada diam curae vel massa, habitant facilisi pulvinar
+                    himenaeos est nisi phasellus. Condimentum nostra proin dignissim
+                    nisl orci convallis non semper in, sem leo primis vel nisi fringilla
+                    felis lacus varius, augue tortor fames torquent natoque taciti
+                    dictumst neque.\r\n"
+                  url: https://library.psb-prod.princeton.edu/about/test-page
+                  other_fields: {}
+                more: https://library.psb-prod.princeton.edu/search?keys=firestone
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
 servers:
 - url: "/"
