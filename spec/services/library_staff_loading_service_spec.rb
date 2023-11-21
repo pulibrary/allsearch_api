@@ -12,7 +12,7 @@ RSpec.describe LibraryStaffLoadingService do
 
   it 'creates new rows in the library_staff table for each CSV row' do
     expect { described_class.new.run }.to change(LibraryStaffRecord, :count).by(3)
-    expect(LibraryStaffRecord.third.puid).to eq(000000003)
+    expect(LibraryStaffRecord.third.puid).to eq(0o00000003)
     expect(LibraryStaffRecord.third.netid).to eq('tiberius')
     expect(LibraryStaffRecord.third.phone).to eq('(555) 222-2222')
     expect(LibraryStaffRecord.third.name).to eq('Adams, Tiberius')
@@ -44,16 +44,21 @@ RSpec.describe LibraryStaffLoadingService do
 
   context 'when a best bet in postgres is no longer in the CSV' do
     it 'removes it from the database' do
-      old_record = LibraryStaffRecord.create(puid: 000000004, netid: 'notourcat', name: 'Cat, Not Our', title: 'Outside Specialist', library_title: 'Outside Specialist', email: 'outside@princeton.edu', department: 'None')
-      expect(LibraryStaffRecord.where(puid: 000000004)).to contain_exactly(old_record)
+      old_record = LibraryStaffRecord.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
+                                             title: 'Outside Specialist', library_title: 'Outside Specialist',
+                                             email: 'outside@princeton.edu', department: 'None')
+      expect(LibraryStaffRecord.where(puid: 0o00000004)).to contain_exactly(old_record)
       described_class.new.run
-      expect(LibraryStaffRecord.where(puid: 000000004)).to be_empty
+      expect(LibraryStaffRecord.where(puid: 0o00000004)).to be_empty
     end
   end
 
   context 'when a best bet has updated info in the CSV' do
     it 'updates the relevant fields' do
-      LibraryStaffRecord.create(puid: 000000003, netid: 'tiberius', first_name: 'Spot', name: 'Adams, Spot', title: 'Lead Hairball Engineer', library_title: 'Lead Hairball Engineer', email: 'tiberius@princeton.edu', department: 'Library - Collections and Access Services')
+      LibraryStaffRecord.create(puid: 0o00000003, netid: 'tiberius', first_name: 'Spot', name: 'Adams, Spot',
+                                title: 'Lead Hairball Engineer', library_title: 'Lead Hairball Engineer',
+                                email: 'tiberius@princeton.edu',
+                                department: 'Library - Collections and Access Services')
       expect(LibraryStaffRecord.find_by(first_name: 'Spot').name).to eq 'Adams, Spot'
       described_class.new.run
       expect(LibraryStaffRecord.find_by(first_name: 'Spot').name).to eq 'Adams, Tiberius'

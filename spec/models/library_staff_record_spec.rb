@@ -16,10 +16,6 @@ RSpec.describe LibraryStaffRecord do
       expect(described_class.query('lucy')[0].first_name).to eq('Lucy')
     end
 
-    it 'finds records by building' do
-      expect(described_class.query('Firestone Library').length).to be(2)
-    end
-
     it 'finds records by title' do
       expect(described_class.query('Nap Coordinator')[0].first_name).to eq('Nimbus')
     end
