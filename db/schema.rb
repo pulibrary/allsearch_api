@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_09_21_193904) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_20_153410) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +38,37 @@ ActiveRecord::Schema[7.1].define(version: 2023_09_21_193904) do
     t.datetime "updated_at", null: false
     t.virtual "searchable", type: :tsvector, as: "(((setweight(to_tsvector('english'::regconfig, (COALESCE(name, ''::character varying))::text), 'A'::\"char\") || setweight(to_tsvector('english'::regconfig, (COALESCE(alt_names_concat, ''::character varying))::text), 'B'::\"char\")) || setweight(to_tsvector('english'::regconfig, (COALESCE(description, ''::character varying))::text), 'C'::\"char\")) || setweight(to_tsvector('english'::regconfig, (COALESCE(subjects_concat, ''::character varying))::text), 'D'::\"char\"))", stored: true
     t.index ["searchable"], name: "searchable_idx", using: :gin
+  end
+
+  create_table "library_staff_records", force: :cascade do |t|
+    t.bigint "puid", null: false
+    t.string "netid", null: false
+    t.string "phone"
+    t.string "name", null: false
+    t.string "last_name"
+    t.string "first_name"
+    t.string "middle_name"
+    t.string "title", null: false
+    t.string "library_title", null: false
+    t.string "email", null: false
+    t.string "section"
+    t.string "division"
+    t.string "department", null: false
+    t.string "unit"
+    t.string "office"
+    t.string "building"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["building"], name: "index_library_staff_records_on_building"
+    t.index ["department"], name: "index_library_staff_records_on_department"
+    t.index ["division"], name: "index_library_staff_records_on_division"
+    t.index ["email"], name: "index_library_staff_records_on_email", unique: true
+    t.index ["first_name"], name: "index_library_staff_records_on_first_name"
+    t.index ["middle_name"], name: "index_library_staff_records_on_middle_name"
+    t.index ["office"], name: "index_library_staff_records_on_office"
+    t.index ["section"], name: "index_library_staff_records_on_section"
+    t.index ["title"], name: "index_library_staff_records_on_title"
+    t.index ["unit"], name: "index_library_staff_records_on_unit"
   end
 
   create_table "oauth_tokens", force: :cascade do |t|
