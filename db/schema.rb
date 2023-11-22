@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_20_153410) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_21_205208) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,16 +59,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_153410) do
     t.string "building"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["building"], name: "index_library_staff_records_on_building"
-    t.index ["department"], name: "index_library_staff_records_on_department"
-    t.index ["division"], name: "index_library_staff_records_on_division"
-    t.index ["email"], name: "index_library_staff_records_on_email", unique: true
-    t.index ["first_name"], name: "index_library_staff_records_on_first_name"
-    t.index ["middle_name"], name: "index_library_staff_records_on_middle_name"
-    t.index ["office"], name: "index_library_staff_records_on_office"
-    t.index ["section"], name: "index_library_staff_records_on_section"
-    t.index ["title"], name: "index_library_staff_records_on_title"
-    t.index ["unit"], name: "index_library_staff_records_on_unit"
+    t.virtual "searchable", type: :tsvector, as: "to_tsvector('english'::regconfig, (((((((((((((((((((((((COALESCE(title, ''::character varying))::text || ' '::text) || (COALESCE(first_name, ''::character varying))::text) || ' '::text) || (COALESCE(middle_name, ''::character varying))::text) || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(title, ''::character varying))::text) || ' '::text) || (COALESCE(email, ''::character varying))::text) || ' '::text) || (COALESCE(department, ''::character varying))::text) || ' '::text) || (COALESCE(office, ''::character varying))::text) || ' '::text) || (COALESCE(building, ''::character varying))::text) || ' '::text) || (COALESCE(section, ''::character varying))::text) || ' '::text) || (COALESCE(division, ''::character varying))::text) || ' '::text) || (COALESCE(unit, ''::character varying))::text))", stored: true
+    t.index ["searchable"], name: "staff_search_idx", using: :gin
   end
 
   create_table "oauth_tokens", force: :cascade do |t|

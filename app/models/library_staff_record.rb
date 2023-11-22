@@ -3,12 +3,18 @@
 # This class is responsible for storing and retrieving relevant
 # metadata from the library_staff_record table in the database
 class LibraryStaffRecord < ApplicationRecord
-  scope :query, lambda { |search_term|
-                  where('last_name ILIKE :search OR first_name ILIKE :search OR middle_name ILIKE :search ' \
-                        'OR title ILIKE :search OR library_title ILIKE :search OR email ILIKE :search ' \
-                        'OR department ILIKE :search OR office ILIKE :search OR building ILIKE :search',
-                        search: search_term)
-                }
+  include PgSearch::Model
+
+  # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
+  pg_search_scope :query,
+                  against: 'searchable',
+                  using: {
+                    tsearch: {
+                      dictionary: 'english',
+                      tsvector_column: 'searchable'
+                    }
+                  }
+
   # :reek:TooManyStatements
   # rubocop:disable Metrics/AbcSize
   # rubocop:disable Metrics/MethodLength
