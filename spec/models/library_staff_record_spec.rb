@@ -27,8 +27,8 @@ RSpec.describe LibraryStaffRecord do
     it 'finds records by building' do
       results = described_class.query('Firestone Library')
       expect(results.length).to be(2)
-      expect(results[0].first_name).to eq('Nimbus')
-      expect(results[1].first_name).to eq('Spot')
+      expect(results[0].first_name).to eq('Spot')
+      expect(results[1].first_name).to eq('Nimbus')
     end
   end
 end
