@@ -28,3 +28,8 @@ end
 every :hour, roles: [:prod_db] do
   rake 'library_databases:sync'
 end
+
+# Run  at 5:00 am EST or 6:00 am EDT
+every 1.day, at: '10:00 am' do
+  rake 'library_staff:sync'
+end
