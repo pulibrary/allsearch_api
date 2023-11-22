@@ -3,7 +3,7 @@
 # This class is responsible for getting relevant
 # metadata from the LibraryStaffRecords in the database
 # The document is a LibraryStaffRecord
-# ignore :reek:NestedIterators
+# :reek:TooManyMethods
 class LibraryStaffDocument < Document
   private
 
