@@ -3,11 +3,12 @@
 require 'swagger_helper'
 
 RSpec.describe 'library_database' do
-  path '/search/database?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query the Library Databases'
+  path '/search/database' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query the Library Databases'
 
     get('search/database?query={query}') do
       tags 'Library Databases'
+      operationId 'searchDatabase'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches for relevant Library Databases using a query term'

@@ -3,10 +3,11 @@
 require 'swagger_helper'
 
 RSpec.describe 'libguides' do
-  path '/search/libguides?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query Libguides'
+  path '/search/libguides' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query Libguides'
     get('/search/libguides?query={query}') do
       tags 'Libguides'
+      operationId 'searchLibguides'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches the Libguides research guides using a query term'

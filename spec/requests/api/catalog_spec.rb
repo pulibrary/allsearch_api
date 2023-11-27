@@ -10,11 +10,12 @@ RSpec.describe 'catalog' do
       .to_return(status: 404, body: file_fixture('solr/catalog/404.html'))
   end
 
-  path '/search/catalog?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query the Catalog'
+  path '/search/catalog' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query the Catalog'
 
     get('/search/catalog?query={query}') do
       tags 'Catalog'
+      operationId 'searchCatalog'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches the Catalog using a query term'

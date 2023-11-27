@@ -3,11 +3,12 @@
 require 'swagger_helper'
 
 RSpec.describe 'library_staff' do
-  path '/search/staff?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query the Library Staff'
+  path '/search/staff' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query the Library Staff'
 
     get('search/staff?query={query}') do
       tags 'Library Staff'
+      operationId 'searchStaff'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches for relevant Library Staff using a query term'
