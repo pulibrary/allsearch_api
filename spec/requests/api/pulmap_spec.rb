@@ -8,11 +8,12 @@ RSpec.describe 'pulmap' do
       .to_return(status: 200, body: file_fixture('solr/pulmap/scribner.json'))
   end
 
-  path '/search/pulmap?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query Pulmap'
+  path '/search/pulmap' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query Pulmap'
 
     get('/search/pulmap?query={query}') do
       tags 'Pulmap'
+      operationId 'searchPulmap'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches Pulmap using a query term'

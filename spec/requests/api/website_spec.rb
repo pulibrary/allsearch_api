@@ -13,10 +13,11 @@ RSpec.describe 'website' do
       .to_return(status: 401)
   end
 
-  path '/search/website?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query the Library Website'
+  path '/search/website' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query the Library Website'
     get('/search/article?query={query}') do
       tags 'Library Website'
+      operationId 'searchWebsite'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches the Library Website using a query term.'

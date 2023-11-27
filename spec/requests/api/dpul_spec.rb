@@ -8,11 +8,12 @@ RSpec.describe 'dpul' do
       .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
   end
 
-  path '/search/dpul?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query Dpul'
+  path '/search/dpul' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query Dpul'
 
     get('/search/dpul?query={query}') do
       tags 'Dpul'
+      operationId 'searchDpul'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches Dpul using a query term'

@@ -7,10 +7,11 @@ RSpec.describe 'art_museum' do
     stub_art_museum(query: 'cats', fixture: 'art_museum/cats.json')
   end
 
-  path '/search/artmuseum?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query the Art Museum'
+  path '/search/artmuseum' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query the Art Museum'
     get('/search/artmuseum?query={query}') do
       tags 'Art Museum'
+      operationId 'searchArtmuseum'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches the Art Museum using a query term'

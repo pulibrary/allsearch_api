@@ -76,4 +76,12 @@ To update the api documentation for a service:
 * Visit the documentation:
     * [Documentation](https://allsearch-api.princeton.edu/api-docs)
 
+### Validating the Swagger/OpenAPI schema file
 
+This repo uses [vacuum](https://quobix.com/vacuum/about/) to validate that
+the swagger.yaml file meets the OpenAPI standard.
+
+```
+brew install daveshanley/vacuum/vacuum
+vacuum lint -d swagger/**/*.yaml
+```

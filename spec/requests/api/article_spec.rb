@@ -10,10 +10,11 @@ RSpec.describe 'article' do
       .to_return(status: 401)
   end
 
-  path '/search/article?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query the Summon API, aka Articles+'
+  path '/search/article' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query the Summon API, aka Articles+'
     get('/search/article?query={query}') do
       tags 'Article'
+      operationId 'searchArticle'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches the Summon API using a query term. Excludes Newspaper Articles and items not held by PUL'

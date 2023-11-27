@@ -3,10 +3,11 @@
 require 'swagger_helper'
 
 RSpec.describe 'best_bet' do
-  path '/search/best-bet?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query the Best Bets'
+  path '/search/best-bet' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query the Best Bets'
     get('/search/best-bet?query={query}') do
       tags 'Best Bets'
+      operationId 'searchBestBet'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches the Best Bets using a query term'

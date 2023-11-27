@@ -19,12 +19,16 @@ RSpec.configure do |config|
       openapi: '3.0.1',
       info: {
         title: 'Allsearch API',
+        description: 'Backend API for allsearch.princeton.edu',
         version: 'v1'
       },
       paths: {},
       servers: [
         {
-          url: '/'
+          url: 'https://allsearch-api.princeton.edu'
+        },
+        {
+          url: 'https://allsearch-api-staging.princeton.edu'
         }
       ]
     }

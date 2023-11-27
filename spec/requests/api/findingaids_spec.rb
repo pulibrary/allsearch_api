@@ -8,11 +8,12 @@ RSpec.describe 'findingaids' do
       .to_return(status: 200, body: file_fixture('solr/findingaids/cats.json'))
   end
 
-  path '/search/findingaids?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query Findingaids'
+  path '/search/findingaids' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query Findingaids'
 
     get('/search/findingaids?query={query}') do
       tags 'Findingaids'
+      operationId 'searchFindingaids'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches Findingaids using a query term'

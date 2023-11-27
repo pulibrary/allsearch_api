@@ -97,7 +97,18 @@ jobs:
       - run: 
           name: Check code for vulnerabilities
           command: bundle exec brakeman
-
+  vacuum:
+    executor: allsearch-executor
+    steps:
+      - attach_workspace:
+          at: '~/allsearch_api'
+      - checkout
+      - run:
+          name: Install vacuum
+          command: npm install -g @quobix/vacuum --prefix=$HOME/.local
+      - run:
+          name: Validate swagger yaml file againt OpenAPI standard
+          command: vacuum lint -d swagger/**/*.yaml
 
 workflows:
   build_and_test:
@@ -110,3 +121,4 @@ workflows:
           requires:
             - build
       - semgrep
+      - vacuum

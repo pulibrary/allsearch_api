@@ -3,10 +3,11 @@
 require 'swagger_helper'
 
 RSpec.describe 'libanswers' do
-  path '/search/libanswers?query={query}' do
-    parameter name: 'query', in: :path, type: :string, description: 'A string to query Libanswers'
+  path '/search/libanswers' do
+    parameter name: 'query', in: :query, type: :string, description: 'A string to query Libanswers'
     get('/search/libanswers?query={query}') do
       tags 'Libanswers'
+      operationId 'searchLibanswers'
       consumes 'application/json'
       produces 'application/json'
       description 'Searches the Libanswers FAQs using a query term'

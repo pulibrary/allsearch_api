@@ -2,20 +2,21 @@
 openapi: 3.0.1
 info:
   title: Allsearch API
+  description: Backend API for allsearch.princeton.edu
   version: v1
 paths:
-  "/search/artmuseum?query={query}":
+  "/search/artmuseum":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query the Art Museum
-      required: true
       schema:
         type: string
     get:
       summary: "/search/artmuseum?query={query}"
       tags:
       - Art Museum
+      operationId: searchArtmuseum
       description: Searches the Art Museum using a query term
       responses:
         '200':
@@ -71,18 +72,18 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
-  "/search/article?query={query}":
+  "/search/article":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query the Summon API, aka Articles+
-      required: true
       schema:
         type: string
     get:
       summary: "/search/article?query={query}"
       tags:
       - Article
+      operationId: searchArticle
       description: Searches the Summon API using a query term. Excludes Newspaper
         Articles and items not held by PUL
       responses:
@@ -206,18 +207,18 @@ paths:
                 error:
                   problem: UPSTREAM_ERROR
                   message: Could not authenticate to the upstream Summon service
-  "/search/best-bet?query={query}":
+  "/search/best-bet":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query the Best Bets
-      required: true
       schema:
         type: string
     get:
       summary: "/search/best-bet?query={query}"
       tags:
       - Best Bets
+      operationId: searchBestBet
       description: Searches the Best Bets using a query term
       responses:
         '200':
@@ -235,18 +236,18 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
-  "/search/catalog?query={query}":
+  "/search/catalog":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query the Catalog
-      required: true
       schema:
         type: string
     get:
       summary: "/search/catalog?query={query}"
       tags:
       - Catalog
+      operationId: searchCatalog
       description: Searches the Catalog using a query term
       responses:
         '200':
@@ -300,18 +301,18 @@ paths:
                   problem: UPSTREAM_ERROR
                   message: Solr returned a 404 for path /solr/catalog-alma-production/select
                     on host lib-solr8-prod.princeton.edu
-  "/search/dpul?query={query}":
+  "/search/dpul":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query Dpul
-      required: true
       schema:
         type: string
     get:
       summary: "/search/dpul?query={query}"
       tags:
       - Dpul
+      operationId: searchDpul
       description: Searches Dpul using a query term
       responses:
         '200':
@@ -355,18 +356,18 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
-  "/search/findingaids?query={query}":
+  "/search/findingaids":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query Findingaids
-      required: true
       schema:
         type: string
     get:
       summary: "/search/findingaids?query={query}"
       tags:
       - Findingaids
+      operationId: searchFindingaids
       description: Searches Findingaids using a query term
       responses:
         '200':
@@ -442,18 +443,18 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
-  "/search/libanswers?query={query}":
+  "/search/libanswers":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query Libanswers
-      required: true
       schema:
         type: string
     get:
       summary: "/search/libanswers?query={query}"
       tags:
       - Libanswers
+      operationId: searchLibanswers
       description: Searches the Libanswers FAQs using a query term
       responses:
         '200':
@@ -493,18 +494,18 @@ paths:
                   problem: UPSTREAM_ERROR
                   message: Could not generate a valid authentication token with upstream
                     service.
-  "/search/libguides?query={query}":
+  "/search/libguides":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query Libguides
-      required: true
       schema:
         type: string
     get:
       summary: "/search/libguides?query={query}"
       tags:
       - Libguides
+      operationId: searchLibguides
       description: Searches the Libguides research guides using a query term
       responses:
         '200':
@@ -557,18 +558,18 @@ paths:
                   problem: UPSTREAM_ERROR
                   message: Could not generate a valid authentication token with upstream
                     service.
-  "/search/database?query={query}":
+  "/search/database":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query the Library Databases
-      required: true
       schema:
         type: string
     get:
       summary: search/database?query={query}
       tags:
       - Library Databases
+      operationId: searchDatabase
       description: Searches for relevant Library Databases using a query term
       responses:
         '200':
@@ -587,18 +588,48 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
-  "/search/pulmap?query={query}":
+  "/search/staff":
     parameters:
     - name: query
-      in: path
+      in: query
+      description: A string to query the Library Staff
+      schema:
+        type: string
+    get:
+      summary: search/staff?query={query}
+      tags:
+      - Library Staff
+      operationId: searchStaff
+      description: Searches for relevant Library Staff using a query term
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+                number: 0
+                records: []
+                more: https://library.princeton.edu/staff/directory?search_api_views_fulltext=Lucy
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
+  "/search/pulmap":
+    parameters:
+    - name: query
+      in: query
       description: A string to query Pulmap
-      required: true
       schema:
         type: string
     get:
       summary: "/search/pulmap?query={query}"
       tags:
       - Pulmap
+      operationId: searchPulmap
       description: Searches Pulmap using a query term
       responses:
         '200':
@@ -657,18 +688,18 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
-  "/search/website?query={query}":
+  "/search/website":
     parameters:
     - name: query
-      in: path
+      in: query
       description: A string to query the Library Website
-      required: true
       schema:
         type: string
     get:
       summary: "/search/article?query={query}"
       tags:
       - Library Website
+      operationId: searchWebsite
       description: Searches the Library Website using a query term.
       responses:
         '200':
@@ -806,4 +837,5 @@ paths:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
 servers:
-- url: "/"
+- url: https://allsearch-api.princeton.edu
+- url: https://allsearch-api-staging.princeton.edu
