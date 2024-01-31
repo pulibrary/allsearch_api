@@ -30,8 +30,8 @@ RSpec.describe 'GET /search/catalog' do
             type: 'Book',
             url: 'https://catalog.princeton.edu/catalog/SCSB-11568989',
             other_fields: {
-              call_number: 'ML421.I55 A96 1990z',
-              library: 'ReCAP'
+              first_call_number: 'ML421.I55 A96 1990z',
+              first_library: 'ReCAP'
             } },
           { title: 'COVID-19 and minority health access : illustrating symptomatic cases ' \
                    'from reported minority communities and healthcare gaps due to COVID-19.',

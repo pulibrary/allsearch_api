@@ -10,8 +10,23 @@ RSpec.describe CatalogDocument do
                '{"holding_id":"22513144820006421","id":"23513144810006421",' \
                '"status_at_load":"1","barcode":"32101052309489","copy_number":"1"}]}}'
     source_data = { holdings_1display: holdings }
-    document = described_class.new(document: source_data, doc_keys: [:library]).to_h
-    expect(document[:library]).to eq 'Mendel Music Library'
+    document = described_class.new(document: source_data, doc_keys: [:first_library]).to_h
+    expect(document[:first_library]).to eq 'Mendel Music Library'
+  end
+
+  it 'can find two call numbers' do
+    holdings = '{"11193682":{"location_code":"scsbhl","location":"Remote Storage","library":"ReCAP",' \
+               '"call_number":"LG395.S576 F66 1997x","call_number_browse":"LG395.S576 F66 1997x",' \
+               '"items":[{"holding_id":"11193682","id":"16918615","status_at_load":"Available",' \
+               '"barcode":"HX1VG3","storage_location":"HD","cgd":"Shared","collection_code":"HW"}]},' \
+               '"11193683":{"location_code":"scsbhl","location":"Remote Storage","library":"ReCAP",' \
+               '"call_number":"MLC-C","call_number_browse":"MLC-C","items":[{"holding_id":"11193683",' \
+               '"id":"21272199","status_at_load":"Available","barcode":"HYAJC3","storage_location":"HD",' \
+               '"cgd":"Uncommittable","collection_code":"HY"}]}}'
+    source_data = { holdings_1display: holdings }
+    document = described_class.new(document: source_data, doc_keys: [:first_call_number, :second_call_number]).to_h
+    expect(document[:first_call_number]).to eq 'LG395.S576 F66 1997x'
+    expect(document[:second_call_number]).to eq 'MLC-C'
   end
 
   describe '#other_fields' do
