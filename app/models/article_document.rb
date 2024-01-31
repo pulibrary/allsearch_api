@@ -52,11 +52,11 @@ class ArticleDocument < Document
   end
 
   def isbn
-    (document.src['ISBN'].presence || [])
+    document.src['ISBN'].presence || []
   end
 
   def issn
-    (document.src['ISSN'].presence || [])
+    document.src['ISSN'].presence || []
   end
 
   def publication_date
