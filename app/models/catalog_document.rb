@@ -6,6 +6,8 @@
 class CatalogDocument < Document
   private
 
+  include Holdings
+
   def id
     document[:id]
   end
@@ -35,22 +37,7 @@ class CatalogDocument < Document
   end
 
   def doc_keys
-    [:call_number, :library, :resource_url]
-  end
-
-  def first_holding
-    holdings_string = document[:holdings_1display]
-    return {} if holdings_string.blank?
-
-    JSON.parse(holdings_string)&.first&.last
-  end
-
-  def call_number
-    first_holding['call_number']
-  end
-
-  def library
-    first_holding['library']
+    [:first_call_number, :second_call_number, :first_library, :second_library, :resource_url]
   end
 
   def resource_url
