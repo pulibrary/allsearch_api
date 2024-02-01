@@ -1,0 +1,33 @@
+{
+    "responseHeader":{
+      "zkConnected":true,
+      "status":0,
+      "QTime":70,
+      "params":{
+        "q":"coin 762",
+        "fl":"id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display",
+        "sort":"score desc, pub_date_start_sort desc, title_sort asc",
+        "rows":"3",
+        "facet":"false"}},
+    "response":{"numFound":95,"start":0,"docs":[
+        {
+          "id":"coin-762",
+          "title_display":"Coin: 762",
+          "pub_created_display":["Philip III Arrhidaeus (-323 to -317), Tetradrachm, Babylon"],
+          "format":["Coin"],
+          "holdings_1display":"{\"numismatics\":{\"location\":\"Special Collections - Numismatics Collection\",\"library\":\"Special Collections\",\"location_code\":\"rare$num\",\"call_number\":\"Coin 762\",\"call_number_browse\":\"Coin 762\"}}"},
+        {
+          "id":"9933107333506421",
+          "author_display":["Stockvis, Albert"],
+          "title_display":"Standard coin and medal catalogue of the world ... from the earliest times (1000 B.C.) to the present day / Albett Stockvis.",
+          "pub_created_display":["Cleveland, Ohio : A. Stockvis [1944-1947]."],
+          "format":["Book"],
+          "holdings_1display":"{\"22581690950006421\":{\"location_code\":\"rare$numrf\",\"location\":\"Numismatics Collection Reference\",\"library\":\"Special Collections\",\"call_number\":\"CJ1747 .S762\",\"call_number_browse\":\"CJ1747 .S762\",\"items\":[{\"holding_id\":\"22581690950006421\",\"enumeration\":\"vol.3-5\",\"id\":\"23581690920006421\",\"status_at_load\":\"1\",\"barcode\":\"32101051916979\",\"copy_number\":\"1\"},{\"holding_id\":\"22581690950006421\",\"enumeration\":\"vol.1\",\"id\":\"23581690940006421\",\"status_at_load\":\"1\",\"barcode\":\"32101051923348\",\"copy_number\":\"1\"},{\"holding_id\":\"22581690950006421\",\"enumeration\":\"vol.6\",\"id\":\"23581690910006421\",\"status_at_load\":\"1\",\"barcode\":\"32101051917027\",\"copy_number\":\"1\"},{\"holding_id\":\"22581690950006421\",\"enumeration\":\"vol.2\",\"id\":\"23581690930006421\",\"status_at_load\":\"1\",\"barcode\":\"32101051917019\",\"copy_number\":\"1\"}],\"location_has\":[\"Vol. 1-v. 6\"],\"supplements\":[null],\"indexes\":[null]}}"},
+        {
+          "id":"coin-15953",
+          "title_display":"Coin: 15953",
+          "pub_created_display":["Li Sisheng (李嗣升)  Suzong (唐肅宗) (711 to 762), 2 Cash"],
+          "format":["Coin"],
+          "holdings_1display":"{\"numismatics\":{\"location\":\"Special Collections - Numismatics Collection\",\"library\":\"Special Collections\",\"location_code\":\"rare$num\",\"call_number\":\"Coin 15953\",\"call_number_browse\":\"Coin 15953\"}}"}]
+    }}
+  

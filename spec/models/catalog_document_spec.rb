@@ -29,6 +29,28 @@ RSpec.describe CatalogDocument do
     expect(document[:second_call_number]).to eq 'MLC-C'
   end
 
+  context 'when the document is a coin' do
+    it 'has a status On-site access' do
+      holdings = '{"numismatics":{"location":"Special Collections - Numismatics Collection",' \
+                 '"library":"Special Collections","location_code":"rare$num","call_number":"Coin 762",' \
+                 '"call_number_browse":"Coin 762"}}'
+      source_data = { holdings_1display: holdings, id: 'coin-4905' }
+      document = described_class.new(document: source_data, doc_keys: [:first_status]).to_h
+      expect(document[:first_status]).to eq 'On-site access'
+    end
+  end
+
+  context 'when the document is a senior thesis' do
+    it 'has a status On-site access' do
+      holdings = '{"thesis":{"location":"Mudd Manuscript Library","library":"Mudd Manuscript Library",' \
+                 '"location_code":"mudd$stacks","call_number":"AC102 8931","call_number_browse":"AC102 8931"' \
+                 ',"dspace":true}}'
+      source_data = { holdings_1display: holdings, id: 'dsp016969z278m' }
+      document = described_class.new(document: source_data, doc_keys: [:first_status]).to_h
+      expect(document[:first_status]).to eq 'On-site access'
+    end
+  end
+
   describe '#other_fields' do
     it 'does not include nil values' do
       source_data = { title_display: 'My book', id: 'SCSB-1234' }
