@@ -140,4 +140,19 @@ RSpec.describe 'GET /search/catalog' do
       expect(response_body[:records].first[:other_fields][:resource_url]).to eq('https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53763462940006421&Force_direct=true')
     end
   end
+
+  context 'when search results include coins' do
+    before do
+      stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=coin%20762&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
+        .to_return(status: 200, body: file_fixture('solr/catalog/coin-762.json'))
+    end
+
+    it 'includes a status of On-site access' do
+      get '/search/catalog?query=coin+762'
+
+      expect(response).to be_successful
+      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(response_body[:records].first[:other_fields][:first_status]).to eq('On-site access')
+    end
+  end
 end
