@@ -13,6 +13,10 @@ class PhysicalItem
     item['status_at_load'] == '1' && item['process_type'].blank?
   end
 
+  def barcode
+    item['barcode']
+  end
+
   private
 
   attr_accessor :item

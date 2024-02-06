@@ -7,6 +7,11 @@ module Holdings
   private
 
   [:first, :second].each_with_index do |number, index|
+    # Create the first_barcode and second_barcode methods
+    define_method "#{number}_barcode" do
+      send(:"#{number}_physical_holding")&.barcode
+    end
+
     # Create the first_call_number and second_call_number methods
     define_method "#{number}_call_number" do
       send(:"#{number}_physical_holding")&.call_number

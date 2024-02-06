@@ -37,8 +37,8 @@ class CatalogDocument < Document
   end
 
   def doc_keys
-    [:first_call_number, :second_call_number, :first_library, :second_library, :first_status, :second_status,
-     :resource_url]
+    [:first_barcode, :second_barcode, :first_call_number, :second_call_number, :first_library, :second_library,
+     :first_status, :second_status, :resource_url]
   end
 
   def resource_url
