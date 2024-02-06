@@ -14,6 +14,17 @@ RSpec.describe CatalogDocument do
     expect(document[:first_library]).to eq 'Mendel Music Library'
   end
 
+  it 'finds the barcode from the holdings_1display' do
+    holdings = '{"22513144820006421":{"location_code":"mendel$stacks","location":"Stacks",' \
+               '"library":"Mendel Music Library",' \
+               '"call_number":"CD- 11175","call_number_browse":"CD- 11175","items":[' \
+               '{"holding_id":"22513144820006421","id":"23513144810006421",' \
+               '"status_at_load":"1","barcode":"32101052309489","copy_number":"1"}]}}'
+    source_data = { holdings_1display: holdings }
+    document = described_class.new(document: source_data, doc_keys: [:first_barcode]).to_h
+    expect(document[:first_barcode]).to eq '32101052309489'
+  end
+
   it 'can find two call numbers' do
     holdings = '{"11193682":{"location_code":"scsbhl","location":"Remote Storage","library":"ReCAP",' \
                '"call_number":"LG395.S576 F66 1997x","call_number_browse":"LG395.S576 F66 1997x",' \

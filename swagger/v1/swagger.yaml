@@ -265,6 +265,7 @@ paths:
                   type: Book
                   url: https://catalog.princeton.edu/catalog/SCSB-11568989
                   other_fields:
+                    first_barcode: HNG4XF
                     first_call_number: ML421.I55 A96 1990z
                     first_library: ReCAP
                 - title: 'COVID-19 and minority health access : illustrating symptomatic
@@ -281,6 +282,7 @@ paths:
                   type: Audio
                   url: https://catalog.princeton.edu/catalog/99126854831206421
                   other_fields:
+                    first_barcode: '32101119118782'
                     first_call_number: CD- 53772
                     first_library: Mendel Music Library
                     first_status: Available

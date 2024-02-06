@@ -9,6 +9,10 @@ class PhysicalHolding
     @document_id = document_id
   end
 
+  def barcode
+    items&.first&.barcode
+  end
+
   def call_number
     @holding_data['call_number']
   end
@@ -65,7 +69,7 @@ class PhysicalHolding
   end
 
   def items
-    @holding_data['items']&.map { |item| PhysicalItem.new item: } || []
+    @items ||= @holding_data['items']&.map { |item| PhysicalItem.new item: } || []
   end
 
   def items_in_place_count
