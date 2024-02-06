@@ -29,6 +29,62 @@ RSpec.describe CatalogDocument do
     expect(document[:second_call_number]).to eq 'MLC-C'
   end
 
+  context 'when alma holdings item is RES_SHARE$IN_RS_REQ' do
+    it 'has status Unavailable' do
+      holdings = '{"RES_SHARE$IN_RS_REQ":{"library":"Mendel Music Library","items":[{"status_at_load":"1"}]}}'
+      source_data = { holdings_1display: holdings, id: '99116004723506421' }
+      document = described_class.new(document: source_data, doc_keys: [:first_status]).to_h
+      expect(document[:first_status]).to eq 'Unavailable'
+    end
+  end
+
+  context 'when alma holdings item is in a temporary location' do
+    it 'has status View record for Full Availability' do
+      holdings = '{"lewis$res":{"library":"Mendel Music Library","items":[{"status_at_load":"1"}]}}'
+      source_data = { holdings_1display: holdings, id: '99116004723506421' }
+      document = described_class.new(document: source_data, doc_keys: [:first_status]).to_h
+      expect(document[:first_status]).to eq 'View record for Full Availability'
+    end
+  end
+
+  context 'when alma holdings items are all Item In Place' do
+    it 'has status Available' do
+      holdings = '{"22658690520006421":{"library":"Mendel Music Library","items":[{"status_at_load":"1"}]}}'
+      source_data = { holdings_1display: holdings, id: '99116004723506421' }
+      document = described_class.new(document: source_data, doc_keys: [:first_status]).to_h
+      expect(document[:first_status]).to eq 'Available'
+    end
+
+    context 'when otherwise available items have a process type' do
+      it 'has status Unavailable' do
+        holdings = '{"22658690520006421":{"library":"Mendel Music Library",' \
+                   '"items":[{"status_at_load":"1", "process_type":"WORK_ORDER_DEPARTMENT"}]}}'
+        source_data = { holdings_1display: holdings, id: '99116004723506421' }
+        document = described_class.new(document: source_data, doc_keys: [:first_status]).to_h
+        expect(document[:first_status]).to eq 'Unavailable'
+      end
+    end
+  end
+
+  context 'when alma holdings items are all Item Not In Place' do
+    it 'has status Unavailable' do
+      holdings = '{"22658690520006421":{"library":"Mendel Music Library","items":[{"status_at_load":"0"}]}}'
+      source_data = { holdings_1display: holdings, id: '99116004723506421' }
+      document = described_class.new(document: source_data, doc_keys: [:first_status]).to_h
+      expect(document[:first_status]).to eq 'Unavailable'
+    end
+  end
+
+  context 'when alma holdings items are a mix of Item In Place and Item Not In Place' do
+    it 'has status Some items not available' do
+      holdings = '{"22658690520006421":{"library":"Mendel Music Library",' \
+                 '"items":[{"status_at_load":"0"}, {"status_at_load":"1"}]}}'
+      source_data = { holdings_1display: holdings, id: '99116004723506421' }
+      document = described_class.new(document: source_data, doc_keys: [:first_status]).to_h
+      expect(document[:first_status]).to eq 'Some items not available'
+    end
+  end
+
   context 'when the document is a coin' do
     it 'has a status On-site access' do
       holdings = '{"numismatics":{"location":"Special Collections - Numismatics Collection",' \
