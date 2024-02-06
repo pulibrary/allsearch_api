@@ -1,45 +1,37 @@
 # frozen_string_literal: true
 
-# This module is responsible for getting data
-# from the document[:holdings_1display] and
-# document[:id]
+# This module is responsible for dynamically
+# creating methods that provide information
+# about a catalog document's holdings
 module Holdings
   private
 
-  [:first, :second].each do |number|
+  [:first, :second].each_with_index do |number, index|
     # Create the first_call_number and second_call_number methods
     define_method "#{number}_call_number" do
-      send(:"#{number}_holding")['call_number']
+      send(:"#{number}_physical_holding")&.call_number
     end
 
     # Create the first_library and second_library methods
     define_method "#{number}_library" do
-      send(:"#{number}_holding")['library']
+      send(:"#{number}_physical_holding")&.library
     end
 
     # Create the first_status and second_status methods
     define_method "#{number}_status" do
-      return unless send(:"#{number}_holding")['library']
-
-      'On-site access' if coin? || senior_thesis?
+      send(:"#{number}_physical_holding")&.status
     end
-  end
 
-  def first_holding
-    @first_holding ||= if holdings.blank?
-                         {}
-                       else
-                         holdings&.first&.last
-                       end
-  end
+    # Create the first_physical_holding and second_physical_holding methods
+    define_method "#{number}_physical_holding" do
+      # First, check to see if we've already stored this in an instance variable
+      return instance_variable_get("@#{__method__}") if instance_variable_defined?("@#{__method__}")
+      return unless holdings&.dig(index)
 
-  def second_holding
-    @second_holding ||= if holdings.blank?
-                          {}
-                        else
-                          second_holding = holdings[1]
-                          second_holding ? second_holding&.last : {}
-                        end
+      instance_variable_set("@#{__method__}", PhysicalHolding.new(holding_id: holdings[index]&.first,
+                                                                  holding_data: holdings[index]&.last,
+                                                                  document_id: document[:id]))
+    end
   end
 
   def holdings
@@ -51,13 +43,5 @@ module Holdings
         JSON.parse(holdings_string).to_a
       end
     end
-  end
-
-  def coin?
-    document[:id].start_with? 'coin-'
-  end
-
-  def senior_thesis?
-    document[:id].start_with? 'dsp'
   end
 end

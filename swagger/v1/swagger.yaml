@@ -283,6 +283,7 @@ paths:
                   other_fields:
                     first_call_number: CD- 53772
                     first_library: Mendel Music Library
+                    first_status: Available
                 more: https://catalog.princeton.edu/catalog?q=rubix&search_field=all_fields
         '400':
           description: with a search query that only contains whitespace
