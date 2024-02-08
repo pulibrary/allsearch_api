@@ -71,7 +71,7 @@ staging:
       collection: "dpul-staging"
   findingaids:
     solr:
-      host: "lib-solr8-staging.princeton.edu"
+      host: "lib-solr8d-staging.princeton.edu"
       port: 8983
       collection: "pulfalight-staging"
   library_website:
