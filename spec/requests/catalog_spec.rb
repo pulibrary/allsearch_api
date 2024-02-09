@@ -140,6 +140,15 @@ RSpec.describe 'GET /search/catalog' do
       response_body = JSON.parse(response.body, symbolize_names: true)
       expect(response_body[:records].first[:other_fields][:resource_url]).to eq('https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53763462940006421&Force_direct=true')
     end
+
+    it 'includes the resource_url_label in other_fields' do
+      get '/search/catalog?query=Didgeridoo+Mania'
+
+      expect(response).to be_successful
+      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(response_body[:records].first[:other_fields][:resource_url_label])
+        .to eq('Music Online: Contemporary World Music - All Titles')
+    end
   end
 
   context 'when search results include coins' do

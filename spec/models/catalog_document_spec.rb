@@ -149,4 +149,42 @@ RSpec.describe CatalogDocument do
       expect(document[:resource_url]).to eq('https://catalog.princeton.edu/catalog/4970874#view')
     end
   end
+
+  describe '#resource_url_label' do
+    it 'takes description from electronic_portfolio_s if available' do
+      source_data = {
+        electronic_portfolio_s: ['{"url":"https://example.com", "title": "Gale (1800-present)"}'],
+        electronic_access_1display: '{"https://catalog.princeton.edu/catalog/4970874#view":["Digital content"],' \
+                                    '"iiif_manifest_paths":{"http://arks.princeton.edu/ark:/88435/x920g047m":"https://figgy.princeton.edu/concern/scanned_resources/e6142376-a3b0-4ec6-a794-3a64f00df533/manifest"}}'
+      }
+      doc_keys = [:resource_url_label]
+      document = described_class.new(document: source_data, doc_keys:).to_h
+      expect(document[:resource_url_label]).to eq('Gale (1800-present)')
+    end
+
+    it 'defaults to "Online content" if no description appears in the portfolio' do
+      source_data = {
+        electronic_portfolio_s: ['{"url":"https://example.com", "title": null}']
+      }
+      doc_keys = [:resource_url_label]
+      document = described_class.new(document: source_data, doc_keys:).to_h
+      expect(document[:resource_url_label]).to eq('Online content')
+    end
+
+    it 'takes description from electronic_access_1display as a fallback' do
+      source_data = {
+        electronic_access_1display: '{"https://catalog.princeton.edu/catalog/4970874#view":["Digital content"],' \
+                                    '"iiif_manifest_paths":{"http://arks.princeton.edu/ark:/88435/x920g047m":"https://figgy.princeton.edu/concern/scanned_resources/e6142376-a3b0-4ec6-a794-3a64f00df533/manifest"}}'
+      }
+      doc_keys = [:resource_url_label]
+      document = described_class.new(document: source_data, doc_keys:).to_h
+      expect(document[:resource_url_label]).to eq('Digital content')
+    end
+
+    it 'does not have a label if there is no electronic_access_1display or electronic_portfolio_s' do
+      doc_keys = [:resource_url_label]
+      document = described_class.new(document: {}, doc_keys:).to_h
+      expect(document[:resource_url_label]).to be_nil
+    end
+  end
 end
