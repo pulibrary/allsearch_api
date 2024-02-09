@@ -20,6 +20,11 @@ class LibraryWebsite
 
   def service_response
     response = Net::HTTP.post_form(uri, 'search' => query_terms)
+    response_code = response.code
+    if response_code.start_with? '5'
+      raise AllsearchError.new(msg: "The library website API returned a #{response_code} HTTP status code.")
+    end
+
     @service_response ||= JSON.parse(response.body)
   end
 
