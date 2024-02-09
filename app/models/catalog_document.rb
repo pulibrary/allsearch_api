@@ -38,16 +38,34 @@ class CatalogDocument < Document
 
   def doc_keys
     [:first_barcode, :second_barcode, :first_call_number, :second_call_number, :first_library, :second_library,
-     :first_status, :second_status, :resource_url]
+     :first_status, :second_status, :resource_url, :resource_url_label]
   end
 
   def resource_url
-    portfolio_string = document[:electronic_portfolio_s]&.first
-    electronic_access = document[:electronic_access_1display]
-    if portfolio_string.present?
-      JSON.parse(portfolio_string)['url']
-    elsif electronic_access.present?
-      JSON.parse(electronic_access)&.keys&.first
+    portfolio['url'] || electronic_access&.keys&.first
+  end
+
+  def resource_url_label
+    return unless should_display_resource_url_label?
+
+    portfolio['title'] || electronic_access&.values&.first&.first || 'Online content'
+  end
+
+  def should_display_resource_url_label?
+    portfolio.present? || electronic_access.present?
+  end
+
+  def portfolio
+    @portfolio ||= begin
+      portfolio_string = document[:electronic_portfolio_s]&.first
+      portfolio_string.present? ? JSON.parse(portfolio_string) : {}
+    end
+  end
+
+  def electronic_access
+    @electronic_access ||= begin
+      electronic_access_string = document[:electronic_access_1display]
+      electronic_access_string.present? ? JSON.parse(electronic_access_string) : {}
     end
   end
 end
