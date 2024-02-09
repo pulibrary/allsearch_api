@@ -74,6 +74,12 @@ staging:
 
 test:
   <<: *default
+  libanswers:
+    client_id: <%= 'ABC' %>
+    client_secret: <%= '12345' %>
+  libguides:
+    client_id: <%= 'ABC' %>
+    client_secret: <%= '12345' %>
 
 production:
   <<: *default

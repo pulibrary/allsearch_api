@@ -37,7 +37,7 @@ class Libanswers
   def request
     libanswers_request = Net::HTTP::Get.new(uri)
 
-    token = OAuthToken.create_or_find_by({ service: 'libanswers',
+    token = OAuthToken.find_or_create_by({ service: 'libanswers',
                                            endpoint: 'https://faq.library.princeton.edu/api/1.1/oauth/token' }).token
     libanswers_request['Authorization'] = "Bearer #{token}"
     libanswers_request
