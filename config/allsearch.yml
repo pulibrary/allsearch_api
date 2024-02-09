@@ -76,6 +76,7 @@ staging:
       collection: "pulfalight-staging"
   library_website:
     host: "library.psb-test.princeton.edu"
+    path: "/ps-library/search/results"
 
 test:
   <<: *default
