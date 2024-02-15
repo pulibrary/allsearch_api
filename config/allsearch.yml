@@ -63,7 +63,7 @@ staging:
     solr:
       host: "lib-solr8-staging.princeton.edu"
       port: 8983
-      collection: "catalog-alma-staging"
+      collection: "catalog-staging"
   dpul:
     solr:
       host: "lib-solr8-staging.princeton.edu"
