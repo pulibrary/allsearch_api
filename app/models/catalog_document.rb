@@ -4,16 +4,14 @@
 # metadata from the Catalog's JSON
 # The document is a Hash
 class CatalogDocument < Document
+  include SolrDocument
+
   private
 
   include Holdings
 
-  def id
-    document[:id]
-  end
-
-  def url
-    "https://#{service_subdomain}.princeton.edu/catalog/#{id}"
+  def service
+    'catalog'
   end
 
   def title
@@ -67,9 +65,5 @@ class CatalogDocument < Document
       electronic_access_string = document[:electronic_access_1display]
       electronic_access_string.present? ? JSON.parse(electronic_access_string) : {}
     end
-  end
-
-  def service_subdomain
-    Rails.application.config_for(:allsearch)['catalog'][:subdomain]
   end
 end

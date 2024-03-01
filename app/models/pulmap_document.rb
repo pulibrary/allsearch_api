@@ -3,14 +3,16 @@
 # This class is responsible for getting relevant
 # metadata from Pulmap's JSON
 class PulmapDocument < Document
+  include SolrDocument
+
   private
+
+  def service
+    'pulmap'
+  end
 
   def id
     document[:layer_slug_s]
-  end
-
-  def url
-    "https://#{service_subdomain}.princeton.edu/catalog/#{id}"
   end
 
   def title
@@ -43,9 +45,5 @@ class PulmapDocument < Document
 
   def layer_geom_type
     document[:layer_geom_type_s]
-  end
-
-  def service_subdomain
-    Rails.application.config_for(:allsearch)['pulmap'][:subdomain]
   end
 end

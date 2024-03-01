@@ -3,14 +3,12 @@
 # This class is responsible for getting relevant
 # metadata from DPUL's JSON
 class DpulDocument < Document
+  include SolrDocument
+
   private
 
-  def id
-    document[:id]
-  end
-
-  def url
-    "https://#{service_subdomain}.princeton.edu/catalog/#{id}"
+  def service
+    'dpul'
   end
 
   def title
@@ -39,9 +37,5 @@ class DpulDocument < Document
 
   def collection
     document[:readonly_collections_tesim]&.first
-  end
-
-  def service_subdomain
-    Rails.application.config_for(:allsearch)['dpul'][:subdomain]
   end
 end

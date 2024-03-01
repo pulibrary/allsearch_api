@@ -3,14 +3,12 @@
 # This class is responsible for getting relevant
 # metadata from PULFALight's JSON
 class FindingaidsDocument < Document
+  include SolrDocument
+
   private
 
-  def id
-    document[:id]
-  end
-
-  def url
-    "https://#{service_subdomain}.princeton.edu/catalog/#{id}"
+  def service
+    'findingaids'
   end
 
   # Use the collection name as the title?
@@ -54,9 +52,5 @@ class FindingaidsDocument < Document
 
   def date
     document[:normalized_date_ssm]&.first
-  end
-
-  def service_subdomain
-    Rails.application.config_for(:allsearch)['findingaids'][:subdomain]
   end
 end
