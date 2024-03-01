@@ -13,7 +13,7 @@ class CatalogDocument < Document
   end
 
   def url
-    "https://catalog.princeton.edu/catalog/#{id}"
+    "https://#{service_subdomain}.princeton.edu/catalog/#{id}"
   end
 
   def title
@@ -67,5 +67,9 @@ class CatalogDocument < Document
       electronic_access_string = document[:electronic_access_1display]
       electronic_access_string.present? ? JSON.parse(electronic_access_string) : {}
     end
+  end
+
+  def service_subdomain
+    Rails.application.config_for(:allsearch)['catalog'][:subdomain]
   end
 end

@@ -10,7 +10,7 @@ class DpulDocument < Document
   end
 
   def url
-    "https://dpul.princeton.edu/catalog/#{id}"
+    "https://#{service_subdomain}.princeton.edu/catalog/#{id}"
   end
 
   def title
@@ -39,5 +39,9 @@ class DpulDocument < Document
 
   def collection
     document[:readonly_collections_tesim]&.first
+  end
+
+  def service_subdomain
+    Rails.application.config_for(:allsearch)['dpul'][:subdomain]
   end
 end

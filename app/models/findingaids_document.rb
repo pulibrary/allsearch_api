@@ -10,7 +10,7 @@ class FindingaidsDocument < Document
   end
 
   def url
-    "https://findingaids.princeton.edu/catalog/#{id}"
+    "https://#{service_subdomain}.princeton.edu/catalog/#{id}"
   end
 
   # Use the collection name as the title?
@@ -54,5 +54,9 @@ class FindingaidsDocument < Document
 
   def date
     document[:normalized_date_ssm]&.first
+  end
+
+  def service_subdomain
+    Rails.application.config_for(:allsearch)['findingaids'][:subdomain]
   end
 end

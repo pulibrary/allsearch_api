@@ -26,10 +26,6 @@ module Solr
     @documents ||= service_response[:response][:docs]
   end
 
-  def url(document:)
-    "https://#{service_subdomain}.princeton.edu/catalog/#{id(document:)}"
-  end
-
   private
 
   # :reek:ManualDispatch

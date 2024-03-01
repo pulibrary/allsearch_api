@@ -10,7 +10,7 @@ class PulmapDocument < Document
   end
 
   def url
-    "https://maps.princeton.edu/catalog/#{id}"
+    "https://#{service_subdomain}.princeton.edu/catalog/#{id}"
   end
 
   def title
@@ -43,5 +43,9 @@ class PulmapDocument < Document
 
   def layer_geom_type
     document[:layer_geom_type_s]
+  end
+
+  def service_subdomain
+    Rails.application.config_for(:allsearch)['pulmap'][:subdomain]
   end
 end

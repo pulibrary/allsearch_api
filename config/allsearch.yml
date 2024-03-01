@@ -27,7 +27,7 @@ default: &default
     host: "library.psb-prod.princeton.edu"
     path: "/ps-library/search/results"
   pulmap:
-    subdomain: pulmap
+    subdomain: maps
     solr: 
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
@@ -38,24 +38,28 @@ default: &default
 development:
   <<: *default
   catalog:
+    subdomain: catalog-staging
     solr:
       host: <%= ENV["lando_catalog_solr_conn_host"] %>
       port: <%= ENV["lando_catalog_solr_conn_port"] %>
       collection: "catalog"
 
   dpul:
+    subdomain: dpul-staging
     solr:
       host: <%= ENV["lando_dpul_solr_conn_host"] %>
       port: <%= ENV["lando_dpul_solr_conn_port"] %>
       collection: "dpul"
 
   findingaids:
+    subdomain: findingaids-staging
     solr:
       host: <%= ENV["lando_findingaids_solr_conn_host"] %>
       port: <%= ENV["lando_findingaids_solr_conn_port"] %>
       collection: "findingaids"
   
   pulmap:
+    subdomain: maps
     solr:
       host: <%= ENV["lando_pulmap_solr_conn_host"] %>
       port: <%= ENV["lando_pulmap_solr_conn_port"] %> 
