@@ -1,15 +1,18 @@
 default: &default
   catalog:
+    subdomain: catalog
     solr:
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
       collection: "catalog-alma-production"
   dpul:
+    subdomain: dpul
     solr:
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
       collection: "dpul-production"
   findingaids:
+    subdomain: findingaids
     solr:
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
@@ -24,6 +27,7 @@ default: &default
     host: "library.psb-prod.princeton.edu"
     path: "/ps-library/search/results"
   pulmap:
+    subdomain: pulmap
     solr: 
       host: "lib-solr8-prod.princeton.edu"
       port: 8983
@@ -60,16 +64,19 @@ development:
 staging:
   <<: *default
   catalog:
+    subdomain: catalog-staging
     solr:
       host: "lib-solr8-staging.princeton.edu"
       port: 8983
       collection: "catalog-staging"
   dpul:
+    subdomain: dpul-staging
     solr:
       host: "lib-solr8-staging.princeton.edu"
       port: 8983
       collection: "dpul-staging"
   findingaids:
+    subdomain: findingaids-staging
     solr:
       host: "lib-solr8d-staging.princeton.edu"
       port: 8983
