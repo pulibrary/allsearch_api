@@ -3,6 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe 'GET /search/catalog' do
+  let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
+
   it 'returns json' do
     stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
       .to_return(status: 200, body: file_fixture('solr/catalog/rubix.json'))
@@ -48,7 +50,6 @@ RSpec.describe 'GET /search/catalog' do
       get '/search/catalog?query=rubix'
 
       expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
 
       expect(response_body.keys).to contain_exactly(:number, :more, :records)
       expect(response_body[:records].first.keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
@@ -59,8 +60,6 @@ RSpec.describe 'GET /search/catalog' do
 
     it 'only returns the first three records' do
       get '/search/catalog?query=rubix'
-
-      response_body = JSON.parse(response.body, symbolize_names: true)
 
       expect(response_body[:records].size).to eq(3)
     end
@@ -89,7 +88,6 @@ RSpec.describe 'GET /search/catalog' do
     it 'does not include unused keys' do
       get '/search/catalog?query=pangulubalang'
 
-      response_body = JSON.parse(response.body, symbolize_names: true)
       expect(response_body[:records].first.keys).to contain_exactly(:title, :id, :type, :url, :other_fields)
     end
   end
@@ -104,7 +102,6 @@ RSpec.describe 'GET /search/catalog' do
       get '/search/catalog?query=What if "I quote" my search?'
 
       expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
       expect(response_body[:records]).to be_empty
       expect(response_body[:more]).to eq('https://catalog.princeton.edu/catalog?q=What%20if%20%22I%20quote%22%20my%20search?&search_field=all_fields')
     end
@@ -122,7 +119,6 @@ RSpec.describe 'GET /search/catalog' do
       get '/search/catalog?query=%E8%A7%A6%E7%89%A9%E7%94%9F%E6%83%85%E8%AF%9D%E9%81%93%E5%8D%97'
 
       expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
       expect(response_body[:number]).to be(81)
     end
   end
@@ -137,7 +133,6 @@ RSpec.describe 'GET /search/catalog' do
       get '/search/catalog?query=Didgeridoo+Mania'
 
       expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
       expect(response_body[:records].first[:other_fields][:resource_url]).to eq('https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53763462940006421&Force_direct=true')
     end
 
@@ -145,7 +140,6 @@ RSpec.describe 'GET /search/catalog' do
       get '/search/catalog?query=Didgeridoo+Mania'
 
       expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
       expect(response_body[:records].first[:other_fields][:resource_url_label])
         .to eq('Music Online: Contemporary World Music - All Titles')
     end
@@ -161,7 +155,6 @@ RSpec.describe 'GET /search/catalog' do
       get '/search/catalog?query=coin+762'
 
       expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
       expect(response_body[:records].first[:other_fields][:first_status]).to eq('On-site access')
     end
   end

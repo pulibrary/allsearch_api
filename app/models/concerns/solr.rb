@@ -18,16 +18,12 @@ module Solr
   end
 
   def more_link
-    URI::HTTPS.build(host: "#{service}.princeton.edu", path: '/catalog',
+    URI::HTTPS.build(host: "#{service_subdomain}.princeton.edu", path: '/catalog',
                      query: "q=#{query_terms}&search_field=all_fields")
   end
 
   def documents
     @documents ||= service_response[:response][:docs]
-  end
-
-  def url(document:)
-    "https://#{service}.princeton.edu/catalog/#{id(document:)}"
   end
 
   private
@@ -50,5 +46,9 @@ module Solr
 
   def solr_config
     Rails.application.config_for(:allsearch)[service][:solr]
+  end
+
+  def service_subdomain
+    Rails.application.config_for(:allsearch)[service][:subdomain]
   end
 end

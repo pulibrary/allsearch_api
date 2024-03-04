@@ -40,6 +40,22 @@ RSpec.describe CatalogDocument do
     expect(document[:second_call_number]).to eq 'MLC-C'
   end
 
+  it 'links to the record url associated with the solr collection' do
+    document = described_class.new(document: {}, doc_keys: [])
+    expect(document.send(:url)).to eq('https://catalog.princeton.edu/catalog/')
+  end
+
+  context 'when on a non-production environment' do
+    before do
+      allow(Rails).to receive(:env).and_return(ActiveSupport::StringInquirer.new('staging'))
+    end
+
+    it 'links to the record url associated with the solr collection' do
+      document = described_class.new(document: {}, doc_keys: [])
+      expect(document.send(:url)).to eq('https://catalog-staging.princeton.edu/catalog/')
+    end
+  end
+
   context 'when alma holdings item is RES_SHARE$IN_RS_REQ' do
     it 'has status Unavailable' do
       holdings = '{"RES_SHARE$IN_RS_REQ":{"library":"Mendel Music Library","items":[{"status_at_load":"1"}]}}'

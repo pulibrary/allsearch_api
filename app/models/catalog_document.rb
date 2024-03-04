@@ -4,16 +4,14 @@
 # metadata from the Catalog's JSON
 # The document is a Hash
 class CatalogDocument < Document
+  include SolrDocument
+
   private
 
   include Holdings
 
-  def id
-    document[:id]
-  end
-
-  def url
-    "https://catalog.princeton.edu/catalog/#{id}"
+  def service
+    'catalog'
   end
 
   def title

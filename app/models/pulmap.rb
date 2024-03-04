@@ -24,9 +24,4 @@ class Pulmap
   def solr_sort
     'score desc'
   end
-
-  def more_link
-    @service = 'maps'
-    super
-  end
 end

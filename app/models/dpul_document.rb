@@ -3,14 +3,12 @@
 # This class is responsible for getting relevant
 # metadata from DPUL's JSON
 class DpulDocument < Document
+  include SolrDocument
+
   private
 
-  def id
-    document[:id]
-  end
-
-  def url
-    "https://dpul.princeton.edu/catalog/#{id}"
+  def service
+    'dpul'
   end
 
   def title

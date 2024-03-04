@@ -3,14 +3,12 @@
 # This class is responsible for getting relevant
 # metadata from PULFALight's JSON
 class FindingaidsDocument < Document
+  include SolrDocument
+
   private
 
-  def id
-    document[:id]
-  end
-
-  def url
-    "https://findingaids.princeton.edu/catalog/#{id}"
+  def service
+    'findingaids'
   end
 
   # Use the collection name as the title?
