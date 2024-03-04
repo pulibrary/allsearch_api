@@ -70,7 +70,7 @@ staging:
   catalog:
     subdomain: catalog-staging
     solr:
-      host: "lib-solr8-staging.princeton.edu"
+      host: "lib-solr8d-staging.princeton.edu"
       port: 8983
       collection: "catalog-staging"
   dpul:
