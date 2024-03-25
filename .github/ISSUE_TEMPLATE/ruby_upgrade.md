@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-- [ ] Add the new ruby version to CircleCI
+- [ ] Add the new ruby version to CircleCI and .tool-versions
 - [ ] Fix any failing tests or dependency issues caused by ruby upgrade
 - [ ] Provision staging box to use the new ruby version
 - [ ] Deploy code that works with the new ruby version to staging
