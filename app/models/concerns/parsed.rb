@@ -12,7 +12,6 @@ module Parsed
   end
 
   def parsed_record(document:, doc_keys:)
-    document_class = "#{self.class}Document".constantize
     document_class.new(document:, doc_keys:).to_h
   end
 
@@ -23,5 +22,9 @@ module Parsed
     }
     hash[:more] = more_link if more_link.present?
     hash.to_json
+  end
+
+  def document_class
+    @document_class ||= "#{self.class}Document".constantize
   end
 end

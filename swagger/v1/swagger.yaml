@@ -446,6 +446,53 @@ paths:
                 error:
                   problem: QUERY_IS_EMPTY
                   message: The query param must contain non-whitespace characters.
+  "/search/journals":
+    parameters:
+    - name: query
+      in: query
+      description: A string to query journals
+      schema:
+        type: string
+    get:
+      summary: "/search/journals?query={query}"
+      tags:
+      - Journals
+      operationId: searchJournals
+      description: Searches the Catalog for journals using a query term
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+                number: 1
+                records:
+                - title: 'Berry basket : newsletter for Missouri small fruit and vegetable
+                    growers'
+                  id: '99125520326606421'
+                  type: Journal
+                  url: https://catalog.princeton.edu/catalog/99125520326606421
+                  other_fields:
+                    resource_url: https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53933585090006421&Force_direct=true
+                    resource_url_label: CRL Open Access Serials
+                more: https://catalog.princeton.edu/catalog?q=berry%20basket&f[format][]=Journal&search_field=all_fields
+        '400':
+          description: with a search query that only contains whitespace
+          content:
+            application/json:
+              example:
+                error:
+                  problem: QUERY_IS_EMPTY
+                  message: The query param must contain non-whitespace characters.
+        '500':
+          description: with solr reporting 404
+          content:
+            application/json:
+              example:
+                error:
+                  problem: UPSTREAM_ERROR
+                  message: Solr returned a 404 for path /solr/catalog-alma-production/select
+                    on host lib-solr8-prod.princeton.edu
   "/search/libanswers":
     parameters:
     - name: query

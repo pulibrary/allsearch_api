@@ -61,6 +61,7 @@ semgrep --config auto . # run rules from the semgrep community
     name of a method in this model.
 1. Create an API spec for your service in spec/requests/api/
 1. Generate the swagger docs as described below.
+1. If the service uses solr, [add some sample data](docs/sample-data.md).
 
 ## API documentation
 Documentation lives in `https://allsearch-api.princeton.edu/api-docs`

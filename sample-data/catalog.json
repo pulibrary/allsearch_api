@@ -1922,5 +1922,157 @@
         "electronic_portfolio_s": [
             "{\"desc\":null,\"title\":\"Music Online: Contemporary World Music - All Titles\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53792307830006421\u0026Force_direct=true\",\"start\":null,\"end\":\"latest\",\"notes\":[]}"
         ]
+    },
+    {
+        "id": "99125520326606421",
+        "numeric_id_b": true,
+        "author_roles_1display": "{\"secondary_authors\":[],\"translators\":[],\"editors\":[],\"compilers\":[]}",
+        "title_display": "Berry basket : newsletter for Missouri small fruit and vegetable growers",
+        "title_t": [
+            "Berry basket : newsletter for Missouri small fruit and vegetable growers"
+        ],
+        "title_citation_display": [
+            "Berry basket : newsletter for Missouri small fruit and vegetable growers"
+        ],
+        "compiled_created_t": [
+            "Berry basket : newsletter for Missouri small fruit and vegetable growers"
+        ],
+        "cataloged_tdt": "2022-06-05T14:40:34Z",
+        "format": [
+            "Journal"
+        ],
+        "language_name_display": [
+            "English"
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "other_title_display": [
+            "Berry basket "
+        ],
+        "alt_title_246_display": [
+            "Berry basket "
+        ],
+        "electronic_portfolio_s": [
+            "{\"desc\":\" Available from 1998 volume: 1 until 2009 volume: 11.\",\"title\":\"CRL Open Access Serials\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53933585090006421\u0026Force_direct=true\",\"start\":\"1998\",\"end\":\"2009\",\"notes\":[]}"
+        ]
+    },
+    {
+        "id": "99126851052006421",
+        "numeric_id_b": true,
+        "author_citation_display": [
+            "University of California, Los Angeles"
+        ],
+        "author_roles_1display": "{\"secondary_authors\":[\"University of California, Los Angeles\"],\"translators\":[],\"editors\":[],\"compilers\":[]}",
+        "author_s": [
+            "University of California, Los Angeles. Lesbian, Gay, Bisexual and Transgender Studies Program"
+        ],
+        "title_display": "Queer cats : journal of LGBTQ studies.",
+        "title_t": [
+            "Queer cats : journal of LGBTQ studies."
+        ],
+        "title_citation_display": [
+            "Queer cats : journal of LGBTQ studies"
+        ],
+        "compiled_created_t": [
+            "Queer cats : journal of LGBTQ studies."
+        ],
+        "pub_created_display": [
+            "Los Angeles, CA : The Lesbian, Gay, Bisexual and Transgender Studies Program, The University of California, Los Angeles"
+        ],
+        "pub_created_s": [
+            "Los Angeles, CA : The Lesbian, Gay, Bisexual and Transgender Studies Program, The University of California, Los Angeles"
+        ],
+        "pub_citation_display": [
+            "Los Angeles, CA: The Lesbian, Gay, Bisexual and Transgender Studies Program, The University of California, Los Angeles"
+        ],
+        "pub_date_display": [
+            "2015"
+        ],
+        "pub_date_start_sort": 2015,
+        "pub_date_end_sort": 9999,
+        "cataloged_tdt": "2023-02-27T19:04:16Z",
+        "format": [
+            "Journal"
+        ],
+        "description_display": [
+            "1 online resource",
+            "Began with: Volume I (2015)."
+        ],
+        "description_t": [
+            "1 online resource",
+            "Began with: Volume I (2015)."
+        ],
+        "number_of_pages_citation_display": [
+            "1 online resource"
+        ],
+        "frequency_display": [
+            "Annual"
+        ],
+        "summary_note_display": [
+            "Queer Cats publishes peer-­-­ and editorial-­ -­ reviewed interdisciplinary LGBTQ research along with the proceedings of our annual QGrad (queer graduate student) conference."
+        ],
+        "notes_display": [
+            "Published under the aegis of the UCLA Lesbian, Gay, Bisexual, and Transgender Studies Program, by the QGrads @ UCLA graduate-student organization.",
+            "Refereed/Peer-reviewed"
+        ],
+        "source_desc_notes_display": [
+            "Description based on: Volume 2 (2018); title from PDF front matter page (eScholarship, viewed August 31, 2018).",
+            "Latest issue consulted: Volume 2 (2018) (eScholarship viewed August 31, 2018)."
+        ],
+        "language_name_display": [
+            "English"
+        ],
+        "language_facet": [
+            "English"
+        ],
+        "language_iana_s": [
+            "en"
+        ],
+        "lc_subject_display": [
+            "Gay and lesbian studies—Periodicals",
+            "Sexual minorities—Periodicals",
+            "Gay community—Periodicals"
+        ],
+        "subject_facet": [
+            "Gay and lesbian studies—Periodicals",
+            "Sexual minorities—Periodicals",
+            "Gay community—Periodicals"
+        ],
+        "related_name_json_1display": "{\"Related name\":[\"University of California, Los Angeles. Lesbian, Gay, Bisexual and Transgender Studies Program\"]}",
+        "other_title_display": [
+            "Queer cats",
+            "Queer cats journal of LGBTQ Studies",
+            "Journal of LGBTQ studies"
+        ],
+        "alt_title_246_display": [
+            "Queer cats journal of LGBTQ Studies",
+            "Journal of LGBTQ studies"
+        ],
+        "issn_display": [
+            "2639-0256"
+        ],
+        "lccn_display": [
+            "  2018202388"
+        ],
+        "lccn_s": [
+            "2018202388"
+        ],
+        "issn_s": [
+            "26390256"
+        ],
+        "oclc_s": [
+            "954788800"
+        ],
+        "other_version_s": [
+            "26390256",
+            "ocn954788800"
+        ],
+        "electronic_portfolio_s": [
+            "{\"desc\":\" Available from 2015 volume: 1 issue: 1 until 2019 volume: 3 issue: 1.\",\"title\":\"eScholarship Repository\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true\u0026portfolio_pid=53964217590006421\u0026Force_direct=true\",\"start\":\"2015\",\"end\":\"2019\",\"notes\":[]}"
+        ]
     }
 ]
