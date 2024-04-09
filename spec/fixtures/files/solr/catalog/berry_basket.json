@@ -1,0 +1,19 @@
+{
+    "responseHeader":{
+      "status":0,
+      "QTime":54,
+      "params":{
+        "q":"berry basket",
+        "fl":"id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display",
+        "fq":"format:Journal",
+        "sort":"score desc, pub_date_start_sort desc, title_sort asc",
+        "rows":"3",
+        "facet":"false"}},
+    "response":{"numFound":1,"start":0,"docs":[
+        {
+          "id":"99125520326606421",
+          "title_display":"Berry basket : newsletter for Missouri small fruit and vegetable growers",
+          "format":["Journal"],
+          "electronic_portfolio_s":["{\"desc\":\" Available from 1998 volume: 1 until 2009 volume: 11.\",\"title\":\"CRL Open Access Serials\",\"url\":\"https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53933585090006421&Force_direct=true\",\"start\":\"1998\",\"end\":\"2009\",\"notes\":[]}"]}]
+    }}
+  

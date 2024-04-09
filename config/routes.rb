@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/search/database/', to: 'library_database#show', defaults: { format: 'json' }
   get '/search/dpul/', to: 'dpul#show', defaults: { format: 'json' }
   get '/search/findingaids/', to: 'findingaids#show', defaults: { format: 'json' }
+  get '/search/journals/', to: 'journals#show', defaults: { format: 'json' }
   get '/search/libanswers/', to: 'libanswers#show', defaults: { format: 'json' }
   get '/search/libguides/', to: 'libguides#show', defaults: { format: 'json' }
   get '/search/pulmap', to: 'pulmap#show', defaults: { format: 'json' }
