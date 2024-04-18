@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
@@ -24,3 +24,4 @@ E.g. "I can't work until this is fixed" or "I have a workaround"
 ```
 
 ### Implementation notes, if any
+

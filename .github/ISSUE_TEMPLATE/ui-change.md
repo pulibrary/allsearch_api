@@ -1,13 +1,16 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: UI change
+about: A change to the display
 title: ''
-labels: 'feature'
+labels: user experience
 assignees: ''
 
 ---
 
-### User story
+### Current display
+
+
+### Desired display
 
 ### Acceptance criteria
 
@@ -18,7 +21,4 @@ assignees: ''
     * Wave
 - [ ] ...
 
-### Concrete example
-
-### Implementation notes, if any
-
+### Notes
