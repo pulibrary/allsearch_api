@@ -11,6 +11,7 @@ Requires:
 1. Clone the repository - `git clone git@github.com:pulibrary/allsearch_api.git`
 1. Go to the repository directory - `cd allsearch_api`
 1. Install the required gems - `bundle install`
+1. Make sure you have wget installed - `brew install wget`
 1. Start local solr and postgres - `bundle exec rake servers:start`
 1. Start the application server on localhost:3000 - `bundle exec rails s`
 1. See the application running at http://localhost:3000/
