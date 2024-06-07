@@ -2,21 +2,21 @@ default: &default
   catalog:
     subdomain: catalog
     solr:
-      host: "lib-solr8-prod.princeton.edu"
+      host: <%= ENV['CATALOG_SOLR_HOST'] || "lib-solr8-prod.princeton.edu" %>
       port: 8983
-      collection: "catalog-alma-production"
+      collection: <%= ENV['CATALOG_SOLR_COLLECTION'] || "catalog-alma-production" %>
   dpul:
     subdomain: dpul
     solr:
-      host: "lib-solr8-prod.princeton.edu"
+      host: <%= ENV['DPUL_SOLR_HOST'] || "lib-solr8-prod.princeton.edu" %>
       port: 8983
-      collection: "dpul-production"
+      collection: <%= ENV['DPUL_SOLR_COLLECTION'] || "dpul-production" %>
   findingaids:
     subdomain: findingaids
     solr:
-      host: "lib-solr8-prod.princeton.edu"
+      host: <%= ENV['FINDINGAIDS_SOLR_HOST'] || "lib-solr8-prod.princeton.edu" %>
       port: 8983
-      collection: "pulfalight-production"
+      collection: <%= ENV['FINDINGAIDS_SOLR_COLLECTION'] || "pulfalight-production" %>
   libanswers:
     client_id: <%= ENV['LIBANSWERS_CLIENT_ID'] || 'ABC' %>
     client_secret: <%= ENV['LIBANSWERS_CLIENT_SECRET'] || '12345' %>
@@ -29,9 +29,9 @@ default: &default
   pulmap:
     subdomain: maps
     solr: 
-      host: "lib-solr8-prod.princeton.edu"
+      host: <%= ENV['PULMAP_SOLR_HOST'] || "lib-solr8-prod.princeton.edu" %>
       port: 8983
-      collection: "pulmap"
+      collection: <%= ENV['PULMAP_SOLR_COLLECTION'] || "pulmap" %>
   summon:
     access_id: 'princeton'
     secret_key: <%= ENV['SUMMON_SECRET_KEY'] || 'summon-secret-key' %>
@@ -70,21 +70,21 @@ staging:
   catalog:
     subdomain: catalog-staging
     solr:
-      host: "lib-solr8d-staging.princeton.edu"
+      host: <%= ENV['CATALOG_SOLR_HOST'] || "lib-solr8d-staging.princeton.edu" %>
       port: 8983
-      collection: "catalog-staging"
+      collection: <%= ENV['CATALOG_SOLR_COLLECTION'] || "catalog-staging" %>
   dpul:
     subdomain: dpul-staging
     solr:
-      host: "lib-solr8d-staging.princeton.edu"
+      host: <%= ENV['DPUL_SOLR_HOST'] || "lib-solr8d-staging.princeton.edu" %>
       port: 8983
-      collection: "dpul-staging"
+      collection: <%= ENV['DPUL_SOLR_COLLECTION'] || "dpul-staging" %>
   findingaids:
     subdomain: findingaids-staging
     solr:
-      host: "lib-solr8d-staging.princeton.edu"
+      host: <%= ENV['FINDINGAIDS_SOLR_HOST'] || "lib-solr8d-staging.princeton.edu" %>
       port: 8983
-      collection: "pulfalight-staging"
+      collection: <%= ENV['FINDINGAIDS_SOLR_COLLECTION'] || "pulfalight-staging" %>
   library_website:
     host: "library.psb-test.princeton.edu"
     path: "/ps-library/search/results"
