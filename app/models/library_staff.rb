@@ -12,7 +12,7 @@ class LibraryStaff
   end
 
   def library_staff_service_response
-    LibraryStaffRecord.query(query_terms).limit(3)
+    LibraryStaffRecord.query(query_terms)
   end
 
   def number
@@ -25,6 +25,6 @@ class LibraryStaff
   end
 
   def documents
-    service_response
+    service_response.first(3)
   end
 end

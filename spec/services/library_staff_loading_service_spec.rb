@@ -11,7 +11,7 @@ RSpec.describe LibraryStaffLoadingService do
   end
 
   it 'creates new rows in the library_staff table for each CSV row' do
-    expect { described_class.new.run }.to change(LibraryStaffRecord, :count).by(3)
+    expect { described_class.new.run }.to change(LibraryStaffRecord, :count).by(4)
     expect(LibraryStaffRecord.third.puid).to eq(0o00000003)
     expect(LibraryStaffRecord.third.netid).to eq('tiberius')
     expect(LibraryStaffRecord.third.phone).to eq('(555) 222-2222')
@@ -25,6 +25,7 @@ RSpec.describe LibraryStaffLoadingService do
     expect(LibraryStaffRecord.third.department).to eq('Library - Collections and Access Services')
     expect(LibraryStaffRecord.third.office).to eq('B-300')
     expect(LibraryStaffRecord.third.building).to eq('Firestone Library')
+    expect(LibraryStaffRecord.fourth.first_name).to eq('Brutus')
   end
 
   it 'is idempotent' do

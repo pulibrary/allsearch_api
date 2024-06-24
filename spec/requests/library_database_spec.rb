@@ -91,6 +91,20 @@ RSpec.describe 'GET /search/database' do
     expect(response_body[:records][2][:title]).to eq('Oxford Music Online')
   end
 
+  context 'when the search query matches more than 3 results' do
+    it 'displays the total number of matches' do
+      get '/search/database?query=oxford'
+      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(response_body[:number]).to eq(4)
+    end
+
+    it 'only includes the first three records' do
+      get '/search/database?query=oxford'
+      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(response_body[:records].count).to eq(3)
+    end
+  end
+
   context 'with html in the description' do
     let(:libjobs_response) { file_fixture('libjobs/library-databases-html.csv') }
     let(:description) do
