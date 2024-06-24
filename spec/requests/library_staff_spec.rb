@@ -60,4 +60,18 @@ RSpec.describe 'GET /search/staff' do
       expect(response_body[:records][0][key]).to match(expected_response[:records].first[key])
     end
   end
+
+  context 'when the search query matches more than 3 results' do
+    it 'displays the total number of matches' do
+      get '/search/staff?query=library'
+      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(response_body[:number]).to eq(4)
+    end
+
+    it 'only includes the first three records' do
+      get '/search/staff?query=library'
+      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(response_body[:records].count).to eq(3)
+    end
+  end
 end

@@ -12,7 +12,7 @@ class LibraryDatabase
   end
 
   def library_database_service_response
-    LibraryDatabaseRecord.query(query_terms).limit(3)
+    LibraryDatabaseRecord.query(query_terms)
   end
 
   def number
@@ -25,6 +25,6 @@ class LibraryDatabase
   end
 
   def documents
-    service_response
+    service_response.first(3)
   end
 end
