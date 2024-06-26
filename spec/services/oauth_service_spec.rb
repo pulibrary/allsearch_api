@@ -2,9 +2,7 @@
 
 require 'rails_helper'
 
-# rubocop:disable RSpec/FilePath
 RSpec.describe OAuthService do
-  # rubocop:enable RSpec/FilePath
   before do
     stub_request(:post, 'https://faq.library.princeton.edu/api/1.1/oauth/token')
       .with(body: 'client_id=ABC&client_secret=12345&grant_type=client_credentials')

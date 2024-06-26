@@ -2,9 +2,7 @@
 
 require 'rails_helper'
 
-# rubocop:disable RSpec/FilePath
 RSpec.describe OAuthToken do
-  # rubocop:enable RSpec/FilePath
   describe '#token' do
     context 'when an unexpired token is already in the database' do
       before do
