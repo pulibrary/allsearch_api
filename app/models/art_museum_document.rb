@@ -35,7 +35,7 @@ class ArtMuseumDocument < Document
   end
 
   def doc_keys
-    [:credit_line, :medium, :dimensions, :primary_image, :object_number]
+    [:credit_line, :medium, :dimensions, :primary_image, :object_number, :date]
   end
 
   def credit_line
@@ -56,5 +56,9 @@ class ArtMuseumDocument < Document
 
   def object_number
     document.dig(:_source, :objectnumber)
+  end
+
+  def date
+    document.dig(:_source, :displaydate)
   end
 end
