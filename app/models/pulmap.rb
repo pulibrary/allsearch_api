@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# This class is responsible for querying Findingaids (aka PULFAlight)
+# This class is responsible for querying maps.princeton.edu (aka Pulmap)
 class Pulmap
   include ActiveModel::API
   include Parsed
@@ -11,10 +11,6 @@ class Pulmap
     @query_terms = query_terms
     @service = 'pulmap'
     @service_response = solr_service_response
-  end
-
-  def solr_collection
-    'pulmap'
   end
 
   def solr_fields
