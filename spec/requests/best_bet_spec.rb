@@ -17,6 +17,7 @@ RSpec.describe 'GET /search/best-bet' do
     }
   end
   let(:expected_record_keys) { [:title, :id, :type, :description, :url] }
+  let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
 
   before do
     stub_request(:get, 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSSDYbAmj_SDVK96DJItSsir_PbjMIqe8cBMvBfRIh4fpVzv3aozhCdulrgJXZzwl-fh-lbULMuLZuO/pub?gid=170493948&single=true&output=csv')
@@ -34,8 +35,6 @@ RSpec.describe 'GET /search/best-bet' do
   it 'can take a parameter' do
     get '/search/best-bet?query=new york times'
     expect(response).to be_successful
-    response_body = JSON.parse(response.body, symbolize_names: true)
-
     expect(response_body.keys).to contain_exactly(:number, :records)
     expect(response_body[:records].count).to eq(1)
     expect(response_body[:records].first.keys).to match_array(expected_record_keys)
@@ -43,6 +42,17 @@ RSpec.describe 'GET /search/best-bet' do
     matching_record_keys = expected_record_keys - [:id]
     matching_record_keys.each do |key|
       expect(response_body[:records].first[key]).to match(expected_response[:records].first[key])
+    end
+  end
+
+  context 'with a partial entry' do
+    let(:google_response) { file_fixture('google_sheets/best_bets_mid_edit.csv') }
+
+    it 'continues to return only complete entries' do
+      get '/search/best-bet?query=times'
+      expect(response).to be_successful
+      expect(response_body.keys).to contain_exactly(:number, :records)
+      expect(response_body[:records].count).to eq(1)
     end
   end
 end
