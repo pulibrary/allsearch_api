@@ -41,7 +41,8 @@ group :development, :test do
   gem 'rspec_junit_formatter', require: false
   gem 'rspec-rails'
   gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec'
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop-rspec_rails', require: false
 end
 
 group :test do
