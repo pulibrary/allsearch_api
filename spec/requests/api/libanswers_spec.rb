@@ -47,6 +47,7 @@ RSpec.describe 'libanswers' do
         before do
           stub_request(:post, 'https://faq.library.princeton.edu/api/1.1/oauth/token')
             .to_return(status: 400, body: '{"error":"The client credentials are invalid"}')
+          allow(Honeybadger).to receive(:notify)
         end
 
         run_test! do |response|
@@ -55,6 +56,7 @@ RSpec.describe 'libanswers' do
                                        problem: 'UPSTREAM_ERROR',
                                        message: 'Could not generate a valid authentication token with upstream service.'
                                      })
+          expect(Honeybadger).to have_received(:notify)
         end
       end
     end

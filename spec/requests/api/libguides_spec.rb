@@ -56,6 +56,7 @@ RSpec.describe 'libguides' do
         before do
           stub_request(:post, 'https://lgapi-us.libapps.com/1.2/oauth/token')
             .to_return(status: 400, body: '{"error":"The client credentials are invalid"}')
+          allow(Honeybadger).to receive(:notify)
         end
 
         run_test! do |response|
@@ -64,6 +65,7 @@ RSpec.describe 'libguides' do
                                        problem: 'UPSTREAM_ERROR',
                                        message: 'Could not generate a valid authentication token with upstream service.'
                                      })
+          expect(Honeybadger).to have_received(:notify)
         end
       end
     end
