@@ -24,6 +24,7 @@ class ServiceController < ApplicationController
   end
 
   def show_standard_error(exception)
+    Honeybadger.notify exception
     render_error(problem: 'APPLICATION_ERROR',
                  message: "This application threw #{exception.class}",
                  status: :internal_server_error)
@@ -31,6 +32,7 @@ class ServiceController < ApplicationController
 
   # :reek:FeatureEnvy
   def show_http_error(exception)
+    Honeybadger.notify exception
     render_error(problem: 'UPSTREAM_ERROR',
                  message: "Query to upstream failed with #{exception.class}, message: #{exception.message}",
                  status: :internal_server_error)
@@ -38,12 +40,15 @@ class ServiceController < ApplicationController
 
   # :reek:FeatureEnvy
   def show_allsearch_error(exception)
+    Honeybadger.notify exception
     render_error(problem: exception.problem,
                  message: exception.message,
                  status: :internal_server_error)
   end
 
   def show_query_error
+    # We don't report these to Honeybadger, since the system is working as
+    # expected in these cases by telling the user they need to enter a query.
     render_error(problem: 'QUERY_IS_EMPTY',
                  message: 'The query param must contain non-whitespace characters.',
                  status: :bad_request)

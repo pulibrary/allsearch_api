@@ -8,6 +8,7 @@ RSpec.describe 'journals' do
       .to_return(status: 200, body: file_fixture('solr/catalog/berry_basket.json'))
     stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=some_search&fq=format:Journal&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
       .to_return(status: 404, body: file_fixture('solr/catalog/404.html'))
+    allow(Honeybadger).to receive(:notify)
   end
 
   path '/search/journals' do
@@ -65,6 +66,7 @@ RSpec.describe 'journals' do
                                        message: 'Solr returned a 404 for path /solr/catalog-alma-production/select ' \
                                                 'on host lib-solr8-prod.princeton.edu'
                                      })
+          expect(Honeybadger).to have_received(:notify)
         end
       end
     end

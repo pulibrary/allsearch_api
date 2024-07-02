@@ -26,6 +26,7 @@ RSpec.describe CatalogController do
   context 'when service returns a Net::HTTP exception' do
     before do
       allow(Catalog).to receive(:new).and_raise(Net::HTTPFatalError.new('Some info', ''))
+      allow(Honeybadger).to receive(:notify)
     end
 
     it 'handles Net::HTTP exceptions' do
@@ -36,6 +37,7 @@ RSpec.describe CatalogController do
                                    problem: 'UPSTREAM_ERROR',
                                    message: 'Query to upstream failed with Net::HTTPFatalError, message: Some info'
                                  })
+      expect(Honeybadger).to have_received(:notify)
     end
   end
 

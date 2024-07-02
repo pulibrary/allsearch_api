@@ -9,6 +9,7 @@ RSpec.describe 'GET /search/website' do
       stub_request(:post, url)
         .with(body: { 'search' => 'root' })
         .to_return(status: 503)
+      allow(Honeybadger).to receive(:notify)
     end
 
     it 'gives the user a 500 error and a descriptive message' do
@@ -19,6 +20,7 @@ RSpec.describe 'GET /search/website' do
                                    problem: 'UPSTREAM_ERROR',
                                    message: 'The library website API returned a 503 HTTP status code.'
                                  })
+      expect(Honeybadger).to have_received(:notify)
     end
   end
 end
