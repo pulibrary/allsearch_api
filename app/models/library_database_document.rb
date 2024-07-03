@@ -25,7 +25,8 @@ class LibraryDatabaseDocument < Document
   end
 
   def description
-    ActionView::Base.full_sanitizer.sanitize(document.description)
+    sanitizer = Rails::HTML5::SafeListSanitizer.new
+    sanitizer.sanitize(document.description, scrubber: TextScrubber.new)
   end
 
   def url
