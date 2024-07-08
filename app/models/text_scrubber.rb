@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rails/html5'
 
 class TextScrubber < Rails::HTML::PermitScrubber
