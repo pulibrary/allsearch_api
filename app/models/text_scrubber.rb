@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rails-html-sanitizer'
+
 class TextScrubber < Rails::HTML::PermitScrubber
   def initialize
     super
