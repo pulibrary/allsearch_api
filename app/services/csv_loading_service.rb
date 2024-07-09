@@ -35,10 +35,6 @@ class CSVLoadingService
 
   # If the CSV shrinks by 25% or more, assume something is wrong
   def csv_is_much_smaller?
-    existing_records = class_to_load.count
-    new_csv_length = csv.readlines.size
-    csv_shrinkage = existing_records - new_csv_length
-    csv.rewind
     much_smaller = csv_shrinkage > (existing_records * 0.25)
     return false unless much_smaller
 
@@ -48,14 +44,31 @@ class CSVLoadingService
     much_smaller
   end
 
+  def csv_shrinkage
+    existing_records - new_csv_length
+  end
+
+  def existing_records
+    @existing_records ||= class_to_load.count
+  end
+
+  def new_csv_length
+    @new_csv_length ||= begin
+      length = csv.readlines.size
+      csv.rewind
+      length
+    end
+  end
+
   # Expect certain headers
   def header_row_matches?
-    return true if csv.readline == expected_headers
+    new_headers = csv.readline
+    return true if new_headers == expected_headers
 
     Rails.logger.error("The #{self.class} did not load the CSV " \
                        "because the headers didn't match. The expected headers are: " \
                        "#{expected_headers.to_sentence}. " \
-                       "The new CSV headers are #{csv.readline&.to_sentence}.")
+                       "The new CSV headers are #{new_headers&.to_sentence}.")
     false
   end
 

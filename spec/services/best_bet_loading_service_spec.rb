@@ -40,7 +40,7 @@ RSpec.describe BestBetLoadingService do
         .with('The BestBetLoadingService did not load the CSV ' \
               "because the headers didn't match. The expected headers are: " \
               'Title, Description, URL, Search Terms, Last Update, and Updated By. ' \
-              'The new CSV headers are .')
+              'The new CSV headers are bad response.')
     end
   end
 
