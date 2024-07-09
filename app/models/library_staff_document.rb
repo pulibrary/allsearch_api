@@ -82,7 +82,7 @@ class LibraryStaffDocument < Document
   def description; end
 
   def url
-    staff_url ="https://library.psb-prod.princeton.edu/people/#{document.first_name}-#{document.last_name}"
+    staff_url = "https://library.psb-prod.princeton.edu/people/#{document.first_name}-#{document.last_name}"
     staff_url.sub(' ', '-')
     staff_url.downcase
   end
