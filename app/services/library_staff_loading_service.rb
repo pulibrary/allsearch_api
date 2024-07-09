@@ -10,12 +10,10 @@ class LibraryStaffLoadingService < CSVLoadingService
     LibraryStaffRecord
   end
 
-  def data_is_valid?
-    return false if csv_is_much_smaller?
-
-    csv.readline == %w[PUID NetID Phone Name lastName firstName middleName Title LibraryTitle
-                       LongTitle Email Section Division Department StartDate StaffSort UnitSort
-                       DeptSort Unit DivSect FireWarden BackupFireWarden FireWardenNotes Office Building]
+  def expected_headers
+    %w[PUID NetID Phone Name lastName firstName middleName Title LibraryTitle
+       LongTitle Email Section Division Department StartDate StaffSort UnitSort
+       DeptSort Unit DivSect FireWarden BackupFireWarden FireWardenNotes Office Building]
   end
 
   def uri
