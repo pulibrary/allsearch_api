@@ -6,7 +6,7 @@ RSpec.describe LibraryStaffLoadingService do
   let(:libjobs_response) { file_fixture('library_staff/staff-directory.csv') }
 
   before do
-    stub_request(:get, 'https://lib-jobs.princeton.edu/staff-directory.csv')
+    stub_request(:get, 'https://lib-jobs.princeton.edu/pul-staff-report.csv')
       .to_return(status: 200, body: libjobs_response)
   end
 
@@ -17,15 +17,20 @@ RSpec.describe LibraryStaffLoadingService do
     expect(LibraryStaffRecord.third.phone).to eq('(555) 222-2222')
     expect(LibraryStaffRecord.third.name).to eq('Adams, Tiberius')
     expect(LibraryStaffRecord.third.last_name).to eq('Adams')
-    expect(LibraryStaffRecord.third.first_name).to eq('Spot')
-    expect(LibraryStaffRecord.third.middle_name).to eq('Tiberius')
+    expect(LibraryStaffRecord.third.first_name).to eq('Spot Tiberius')
+
+    # The CSV we get from airtable via lib_jobs does not contain middle names as a
+    # separate field, they are concatenated into the first_name.  So nil values in
+    # this field are to be expected.
+    expect(LibraryStaffRecord.third.middle_name).to be_nil
+
     expect(LibraryStaffRecord.third.title).to eq('Lead Hairball Engineer')
     expect(LibraryStaffRecord.third.library_title).to eq('Lead Hairball Engineer')
     expect(LibraryStaffRecord.third.email).to eq('tiberius@princeton.edu')
-    expect(LibraryStaffRecord.third.department).to eq('Library - Collections and Access Services')
+    expect(LibraryStaffRecord.third.department).to eq('My Department')
     expect(LibraryStaffRecord.third.office).to eq('B-300')
     expect(LibraryStaffRecord.third.building).to eq('Firestone Library')
-    expect(LibraryStaffRecord.fourth.first_name).to eq('Brutus')
+    expect(LibraryStaffRecord.fourth.first_name).to eq('Brutus The')
   end
 
   it 'is idempotent' do
@@ -48,7 +53,7 @@ RSpec.describe LibraryStaffLoadingService do
   end
 
   context 'when a staff member in postgres is no longer in the CSV' do
-    it 'removes it from the database' do
+    it 'removes them from the database' do
       old_record = LibraryStaffRecord.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
                                              title: 'Outside Specialist', library_title: 'Outside Specialist',
                                              email: 'outside@princeton.edu', department: 'None')
@@ -60,13 +65,21 @@ RSpec.describe LibraryStaffLoadingService do
 
   context 'when a staff member has updated info in the CSV' do
     it 'updates the relevant fields' do
-      LibraryStaffRecord.create(puid: 0o00000003, netid: 'tiberius', first_name: 'Spot', name: 'Adams, Spot',
+      LibraryStaffRecord.create(puid: 0o00000003, netid: 'tiberius', first_name: 'Spot Tiberius', name: 'Adams, Spot',
                                 title: 'Lead Hairball Engineer', library_title: 'Lead Hairball Engineer',
                                 email: 'tiberius@princeton.edu',
                                 department: 'Library - Collections and Access Services')
-      expect(LibraryStaffRecord.find_by(first_name: 'Spot').name).to eq 'Adams, Spot'
+      expect(LibraryStaffRecord.find_by(first_name: 'Spot Tiberius').name).to eq 'Adams, Spot'
       described_class.new.run
-      expect(LibraryStaffRecord.find_by(first_name: 'Spot').name).to eq 'Adams, Tiberius'
+      expect(LibraryStaffRecord.find_by(first_name: 'Spot Tiberius').name).to eq 'Adams, Tiberius'
+    end
+  end
+
+  context 'when there are blank lines in the CSV' do
+    let(:libjobs_response) { file_fixture('library_staff/staff-directory-blank-lines.csv') }
+
+    it 'creates records for any complete lines in the CSV' do
+      expect { described_class.new.run }.to change(LibraryStaffRecord, :count).by(1)
     end
   end
 end

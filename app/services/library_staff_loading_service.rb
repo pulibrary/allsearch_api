@@ -11,12 +11,11 @@ class LibraryStaffLoadingService < CSVLoadingService
   end
 
   def expected_headers
-    %w[PUID NetID Phone Name lastName firstName middleName Title LibraryTitle
-       LongTitle Email Section Division Department StartDate StaffSort UnitSort
-       DeptSort Unit DivSect FireWarden BackupFireWarden FireWardenNotes Office Building]
+    %w[puid netid phone name lastName firstName email address building department division
+       unit team title areasOfStudy websiteUrl bios expertise mySchedulerLink]
   end
 
   def uri
-    @uri ||= URI.parse('https://lib-jobs.princeton.edu/staff-directory.csv')
+    @uri ||= URI.parse('https://lib-jobs.princeton.edu/pul-staff-report.csv')
   end
 end
