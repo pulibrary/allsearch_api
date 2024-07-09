@@ -12,7 +12,7 @@ RSpec.describe 'GET /search/staff' do
         title: 'Trout, Nimbus',
         id: 00_0000_002,
         type: 'Library Staff',
-        url: 'https://library.princeton.edu/staff/nimbuskt',
+        url: 'https://library.psb-prod.princeton.edu/people/nimbus-trout',
         other_fields: {
           building: 'Firestone Library',
           department: 'Office of the Deputy Dean of Libraries',
