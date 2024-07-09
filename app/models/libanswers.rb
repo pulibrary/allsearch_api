@@ -24,7 +24,11 @@ class Libanswers
   def service_response
     @service_response ||= Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
       response = http.request(request)
-      JSON.parse(response.body)
+      if response.code == '200'
+        JSON.parse(response.body)
+      else
+        { 'search' => { 'results' => [], 'numFound' => 0 } }
+      end
     end
   end
 
