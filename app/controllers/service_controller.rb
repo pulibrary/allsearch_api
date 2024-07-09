@@ -5,6 +5,7 @@ class ServiceController < ApplicationController
   rescue_from Timeout::Error, Errno::ECONNRESET, Net::ProtocolError, with: :show_http_error
   rescue_from AllsearchError, with: :show_allsearch_error
   rescue_from ActionController::ParameterMissing, with: :show_query_error
+  rescue_from URI::InvalidURIError, with: :rescue_uri_error
   attr_reader :query
 
   def show
@@ -52,6 +53,12 @@ class ServiceController < ApplicationController
     render_error(problem: 'QUERY_IS_EMPTY',
                  message: 'The query param must contain non-whitespace characters.',
                  status: :bad_request)
+  end
+
+  def rescue_uri_error
+    @query = service.new(query_terms: URI.encode_uri_component(query_params))
+
+    render json: query.our_response
   end
 
   def render_error(problem:, message:, status:)

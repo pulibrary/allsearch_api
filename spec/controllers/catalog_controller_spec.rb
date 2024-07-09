@@ -23,6 +23,17 @@ RSpec.describe CatalogController do
     expect(controller.query.query_terms).to eq('war and peace')
   end
 
+  it 'does not throw an error when the url contains numbers and the percent sign' do
+    stub_solr(collection: 'catalog-alma-production',
+              query: 'facet=false&fl=id,title_display,author_display,pub_created_display,format,' \
+                     'holdings_1display,electronic_portfolio_s,electronic_access_1display&' \
+                     'q=%25&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc',
+              fixture: 'solr/catalog/no_results.json')
+    get :show, params: { query: '%25' }
+    expect(response).to have_http_status(:ok)
+    expect(controller.query.query_terms).to eq('%25')
+  end
+
   context 'when service returns a Net::HTTP exception' do
     before do
       allow(Catalog).to receive(:new).and_raise(Net::HTTPFatalError.new('Some info', ''))
