@@ -4,6 +4,9 @@ PUL staff maintain a list of best bets in a Google spreadsheet.
 We use the following architecture to make these best bets
 searchable in allsearch-api.
 
+### Updating Best Data
+Data in the spreadsheet can be updated by following these [instructions](https://pul-confluence.atlassian.net/wiki/spaces/IT/pages/104300604/All-Search+Best+Bets).
+
 #### Indexing architecture
 
 The AllSearch API's searchable list of best bets is created
