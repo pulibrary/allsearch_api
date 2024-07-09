@@ -31,7 +31,8 @@ class FindingaidsDocument < Document
 
   # This field may contain html
   def description
-    document[:abstract_ssm]&.first
+    sanitizer = Rails::HTML5::SafeListSanitizer.new
+    sanitizer.sanitize(document[:abstract_ssm]&.first, scrubber: TextScrubber.new)
   end
 
   def doc_keys

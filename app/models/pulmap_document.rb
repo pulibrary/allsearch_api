@@ -32,7 +32,8 @@ class PulmapDocument < Document
   end
 
   def description
-    document[:dc_description_s]
+    sanitizer = Rails::HTML5::SafeListSanitizer.new
+    sanitizer.sanitize(document[:dc_description_s], scrubber: TextScrubber.new)
   end
 
   def doc_keys
