@@ -34,16 +34,20 @@ RSpec.describe LibraryStaffLoadingService do
   end
 
   context 'when file does not have the required headers' do
-    let(:google_response) { 'bad response' }
+    let(:libjobs_response) { 'bad response' }
 
     it 'does not proceed' do
       described_class.new.run
-      BestBetRecord.create(url: 'library.princeton.edu')
+      # Create a record that would typically be deleted as part of running
+      # this service, since it is not in the CSV data
+      LibraryStaffRecord.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
+                                title: 'Outside Specialist', library_title: 'Outside Specialist',
+                                email: 'outside@princeton.edu', department: 'None')
       expect { described_class.new.run }.not_to(change(LibraryStaffRecord, :count))
     end
   end
 
-  context 'when a best bet in postgres is no longer in the CSV' do
+  context 'when a staff member in postgres is no longer in the CSV' do
     it 'removes it from the database' do
       old_record = LibraryStaffRecord.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
                                              title: 'Outside Specialist', library_title: 'Outside Specialist',
@@ -54,7 +58,7 @@ RSpec.describe LibraryStaffLoadingService do
     end
   end
 
-  context 'when a best bet has updated info in the CSV' do
+  context 'when a staff member has updated info in the CSV' do
     it 'updates the relevant fields' do
       LibraryStaffRecord.create(puid: 0o00000003, netid: 'tiberius', first_name: 'Spot', name: 'Adams, Spot',
                                 title: 'Lead Hairball Engineer', library_title: 'Lead Hairball Engineer',
