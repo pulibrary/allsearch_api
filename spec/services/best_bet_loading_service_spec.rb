@@ -33,8 +33,14 @@ RSpec.describe BestBetLoadingService do
     let(:google_response) { 'bad response' }
 
     it 'does not proceed' do
+      allow(Rails.logger).to receive(:error)
       BestBetRecord.create!(title:, url: 'library.princeton.edu', search_terms:)
       expect { described_class.new.run }.not_to(change(BestBetRecord, :count))
+      expect(Rails.logger).to have_received(:error)
+        .with('The BestBetLoadingService did not load the CSV ' \
+              "because the headers didn't match. The expected headers are: " \
+              'Title, Description, URL, Search Terms, Last Update, and Updated By. ' \
+              'The new CSV headers are bad response.')
     end
   end
 
@@ -60,6 +66,15 @@ RSpec.describe BestBetLoadingService do
     it 'does not proceed' do
       30.times { BestBetRecord.create!(title:, url:, search_terms:) }
       expect { described_class.new.run }.not_to(change(BestBetRecord, :count))
+    end
+
+    it 'logs an error' do
+      allow(Rails.logger).to receive(:error)
+      30.times { BestBetRecord.create!(title:, url:, search_terms:) }
+      expect { described_class.new.run }.not_to(change(BestBetRecord, :count))
+      expect(Rails.logger).to have_received(:error)
+        .once.with('The BestBetLoadingService had a much shorter CSV. ' \
+                   'The original length was 30 rows, the new length is 7 rows.')
     end
   end
 end

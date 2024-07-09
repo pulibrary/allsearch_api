@@ -10,10 +10,8 @@ class BestBetLoadingService < CSVLoadingService
     BestBetRecord
   end
 
-  def data_is_valid?
-    return false if csv_is_much_smaller?
-
-    csv.readline == ['Title', 'Description', 'URL', 'Search Terms', 'Last Update']
+  def expected_headers
+    ['Title', 'Description', 'URL', 'Search Terms', 'Last Update', 'Updated By']
   end
 
   def uri
