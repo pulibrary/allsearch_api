@@ -29,4 +29,32 @@ RSpec.describe Libanswers do
       end.not_to change(OAuthToken, :count)
     end
   end
+
+  context 'when the upstream service returns a 400' do
+    before do
+      OAuthToken.create!({ service: 'libanswers',
+                           endpoint: 'https://faq.library.princeton.edu/api/1.1/oauth/token' })
+      stub_libanswers(query: 'printer', fixture: 'libanswers/printer.json')
+      stub_request(:post, 'https://faq.library.princeton.edu/api/1.1/oauth/token')
+        .with(body: 'client_id=ABC&client_secret=12345&grant_type=client_credentials')
+        .to_return(status: 200, body: file_fixture('libanswers/oauth_token.json'))
+      stub_request(:get, 'https://faq.library.princeton.edu/api/1.1/search/0%25000?iid=344&limit=3')
+        .with(
+          headers: {
+            'Authorization' => 'Bearer abcdef1234567890abcdef1234567890abcdef12'
+          }
+        )
+        .to_return(status: 400, body: 'NGINX error')
+    end
+
+    it 'has an empty documents array' do
+      service = described_class.new(query_terms: '0%000')
+      expect(service.documents).to be_empty
+    end
+
+    it 'has 0 as the number' do
+      service = described_class.new(query_terms: '0%000')
+      expect(service.number).to eq 0
+    end
+  end
 end
