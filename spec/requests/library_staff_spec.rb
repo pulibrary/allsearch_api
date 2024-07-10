@@ -15,14 +15,14 @@ RSpec.describe 'GET /search/staff' do
         url: 'https://library.princeton.edu/staff/nimbuskt',
         other_fields: {
           building: 'Firestone Library',
-          department: 'Library - Office of the Deputy University Librarian',
+          department: 'Office of the Deputy Dean of Libraries',
           email: 'nibmus@princeton.edu',
-          first_name: 'Nimbus',
+          first_name: 'Nimbus Kilgore',
           last_name: 'Trout',
           library_title: 'Nap Coordinator',
-          middle_name: 'Kilgore',
           office: 'A-200',
           phone: '(555) 111-1111',
+          unit: 'IT Operations and Digitization',
           netid: 'nimbuskt'
         }
       ]
@@ -30,7 +30,7 @@ RSpec.describe 'GET /search/staff' do
   end
 
   before do
-    stub_request(:get, 'https://lib-jobs.princeton.edu/staff-directory.csv')
+    stub_request(:get, 'https://lib-jobs.princeton.edu/pul-staff-report.csv')
       .to_return(status: 200, body: libjobs_response)
     LibraryStaffLoadingService.new.run
   end
