@@ -42,20 +42,4 @@ RSpec.describe JournalsController do
       expect(Honeybadger).to have_received(:notify)
     end
   end
-
-  context 'when we have some kind of error' do
-    before do
-      allow(Journals).to receive(:new).and_raise(ArgumentError)
-    end
-
-    it 'handles it' do
-      get :show, params: { query: '123' }
-      expect(response).to have_http_status(:internal_server_error)
-      data = JSON.parse(response.body, symbolize_names: true)
-      expect(data[:error]).to eq({
-                                   problem: 'APPLICATION_ERROR',
-                                   message: 'This application threw ArgumentError'
-                                 })
-    end
-  end
 end

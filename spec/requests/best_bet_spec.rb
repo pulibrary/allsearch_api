@@ -45,6 +45,11 @@ RSpec.describe 'GET /search/best-bet' do
     end
   end
 
+  it 'can handle a query like `0%000`' do
+    get '/search/best-bet?query=0%000'
+    expect(response).to be_successful
+  end
+
   context 'with a partial entry' do
     let(:google_response) { file_fixture('google_sheets/best_bets_mid_edit.csv') }
 
