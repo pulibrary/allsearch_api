@@ -10,7 +10,7 @@ class Libguides
   end
 
   def documents
-    service_response[0..2]
+    service_response[0..2] || []
   end
 
   def number
