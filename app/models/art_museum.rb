@@ -18,7 +18,11 @@ class ArtMuseum
     uri = URI::HTTPS.build(host: 'data.artmuseum.princeton.edu', path: '/search',
                            query: "q=#{@query_terms}&type=all&size=3")
     response = Net::HTTP.get(uri)
-    JSON.parse(response, symbolize_names: true)
+    begin
+      JSON.parse(response, symbolize_names: true)
+    rescue JSON::ParserError
+      handle_parser_error response
+    end
   end
 
   def number
@@ -32,5 +36,12 @@ class ArtMuseum
 
   def documents
     @documents ||= service_response.dig(:hits, :hits)
+  end
+
+  def handle_parser_error(response)
+    raise AllsearchError.new(
+      problem: 'UPSTREAM_ERROR',
+      msg: "Query to upstream failed with #{ActionController::Base.helpers.strip_tags(response)}"
+    )
   end
 end

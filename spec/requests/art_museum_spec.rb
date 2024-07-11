@@ -57,4 +57,23 @@ RSpec.describe 'GET /search/artmuseum' do
       expect(response_body[:records].size).to eq(3)
     end
   end
+
+  context 'when the art museum is temporarily down' do
+    before do
+      stub_art_museum(query: 'cats', fixture: 'art_museum/nginx_503')
+    end
+
+    it 'returns a 500 and specifies UPSTREAM_ERROR in the response' do
+      get '/search/artmuseum?query=cats'
+      expect(response).to have_http_status :internal_server_error
+      response_body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response_body[:error]).to eq({
+                                            problem: 'UPSTREAM_ERROR',
+                                            message: "Query to upstream failed with \n" \
+                                                     "503 Service Temporarily Unavailable\n\n" \
+                                                     "503 Service Temporarily Unavailable\nnginx/1.24.0\n\n\n"
+                                          })
+    end
+  end
 end
