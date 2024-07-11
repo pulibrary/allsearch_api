@@ -60,4 +60,19 @@ RSpec.describe 'GET /search/libguides' do
       expect(response_body[:records].first[:description]).to eq(description)
     end
   end
+
+  context 'when libguides returns an empty JSON object' do
+    before do
+      stub_libguides(query: 'Asian%20American%20studies', fixture: 'libguides/empty_object.json')
+    end
+
+    it 'returns an empty array of records' do
+      get '/search/libguides?query=Asian+American+studies'
+
+      expect(response).to be_successful
+      response_body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response_body[:records]).to eq([])
+    end
+  end
 end
