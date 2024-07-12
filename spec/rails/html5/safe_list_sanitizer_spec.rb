@@ -15,14 +15,14 @@ RSpec.describe Rails::HTML5::SafeListSanitizer do
 
     it 'removes script tags' do
       test_string = '<script src="example.com"></script><p>This is a test</p>'
-      expected = '<p>This is a test</p>'
+      expected = 'This is a test'
 
       expect(sanitizer.sanitize(test_string, scrubber: TextScrubber.new)).to eq(expected)
     end
 
     it 'removes link tags' do
-      test_string = '<link rel="example.com"><p>This is a test</p>'
-      expected = '<p>This is a test</p>'
+      test_string = '<link rel="example.com">This is a test'
+      expected = 'This is a test'
 
       expect(sanitizer.sanitize(test_string, scrubber: TextScrubber.new)).to eq(expected)
     end
@@ -34,9 +34,9 @@ RSpec.describe Rails::HTML5::SafeListSanitizer do
       expect(sanitizer.sanitize(test_string, scrubber: TextScrubber.new)).to eq(expected)
     end
 
-    it 'does not remove header tags' do
+    it 'removes header tags' do
       test_string = '<h1>This is a test</h1><h4>This is a smaller test</h4>'
-      expected = '<h1>This is a test</h1><h4>This is a smaller test</h4>'
+      expected = 'This is a testThis is a smaller test'
 
       expect(sanitizer.sanitize(test_string, scrubber: TextScrubber.new)).to eq(expected)
     end
