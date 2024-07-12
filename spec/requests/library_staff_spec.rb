@@ -44,6 +44,7 @@ RSpec.describe 'GET /search/staff' do
 
   it 'can handle a query like `0%000`' do
     get '/search/staff?query=0%000'
+    puts response
     expect(response).to be_successful
   end
 
