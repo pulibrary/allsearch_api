@@ -12,8 +12,7 @@ class ArticleDocument < Document
   delegate :volume, to: :document
 
   def title
-    sanitizer = Rails::HTML5::SafeListSanitizer.new
-    sanitizer.sanitize(document.title, scrubber: TextScrubber.new)
+    sanitize document.title
   end
 
   def creator
@@ -31,8 +30,7 @@ class ArticleDocument < Document
   # NOTE: the Snippet includes html to emphasize the relevant term, e.g.
   # In 1994, the Government of Cameroon introduced an array of <h>forest</h> policy reforms
   def description
-    sanitizer = Rails::HTML5::SafeListSanitizer.new
-    sanitizer.sanitize(document.snippet, scrubber: TextScrubber.new)
+    sanitize document.snippet
   end
 
   def url
