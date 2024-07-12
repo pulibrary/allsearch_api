@@ -5,7 +5,8 @@ class ServiceController < ApplicationController
   rescue_from Timeout::Error, Errno::ECONNRESET, Net::ProtocolError, with: :show_http_error
   rescue_from AllsearchError, with: :show_allsearch_error
   rescue_from ActionController::ParameterMissing, with: :show_query_error
-  rescue_from URI::InvalidURIError, with: :rescue_uri_error
+  rescue_from URI::InvalidURIError, with: :rescue_from_error
+  rescue_from ArgumentError, with: :rescue_from_error
   attr_reader :query
 
   def show
@@ -55,7 +56,7 @@ class ServiceController < ApplicationController
                  status: :bad_request)
   end
 
-  def rescue_uri_error
+  def rescue_from_error
     @query = service.new(query_terms: URI.encode_uri_component(query_params))
 
     render json: query.our_response

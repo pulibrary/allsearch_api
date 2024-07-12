@@ -42,6 +42,11 @@ RSpec.describe 'GET /search/staff' do
     expect(response.content_type).to eq('application/json; charset=utf-8')
   end
 
+  it 'can handle a query like `0%000`' do
+    get '/search/staff?query=0%000'
+    expect(response).to be_successful
+  end
+
   it 'returns two results' do
     get '/search/staff?query=Firestone'
 

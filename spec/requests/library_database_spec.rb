@@ -37,6 +37,11 @@ RSpec.describe 'GET /search/database' do
     expect(response.content_type).to eq('application/json; charset=utf-8')
   end
 
+  it 'can handle a query like `0%000`' do
+    get '/search/database?query=0%000'
+    expect(response).to be_successful
+  end
+
   it 'returns three results' do
     get '/search/database?query=oxford music'
 
