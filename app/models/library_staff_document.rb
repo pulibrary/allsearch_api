@@ -83,8 +83,8 @@ class LibraryStaffDocument < Document
 
   def url
     staff_url = "https://library.psb-prod.princeton.edu/people/#{document.first_name}-#{document.last_name}"
-                  .gsub(' ', '-')
-                  .downcase
+                .gsub(' ', '-')
+                .downcase
     URI::Parser.new.escape(staff_url)
   end
 
