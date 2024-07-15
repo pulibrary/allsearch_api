@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Rails::HTML5::SafeListSanitizer do
+RSpec.describe Sanitizer do
   context 'with a custom scrubber' do
     let(:sanitizer) { described_class.new }
 
@@ -29,14 +29,14 @@ RSpec.describe Rails::HTML5::SafeListSanitizer do
 
     it 'does not remove allowed tags' do
       test_string = '<b><i>This is a test</i></b>'
-      expected = '<b><i>This is a test</i></b>'
+      expected = '<b> <i>This is a test</i></b>'
 
       expect(sanitizer.sanitize(test_string, scrubber: TextScrubber.new)).to eq(expected)
     end
 
     it 'removes header tags' do
       test_string = '<h1>This is a test</h1><h4>This is a smaller test</h4>'
-      expected = 'This is a testThis is a smaller test'
+      expected = 'This is a test This is a smaller test'
 
       expect(sanitizer.sanitize(test_string, scrubber: TextScrubber.new)).to eq(expected)
     end

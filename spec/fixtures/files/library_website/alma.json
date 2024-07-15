@@ -1,0 +1,48 @@
+{
+    "count": 3,
+    "content": [
+        {
+            "title": "East Asian Library",
+            "bundle": "lib_service_and_library",
+            "nid": "3351",
+            "changed_timestamp": 1720476263,
+            "body": "",
+            "summary": "",
+            "url": "https:\/\/library.psb-prod.princeton.edu\/services\/visit-and-spaces\/campus-locations\/east-asian-library",
+            "terms": {
+                "lib_service": [
+                    "East Asian Library"
+                ]
+            }
+        },
+        {
+            "title": "BorrowDirect+ and Guest Borrower Policies",
+            "bundle": "ps_basic_page",
+            "nid": "2971",
+            "changed_timestamp": 1718972738,
+            "body": "\u003Ch3\u003EBook Loans\u003C\/h3\u003E\u003Cp\u003EBorrowers may check out a maximum of 25 items.\u0026nbsp;Items are loaned for 4 weeks. Borrowers may not borrow DVDs, or items from reserve, from Interlibrary Loan or from Borrow Direct.\u0026nbsp;\u003C\/p\u003E\u003Ch3\u003ERenewals\u003C\/h3\u003E\u003Cp\u003EOnline renewal is available for most items, up to a maximum of one year, through Your Account.\u0026nbsp; Select \u201cLog in with Alma Account (affiliates)\u201d.\u0026nbsp; Once renewal limits have been reached, books must be returned to the shelves so that other patrons have an opportunity to use the material.\u0026nbsp;\u003C\/p\u003E\u003Ch3\u003ERecalls\u003C\/h3\u003E\u003Cp\u003EBooks must be returned to Princeton University Library.\u0026nbsp;If books are returned elsewhere, late fees will be in effect.\u003C\/p\u003E\u003Ch3\u003EFines\u003C\/h3\u003E\u003Cp\u003EFines of $0.25 per day will be applied to all books that are not returned or renewed by the due date.\u0026nbsp;Borrowing privileges will be suspended if the total in fines and fees is $20 or higher.\u0026nbsp;Fines may be paid at the Firestone Circulation Desk by credit card.\u003C\/p\u003E\u003Ch3\u003EBills for Replacement\u003C\/h3\u003E\u003Cp\u003EIf a book is long overdue or damaged, you will be billed a minimum replacement fee of $100.\u0026nbsp;The Library reserves the right to adjust the replacement fee upward if it does not cover the cost of the replacement. It may be possible to replace the lost item with a new book of the same edition and a $50 processing fee will be charged.\u003C\/p\u003E\u003Ch3\u003EElectronic Resources\u003C\/h3\u003E\u003Cp\u003EBorrowers may access Princeton University Library networked databases, e-books, and other digital collections at any library public workstation. Please note that these databases are not available to non-Princeton University users outside of the Library. Also, please note that even in the library, some databases are restricted by license to current Princeton University faculty, staff, and students only.\u003C\/p\u003E\u003Cp\u003EQuestions? Please contact Firestone Circulation at \u003Ca href=\u0022mailto:fstcirc@princeton.edu\u0022\u003Efstcirc@princeton.edu\u003C\/a\u003E.\u003C\/p\u003E",
+            "summary": "",
+            "url": "https:\/\/library.psb-prod.princeton.edu\/about\/policies\/borrowdirect-and-guest-borrower-policies",
+            "terms": {
+                "ps_basic_page_category": [
+                    "Policy"
+                ],
+                "ps_sitewide_category": []
+            }
+        },
+        {
+            "title": "East Asian Library - Old",
+            "bundle": "lib_service_and_library",
+            "nid": "461",
+            "changed_timestamp": 1719959309,
+            "body": "",
+            "summary": "",
+            "url": "https:\/\/library.psb-prod.princeton.edu\/services\/visit-and-spaces\/campus-locations\/east-asian-library-old",
+            "terms": {
+                "lib_service": [
+                    "East Asian Library"
+                ]
+            }
+        }
+    ]
+}
