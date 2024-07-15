@@ -14,8 +14,7 @@ class LibraryWebsiteDocument < Document
   end
 
   def description
-    sanitizer = Rails::HTML5::SafeListSanitizer.new
-    sanitizer.sanitize(document['body'], scrubber: TextScrubber.new)
+    sanitize document['body']
   end
 
   def type

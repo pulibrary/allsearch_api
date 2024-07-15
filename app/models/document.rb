@@ -20,6 +20,16 @@ class Document
 
   private
 
+  def sanitizer
+    @sanitizer ||= Rails::HTML5::SafeListSanitizer.new
+  end
+
+  def sanitize(text)
+    return text if text.blank?
+
+    sanitizer.sanitize(text, scrubber: TextScrubber.new)
+  end
+
   def other_fields
     doc_keys&.index_with { |key| send(key) }
             &.compact

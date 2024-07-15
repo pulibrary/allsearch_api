@@ -24,8 +24,7 @@ class LibguidesDocument < Document
   end
 
   def description
-    sanitizer = Rails::HTML5::SafeListSanitizer.new
-    sanitizer.sanitize(document['description'], scrubber: TextScrubber.new)
+    sanitize document['description']
   end
 
   def url
