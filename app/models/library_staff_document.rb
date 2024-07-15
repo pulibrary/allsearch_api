@@ -82,7 +82,10 @@ class LibraryStaffDocument < Document
   def description; end
 
   def url
-    "https://library.princeton.edu/staff/#{document.netid}"
+    staff_url = "https://library.psb-prod.princeton.edu/people/#{document.first_name}-#{document.last_name}"
+                .gsub(' ', '-')
+                .downcase
+    URI::Parser.new.escape(staff_url)
   end
 
   def doc_keys
