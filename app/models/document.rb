@@ -32,7 +32,7 @@ class Document
 
   def other_fields
     doc_keys&.index_with do |key|
-      next sanitize(send(key)) unless key == :resource_url
+      next sanitize(send(key)) unless key == :resource_url || key == :primary_image
 
       send key
     end&.compact
