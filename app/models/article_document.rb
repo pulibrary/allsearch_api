@@ -63,6 +63,6 @@ class ArticleDocument < Document
   end
 
   def publication_year
-    document.publication_date.year
+    document.publication_date.year.to_s
   end
 end

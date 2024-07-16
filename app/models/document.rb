@@ -31,9 +31,12 @@ class Document
   end
 
   def other_fields
-    doc_keys&.index_with { |key| send(key) }
-            &.compact
-            &.transform_values(&:to_s)
+    doc_keys&.index_with do |key|
+      next sanitize(send(key)) unless key == :resource_url
+
+      send key
+    end&.compact
+       &.transform_values(&:to_s)
   end
 
   attr_reader :document
