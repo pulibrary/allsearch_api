@@ -10,6 +10,7 @@ Requires:
 ## Getting started
 1. Clone the repository - `git clone git@github.com:pulibrary/allsearch_api.git`
 1. Go to the repository directory - `cd allsearch_api`
+1. Install the required ruby version - `asdf install`
 1. Install the required gems - `bundle install`
 1. Make sure you have wget installed - `brew install wget`
 1. Start local solr and postgres - `bundle exec rake servers:start`
