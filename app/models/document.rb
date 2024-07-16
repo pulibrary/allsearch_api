@@ -21,7 +21,7 @@ class Document
   private
 
   def sanitizer
-    @sanitizer ||= Rails::HTML5::SafeListSanitizer.new
+    @sanitizer ||= Sanitizer.new
   end
 
   def sanitize(text)

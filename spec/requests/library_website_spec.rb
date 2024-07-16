@@ -3,6 +3,27 @@
 require 'rails_helper'
 
 RSpec.describe 'GET /search/website' do
+  before do
+    stub_website(query: 'alma', fixture: 'library_website/alma.json')
+  end
+
+  it 'removes block-level HTML tags from the description field' do
+    get '/search/website?query=alma'
+
+    data = JSON.parse(response.body, symbolize_names: true)
+    expect(data[:records][1][:description]).to include('Book Loans Borrowers may check out a maximum of 25 items.')
+  end
+
+  it 'converts &nbsp; to just a space in the description field' do
+    get '/search/website?query=alma'
+
+    data = JSON.parse(response.body, symbolize_names: true)
+    expect(data[:records][1][:description]).to include(
+      'Borrowers may check out a maximum of 25 items. Items are loaned for 4 weeks.'
+    )
+    expect(data[:records][1][:description]).not_to include('&nbsp;')
+  end
+
   context 'when the upstream gives a 503 error' do
     before do
       url = 'https://library.psb-prod.princeton.edu/ps-library/search/results'
