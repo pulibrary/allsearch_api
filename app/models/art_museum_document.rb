@@ -61,4 +61,8 @@ class ArtMuseumDocument < Document
   def date
     document.dig(:_source, :displaydate)
   end
+
+  def do_not_sanitize_these_fields
+    super + [:primary_image]
+  end
 end

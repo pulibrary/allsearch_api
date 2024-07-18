@@ -10,7 +10,7 @@ RSpec.describe 'GET /search/staff' do
       number: 3,
       records: [
         title: 'Trout, Nimbus',
-        id: 00_0000_002,
+        id: '2',
         type: 'Library Staff',
         url: 'https://library.psb-prod.princeton.edu/people/nimbus-kilgore-trout',
         other_fields: {

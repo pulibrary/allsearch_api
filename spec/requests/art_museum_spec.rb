@@ -29,7 +29,7 @@ RSpec.describe 'GET /search/artmuseum' do
               credit_line: 'Bequest of Dan Fellows Platt, Class of 1895',
               medium: 'Graphite',
               dimensions: '25.1 × 26.2 cm. (9 7/8 × 10 5/16 in.)',
-              primary_image: 'https://puam-loris.aws.princeton.edu/loris/INV34694.jp2',
+              primary_image: 'https://puam-loris.aws.princeton.edu/loris/INV34694.jp2?a=b&c=d',
               object_number: 'x1948-1210',
               date: '1900'
             } }
