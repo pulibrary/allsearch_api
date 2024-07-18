@@ -40,5 +40,11 @@ RSpec.describe Sanitizer do
 
       expect(sanitizer.sanitize(test_string, scrubber: TextScrubber.new)).to eq(expected)
     end
+
+    it 'repeats the & character verbatim' do
+      test_string = 'Cataloging & Classification Quarterly'
+
+      expect(sanitizer.sanitize(test_string, scrubber: TextScrubber.new)).to eq(test_string)
+    end
   end
 end

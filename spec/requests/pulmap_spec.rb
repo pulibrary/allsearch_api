@@ -25,7 +25,7 @@ RSpec.describe 'GET /search/pulmap' do
         records: [
           { title: 'South America : wall-atlas',
             creator: 'Guyot, A. (Arnold), 1807-1884',
-            description: "\"Card series.\" Relief shown by hachures and form lines. \"Entered according to Act of Congress in the year 1865 by Charles Scribner &amp; Co. ...\" Inset: Profiles from west to east. Wall map. Scribner, Armstrong, &amp; Co. flourished ca. 1871-1879. cf. Tooley's dictionary of mapmakers.",
+            description: "\"Card series.\" Relief shown by hachures and form lines. \"Entered according to Act of Congress in the year 1865 by Charles Scribner & Co. ...\" Inset: Profiles from west to east. Wall map. Scribner, Armstrong, & Co. flourished ca. 1871-1879. cf. Tooley's dictionary of mapmakers.",
             publisher: 'New York : Published by Scribner, Armstrong & Co. ... [between 1871 and 1879].',
             id: 'princeton-6682x6396',
             type: 'TIFF',
