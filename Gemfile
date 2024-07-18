@@ -11,6 +11,8 @@ gem 'activesupport'
 gem 'bootsnap', require: false
 gem 'ddtrace', require: 'ddtrace/auto_instrument'
 gem 'dogstatsd-ruby'
+gem 'flipper-active_record'
+gem 'flipper-api', '~> 1.3'
 gem 'honeybadger'
 gem 'lograge'
 gem 'logstash-event'
