@@ -50,8 +50,8 @@ class LibraryStaffDocument < Document
     document.library_title
   end
 
-  def section
-    document.section
+  def team
+    document.team
   end
 
   def division
@@ -89,7 +89,7 @@ class LibraryStaffDocument < Document
   end
 
   def doc_keys
-    [:first_name, :middle_name, :last_name, :netid, :library_title, :phone, :email, :section, :division, :department,
+    [:first_name, :middle_name, :last_name, :netid, :library_title, :phone, :email, :team, :division, :department,
      :unit, :office, :building]
   end
 end

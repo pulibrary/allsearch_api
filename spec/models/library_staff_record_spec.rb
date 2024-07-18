@@ -30,5 +30,11 @@ RSpec.describe LibraryStaffRecord do
       expect(results[0].first_name).to eq('Nimbus Kilgore')
       expect(results[1].first_name).to eq('Spot Tiberius')
     end
+
+    it 'finds records by other entities' do
+      results = described_class.query('Center for Global')
+      expect(results.length).to eq(1)
+      expect(results[0].other_entities).to eq('MS Chadha Center for Global India')
+    end
   end
 end

@@ -12,7 +12,7 @@ class LibraryStaffLoadingService < CSVLoadingService
 
   def expected_headers
     %w[puid netid phone name lastName firstName email address building department division
-       unit team title areasOfStudy websiteUrl bios expertise mySchedulerLink]
+       unit team title areasOfStudy websiteUrl bios expertise mySchedulerLink otherEntities]
   end
 
   def uri
