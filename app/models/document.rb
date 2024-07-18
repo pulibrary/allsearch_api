@@ -12,7 +12,7 @@ class Document
   def to_h
     doc_hash = {}
     @doc_keys.each do |key|
-      val = send key
+      val = get_value key
       doc_hash[key] = val if val
     end
     doc_hash
