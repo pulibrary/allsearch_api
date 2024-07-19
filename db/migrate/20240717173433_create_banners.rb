@@ -4,7 +4,7 @@ class CreateBanners < ActiveRecord::Migration[7.1]
       t.text :text, default: ''
       t.boolean :display_banner, default: false
       t.integer :alert_status, default: 1
-      t.boolean :dismissable, default: true
+      t.boolean :dismissible, default: true
       t.boolean :autoclear, default: false
 
       t.timestamps

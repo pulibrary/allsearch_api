@@ -14,7 +14,7 @@ RSpec.describe 'GET /banner' do
 
   it 'has the expected keys' do
     expect(response.parsed_body.keys).to contain_exactly('text', 'display_banner', 'alert_status',
-                                                         'dismissable', 'autoclear')
+                                                         'dismissible', 'autoclear')
   end
 
   it 'has the expected default values' do

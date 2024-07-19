@@ -14,7 +14,7 @@ RSpec.describe Banner do
     expect(banner.text).to eq('')
     expect(banner.display_banner).to be(false)
     expect(banner.alert_status).to eq('info')
-    expect(banner.dismissable).to be(true)
+    expect(banner.dismissible).to be(true)
     expect(banner.autoclear).to be(false)
   end
 
@@ -22,7 +22,7 @@ RSpec.describe Banner do
     expect(banner.as_json).to be_an_instance_of(Hash)
     expect(banner.as_json(except: [:id, :created_at, :updated_at]).keys)
       .to contain_exactly('text', 'display_banner', 'alert_status',
-                          'dismissable', 'autoclear')
+                          'dismissible', 'autoclear')
   end
 
   it 'can be updated' do
@@ -51,13 +51,13 @@ RSpec.describe Banner do
 
   context 'when updated from the rake task' do
     context 'with four arguments' do
-      let(:args) { Rake::TaskArguments.new(%w[text alert_status dismissable autoclear], ['<a href="https://www.example.com">a is a sentence</a>', 'warning', 'false', 'true']) }
+      let(:args) { Rake::TaskArguments.new(%w[text alert_status dismissible autoclear], ['<a href="https://www.example.com">a is a sentence</a>', 'warning', 'false', 'true']) }
 
       it 'can be updated using a rake task' do
         banner.rake_update(args)
         expect(banner.reload.text).to eq('<a href="https://www.example.com">a is a sentence</a>')
         expect(banner.alert_status).to eq('warning')
-        expect(banner.dismissable).to be false
+        expect(banner.dismissible).to be false
         expect(banner.autoclear).to be true
       end
     end

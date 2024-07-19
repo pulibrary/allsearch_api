@@ -95,7 +95,7 @@ In order to update the banner at `/banner`, you can either update it on the rail
 Valid values for 'alert_status' are `info|success|warning|error`
 
 ### Run the rake task
-There is a rake task that can accept multiple arguments. The arguments are `[text, alert_status, dismissable, autoclear]`. The arguments are comma delimited, with no spaces. If there is an argument you want to skip, just leave it blank, but leave any commas that might surround it (similar to a csv file). Depending on your shell, you may need to escape the brackets surrounding the arguments.
+There is a rake task that can accept multiple arguments. The arguments are `[text, alert_status, dismissible, autoclear]`. The arguments are comma delimited, with no spaces. If there is an argument you want to skip, just leave it blank, but leave any commas that might surround it (similar to a csv file). Depending on your shell, you may need to escape the brackets surrounding the arguments.
 
 If there are any commas in your text, you will need to escape them using `\`
 

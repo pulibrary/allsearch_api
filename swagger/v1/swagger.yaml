@@ -226,7 +226,7 @@ paths:
                 text: ''
                 display_banner: false
                 alert_status: info
-                dismissable: true
+                dismissible: true
                 autoclear: false
   "/search/best-bet":
     parameters:

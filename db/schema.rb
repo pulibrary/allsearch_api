@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_17_173433) do
     t.text "text", default: ""
     t.boolean "display_banner", default: false
     t.integer "alert_status", default: 1
-    t.boolean "dismissable", default: true
+    t.boolean "dismissible", default: true
     t.boolean "autoclear", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
