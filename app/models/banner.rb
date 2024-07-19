@@ -9,6 +9,10 @@ class Banner < ApplicationRecord
     error: 4
   }
 
+  def display_banner
+    @display_banner = Flipper.enabled?(:banner)
+  end
+
   # args is an instance of Rake::TaskArguments
   def rake_update(args)
     update(args.to_h)

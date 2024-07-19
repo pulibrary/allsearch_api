@@ -112,3 +112,29 @@ bundle exec rake banner:update\['newer banner',,,false\]
 LONG_HTML="<h2>All-Search Updated</h2><p> Introducing our new and improved All-Search\, upgraded with advanced technology and designed based on your feedback to enhance your research experience. Share your experience and help us improve it further by completing this <a href='https://example.com'>brief survey</a></p>"
 bundle exec rake banner:update\[$LONG_HTML,'info',false,true\]
 ```
+
+## Set the banner to visible or not visible
+### Via the Flipper CLI
+Must be done on one of the servers
+```bash
+bundle exec flipper enable banner
+bundle exec flipper disable banner
+```
+
+### Via the Flipper API
+Can be done from anywhere
+
+The commands below are for the production host, but if you are on VPN you can also do this against allsearch-api-staging.
+
+- To see the current state of the banner flipper
+```bash
+curl http://allsearch-api/flipper/api/features/banner
+```
+- To enable the banner
+```bash
+curl -X POST http://allsearch-api/flipper/api/features/banner/boolean
+```
+- To disable the banner
+```bash
+curl -X DELETE http://allsearch-api/flipper/api/features/banner/boolean
+```

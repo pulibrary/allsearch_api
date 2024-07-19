@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   get '/search/pulmap', to: 'pulmap#show', defaults: { format: 'json' }
   get '/search/staff/', to: 'library_staff#show', defaults: { format: 'json' }
   get '/search/website', to: 'library_website#show', defaults: { format: 'json' }
+
+  mount Flipper::Api.app(Flipper) => '/flipper/api'
 end
