@@ -138,3 +138,11 @@ curl -X POST http://allsearch-api/flipper/api/features/banner/boolean
 ```bash
 curl -X DELETE http://allsearch-api/flipper/api/features/banner/boolean
 ```
+
+### Feature Flipper
+In order to create a new feature flipper for an environment:
+See [Flipper API documentation](https://www.flippercloud.io/docs/api#create-a-new-feature)
+
+```bash
+curl -X POST -d "name=banner" https://allsearch-api-staging.princeton.edu/flipper/api/features
+```
