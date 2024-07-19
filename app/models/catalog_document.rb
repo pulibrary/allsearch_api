@@ -66,4 +66,8 @@ class CatalogDocument < Document
       electronic_access_string.present? ? JSON.parse(electronic_access_string) : {}
     end
   end
+
+  def do_not_sanitize_these_fields
+    super + [:resource_url]
+  end
 end

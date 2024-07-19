@@ -12,7 +12,7 @@ class Document
   def to_h
     doc_hash = {}
     @doc_keys.each do |key|
-      val = send(key)
+      val = get_value key
       doc_hash[key] = val if val
     end
     doc_hash
@@ -31,9 +31,22 @@ class Document
   end
 
   def other_fields
-    doc_keys&.index_with { |key| send(key) }
+    doc_keys&.index_with { |key| get_value key }
             &.compact
             &.transform_values(&:to_s)
+  end
+
+  def get_value(key)
+    value = send key
+    sanitize_field?(key) ? sanitize(value) : value
+  end
+
+  def sanitize_field?(key)
+    do_not_sanitize_these_fields.exclude? key
+  end
+
+  def do_not_sanitize_these_fields
+    [:url, :other_fields]
   end
 
   attr_reader :document

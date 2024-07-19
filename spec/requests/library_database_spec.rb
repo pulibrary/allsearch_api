@@ -10,7 +10,7 @@ RSpec.describe 'GET /search/database' do
       number: 3,
       records: [
         title: 'Oxford Music Online',
-        id: 2_939_886,
+        id: '2939886',
         type: 'Database',
         description: 'Biographical articles for composers, performers, librettists, conductors and others. ' \
                      'Includes entries from Grove dictionaries of jazz and opera as well.',
@@ -57,7 +57,6 @@ RSpec.describe 'GET /search/database' do
   it 'matches the expected first record' do
     get '/search/database?query=oxford music'
     response_body = JSON.parse(response.body, symbolize_names: true)
-
     expect(response_body[:records][0].keys).to match_array(expected_record_keys)
     expected_record_keys.each do |key|
       expect(response_body[:records][0][key]).to match(expected_response[:records].first[key])

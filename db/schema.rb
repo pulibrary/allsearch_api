@@ -77,7 +77,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_17_173433) do
     t.string "title", null: false
     t.string "library_title", null: false
     t.string "email", null: false
-    t.string "section"
+    t.string "team"
     t.string "division"
     t.string "department"
     t.string "unit"
@@ -85,7 +85,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_17_173433) do
     t.string "building"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.virtual "searchable", type: :tsvector, as: "to_tsvector('english'::regconfig, (((((((((((((((((((((((COALESCE(title, ''::character varying))::text || ' '::text) || (COALESCE(first_name, ''::character varying))::text) || ' '::text) || (COALESCE(middle_name, ''::character varying))::text) || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(title, ''::character varying))::text) || ' '::text) || (COALESCE(email, ''::character varying))::text) || ' '::text) || (COALESCE(department, ''::character varying))::text) || ' '::text) || (COALESCE(office, ''::character varying))::text) || ' '::text) || (COALESCE(building, ''::character varying))::text) || ' '::text) || (COALESCE(section, ''::character varying))::text) || ' '::text) || (COALESCE(division, ''::character varying))::text) || ' '::text) || (COALESCE(unit, ''::character varying))::text))", stored: true
+    t.string "areas_of_study"
+    t.string "other_entities"
+    t.string "my_scheduler_link"
+    t.virtual "searchable", type: :tsvector, as: "to_tsvector('english'::regconfig, (((((((((((((((((((((((((((COALESCE(title, ''::character varying))::text || ' '::text) || (COALESCE(first_name, ''::character varying))::text) || ' '::text) || (COALESCE(middle_name, ''::character varying))::text) || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(title, ''::character varying))::text) || ' '::text) || (COALESCE(email, ''::character varying))::text) || ' '::text) || (COALESCE(department, ''::character varying))::text) || ' '::text) || (COALESCE(office, ''::character varying))::text) || ' '::text) || (COALESCE(building, ''::character varying))::text) || ' '::text) || (COALESCE(team, ''::character varying))::text) || ' '::text) || (COALESCE(division, ''::character varying))::text) || ' '::text) || (COALESCE(unit, ''::character varying))::text) || ' '::text) || (COALESCE(areas_of_study, ''::character varying))::text) || ' '::text) || (COALESCE(other_entities, ''::character varying))::text))", stored: true
     t.index ["searchable"], name: "staff_search_idx", using: :gin
   end
 

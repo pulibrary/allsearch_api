@@ -34,6 +34,9 @@ class LibraryStaffRecord < ApplicationRecord
     record.building = row[8]
     record.department = row[9]
     record.unit = row[11]
+    record.areas_of_study = row[14]&.gsub('//', ', ')
+    record.my_scheduler_link = row[18]
+    record.other_entities = row[19]&.gsub('//', ', ')
     record.library_title = title
     record.title = title
     record.save! if record.valid?
