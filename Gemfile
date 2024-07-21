@@ -11,6 +11,7 @@ gem 'activesupport'
 gem 'bootsnap', require: false
 gem 'ddtrace', require: 'ddtrace/auto_instrument'
 gem 'dogstatsd-ruby'
+gem 'health-monitor-rails'
 gem 'honeybadger'
 gem 'lograge'
 gem 'logstash-event'
