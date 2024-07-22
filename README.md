@@ -114,35 +114,16 @@ bundle exec rake banner:update\[$LONG_HTML,'info',false,true\]
 ```
 
 ## Set the banner to visible or not visible
+### Via Capistrano
+Can be run locally against a remote environment. Must be on VPN.
+```zsh
+bundle exec cap staging banner:enable
+bundle exec cap staging banner:disable
+```
+
 ### Via the Flipper CLI
-Must be done on one of the servers
+Must be done on the environment where you want to change it
 ```bash
 bundle exec flipper enable banner
 bundle exec flipper disable banner
-```
-
-### Via the Flipper API
-Can be done from anywhere
-
-The commands below are for the production host, but if you are on VPN you can also do this against allsearch-api-staging.
-
-- To see the current state of the banner flipper
-```bash
-curl http://allsearch-api/flipper/api/features/banner
-```
-- To enable the banner
-```bash
-curl -X POST http://allsearch-api/flipper/api/features/banner/boolean
-```
-- To disable the banner
-```bash
-curl -X DELETE http://allsearch-api/flipper/api/features/banner/boolean
-```
-
-### Feature Flipper
-In order to create a new feature flipper for an environment:
-See [Flipper API documentation](https://www.flippercloud.io/docs/api#create-a-new-feature)
-
-```bash
-curl -X POST -d "name=banner" https://allsearch-api-staging.princeton.edu/flipper/api/features
 ```
