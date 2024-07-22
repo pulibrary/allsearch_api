@@ -19,3 +19,6 @@ Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 require 'capistrano/honeybadger'
 
 require 'whenever/capistrano'
+
+# Needed for capistrano rake tasks
+require 'flipper'
