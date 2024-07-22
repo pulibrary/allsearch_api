@@ -110,7 +110,7 @@ bundle exec rake banner:update\['newer banner',,,false\]
 #### Setting long text in multiple steps
 ```zsh
 LONG_HTML="<h2>All-Search Updated</h2><p> Introducing our new and improved All-Search\, upgraded with advanced technology and designed based on your feedback to enhance your research experience. Share your experience and help us improve it further by completing this <a href='https://example.com'>brief survey</a></p>"
-bundle exec rake banner:update\[$LONG_HTML,'info',false,true\]
+bundle exec rake banner:update\["$LONG_HTML",'info',true,false\]
 ```
 
 ## Set the banner to visible or not visible
