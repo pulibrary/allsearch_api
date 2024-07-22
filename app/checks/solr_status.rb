@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
+# :reek:MissingSafeMethod { exclude: [ check! ] }
 class SolrStatus < HealthMonitor::Providers::Base
   def check!
+    Solr.status_uris.each do |status_uri|
+      check_solr_response(status_uri)
+    end
+    raise "The solr has an invalid status #{failed_solrs.join(', ')}" unless failed_solrs.empty?
+  end
+
+  def check_solr_response(status_uri)
     response = Net::HTTP.get_response(status_uri)
     json = JSON.parse(response.body)
-    raise "The solr has an invalid status #{status_uri}" if json['responseHeader']['status'] != 0
+    success = json['responseHeader']['status'].zero?
+    failed_solrs << status_uri unless success
   end
 
-  # We will want to be able to check both solr8 and solr9 cores
-  # Right now we're checking "whatever dpul's host is"
-  def solr_config
-    Rails.application.config_for(:allsearch)[:dpul][:solr]
-  end
-
-  def status_uri
-    URI::HTTP.build(host: solr_config[:host],
-                    port: solr_config[:port],
-                    path: '/solr/admin/cores',
-                    query: 'action=STATUS')
+  def failed_solrs
+    @failed_solrs ||= []
   end
 end
