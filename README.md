@@ -88,3 +88,42 @@ the swagger.yaml file meets the OpenAPI standard.
 brew install daveshanley/vacuum/vacuum
 vacuum lint -d swagger/**/*.yaml
 ```
+
+## Update the banner
+In order to update the banner at `/banner`, you can either update it on the rails console, or use a rake task.
+
+Valid values for 'alert_status' are `info|success|warning|error`
+
+### Run the rake task
+There is a rake task that can accept multiple arguments. The arguments are `[text, alert_status, dismissible, autoclear]`. The arguments are comma delimited, with no spaces. If there is an argument you want to skip, just leave it blank, but leave any commas that might surround it (similar to a csv file). Depending on your shell, you may need to escape the brackets surrounding the arguments.
+
+If there are any commas in your text, you will need to escape them using `\`
+
+#### Setting all four values:
+```zsh
+bundle exec rake banner:update\['new banner',info,true,true\]
+```
+#### Setting only text and autoclear
+```zsh
+bundle exec rake banner:update\['newer banner',,,false\]
+```
+#### Setting long text in multiple steps
+```zsh
+LONG_HTML="<h2>All-Search Updated</h2><p> Introducing our new and improved All-Search\, upgraded with advanced technology and designed based on your feedback to enhance your research experience. Share your experience and help us improve it further by completing this <a href='https://example.com'>brief survey</a></p>"
+bundle exec rake banner:update\[$LONG_HTML,'info',false,true\]
+```
+
+## Set the banner to visible or not visible
+### Via Capistrano
+Can be run locally against a remote environment. Must be on VPN.
+```zsh
+bundle exec cap staging banner:enable
+bundle exec cap staging banner:disable
+```
+
+### Via the Flipper CLI
+Must be done on the environment where you want to change it
+```bash
+bundle exec flipper enable banner
+bundle exec flipper disable banner
+```
