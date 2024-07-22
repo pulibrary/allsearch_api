@@ -7,5 +7,6 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
             %r{\Ahttps://[\w-]+\.princeton.edu\Z}
 
     resource '/search/*', headers: :any, methods: [:get, :head]
+    resource '/banner', headers: :any, methods: [:get, :head]
   end
 end
