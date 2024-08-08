@@ -127,3 +127,11 @@ Must be done on the environment where you want to change it
 bundle exec flipper enable banner
 bundle exec flipper disable banner
 ```
+
+## Use the permanent website url
+### Via the Flipper CLI
+Must be done on the environment where you want to change it
+```bash
+bundle exec flipper enable permanent_host # sets library host to library.princeton.edu
+bundle exec flipper disable permanent_host # sets library host to library.psb-prod.princeton.edu
+```

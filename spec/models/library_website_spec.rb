@@ -18,4 +18,24 @@ RSpec.describe LibraryWebsite do
     expect(website.documents).to be_an_instance_of(Array)
     expect(website.documents.size).to eq(3)
   end
+
+  context 'with the permanent url' do
+    before do
+      Flipper.enable(:permanent_host?)
+    end
+
+    it 'uses the permanent library website host' do
+      expect(described_class.library_website_host).to eq('library.princeton.edu')
+    end
+  end
+
+  context 'with the temporary url' do
+    before do
+      Flipper.disable(:permanent_host?)
+    end
+
+    it 'uses the permanent library website host' do
+      expect(described_class.library_website_host).to eq('library.psb-prod.princeton.edu')
+    end
+  end
 end

@@ -82,10 +82,8 @@ class LibraryStaffDocument < Document
   def description; end
 
   def url
-    staff_url = "https://library.psb-prod.princeton.edu/people/#{document.first_name}-#{document.last_name}"
-                .gsub(' ', '-')
-                .downcase
-    URI::Parser.new.escape(staff_url)
+    path = "/people/#{document.first_name}-#{document.last_name}".gsub(' ', '-').downcase
+    URI::HTTPS.build(host: LibraryWebsite.library_website_host, path:)
   end
 
   def doc_keys

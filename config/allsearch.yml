@@ -24,7 +24,8 @@ default: &default
     client_id: <%= ENV['LIBGUIDES_CLIENT_ID'] || 'ABC' %>
     client_secret: <%= ENV['LIBGUIDES_CLIENT_SECRET'] || '12345' %>
   library_website:
-    host: "library.psb-prod.princeton.edu"
+    temporary_host: "library.psb-prod.princeton.edu"
+    host: "library.princeton.edu"
     path: "/ps-library/search/results"
   pulmap:
     subdomain: maps
@@ -86,6 +87,7 @@ staging:
       port: 8983
       collection: <%= ENV['FINDINGAIDS_SOLR_COLLECTION'] || "pulfalight-staging" %>
   library_website:
+    temporary_host: "library.psb-test.princeton.edu"
     host: "library.psb-test.princeton.edu"
     path: "/ps-library/search/results"
 
