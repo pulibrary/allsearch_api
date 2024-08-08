@@ -46,7 +46,7 @@ module FixtureHelpers
   end
 
   def stub_website(query:, fixture:)
-    url = 'https://library.psb-prod.princeton.edu/ps-library/search/results'
+    url = URI::HTTPS.build(host: LibraryWebsite.library_website_host, path: '/ps-library/search/results')
     stub_request(:post, url)
       .with(body: { 'search' => query })
       .to_return(status: 200,

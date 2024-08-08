@@ -4,10 +4,12 @@ require 'swagger_helper'
 require 'rails_helper'
 
 RSpec.describe 'website' do
+  let(:url) do
+    URI::HTTPS.build(host: LibraryWebsite.library_website_host, path: '/ps-library/search/results')
+  end
+
   before do
     stub_website(query: 'firestone', fixture: 'library_website/firestone.json')
-
-    url = 'https://library.psb-prod.princeton.edu/ps-library/search/results'
     stub_request(:post, url)
       .with(body: { 'search' => '' })
       .to_return(status: 401)

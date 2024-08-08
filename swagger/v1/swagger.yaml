@@ -36,7 +36,7 @@ paths:
                     credit_line: Bequest of Dan Fellows Platt, Class of 1895
                     medium: Graphite
                     dimensions: 25.1 × 26.2 cm. (9 7/8 × 10 5/16 in.)
-                    primary_image: https://puam-loris.aws.princeton.edu/loris/INV34694.jp2
+                    primary_image: https://puam-loris.aws.princeton.edu/loris/INV34694.jp2?a=b&c=d
                     object_number: x1948-1210
                     date: '1900'
                 - title: Cats Tales
@@ -47,8 +47,9 @@ paths:
                   other_fields:
                     credit_line: Gift of the artist
                     medium: Gelatin silver print
-                    dimensions: "image: 19.8 x 28.1 cm (7 13/16 x 11 1/16 in.)\r\nsheet:
-                      27.5 x 33 cm (10 13/16 x 13 in.)"
+                    dimensions: |-
+                      image: 19.8 x 28.1 cm (7 13/16 x 11 1/16 in.)
+                      sheet: 27.5 x 33 cm (10 13/16 x 13 in.)
                     primary_image: https://puam-loris.aws.princeton.edu/loris/INV11648.jp2
                     object_number: 2001-158
                     date: '1994'
@@ -60,8 +61,8 @@ paths:
                   url: https://artmuseum.princeton.edu/collections/objects/40222
                   other_fields:
                     credit_line: Bequest of David L. Meginnity, Class of 1958
-                    medium: "Recto: Black ink and watercolor \r\nVerso: Black ink
-                      and watercolor"
+                    medium: "Recto: Black ink and watercolor \nVerso: Black ink and
+                      watercolor"
                     dimensions: 28 x 38 cm (11 x 14 15/16 in.)
                     primary_image: https://puam-loris.aws.princeton.edu/loris/PUAMSTU2018-1959213.jp2
                     object_number: 2001-120
@@ -728,9 +729,9 @@ paths:
                   type: TIFF
                   description: '"Card series." Relief shown by hachures and form lines.
                     "Entered according to Act of Congress in the year 1865 by Charles
-                    Scribner &amp; Co. ..." Inset: Profiles from west to east. Wall
-                    map. Scribner, Armstrong, &amp; Co. flourished ca. 1871-1879.
-                    cf. Tooley''s dictionary of mapmakers.'
+                    Scribner & Co. ..." Inset: Profiles from west to east. Wall map.
+                    Scribner, Armstrong, & Co. flourished ca. 1871-1879. cf. Tooley''s
+                    dictionary of mapmakers.'
                   url: https://maps.princeton.edu/catalog/princeton-6682x6396
                   other_fields:
                     rights: Public
@@ -743,9 +744,9 @@ paths:
                   type: TIFF
                   description: '"Card series." Relief shown by hachures and form lines.
                     "Entered according to Act of Congress in the year 1865 by Charles
-                    Scribner &amp; Co. ..." Insets: Profiles from north to south --
-                    Profiles from east to west. Wall map. Scribner, Armstrong, &amp;
-                    Co. flourished ca. 1871-1879. cf. Tooley''s dictionary of mapmakers.'
+                    Scribner & Co. ..." Insets: Profiles from north to south -- Profiles
+                    from east to west. Wall map. Scribner, Armstrong, & Co. flourished
+                    ca. 1871-1879. cf. Tooley''s dictionary of mapmakers.'
                   url: https://maps.princeton.edu/catalog/princeton-2b88qf00b
                   other_fields:
                     rights: Public

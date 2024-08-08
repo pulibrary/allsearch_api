@@ -10,6 +10,19 @@ class LibraryWebsite
     @website_config = Rails.application.config_for(:allsearch)[:library_website]
   end
 
+  def self.library_website_host
+    config = LibraryWebsite.website_config
+    if Flipper.enabled?(:permanent_host?)
+      config[:host]
+    else
+      config[:temporary_host]
+    end
+  end
+
+  def self.website_config
+    @website_config ||= Rails.application.config_for(:allsearch)[:library_website]
+  end
+
   def documents
     service_response['content'][0..2]
   end
@@ -31,11 +44,13 @@ class LibraryWebsite
   private
 
   def more_link
-    "https://#{@website_config[:host]}/search?keys=#{query_terms}"
+    URI::HTTPS.build(host: LibraryWebsite.library_website_host,
+                     path: '/search',
+                     query: "keys=#{query_terms}")
   end
 
   def uri
-    URI::HTTPS.build(host: @website_config[:host],
+    URI::HTTPS.build(host: LibraryWebsite.library_website_host,
                      path: @website_config[:path])
   end
 end
