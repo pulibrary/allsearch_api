@@ -23,7 +23,8 @@ RSpec.describe 'GET /search/staff' do
           office: 'A-200',
           phone: '(555) 111-1111',
           unit: 'IT Operations and Digitization',
-          netid: 'nimbuskt'
+          netid: 'nimbuskt',
+          pronouns: 'he/him'
         }
       ]
     }

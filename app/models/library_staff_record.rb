@@ -39,6 +39,7 @@ class LibraryStaffRecord < ApplicationRecord
     record.other_entities = row[19]&.gsub('//', ', ')
     record.library_title = title
     record.title = title
+    record.pronouns = row[20]
     record.save! if record.valid?
   end
   # rubocop:enable Metrics/AbcSize
