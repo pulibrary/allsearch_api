@@ -82,7 +82,7 @@ class LibraryStaffDocument < Document
   def description; end
 
   def url
-    path = "/people/#{document.first_name}-#{document.last_name}".gsub(' ', '-').downcase
+    path = "/about/staff-directory/#{document.first_name}-#{document.last_name}".gsub(' ', '-').downcase
     URI::HTTPS.build(host: LibraryWebsite.library_website_host, path:)
   end
 
