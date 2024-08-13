@@ -63,7 +63,7 @@ class CSVLoadingService
   # Expect certain headers
   def header_row_matches?
     new_headers = csv.readline
-    return true if new_headers == expected_headers
+    return true if (new_headers & expected_headers) == expected_headers
 
     Rails.logger.error("The #{self.class} did not load the CSV " \
                        "because the headers didn't match. The expected headers are: " \

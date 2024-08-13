@@ -52,6 +52,20 @@ RSpec.describe LibraryStaffLoadingService do
     end
   end
 
+  context 'when the file has extra headers' do
+    let(:libjobs_response) { file_fixture('library_staff/staff-directory_extra_headers.csv') }
+
+    it 'proceeds and logs an info' do
+      described_class.new.run
+      # Create a record that would typically be deleted as part of running
+      # this service, since it is not in the CSV data
+      LibraryStaffRecord.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
+                                title: 'Outside Specialist', library_title: 'Outside Specialist',
+                                email: 'outside@princeton.edu', department: 'None')
+      expect { described_class.new.run }.to(change(LibraryStaffRecord, :count))
+    end
+  end
+
   context 'when a staff member in postgres is no longer in the CSV' do
     it 'removes them from the database' do
       old_record = LibraryStaffRecord.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
