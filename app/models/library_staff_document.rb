@@ -82,8 +82,12 @@ class LibraryStaffDocument < Document
   def description; end
 
   def url
-    path = "/about/staff-directory/#{document.first_name}-#{document.last_name}".gsub(' ', '-').downcase
+    path = "/about/staff-directory/#{name_to_path}"
     URI::HTTPS.build(host: LibraryWebsite.library_website_host, path:)
+  end
+
+  def name_to_path
+    URI::DEFAULT_PARSER.escape("#{document.first_name}-#{document.last_name}".gsub(' ', '-').downcase)
   end
 
   def doc_keys

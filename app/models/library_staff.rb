@@ -12,7 +12,8 @@ class LibraryStaff
   end
 
   def library_staff_service_response
-    LibraryStaffRecord.query(query_terms)
+    unescaped_terms = URI::DEFAULT_PARSER.unescape(query_terms)
+    LibraryStaffRecord.query(unescaped_terms)
   end
 
   def number
