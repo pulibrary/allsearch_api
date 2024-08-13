@@ -681,7 +681,7 @@ paths:
               example:
                 number: 0
                 records: []
-                more: https://library.princeton.edu/staff/directory?search_api_views_fulltext=Lucy
+                more: https://library.princeton.edu/about/staff-directory?combine=Lucy
         '400':
           description: with a search query that only contains whitespace
           content:

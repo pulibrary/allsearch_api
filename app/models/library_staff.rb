@@ -20,8 +20,8 @@ class LibraryStaff
   end
 
   def more_link
-    URI::HTTPS.build(host: 'library.princeton.edu', path: '/staff/directory',
-                     query: "search_api_views_fulltext=#{query_terms}")
+    URI::HTTPS.build(host: 'library.princeton.edu', path: '/about/staff-directory',
+                     query: "combine=#{query_terms}")
   end
 
   def documents
