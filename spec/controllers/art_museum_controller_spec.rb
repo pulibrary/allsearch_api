@@ -1,17 +1,15 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require_relative '../support/service_controller_shared_examples'
 
 RSpec.describe ArtMuseumController do
-  it 'sanitizes input' do
+  before do
     stub_art_museum(query: 'bad bin bash script', fixture: 'art_museum/cats.json')
-    get :show, params: { query: '{bad#!/bin/bash<script>}' }
-    expect(controller.query.query_terms).to eq('bad bin bash script')
+    stub_art_museum(query: 'war and peace', fixture: 'art_museum/cats.json')
+    stub_art_museum(query: '读', fixture: 'art_museum/cats.json')
+    stub_art_museum(query: '%25', fixture: 'art_museum/cats.json')
   end
 
-  it 'removes redundant space from query' do
-    stub_art_museum(query: 'war and peace', fixture: 'art_museum/cats.json')
-    get :show, params: { query: "war   and\tpeace" }
-    expect(controller.query.query_terms).to eq('war and peace')
-  end
+  it_behaves_like 'a service controller'
 end
