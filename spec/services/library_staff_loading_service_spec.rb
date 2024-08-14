@@ -31,7 +31,7 @@ RSpec.describe LibraryStaffLoadingService do
     expect(LibraryStaffRecord.third.department).to eq('My Department')
     expect(LibraryStaffRecord.third.office).to eq('B-300')
     expect(LibraryStaffRecord.third.building).to eq('Firestone Library')
-    expect(LibraryStaffRecord.fourth.first_name).to eq('Brutus The')
+    expect(LibraryStaffRecord.fourth.first_name).to eq('Brutus Ét tu')
     expect(LibraryStaffRecord.fourth.pronouns).to be_nil
   end
 
