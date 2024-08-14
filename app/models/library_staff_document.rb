@@ -74,6 +74,10 @@ class LibraryStaffDocument < Document
     document.building
   end
 
+  def pronouns
+    document.pronouns
+  end
+
   def type
     'Library Staff'
   end
@@ -92,6 +96,6 @@ class LibraryStaffDocument < Document
 
   def doc_keys
     [:first_name, :middle_name, :last_name, :netid, :library_title, :phone, :email, :team, :division, :department,
-     :unit, :office, :building]
+     :unit, :office, :building, :pronouns]
   end
 end

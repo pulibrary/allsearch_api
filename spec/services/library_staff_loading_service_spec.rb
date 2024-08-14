@@ -18,6 +18,7 @@ RSpec.describe LibraryStaffLoadingService do
     expect(LibraryStaffRecord.third.name).to eq('Adams, Tiberius')
     expect(LibraryStaffRecord.third.last_name).to eq('Adams')
     expect(LibraryStaffRecord.third.first_name).to eq('Spot Tiberius')
+    expect(LibraryStaffRecord.third.pronouns).to eq('they/them')
 
     # The CSV we get from airtable via lib_jobs does not contain middle names as a
     # separate field, they are concatenated into the first_name.  So nil values in
@@ -31,6 +32,7 @@ RSpec.describe LibraryStaffLoadingService do
     expect(LibraryStaffRecord.third.office).to eq('B-300')
     expect(LibraryStaffRecord.third.building).to eq('Firestone Library')
     expect(LibraryStaffRecord.fourth.first_name).to eq('Brutus Ét tu')
+    expect(LibraryStaffRecord.fourth.pronouns).to be_nil
   end
 
   it 'is idempotent' do
