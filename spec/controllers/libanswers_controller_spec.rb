@@ -4,10 +4,12 @@ require 'rails_helper'
 # This controller behaves differently from the other ServiceControllers, so not including shared examples
 RSpec.describe LibanswersController do
   before do
-    stub_libanswers(query: 'bad+bin+bash+script', fixture: 'libanswers/printer.json')
-    stub_libanswers(query: 'war+and+peace', fixture: 'libanswers/printer.json')
-    stub_libanswers(query: '%2525', fixture: 'libanswers/printer.json')
-    stub_libanswers(query: '读', fixture: 'libanswers/printer.json')
+    stub_request(:post, 'https://faq.library.princeton.edu/api/1.1/oauth/token')
+      .with(body: 'client_id=ABC&client_secret=12345&grant_type=client_credentials')
+      .to_return(status: 200, body: file_fixture('libanswers/oauth_token.json'))
+    stub_request(:get, %r{https://faq.library.princeton.edu/api/1.1/search})
+      .with(headers: { 'Authorization' => 'Bearer abcdef1234567890abcdef1234567890abcdef12' })
+      .to_return(status: 200, body: file_fixture('libanswers/printer.json'))
   end
 
   it 'sanitizes input' do

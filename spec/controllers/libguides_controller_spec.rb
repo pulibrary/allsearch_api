@@ -5,10 +5,12 @@ require_relative '../support/service_controller_shared_examples'
 
 RSpec.describe LibguidesController do
   before do
-    stub_libguides(query: 'bad%20bin%20bash%20script', fixture: 'libguides/asian_american_studies.json')
-    stub_libguides(query: 'war and peace', fixture: 'libguides/asian_american_studies.json')
-    stub_libguides(query: '%2525', fixture: 'libguides/asian_american_studies.json')
-    stub_libguides(query: '读', fixture: 'libguides/asian_american_studies.json')
+    stub_request(:post, 'https://lgapi-us.libapps.com/1.2/oauth/token')
+      .with(body: 'client_id=ABC&client_secret=12345&grant_type=client_credentials')
+      .to_return(status: 200, body: file_fixture('libanswers/oauth_token.json'))
+    stub_request(:get, %r{https://lgapi-us.libapps.com/1.2/guides})
+      .with(headers: { 'Authorization' => 'Bearer abcdef1234567890abcdef1234567890abcdef12' })
+      .to_return(status: 200, body: file_fixture('libguides/asian_american_studies.json'))
   end
 
   it_behaves_like 'a service controller'
