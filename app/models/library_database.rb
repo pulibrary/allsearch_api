@@ -12,7 +12,17 @@ class LibraryDatabase
   end
 
   def library_database_service_response
-    LibraryDatabaseRecord.query(query_terms)
+    LibraryDatabaseRecord.query(unescaped_terms)
+  end
+
+  def unescaped_terms
+    @unescaped_terms ||= URI::DEFAULT_PARSER.unescape(query_terms)
+  end
+
+  # The libguides search does not treat accented characters consistently
+  # Always use the unaccented version for the "more_link"
+  def transliterated_escaped_terms
+    URI::DEFAULT_PARSER.escape(I18n.transliterate(unescaped_terms))
   end
 
   def number
@@ -21,7 +31,7 @@ class LibraryDatabase
 
   def more_link
     URI::HTTPS.build(host: 'libguides.princeton.edu', path: '/az.php',
-                     query: "q=#{query_terms}")
+                     query: "q=#{transliterated_escaped_terms}")
   end
 
   def documents
