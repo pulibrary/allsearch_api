@@ -2,6 +2,7 @@
 
 require 'rails_helper'
 
+# rubocop:disable RSpec/MultipleMemoizedHelpers
 RSpec.describe BestBetRecord do
   let(:title) { 'Digital Sanborn Maps' }
   let(:description) { 'My somewhat wordy descriptions' }
@@ -27,9 +28,26 @@ RSpec.describe BestBetRecord do
       doc1 = described_class.create(title:, url:, search_terms: ['new york times'])
       expect(described_class.query('New York Times')).to contain_exactly(doc1)
     end
+
+    context 'when searching for terms with diacritics' do
+      # Title uses precomposed version of accent
+      let(:title) { 'Année Philologique' }
+      let(:precomposed) { "l'Année" }
+      let(:unaccented) { "l'Annee" }
+      let(:decomposed) { "l'Année" }
+      let(:search_terms) { ['annee philologique', "l'annee", "l'annee philologique"] }
+
+      it 'can find the record regardless of diacritics' do
+        pending('Fixing diacritics search')
+        # These searches also seem to behave differently depending on if they have the "l'" or not
+        doc1 = described_class.create!(title:, url:, search_terms:)
+        expect(described_class.query(unaccented)).to contain_exactly(doc1) # found
+        expect(described_class.query(precomposed)).to contain_exactly(doc1)
+        expect(described_class.query(decomposed)).to contain_exactly(doc1)
+      end
+    end
   end
 
-  # rubocop:disable RSpec/MultipleMemoizedHelpers
   describe '#new_from_csv' do
     let(:row) { [title, description, url, search_terms, last_update] }
     let(:record) { described_class.new_from_csv(row) }
