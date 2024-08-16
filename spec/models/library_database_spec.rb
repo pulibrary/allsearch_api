@@ -11,8 +11,8 @@ RSpec.describe LibraryDatabase do
   end
 
   context 'with accents in in the query terms' do
+    # URL escaped version of Kōbunsō Taika Koshomoku
     let(:query_terms) { 'K%C5%8Dbuns%C5%8D%20Taika%20Koshomoku' }
-    # let(:query_terms) { 'Kōbunsō Taika Koshomoku' }
 
     let(:libjobs_response) { file_fixture('libjobs/library-databases.csv') }
 

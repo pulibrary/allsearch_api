@@ -103,13 +103,6 @@ RSpec.describe LibraryDatabaseRecord do
         let(:no_accents) { 'Kobunso Taika Koshomoku' }
         let(:decomposed) { 'Kōbunsō Taika Koshomoku' }
 
-        # it 'finds the title regardless of composition' do
-        #   [precomposed, no_accents, decomposed].each do |term|
-        #     result = described_class.query(term)
-        #     expect(result.size).to eq(1)
-        #   end
-        # end
-
         it 'finds the title regardless of composition' do
           result1 = described_class.query(precomposed)
           expect(result1.size).to eq(1)
