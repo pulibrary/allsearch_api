@@ -30,5 +30,13 @@ RSpec.describe LibraryDatabase do
     it 'builds a working more_link' do
       expect(db_service.more_link.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
     end
+
+    context 'when the diacritics are decomposed into two separate characters' do
+      let(:query_terms) { 'Ko%CC%84bunso%CC%84%20Taika%20Koshomoku' }
+
+      it 'builds a working more_link' do
+        expect(db_service.more_link.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
+      end
+    end
   end
 end
