@@ -30,7 +30,7 @@ class LibraryDatabase
   end
 
   def more_link
-    URI::HTTPS.build(host: 'libguides.princeton.edu', path: '/az.php',
+    URI::HTTPS.build(host: 'libguides.princeton.edu', path: '/az/databases',
                      query: "q=#{transliterated_escaped_terms}")
   end
 

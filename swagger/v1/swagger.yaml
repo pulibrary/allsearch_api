@@ -651,7 +651,7 @@ paths:
               example:
                 number: 0
                 records: []
-                more: https://libguides.princeton.edu/az.php?q=oxford%20music
+                more: https://libguides.princeton.edu/az/databases?q=oxford%20music
         '400':
           description: with a search query that only contains whitespace
           content:

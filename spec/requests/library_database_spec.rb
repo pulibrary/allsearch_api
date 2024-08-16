@@ -89,7 +89,7 @@ RSpec.describe 'GET /search/database' do
     get '/search/database?query=oxford music'
 
     response_body = JSON.parse(response.body, symbolize_names: true)
-    # The order from Libguides search https://libguides.princeton.edu/az.php?q=oxford%20music
+    # The order from Libguides search https://libguides.princeton.edu/az/databases?q=oxford%20music
     expect(response_body[:records][0][:title]).to eq('Oxford Scholarship Online:  Music')
     expect(response_body[:records][1][:title]).to eq('Oxford Bibliographies: Music')
     expect(response_body[:records][2][:title]).to eq('Oxford Music Online')
