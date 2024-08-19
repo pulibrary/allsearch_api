@@ -22,10 +22,7 @@ class LibraryDatabase
   # The libguides search does not treat accented characters consistently
   # Always use the unaccented version for the "more_link"
   def transliterated_escaped_terms
-    diacritic_combining_characters = [*0x1DC0..0x1DFF, *0x0300..0x036F, *0xFE20..0xFE2F].pack('U*')
-    decomposed_version = unescaped_terms.unicode_normalize(:nfd)
-    decomposed_without_combining_characters = decomposed_version.tr(diacritic_combining_characters, '')
-    URI::DEFAULT_PARSER.escape(decomposed_without_combining_characters)
+    URI::DEFAULT_PARSER.escape(Normalizer.new(unescaped_terms).without_diacritics)
   end
 
   def number

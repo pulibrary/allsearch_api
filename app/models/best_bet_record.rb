@@ -4,13 +4,13 @@
 # metadata from the best_bet_record table in the database
 class BestBetRecord < ApplicationRecord
   validates :title, :url, :search_terms, presence: true
-  scope :query, ->(search_term) { where('? ILIKE ANY(search_terms)', search_term) }
+  scope :query, ->(search_term) { where('unaccent(?) ILIKE ANY(search_terms)', search_term) }
   def self.new_from_csv(row)
     BestBetRecord.create!(
       title: row[0],
       description: row[1],
       url: row[2],
-      search_terms: row[3]&.split(', '),
+      search_terms: row[3]&.split(', ')&.map { |term| Normalizer.new(term).without_diacritics },
       last_update: last_update(row)
     )
   rescue ActiveRecord::RecordInvalid => error
