@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_15_164656) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_19_150118) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "unaccent"
@@ -63,7 +63,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_15_164656) do
     t.string "subjects_concat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.virtual "searchable", type: :tsvector, as: "(((setweight(to_tsvector('english'::regconfig, (COALESCE(name, ''::character varying))::text), 'A'::\"char\") || setweight(to_tsvector('english'::regconfig, (COALESCE(alt_names_concat, ''::character varying))::text), 'B'::\"char\")) || setweight(to_tsvector('english'::regconfig, (COALESCE(description, ''::character varying))::text), 'C'::\"char\")) || setweight(to_tsvector('english'::regconfig, (COALESCE(subjects_concat, ''::character varying))::text), 'D'::\"char\"))", stored: true
+    t.virtual "searchable", type: :tsvector, as: "(((setweight(to_tsvector('unaccented_dict'::regconfig, (COALESCE(name, ''::character varying))::text), 'A'::\"char\") || setweight(to_tsvector('unaccented_dict'::regconfig, (COALESCE(alt_names_concat, ''::character varying))::text), 'B'::\"char\")) || setweight(to_tsvector('unaccented_dict'::regconfig, (COALESCE(description, ''::character varying))::text), 'C'::\"char\")) || setweight(to_tsvector('unaccented_dict'::regconfig, (COALESCE(subjects_concat, ''::character varying))::text), 'D'::\"char\"))", stored: true
     t.index ["searchable"], name: "searchable_idx", using: :gin
   end
 
