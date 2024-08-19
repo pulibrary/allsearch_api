@@ -17,6 +17,6 @@ RSpec.describe LibraryStaffDocument do
 
   it 'can escape names with accents' do
     expect { staff_document.send(:name_to_path) }.not_to raise_error
-    expect(staff_document.send(:name_to_path)).to eq('brutus-%C3%A9t-tu-cat')
+    expect(staff_document.send(:name_to_path)).to eq('esm%C3%A9-cat')
   end
 end

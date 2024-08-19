@@ -36,5 +36,20 @@ RSpec.describe LibraryStaffRecord do
       expect(results.length).to eq(1)
       expect(results[0].other_entities).to eq('MS Chadha Center for Global India')
     end
+
+    context 'when using differently composed characters' do
+      let(:precomposed) { 'Esmé' }
+      let(:no_accents) { 'Esme' }
+      let(:decomposed) { 'Esmé' }
+
+      it 'finds the title regardless of composition' do
+        result1 = described_class.query(precomposed)
+        expect(result1.size).to eq(1)
+        result2 = described_class.query(no_accents)
+        expect(result2.size).to eq(1)
+        result3 = described_class.query(decomposed)
+        expect(result3.size).to eq(1)
+      end
+    end
   end
 end

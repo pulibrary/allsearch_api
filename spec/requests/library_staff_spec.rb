@@ -69,7 +69,7 @@ RSpec.describe 'GET /search/staff' do
 
   context 'with an accent in the name' do
     it 'does not raise an error' do
-      get '/search/staff?query=%C3%89t+tu'
+      get '/search/staff?query=Esm%C3%A9'
 
       expect(response).to be_successful
       response_body = JSON.parse(response.body, symbolize_names: true)

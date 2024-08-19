@@ -11,19 +11,39 @@ RSpec.describe LibraryStaff do
   end
 
   context 'with accents in in the query terms' do
-    let(:query_terms) { '%C3%89t+tu' }
+    context 'with precomposed accents' do
+      let(:query_terms) { 'Esmé' }
 
-    before do
-      stub_request(:get, 'https://lib-jobs.princeton.edu/pul-staff-report.csv')
-        .to_return(status: 200,
-                   body: file_fixture('library_staff/staff-directory.csv'))
+      before do
+        stub_request(:get, 'https://lib-jobs.princeton.edu/pul-staff-report.csv')
+          .to_return(status: 200,
+                     body: file_fixture('library_staff/staff-directory.csv'))
 
-      LibraryStaffLoadingService.new.run
+        LibraryStaffLoadingService.new.run
+      end
+
+      it 'can search for queries as passed by the controller' do
+        expect(staff_service.library_staff_service_response).not_to be_empty
+        expect(staff_service.library_staff_service_response.first.first_name).to eq('Esmé')
+      end
     end
 
-    it 'can search for queries as passed by the controller' do
-      expect(staff_service.library_staff_service_response).not_to be_empty
-      expect(staff_service.library_staff_service_response.first.first_name).to eq('Brutus Ét tu')
+    context 'with decomposed accents' do
+      let(:query_terms) { 'Esmé' }
+
+      before do
+        stub_request(:get, 'https://lib-jobs.princeton.edu/pul-staff-report.csv')
+          .to_return(status: 200,
+                     body: file_fixture('library_staff/staff-directory.csv'))
+
+        LibraryStaffLoadingService.new.run
+      end
+
+      it 'can search for queries as passed by the controller' do
+        pending('Fixing search for decomposed accents')
+        expect(staff_service.library_staff_service_response).not_to be_empty
+        expect(staff_service.library_staff_service_response.first.first_name).to eq('Esmé')
+      end
     end
   end
 end

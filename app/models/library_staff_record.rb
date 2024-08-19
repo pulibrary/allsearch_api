@@ -9,6 +9,7 @@ class LibraryStaffRecord < ApplicationRecord
   # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
   pg_search_scope :query,
                   against: 'searchable',
+                  ignoring: :accents,
                   using: {
                     tsearch: {
                       dictionary: 'english',
