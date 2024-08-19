@@ -38,7 +38,6 @@ RSpec.describe BestBetRecord do
       let(:search_terms) { ['annee philologique', "l'annee", "l'annee philologique"] }
 
       it 'can find the record regardless of diacritics' do
-        pending('Fixing diacritics search')
         # These searches also seem to behave differently depending on if they have the "l'" or not
         doc1 = described_class.create!(title:, url:, search_terms:)
         expect(described_class.query(unaccented)).to contain_exactly(doc1) # found
@@ -101,6 +100,22 @@ RSpec.describe BestBetRecord do
         expect(record).to be_nil
         expect(Rails.logger).to have_received(:error).with("Could not create new BestBet for row #{row}: " \
                                                            "Validation failed: Search terms can't be blank")
+      end
+    end
+
+    context 'when search terms contain precomposed diacritics' do
+      let(:search_terms) { "l'Année" }
+
+      it 'normalizes the terms to not contain diacritics' do
+        expect(record.search_terms).to contain_exactly("l'Annee")
+      end
+    end
+
+    context 'when search terms contain decomposed diacritics' do
+      let(:search_terms) { "l'Année" }
+
+      it 'normalizes the terms to not contain diacritics' do
+        expect(record.search_terms).to contain_exactly("l'Annee")
       end
     end
 
