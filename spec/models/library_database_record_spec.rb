@@ -1,8 +1,29 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require_relative '../support/database_models_shared_examples'
 
 RSpec.describe LibraryDatabaseRecord do
+  context 'with shared examples' do
+    let!(:database_record) do
+      described_class.new_from_csv(
+        ['2939016', 'Chosŏn Wangjo Sillok  = The Annals of the Joseon dynasty',
+         'Free database of the annual record of the Joseon Dynasty of Korea. ' \
+         'Available in the Hangul scripts as well as the original classical Chinese texts.',
+         '', 'http://sillok.history.go.kr', 'https://libguides.princeton.edu/resource/4673', 'Korean Studies']
+      )
+    end
+    let(:unaccented) { 'Choson Wangjo Sillok' }
+    let(:precomposed) { 'Chosŏn wangjo sillok' }
+    let(:decomposed) { 'Chosŏn wangjo sillok' }
+
+    before do
+      database_record
+    end
+
+    it_behaves_like('a database service')
+  end
+
   describe '::new_from_csv' do
     it 'generates a new database record from the CSV row' do
       csv_data = ['123', 'Academic Search', 'A very good database',

@@ -24,5 +24,6 @@ class LibraryDatabaseRecord < ApplicationRecord
     record.alt_names = record.alt_names_concat&.split('; ')
     record.subjects = record.subjects_concat&.split(';')
     record.save
+    record
   end
 end
