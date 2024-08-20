@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require_relative '../support/database_models_shared_examples'
 
 RSpec.describe LibraryStaffRecord do
   before do
@@ -9,6 +10,43 @@ RSpec.describe LibraryStaffRecord do
                  body: file_fixture('library_staff/staff-directory.csv'))
 
     LibraryStaffLoadingService.new.run
+  end
+
+  context 'with shared examples' do
+    let(:unaccented) { 'Esme' }
+    let(:precomposed) { 'Esmé' }
+    let(:decomposed) { 'Esmé' }
+    let(:database_record) do
+      described_class.new_from_csv(
+        [
+          '000000010', 'brutus', '(555) 222-2222', 'Cat, Brutus', 'Cat', 'Brutus Esmé',
+          'brutus@princeton.edu', 'B-300', 'Stokes Library', 'My Department',
+          'Library - Collections and Access Services',
+          'PCRP - Physical Collections Receipt & Processing Unit', nil, 'Fluffiest cat',
+          nil, nil, nil, nil, nil, nil, nil
+        ]
+      )
+    end
+
+    before do
+      database_record
+    end
+
+    it_behaves_like('a database service')
+
+    describe 'name_query scope' do
+      it 'can find the record with an unaccented query term' do
+        expect(described_class.name_query(unaccented)).to contain_exactly(database_record)
+      end
+    
+      it 'can find the record with a precomposed query term' do
+        expect(described_class.name_query(precomposed)).to contain_exactly(database_record)
+      end
+    
+      it 'can find the record with a decomposed query term' do
+        expect(described_class.name_query(decomposed)).to contain_exactly(database_record)
+      end
+    end
   end
 
   describe 'query locates relevant records' do

@@ -7,15 +7,28 @@ class LibraryStaffRecord < ApplicationRecord
   include PgSearch::Model
 
   # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
-  pg_search_scope :query,
+  pg_search_scope :name_query,
+                  against: 'name_searchable',
+                  using: {
+                    tsearch: {
+                      dictionary: 'unaccented_simple_dict',
+                      tsvector_column: 'name_searchable'
+                    }
+                  }
+
+  pg_search_scope :other_metadata_query,
                   against: 'searchable',
                   using: {
                     tsearch: {
-                      dictionary: 'english',
+                      dictionary: 'unaccented_dict',
                       tsvector_column: 'searchable'
                     }
                   }
 
+  def self.query(query)
+    self.name_query(query) + self.other_metadata_query(query)
+  end
+                
   # :reek:TooManyStatements
   # rubocop:disable Metrics/AbcSize
   # rubocop:disable Metrics/MethodLength
@@ -40,7 +53,9 @@ class LibraryStaffRecord < ApplicationRecord
     record.library_title = title
     record.title = title
     record.pronouns = row[20]
-    record.save! if record.valid?
+    valid = record.valid?
+    record.save! if valid
+    record if valid
   end
   # rubocop:enable Metrics/AbcSize
   # rubocop:enable Metrics/MethodLength

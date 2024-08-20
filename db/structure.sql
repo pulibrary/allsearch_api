@@ -88,6 +88,71 @@ ALTER TEXT SEARCH CONFIGURATION public.unaccented_dict
     ADD MAPPING FOR uint WITH simple;
 
 
+--
+-- Name: unaccented_simple_dict; Type: TEXT SEARCH CONFIGURATION; Schema: public; Owner: -
+--
+
+CREATE TEXT SEARCH CONFIGURATION public.unaccented_simple_dict (
+    PARSER = pg_catalog."default" );
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR asciiword WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR word WITH public.unaccent, simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR numword WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR email WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR url WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR host WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR sfloat WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR version WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR hword_numpart WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR hword_part WITH public.unaccent, simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR hword_asciipart WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR numhword WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR asciihword WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR hword WITH public.unaccent, simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR url_path WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR file WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR "float" WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR "int" WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION public.unaccented_simple_dict
+    ADD MAPPING FOR uint WITH simple;
+
+
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
@@ -305,8 +370,9 @@ CREATE TABLE public.library_staff_records (
     areas_of_study character varying,
     other_entities character varying,
     my_scheduler_link character varying,
-    searchable tsvector GENERATED ALWAYS AS (to_tsvector('english'::regconfig, (((((((((((((((((((((((((((COALESCE(title, ''::character varying))::text || ' '::text) || (COALESCE(first_name, ''::character varying))::text) || ' '::text) || (COALESCE(middle_name, ''::character varying))::text) || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(title, ''::character varying))::text) || ' '::text) || (COALESCE(email, ''::character varying))::text) || ' '::text) || (COALESCE(department, ''::character varying))::text) || ' '::text) || (COALESCE(office, ''::character varying))::text) || ' '::text) || (COALESCE(building, ''::character varying))::text) || ' '::text) || (COALESCE(team, ''::character varying))::text) || ' '::text) || (COALESCE(division, ''::character varying))::text) || ' '::text) || (COALESCE(unit, ''::character varying))::text) || ' '::text) || (COALESCE(areas_of_study, ''::character varying))::text) || ' '::text) || (COALESCE(other_entities, ''::character varying))::text))) STORED,
-    pronouns character varying
+    pronouns character varying,
+    name_searchable tsvector GENERATED ALWAYS AS (to_tsvector('public.unaccented_simple_dict'::regconfig, (((((((COALESCE(name, ''::character varying))::text || ' '::text) || (COALESCE(first_name, ''::character varying))::text) || ' '::text) || (COALESCE(middle_name, ''::character varying))::text) || ' '::text) || (COALESCE(last_name, ''::character varying))::text))) STORED,
+    searchable tsvector GENERATED ALWAYS AS (to_tsvector('public.unaccented_dict'::regconfig, (((((((((((((((((((COALESCE(title, ''::character varying))::text || ' '::text) || (COALESCE(email, ''::character varying))::text) || ' '::text) || (COALESCE(department, ''::character varying))::text) || ' '::text) || (COALESCE(office, ''::character varying))::text) || ' '::text) || (COALESCE(building, ''::character varying))::text) || ' '::text) || (COALESCE(team, ''::character varying))::text) || ' '::text) || (COALESCE(division, ''::character varying))::text) || ' '::text) || (COALESCE(unit, ''::character varying))::text) || ' '::text) || (COALESCE(areas_of_study, ''::character varying))::text) || ' '::text) || (COALESCE(other_entities, ''::character varying))::text))) STORED
 );
 
 
@@ -529,6 +595,13 @@ CREATE INDEX searchable_idx ON public.library_database_records USING gin (search
 
 
 --
+-- Name: staff_name_search_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX staff_name_search_idx ON public.library_staff_records USING gin (name_searchable);
+
+
+--
 -- Name: staff_search_idx; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -542,6 +615,8 @@ CREATE INDEX staff_search_idx ON public.library_staff_records USING gin (searcha
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20240820185228'),
+('20240820184147'),
 ('20240819150118'),
 ('20240819142401'),
 ('20240815164656'),
