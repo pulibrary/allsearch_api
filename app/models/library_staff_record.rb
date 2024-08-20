@@ -9,6 +9,7 @@ class LibraryStaffRecord < ApplicationRecord
   # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
   pg_search_scope :query,
                   against: 'searchable',
+                  ignoring: :accents,
                   using: {
                     tsearch: {
                       dictionary: 'english',
@@ -41,6 +42,7 @@ class LibraryStaffRecord < ApplicationRecord
     record.title = title
     record.pronouns = row[20]
     record.save! if record.valid?
+    record if record.valid?
   end
   # rubocop:enable Metrics/AbcSize
   # rubocop:enable Metrics/MethodLength
