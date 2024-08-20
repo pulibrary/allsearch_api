@@ -41,8 +41,9 @@ class LibraryStaffRecord < ApplicationRecord
     record.library_title = title
     record.title = title
     record.pronouns = row[20]
-    record.save! if record.valid?
-    record if record.valid?
+    valid = record.valid?
+    record.save! if valid
+    record if valid
   end
   # rubocop:enable Metrics/AbcSize
   # rubocop:enable Metrics/MethodLength
