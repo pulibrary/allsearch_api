@@ -26,9 +26,9 @@ class LibraryStaffRecord < ApplicationRecord
                   }
 
   def self.query(query)
-    self.name_query(query) + self.other_metadata_query(query)
+    name_query(query) + other_metadata_query(query)
   end
-                
+
   # :reek:TooManyStatements
   # rubocop:disable Metrics/AbcSize
   # rubocop:disable Metrics/MethodLength
