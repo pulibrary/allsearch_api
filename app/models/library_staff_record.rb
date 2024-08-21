@@ -8,11 +8,14 @@ class LibraryStaffRecord < ApplicationRecord
 
   # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
 
-  scope :query, ->(search_term) { where(
-    "name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) " \
-    "OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)",
-    search_term, search_term) }
-                
+  scope :query, lambda { |search_term|
+                  where(
+                    "name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) " \
+                    "OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)",
+                    search_term, search_term
+                  )
+                }
+
   # :reek:TooManyStatements
   # rubocop:disable Metrics/AbcSize
   # rubocop:disable Metrics/MethodLength
