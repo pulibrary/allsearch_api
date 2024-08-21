@@ -7,27 +7,11 @@ class LibraryStaffRecord < ApplicationRecord
   include PgSearch::Model
 
   # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
-  pg_search_scope :name_query,
-                  against: 'name_searchable',
-                  using: {
-                    tsearch: {
-                      dictionary: 'unaccented_simple_dict',
-                      tsvector_column: 'name_searchable'
-                    }
-                  }
 
-  pg_search_scope :other_metadata_query,
-                  against: 'searchable',
-                  using: {
-                    tsearch: {
-                      dictionary: 'unaccented_dict',
-                      tsvector_column: 'searchable'
-                    }
-                  }
-
-  def self.query(query)
-    self.name_query(query) + self.other_metadata_query(query)
-  end
+  scope :query, ->(search_term) { where(
+    "name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) " \
+    "OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)",
+    search_term, search_term) }
                 
   # :reek:TooManyStatements
   # rubocop:disable Metrics/AbcSize

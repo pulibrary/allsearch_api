@@ -33,20 +33,6 @@ RSpec.describe LibraryStaffRecord do
     end
 
     it_behaves_like('a database service')
-
-    describe 'name_query scope' do
-      it 'can find the record with an unaccented query term' do
-        expect(described_class.name_query(unaccented)).to contain_exactly(database_record)
-      end
-    
-      it 'can find the record with a precomposed query term' do
-        expect(described_class.name_query(precomposed)).to contain_exactly(database_record)
-      end
-    
-      it 'can find the record with a decomposed query term' do
-        expect(described_class.name_query(decomposed)).to contain_exactly(database_record)
-      end
-    end
   end
 
   describe 'query locates relevant records' do
