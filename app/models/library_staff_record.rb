@@ -4,10 +4,7 @@
 # metadata from the library_staff_record table in the database
 class LibraryStaffRecord < ApplicationRecord
   validates :puid, :netid, :name, :email, :title, :library_title, presence: true
-  include PgSearch::Model
-
-  # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
-
+  # See https://github.com/pulibrary/allsearch_api/issues/295#issuecomment-2302094168 for context on this search
   scope :query, lambda { |search_term|
                   where(
                     "name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) " \
