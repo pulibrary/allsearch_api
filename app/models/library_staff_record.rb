@@ -4,17 +4,14 @@
 # metadata from the library_staff_record table in the database
 class LibraryStaffRecord < ApplicationRecord
   validates :puid, :netid, :name, :email, :title, :library_title, presence: true
-  include PgSearch::Model
-
-  # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
-  pg_search_scope :query,
-                  against: 'searchable',
-                  using: {
-                    tsearch: {
-                      dictionary: 'english',
-                      tsvector_column: 'searchable'
-                    }
-                  }
+  # See https://github.com/pulibrary/allsearch_api/issues/295#issuecomment-2302094168 for context on this search
+  scope :query, lambda { |search_term|
+                  where(
+                    "name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) " \
+                    "OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)",
+                    search_term, search_term
+                  )
+                }
 
   # :reek:TooManyStatements
   # rubocop:disable Metrics/AbcSize
@@ -40,7 +37,9 @@ class LibraryStaffRecord < ApplicationRecord
     record.library_title = title
     record.title = title
     record.pronouns = row[20]
-    record.save! if record.valid?
+    valid = record.valid?
+    record.save! if valid
+    record if valid
   end
   # rubocop:enable Metrics/AbcSize
   # rubocop:enable Metrics/MethodLength
