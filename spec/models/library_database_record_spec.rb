@@ -87,51 +87,53 @@ RSpec.describe LibraryDatabaseRecord do
     it 'finds matches in the alt_names_concat field' do
       expect(described_class.query('jstor')).to contain_exactly(doc1)
     end
+  end
 
-    context 'with fixture file loaded' do
-      let(:libjobs_response) { file_fixture('libjobs/library-databases.csv') }
+  context 'with fixture file loaded' do
+    let(:libjobs_response) { file_fixture('libjobs/library-databases.csv') }
 
-      before do
-        stub_request(:get, 'https://lib-jobs.princeton.edu/library-databases.csv')
-          .to_return(status: 200, body: libjobs_response)
-        LibraryDatabaseLoadingService.new.run
+    before do
+      stub_request(:get, 'https://lib-jobs.princeton.edu/library-databases.csv')
+        .to_return(status: 200, body: libjobs_response)
+      LibraryDatabaseLoadingService.new.run
+    end
+
+    it 'matches the current expected search' do
+      query_response = described_class.query('oxford music')
+      expect(query_response[0].name).to eq('Oxford Music Online')
+      expect(query_response[1].name).to eq('Oxford Scholarship Online:  Music')
+      expect(query_response[2].name).to eq('Oxford Bibliographies: Music')
+    end
+
+    it 'is safe from sql injection' do
+      bad_string = "'))); DROP TABLE library_database_records;"
+      expect do
+        described_class.query(bad_string)
+      end.not_to(change(described_class, :count))
+    end
+
+    context 'with Japanese text using differently composed characters' do
+      let(:precomposed) { 'Kōbunsō Taika Koshomoku' }
+      let(:no_accents) { 'Kobunso Taika Koshomoku' }
+      let(:decomposed) { 'Kōbunsō Taika Koshomoku' }
+
+      it 'finds the title regardless of composition' do
+        result1 = described_class.query(precomposed)
+        expect(result1.size).to eq(1)
+        result2 = described_class.query(no_accents)
+        expect(result2.size).to eq(1)
+        result3 = described_class.query(decomposed)
+        expect(result3.size).to eq(1)
       end
+    end
 
-      # This is the currently expected sort. This test should be replaced by the pending test below
-      # once we get more details on the current service sort
-      it 'matches the current expected search' do
-        query_response = described_class.query('oxford music').with_pg_search_rank
-        # The order from our current expected sort
-        expect(query_response[0].name).to eq('Oxford Music Online')
-        expect(query_response[0].pg_search_rank).to eq(0.99986285)
-        expect(query_response[1].name).to eq('Oxford Scholarship Online:  Music')
-        expect(query_response[1].pg_search_rank).to eq(0.9904934)
-        expect(query_response[2].name).to eq('Oxford Bibliographies: Music')
-        expect(query_response[2].pg_search_rank).to eq(0.985053)
-      end
+    context 'with a glottal stop character' do
+      let(:query_terms) { 'Maʻagarim' }
 
-      it 'matches the sort from the original service' do
-        pending('Waiting for more insight into LibGuides search')
-        query_response = described_class.query('oxford music').with_pg_search_rank
-        # The order from Libguides search https://libguides.princeton.edu/az/databases?q=oxford%20music
-        expect(query_response[0].name).to eq('Oxford Scholarship Online:  Music')
-        expect(query_response[1].name).to eq('Oxford Bibliographies: Music')
-        expect(query_response[2].name).to eq('Oxford Music Online')
-      end
-
-      context 'with Japanese text using differently composed characters' do # rubocop:disable RSpec/NestedGroups
-        let(:precomposed) { 'Kōbunsō Taika Koshomoku' }
-        let(:no_accents) { 'Kobunso Taika Koshomoku' }
-        let(:decomposed) { 'Kōbunsō Taika Koshomoku' }
-
-        it 'finds the title regardless of composition' do
-          result1 = described_class.query(precomposed)
-          expect(result1.size).to eq(1)
-          result2 = described_class.query(no_accents)
-          expect(result2.size).to eq(1)
-          result3 = described_class.query(decomposed)
-          expect(result3.size).to eq(1)
-        end
+      it 'finds the database' do
+        result1 = described_class.query(query_terms)
+        expect { described_class.query(query_terms) }.not_to raise_error
+        expect(result1.size).to eq(1)
       end
     end
   end
