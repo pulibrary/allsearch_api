@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe LibraryStaffDocument do
-  let(:record) { LibraryStaffRecord.last }
+  let(:record) { LibraryStaffRecord.find_by(email: 'brutus@princeton.edu') }
   let(:staff_document) { described_class.new(document: record, doc_keys: []) }
 
   before do

@@ -48,22 +48,22 @@ RSpec.describe 'GET /search/staff' do
     expect(response).to be_successful
   end
 
-  it 'returns two results' do
+  it 'returns results based on name and building' do
     get '/search/staff?query=Firestone'
 
     expect(response).to be_successful
     response_body = JSON.parse(response.body, symbolize_names: true)
     expect(response_body.keys).to contain_exactly(:number, :more, :records)
-    expect(response_body[:records].count).to eq(2)
+    expect(response_body[:records].count).to eq(3)
   end
 
   it 'matches the expected first record' do
     get '/search/staff?query=Firestone'
     response_body = JSON.parse(response.body, symbolize_names: true)
 
-    expect(response_body[:records][0].keys).to match_array(expected_record_keys)
+    expect(response_body[:records][1].keys).to match_array(expected_record_keys)
     expected_record_keys.each do |key|
-      expect(response_body[:records][0][key]).to match(expected_response[:records].first[key])
+      expect(response_body[:records][1][key]).to match(expected_response[:records].first[key])
     end
   end
 
@@ -81,7 +81,7 @@ RSpec.describe 'GET /search/staff' do
     it 'displays the total number of matches' do
       get '/search/staff?query=library'
       response_body = JSON.parse(response.body, symbolize_names: true)
-      expect(response_body[:number]).to eq(4)
+      expect(response_body[:number]).to eq(5)
     end
 
     it 'only includes the first three records' do

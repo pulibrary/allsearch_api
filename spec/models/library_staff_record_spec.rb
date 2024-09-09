@@ -48,10 +48,16 @@ RSpec.describe LibraryStaffRecord do
       expect(described_class.query('Forrestal')[0].first_name).to eq('Lucy Fae')
     end
 
-    it 'finds records by building and orders by weight' do
-      pending('Fixing staff sort')
-
+    it 'finds records by building' do
       results = described_class.query('Firestone Library')
+      expect(results.length).to eq(3)
+      expect(results[0].first_name).to eq('Nimbus Kilgore')
+      expect(results[1].first_name).to eq('Spot Tiberius')
+      expect(results[2].first_name).to eq('Fred')
+    end
+
+    it 'orders by weight' do
+      results = described_class.query('Firestone')
       expect(results.length).to eq(3)
       expect(results[0].first_name).to eq('Fred')
       expect(results[1].first_name).to eq('Nimbus Kilgore')
