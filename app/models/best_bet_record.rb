@@ -4,7 +4,9 @@
 # metadata from the best_bet_record table in the database
 class BestBetRecord < ApplicationRecord
   validates :title, :url, :search_terms, presence: true
-  scope :query, ->(search_term) { where('unaccent(?) ILIKE ANY(search_terms)', search_term) }
+  scope :query, lambda { |search_term|
+                  where('unaccent(?) ILIKE ANY(search_terms) OR unaccent(?) ILIKE title', search_term, search_term)
+                }
   def self.new_from_csv(row)
     BestBetRecord.create!(
       title: row[0],
