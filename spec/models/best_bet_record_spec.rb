@@ -18,6 +18,11 @@ RSpec.describe BestBetRecord do
       expect(described_class.query('dogs')).to contain_exactly(doc1, doc3)
     end
 
+    it 'finds matches in the title field' do
+      doc1 = described_class.create(title:, url:, search_terms: %w[dogs cats])
+      expect(described_class.query('digital sanborn maps')).to contain_exactly(doc1)
+    end
+
     it 'is case-insensitive' do
       doc1 = described_class.create(title:, url:, search_terms: %w[dogs cATs])
       expect(described_class.query('Dogs')).to contain_exactly(doc1)
