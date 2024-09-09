@@ -4,8 +4,6 @@ LIBRARY_DATABASE_CSV_FIELDS = [:libguides_id, :name, :description, :alt_names_co
                                :friendly_url, :subjects_concat].freeze
 
 class LibraryDatabaseRecord < ApplicationRecord
-  include PgSearch::Model
-
   scope :query, lambda { |search_term|
                   where(
                     Arel.sql("searchable @@ websearch_to_tsquery('unaccented_dict', unaccent(?))",
