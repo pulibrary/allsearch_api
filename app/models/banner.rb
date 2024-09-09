@@ -2,7 +2,7 @@
 
 # This class is responsible for coordinating displaying an informational banner
 class Banner < ApplicationRecord
-  enum alert_status: {
+  enum :alert_status, {
     info: 1,
     success: 2,
     warning: 3,
