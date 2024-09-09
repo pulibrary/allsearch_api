@@ -7,9 +7,13 @@ class LibraryStaffRecord < ApplicationRecord
   # See https://github.com/pulibrary/allsearch_api/issues/295#issuecomment-2302094168 for context on this search
   scope :query, lambda { |search_term|
                   where(
-                    "name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) " \
-                    "OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)",
-                    search_term, search_term
+                    Arel.sql("name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) " \
+                             "OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)",
+                             search_term, search_term)
+                  ).order(
+                    Arel.sql('ts_rank(name_searchable || searchable, ' \
+                             "websearch_to_tsquery('unaccented_simple_dict', unaccent(?)))",
+                             search_term).desc
                   )
                 }
 
