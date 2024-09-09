@@ -10,7 +10,7 @@ RSpec.describe LibraryDatabase do
     expect(db_service.more_link.to_s).to eq('https://libguides.princeton.edu/az/databases?q=foo')
   end
 
-  context 'with accents in in the query terms' do
+  context 'with accents in the query terms' do
     # URL escaped version of Kōbunsō Taika Koshomoku
     let(:query_terms) { 'K%C5%8Dbuns%C5%8D%20Taika%20Koshomoku' }
 
@@ -36,6 +36,15 @@ RSpec.describe LibraryDatabase do
 
       it 'builds a working more_link' do
         expect(db_service.more_link.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
+      end
+    end
+
+    context 'with glottal stops in the query terms' do
+      # URL escaped version of Maʻagarim
+      let(:query_terms) { 'Ma%CA%BBagarim' }
+
+      it 'can search for queries as passed by the controller' do
+        expect(db_service.library_database_service_response).not_to be_empty
       end
     end
   end

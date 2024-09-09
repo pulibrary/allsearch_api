@@ -4,18 +4,15 @@ LIBRARY_DATABASE_CSV_FIELDS = [:libguides_id, :name, :description, :alt_names_co
                                :friendly_url, :subjects_concat].freeze
 
 class LibraryDatabaseRecord < ApplicationRecord
-  include PgSearch::Model
-
-  # See https://pganalyze.com/blog/full-text-search-ruby-rails-postgres for more on this type of search
-  pg_search_scope :query,
-                  against: 'searchable',
-                  ignoring: :accents,
-                  using: {
-                    tsearch: {
-                      dictionary: 'english',
-                      tsvector_column: 'searchable'
-                    }
-                  }
+  scope :query, lambda { |search_term|
+                  where(
+                    Arel.sql("searchable @@ websearch_to_tsquery('unaccented_dict', unaccent(?))",
+                             search_term)
+                  ).order(
+                    Arel.sql("ts_rank(searchable, websearch_to_tsquery('unaccented_dict', unaccent(?)))",
+                             search_term).desc
+                  )
+                }
 
   # :reek:TooManyStatements
   def self.new_from_csv(row)
