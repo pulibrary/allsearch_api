@@ -4,7 +4,7 @@
 class ArtMuseum
   include ActiveModel::API
   include Parsed
-  attr_reader :query_terms, :service, :service_response
+  attr_reader :service, :service_response
 
   def initialize(query_terms:)
     @query_terms = query_terms
@@ -12,11 +12,15 @@ class ArtMuseum
     @service_response = art_museum_service_response
   end
 
+  def query_terms
+    @query_terms.truncate(220, omission: '', separator: /\s/)
+  end
+
   private
 
   def art_museum_service_response
     uri = URI::HTTPS.build(host: 'data.artmuseum.princeton.edu', path: '/search',
-                           query: "q=#{@query_terms}&type=all&size=3")
+                           query: "q=#{query_terms}&type=all&size=3")
     response = Net::HTTP.get(uri)
     begin
       JSON.parse(response, symbolize_names: true)
