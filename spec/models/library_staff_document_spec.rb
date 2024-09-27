@@ -19,4 +19,39 @@ RSpec.describe LibraryStaffDocument do
     expect { staff_document.send(:name_to_path) }.not_to raise_error
     expect(staff_document.send(:name_to_path)).to eq('brutus-%C3%A9t-tu-cat')
   end
+
+  describe '#url' do
+    before { Flipper.enable(:permanent_host?) }
+    after { Flipper.disable(:permanent_host?) }
+
+    let(:record) { LibraryStaffRecord.create(first_name: 'Ufuoma', last_name: 'Abiola') }
+
+    it 'is the url of the staff profile on the drupal website' do
+      expect(staff_document.send(:url).to_s).to eq('https://library.princeton.edu/about/staff-directory/ufuoma-abiola')
+    end
+
+    describe 'when the user has a middle initial' do
+      let(:record) { LibraryStaffRecord.create(first_name: 'Ryan D.', last_name: 'Gerber') }
+
+      it 'removes the period after the middle initial' do
+        expect(staff_document.send(:url).to_s).to eq('https://library.princeton.edu/about/staff-directory/ryan-d-gerber')
+      end
+    end
+
+    describe 'when the user has an abbreviated first name' do
+      let(:record) { LibraryStaffRecord.create(first_name: 'C. Sophia', last_name: 'Liu') }
+
+      it 'removes the period after the first initial' do
+        expect(staff_document.send(:url).to_s).to eq('https://library.princeton.edu/about/staff-directory/c-sophia-liu')
+      end
+    end
+
+    describe 'when the user has Jr. at the end of their name' do
+      let(:record) { LibraryStaffRecord.create(first_name: 'John E.', last_name: 'Thorpe Jr.') }
+
+      it 'removes the period after Jr' do
+        expect(staff_document.send(:url).to_s).to eq('https://library.princeton.edu/about/staff-directory/john-e-thorpe-jr')
+      end
+    end
+  end
 end
