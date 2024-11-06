@@ -13,15 +13,14 @@ RSpec.describe 'Health Check' do
       expect(response).to be_successful
     end
 
-    it 'errors when a service is down' do
+    it 'does not error when a service is down' do
       stub_request(:get, %r{http://lib-solr8-prod.princeton.edu:8983/solr/.*/admin/ping}).to_return(
         status: 404, body: ''
       )
 
       get '/health.json'
 
-      expect(response).not_to be_successful
-      expect(response).to have_http_status :service_unavailable
+      expect(response).to be_successful
       solr_response = response.parsed_body['results'].find { |x| x['name'] == 'Solr: catalog' }
       expect(solr_response['message']).to start_with 'The Solr collection has an invalid status'
     end

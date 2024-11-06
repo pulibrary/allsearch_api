@@ -1,12 +1,18 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
 Rails.application.config.after_initialize do
   def solr_config_for(service:)
     Rails.application.config_for(:allsearch)[service][:solr]
   end
 
   HealthMonitor.configure do |config|
-    config.cache
+    config.cache.configure do |cache_config|
+      cache_config.critical = false
+    end
+    config.database.configure do |database_config|
+      database_config.critical = false
+    end
     # includes database check by default
     # Include separate Solr check for each service
     solr_services = [:catalog, :dpul, :findingaids, :pulmap]
@@ -17,6 +23,7 @@ Rails.application.config.after_initialize do
         c.url = URI::HTTP.build(host: solr_config[:host],
                                 port: solr_config[:port]).to_s
         c.collection = solr_config[:collection]
+        c.critical = false
       end
     end
     # Make this health check available at /health
@@ -29,3 +36,4 @@ Rails.application.config.after_initialize do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
