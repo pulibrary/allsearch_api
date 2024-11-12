@@ -12,7 +12,7 @@ gem 'bootsnap', require: false
 gem 'ddtrace', require: 'ddtrace/auto_instrument'
 gem 'dogstatsd-ruby'
 gem 'flipper-active_record'
-gem 'health-monitor-rails'
+gem 'health-monitor-rails', '12.4.0'
 gem 'honeybadger'
 gem 'lograge'
 gem 'logstash-event'
