@@ -13,6 +13,9 @@ Rails.application.config.after_initialize do
     config.database.configure do |database_config|
       database_config.critical = false
     end
+    config.file_absence.configure do |file_config|
+      file_config.filename = 'public/remove-from-nginx'
+    end
     # includes database check by default
     # Include separate Solr check for each service
     solr_services = [:catalog, :dpul, :findingaids, :pulmap]
@@ -31,8 +34,10 @@ Rails.application.config.after_initialize do
 
     # Notify Honeybadger if there is a failed health check
     config.error_callback = proc do |e|
-      Rails.logger.error "Health check failed with: #{e.message}"
-      Honeybadger.notify(e)
+      unless e.is_a?(HealthMonitor::Providers::FileAbsenceException)
+        Rails.logger.error "Health check failed with: #{e.message}"
+        Honeybadger.notify(e)
+      end
     end
   end
 end
