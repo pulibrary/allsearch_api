@@ -19,7 +19,7 @@ gem 'logstash-event'
 gem 'pg'
 gem 'rack-cors'
 gem 'rack-utf8_sanitizer'
-gem 'railties'
+gem 'railties', '~> 7.2'
 gem 'rswag'
 gem 'summon'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

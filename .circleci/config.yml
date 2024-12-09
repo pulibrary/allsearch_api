@@ -22,7 +22,7 @@ commands:
     steps:
       - run:
           name: Install bundler
-          command: gem install bundler -v '2.4.19'
+          command: gem install bundler -v '2.5.23'
       # Restore bundle cache
       - restore_cache:
           keys:
