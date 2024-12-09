@@ -30,7 +30,13 @@ RSpec/SpecFilePathFormat:
     - 'spec/models/oauth_token_spec.rb'
     - 'spec/services/oauth_service_spec.rb'
 
+Style/BitwisePredicate:
+  Enabled: false
+
 Style/Documentation:
+  Enabled: false
+
+Style/SafeNavigationChainLength:
   Enabled: false
 
 Style/SymbolArray:
