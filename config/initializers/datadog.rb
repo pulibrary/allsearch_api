@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'datadog/statsd'
-require 'ddtrace'
 
 Datadog.configure do |c|
   c.env = Rails.env

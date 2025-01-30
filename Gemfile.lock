@@ -43,8 +43,6 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     bcrypt_pbkdf (1.1.1)
-    bcrypt_pbkdf (1.1.1-arm64-darwin)
-    bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.0)
     bigdecimal (3.1.9)
     bootsnap (1.18.4)
@@ -73,16 +71,14 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
-    datadog-ci (0.8.3)
+    csv (3.3.2)
+    datadog (2.9.0)
+      datadog-ruby_core_source (~> 3.3, >= 3.3.7)
+      libdatadog (~> 14.3.1.1.0)
+      libddwaf (~> 1.18.0.0.0)
       msgpack
+    datadog-ruby_core_source (3.4.0)
     date (3.4.1)
-    ddtrace (1.23.3)
-      datadog-ci (~> 0.8.1)
-      debase-ruby_core_source (= 3.3.1)
-      libdatadog (~> 7.0.0.1.0)
-      libddwaf (~> 1.14.0.0.0)
-      msgpack
-    debase-ruby_core_source (3.3.1)
     diff-lcs (1.5.1)
     dogstatsd-ruby (5.6.4)
     drb (2.2.1)
@@ -141,13 +137,13 @@ GEM
       addressable (~> 2.8)
       bigdecimal (~> 3.1)
     language_server-protocol (3.17.0.3)
-    libdatadog (7.0.0.1.0)
-    libdatadog (7.0.0.1.0-x86_64-linux)
-    libddwaf (1.14.0.0.0-arm64-darwin)
+    libdatadog (14.3.1.1.0)
+    libdatadog (14.3.1.1.0-x86_64-linux)
+    libddwaf (1.18.0.0.0-arm64-darwin)
       ffi (~> 1.0)
-    libddwaf (1.14.0.0.0-x86_64-darwin)
+    libddwaf (1.18.0.0.0-x86_64-darwin)
       ffi (~> 1.0)
-    libddwaf (1.14.0.0.0-x86_64-linux)
+    libddwaf (1.18.0.0.0-x86_64-linux)
       ffi (~> 1.0)
     logger (1.6.4)
     lograge (0.14.0)
@@ -321,6 +317,7 @@ GEM
 PLATFORMS
   arm64-darwin-22
   arm64-darwin-23
+  arm64-darwin-24
   x86_64-darwin-22
   x86_64-darwin-23
   x86_64-linux
@@ -338,7 +335,8 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-passenger
   capistrano-rails
-  ddtrace
+  csv
+  datadog (~> 2.0)
   dogstatsd-ruby
   ed25519
   flipper-active_record

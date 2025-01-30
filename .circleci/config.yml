@@ -4,7 +4,7 @@ orbs:
 executors:
   allsearch-executor:
     docker:
-      - image: cimg/ruby:3.3.0-browsers
+      - image: cimg/ruby:3.4.1-browsers
         environment:
           RAILS_ENV: test
           ALLSEARCH_HOST: localhost
@@ -38,13 +38,13 @@ commands:
 jobs:
   build:
     docker:
-      - image: cimg/ruby:3.3
+      - image: cimg/ruby:3.4
     steps:
       - checkout
       - ruby/install-deps
   checking:
     docker: 
-      - image: cimg/ruby:3.3
+      - image: cimg/ruby:3.4
     steps:
       - checkout
       - ruby/install-deps
@@ -53,7 +53,7 @@ jobs:
           label: Inspecting with Rubocop
   reek:
     docker:
-      - image: cimg/ruby:3.3
+      - image: cimg/ruby:3.4
     steps:
       - checkout
       - ruby/install-deps
@@ -111,7 +111,7 @@ jobs:
           command: vacuum lint -d swagger/**/*.yaml
   bearer:
     docker:
-      - image: cimg/ruby:3.2
+      - image: cimg/ruby:3.4
     environment:
       # Set to default branch of your repo
       DEFAULT_BRANCH: main
