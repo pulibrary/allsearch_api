@@ -18,7 +18,7 @@ module BentoRailsApi
   class Application < Rails::Application
     config.middleware.insert 0, Rack::UTF8Sanitizer, sanitize_null_bytes: true
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
+    config.load_defaults 8.0
 
     # Use the sql format so that we can capture our postgres custom search configuration
     config.active_record.schema_format = :sql
