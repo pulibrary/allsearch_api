@@ -1,0 +1,26 @@
+{
+  "e5e17cede9a731da09a639c9c78af007_0": {
+    "author": "Max Kadel",
+    "comment": "This information is publicly accessible via both the website and the API. If we want to lock it down, we should do it there first, and then encrypt it.",
+    "false_positive": false,
+    "ignored_at": "2025-02-12T20:11:05Z"
+  },
+  "e5e17cede9a731da09a639c9c78af007_1": {
+    "author": "Max Kadel",
+    "comment": " This information is publicly accessible via both the website and the API. If we want to lock it down, we should do it there first, and then encrypt it.",
+    "false_positive": false,
+    "ignored_at": "2025-02-12T20:12:02Z"
+  },
+  "e5e17cede9a731da09a639c9c78af007_2": {
+    "author": "Max Kadel",
+    "comment": "This information is publicly accessible via both the website and the API. If we want to lock it down, we should do it there first, and then encrypt it.",
+    "false_positive": false,
+    "ignored_at": "2025-02-12T20:12:35Z"
+  },
+  "e5e17cede9a731da09a639c9c78af007_3": {
+    "author": "Max Kadel",
+    "comment": " This information is publicly accessible via both the website and the API. If we want to lock it down, we should do it there first, and then encrypt it.",
+    "false_positive": false,
+    "ignored_at": "2025-02-12T20:12:53Z"
+  }
+}
