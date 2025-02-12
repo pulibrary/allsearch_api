@@ -12,7 +12,7 @@ rule:
     only-rule: []
     # Tickets to remediate these rules and remove from this stanza:
     #   ruby_rails_default_encryption - https://github.com/pulibrary/allsearch_api/issues/309
-    skip-rule: [ruby_rails_default_encryption]
+    skip-rule: []
 scan:
     context: ""
     data_subject_mapping: ""
