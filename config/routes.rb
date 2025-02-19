@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'main#index', defaults: { format: 'json' }
-  get '/banner', to: 'banner#show', defaults: { format: 'json' }
+  match '/banner', to: BannerController, via: :all
   get '/search/article', to: 'article#show', defaults: { format: 'json' }
   get '/search/artmuseum/', to: 'art_museum#show', defaults: { format: 'json' }
   get '/search/best-bet/', to: 'best_bet#show', defaults: { format: 'json' }
