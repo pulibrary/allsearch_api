@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root 'main#index', defaults: { format: 'json' }
+  match '/', to: MainController, via: :all
   match '/banner', to: BannerController, via: :all
   get '/search/article', to: 'article#show', defaults: { format: 'json' }
-  get '/search/artmuseum/', to: 'art_museum#show', defaults: { format: 'json' }
+  match '/search/artmuseum', to: ArtMuseumController, via: :all
   get '/search/best-bet/', to: 'best_bet#show', defaults: { format: 'json' }
   get '/search/catalog/', to: 'catalog#show', defaults: { format: 'json' }
   get '/search/database/', to: 'library_database#show', defaults: { format: 'json' }
