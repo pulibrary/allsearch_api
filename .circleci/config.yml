@@ -1,5 +1,6 @@
 version: 2.1
 orbs:
+  coveralls: coveralls/coveralls@2.2.5
   ruby: circleci/ruby@2.1.0
 executors:
   allsearch-executor:
@@ -79,6 +80,7 @@ jobs:
       - ruby/install-deps
       - ruby/rspec-test:
           include: spec/**/*_spec.rb
+      - coveralls/upload
   semgrep:
     docker:
         - image: returntocorp/semgrep

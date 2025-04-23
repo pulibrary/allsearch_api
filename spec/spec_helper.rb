@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+if ENV['CI'] || ENV['COVERAGE']
+  require 'simplecov'
+  SimpleCov.start 'rails'
+end
+
 require 'webmock/rspec'
 
 RSpec.configure do |config|

@@ -23,6 +23,8 @@ Requires:
 bundle exec rspec
 ```
 
+To calculate coverage, run `COVERAGE=true bundle exec rspec`
+
 ### Rubocop
 ```bash
 bundle exec rubocop
