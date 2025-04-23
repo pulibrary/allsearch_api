@@ -28,3 +28,4 @@
 
 # Secrets for development
 .env*
+coverage
