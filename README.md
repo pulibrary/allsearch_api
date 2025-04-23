@@ -1,11 +1,10 @@
 # README
-API-only Rails app generated using the command:
-```bash
-rails new allsearch_api --api --skip-javascript --skip-asset-pipeline --skip-spring --skip-test --no-rc --skip-active-record
-```
+Backend API for [Princeton University Library's Allsearch application](https://allsearch.princeton.edu).
 
 Requires:
-- Ruby 3.2
+- Ruby 3.4
+
+[![Coverage Status](https://coveralls.io/repos/github/pulibrary/allsearch_api/badge.svg?branch=main)](https://coveralls.io/github/pulibrary/allsearch_api?branch=main)
 
 ## Getting started
 1. Clone the repository - `git clone git@github.com:pulibrary/allsearch_api.git`
