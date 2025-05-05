@@ -53,5 +53,13 @@ RSpec.describe LibraryStaffDocument do
         expect(staff_document.send(:url).to_s).to eq('https://library.princeton.edu/about/staff-directory/john-e-thorpe-jr')
       end
     end
+
+    describe 'when the user has an apostrophe in their name' do
+      let(:record) { LibraryStaffRecord.create(first_name: 'Sadie', last_name: "O'Brien") }
+
+      it 'removes the apostrophe' do
+        expect(staff_document.send(:url).to_s).to eq('https://library.princeton.edu/about/staff-directory/sadie-obrien')
+      end
+    end
   end
 end
