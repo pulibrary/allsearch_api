@@ -91,7 +91,7 @@ class LibraryStaffDocument < Document
   end
 
   def name_to_path
-    URI::DEFAULT_PARSER.escape("#{document.first_name}-#{document.last_name}".delete('.').gsub(' ', '-').downcase)
+    URI::DEFAULT_PARSER.escape("#{document.first_name}-#{document.last_name}".delete(".'").gsub(' ', '-').downcase)
   end
 
   def doc_keys
