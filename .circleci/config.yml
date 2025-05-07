@@ -37,6 +37,12 @@ commands:
           paths:
             - ./vendor/bundle
 jobs:
+  runner_test:
+    docker:
+      - image: cimg/base:current
+    resource_class: pulibrary/container_runner
+    steps:
+      - run: echo "Hi I'm on a Container Runner!"
   build:
     docker:
       - image: cimg/ruby:3.4
@@ -132,6 +138,7 @@ jobs:
 workflows:
   build_and_test:
     jobs:
+      - runner_test
       - build
       - checking
       - reek
