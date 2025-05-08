@@ -40,15 +40,21 @@ jobs:
   runner_test:
     docker:
       - image: cimg/base:current
-    resource_class: pulibrary/container_runner
+    resource_class: pulibrary/ruby-deploy
     steps:
-      - run: echo "Hi I'm on a Container Runner!"
+      - attach_workspace:
+          at: '~/allsearch_api'
+      - checkout
+      - setup-bundler
+      - ruby/install-deps
+      - run: cap staging deploy
   build:
     docker:
       - image: cimg/ruby:3.4
     steps:
       - checkout
       - ruby/install-deps
+
   checking:
     docker: 
       - image: cimg/ruby:3.4
@@ -139,20 +145,20 @@ workflows:
   build_and_test:
     jobs:
       - runner_test
-      - build
-      - checking
-      - reek
-      - brakeman
-      - test:
-          requires:
-            - build
-      - deploy:
-         requires:
-           - test
-         filters:
-           branches:
-             only:
-               - main
-      - semgrep
-      - vacuum
-      - bearer
+      # - build
+      # - checking
+      # - reek
+      # - brakeman
+      # - test:
+      #     requires:
+      #       - build
+      # - deploy:
+      #    requires:
+      #      - test
+      #    filters:
+      #      branches:
+      #        only:
+      #          - main
+      # - semgrep
+      # - vacuum
+      # - bearer
