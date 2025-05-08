@@ -44,6 +44,7 @@ jobs:
       - checkout
       - setup-bundler
       - ruby/install-deps
+      - run: bundle exec cap staging deploy
   build:
     docker:
       - image: cimg/ruby:3.4
