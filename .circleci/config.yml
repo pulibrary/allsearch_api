@@ -41,7 +41,8 @@ jobs:
     machine: true
     resource_class: pulibrary/ruby-deploy
     steps:
-      - run: echo "Hi, I'm on Runners!"
+      - run: ruby --version
+      - run: bundler --version
   build:
     docker:
       - image: cimg/ruby:3.4
