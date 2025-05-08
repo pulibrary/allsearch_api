@@ -37,17 +37,11 @@ commands:
           paths:
             - ./vendor/bundle
 jobs:
-  runner_test:
-    docker:
-      - image: cimg/base:current
+  test_local:
+    machine: true
     resource_class: pulibrary/ruby-deploy
     steps:
-      - attach_workspace:
-          at: '~/allsearch_api'
-      - checkout
-      - setup-bundler
-      - ruby/install-deps
-      - run: cap staging deploy
+      - run: echo "Hi, I'm on Runners!"
   build:
     docker:
       - image: cimg/ruby:3.4
@@ -144,7 +138,7 @@ jobs:
 workflows:
   build_and_test:
     jobs:
-      - runner_test
+      - test_local
       # - build
       # - checking
       # - reek
