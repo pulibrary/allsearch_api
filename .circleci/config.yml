@@ -156,12 +156,12 @@ workflows:
       # - test:
       #     requires:
       #       - build
-      # - staging_deploy:
+      - staging_deploy
       #     requires:
       #       - test
-      - staging_test
-          # requires:
-          #   - staging_deploy
+      - staging_test:
+          requires:
+            - staging_deploy
       # - deploy:
       #    requires:
       #      - test
