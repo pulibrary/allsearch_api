@@ -37,7 +37,7 @@ commands:
           paths:
             - ./vendor/bundle
 jobs:
-  test_local:
+  staging_deploy:
     machine: true
     resource_class: pulibrary/ruby-deploy
     steps:
@@ -45,6 +45,16 @@ jobs:
       - setup-bundler
       - ruby/install-deps
       - run: bundle exec cap staging deploy
+  staging_test:
+    machine: true
+    resource_class: pulibrary/ruby-deploy
+    steps:
+      - checkout
+      - setup-bundler
+      - ruby/install-deps
+      - ruby/rspec-test:
+          include: spec/**/*_spec.rb
+          tag: staging_test
   build:
     docker:
       - image: cimg/ruby:3.4
@@ -89,6 +99,7 @@ jobs:
       - ruby/install-deps
       - ruby/rspec-test:
           include: spec/**/*_spec.rb
+          tag: ~@staging_test
       - coveralls/upload
   semgrep:
     docker:
@@ -141,14 +152,19 @@ jobs:
 workflows:
   build_and_test:
     jobs:
-      - test_local
-      # - build
+      - build
       # - checking
       # - reek
       # - brakeman
-      # - test:
-      #     requires:
-      #       - build
+      - test:
+          requires:
+            - build
+      - staging_deploy:
+          requires:
+            - test
+      - staging_test:
+          requires:
+            - staging_deploy
       # - deploy:
       #    requires:
       #      - test
