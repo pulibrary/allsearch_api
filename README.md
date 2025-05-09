@@ -23,14 +23,9 @@ To run all tests:
 bundle exec rspec
 ```
 
-We have a set of tests that test against the deployed staging environment. In order for these to pass, you must be on the VPN. To exclude these tests:
+We have a set of tests that test against the deployed staging environment. In order for these to pass, you must be on the VPN. To run these tests:
 ```bash
-bundle exec rspec --tag ~@staging_test
-```
-
-To run only the smoke tests against the staging environment:
-```bash
-bundle exec rspec --tag staging_test
+bundle exec rspec smoke_spec
 ```
 
 To calculate coverage, run `COVERAGE=true bundle exec rspec`

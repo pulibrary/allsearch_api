@@ -14,17 +14,6 @@ RSpec.describe 'Deployed environment', :staging_test do
     WebMock.disable_net_connect!
   end
 
-  describe 'using curl' do
-    # let(:response) { JSON.parse(`curl https://#{host}`) }
-
-    it 'has the expected keys' do
-      response = `curl https://#{host}`
-      puts(response)
-      # expect(response['error']).to be_nil
-      # expect(response.keys).to include('application', 'environment', 'github_link', 'documentation')
-    end
-  end
-
   it 'does not get an error' do
     expect(response['error']).to be_nil
   end

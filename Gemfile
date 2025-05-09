@@ -23,7 +23,7 @@ gem 'rack-utf8_sanitizer'
 gem 'railties', '~> 8.0'
 gem 'rswag'
 gem 'summon'
-gem "tzinfo-data", "~> 1.2025"
+gem 'tzinfo-data', '~> 1.2025'
 gem 'whenever', require: false
 
 group :development do
