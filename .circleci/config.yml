@@ -50,7 +50,6 @@ jobs:
     resource_class: pulibrary/ruby-deploy
     steps:
       - checkout
-      - setup-bundler
       - ruby/install-deps
       - run: RAILS_ENV=test bundle exec rspec --tag staging_test
   build:
