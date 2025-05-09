@@ -52,3 +52,5 @@ group :test do
   gem 'simplecov', require: false
   gem 'webmock'
 end
+
+gem "tzinfo-data", "~> 1.2025"
