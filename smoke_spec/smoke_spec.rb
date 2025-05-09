@@ -15,7 +15,7 @@ RSpec.describe 'Deployed environment', :staging_test do
   end
 
   describe 'using curl' do
-    let(:response) { `curl https://#{host}` }
+    let(:response) { JSON.parse(`curl https://#{host}`) }
 
     it 'has the expected keys' do
       expect(response['error']).to be_nil
