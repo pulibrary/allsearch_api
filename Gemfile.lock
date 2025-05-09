@@ -372,7 +372,6 @@ DEPENDENCIES
   rubocop-rspec_rails
   simplecov
   summon
-  tzinfo-data
   webmock
   whenever
 
