@@ -52,9 +52,7 @@ jobs:
       - checkout
       - setup-bundler
       - ruby/install-deps
-      - ruby/rspec-test:
-          include: spec/**/*_spec.rb
-          tag: staging_test
+      - run: bundle exec rspec --tag staging_test
   build:
     docker:
       - image: cimg/ruby:3.4
