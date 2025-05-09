@@ -51,7 +51,7 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
-      - run: RAILS_ENV=development bundle exec rspec --tag staging_test
+      - run: RAILS_ENV=test bundle exec rspec smoke_spec/smoke_spec.rb
   build:
     docker:
       - image: cimg/ruby:3.4
@@ -156,12 +156,12 @@ workflows:
       # - test:
       #     requires:
       #       - build
-      - staging_deploy
+      # - staging_deploy
       #     requires:
       #       - test
-      - staging_test:
-          requires:
-            - staging_deploy
+      - staging_test
+          # requires:
+          #   - staging_deploy
       # - deploy:
       #    requires:
       #      - test
