@@ -14,6 +14,10 @@ RSpec.describe 'Deployed environment', :staging_test do
     WebMock.disable_net_connect!
   end
 
+  it 'can tell me what error it is getting' do
+    expect(response['error']).to be_nil
+  end
+
   it 'can test against a deployed environment' do
     expect(response.keys).to include('application', 'environment', 'github_link', 'documentation')
   end
