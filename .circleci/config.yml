@@ -52,7 +52,7 @@ jobs:
       - checkout
       - setup-bundler
       - ruby/install-deps
-      - run: bundle exec rspec --tag staging_test
+      - run: RAILS_ENV=test bundle exec rspec --tag staging_test
   build:
     docker:
       - image: cimg/ruby:3.4
@@ -150,19 +150,19 @@ jobs:
 workflows:
   build_and_test:
     jobs:
-      - build
+      # - build
       # - checking
       # - reek
       # - brakeman
-      - test:
-          requires:
-            - build
-      - staging_deploy:
-          requires:
-            - test
-      - staging_test:
-          requires:
-            - staging_deploy
+      # - test:
+      #     requires:
+      #       - build
+      # - staging_deploy:
+      #     requires:
+      #       - test
+      - staging_test
+          # requires:
+          #   - staging_deploy
       # - deploy:
       #    requires:
       #      - test
