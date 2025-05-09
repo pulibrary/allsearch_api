@@ -23,8 +23,7 @@ gem 'rack-utf8_sanitizer'
 gem 'railties', '~> 8.0'
 gem 'rswag'
 gem 'summon'
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", "~> 1.2025"
 gem 'whenever', require: false
 
 group :development do
@@ -52,5 +51,3 @@ group :test do
   gem 'simplecov', require: false
   gem 'webmock'
 end
-
-gem "tzinfo-data", "~> 1.2025"
