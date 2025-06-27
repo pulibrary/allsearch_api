@@ -32,6 +32,7 @@ RSpec.describe 'GET /search/catalog' do
             type: 'Book',
             url: 'https://catalog.princeton.edu/catalog/SCSB-11568989',
             other_fields: {
+              electronic_access_count: '0',
               first_barcode: 'HNG4XF',
               first_call_number: 'ML421.I55 A96 1990z',
               first_library: 'ReCAP'
@@ -42,7 +43,7 @@ RSpec.describe 'GET /search/catalog' do
             id: '99122566163506421',
             type: 'Book',
             url: 'https://catalog.princeton.edu/catalog/99122566163506421',
-            other_fields: {} }
+            other_fields: { electronic_access_count: '0' } }
         ] }
     end
 
