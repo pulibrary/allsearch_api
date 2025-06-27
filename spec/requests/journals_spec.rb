@@ -29,6 +29,7 @@ RSpec.describe 'GET /search/journals' do
             type: 'Journal',
             url: 'https://catalog.princeton.edu/catalog/99125520326606421',
             other_fields: {
+              electronic_access_count: '0',
               resource_url: 'https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53933585090006421&Force_direct=true',
               resource_url_label: 'CRL Open Access Serials'
             } }

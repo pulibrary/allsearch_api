@@ -36,7 +36,11 @@ class CatalogDocument < Document
 
   def doc_keys
     [:first_barcode, :second_barcode, :first_call_number, :second_call_number, :first_library, :second_library,
-     :first_status, :second_status, :resource_url, :resource_url_label]
+     :first_status, :second_status, :electronic_access_count, :resource_url, :resource_url_label]
+  end
+
+  def electronic_access_count
+    electronic_access&.count
   end
 
   def resource_url
