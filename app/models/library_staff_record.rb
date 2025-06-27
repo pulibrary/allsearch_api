@@ -17,6 +17,14 @@ class LibraryStaffRecord < ApplicationRecord
                   )
                 }
 
+  scope :new_query, lambda { |search_term|
+                where(
+                  Arel.sql(
+                           "title_searchable @@ websearch_to_tsquery('unaccented_dict', ?)",
+                           search_term)
+                )
+  }
+
   # :reek:TooManyStatements
   # rubocop:disable Metrics/AbcSize
   # rubocop:disable Metrics/MethodLength

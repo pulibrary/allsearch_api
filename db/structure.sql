@@ -372,7 +372,9 @@ CREATE TABLE public.library_staff_records (
     my_scheduler_link character varying,
     pronouns character varying,
     name_searchable tsvector GENERATED ALWAYS AS (to_tsvector('public.unaccented_simple_dict'::regconfig, (((((((COALESCE(name, ''::character varying))::text || ' '::text) || (COALESCE(first_name, ''::character varying))::text) || ' '::text) || (COALESCE(middle_name, ''::character varying))::text) || ' '::text) || (COALESCE(last_name, ''::character varying))::text))) STORED,
-    searchable tsvector GENERATED ALWAYS AS ((((setweight(to_tsvector('public.unaccented_dict'::regconfig, (COALESCE(title, ''::character varying))::text), 'A'::"char") || setweight(to_tsvector('public.unaccented_dict'::regconfig, (COALESCE(areas_of_study, ''::character varying))::text), 'B'::"char")) || setweight(to_tsvector('public.unaccented_dict'::regconfig, (COALESCE(department, ''::character varying))::text), 'C'::"char")) || setweight(to_tsvector('public.unaccented_dict'::regconfig, (COALESCE(other_entities, ''::character varying))::text), 'D'::"char"))) STORED
+    searchable tsvector GENERATED ALWAYS AS (to_tsvector('public.unaccented_dict'::regconfig, (((((((((((((((((((COALESCE(title, ''::character varying))::text || ' '::text) || (COALESCE(email, ''::character varying))::text) || ' '::text) || (COALESCE(department, ''::character varying))::text) || ' '::text) || (COALESCE(office, ''::character varying))::text) || ' '::text) || (COALESCE(building, ''::character varying))::text) || ' '::text) || (COALESCE(team, ''::character varying))::text) || ' '::text) || (COALESCE(division, ''::character varying))::text) || ' '::text) || (COALESCE(unit, ''::character varying))::text) || ' '::text) || (COALESCE(areas_of_study, ''::character varying))::text) || ' '::text) || (COALESCE(other_entities, ''::character varying))::text))) STORED,
+    title_searchable tsvector GENERATED ALWAYS AS (setweight(to_tsvector('public.unaccented_dict'::regconfig, (COALESCE(title, ''::character varying))::text), 'A'::"char")) STORED,
+    department_searchable tsvector GENERATED ALWAYS AS (setweight(to_tsvector('public.unaccented_dict'::regconfig, (COALESCE(department, ''::character varying))::text), 'B'::"char")) STORED
 );
 
 
@@ -606,6 +608,13 @@ CREATE INDEX staff_name_search_idx ON public.library_staff_records USING gin (na
 --
 
 CREATE INDEX staff_search_idx ON public.library_staff_records USING gin (searchable);
+
+
+--
+-- Name: staff_title_search_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX staff_title_search_idx ON public.library_staff_records USING gin (title_searchable);
 
 
 --
