@@ -39,8 +39,8 @@ class CatalogDocument < Document
      :first_status, :second_status, :electronic_access_count, :resource_url, :resource_url_label]
   end
 
-  def electronic_access_count
-    electronic_access&.count
+  def online_access_count
+    electronic_access&.count&.+ document[:electronic_portfolio_s]&.count
   end
 
   def resource_url
