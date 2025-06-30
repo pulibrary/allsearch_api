@@ -4,16 +4,22 @@
 # metadata from the library_staff_record table in the database
 class LibraryStaffRecord < ApplicationRecord
   validates :puid, :netid, :name, :email, :title, :library_title, presence: true
-  # See https://github.com/pulibrary/allsearch_api/issues/295#issuecomment-2302094168 for context on this search
+
+  where_sql = <<~SQL.squish
+    name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?)
+    OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)
+  SQL
+
+  order_sql = <<~SQL.squish
+    ts_rank(name_searchable, websearch_to_tsquery('unaccented_simple_dict', unaccent(?))) +
+    ts_rank(searchable, websearch_to_tsquery('unaccented_dict', unaccent(?)))
+  SQL
+
   scope :query, lambda { |search_term|
                   where(
-                    Arel.sql("name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) " \
-                             "OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)",
-                             search_term, search_term)
+                    Arel.sql(where_sql, search_term, search_term)
                   ).order(
-                    Arel.sql('ts_rank(name_searchable || searchable, ' \
-                             "websearch_to_tsquery('unaccented_simple_dict', unaccent(?)))",
-                             search_term).desc
+                    Arel.sql(order_sql, search_term, search_term).desc
                   )
                 }
 
@@ -36,6 +42,7 @@ class LibraryStaffRecord < ApplicationRecord
     record.department = row[9]
     record.unit = row[11]
     record.areas_of_study = row[14]&.gsub('//', ', ')
+    record.bio = row[16]
     record.my_scheduler_link = row[18]
     record.other_entities = row[19]&.gsub('//', ', ')
     record.library_title = title
