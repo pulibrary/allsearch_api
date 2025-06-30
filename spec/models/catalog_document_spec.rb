@@ -139,7 +139,7 @@ RSpec.describe CatalogDocument do
       source_data = { title_display: 'My book', id: 'SCSB-1234' }
       doc_keys = [:title, :other_fields]
       document = described_class.new(document: source_data, doc_keys:).to_h
-      expect(document[:other_fields]).to eq({ electronic_access_count: '0' })
+      expect(document[:other_fields]).to eq({ online_access_count: '0' })
     end
   end
 
