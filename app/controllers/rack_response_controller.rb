@@ -20,10 +20,10 @@ class RackResponseController
 
   private
 
-  attr_reader :request
+  attr_reader :request, :service
 
   def json
-    raise 'Subclass should implement #json'
+    service.new(query_terms:).our_response
   end
 
   def empty_query?
@@ -44,8 +44,6 @@ class RackResponseController
 
   # :reek:UtilityFunction
   def empty_query_response
-    # We don't report these to Honeybadger, since the system is working as
-    # expected in these cases by telling the user they need to enter a query.
     error_response(problem: 'QUERY_IS_EMPTY',
                    message: 'The query param must contain non-whitespace characters.',
                    status: 400)

@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 class DpulController < RackResponseController
-  private
-
-  def json
-    Dpul.new(query_terms:).our_response
+  def initialize(request)
+    super
+    @service = Dpul
   end
 end
