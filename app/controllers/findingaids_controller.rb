@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class FindingaidsController < ServiceController
-  def initialize
+class FindingaidsController < RackResponseController
+  def initialize(request)
     super
     @service = Findingaids
   end
