@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/search/article', to: 'article#show', defaults: { format: 'json' }
   get '/search/artmuseum/', to: 'art_museum#show', defaults: { format: 'json' }
   get '/search/best-bet/', to: 'best_bet#show', defaults: { format: 'json' }
-  get '/search/catalog/', to: 'catalog#show', defaults: { format: 'json' }
+  get '/search/catalog/', to: CatalogController, via: :all
   get '/search/database/', to: 'library_database#show', defaults: { format: 'json' }
   get '/search/dpul/', to: DpulController, via: :all
   get '/search/findingaids/', to: FindingaidsController, via: :all
