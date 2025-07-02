@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require_relative '../support/rack_solr_shared_examples'
 
 RSpec.describe 'GET /search/findingaids' do
+  let(:solr_base_url) { %r{http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production} }
+  let(:service_path) { 'findingaids' }
+
   it 'returns json' do
     stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/pulfalight-production/select?facet=false&fl=id,collection_ssm,creator_ssm,level_ssm,abstract_ssm,repository_ssm,extent_ssm,accessrestrict_ssm,normalized_date_ssm&q=cats&rows=3&sort=score%20desc,%20title_sort%20asc&fq=level_ssm:collection')
       .to_return(status: 200, body: file_fixture('solr/findingaids/cats.json'))
@@ -69,4 +73,6 @@ RSpec.describe 'GET /search/findingaids' do
       expect(response).to be_bad_request
     end
   end
+
+  it_behaves_like 'a rack solr controller'
 end
