@@ -14,13 +14,37 @@ class RackResponseController
     if empty_query?
       empty_query_response
     else
-      [200, { 'Content-Type' => 'application/json; charset=utf-8' }, [json]]
+      data_response
+    end
+  end
+
+  ErrorResponse = Struct.new(:problem, :message, :status) do
+    def respond
+      [
+        status,
+        { 'Content-Type' => 'application/json; charset=utf-8' },
+        [{ error: {
+          problem:,
+          message:
+        } }.to_json]
+      ]
     end
   end
 
   private
 
   attr_reader :request, :service
+
+  # :reek:TooManyStatements
+  def data_response
+    [200, { 'Content-Type' => 'application/json; charset=utf-8' }, [json]]
+  rescue AllsearchError => error
+    allsearch_error_response error
+  rescue Timeout::Error, Errno::ECONNRESET, Net::ProtocolError => error
+    upstream_http_error_response error
+  rescue StandardError => error
+    standard_error_response error
+  end
 
   def json
     service.new(query_terms:).our_response
@@ -44,21 +68,33 @@ class RackResponseController
 
   # :reek:UtilityFunction
   def empty_query_response
-    error_response(problem: 'QUERY_IS_EMPTY',
-                   message: 'The query param must contain non-whitespace characters.',
-                   status: 400)
+    ErrorResponse.new('QUERY_IS_EMPTY',
+                      'The query param must contain non-whitespace characters.',
+                      400).respond
   end
 
   # :reek:UtilityFunction
-  def error_response(problem:, message:, status:)
-    [
-      status,
-      { 'Content-Type' => 'application/json; charset=utf-8' },
-      [{ error: {
-        problem:,
-        message:
-      } }.to_json]
-    ]
+  def allsearch_error_response(exception)
+    Honeybadger.notify exception
+    ErrorResponse.new(exception.problem,
+                      exception.message,
+                      500).respond
+  end
+
+  # :reek:UtilityFunction
+  def upstream_http_error_response(exception)
+    Honeybadger.notify exception
+    ErrorResponse.new('UPSTREAM_ERROR',
+                      "Query to upstream failed with #{exception.class}, message: #{exception.message}",
+                      500).respond
+  end
+
+  # :reek:UtilityFunction
+  def standard_error_response(exception)
+    Honeybadger.notify exception
+    ErrorResponse.new('APPLICATION_ERROR',
+                      "This application threw #{exception.class}",
+                      500).respond
   end
 
   def special_characters

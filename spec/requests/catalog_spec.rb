@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require_relative '../support/rack_solr_shared_examples'
 
 RSpec.describe 'GET /search/catalog' do
   let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
+  let(:solr_base_url) { %r{http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production} }
+  let(:service_path) { 'catalog' }
 
   it 'returns json' do
     stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production/select?facet=false&fl=id,title_display,author_display,pub_created_display,format,holdings_1display,electronic_portfolio_s,electronic_access_1display&q=rubix&rows=3&sort=score%20desc,%20pub_date_start_sort%20desc,%20title_sort%20asc')
@@ -157,6 +160,44 @@ RSpec.describe 'GET /search/catalog' do
 
       expect(response).to be_successful
       expect(response_body[:records].first[:other_fields][:first_status]).to eq('On-site access')
+    end
+  end
+
+  it_behaves_like 'a rack solr controller'
+
+  context 'when service returns a Net::HTTP exception' do
+    before do
+      allow(Catalog).to receive(:new).and_raise(Net::HTTPFatalError.new('Some info', ''))
+      allow(Honeybadger).to receive(:notify)
+    end
+
+    it 'handles Net::HTTP exceptions' do
+      get '/search/catalog?query=123'
+      expect(response).to have_http_status(:internal_server_error)
+      data = JSON.parse(response.body, symbolize_names: true)
+      expect(data[:error]).to eq({
+                                   problem: 'UPSTREAM_ERROR',
+                                   message: 'Query to upstream failed with Net::HTTPFatalError, message: Some info'
+                                 })
+      expect(Honeybadger).to have_received(:notify)
+    end
+  end
+
+  context 'when our logic returns some kind of Standard exception' do
+    before do
+      allow(Catalog).to receive(:new).and_raise(KeyError.new('this key does not exist'))
+      allow(Honeybadger).to receive(:notify)
+    end
+
+    it 'handles the exception' do
+      get '/search/catalog?query=123'
+      expect(response).to have_http_status(:internal_server_error)
+      data = JSON.parse(response.body, symbolize_names: true)
+      expect(data[:error]).to eq({
+                                   problem: 'APPLICATION_ERROR',
+                                   message: 'This application threw KeyError'
+                                 })
+      expect(Honeybadger).to have_received(:notify)
     end
   end
 end
