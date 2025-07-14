@@ -353,7 +353,6 @@ PLATFORMS
 
 DEPENDENCIES
   actionpack
-  actionview
   activemodel
   activerecord
   activesupport

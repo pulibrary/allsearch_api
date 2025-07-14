@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'actionpack'
-gem 'actionview'
 gem 'activemodel'
 gem 'activerecord'
 gem 'activesupport'
