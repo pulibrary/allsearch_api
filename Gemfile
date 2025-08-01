@@ -20,10 +20,12 @@ gem 'rack-cors'
 gem 'rack-utf8_sanitizer'
 gem 'rails_semantic_logger'
 gem 'railties', '~> 8.0'
+gem 'rake'
 gem 'rswag'
 gem 'summon'
 gem 'tzinfo-data', '~> 1.2025'
 gem 'whenever', require: false
+gem 'zeitwerk'
 
 group :development do
   gem 'bcrypt_pbkdf'
@@ -32,6 +34,8 @@ group :development do
   gem 'capistrano-passenger', require: false
   gem 'capistrano-rails', require: false
   gem 'ed25519'
+  gem 'net-scp'
+  gem 'net-ssh'
   gem 'puma'
 end
 

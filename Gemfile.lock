@@ -152,6 +152,9 @@ GEM
     method_source (1.1.0)
     minitest (5.25.5)
     msgpack (1.8.0)
+    net-scp (4.1.0)
+      net-ssh (>= 2.6.5, < 8.0.0)
+    net-ssh (7.3.0)
     nio4r (2.7.4)
     nokogiri (1.18.9-arm64-darwin)
       racc (~> 1.4)
@@ -332,6 +335,8 @@ DEPENDENCIES
   health-monitor-rails
   honeybadger
   logstash-event
+  net-scp
+  net-ssh
   pg
   pry-byebug
   puma
@@ -339,6 +344,7 @@ DEPENDENCIES
   rack-utf8_sanitizer
   rails_semantic_logger
   railties (~> 8.0)
+  rake
   reek
   rspec-rails
   rspec_junit_formatter
@@ -351,6 +357,7 @@ DEPENDENCIES
   tzinfo-data (~> 1.2025)
   webmock
   whenever
+  zeitwerk
 
 BUNDLED WITH
    2.6.2
