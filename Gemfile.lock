@@ -97,6 +97,10 @@ GEM
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.1)
       zeitwerk (~> 2.6)
+    dry-monads (1.9.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.1)
+      zeitwerk (~> 2.6)
     dry-schema (1.14.1)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 1.0, >= 1.0.1)
@@ -104,6 +108,11 @@ GEM
       dry-initializer (~> 3.2)
       dry-logic (~> 1.5)
       dry-types (~> 1.8)
+      zeitwerk (~> 2.6)
+    dry-struct (1.8.0)
+      dry-core (~> 1.1)
+      dry-types (~> 1.8, >= 1.8.2)
+      ice_nine (~> 0.11)
       zeitwerk (~> 2.6)
     dry-types (1.8.3)
       bigdecimal (~> 3.0)
@@ -130,6 +139,7 @@ GEM
       ostruct
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
+    ice_nine (0.11.2)
     json (2.12.2)
     json-schema (5.1.1)
       addressable (~> 2.8)
@@ -214,6 +224,32 @@ GEM
       rexml (~> 3.1)
     regexp_parser (2.10.0)
     rexml (3.4.1)
+    rom (5.4.2)
+      rom-changeset (~> 5.4)
+      rom-core (~> 5.4)
+      rom-repository (~> 5.4, >= 5.4.2)
+    rom-changeset (5.4.0)
+      dry-core (~> 1.0)
+      rom-core (~> 5.4)
+      transproc (~> 1.1)
+    rom-core (5.4.0)
+      concurrent-ruby (~> 1.1)
+      dry-configurable (~> 1.0)
+      dry-core (~> 1.0)
+      dry-inflector (~> 1.0)
+      dry-initializer (~> 3.2)
+      dry-struct (~> 1.0)
+      dry-types (~> 1.6)
+      transproc (~> 1.1)
+    rom-repository (5.4.2)
+      dry-core (~> 1.0)
+      dry-initializer (~> 3.2)
+      rom-core (~> 5.4)
+    rom-sql (3.7.0)
+      dry-core (~> 1.1)
+      dry-types (~> 1.8)
+      rom (~> 5.4)
+      sequel (>= 4.49)
     rspec-core (3.13.4)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
@@ -279,6 +315,11 @@ GEM
     securerandom (0.4.1)
     semantic_logger (4.16.1)
       concurrent-ruby (~> 1.0)
+    sequel (5.95.0)
+      bigdecimal
+    sequel-activerecord_connection (2.0.0)
+      activerecord (>= 5.0, < 8.1)
+      sequel (~> 5.38)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -288,7 +329,9 @@ GEM
     sshkit (1.24.0)
     summon (2.0.5)
       json
+    thor (1.4.0)
     timeout (0.4.3)
+    transproc (1.1.1)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2025.2)
@@ -330,6 +373,7 @@ DEPENDENCIES
   csv
   datadog (~> 2.0)
   dogstatsd-ruby
+  dry-monads
   ed25519
   flipper-active_record
   health-monitor-rails
@@ -340,20 +384,24 @@ DEPENDENCIES
   pg
   pry-byebug
   puma
+  rack
   rack-cors
   rack-utf8_sanitizer
   rails_semantic_logger
   railties (~> 8.0)
   rake
   reek
+  rom-sql
   rspec-rails
   rspec_junit_formatter
   rswag
   rubocop-rails
   rubocop-rspec
   rubocop-rspec_rails
+  sequel-activerecord_connection
   simplecov
   summon
+  thor
   tzinfo-data (~> 1.2025)
   webmock
   whenever
