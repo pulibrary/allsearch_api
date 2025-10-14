@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_relative '../support/rack_solr_shared_examples'
+require_relative '../support/search_shared_examples'
 
 RSpec.describe 'GET /search/dpul' do
-  let(:solr_base_url) { %r{http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production} }
   let(:service_path) { 'dpul' }
+  before do
+    stub_request(:get, %r{http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production} )
+      .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
+  end
 
   it 'returns json' do
     stub_request(:get, 'http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production/select?facet=false&fl=id,readonly_title_ssim,readonly_creator_ssim,readonly_publisher_ssim,readonly_format_ssim,readonly_collections_tesim&group=true&group.facet=true&group.field=content_metadata_iiif_manifest_field_ssi&group.limit=1&group.main=true&q=cats&rows=3&sort=score%20desc')
@@ -71,5 +74,5 @@ RSpec.describe 'GET /search/dpul' do
     end
   end
 
-  it_behaves_like 'a rack solr controller'
+  it_behaves_like 'a search controller'
 end
