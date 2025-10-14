@@ -9,16 +9,16 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   match '/', to: MainController, via: :all
   match '/banner', to: BannerController, via: :all
-  get '/search/article', to: 'article#show', defaults: { format: 'json' }
-  get '/search/artmuseum/', to: 'art_museum#show', defaults: { format: 'json' }
-  get '/search/best-bet/', to: 'best_bet#show', defaults: { format: 'json' }
+  get '/search/article', to: ArticleController, via: :all
+  get '/search/artmuseum/', to: ArtMuseumController, via: :all
+  get '/search/best-bet/', to: BestBetController, via: :all
   get '/search/catalog/', to: CatalogController, via: :all
-  get '/search/database/', to: 'library_database#show', defaults: { format: 'json' }
+  get '/search/database/', to: LibraryDatabaseController, via: :all
   get '/search/dpul/', to: DpulController, via: :all
   get '/search/findingaids/', to: FindingaidsController, via: :all
   get '/search/journals/', to: JournalsController, via: :all
-  get '/search/libanswers/', to: 'libanswers#show', defaults: { format: 'json' }
-  get '/search/libguides/', to: 'libguides#show', defaults: { format: 'json' }
+  get '/search/libanswers/', to: LibanswersController, via: :all
+  get '/search/libguides/', to: LibguidesController, via: :all
   get '/search/pulmap', to: PulmapController, via: :all
   get '/search/staff/', to: LibraryStaffController, via: :all
   get '/search/website', to: LibraryWebsiteController, via: :all

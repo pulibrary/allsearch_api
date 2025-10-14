@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class ArtMuseumController < ServiceController
-  def initialize
+class ArtMuseumController < RackResponseController
+  def initialize(request)
     super
     @service = ArtMuseum
   end

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class LibanswersController < ServiceController
-  def initialize
+class LibanswersController < RackResponseController
+  def initialize(request)
     super
     @service = Libanswers
   end

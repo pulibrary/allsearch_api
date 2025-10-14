@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_relative '../support/search_shared_examples'
 
 RSpec.describe 'GET /search/journals' do
   let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
@@ -13,7 +12,7 @@ RSpec.describe 'GET /search/journals' do
       .to_return(status: 200, body: file_fixture('solr/catalog/rubix.json'))
   end
 
-  it_behaves_like 'a search controller'
+  it_behaves_like 'a solr search controller'
 
   context 'when service returns a Net::HTTP exception' do
     before do

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_relative '../support/search_shared_examples'
 
 RSpec.describe 'GET /search/findingaids' do
   let(:service_path) { 'findingaids' }
@@ -78,5 +77,5 @@ RSpec.describe 'GET /search/findingaids' do
     end
   end
 
-  it_behaves_like 'a search controller'
+  it_behaves_like 'a solr search controller'
 end

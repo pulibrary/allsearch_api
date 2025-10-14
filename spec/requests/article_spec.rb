@@ -4,9 +4,17 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/article' do
   before do
+    stub_request(:get, %r{http://api.summon.serialssolutions.com/2.0.0/search})
+      .to_return(status: 200,
+                 body: file_fixture('article/potato.json'),
+                 headers: { 'Content-Type': 'application/json' })
     stub_summon(query: 'forest', fixture: 'article/forest.json')
     get '/search/article?query=forest'
   end
+
+  let(:service_path) { 'article' }
+
+  it_behaves_like 'a search controller'
 
   it 'returns json' do
     expect(response).to be_successful

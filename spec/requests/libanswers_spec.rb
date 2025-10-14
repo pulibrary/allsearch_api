@@ -50,5 +50,24 @@ RSpec.describe 'GET /search/libanswers' do
                                                                     :other_fields)
       expect(response_body[:records]).to match(expected_response[:records])
     end
+
+    it 'sanitizes input' do
+      mock = stub_libanswers(query: 'bad+bin+bash+script', fixture: 'libanswers/printer.json')
+      get "/search/libanswers?query=#{CGI.escape '{bad#!/bin/bash<script>}'}"
+      expect(mock).to have_been_requested
+    end
+
+    it 'removes redundant space from query' do
+      mock = stub_libanswers(query: 'war+and+peace', fixture: 'libanswers/printer.json')
+      get "/search/libanswers?query=#{CGI.escape "war   and\tpeace"}"
+      expect(mock).to have_been_requested
+    end
+
+    it 'does not throw an error when the url contains numbers and the percent sign' do
+      mock = stub_libanswers(query: '%2525', fixture: 'libanswers/printer.json')
+      get "/search/libanswers?query=#{CGI.escape '%25'}"
+      expect(response).to have_http_status(:ok)
+      expect(mock).to have_been_requested
+    end
   end
 end

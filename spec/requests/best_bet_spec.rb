@@ -18,12 +18,15 @@ RSpec.describe 'GET /search/best-bet' do
   end
   let(:expected_record_keys) { [:title, :id, :type, :description, :url] }
   let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
+  let(:service_path) { 'best-bet' }
 
   before do
     stub_request(:get, 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSSDYbAmj_SDVK96DJItSsir_PbjMIqe8cBMvBfRIh4fpVzv3aozhCdulrgJXZzwl-fh-lbULMuLZuO/pub?gid=170493948&single=true&output=csv')
       .to_return(status: 200, body: google_response)
     BestBetLoadingService.new.run
   end
+
+  it_behaves_like 'a search controller'
 
   it 'returns json' do
     get '/search/best-bet?query=new york times'

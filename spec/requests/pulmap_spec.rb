@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_relative '../support/search_shared_examples'
 
 RSpec.describe 'GET /search/pulmap' do
   before do
@@ -12,7 +11,7 @@ RSpec.describe 'GET /search/pulmap' do
   let(:solr_base_url) { %r{http://lib-solr8-prod.princeton.edu:8983/solr/pulmap} }
   let(:service_path) { 'pulmap' }
 
-  it_behaves_like 'a search controller'
+  it_behaves_like 'a solr search controller'
 
   it 'returns json' do
     get '/search/pulmap?query=scribner'
