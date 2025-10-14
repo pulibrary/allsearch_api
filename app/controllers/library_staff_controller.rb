@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class LibraryStaffController < ServiceController
-  def initialize
+class LibraryStaffController < RackResponseController
+  def initialize(service)
     super
     @service = LibraryStaff
   end

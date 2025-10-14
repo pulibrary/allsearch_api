@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.shared_examples 'a rack solr controller' do
+RSpec.shared_examples 'a search controller' do
   context 'with unexpected characters' do
     let(:bad_script) { '{bad#!/bin/bash<script>}' }
     let(:simplified_chinese_cat) { '读' }
@@ -13,11 +13,6 @@ RSpec.shared_examples 'a rack solr controller' do
         redundant_spaces,
         percent_sign
       ]
-    end
-
-    before do
-      stub_request(:get, solr_base_url)
-        .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
     end
 
     it 'sanitizes input' do

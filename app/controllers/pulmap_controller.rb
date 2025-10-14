@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class PulmapController < ServiceController
-  def initialize
+class PulmapController < RackResponseController
+  def initialize(request)
     super
     @service = Pulmap
   end
