@@ -6,8 +6,9 @@ require_relative '../support/search_shared_examples'
 RSpec.describe 'GET /search/catalog' do
   let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
   let(:service_path) { 'catalog' }
+
   before do
-    stub_request(:get, %r{http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production} )
+    stub_request(:get, %r{http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production})
       .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
   end
 

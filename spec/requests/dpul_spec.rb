@@ -5,8 +5,9 @@ require_relative '../support/search_shared_examples'
 
 RSpec.describe 'GET /search/dpul' do
   let(:service_path) { 'dpul' }
+
   before do
-    stub_request(:get, %r{http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production} )
+    stub_request(:get, %r{http://lib-solr8-prod.princeton.edu:8983/solr/dpul-production})
       .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
   end
 
