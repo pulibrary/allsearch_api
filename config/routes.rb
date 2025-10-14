@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/search/artmuseum/', to: ArtMuseumController, via: :all
   get '/search/best-bet/', to: BestBetController, via: :all
   get '/search/catalog/', to: CatalogController, via: :all
-  get '/search/database/', to: 'library_database#show', defaults: { format: 'json' }
+  get '/search/database/', to: LibraryDatabaseController, via: :all
   get '/search/dpul/', to: DpulController, via: :all
   get '/search/findingaids/', to: FindingaidsController, via: :all
   get '/search/journals/', to: JournalsController, via: :all

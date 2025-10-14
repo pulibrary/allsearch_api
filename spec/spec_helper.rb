@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative './support/search_shared_examples'
+
 if ENV['CI'] || ENV['COVERAGE']
   require 'simplecov'
   SimpleCov.start 'rails'

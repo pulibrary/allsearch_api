@@ -23,6 +23,8 @@ RSpec.describe 'GET /search/database' do
       ]
     }
   end
+  let(:service_path) { 'database' }
+  it_behaves_like 'a search controller'
 
   before do
     stub_request(:get, 'https://lib-jobs.princeton.edu/library-databases.csv')

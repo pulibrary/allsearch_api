@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class LibraryDatabaseController < ServiceController
-  def initialize
+class LibraryDatabaseController < RackResponseController
+  def initialize(request)
     super
     @service = LibraryDatabase
   end
