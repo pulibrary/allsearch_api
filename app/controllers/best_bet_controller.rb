@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class BestBetController < ServiceController
-  def initialize
+class BestBetController < RackResponseController
+  def initialize(request)
     super
     @service = BestBet
   end

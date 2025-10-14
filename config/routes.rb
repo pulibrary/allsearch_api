@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   match '/banner', to: BannerController, via: :all
   get '/search/article', to: ArticleController, via: :all
   get '/search/artmuseum/', to: ArtMuseumController, via: :all
-  get '/search/best-bet/', to: 'best_bet#show', defaults: { format: 'json' }
+  get '/search/best-bet/', to: BestBetController, via: :all
   get '/search/catalog/', to: CatalogController, via: :all
   get '/search/database/', to: 'library_database#show', defaults: { format: 'json' }
   get '/search/dpul/', to: DpulController, via: :all

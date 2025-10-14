@@ -18,6 +18,9 @@ RSpec.describe 'GET /search/best-bet' do
   end
   let(:expected_record_keys) { [:title, :id, :type, :description, :url] }
   let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
+  let(:service_path) { 'best-bet' }
+
+  it_behaves_like 'a search controller'
 
   before do
     stub_request(:get, 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSSDYbAmj_SDVK96DJItSsir_PbjMIqe8cBMvBfRIh4fpVzv3aozhCdulrgJXZzwl-fh-lbULMuLZuO/pub?gid=170493948&single=true&output=csv')
