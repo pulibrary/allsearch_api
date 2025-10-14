@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class JournalsController < ServiceController
-  def initialize
+class JournalsController < RackResponseController
+  def initialize(request)
     super
     @service = Journals
   end
