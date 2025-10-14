@@ -56,13 +56,13 @@ RSpec.describe 'GET /search/libanswers' do
       get "/search/libanswers?query=#{CGI.escape '{bad#!/bin/bash<script>}'}"
       expect(mock).to have_been_requested
     end
-  
+
     it 'removes redundant space from query' do
       mock = stub_libanswers(query: 'war+and+peace', fixture: 'libanswers/printer.json')
       get "/search/libanswers?query=#{CGI.escape "war   and\tpeace"}"
       expect(mock).to have_been_requested
     end
-  
+
     it 'does not throw an error when the url contains numbers and the percent sign' do
       mock = stub_libanswers(query: '%2525', fixture: 'libanswers/printer.json')
       get "/search/libanswers?query=#{CGI.escape '%25'}"

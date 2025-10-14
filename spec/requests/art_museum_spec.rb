@@ -7,7 +7,9 @@ RSpec.describe 'GET /search/artmuseum' do
     stub_request(:get, %r{https://data.artmuseum.princeton.edu/search})
       .to_return(status: 200, body: file_fixture('art_museum/cats.json'))
   end
+
   let(:service_path) { 'artmuseum' }
+
   it_behaves_like 'a search controller'
 
   it 'returns json' do

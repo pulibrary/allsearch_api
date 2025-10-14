@@ -4,8 +4,15 @@ require 'rails_helper'
 
 RSpec.describe 'GET /search/libguides' do
   before do
+    stub_request(:get, %r{https://lgapi-us.libapps.com/1.2/guides})
+      .with(headers: { 'Authorization' => 'Bearer abcdef1234567890abcdef1234567890abcdef12' })
+      .to_return(status: 200, body: file_fixture('libguides/asian_american_studies.json'))
     stub_libguides(query: 'Asian%20American%20studies', fixture: 'libguides/asian_american_studies.json')
   end
+
+  let(:service_path) { 'libguides' }
+
+  it_behaves_like 'a search controller'
 
   it 'returns json' do
     get '/search/libguides?query=Asian+American+studies'

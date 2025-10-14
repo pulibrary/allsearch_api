@@ -11,6 +11,7 @@ RSpec.describe 'GET /search/article' do
     stub_summon(query: 'forest', fixture: 'article/forest.json')
     get '/search/article?query=forest'
   end
+
   let(:service_path) { 'article' }
 
   it_behaves_like 'a search controller'

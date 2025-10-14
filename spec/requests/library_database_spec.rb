@@ -24,13 +24,14 @@ RSpec.describe 'GET /search/database' do
     }
   end
   let(:service_path) { 'database' }
-  it_behaves_like 'a search controller'
 
   before do
     stub_request(:get, 'https://lib-jobs.princeton.edu/library-databases.csv')
       .to_return(status: 200, body: libjobs_response)
     LibraryDatabaseLoadingService.new.run
   end
+
+  it_behaves_like 'a search controller'
 
   it 'returns json' do
     get '/search/database?query=oxford music'
