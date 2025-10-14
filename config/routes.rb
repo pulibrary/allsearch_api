@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   get '/search/libguides/', to: 'libguides#show', defaults: { format: 'json' }
   get '/search/pulmap', to: PulmapController, via: :all
   get '/search/staff/', to: 'library_staff#show', defaults: { format: 'json' }
-  get '/search/website', to: 'library_website#show', defaults: { format: 'json' }
+  get '/search/website', to: LibraryWebsiteController, via: :all
 end
