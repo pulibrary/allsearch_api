@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get '/search/dpul/', to: DpulController, via: :all
   get '/search/findingaids/', to: FindingaidsController, via: :all
   get '/search/journals/', to: JournalsController, via: :all
-  get '/search/libanswers/', to: 'libanswers#show', defaults: { format: 'json' }
+  get '/search/libanswers/', to: LibanswersController, via: :all
   get '/search/libguides/', to: 'libguides#show', defaults: { format: 'json' }
   get '/search/pulmap', to: PulmapController, via: :all
   get '/search/staff/', to: LibraryStaffController, via: :all
