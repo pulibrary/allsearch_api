@@ -75,5 +75,5 @@ RSpec.describe 'GET /search/dpul' do
     end
   end
 
-  it_behaves_like 'a search controller'
+  it_behaves_like 'a solr search controller'
 end

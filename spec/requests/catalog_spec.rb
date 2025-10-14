@@ -167,7 +167,7 @@ RSpec.describe 'GET /search/catalog' do
     end
   end
 
-  it_behaves_like 'a search controller'
+  it_behaves_like 'a solr search controller'
 
   context 'when service returns a Net::HTTP exception' do
     before do

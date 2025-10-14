@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class ArticleController < ServiceController
-  def initialize
+class ArticleController < RackResponseController
+  def initialize(request)
     super
     @service = Article
   end

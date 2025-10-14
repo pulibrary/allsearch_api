@@ -1,8 +1,16 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require_relative '../support/search_shared_examples'
 
 RSpec.describe 'GET /search/artmuseum' do
+  before do
+    stub_request(:get, %r{https://data.artmuseum.princeton.edu/search})
+      .to_return(status: 200, body: file_fixture('art_museum/cats.json'))
+  end
+  let(:service_path) { 'artmuseum' }
+  it_behaves_like 'a search controller'
+
   it 'returns json' do
     stub_art_museum(query: 'cats', fixture: 'art_museum/cats.json')
     get '/search/artmuseum?query=cats'
