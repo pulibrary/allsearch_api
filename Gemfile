@@ -41,7 +41,7 @@ end
 
 group :development, :test do
   gem 'brakeman'
-  gem 'pry-byebug'
+  gem 'byebug'
   gem 'reek'
   gem 'rspec_junit_formatter', require: false
   gem 'rspec-rails'
