@@ -4,6 +4,7 @@
 class Article
   include ActiveModel::API
   include Parsed
+
   attr_reader :query_terms, :service
 
   delegate :documents, to: :service_response

@@ -5,6 +5,7 @@ class Libanswers
   attr_reader :query_terms
 
   include Parsed
+
   def initialize(query_terms:)
     @query_terms = CGI.escape(query_terms)
   end
