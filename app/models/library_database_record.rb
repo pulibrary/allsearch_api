@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-LIBRARY_DATABASE_CSV_FIELDS = [:libguides_id, :name, :description, :alt_names_concat, :url,
-                               :friendly_url, :subjects_concat].freeze
-
 class LibraryDatabaseRecord < ApplicationRecord
   scope :query, lambda { |search_term|
                   where(
@@ -14,13 +11,25 @@ class LibraryDatabaseRecord < ApplicationRecord
                   )
                 }
 
-  # :reek:TooManyStatements
+  # rubocop:disable Metrics/MethodLength
   def self.new_from_csv(row)
-    record = LibraryDatabaseRecord.new
-    LIBRARY_DATABASE_CSV_FIELDS.each_with_index { |field, index| record.method(:"#{field}=").call(row[index]) }
-    record.alt_names = record.alt_names_concat&.split('; ')
-    record.subjects = record.subjects_concat&.split(';')
-    record.save
-    record
+    alt_names_concat = row[3]
+    subjects_concat = row[6]
+    repository.create(
+      libguides_id: row[0],
+      name: row[1],
+      description: row[2],
+      alt_names_concat:,
+      url: row[4],
+      friendly_url: row[5],
+      subjects_concat:,
+      alt_names: alt_names_concat&.split('; '),
+      subjects: subjects_concat&.split(';')
+    )
+  end
+  # rubocop:enable Metrics/MethodLength
+
+  def self.repository
+    @repository ||= LibraryDatabaseRepository.new(Rails.application.config.rom)
   end
 end
