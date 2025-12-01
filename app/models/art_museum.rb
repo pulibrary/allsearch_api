@@ -4,6 +4,7 @@
 class ArtMuseum
   include ActiveModel::API
   include Parsed
+
   attr_reader :service, :service_response
 
   def initialize(query_terms:)

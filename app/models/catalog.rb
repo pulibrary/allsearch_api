@@ -5,6 +5,7 @@ class Catalog
   include ActiveModel::API
   include Parsed
   include Solr
+
   attr_reader :query_terms, :service, :service_response
 
   def initialize(query_terms:)

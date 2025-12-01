@@ -3,6 +3,7 @@
 # This class is responsible for
 class BestBet
   include Parsed
+
   attr_reader :query_terms, :service_response
 
   def initialize(query_terms:)

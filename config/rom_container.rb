@@ -8,6 +8,7 @@ require_relative '../app/relations/banner_relation'
 # This class is responsible for creating a Rom::Container
 class RomContainer
   include Dry::Monads[:maybe]
+
   def call
     return None() unless ready?
 

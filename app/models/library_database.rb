@@ -4,6 +4,7 @@
 # into an API response
 class LibraryDatabase
   include Parsed
+
   attr_reader :query_terms, :service_response
 
   def initialize(query_terms:)
