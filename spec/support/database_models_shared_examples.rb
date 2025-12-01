@@ -15,14 +15,14 @@ RSpec.shared_examples 'a database service' do
   end
 
   it 'can find the record with an unaccented query term' do
-    expect(described_class.query(unaccented)).to contain_exactly(database_record)
+    expect(described_class.query(unaccented).pluck(:id)).to contain_exactly(database_record.id)
   end
 
   it 'can find the record with a precomposed query term' do
-    expect(described_class.query(precomposed)).to contain_exactly(database_record)
+    expect(described_class.query(precomposed).pluck(:id)).to contain_exactly(database_record.id)
   end
 
   it 'can find the record with a decomposed query term' do
-    expect(described_class.query(decomposed)).to contain_exactly(database_record)
+    expect(described_class.query(decomposed).pluck(:id)).to contain_exactly(database_record.id)
   end
 end
