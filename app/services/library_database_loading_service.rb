@@ -3,8 +3,13 @@
 class LibraryDatabaseLoadingService < CSVLoadingService
   private
 
-  def class_to_load
-    LibraryDatabaseRecord
+  def process_data
+    repository.delete
+    repository.create_from_csv csv
+  end
+
+  def existing_records
+    repository.library_database_records.count
   end
 
   def expected_headers
@@ -13,5 +18,9 @@ class LibraryDatabaseLoadingService < CSVLoadingService
 
   def uri
     @uri ||= URI.parse('https://lib-jobs.princeton.edu/library-databases.csv')
+  end
+
+  def repository
+    @repository ||= LibraryDatabaseRepository.new(Rails.application.config.rom)
   end
 end
