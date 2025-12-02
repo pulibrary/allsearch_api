@@ -1,16 +1,6 @@
 # frozen_string_literal: true
 
 class LibraryDatabaseRecord < ApplicationRecord
-  scope :query, lambda { |search_term|
-                  where(
-                    Arel.sql("searchable @@ websearch_to_tsquery('unaccented_dict', unaccent(?))",
-                             search_term)
-                  ).order(
-                    Arel.sql("ts_rank(searchable, websearch_to_tsquery('unaccented_dict', unaccent(?)))",
-                             search_term).desc
-                  )
-                }
-
   # rubocop:disable Metrics/MethodLength
   def self.new_from_csv(row)
     alt_names_concat = row[3]

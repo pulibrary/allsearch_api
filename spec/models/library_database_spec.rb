@@ -23,8 +23,9 @@ RSpec.describe LibraryDatabase do
     end
 
     it 'can search for queries as passed by the controller' do
-      expect(db_service.library_database_service_response).not_to be_empty
-      expect(db_service.library_database_service_response.last.name).to eq('Kōbunsō Taika Koshomoku')
+      our_response = JSON.parse(db_service.our_response, symbolize_names: true)
+      expect(our_response[:records]).not_to be_empty
+      expect(our_response[:records].last[:title]).to eq('Kōbunsō Taika Koshomoku')
     end
 
     it 'builds a working more_link' do
@@ -44,7 +45,8 @@ RSpec.describe LibraryDatabase do
       let(:query_terms) { 'Ma%CA%BBagarim' }
 
       it 'can search for queries as passed by the controller' do
-        expect(db_service.library_database_service_response).not_to be_empty
+        our_response = JSON.parse(db_service.our_response, symbolize_names: true)
+        expect(our_response[:records]).not_to be_empty
       end
     end
   end

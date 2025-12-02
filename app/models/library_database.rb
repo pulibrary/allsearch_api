@@ -3,17 +3,22 @@
 # This class is responsible for translating LibraryDatabaseRecords, originally from LibGuides,
 # into an API response
 class LibraryDatabase
-  include Parsed
-
-  attr_reader :query_terms, :service_response
+  attr_reader :query_terms
 
   def initialize(query_terms:)
     @query_terms = query_terms
-    @service_response = library_database_service_response
   end
 
-  def library_database_service_response
-    LibraryDatabaseRecord.query(unescaped_terms)
+  def our_response
+    {
+      number:,
+      records:,
+      more: more_link
+    }.to_json
+  end
+
+  def service_response
+    @service_response ||= library_databases.query(unescaped_terms)
   end
 
   def unescaped_terms
@@ -35,7 +40,13 @@ class LibraryDatabase
                      query: "q=#{transliterated_escaped_terms}")
   end
 
-  def documents
-    service_response.first(3)
+  def records
+    service_response.limit(3).map { LibraryDatabaseDocument.new(it).public_metadata }
+  end
+
+  private
+
+  def library_databases
+    @library_databases ||= Rails.application.config.rom.relations[:library_database_records]
   end
 end
