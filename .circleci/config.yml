@@ -79,7 +79,6 @@ jobs:
           command: bundle exec reek app
   test:
     executor: allsearch-executor
-    parallelism: 3
     steps:
       - attach_workspace:
           at: '~/allsearch_api'
