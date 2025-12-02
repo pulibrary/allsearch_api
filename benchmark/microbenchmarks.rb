@@ -4,7 +4,7 @@ require 'benchmark/ips'
 require_relative '../config/environment'
 
 Benchmark.ips do |b|
-  library_database_repo = LibraryDatabaseRepository.new Rails.application.config.rom
+  library_database_repo = RepositoryFactory.library_database
   csv = CSV.read Rails.root.join('spec/fixtures/files/libjobs/library-databases.csv'), headers: true
   b.report('LibraryDatabaseRepository#create_from_csv') do
     library_database_repo.create_from_csv csv
