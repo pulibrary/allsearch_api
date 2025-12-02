@@ -130,9 +130,9 @@ GEM
     ffi (1.17.2-x86_64-linux-gnu)
     flipper (1.3.4)
       concurrent-ruby (< 2)
-    flipper-active_record (1.3.4)
-      activerecord (>= 4.2, < 9)
+    flipper-sequel (1.3.4)
       flipper (~> 1.3.4)
+      sequel (>= 4.0.0, < 6)
     hashdiff (1.2.0)
     health-monitor-rails (12.9.0)
       railties (>= 6.1)
@@ -404,7 +404,7 @@ DEPENDENCIES
   dogstatsd-ruby
   dry-monads
   ed25519
-  flipper-active_record
+  flipper-sequel
   health-monitor-rails
   honeybadger
   logstash-event
