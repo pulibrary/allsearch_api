@@ -33,7 +33,7 @@ RSpec.describe LibraryDatabaseLoadingService do
 
     it 'does not proceed' do
       rom = Rails.application.config.rom
-      repo = LibraryDatabaseRepository.new(rom)
+      repo = RepositoryFactory.library_database
       repo.create(libguides_id: 123, name: 'JSTOR')
       expect { described_class.new.run }.not_to(change { rom.relations[:library_database_records].count })
     end
@@ -42,7 +42,7 @@ RSpec.describe LibraryDatabaseLoadingService do
   context 'when a library database in postgres is no longer in the CSV' do
     it 'removes it from the database' do
       rom = Rails.application.config.rom
-      repo = LibraryDatabaseRepository.new(rom)
+      repo = RepositoryFactory.library_database
       repo.create(libguides_id: 123, name: 'JSTOR')
       expect(rom.relations[:library_database_records].where(libguides_id: 123).count).to eq 1
       described_class.new.run
@@ -53,7 +53,7 @@ RSpec.describe LibraryDatabaseLoadingService do
   context 'when a library database has updated info in the CSV' do
     it 'updates the relevant fields' do
       rom = Rails.application.config.rom
-      repo = LibraryDatabaseRepository.new(rom)
+      repo = RepositoryFactory.library_database
       repo.create(libguides_id: 2_938_694, name: 'JSTOR')
       expect(
         rom.relations[:library_database_records].where(libguides_id: 2_938_694).first[:name]
@@ -68,7 +68,7 @@ RSpec.describe LibraryDatabaseLoadingService do
   context 'when the CSV is suspiciously small relative to the number of database rows' do
     it 'does not proceed' do
       rom = Rails.application.config.rom
-      repo = LibraryDatabaseRepository.new(rom)
+      repo = RepositoryFactory.library_database
       30.times { |number| repo.create(libguides_id: number, name: 'JSTOR') }
       expect { described_class.new.run }.not_to(change { rom.relations[:library_database_records].count })
     end

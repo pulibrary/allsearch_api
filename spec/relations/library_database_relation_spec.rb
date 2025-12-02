@@ -3,14 +3,12 @@
 require 'rails_helper'
 
 # rubocop:disable RSpec/NestedGroups
-# rubocop:disable RSpec/MultipleMemoizedHelpers
 RSpec.describe LibraryDatabaseRelation do
-  let(:rom) { Rails.application.config.rom }
-  let(:library_databases) { rom.relations[:library_database_records] }
+  let(:library_databases) { Rails.application.config.rom.relations[:library_database_records] }
 
   describe '#query' do
     before do
-      repo = LibraryDatabaseRepository.new(rom)
+      repo = RepositoryFactory.library_database
       repo.create(name: 'Resource',
                   alt_names_concat: 'EBSCO; JSTOR',
                   libguides_id: 1,
@@ -105,4 +103,3 @@ RSpec.describe LibraryDatabaseRelation do
   end
 end
 # rubocop:enable RSpec/NestedGroups
-# rubocop:enable RSpec/MultipleMemoizedHelpers
