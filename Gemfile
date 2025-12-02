@@ -34,6 +34,7 @@ gem 'zeitwerk'
 
 group :development do
   gem 'bcrypt_pbkdf'
+  gem 'benchmark-ips'
   gem 'capistrano', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-passenger', require: false
