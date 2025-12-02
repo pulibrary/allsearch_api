@@ -1,7 +1,8 @@
 def create_banner_if_none_exists
-  return Rails.logger.info('Already have a banner object, update that one') if Banner.count >= 1
+  repo = RepositoryFactory.banner
+  return Rails.logger.info('Already have a banner object, update that one') if repo.banners.count >= 1
 
-  Banner.create!
+  repo.create({})
 end
 
 create_banner_if_none_exists

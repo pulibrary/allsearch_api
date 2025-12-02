@@ -25,14 +25,13 @@ RSpec.describe 'GET /banner' do
   end
 
   context 'with an updated banner' do
-    let(:banner) { Banner.first }
+    let(:banner) { RepositoryFactory.banner.banners.first }
     let(:text_html) do
       '<h2>This is a big heading about an important thing</h2><p>It includes a <a href="https://www.example.com">link</a></p>'
     end
 
     it 'can pass on encoded html' do
-      banner.text = text_html
-      banner.save!
+      RepositoryFactory.banner.update banner.id, text: text_html
       get '/banner'
       # includes escaped html to pass on, which will be decoded on the other side
       expect(response.body).to match(/u003ch2/)
