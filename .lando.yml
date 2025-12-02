@@ -4,11 +4,14 @@ services:
     type: postgres:15
     portforward: true
   catalog_solr:
-    type: solr:8.4
+    type: solr:custom
+    overrides:
+      image: quay.io/pulibrary/ci-solr:9.9-v1.0.1
+      command: server/scripts/lando-start.sh
     portforward: true
     core: catalog
     config:
-      dir: "solr/solr_configs/catalog-production-v2/conf"
+      dir: "solr/solr_configs/catalog-production-v3/conf"
   dpul_solr:
     type: solr:8.4
     portforward: true
