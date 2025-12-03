@@ -24,7 +24,7 @@ gem 'rails_semantic_logger'
 gem 'railties', '~> 8.0'
 gem 'rake'
 gem 'rom-sql'
-gem 'rswag'
+gem 'rswag-api'
 gem 'sequel-activerecord_connection'
 gem 'summon'
 gem 'thor'
@@ -51,6 +51,7 @@ group :development, :test do
   gem 'reek'
   gem 'rspec_junit_formatter', require: false
   gem 'rspec-rails'
+  gem 'rswag-specs'
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
   gem 'rubocop-rspec_rails', require: false
