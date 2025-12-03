@@ -25,8 +25,8 @@ class Article
       's.dym': 't', # Enables Did You Mean functionality
       's.ps': 3 # Limits to three documents in response
     )
-  rescue Summon::Transport::TransportError => error
-    handle_summon_error(error)
+  rescue Summon::Transport::TransportError
+    handle_summon_authorization_error
   end
 
   def number
@@ -41,13 +41,8 @@ class Article
   private
 
   # :reek:FeatureEnvy
-  def handle_summon_error(error)
-    message = if error.is_a? Summon::Transport::AuthorizationError
-                'Could not authenticate to the upstream Summon service'
-              else
-                error.message
-              end
+  def handle_summon_authorization_error
     raise AllsearchError.new(problem: 'UPSTREAM_ERROR',
-                             msg: message)
+                             msg: 'Could not authenticate to the upstream Summon service')
   end
 end
