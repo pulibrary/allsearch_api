@@ -13,7 +13,6 @@ gem 'datadog', '~> 2.0', require: 'datadog/auto_instrument'
 gem 'dogstatsd-ruby'
 gem 'dry-monads'
 gem 'flipper-sequel', require: false
-gem 'health-monitor-rails'
 gem 'honeybadger'
 gem 'logstash-event'
 gem 'pg'
