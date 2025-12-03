@@ -1,23 +1,8 @@
 # frozen_string_literal: true
 
+require_relative '../app/router'
+
 Rails.application.routes.draw do
-  # Defines the root path route ("/")
-  match '/', to: MainController, via: :all
-  match '/banner', to: BannerController, via: :all
-  get '/api-docs', to: SwaggerUiController, via: :all
-  get '/api-docs/v1/swagger.yaml', to: OpenApiSpecController, via: :all
-  get '/health', to: HealthcheckController, via: :all
-  get '/search/article', to: ArticleController, via: :all
-  get '/search/artmuseum/', to: ArtMuseumController, via: :all
-  get '/search/best-bet/', to: BestBetController, via: :all
-  get '/search/catalog/', to: CatalogController, via: :all
-  get '/search/database/', to: LibraryDatabaseController, via: :all
-  get '/search/dpul/', to: DpulController, via: :all
-  get '/search/findingaids/', to: FindingaidsController, via: :all
-  get '/search/journals/', to: JournalsController, via: :all
-  get '/search/libanswers/', to: LibanswersController, via: :all
-  get '/search/libguides/', to: LibguidesController, via: :all
-  get '/search/pulmap', to: PulmapController, via: :all
-  get '/search/staff/', to: LibraryStaffController, via: :all
-  get '/search/website', to: LibraryWebsiteController, via: :all
+  get '/', to: Router
+  get '/*', to: Router
 end
