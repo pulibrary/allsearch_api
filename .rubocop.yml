@@ -27,7 +27,7 @@ RSpec/EmptyExampleGroup:
 
 RSpec/SpecFilePathFormat:
   Exclude:
-    - 'spec/models/oauth_token_spec.rb'
+    - 'spec/models/oauth_token_cache_spec.rb'
     - 'spec/services/oauth_service_spec.rb'
 
 Style/BitwisePredicate:

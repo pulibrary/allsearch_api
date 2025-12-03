@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class RepositoryFactory
-  [:banner, :library_database].each do |method_name|
+  [:banner, :library_database, :oauth_token].each do |method_name|
     define_singleton_method method_name do
       return instance_variable_get("@#{method_name}") if instance_variable_defined?("@#{method_name}")
 
@@ -21,6 +21,10 @@ class RepositoryFactory
 
   def library_database
     LibraryDatabaseRepository.new(rom)
+  end
+
+  def oauth_token
+    OAuthTokenRepository.new(rom)
   end
 
   private

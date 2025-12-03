@@ -46,8 +46,8 @@ class Libguides
   def request
     libguides_request = Net::HTTP::Get.new(uri)
 
-    token = OAuthToken.find_or_create_by({ service: 'libguides',
-                                           endpoint: 'https://lgapi-us.libapps.com/1.2/oauth/token' }).token
+    token = OAuthTokenCache.new(service: 'libguides',
+                                endpoint: 'https://lgapi-us.libapps.com/1.2/oauth/token').token
     libguides_request['Authorization'] = "Bearer #{token}"
     libguides_request
   end
