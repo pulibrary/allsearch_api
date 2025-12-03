@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rom-repository'
+require 'flipper'
 
 # This repository translates between the objects and methods in our repository and the data and queries in our database
 # To instantiate:
