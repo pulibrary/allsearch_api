@@ -5,6 +5,7 @@ require 'rom-sql'
 require 'dry-monads'
 require_relative '../app/relations/banner_relation'
 require_relative '../app/relations/library_database_relation'
+require_relative '../app/relations/oauth_token_relation'
 
 # This class is responsible for creating a Rom::Container
 class RomContainer
@@ -17,6 +18,7 @@ class RomContainer
     rom_config = ROM::Configuration.new(:sql, db_connection)
     rom_config.register_relation BannerRelation
     rom_config.register_relation LibraryDatabaseRelation
+    rom_config.register_relation OAuthTokenRelation
     Some(ROM.container(rom_config))
   end
 

@@ -17,8 +17,8 @@ RSpec.describe Libanswers do
 
   describe 'with a token already in the database' do
     before do
-      OAuthToken.create!({ service: 'libanswers',
-                           endpoint: 'https://faq.library.princeton.edu/api/1.1/oauth/token' })
+      RepositoryFactory.oauth_token.create(service: 'libanswers',
+                                           endpoint: 'https://faq.library.princeton.edu/api/1.1/oauth/token')
       stub_libanswers(query: 'printer', fixture: 'libanswers/printer.json')
     end
 
@@ -26,14 +26,14 @@ RSpec.describe Libanswers do
       expect do
         service = described_class.new(query_terms: 'printer')
         service.service_response
-      end.not_to change(OAuthToken, :count)
+      end.not_to(change { Rails.application.config.rom.relations[:oauth_tokens].count })
     end
   end
 
   context 'when the upstream service returns a 400' do
     before do
-      OAuthToken.create!({ service: 'libanswers',
-                           endpoint: 'https://faq.library.princeton.edu/api/1.1/oauth/token' })
+      RepositoryFactory.oauth_token.create(service: 'libanswers',
+                                           endpoint: 'https://faq.library.princeton.edu/api/1.1/oauth/token')
       stub_libanswers(query: 'printer', fixture: 'libanswers/printer.json')
       stub_request(:post, 'https://faq.library.princeton.edu/api/1.1/oauth/token')
         .with(body: 'client_id=ABC&client_secret=12345&grant_type=client_credentials')
