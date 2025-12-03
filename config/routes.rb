@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  mount Rswag::Api::Engine => '/api-docs'
   mount HealthMonitor::Engine, at: '/' # Can see at /health
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,6 +8,7 @@ Rails.application.routes.draw do
   match '/', to: MainController, via: :all
   match '/banner', to: BannerController, via: :all
   get '/api-docs', to: SwaggerUiController, via: :all
+  get '/api-docs/v1/swagger.yaml', to: OpenApiSpecController, via: :all
   get '/search/article', to: ArticleController, via: :all
   get '/search/artmuseum/', to: ArtMuseumController, via: :all
   get '/search/best-bet/', to: BestBetController, via: :all
