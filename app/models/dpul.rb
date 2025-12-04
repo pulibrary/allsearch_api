@@ -2,7 +2,6 @@
 
 # This class is responsible for querying DPUL
 class Dpul
-  include ActiveModel::API
   include Parsed
   include Solr
 

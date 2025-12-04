@@ -2,7 +2,6 @@
 
 # This class is responsible for querying maps.princeton.edu (aka Pulmap)
 class Pulmap
-  include ActiveModel::API
   include Parsed
   include Solr
 

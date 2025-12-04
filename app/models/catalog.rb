@@ -2,7 +2,6 @@
 
 # This class is responsible for querying the Catalog
 class Catalog
-  include ActiveModel::API
   include Parsed
   include Solr
 

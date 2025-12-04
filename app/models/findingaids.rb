@@ -2,7 +2,6 @@
 
 # This class is responsible for querying Findingaids (aka PULFAlight)
 class Findingaids
-  include ActiveModel::API
   include Parsed
   include Solr
 
