@@ -41,8 +41,6 @@ class LibraryDatabaseDocument
   end
 
   def sanitize(text)
-    return text if text.blank?
-
-    sanitizer.sanitize(text, scrubber: TextScrubber.new)
+    sanitizer.sanitize(text, scrubber: TextScrubber.new) if text
   end
 end

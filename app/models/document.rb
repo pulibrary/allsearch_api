@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 # A generic document class, to be subclassed with
 # specific logic about getting document metadata
 # from various Data structures
 class Document
+  include Dry::Monads[:maybe]
+
   def initialize(document:, doc_keys:)
     @document = document
     @doc_keys = doc_keys
@@ -25,9 +29,7 @@ class Document
   end
 
   def sanitize(text)
-    return text if text.blank?
-
-    sanitizer.sanitize(text, scrubber: TextScrubber.new)
+    sanitizer.sanitize(text, scrubber: TextScrubber.new) if text
   end
 
   def other_fields

@@ -1,14 +1,22 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 class LibguidesDocument < Document
+  include Dry::Monads[:maybe]
+
   def title
     document['name']
   end
 
   def creator
-    return if guide_owner.blank?
-
-    "#{guide_owner['first_name']} #{guide_owner['last_name']}"
+    Maybe(guide_owner).bind do |owner|
+      if owner.empty?
+        None()
+      else
+        Some("#{owner['first_name']} #{owner['last_name']}")
+      end
+    end.value_or(nil)
   end
 
   def publisher
