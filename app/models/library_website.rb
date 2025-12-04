@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
 require 'flipper'
 require_relative '../environment'
 
 class LibraryWebsite
+  include Dry::Monads[:maybe]
   include Parsed
 
   attr_reader :query_terms
@@ -42,9 +44,9 @@ class LibraryWebsite
   private
 
   def more_link
-    URI::HTTPS.build(host: LibraryWebsite.library_website_host,
-                     path: '/search',
-                     query: "keys=#{query_terms}")
+    Some(URI::HTTPS.build(host: LibraryWebsite.library_website_host,
+                          path: '/search',
+                          query: "keys=#{query_terms}"))
   end
 
   def uri

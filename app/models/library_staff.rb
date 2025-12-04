@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 # This class is responsible for translating LibraryStaffRecords
 # into an API response
 class LibraryStaff
+  include Dry::Monads[:maybe]
   include Parsed
 
   attr_reader :query_terms, :service_response
@@ -22,8 +25,8 @@ class LibraryStaff
   end
 
   def more_link
-    URI::HTTPS.build(host: 'library.princeton.edu', path: '/about/staff-directory',
-                     query: "combine=#{query_terms}")
+    Some(URI::HTTPS.build(host: 'library.princeton.edu', path: '/about/staff-directory',
+                          query: "combine=#{query_terms}"))
   end
 
   def documents

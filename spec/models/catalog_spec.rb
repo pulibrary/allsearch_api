@@ -14,7 +14,7 @@ RSpec.describe Catalog do
 
     it 'links to the host associated with the solr collection' do
       catalog = described_class.new(query_terms: 'rubix')
-      expect(catalog.more_link.to_s).to eq('https://catalog.princeton.edu/catalog?q=rubix&search_field=all_fields')
+      expect(catalog.more_link.value!.to_s).to eq('https://catalog.princeton.edu/catalog?q=rubix&search_field=all_fields')
     end
 
     context 'when on a non-production environment' do
@@ -32,7 +32,7 @@ RSpec.describe Catalog do
 
       it 'links to the host associated with the solr collection' do
         catalog = described_class.new(query_terms: 'rubix')
-        expect(catalog.more_link.to_s).to eq('https://catalog-staging.princeton.edu/catalog?q=rubix&search_field=all_fields')
+        expect(catalog.more_link.value!.to_s).to eq('https://catalog-staging.princeton.edu/catalog?q=rubix&search_field=all_fields')
       end
     end
   end

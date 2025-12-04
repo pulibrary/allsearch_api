@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
 require_relative '../../environment'
 
 # This module helps classes communicate with Solr APIs
 module Solr
+  include Dry::Monads[:maybe]
+
   def solr_service_response
     response = Net::HTTP.get_response(solr_uri)
     response_code = response.code.to_i
@@ -20,8 +23,8 @@ module Solr
   end
 
   def more_link
-    URI::HTTPS.build(host: "#{service_subdomain}.princeton.edu", path: '/catalog',
-                     query: "q=#{query_terms}&search_field=all_fields")
+    Some(URI::HTTPS.build(host: "#{service_subdomain}.princeton.edu", path: '/catalog',
+                          query: "q=#{query_terms}&search_field=all_fields"))
   end
 
   def documents

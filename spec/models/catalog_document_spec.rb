@@ -161,6 +161,13 @@ RSpec.describe CatalogDocument do
       document = described_class.new(document: source_data, doc_keys:).to_h
       expect(document[:resource_url]).to eq('https://catalog.princeton.edu/catalog/4970874#view')
     end
+
+    it 'is blank if electronic_portfolio_s is empty and electronic_access_1display is an empty string' do
+      source_data = { electronic_access_1display: '' }
+      doc_keys = [:resource_url]
+      document = described_class.new(document: source_data, doc_keys:).to_h
+      expect(document[:resource_url]).to be_nil
+    end
   end
 
   describe '#resource_url_label' do
