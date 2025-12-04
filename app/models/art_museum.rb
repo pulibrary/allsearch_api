@@ -13,7 +13,11 @@ class ArtMuseum
   end
 
   def query_terms
-    @query_terms.truncate(220, omission: '', separator: /\s/)
+    if query_is_too_long?
+      @query_terms[0, query_end]
+    else
+      @query_terms
+    end
   end
 
   private
@@ -47,5 +51,18 @@ class ArtMuseum
       problem: 'UPSTREAM_ERROR',
       msg: "Query to upstream failed with #{ActionController::Base.helpers.strip_tags(response)}"
     )
+  end
+
+  def query_is_too_long?
+    @query_terms.length > maximum_characters
+  end
+
+  def query_end
+    # The index of the last whitespace character within maximum_characters
+    @query_terms.rindex(/\s/, maximum_characters)
+  end
+
+  def maximum_characters
+    220
   end
 end
