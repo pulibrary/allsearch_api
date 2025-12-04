@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 # This class is responsible for querying Libanswers for FAQs
 class Libanswers
   attr_reader :query_terms
 
+  include Dry::Monads[:maybe]
   include Parsed
 
   def initialize(query_terms:)
@@ -15,7 +18,7 @@ class Libanswers
   end
 
   def more_link
-    "https://faq.library.princeton.edu/search/?t=0&q=#{query_terms.gsub(/\s+/, '+')}"
+    Some("https://faq.library.princeton.edu/search/?t=0&q=#{query_terms.gsub(/\s+/, '+')}")
   end
 
   def documents

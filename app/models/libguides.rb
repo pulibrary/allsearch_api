@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 class Libguides
+  include Dry::Monads[:maybe]
   include Parsed
 
   attr_reader :query_terms
@@ -27,7 +30,7 @@ class Libguides
   private
 
   def more_link
-    "https://libguides.princeton.edu/srch.php?q=#{query_terms}"
+    Some("https://libguides.princeton.edu/srch.php?q=#{query_terms}")
   end
 
   def uri

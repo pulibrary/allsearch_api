@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 # This class is responsible for translating LibraryDatabaseRecords, originally from LibGuides,
 # into an API response
 class LibraryDatabase
+  include Dry::Monads[:maybe]
+
   attr_reader :query_terms
 
   def initialize(query_terms:)
@@ -13,8 +17,8 @@ class LibraryDatabase
     {
       number:,
       records:,
-      more: more_link
-    }.to_json
+      more: more_link.value_or(nil)
+    }.compact.to_json
   end
 
   def service_response
@@ -36,8 +40,8 @@ class LibraryDatabase
   end
 
   def more_link
-    URI::HTTPS.build(host: 'libguides.princeton.edu', path: '/az/databases',
-                     query: "q=#{transliterated_escaped_terms}")
+    Some(URI::HTTPS.build(host: 'libguides.princeton.edu', path: '/az/databases',
+                          query: "q=#{transliterated_escaped_terms}"))
   end
 
   def records

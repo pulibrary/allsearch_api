@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 # This class is responsible for
 class BestBet
+  include Dry::Monads[:maybe]
   include Parsed
 
   attr_reader :query_terms, :service_response
@@ -20,7 +23,9 @@ class BestBet
   end
 
   # Not relevant for this service
-  def more_link; end
+  def more_link
+    None()
+  end
 
   def documents
     service_response

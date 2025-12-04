@@ -2,11 +2,13 @@
 
 require 'forwardable'
 require_relative '../environment'
+require 'dry-monads'
 
 # This class is responsible for querying the Summon API, aka "Articles+"
 class Article
   extend Forwardable
   include Parsed
+  include Dry::Monads[:maybe]
 
   attr_reader :query_terms, :service
 
@@ -37,8 +39,8 @@ class Article
   end
 
   def more_link
-    URI::HTTPS.build(host: 'princeton.summon.serialssolutions.com', path: '/search',
-                     query: service_response.query.query_string)
+    Some(URI::HTTPS.build(host: 'princeton.summon.serialssolutions.com', path: '/search',
+                          query: service_response.query.query_string))
   end
 
   private

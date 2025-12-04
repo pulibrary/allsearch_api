@@ -7,7 +7,7 @@ RSpec.describe LibraryDatabase do
   let(:db_service) { described_class.new(query_terms:) }
 
   it 'has the correct more_link' do
-    expect(db_service.more_link.to_s).to eq('https://libguides.princeton.edu/az/databases?q=foo')
+    expect(db_service.more_link.value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=foo')
   end
 
   context 'with accents in the query terms' do
@@ -29,14 +29,14 @@ RSpec.describe LibraryDatabase do
     end
 
     it 'builds a working more_link' do
-      expect(db_service.more_link.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
+      expect(db_service.more_link.value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
     end
 
     context 'when the diacritics are decomposed into two separate characters' do
       let(:query_terms) { 'Ko%CC%84bunso%CC%84%20Taika%20Koshomoku' }
 
       it 'builds a working more_link' do
-        expect(db_service.more_link.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
+        expect(db_service.more_link.value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
       end
     end
 

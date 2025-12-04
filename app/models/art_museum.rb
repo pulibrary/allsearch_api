@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 # This class is responsible for querying the Art Museum API
 class ArtMuseum
   include Parsed
+  include Dry::Monads[:maybe]
 
   attr_reader :service, :service_response
 
@@ -34,8 +37,8 @@ class ArtMuseum
   end
 
   def more_link
-    URI::HTTPS.build(host: 'artmuseum.princeton.edu', path: '/search/collections',
-                     query: "mainSearch=\"#{query_terms}\"")
+    Some(URI::HTTPS.build(host: 'artmuseum.princeton.edu', path: '/search/collections',
+                          query: "mainSearch=\"#{query_terms}\""))
   end
 
   def documents

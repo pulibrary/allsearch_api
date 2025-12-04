@@ -18,8 +18,8 @@ module Parsed
       number:,
       records: parsed_records(documents:)
     }
-    hash[:more] = more_link if more_link.present?
-    hash.to_json
+    hash[:more] = more_link.value_or(nil)
+    hash.compact.to_json
   end
 
   def document_class
