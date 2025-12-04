@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 module FixtureHelpers
+  def file_fixture(fixture_path)
+    allsearch_path("spec/fixtures/files/#{fixture_path}").read
+  end
+
   def stub_art_museum(query:, fixture:)
     stub_request(:get, "https://data.artmuseum.princeton.edu/search?q=#{query}&size=3&type=all")
       .to_return(status: 200, body: file_fixture(fixture))
