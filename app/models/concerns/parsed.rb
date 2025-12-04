@@ -2,8 +2,6 @@
 
 # This module helps classes parse API responses
 module Parsed
-  extend ActiveSupport::Concern
-
   def parsed_records(documents:)
     documents.map do |document|
       doc_keys = [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields]
