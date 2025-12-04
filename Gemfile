@@ -52,7 +52,6 @@ group :development, :test do
   gem 'rswag-specs'
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
-  gem 'rubocop-rspec_rails', require: false
 end
 
 group :test do
