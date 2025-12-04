@@ -46,12 +46,9 @@ RSpec.describe CatalogDocument do
   end
 
   context 'when on a non-production environment' do
-    before do
-      allow(Rails).to receive(:env).and_return(ActiveSupport::StringInquirer.new('staging'))
-    end
-
     it 'links to the record url associated with the solr collection' do
-      document = described_class.new(document: {}, doc_keys: [])
+      document = described_class.new(document: {}, doc_keys: [],
+                                     environment: Environment.new({ 'RAILS_ENV' => 'staging' }))
       expect(document.send(:url)).to eq('https://catalog-staging.princeton.edu/catalog/')
     end
   end

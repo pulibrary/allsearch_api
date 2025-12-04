@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../paths'
+require_relative '../environment'
 
 # This class maintains a list of health checks
 class CheckList
@@ -40,17 +41,17 @@ class CheckList
   def non_critical_checks
     {
       'Database' => DatabaseCheck.new(db_gateways),
-      'Solr: catalog' => solr_check_for_config('catalog'),
-      'Solr: dpul' => solr_check_for_config('dpul'),
-      'Solr: findingaids' => solr_check_for_config('findingaids'),
-      'Solr: pulmap' => solr_check_for_config('pulmap')
+      'Solr: catalog' => solr_check_for_config(:catalog),
+      'Solr: dpul' => solr_check_for_config(:dpul),
+      'Solr: findingaids' => solr_check_for_config(:findingaids),
+      'Solr: pulmap' => solr_check_for_config(:pulmap)
     }
   end
 
   # :reek:FeatureEnvy
   def solr_check_for_config(system)
-    config = solr_configs[system]['solr']
-    SolrCheck.new(host: config['host'], port: config['port'], collection: config['collection'])
+    config = solr_configs[system][:solr]
+    SolrCheck.new(host: config[:host], port: config[:port], collection: config[:collection])
   end
 
   def all_requests
@@ -65,12 +66,8 @@ class CheckList
     @non_critical_requests ||= non_critical_checks.transform_values { |check| Thread.new { check.call } }
   end
 
-  def solr_config_path
-    allsearch_path 'config/allsearch.yml'
-  end
-
   def solr_configs
-    @solr_configs ||= YAML.safe_load(ERB.new(File.read(solr_config_path)).result, aliases: true)[Rails.env]
+    @solr_configs ||= Environment.new.config(:allsearch)
   end
 
   def db_gateways

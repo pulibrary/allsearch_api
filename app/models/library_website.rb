@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'flipper'
+require_relative '../environment'
 
 class LibraryWebsite
   include Parsed
@@ -9,7 +10,7 @@ class LibraryWebsite
 
   def initialize(query_terms:)
     @query_terms = query_terms
-    @website_config = Rails.application.config_for(:allsearch)[:library_website]
+    @website_config = Environment.new.config(:allsearch)[:library_website]
   end
 
   def self.library_website_host
@@ -22,7 +23,7 @@ class LibraryWebsite
   end
 
   def self.website_config
-    @website_config ||= Rails.application.config_for(:allsearch)[:library_website]
+    @website_config ||= Environment.new.config(:allsearch)[:library_website]
   end
 
   def documents

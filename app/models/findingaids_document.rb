@@ -5,7 +5,14 @@
 class FindingaidsDocument < Document
   include SolrDocument
 
+  def initialize(document:, doc_keys:, environment: Environment.new)
+    super(document:, doc_keys:)
+    @environment = environment
+  end
+
   private
+
+  attr_reader :environment
 
   def service
     'findingaids'
