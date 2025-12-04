@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 # This module is responsible for dynamically
 # creating methods that provide information
 # about a catalog document's holdings
 module Holdings
+  include Dry::Monads[:maybe]
+
   private
 
   [:first, :second].each_with_index do |number, index|
@@ -31,21 +35,28 @@ module Holdings
     define_method "#{number}_physical_holding" do
       # First, check to see if we've already stored this in an instance variable
       return instance_variable_get("@#{__method__}") if instance_variable_defined?("@#{__method__}")
-      return unless holdings&.dig(index)
 
-      instance_variable_set("@#{__method__}", PhysicalHolding.new(holding_id: holdings[index]&.first,
-                                                                  holding_data: holdings[index]&.last,
-                                                                  document_id: document[:id]))
+      holding(index).bind do |holding|
+        Some(instance_variable_set(
+               "@#{__method__}",
+               PhysicalHolding.new(holding_id: holding.first,
+                                   holding_data: holding.last,
+                                   document_id: document[:id])
+             ))
+      end.value_or(nil)
     end
   end
 
+  def holding(index)
+    holdings.bind { Maybe(it[index]) }
+  end
+
   def holdings
-    @holdings ||= begin
-      holdings_string = document[:holdings_1display]
-      if holdings_string.blank?
-        nil
+    @holdings ||= Maybe(document[:holdings_1display]).bind do |raw|
+      if raw.empty?
+        None()
       else
-        JSON.parse(holdings_string).to_a
+        Some(JSON.parse(raw).to_a)
       end
     end
   end

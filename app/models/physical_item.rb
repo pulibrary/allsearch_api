@@ -10,7 +10,7 @@ class PhysicalItem
   end
 
   def in_place?
-    item['status_at_load'] == '1' && item['process_type'].blank?
+    item['status_at_load'] == '1' && !item.key?('process_type')
   end
 
   def barcode

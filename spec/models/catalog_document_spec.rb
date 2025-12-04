@@ -131,6 +131,14 @@ RSpec.describe CatalogDocument do
     end
   end
 
+  context 'when holdings_1display is an empty string' do
+    it 'has a nil status' do
+      source_data = { holdings_1display: '', id: 'dsp016969z278m' }
+      document = described_class.new(document: source_data, doc_keys: [:first_status]).to_h
+      expect(document[:first_status]).to be_nil
+    end
+  end
+
   describe '#other_fields' do
     it 'does not include nil values' do
       source_data = { title_display: 'My book', id: 'SCSB-1234' }
