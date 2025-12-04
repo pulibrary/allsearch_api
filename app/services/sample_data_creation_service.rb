@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
+require_relative '../paths'
+
 class SampleDataCreationService
   def initialize(solr_collection:, filename:, query: 'cats')
     @solr_collection = solr_collection
     @query = query
-    @file_path = Rails.root.join('sample-data', filename)
+    @file_path = allsearch_path("sample-data/#{filename}")
   end
 
   def create

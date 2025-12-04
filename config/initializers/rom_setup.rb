@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
+require_relative '../../app/paths'
 require_relative '../rom_container'
-require Rails.root.join('lib/middleware/rom')
+require allsearch_path('lib/middleware/rom')
 
 # This initializer is responsible for making a ROM container available
 # to the application

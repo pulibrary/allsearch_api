@@ -10,7 +10,7 @@ RSpec.describe SampleDataCreationService do
     end
 
     after do
-      test_file = Rails.root.join('sample-data/test.json')
+      test_file = allsearch_path('sample-data/test.json')
       test_file.delete if test_file.file?
     end
 
@@ -19,7 +19,7 @@ RSpec.describe SampleDataCreationService do
                                     query: 'cats',
                                     filename: 'test.json')
       creator.create
-      created_data = JSON.parse(Rails.root.join('sample-data/test.json').read)
+      created_data = JSON.parse(allsearch_path('sample-data/test.json').read)
       expect(created_data.count).to eq(3)
       expect(created_data.first.keys).not_to include('hashed_id_ssi')
       expect(created_data.first.keys).not_to include('_version_')
