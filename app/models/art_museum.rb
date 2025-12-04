@@ -2,7 +2,6 @@
 
 # This class is responsible for querying the Art Museum API
 class ArtMuseum
-  include ActiveModel::API
   include Parsed
 
   attr_reader :service, :service_response

@@ -2,7 +2,6 @@
 
 # This class is responsible for querying the Summon API, aka "Articles+"
 class Article
-  include ActiveModel::API
   include Parsed
 
   attr_reader :query_terms, :service
