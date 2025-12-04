@@ -66,7 +66,7 @@ class HealthcheckController
   # rubocop:enable Metrics/MethodLength
 
   def json_desired?
-    env['PATH_INFO'].end_with?('.json') || env['CONTENT_TYPE'] == 'application/json'
+    env['SCRIPT_NAME'].end_with?('.json') || env['CONTENT_TYPE'] == 'application/json'
   end
 
   def checklist
