@@ -1,12 +1,15 @@
 # frozen_string_literal: true
 
+require 'forwardable'
+
 # This class is responsible for querying the Summon API, aka "Articles+"
 class Article
+  extend Forwardable
   include Parsed
 
   attr_reader :query_terms, :service
 
-  delegate :documents, to: :service_response
+  def_delegators :service_response, :documents
 
   def initialize(query_terms:)
     @query_terms = query_terms

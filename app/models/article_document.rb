@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 
+require 'forwardable'
+
 # This class is responsible for getting relevant
 # metadata from the Summon::Documents
 class ArticleDocument < Document
-  delegate :abstract, to: :document
-  delegate :end_page, to: :document
-  delegate :issue, to: :document
-  delegate :publication_title, to: :document
-  delegate :publisher, to: :document
-  delegate :start_page, to: :document
-  delegate :volume, to: :document
+  extend Forwardable
+
+  def_delegators :document, :abstract, :end_page, :issue, :publication_title, :publisher, :start_page, :volume
 
   def title
     sanitize document.title
