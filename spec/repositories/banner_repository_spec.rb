@@ -23,11 +23,11 @@ RSpec.describe BannerRepository do
       banner_repo = described_class.new Rails.application.config.rom
 
       expect do
-        travel_to Date.new(2020, 1, 1)
+        allow(Time).to receive(:now).and_return Time.utc(2020, 1, 1)
         banner_repo.modify(text: 'Old banner')
         expect(banner_repo.banners.first.updated_at).to eq Date.new(2020, 1, 1)
 
-        travel_to Date.new(2050, 1, 1)
+        allow(Time).to receive(:now).and_return Time.utc(2050, 1, 1)
         banner_repo.modify(text: 'New banner')
         expect(banner_repo.banners.first.updated_at).to eq Date.new(2050, 1, 1)
       end.not_to(change { banner_repo.banners.first.created_at })
@@ -47,7 +47,7 @@ RSpec.describe BannerRepository do
       banner_repo = described_class.new Rails.application.config.rom
       banner_repo.delete
 
-      travel_to Date.new(2020, 1, 1)
+      allow(Time).to receive(:now).and_return Time.utc(2020, 1, 1)
       banner_repo.modify(text: 'Old banner')
       expect(banner_repo.banners.first.updated_at).to eq Date.new(2020, 1, 1)
       expect(banner_repo.banners.first.created_at).to eq Date.new(2020, 1, 1)
