@@ -8,6 +8,7 @@ if ENV['CI'] || ENV['COVERAGE']
 end
 
 require 'webmock/rspec'
+require_relative '../app/paths'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

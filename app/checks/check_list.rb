@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative '../paths'
+
 # This class maintains a list of health checks
 class CheckList
   def initialize(env)
@@ -31,7 +33,7 @@ class CheckList
 
   def critical_checks
     {
-      'remove-from-nginx file is not present' => FileDoesNotExistCheck.new("#{__dir__}/../../public/remove-from-nginx")
+      'remove-from-nginx file is not present' => FileDoesNotExistCheck.new(allsearch_path('public/remove-from-nginx'))
     }
   end
 
@@ -64,7 +66,7 @@ class CheckList
   end
 
   def solr_config_path
-    "#{__dir__}/../../config/allsearch.yml"
+    allsearch_path 'config/allsearch.yml'
   end
 
   def solr_configs

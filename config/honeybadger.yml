@@ -7,7 +7,7 @@ api_key: "<%= ENV['HONEYBADGER_API_KEY'] %>"
 env: "<%= Rails.env %>"
 
 # The absolute path to your project folder.
-root: "<%= Rails.root.to_s %>"
+root: "<%= allsearch_path %>"
 
 # Honeybadger won't report errors in these environments.
 development_environments:
