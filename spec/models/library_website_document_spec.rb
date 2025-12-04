@@ -18,6 +18,6 @@ RSpec.describe LibraryWebsiteDocument do
     expect(website_document.type).to eq('ps_basic_page')
     expect(website_document.description)
       .to include('Nullam eget diam faucibus elit lobortis viverra a vel justo. Sed eget massa auctor.')
-    expect(website_document.url).to include('library.psb-prod.princeton.edu/services/')
+    expect(website_document.url).to include('library.princeton.edu/services/')
   end
 end
