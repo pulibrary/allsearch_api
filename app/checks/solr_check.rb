@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 # This class is responsible for checking a solr collection to see if it is healthy
 class SolrCheck
   include Dry::Monads[:result]

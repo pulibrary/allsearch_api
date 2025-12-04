@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 class FileDoesNotExistCheck
   include Dry::Monads[:result]
 
