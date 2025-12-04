@@ -21,9 +21,6 @@ RSpec.describe LibraryStaffDocument do
   end
 
   describe '#url' do
-    before { Flipper.enable(:permanent_host?) }
-    after { Flipper.disable(:permanent_host?) }
-
     let(:record) { LibraryStaffRecord.create(first_name: 'Ufuoma', last_name: 'Abiola') }
 
     it 'is the url of the staff profile on the drupal website' do

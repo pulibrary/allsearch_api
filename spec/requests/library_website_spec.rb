@@ -26,7 +26,7 @@ RSpec.describe 'GET /search/website' do
 
   context 'when the upstream gives a 503 error' do
     before do
-      url = 'https://library.psb-prod.princeton.edu/ps-library/search/results'
+      url = 'https://library.princeton.edu/ps-library/search/results'
       stub_request(:post, url)
         .with(body: { 'search' => 'root' })
         .to_return(status: 503)

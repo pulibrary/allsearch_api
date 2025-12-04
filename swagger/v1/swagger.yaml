@@ -790,7 +790,7 @@ paths:
                   type: ps_basic_page
                   description: Nullam eget diam faucibus elit lobortis viverra a vel
                     justo. Sed eget massa auctor.
-                  url: https://library.psb-prod.princeton.edu/services/sample-service-section-content/second-sub-page/third-level-page-two
+                  url: https://library.princeton.edu/services/sample-service-section-content/second-sub-page/third-level-page-two
                   other_fields: {}
                 - title: First Sub-Page
                   id: '131'
@@ -803,7 +803,7 @@ paths:
                     Aliquam at ipsum vitae sapien dignissim auctor at ut nunc. Mauris ac nunc at tellus hendrerit venenatis. Ut non lorem congue, consectetur enim quis, luctus tortor. Praesent finibus dapibus vestibulum. Curabitur ut hendrerit justo. Fusce vitae metus semper, iaculis dolor efficitur, sagittis nisi. Maecenas semper nulla non augue ultrices, id porta risus tempus. Nam ultricies bibendum auctor. Fusce dolor sapien, gravida ut mattis accumsan, aliquet quis augue. Vestibulum efficitur aliquet dapibus. Mauris quis sagittis est, id efficitur ipsum.
 
                     Aliquam eleifend lacus quam, et placerat orci eleifend vitae. Nullam ex diam, fermentum sed placerat in, dapibus at eros. Vivamus auctor vitae lectus non pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris accumsan commodo est sit amet gravida. Phasellus nec odio viverra, varius tortor eu, placerat mauris. Nam sit amet sem eu dolor consectetur molestie eget pretium metus. Donec enim augue, tincidunt nec tincidunt ac, condimentum a lectus. Donec vel bibendum est, vitae consequat lorem. Nunc sed eleifend sem, vel dapibus dui. Proin et libero egestas, aliquet lacus at, molestie ex.
-                  url: https://library.psb-prod.princeton.edu/services/sample-service-section-content/first-sub-page
+                  url: https://library.princeton.edu/services/sample-service-section-content/first-sub-page
                   other_fields: {}
                 - title: Test Page
                   id: '261'
@@ -871,9 +871,9 @@ paths:
                     proin dignissim nisl orci convallis non semper in, sem leo primis
                     vel nisi fringilla felis lacus varius, augue tortor fames torquent
                     natoque taciti dictumst neque."
-                  url: https://library.psb-prod.princeton.edu/about/test-page
+                  url: https://library.princeton.edu/about/test-page
                   other_fields: {}
-                more: https://library.psb-prod.princeton.edu/search?keys=firestone
+                more: https://library.princeton.edu/search?keys=firestone
         '400':
           description: with a search query that only contains whitespace
           content:

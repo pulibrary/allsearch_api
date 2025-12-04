@@ -14,12 +14,7 @@ class LibraryWebsite
   end
 
   def self.library_website_host
-    config = LibraryWebsite.website_config
-    if Flipper.enabled?(:permanent_host?)
-      config[:host]
-    else
-      config[:temporary_host]
-    end
+    LibraryWebsite.website_config[:host]
   end
 
   def self.website_config
