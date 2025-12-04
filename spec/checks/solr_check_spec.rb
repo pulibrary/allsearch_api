@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'spec_helper'
+require_relative '../../app/checks/solr_check'
 
 RSpec.describe SolrCheck do
   it 'returns success when the solr collection is healthy' do

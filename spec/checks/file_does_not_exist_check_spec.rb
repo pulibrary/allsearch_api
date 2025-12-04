@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'spec_helper'
+require_relative '../../app/checks/file_does_not_exist_check'
 
 RSpec.describe FileDoesNotExistCheck do
   it 'returns success when the file does not exist' do

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'dry-monads'
+
 class DatabaseCheck
   include Dry::Monads[:result]
 
