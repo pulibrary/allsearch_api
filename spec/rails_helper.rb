@@ -4,7 +4,7 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
-require_relative 'support/fixture_helpers'
+
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
@@ -36,7 +36,6 @@ RSpec.configure do |config|
   # note if you'd prefer not to run each example within a transaction, you
   # should set use_transactional_fixtures to false.
   #
-  config.fixture_paths = allsearch_path('spec/fixtures').to_s
   config.use_transactional_fixtures = true
 
   # RSpec Rails can automatically mix in different behaviours to your tests
@@ -60,5 +59,4 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.include ActiveSupport::Testing::TimeHelpers
-  config.include FixtureHelpers
 end
