@@ -26,20 +26,6 @@ module Solr
     @documents ||= service_response[:response][:docs]
   end
 
-  def self.status_uris
-    solr_services_configs.map do |_name, config|
-      solr_config = config[:solr]
-      URI::HTTP.build(host: solr_config[:host],
-                      port: solr_config[:port],
-                      path: '/solr/admin/cores',
-                      query: 'action=STATUS')
-    end.uniq.compact
-  end
-
-  def self.solr_services_configs
-    Rails.application.config_for(:allsearch).select { |_key, value| value.keys.include?(:solr) }
-  end
-
   private
 
   # :reek:ManualDispatch
