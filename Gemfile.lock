@@ -315,10 +315,6 @@ GEM
     rubocop-rspec (3.6.0)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
-    rubocop-rspec_rails (2.31.0)
-      lint_roller (~> 1.1)
-      rubocop (~> 1.72, >= 1.72.1)
-      rubocop-rspec (~> 3.5)
     ruby-progressbar (1.13.0)
     securerandom (0.4.1)
     semantic_logger (4.16.1)
@@ -412,7 +408,6 @@ DEPENDENCIES
   rswag-specs
   rubocop-rails
   rubocop-rspec
-  rubocop-rspec_rails
   sequel-activerecord_connection
   simplecov
   summon

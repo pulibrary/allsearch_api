@@ -2,7 +2,6 @@ inherit_from: .rubocop_todo.yml
 plugins: 
   - rubocop-rails
   - rubocop-rspec
-  - rubocop-rspec_rails
 
 AllCops:
   NewCops: enable
