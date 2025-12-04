@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative '../../environment'
+
 # This module helps classes create documents based on Solr
 module SolrDocument
   private
@@ -13,6 +15,6 @@ module SolrDocument
   end
 
   def service_subdomain
-    Rails.application.config_for(:allsearch)[service][:subdomain]
+    environment.config(:allsearch)[service.to_sym][:subdomain]
   end
 end

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative '../../environment'
+
 # This module helps classes communicate with Solr APIs
 module Solr
   def solr_service_response
@@ -40,15 +42,19 @@ module Solr
     end
   end
 
+  def allsearch_config
+    @allsearch_config ||= Environment.new.config(:allsearch)
+  end
+
   def solr_collection
-    Rails.application.config_for(:allsearch)[service][:solr][:collection]
+    allsearch_config[service.to_sym][:solr][:collection]
   end
 
   def solr_config
-    Rails.application.config_for(:allsearch)[service][:solr]
+    allsearch_config[service.to_sym][:solr]
   end
 
   def service_subdomain
-    Rails.application.config_for(:allsearch)[service][:subdomain]
+    allsearch_config[service.to_sym][:subdomain]
   end
 end

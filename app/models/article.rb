@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'forwardable'
+require_relative '../environment'
 
 # This class is responsible for querying the Summon API, aka "Articles+"
 class Article
@@ -13,7 +14,7 @@ class Article
 
   def initialize(query_terms:)
     @query_terms = query_terms
-    summon_config = Rails.application.config_for(:allsearch)[:summon]
+    summon_config = Environment.new.config(:allsearch)[:summon]
     @service = Summon::Service.new(access_id: summon_config[:access_id],
                                    secret_key: summon_config[:secret_key])
   end

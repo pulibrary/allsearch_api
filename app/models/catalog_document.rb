@@ -1,12 +1,21 @@
 # frozen_string_literal: true
 
+require_relative '../environment'
+
 # This class is responsible for getting relevant
 # metadata from the Catalog's JSON
 # The document is a Hash
 class CatalogDocument < Document
   include SolrDocument
 
+  def initialize(document:, doc_keys:, environment: Environment.new)
+    super(document:, doc_keys:)
+    @environment = environment
+  end
+
   private
+
+  attr_reader :environment
 
   include Holdings
 

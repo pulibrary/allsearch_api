@@ -1,0 +1,22 @@
+# frozen_string_literal: true
+
+require_relative 'paths'
+
+class Environment
+  def initialize(vars = ENV)
+    @vars = vars
+  end
+
+  def name
+    vars['RAILS_ENV'] || 'development'
+  end
+
+  def config(config_filename)
+    config_filepath = allsearch_path("config/#{config_filename}.yml")
+    YAML.safe_load(ERB.new(config_filepath.read).result, aliases: true, symbolize_names: true)[name.to_sym]
+  end
+
+  private
+
+  attr_reader :vars
+end
