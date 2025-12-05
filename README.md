@@ -52,6 +52,18 @@ brew install semgrep
 semgrep --config auto . # run rules from the semgrep community
 ```
 
+## Interactive console
+
+```
+bundle exec rake console
+```
+
+or
+
+```
+bundle exec rake c
+```
+
 ## Create a new service
 
 1. If the upstream service requires a secret, add it to the
