@@ -1,5 +1,5 @@
 ---
-openapi: 3.0.1
+openapi: 3.1.1
 info:
   title: Allsearch API
   description: Backend API for allsearch.princeton.edu
@@ -213,7 +213,7 @@ paths:
                   message: Could not authenticate to the upstream Summon service
   "/banner":
     get:
-      summary: show banner
+      summary: "/banner"
       tags:
       - Banner
       operationId: displayBanner
@@ -642,7 +642,7 @@ paths:
       schema:
         type: string
     get:
-      summary: search/database?query={query}
+      summary: "/search/database?query={query}"
       tags:
       - Library Databases
       operationId: searchDatabase
@@ -672,7 +672,7 @@ paths:
       schema:
         type: string
     get:
-      summary: search/staff?query={query}
+      summary: "/search/staff?query={query}"
       tags:
       - Library Staff
       operationId: searchStaff
@@ -772,7 +772,7 @@ paths:
       schema:
         type: string
     get:
-      summary: "/search/article?query={query}"
+      summary: "/search/website?query={query}"
       tags:
       - Library Website
       operationId: searchWebsite

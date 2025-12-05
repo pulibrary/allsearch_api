@@ -7,30 +7,21 @@ RSpec.describe 'art_museum' do
     stub_art_museum(query: 'cats', fixture: 'art_museum/cats.json')
   end
 
-  path '/search/artmuseum' do
-    parameter name: 'query', in: :query, type: :string, description: 'A string to query the Art Museum'
-    get('/search/artmuseum?query={query}') do
-      tags 'Art Museum'
-      operationId 'searchArtmuseum'
-      consumes 'application/json'
-      produces 'application/json'
-      description 'Searches the Art Museum using a query term'
-      after do |example|
-        example.metadata[:response][:content] = {
-          'application/json' => {
-            example: JSON.parse(response.body, symbolize_names: true)
-          }
-        }
-      end
+  openapi_path '/search/artmuseum' do
+    openapi_parameter 'name' => 'query', 'in' => 'query',
+                      'description' => 'A string to query the Art Museum',
+                      'schema' => { 'type' => 'string' }
+    openapi_get({
+                  'summary' => '/search/artmuseum?query={query}',
+                  'tags' => ['Art Museum'],
+                  'operationId' => 'searchArtmuseum',
+                  'description' => 'Searches the Art Museum using a query term'
+                }) do
+      openapi_response('200', 'successful', { query: 'cats' })
 
-      response(200, 'successful') do
-        let(:query) { 'cats' }
-        run_test!
-      end
-
-      response(400, 'with an empty search query') do
-        let(:query) { '' }
-        run_test! do |response|
+      openapi_response('400', 'with an empty search query', { query: '' }) do |url|
+        it 'gives the empty query message' do
+          get url
           data = JSON.parse(response.body, symbolize_names: true)
           expect(data[:error]).to eq({
                                        problem: 'QUERY_IS_EMPTY',
@@ -39,9 +30,9 @@ RSpec.describe 'art_museum' do
         end
       end
 
-      response(400, 'with a search query that only contains whitespace') do
-        let(:query) { "\t  \n " }
-        run_test! do |response|
+      openapi_response('400', 'with a search query that only contains whitespace', { query: "\t  \n " }) do |url|
+        it 'gives the empty query message' do
+          get url
           data = JSON.parse(response.body, symbolize_names: true)
           expect(data[:error]).to eq({
                                        problem: 'QUERY_IS_EMPTY',

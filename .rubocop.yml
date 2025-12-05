@@ -24,6 +24,14 @@ RSpec/EmptyExampleGroup:
   Exclude:
     - 'spec/requests/api/*'
 
+RSpec/RepeatedDescription:
+  Exclude:
+    - 'spec/requests/api/*'
+
+RSpec/RepeatedExample:
+  Exclude:
+    - 'spec/requests/api/*'
+
 RSpec/SpecFilePathFormat:
   Exclude:
     - 'spec/models/oauth_token_cache_spec.rb'
