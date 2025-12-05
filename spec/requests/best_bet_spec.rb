@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'GET /search/best-bet' do
+RSpec.describe 'GET /search/best-bet', :truncate do
   let(:google_response) { file_fixture('google_sheets/best_bets.csv') }
   let(:expected_response) do
     {

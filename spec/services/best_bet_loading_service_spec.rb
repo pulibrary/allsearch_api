@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe BestBetLoadingService do
+RSpec.describe BestBetLoadingService, :truncate do
   let(:google_response) { file_fixture('google_sheets/best_bets.csv') }
   let(:title) { 'Some title' }
   let(:search_terms) { 'some, terms' }

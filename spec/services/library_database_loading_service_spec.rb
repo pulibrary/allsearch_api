@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe LibraryDatabaseLoadingService do
+RSpec.describe LibraryDatabaseLoadingService, :truncate do
   let(:libjobs_response) { file_fixture('libjobs/library-databases.csv') }
 
   before do
