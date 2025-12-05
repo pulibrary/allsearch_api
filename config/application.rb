@@ -37,6 +37,8 @@ module BentoRailsApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    config.hosts << 'allsearch-api-staging.princeton.edu'
+    config.hosts << 'allsearch-api.princeton.edu'
     # Rack's mock responses use example.org
     config.hosts << 'example.org'
   end
