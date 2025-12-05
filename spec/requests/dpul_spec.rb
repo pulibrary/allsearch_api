@@ -15,8 +15,8 @@ RSpec.describe 'GET /search/dpul' do
       .to_return(status: 200, body: file_fixture('solr/dpul/cats.json'))
     get '/search/dpul?query=cats'
 
-    expect(response).to be_successful
-    expect(response.content_type).to eq('application/json; charset=utf-8')
+    expect(last_response).to be_successful
+    expect(last_response.content_type).to eq('application/json; charset=utf-8')
   end
 
   context 'with a search term' do
@@ -45,8 +45,8 @@ RSpec.describe 'GET /search/dpul' do
     it 'can take a parameter' do
       get '/search/dpul?query=cats'
 
-      expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response).to be_successful
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response_body.keys).to contain_exactly(:number, :more, :records)
       expect(response_body[:number]).to eq(expected_response[:number])
@@ -60,7 +60,7 @@ RSpec.describe 'GET /search/dpul' do
     it 'only returns the first three records' do
       get '/search/dpul?query=cats'
 
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response_body[:records].size).to eq(3)
     end
@@ -70,7 +70,7 @@ RSpec.describe 'GET /search/dpul' do
     it 'returns a 400 bad request' do
       get '/search/dpul?query='
 
-      expect(response).to be_bad_request
+      expect(last_response.status).to eq 400
     end
   end
 

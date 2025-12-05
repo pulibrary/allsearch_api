@@ -17,7 +17,7 @@ RSpec.describe 'GET /search/best-bet', :truncate do
     }
   end
   let(:expected_record_keys) { [:title, :id, :type, :description, :url] }
-  let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
+  let(:response_body) { JSON.parse(last_response.body, symbolize_names: true) }
   let(:service_path) { 'best-bet' }
 
   before do
@@ -31,13 +31,13 @@ RSpec.describe 'GET /search/best-bet', :truncate do
   it 'returns json' do
     get '/search/best-bet?query=new york times'
 
-    expect(response).to be_successful
-    expect(response.content_type).to eq('application/json; charset=utf-8')
+    expect(last_response).to be_successful
+    expect(last_response.content_type).to eq('application/json; charset=utf-8')
   end
 
   it 'can take a parameter' do
     get '/search/best-bet?query=new york times'
-    expect(response).to be_successful
+    expect(last_response).to be_successful
     expect(response_body.keys).to contain_exactly(:number, :records)
     expect(response_body[:records].count).to eq(1)
     expect(response_body[:records].first.keys).to match_array(expected_record_keys)
@@ -50,7 +50,7 @@ RSpec.describe 'GET /search/best-bet', :truncate do
 
   it 'can handle a query like `0%000`' do
     get '/search/best-bet?query=0%000'
-    expect(response).to be_successful
+    expect(last_response).to be_successful
   end
 
   context 'with a partial entry' do
@@ -58,7 +58,7 @@ RSpec.describe 'GET /search/best-bet', :truncate do
 
     it 'continues to return only complete entries' do
       get '/search/best-bet?query=times'
-      expect(response).to be_successful
+      expect(last_response).to be_successful
       expect(response_body.keys).to contain_exactly(:number, :records)
       expect(response_body[:records].count).to eq(1)
     end

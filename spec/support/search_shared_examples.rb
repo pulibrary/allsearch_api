@@ -51,17 +51,17 @@ RSpec.shared_examples 'a search controller' do
 
     it 'responds 200 OK for a script injection attempt' do
       get "/search/#{service_path}?query=#{CGI.escape bad_script}"
-      expect(response).to have_http_status(:ok)
+      expect(last_response).to be_successful
     end
 
     it 'responds 200 OK for a redundant space query' do
       get "/search/#{service_path}?query=#{CGI.escape redundant_spaces}"
-      expect(response).to have_http_status(:ok)
+      expect(last_response).to be_successful
     end
 
     it 'responds 200 OK when the url contains numbers and the percent sign' do
       get "/search/#{service_path}?query=#{CGI.escape percent_sign}"
-      expect(response).to have_http_status(:ok)
+      expect(last_response).to be_successful
     end
 
     it 'does not raise an error' do

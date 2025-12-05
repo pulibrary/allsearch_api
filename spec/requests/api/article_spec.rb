@@ -30,7 +30,7 @@ RSpec.describe 'article' do
       openapi_response('400', 'with an empty search query', { query: '' }) do |url|
         it 'gives the empty query message' do
           get url
-          data = JSON.parse(response.body, symbolize_names: true)
+          data = JSON.parse(last_response.body, symbolize_names: true)
           expect(data[:error]).to eq({
                                        problem: 'QUERY_IS_EMPTY',
                                        message: 'The query param must contain non-whitespace characters.'
@@ -41,7 +41,7 @@ RSpec.describe 'article' do
       openapi_response('400', 'with a search query that only contains whitespace', { query: "\t  \n " }) do |url|
         it 'gives the empty query message' do
           get url
-          data = JSON.parse(response.body, symbolize_names: true)
+          data = JSON.parse(last_response.body, symbolize_names: true)
           expect(data[:error]).to eq({
                                        problem: 'QUERY_IS_EMPTY',
                                        message: 'The query param must contain non-whitespace characters.'
@@ -52,7 +52,7 @@ RSpec.describe 'article' do
       openapi_response('500', "when we can't authenticate to the summon API", { query: 'some_search' }) do |url|
         it 'gives a reasonable error message' do
           get url
-          data = JSON.parse(response.body, symbolize_names: true)
+          data = JSON.parse(last_response.body, symbolize_names: true)
           expect(data[:error]).to eq({
                                        problem: 'UPSTREAM_ERROR',
                                        message: 'Could not authenticate to the upstream Summon service'

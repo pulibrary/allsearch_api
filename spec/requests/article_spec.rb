@@ -17,8 +17,8 @@ RSpec.describe 'GET /search/article' do
   it_behaves_like 'a search controller'
 
   it 'returns json' do
-    expect(response).to be_successful
-    expect(response.content_type).to eq('application/json; charset=utf-8')
+    expect(last_response).to be_successful
+    expect(last_response.content_type).to eq('application/json; charset=utf-8')
   end
 
   it 'only contains string values in the other_fields' do
@@ -46,6 +46,6 @@ RSpec.describe 'GET /search/article' do
                     "has\ndominated since colonial times.",
       'isxn' => '9780821378786'
     }
-    expect(response.parsed_body['records'].first['other_fields']).to eq expected_other_fields
+    expect(JSON.parse(last_response.body)['records'].first['other_fields']).to eq expected_other_fields
   end
 end
