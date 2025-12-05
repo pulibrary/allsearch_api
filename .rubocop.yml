@@ -14,6 +14,9 @@ AllCops:
 Naming/RescuedExceptionsVariableName:
   PreferredName: error
 
+Rails/RakeEnvironment:
+  Enabled: false
+
 RSpec/ExampleLength:
   Enabled: false
 
