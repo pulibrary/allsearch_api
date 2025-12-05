@@ -72,6 +72,10 @@ GEM
       rexml
     crass (1.0.6)
     csv (3.3.5)
+    database_cleaner-core (2.0.1)
+    database_cleaner-sequel (2.0.2)
+      database_cleaner-core (~> 2.0.0)
+      sequel
     datadog (2.17.0)
       datadog-ruby_core_source (~> 3.4, >= 3.4.1)
       libdatadog (~> 18.1.0.1.0)
@@ -384,6 +388,7 @@ DEPENDENCIES
   capistrano-passenger
   capistrano-rails
   csv
+  database_cleaner-sequel
   datadog (~> 2.0)
   dogstatsd-ruby
   dry-monads

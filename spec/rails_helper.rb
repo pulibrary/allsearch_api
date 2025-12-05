@@ -4,6 +4,7 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
+require_relative 'support/database_cleaner'
 
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
@@ -32,11 +33,8 @@ RSpec.configure do |config|
     Rails.application.load_seed
   end
 
-  # If you enable ActiveRecord support you should uncomment these lines,
-  # note if you'd prefer not to run each example within a transaction, you
-  # should set use_transactional_fixtures to false.
-  #
-  config.use_transactional_fixtures = true
+  # We are using DatabaseCleaner instead
+  config.use_transactional_fixtures = false
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
