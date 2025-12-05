@@ -21,7 +21,7 @@ class OAuthService
 
   def expiration_time
     validity_in_seconds = JSON.parse(response.body)['expires_in']
-    validity_in_seconds.seconds.from_now - 1.hour
+    Time.now.utc + validity_in_seconds - padding_in_seconds
   end
 
   private
@@ -46,5 +46,11 @@ class OAuthService
 
   def configuration
     @configuration ||= Environment.new.config(:allsearch)[service.to_sym]
+  end
+
+  # :reek:UtilityFunction
+  def padding_in_seconds
+    # 1 hour
+    60 * 60
   end
 end

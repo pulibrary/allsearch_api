@@ -19,7 +19,7 @@ RSpec.describe OAuthService do
 
   describe '#expiration_time' do
     it 'gets an expiration time for the new token, then adds an hour of padding' do
-      travel_to Time.utc(2000, 1, 1, 0, 0, 0)
+      allow(Time).to receive(:now).and_return Time.utc(2000, 1, 1, 0, 0, 0)
       service = described_class.new(endpoint: 'https://faq.library.princeton.edu/api/1.1/oauth/token',
                                     service: :libanswers)
       expect(service.expiration_time).to eq(Time.utc(2000, 1, 7, 23, 0, 0))

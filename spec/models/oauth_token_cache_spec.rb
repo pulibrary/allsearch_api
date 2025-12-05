@@ -11,7 +11,7 @@ RSpec.describe OAuthTokenCache do
       end
 
       it 'returns the token from the database' do
-        travel_to Date.new(2020, 1, 1)
+        allow(Time).to receive(:now).and_return Time.utc(2020, 1, 1)
         entry = described_class.new(endpoint: 'http://my-api.com', service: 'libanswers')
         expect(entry.token).to eq('valid-token')
       end
@@ -28,7 +28,8 @@ RSpec.describe OAuthTokenCache do
         stub_request(:post, 'http://my-api.com')
           .with(body: 'client_id=ABC&client_secret=12345&grant_type=client_credentials')
           .to_return(status: 200, body: file_fixture('libanswers/oauth_token.json'))
-        travel_to Date.new(2020, 1, 1)
+        allow(Time).to receive(:now).and_return Time.utc(2020, 1, 1)
+
         entry = described_class.new(endpoint: 'http://my-api.com', service: 'libanswers')
         expect(entry.token).to eq('abcdef1234567890abcdef1234567890abcdef12')
       end
@@ -43,7 +44,7 @@ RSpec.describe OAuthTokenCache do
         stub_request(:post, 'http://my-api.com')
           .with(body: 'client_id=ABC&client_secret=12345&grant_type=client_credentials')
           .to_return(status: 200, body: file_fixture('libanswers/oauth_token.json'))
-        travel_to Date.new(2020, 1, 1)
+        allow(Time).to receive(:now).and_return Time.utc(2020, 1, 1)
         entry = described_class.new(endpoint: 'http://my-api.com', service: 'libanswers')
         expect(entry.token).to eq('abcdef1234567890abcdef1234567890abcdef12')
       end
