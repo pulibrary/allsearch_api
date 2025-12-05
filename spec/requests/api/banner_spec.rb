@@ -3,6 +3,8 @@
 require 'swagger_helper'
 
 RSpec.describe 'banner' do
+  before { Flipper.add :banner }
+
   openapi_path '/banner' do
     openapi_get({
                   'summary' => '/banner',
