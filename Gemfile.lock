@@ -150,9 +150,6 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.16.0)
-    json-schema (5.1.1)
-      addressable (~> 2.8)
-      bigdecimal (~> 3.1)
     language_server-protocol (3.17.0.5)
     libdatadog (18.1.0.1.0)
     libdatadog (18.1.0.1.0-x86_64-linux)
@@ -291,11 +288,6 @@ GEM
     rspec-support (3.13.4)
     rspec_junit_formatter (0.6.0)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rswag-specs (2.16.0)
-      activesupport (>= 5.2, < 8.1)
-      json-schema (>= 2.2, < 6.0)
-      railties (>= 5.2, < 8.1)
-      rspec-core (>= 2.14)
     rubocop (1.81.7)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -410,7 +402,6 @@ DEPENDENCIES
   rom-sql
   rspec-rails
   rspec_junit_formatter
-  rswag-specs
   rubocop-rails
   rubocop-rspec
   sequel-activerecord_connection

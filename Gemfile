@@ -49,7 +49,6 @@ group :development, :test do
   gem 'reek'
   gem 'rspec_junit_formatter', require: false
   gem 'rspec-rails'
-  gem 'rswag-specs'
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
 end
