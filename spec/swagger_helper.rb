@@ -92,8 +92,8 @@ def openapi_response(code, description, query_parameters = {})
   end
   it "returns the expected response code #{code} with query params #{query_parameters}" do
     get url
-    expect(response.code).to eq code
-    OPENAPI_GENERATOR.register_content(path, code, JSON.parse(response.body))
+    expect(last_response.status).to eq code.to_i
+    OPENAPI_GENERATOR.register_content(path, code, JSON.parse(last_response.body))
   end
 
   # Run any additional tests specified in the block

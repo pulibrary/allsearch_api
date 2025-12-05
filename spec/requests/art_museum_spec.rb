@@ -16,8 +16,8 @@ RSpec.describe 'GET /search/artmuseum' do
     stub_art_museum(query: 'cats', fixture: 'art_museum/cats.json')
     get '/search/artmuseum?query=cats'
 
-    expect(response).to be_successful
-    expect(response.content_type).to eq('application/json; charset=utf-8')
+    expect(last_response).to be_successful
+    expect(last_response.content_type).to eq('application/json; charset=utf-8')
   end
 
   context 'with a search term' do
@@ -48,8 +48,8 @@ RSpec.describe 'GET /search/artmuseum' do
     it 'can take a parameter' do
       get '/search/artmuseum?query=cats'
 
-      expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response).to be_successful
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response_body.keys).to contain_exactly(:number, :more, :records)
       expect(response_body[:number]).to eq(expected_response[:number])
@@ -61,7 +61,7 @@ RSpec.describe 'GET /search/artmuseum' do
     it 'only returns the first three records' do
       get '/search/artmuseum?query=cats'
 
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response_body[:records].size).to eq(3)
     end
@@ -74,8 +74,8 @@ RSpec.describe 'GET /search/artmuseum' do
 
     it 'returns a 500 and specifies UPSTREAM_ERROR in the response' do
       get '/search/artmuseum?query=cats'
-      expect(response).to have_http_status :internal_server_error
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response.status).to eq 500
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response_body[:error]).to eq({
                                             problem: 'UPSTREAM_ERROR',

@@ -31,7 +31,7 @@ RSpec.describe 'libguides' do
         openapi_response('400', 'with a search query that only contains whitespace', { query: "\t  \n " }) do |url|
           it 'gives the empty query message' do
             get url
-            data = JSON.parse(response.body, symbolize_names: true)
+            data = JSON.parse(last_response.body, symbolize_names: true)
             expect(data[:error]).to eq({
                                          problem: 'QUERY_IS_EMPTY',
                                          message: 'The query param must contain non-whitespace characters.'
@@ -59,7 +59,7 @@ RSpec.describe 'libguides' do
         openapi_response('500', "when the system can't authenticate with libguides", { query: 'some_query' }) do |url|
           it 'gives a relevant error message' do
             get url
-            data = JSON.parse(response.body, symbolize_names: true)
+            data = JSON.parse(last_response.body, symbolize_names: true)
             expect(data[:error])
               .to eq({
                        problem: 'UPSTREAM_ERROR',

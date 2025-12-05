@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe 'GET /search/journals' do
-  let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
+  let(:response_body) { JSON.parse(last_response.body, symbolize_names: true) }
   let(:solr_base_url) { %r{http://lib-solr8-prod.princeton.edu:8983/solr/catalog-alma-production} }
   let(:service_path) { 'journals' }
 
@@ -22,8 +22,8 @@ RSpec.describe 'GET /search/journals' do
 
     it 'handles Net::HTTP exceptions' do
       get '/search/journals?query=123'
-      expect(response).to have_http_status(:internal_server_error)
-      data = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response.status).to eq 500
+      data = JSON.parse(last_response.body, symbolize_names: true)
       expect(data[:error]).to eq({
                                    problem: 'UPSTREAM_ERROR',
                                    message: 'Query to upstream failed with Net::HTTPFatalError, message: Some info'
@@ -37,8 +37,8 @@ RSpec.describe 'GET /search/journals' do
       .to_return(status: 200, body: file_fixture('solr/catalog/berry_basket.json'))
     get '/search/journals?query=berry+basket'
 
-    expect(response).to be_successful
-    expect(response.content_type).to eq('application/json; charset=utf-8')
+    expect(last_response).to be_successful
+    expect(last_response.content_type).to eq('application/json; charset=utf-8')
   end
 
   context 'with a search term' do
@@ -66,7 +66,7 @@ RSpec.describe 'GET /search/journals' do
     it 'can take a parameter' do
       get '/search/journals?query=berry+basket'
 
-      expect(response).to be_successful
+      expect(last_response).to be_successful
 
       expect(response_body.keys).to contain_exactly(:number, :more, :records)
       expect(response_body[:records].first.keys).to contain_exactly(:title, :id, :type, :url,
@@ -80,7 +80,7 @@ RSpec.describe 'GET /search/journals' do
     it 'returns a 400 bad request' do
       get '/search/journals?query='
 
-      expect(response).to be_bad_request
+      expect(last_response.status).to eq 400
     end
   end
 
@@ -93,14 +93,14 @@ RSpec.describe 'GET /search/journals' do
     it 'includes the resource_url in other_fields' do
       get '/search/journals?query=berry+basket'
 
-      expect(response).to be_successful
+      expect(last_response).to be_successful
       expect(response_body[:records].first[:other_fields][:resource_url]).to eq('https://na05.alma.exlibrisgroup.com/view/uresolver/01PRI_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53933585090006421&Force_direct=true')
     end
 
     it 'includes the resource_url_label in other_fields' do
       get '/search/journals?query=berry+basket'
 
-      expect(response).to be_successful
+      expect(last_response).to be_successful
       expect(response_body[:records].first[:other_fields][:resource_url_label])
         .to eq('CRL Open Access Serials')
     end

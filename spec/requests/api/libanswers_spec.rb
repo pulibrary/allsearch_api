@@ -23,7 +23,7 @@ RSpec.describe 'libanswers' do
                          { query: "\t  \n " }) do |url|
           it 'gives the empty query message' do
             get url
-            data = JSON.parse(response.body, symbolize_names: true)
+            data = JSON.parse(last_response.body, symbolize_names: true)
             expect(data[:error]).to eq({
                                          problem: 'QUERY_IS_EMPTY',
                                          message: 'The query param must contain non-whitespace characters.'
@@ -50,7 +50,7 @@ RSpec.describe 'libanswers' do
                            { query: 'some query' }) do |url|
             it 'gives a relevant error message' do
               get url
-              data = JSON.parse(response.body, symbolize_names: true)
+              data = JSON.parse(last_response.body, symbolize_names: true)
               expect(data[:error])
                 .to eq({
                          problem: 'UPSTREAM_ERROR',

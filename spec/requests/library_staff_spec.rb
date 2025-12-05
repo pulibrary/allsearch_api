@@ -39,27 +39,27 @@ RSpec.describe 'GET /search/staff' do
   it 'returns json' do
     get '/search/staff?query=lucy'
 
-    expect(response).to be_successful
-    expect(response.content_type).to eq('application/json; charset=utf-8')
+    expect(last_response).to be_successful
+    expect(last_response.content_type).to eq('application/json; charset=utf-8')
   end
 
   it 'can handle a query like `0%000`' do
     get '/search/staff?query=0%000'
-    expect(response).to be_successful
+    expect(last_response).to be_successful
   end
 
   it 'returns results based on name and building' do
     get '/search/staff?query=Firestone'
 
-    expect(response).to be_successful
-    response_body = JSON.parse(response.body, symbolize_names: true)
+    expect(last_response).to be_successful
+    response_body = JSON.parse(last_response.body, symbolize_names: true)
     expect(response_body.keys).to contain_exactly(:number, :more, :records)
     expect(response_body[:records].count).to eq(3)
   end
 
   it 'matches the expected first record' do
     get '/search/staff?query=Firestone'
-    response_body = JSON.parse(response.body, symbolize_names: true)
+    response_body = JSON.parse(last_response.body, symbolize_names: true)
 
     expect(response_body[:records][1].keys).to match_array(expected_record_keys)
     expected_record_keys.each do |key|
@@ -71,8 +71,8 @@ RSpec.describe 'GET /search/staff' do
     it 'does not raise an error' do
       get '/search/staff?query=%C3%89t+tu'
 
-      expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response).to be_successful
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
       expect(response_body[:records].count).to eq(1)
     end
   end
@@ -80,13 +80,13 @@ RSpec.describe 'GET /search/staff' do
   context 'when the search query matches more than 3 results' do
     it 'displays the total number of matches' do
       get '/search/staff?query=library'
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
       expect(response_body[:number]).to eq(5)
     end
 
     it 'only includes the first three records' do
       get '/search/staff?query=library'
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
       expect(response_body[:records].count).to eq(3)
     end
   end

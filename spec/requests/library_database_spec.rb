@@ -36,20 +36,20 @@ RSpec.describe 'GET /search/database' do
   it 'returns json' do
     get '/search/database?query=oxford music'
 
-    expect(response).to be_successful
-    expect(response.content_type).to eq('application/json; charset=utf-8')
+    expect(last_response).to be_successful
+    expect(last_response.content_type).to eq('application/json; charset=utf-8')
   end
 
   it 'can handle a query like `0%000`' do
     get '/search/database?query=0%000'
-    expect(response).to be_successful
+    expect(last_response).to be_successful
   end
 
   it 'returns three results' do
     get '/search/database?query=oxford music'
 
-    expect(response).to be_successful
-    response_body = JSON.parse(response.body, symbolize_names: true)
+    expect(last_response).to be_successful
+    response_body = JSON.parse(last_response.body, symbolize_names: true)
     expect(response_body.keys).to contain_exactly(:number, :more, :records)
     expect(response_body[:records].count).to eq(3)
   end
@@ -59,7 +59,7 @@ RSpec.describe 'GET /search/database' do
   # once we get more details on the current service sort
   it 'matches the expected first record' do
     get '/search/database?query=oxford music'
-    response_body = JSON.parse(response.body, symbolize_names: true)
+    response_body = JSON.parse(last_response.body, symbolize_names: true)
     expect(response_body[:records][0].keys).to match_array(expected_record_keys)
     expected_record_keys.each do |key|
       expect(response_body[:records][0][key]).to match(expected_response[:records].first[key])
@@ -70,7 +70,7 @@ RSpec.describe 'GET /search/database' do
   it 'has the currently expected sort' do
     get '/search/database?query=oxford music'
 
-    response_body = JSON.parse(response.body, symbolize_names: true)
+    response_body = JSON.parse(last_response.body, symbolize_names: true)
     expect(response_body[:records][0][:title]).to eq('Oxford Music Online')
     expect(response_body[:records][1][:title]).to eq('Oxford Scholarship Online:  Music')
     expect(response_body[:records][2][:title]).to eq('Oxford Bibliographies: Music')
@@ -79,13 +79,13 @@ RSpec.describe 'GET /search/database' do
   context 'when the search query matches more than 3 results' do
     it 'displays the total number of matches' do
       get '/search/database?query=oxford'
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
       expect(response_body[:number]).to eq(4)
     end
 
     it 'only includes the first three records' do
       get '/search/database?query=oxford'
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
       expect(response_body[:records].count).to eq(3)
     end
   end
@@ -106,8 +106,8 @@ RSpec.describe 'GET /search/database' do
     it 'removes html from the description' do
       get '/search/database?query=oxford music'
 
-      expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response).to be_successful
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response_body[:records].first[:description]).to eq(description)
     end

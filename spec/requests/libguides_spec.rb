@@ -17,8 +17,8 @@ RSpec.describe 'GET /search/libguides' do
   it 'returns json' do
     get '/search/libguides?query=Asian+American+studies'
 
-    expect(response).to be_successful
-    expect(response.content_type).to eq('application/json; charset=utf-8')
+    expect(last_response).to be_successful
+    expect(last_response.content_type).to eq('application/json; charset=utf-8')
   end
 
   context 'with a search term' do
@@ -40,8 +40,8 @@ RSpec.describe 'GET /search/libguides' do
     it 'can take a parameter' do
       get '/search/libguides?query=Asian+American+studies'
 
-      expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response).to be_successful
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response_body.keys).to contain_exactly(:number, :more, :records)
       expect(response_body[:number]).to eq(expected_response[:number])
@@ -61,8 +61,8 @@ RSpec.describe 'GET /search/libguides' do
     it 'removes html tags' do
       get '/search/libguides?query=Asian+American+studies'
 
-      expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response).to be_successful
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response_body[:records].first[:description]).to eq(description)
     end
@@ -76,8 +76,8 @@ RSpec.describe 'GET /search/libguides' do
     it 'returns an empty array of records' do
       get '/search/libguides?query=Asian+American+studies'
 
-      expect(response).to be_successful
-      response_body = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response).to be_successful
+      response_body = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response_body[:records]).to eq([])
     end

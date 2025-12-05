@@ -48,13 +48,14 @@ group :development, :test do
   gem 'byebug'
   gem 'reek'
   gem 'rspec_junit_formatter', require: false
-  gem 'rspec-rails'
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
 end
 
 group :test do
   gem 'database_cleaner-sequel', require: false
+  gem 'rack-test', require: false
+  gem 'rspec'
   gem 'simplecov', require: false
   gem 'webmock'
 end

@@ -269,22 +269,18 @@ GEM
       dry-types (~> 1.8)
       rom (~> 5.4)
       sequel (>= 4.49)
+    rspec (3.13.2)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
     rspec-core (3.13.4)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.5)
+    rspec-mocks (3.13.7)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (8.0.0)
-      actionpack (>= 7.2)
-      activesupport (>= 7.2)
-      railties (>= 7.2)
-      rspec-core (~> 3.13)
-      rspec-expectations (~> 3.13)
-      rspec-mocks (~> 3.13)
-      rspec-support (~> 3.13)
     rspec-support (3.13.4)
     rspec_junit_formatter (0.6.0)
       rspec-core (>= 2, < 4, != 2.12.0)
@@ -394,13 +390,14 @@ DEPENDENCIES
   puma
   rack
   rack-cors
+  rack-test
   rack-utf8_sanitizer
   rails_semantic_logger
   railties (~> 8.0)
   rake
   reek
   rom-sql
-  rspec-rails
+  rspec
   rspec_junit_formatter
   rubocop-rails
   rubocop-rspec

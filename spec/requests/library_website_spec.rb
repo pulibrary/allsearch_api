@@ -10,14 +10,14 @@ RSpec.describe 'GET /search/website' do
   it 'removes block-level HTML tags from the description field' do
     get '/search/website?query=alma'
 
-    data = JSON.parse(response.body, symbolize_names: true)
+    data = JSON.parse(last_response.body, symbolize_names: true)
     expect(data[:records][1][:description]).to include('Book Loans Borrowers may check out a maximum of 25 items.')
   end
 
   it 'converts &nbsp; to just a space in the description field' do
     get '/search/website?query=alma'
 
-    data = JSON.parse(response.body, symbolize_names: true)
+    data = JSON.parse(last_response.body, symbolize_names: true)
     expect(data[:records][1][:description]).to include(
       'Borrowers may check out a maximum of 25 items. Items are loaned for 4 weeks.'
     )
@@ -35,8 +35,8 @@ RSpec.describe 'GET /search/website' do
 
     it 'gives the user a 500 error and a descriptive message' do
       get '/search/website?query=root'
-      expect(response).to have_http_status(:internal_server_error)
-      data = JSON.parse(response.body, symbolize_names: true)
+      expect(last_response.status).to eq 500
+      data = JSON.parse(last_response.body, symbolize_names: true)
       expect(data[:error]).to eq({
                                    problem: 'UPSTREAM_ERROR',
                                    message: 'The library website API returned a 503 HTTP status code.'
