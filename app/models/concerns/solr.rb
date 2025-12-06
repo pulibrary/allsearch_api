@@ -45,10 +45,6 @@ module Solr
     end
   end
 
-  def allsearch_config
-    @allsearch_config ||= Environment.new.config(:allsearch)
-  end
-
   def solr_collection
     allsearch_config[service.to_sym][:solr][:collection]
   end

@@ -6,6 +6,7 @@ if ENV['CI'] || ENV['COVERAGE']
   require 'simplecov'
   SimpleCov.start 'rails'
 end
+ENV['RAILS_ENV'] ||= 'test'
 
 require 'webmock/rspec'
 require_relative '../app/paths'

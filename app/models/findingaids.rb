@@ -5,10 +5,11 @@ class Findingaids
   include Parsed
   include Solr
 
-  attr_reader :query_terms, :service, :service_response
+  attr_reader :query_terms, :service, :service_response, :allsearch_config
 
-  def initialize(query_terms:)
+  def initialize(query_terms:, allsearch_config: ALLSEARCH_CONFIGS[:allsearch])
     @query_terms = query_terms
+    @allsearch_config = allsearch_config
     @service = 'findingaids'
     @service_response = solr_service_response
   end

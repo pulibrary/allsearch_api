@@ -67,7 +67,7 @@ class CheckList
   end
 
   def solr_configs
-    @solr_configs ||= Environment.new.config(:allsearch)
+    @solr_configs ||= ALLSEARCH_CONFIGS[:allsearch]
   end
 
   def db_gateways

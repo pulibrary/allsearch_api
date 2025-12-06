@@ -45,7 +45,7 @@ class OAuthService
   end
 
   def configuration
-    @configuration ||= Environment.new.config(:allsearch)[service.to_sym]
+    @configuration ||= ALLSEARCH_CONFIGS[:allsearch][service.to_sym]
   end
 
   # :reek:UtilityFunction

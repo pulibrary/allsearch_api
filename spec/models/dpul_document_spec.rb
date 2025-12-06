@@ -20,7 +20,7 @@ RSpec.describe DpulDocument do
   context 'when on a non-production environment' do
     it 'links to the record url associated with the solr collection' do
       document = described_class.new(document: {}, doc_keys: [],
-                                     environment: Environment.new({ 'RAILS_ENV' => 'staging' }))
+                                     allsearch_config: { dpul: { subdomain: 'dpul-staging' } })
       expect(document.send(:url)).to eq('https://dpul-staging.princeton.edu/catalog/')
     end
   end
