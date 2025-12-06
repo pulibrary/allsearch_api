@@ -383,6 +383,7 @@ DEPENDENCIES
   ed25519
   flipper-sequel
   honeybadger
+  irb
   logstash-event
   net-scp
   net-ssh
