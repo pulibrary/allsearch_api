@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require_relative '../../app/checks/database_check'
 
 class StubGateway
   def initialize(connection)
