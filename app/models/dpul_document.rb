@@ -5,14 +5,14 @@
 class DpulDocument < Document
   include SolrDocument
 
-  def initialize(document:, doc_keys:, environment: Environment.new)
+  def initialize(document:, doc_keys:, allsearch_config: ALLSEARCH_CONFIGS[:allsearch])
     super(document:, doc_keys:)
-    @environment = environment
+    @allsearch_config = allsearch_config
   end
 
   private
 
-  attr_reader :environment
+  attr_reader :allsearch_config
 
   def service
     'dpul'

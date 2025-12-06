@@ -16,7 +16,7 @@ class Article
 
   def initialize(query_terms:)
     @query_terms = query_terms
-    summon_config = Environment.new.config(:allsearch)[:summon]
+    summon_config = ALLSEARCH_CONFIGS[:allsearch][:summon]
     @service = Summon::Service.new(access_id: summon_config[:access_id],
                                    secret_key: summon_config[:secret_key])
   end
