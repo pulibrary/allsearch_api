@@ -17,6 +17,10 @@ class BannerRepository < ROM::Repository[:banners]
     end
   end
 
+  def first
+    banners.first || create({})
+  end
+
   def delete
     # There should only ever be one, banner, so it is safe to delete them all
     banners.changeset(:delete).commit

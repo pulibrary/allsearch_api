@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'webmock'
+
 # rubocop:disable RSpec/DescribeClass
 RSpec.describe 'Deployed environment', :staging_test do
   let(:host) { 'allsearch-api-staging.princeton.edu' }
