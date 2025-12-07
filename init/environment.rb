@@ -14,6 +14,16 @@ class Environment
     YAML.safe_load(ERB.new(config_filepath.read).result, aliases: true, symbolize_names: true)[name.to_sym]
   end
 
+  def when_development
+    yield if name == 'development'
+    self
+  end
+
+  def when_deployed
+    yield if %w[production staging].include? name
+    self
+  end
+
   private
 
   attr_reader :vars
