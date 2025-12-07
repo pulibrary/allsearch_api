@@ -5,6 +5,7 @@
 require_relative 'app/paths'
 require_relative 'config/environment'
 require allsearch_path 'config/allsearch_configs'
+require allsearch_path 'app/router'
 
-run Rails.application
+run Rails.application.config.middleware.build(Router)
 Rails.application.load_server
