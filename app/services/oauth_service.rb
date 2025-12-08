@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../environment'
-
 # This class is responsible for communicating with an
 # OAuth server to get new access tokens
 class OAuthService

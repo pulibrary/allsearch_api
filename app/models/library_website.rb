@@ -2,7 +2,6 @@
 
 require 'dry-monads'
 require 'flipper'
-require_relative '../environment'
 
 class LibraryWebsite
   include Dry::Monads[:maybe]

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'paths'
-
 class Environment
   def initialize(vars = ENV)
     @vars = vars
@@ -20,3 +18,5 @@ class Environment
 
   attr_reader :vars
 end
+
+CURRENT_ENVIRONMENT = Environment.new

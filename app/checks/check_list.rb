@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative '../paths'
-require_relative '../environment'
 
 # This class maintains a list of health checks
 class CheckList
