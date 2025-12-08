@@ -9,6 +9,7 @@ AllCops:
     - 'bin/**/*'
     - 'db/**/*'
     - 'solr/**/*'
+    - 'tmp/**/*'
     - 'vendor/bundle/**/*'
 
 Naming/RescuedExceptionsVariableName:
