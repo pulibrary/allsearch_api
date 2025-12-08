@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'dry-monads'
-require_relative '../../environment'
 
 # This module helps classes communicate with Solr APIs
 module Solr

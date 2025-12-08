@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../environment'
 require 'dry-monads'
 
 # This class is responsible for getting relevant
