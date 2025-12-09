@@ -41,7 +41,7 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
   it 'is idempotent' do
     described_class.new.run
     rom = Rails.application.config.rom
-    expect { described_class.new.run }.not_to change { rom.relations[:library_staff_records].count }
+    expect { described_class.new.run }.not_to(change { rom.relations[:library_staff_records].count })
   end
 
   context 'when file does not have the required headers' do
@@ -80,9 +80,9 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
     it 'removes them from the database' do
       rom = Rails.application.config.rom
       repo = RepositoryFactory.library_staff
-      old_record = repo.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
-                               title: 'Outside Specialist', library_title: 'Outside Specialist',
-                               email: 'outside@princeton.edu', department: 'None')
+      repo.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
+                  title: 'Outside Specialist', library_title: 'Outside Specialist',
+                  email: 'outside@princeton.edu', department: 'None')
       expect(rom.relations[:library_staff_records].where(puid: 0o00000004).count).to eq(1)
       described_class.new.run
       expect(rom.relations[:library_staff_records].where(puid: 0o00000004).to_a).to be_empty
@@ -99,7 +99,8 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
                   department: 'Library - Collections and Access Services')
       expect(rom.relations[:library_staff_records].where(first_name: 'Spot Tiberius').first.name).to eq 'Adams, Spot'
       described_class.new.run
-      expect(rom.relations[:library_staff_records].where(first_name: 'Spot Tiberius').first.name).to eq 'Adams, Tiberius'
+      expect(rom.relations[:library_staff_records].where(first_name: 'Spot Tiberius').first.name)
+        .to eq 'Adams, Tiberius'
     end
   end
 

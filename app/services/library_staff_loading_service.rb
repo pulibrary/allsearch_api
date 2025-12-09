@@ -17,6 +17,7 @@ class LibraryStaffLoadingService < CSVLoadingService
 
   # :reek:NestedIterators
   # :reek:NilCheck
+  # :reek:FeatureEnvy
   def csv_without_empty_rows
     csv.filter { |row| !row.all? { |cell| cell.nil? || cell.strip.empty? } }
   end
