@@ -7,7 +7,7 @@ ALLSEARCH_AUTOLOAD_DIRECTORIES = [
 
 require 'zeitwerk'
 
-# This class is a simple wrapper around the Listen gem
+# This class is a wrapper around the Listen gem
 class FileListener
   def initialize(path_generator: ->(path) { allsearch_path(path) })
     @path_generator = path_generator

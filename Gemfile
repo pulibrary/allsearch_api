@@ -38,7 +38,6 @@ group :development do
   gem 'capistrano-passenger', require: false
   gem 'capistrano-rails', require: false
   gem 'ed25519'
-  gem 'listen', require: false
   gem 'net-scp'
   gem 'net-ssh'
   gem 'puma'
@@ -47,6 +46,7 @@ end
 group :development, :test do
   gem 'brakeman'
   gem 'byebug'
+  gem 'listen', require: false
   gem 'reek'
   gem 'rspec_junit_formatter', require: false
   gem 'rubocop-rails', require: false
