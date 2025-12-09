@@ -4,7 +4,8 @@ require 'rails_helper'
 
 RSpec.describe LibraryDatabase do
   let(:query_terms) { 'foo' }
-  let(:db_service) { described_class.new(query_terms:) }
+  let(:rom) { Rails.application.config.rom }
+  let(:db_service) { described_class.new(query_terms:, rom:) }
 
   it 'has the correct more_link' do
     expect(db_service.more_link.value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=foo')

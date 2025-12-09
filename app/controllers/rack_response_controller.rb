@@ -3,11 +3,12 @@
 class RackResponseController
   def self.call(env)
     request = Rack::Request.new(env)
-    new(request).response
+    new(request, env).response
   end
 
-  def initialize(request)
+  def initialize(request, env = nil)
     @request = request
+    @env = env || request.env
   end
 
   def response
@@ -33,7 +34,7 @@ class RackResponseController
 
   private
 
-  attr_reader :request, :service
+  attr_reader :request, :service, :env
 
   # :reek:TooManyStatements
   def data_response
@@ -47,7 +48,7 @@ class RackResponseController
   end
 
   def json
-    service.new(query_terms:).our_response
+    service.new(query_terms:, rom: env['rom']).our_response
   end
 
   def empty_query?
