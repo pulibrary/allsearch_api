@@ -46,6 +46,7 @@ end
 group :development, :test do
   gem 'brakeman'
   gem 'byebug'
+  gem 'listen', require: false
   gem 'reek'
   gem 'rspec_junit_formatter', require: false
   gem 'rubocop-rails', require: false
