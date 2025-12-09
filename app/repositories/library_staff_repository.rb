@@ -9,6 +9,7 @@ class LibraryStaffRepository < ROM::Repository[:library_staff_records]
   commands :delete
 
   # rubocop:disable Metrics/MethodLength
+  # rubocop:disable Metrics/AbcSize
   # :reek:FeatureEnvy
   # :reek:DuplicateMethodCall
   def new_from_csv(rows)
@@ -37,4 +38,5 @@ class LibraryStaffRepository < ROM::Repository[:library_staff_records]
     create entries
   end
   # rubocop:enable Metrics/MethodLength
+  # rubocop:enable Metrics/AbcSize
 end

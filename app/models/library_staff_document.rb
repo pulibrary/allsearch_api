@@ -9,6 +9,7 @@ class LibraryStaffDocument
     @attributes = attributes
   end
 
+  # rubocop:disable Metrics/MethodLength
   def public_metadata
     {
       id:,
@@ -27,9 +28,10 @@ class LibraryStaffDocument
         unit:,
         netid:,
         pronouns:
-    }
-  }.compact
+      }
+    }.compact
   end
+  # rubocop:enable Metrics/MethodLength
 
   private
 
@@ -106,7 +108,8 @@ class LibraryStaffDocument
   end
 
   def name_to_path
-    URI::DEFAULT_PARSER.escape("#{attributes[:first_name]}-#{attributes[:last_name]}".delete(".'").gsub(' ', '-').downcase)
+    URI::DEFAULT_PARSER.escape("#{attributes[:first_name]}-#{attributes[:last_name]}".delete(".'").gsub(' ',
+                                                                                                        '-').downcase)
   end
 
   def doc_keys

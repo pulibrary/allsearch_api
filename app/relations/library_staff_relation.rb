@@ -10,10 +10,16 @@ class LibraryStaffRelation < ROM::Relation[:sql]
 
   # this method uses placeholders so is not vulnerable
   # bearer:disable ruby_rails_sql_injection
+  # rubocop:disable Layout/LineLength
   def query(search_term)
-    where(Sequel.lit("name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)", search_term, search_term))
-      .reverse(Sequel.lit("ts_rank(name_searchable, websearch_to_tsquery('unaccented_simple_dict', unaccent(?))) + ts_rank(searchable, websearch_to_tsquery('unaccented_dict', unaccent(?)))", search_term, search_term))
+    where(Sequel.lit(
+            "name_searchable @@ websearch_to_tsquery('unaccented_simple_dict', ?) OR searchable @@ websearch_to_tsquery('unaccented_dict', ?)", search_term, search_term
+          ))
+      .reverse(Sequel.lit(
+                 "ts_rank(name_searchable, websearch_to_tsquery('unaccented_simple_dict', unaccent(?))) + ts_rank(searchable, websearch_to_tsquery('unaccented_dict', unaccent(?)))", search_term, search_term
+               ))
   end
+  # rubocop:enable Layout/LineLength
 
   auto_struct true
 end
