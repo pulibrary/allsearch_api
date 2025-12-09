@@ -9,7 +9,7 @@ class Libanswers
   include Dry::Monads[:maybe]
   include Parsed
 
-  def initialize(query_terms:)
+  def initialize(query_terms:, rom: Rails.application.config.rom)
     @query_terms = CGI.escape(query_terms)
   end
 
