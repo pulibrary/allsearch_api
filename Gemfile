@@ -44,7 +44,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'brakeman'
   gem 'byebug'
   gem 'listen', require: false
   gem 'reek'
