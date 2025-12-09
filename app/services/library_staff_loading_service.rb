@@ -8,15 +8,17 @@ class LibraryStaffLoadingService < CSVLoadingService
 
   def process_data
     repository.delete
-    repository.new_from_csv remove_empty_rows(csv)
+    repository.new_from_csv csv_without_empty_rows
   end
 
   def existing_records
     repository.library_staff_records.count
   end
 
-  def remove_empty_rows(rows)
-    rows.filter { |row| !row.all? { |cell| cell.nil? || cell.strip.empty? } }
+  # :reek:NestedIterators
+  # :reek:NilCheck
+  def csv_without_empty_rows
+    csv.filter { |row| !row.all? { |cell| cell.nil? || cell.strip.empty? } }
   end
 
   def expected_headers

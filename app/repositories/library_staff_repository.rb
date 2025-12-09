@@ -9,6 +9,8 @@ class LibraryStaffRepository < ROM::Repository[:library_staff_records]
   commands :delete
 
   # rubocop:disable Metrics/MethodLength
+  # :reek:FeatureEnvy
+  # :reek:DuplicateMethodCall
   def new_from_csv(rows)
     entries = rows.map do |row|
       {
