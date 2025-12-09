@@ -46,10 +46,6 @@ class LibraryStaffDocument
     attributes[:first_name]
   end
 
-  def middle_name
-    attributes[:middle_name]
-  end
-
   def last_name
     attributes[:last_name]
   end
@@ -72,14 +68,6 @@ class LibraryStaffDocument
 
   def library_title
     attributes[:library_title]
-  end
-
-  def team
-    attributes[:team]
-  end
-
-  def division
-    attributes[:division]
   end
 
   def department
@@ -110,10 +98,5 @@ class LibraryStaffDocument
   def name_to_path
     URI::DEFAULT_PARSER.escape("#{attributes[:first_name]}-#{attributes[:last_name]}".delete(".'").gsub(' ',
                                                                                                         '-').downcase)
-  end
-
-  def doc_keys
-    [:first_name, :middle_name, :last_name, :netid, :library_title, :phone, :email, :team, :division, :department,
-     :unit, :office, :building, :pronouns]
   end
 end
