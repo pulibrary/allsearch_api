@@ -38,6 +38,7 @@ group :development do
   gem 'capistrano-passenger', require: false
   gem 'capistrano-rails', require: false
   gem 'ed25519'
+  gem 'irb'
   gem 'net-scp'
   gem 'net-ssh'
   gem 'puma'
