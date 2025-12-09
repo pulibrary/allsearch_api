@@ -6,8 +6,17 @@
 class LibraryStaffLoadingService < CSVLoadingService
   private
 
-  def class_to_load
-    LibraryStaffRecord
+  def process_data
+    repository.delete
+    repository.new_from_csv remove_empty_rows(csv)
+  end
+
+  def existing_records
+    repository.library_staff_records.count
+  end
+
+  def remove_empty_rows(rows)
+    rows.filter { |row| !row.all? { |cell| cell.nil? || cell.strip.empty? } }
   end
 
   def expected_headers
@@ -17,5 +26,9 @@ class LibraryStaffLoadingService < CSVLoadingService
 
   def uri
     @uri ||= URI.parse('https://lib-jobs.princeton.edu/pul-staff-report.csv')
+  end
+
+  def repository
+    @repository ||= LibraryStaffRepository.new(Rails.application.config.rom)
   end
 end

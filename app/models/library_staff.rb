@@ -6,18 +6,24 @@ require 'dry-monads'
 # into an API response
 class LibraryStaff
   include Dry::Monads[:maybe]
-  include Parsed
 
-  attr_reader :query_terms, :service_response
+  attr_reader :query_terms
 
   def initialize(query_terms:)
     @query_terms = query_terms
-    @service_response = library_staff_service_response
   end
 
-  def library_staff_service_response
+  def our_response
+    {
+      number:,
+      records:,
+      more: more_link
+    }.compact.to_json
+  end
+
+  def service_response
     unescaped_terms = URI::DEFAULT_PARSER.unescape(query_terms)
-    LibraryStaffRecord.query(unescaped_terms)
+    @service_response ||= library_staff.query(unescaped_terms)
   end
 
   def number
@@ -29,7 +35,13 @@ class LibraryStaff
                           query: "combine=#{query_terms}"))
   end
 
-  def documents
-    service_response.first(3)
+  def records
+    service_response.limit(3).map { LibraryStaffDocument.new(it).public_metadata }
+  end
+
+  private
+
+  def library_staff
+    @library_staff ||= Rails.application.config.rom.relations[:library_staff_records]
   end
 end

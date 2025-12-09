@@ -4,86 +4,101 @@
 # metadata from the LibraryStaffRecords in the database
 # The document is a LibraryStaffRecord
 # :reek:TooManyMethods
-class LibraryStaffDocument < Document
+class LibraryStaffDocument
+  def initialize(attributes)
+    @attributes = attributes
+  end
+
+  def public_metadata
+    {
+      id:,
+      title:,
+      type: 'Library Staff',
+      url:,
+      other_fields: {
+        building:,
+        department:,
+        email:,
+        first_name:,
+        last_name:,
+        library_title:,
+        office:,
+        phone:,
+        unit:,
+        netid:,
+        pronouns:
+    }
+  }.compact
+  end
+
   private
+
+  attr_reader :attributes
 
   # Use the full name as the document title
   def title
-    document.name
+    attributes[:name]
   end
 
   def first_name
-    document.first_name
+    attributes[:first_name]
   end
 
   def middle_name
-    document.middle_name
+    attributes[:middle_name]
   end
 
   def last_name
-    document.last_name
+    attributes[:last_name]
   end
 
-  # Not relevant for this service
-  def creator; end
-
-  # Not relevant for this service
-  def publisher; end
-
   def id
-    document.puid
+    attributes[:puid].to_s
   end
 
   def netid
-    document.netid
+    attributes[:netid]
   end
 
   def phone
-    document.phone
+    attributes[:phone]
   end
 
   def email
-    document.email
+    attributes[:email]
   end
 
   def library_title
-    document.library_title
+    attributes[:library_title]
   end
 
   def team
-    document.team
+    attributes[:team]
   end
 
   def division
-    document.division
+    attributes[:division]
   end
 
   def department
-    document.department
+    attributes[:department]
   end
 
   def unit
-    document.unit
+    attributes[:unit]
   end
 
   def office
-    document.office
+    attributes[:office]
   end
 
   def building
-    document.building
+    attributes[:building]
   end
 
   def pronouns
-    document.pronouns
+    attributes[:pronouns]
   end
-
-  def type
-    'Library Staff'
-  end
-
-  # Not relevant for this service
-  def description; end
 
   def url
     path = "/about/staff-directory/#{name_to_path}"
@@ -91,7 +106,7 @@ class LibraryStaffDocument < Document
   end
 
   def name_to_path
-    URI::DEFAULT_PARSER.escape("#{document.first_name}-#{document.last_name}".delete(".'").gsub(' ', '-').downcase)
+    URI::DEFAULT_PARSER.escape("#{attributes[:first_name]}-#{attributes[:last_name]}".delete(".'").gsub(' ', '-').downcase)
   end
 
   def doc_keys
