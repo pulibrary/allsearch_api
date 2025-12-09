@@ -17,7 +17,7 @@ class LibraryStaff
     {
       number:,
       records:,
-      more: more_link
+      more: more_link.value_or(nil)
     }.compact.to_json
   end
 

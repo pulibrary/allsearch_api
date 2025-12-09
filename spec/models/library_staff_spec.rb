@@ -26,5 +26,10 @@ RSpec.describe LibraryStaff do
       expect(our_response[:records]).not_to be_empty
       expect(our_response[:records].first[:other_fields][:first_name]).to eq('Brutus Ét tu')
     end
+
+    it 'has a valid more link in the JSON response' do
+      our_response = JSON.parse(staff_service.our_response, symbolize_names: true)
+      expect(our_response[:more]).to eq 'https://library.princeton.edu/about/staff-directory?combine=%C3%89t+tu'
+    end
   end
 end
