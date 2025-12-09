@@ -1,6 +1,5 @@
 inherit_from: .rubocop_todo.yml
-plugins: 
-  - rubocop-rails
+plugins:
   - rubocop-rspec
 
 AllCops:
