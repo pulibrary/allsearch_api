@@ -49,7 +49,6 @@ group :development, :test do
   gem 'listen', require: false
   gem 'reek'
   gem 'rspec_junit_formatter', require: false
-  gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
 end
 
