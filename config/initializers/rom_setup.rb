@@ -15,6 +15,5 @@ rom_if_available.bind do |container|
   # have to refactor those first.
   Rails.application.config.middleware.use RomMiddleware, container
 
-  # Make the container available to the Rails application
   Rails.application.config.rom = container
 end

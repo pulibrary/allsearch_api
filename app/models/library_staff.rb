@@ -9,8 +9,9 @@ class LibraryStaff
 
   attr_reader :query_terms
 
-  def initialize(query_terms:)
+  def initialize(query_terms:, rom:)
     @query_terms = query_terms
+    @rom = rom
   end
 
   def our_response
@@ -41,7 +42,9 @@ class LibraryStaff
 
   private
 
+  attr_reader :rom
+
   def library_staff
-    @library_staff ||= Rails.application.config.rom.relations[:library_staff_records]
+    @library_staff ||= rom.relations[:library_staff_records]
   end
 end

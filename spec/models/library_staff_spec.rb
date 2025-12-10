@@ -4,7 +4,8 @@ require 'rails_helper'
 
 RSpec.describe LibraryStaff do
   let(:query_terms) { 'foo' }
-  let(:staff_service) { described_class.new(query_terms:) }
+  let(:rom) { Rails.application.config.rom }
+  let(:staff_service) { described_class.new(query_terms:, rom:) }
 
   it 'has the correct more_link' do
     expect(staff_service.more_link.value!.to_s).to eq('https://library.princeton.edu/about/staff-directory?combine=foo')

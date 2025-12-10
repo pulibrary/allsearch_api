@@ -25,6 +25,6 @@ class LibraryDatabaseLoadingService < CSVLoadingService
   end
 
   def repository_factory
-    @repository_factory ||= RepositoryFactory.new
+    @repository_factory ||= RepositoryFactory.new(Rails.application.config.rom)
   end
 end

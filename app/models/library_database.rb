@@ -9,8 +9,9 @@ class LibraryDatabase
 
   attr_reader :query_terms
 
-  def initialize(query_terms:)
+  def initialize(query_terms:, rom:)
     @query_terms = query_terms
+    @rom = rom
   end
 
   def our_response
@@ -50,7 +51,9 @@ class LibraryDatabase
 
   private
 
+  attr_reader :rom
+
   def library_databases
-    @library_databases ||= Rails.application.config.rom.relations[:library_database_records]
+    @library_databases ||= rom.relations[:library_database_records]
   end
 end
