@@ -11,6 +11,10 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/bundle/**/*'
 
+Lint/ConstantDefinitionInBlock:
+  Exclude:
+    - 'lib/tasks/**/*'
+
 Naming/RescuedExceptionsVariableName:
   PreferredName: error
 

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require_relative '../../app/paths'
-require_relative '../rom_container'
+require allsearch_path('init/rom')
 require allsearch_path('lib/middleware/rom')
 
 # This initializer is responsible for making a ROM container available
 # to the application
-RomContainer.new.call.bind do |container|
+rom_if_available.bind do |container|
   # Make the container available to Rack applications and middleware
   #
   # Eventually, it would be nice to move this to config.ru, so that it
