@@ -9,7 +9,7 @@ class BestBet
 
   attr_reader :query_terms, :service_response
 
-  def initialize(query_terms:, rom: Rails.application.config.rom)
+  def initialize(query_terms:)
     @query_terms = query_terms
     @service_response = best_bet_service_response
   end

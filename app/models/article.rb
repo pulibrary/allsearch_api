@@ -13,7 +13,7 @@ class Article
 
   def_delegators :service_response, :documents
 
-  def initialize(query_terms:, rom: Rails.application.config.rom)
+  def initialize(query_terms:)
     @query_terms = query_terms
     summon_config = ALLSEARCH_CONFIGS[:allsearch][:summon]
     @service = Summon::Service.new(access_id: summon_config[:access_id],

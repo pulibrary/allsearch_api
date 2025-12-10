@@ -7,7 +7,7 @@ class Dpul
 
   attr_reader :query_terms, :service, :service_response, :allsearch_config
 
-  def initialize(query_terms:, rom: Rails.application.config.rom, allsearch_config: ALLSEARCH_CONFIGS[:allsearch])
+  def initialize(query_terms:, allsearch_config: ALLSEARCH_CONFIGS[:allsearch])
     @query_terms = query_terms
     @allsearch_config = allsearch_config
     @service = 'dpul'

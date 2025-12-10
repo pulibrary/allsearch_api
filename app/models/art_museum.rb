@@ -9,7 +9,7 @@ class ArtMuseum
 
   attr_reader :service, :service_response
 
-  def initialize(query_terms:, rom: Rails.application.config.rom)
+  def initialize(query_terms:)
     @query_terms = query_terms
     @service = 'artmuseum'
     @service_response = art_museum_service_response

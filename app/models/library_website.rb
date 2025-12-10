@@ -9,7 +9,7 @@ class LibraryWebsite
 
   attr_reader :query_terms
 
-  def initialize(query_terms:, rom: Rails.application.config.rom)
+  def initialize(query_terms:)
     @query_terms = query_terms
     @website_config = ALLSEARCH_CONFIGS[:allsearch][:library_website]
   end

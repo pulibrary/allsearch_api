@@ -8,7 +8,7 @@ class Libguides
 
   attr_reader :query_terms
 
-  def initialize(query_terms:, rom: Rails.application.config.rom)
+  def initialize(query_terms:)
     @query_terms = query_terms
   end
 
