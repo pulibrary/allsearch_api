@@ -3,6 +3,7 @@
 require 'database_cleaner/sequel'
 require_relative '../../app/paths'
 require allsearch_path 'db/seeds'
+require allsearch_path 'config/environment'
 
 RSpec.configure do |config|
   rom = Rails.application.config.rom

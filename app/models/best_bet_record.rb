@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require allsearch_path 'init/logger'
+
 # This class is responsible for storing and retrieving relevant
 # metadata from the best_bet_record table in the database
 class BestBetRecord < ApplicationRecord
@@ -16,7 +18,7 @@ class BestBetRecord < ApplicationRecord
       last_update: last_update(row)
     )
   rescue ActiveRecord::RecordInvalid => error
-    Rails.logger.error("Could not create new BestBet for row #{row}: #{error.message}")
+    logger.error("Could not create new BestBet for row #{row}: #{error.message}")
   end
 
   def self.last_update(row)
@@ -25,6 +27,10 @@ class BestBetRecord < ApplicationRecord
 
     Date.strptime(update, '%B %d, %Y')
   rescue Date::Error
-    Rails.logger.info("Invalid date for BestBet row: #{row}")
+    logger.info("Invalid date for BestBet row: #{row}")
+  end
+
+  def self.logger
+    ALLSEARCH_LOGGER
   end
 end

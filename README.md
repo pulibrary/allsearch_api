@@ -13,7 +13,7 @@ Requires:
 1. Install the required gems - `bundle install`
 1. Make sure you have wget installed - `brew install wget`
 1. Start local solr and postgres - `bundle exec rake servers:start`
-1. Start the application server on localhost:3000 - `bundle exec rails s`
+1. Start the application server on localhost:3000 - `bundle exec puma`
 1. See the application running at http://localhost:3000/
 
 ## Run tests

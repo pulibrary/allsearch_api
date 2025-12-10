@@ -7,7 +7,8 @@
 class InitializeRails
   INITIALIZERS_TO_EXCLUDE = [
     :set_autoload_paths, :setup_once_autoloader, :setup_main_autoloader,
-    :set_eager_load, :set_eager_load_paths, :eager_load!
+    :set_eager_load, :set_eager_load_paths, :eager_load!,
+    :initialize_logger
   ].freeze
 
   def initialize(application = Rails.application)
