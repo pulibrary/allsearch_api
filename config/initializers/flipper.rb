@@ -1,11 +1,19 @@
 # frozen_string_literal: true
 
+require allsearch_path 'init/rom'
+
 # Flipper must be required after a database connection is established
-require_relative '../db_connection'
-begin
-  require 'flipper-sequel'
-rescue Sequel::Error
-  # We may be in a context where the database is not yet available
-  # (e.g. rake servers:start)
+# However, we may be in a context where the database is not yet available
+# (e.g. rake servers:start), so we don't throw an error if we can't setup
+# the database or flipper
+
+case database_if_available
+in Success
+  begin
+    require 'flipper-sequel'
+  rescue Sequel::Error
+    nil
+  end
+in Failure
   nil
 end
