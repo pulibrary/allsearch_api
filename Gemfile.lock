@@ -217,10 +217,6 @@ GEM
     rails-html-sanitizer (1.6.2)
       loofah (~> 2.21)
       nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
-    rails_semantic_logger (4.18.0)
-      rack
-      railties (>= 5.1)
-      semantic_logger (~> 4.16)
     railties (8.0.2.1)
       actionpack (= 8.0.2.1)
       activesupport (= 8.0.2.1)
@@ -391,7 +387,6 @@ DEPENDENCIES
   rack-cors
   rack-test
   rack-utf8_sanitizer
-  rails_semantic_logger
   railties (~> 8.0)
   rake
   reek
@@ -399,6 +394,7 @@ DEPENDENCIES
   rspec
   rspec_junit_formatter
   rubocop-rspec
+  semantic_logger
   sequel-activerecord_connection
   simplecov
   summon

@@ -18,6 +18,7 @@ Bundler.require(*Rails.groups)
 module BentoRailsApi
   class Application < Rails::Application
     config.middleware.insert 0, Rack::UTF8Sanitizer, sanitize_null_bytes: true
+    config.middleware.delete Rails::Rack::Logger
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 

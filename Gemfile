@@ -13,16 +13,16 @@ gem 'datadog', '~> 2.0', require: 'datadog/auto_instrument'
 gem 'dogstatsd-ruby'
 gem 'dry-monads'
 gem 'flipper-sequel', require: false
-gem 'honeybadger'
+gem 'honeybadger', require: false
 gem 'logstash-event'
 gem 'pg'
 gem 'rack'
 gem 'rack-cors'
 gem 'rack-utf8_sanitizer'
-gem 'rails_semantic_logger'
 gem 'railties', '~> 8.0'
 gem 'rake'
 gem 'rom-sql'
+gem 'semantic_logger', require: false
 gem 'sequel-activerecord_connection'
 gem 'summon'
 gem 'thor'

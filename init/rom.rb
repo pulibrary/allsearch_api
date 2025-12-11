@@ -4,6 +4,7 @@ require 'rom'
 require 'rom-sql'
 require 'dry-monads'
 require_relative 'environment'
+require allsearch_path 'init/logger'
 require allsearch_path 'app/relations/banner_relation'
 require allsearch_path 'app/relations/library_database_relation'
 require allsearch_path 'app/relations/library_staff_relation'
@@ -33,6 +34,7 @@ def rom_container(db_connection)
   rom_config.register_relation LibraryDatabaseRelation
   rom_config.register_relation LibraryStaffRelation
   rom_config.register_relation OAuthTokenRelation
+  rom_config.default.use_logger ALLSEARCH_LOGGER
   Success(ROM.container(rom_config))
 end
 

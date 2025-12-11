@@ -4,7 +4,7 @@
 api_key: "<%= ENV['HONEYBADGER_API_KEY'] %>"
 
 # The environment your app is running in.
-env: "<%= Rails.env %>"
+env: "<%= ENV['RAILS_ENV'] %>"
 
 # The absolute path to your project folder.
 root: "<%= allsearch_path %>"

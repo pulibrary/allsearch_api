@@ -2,7 +2,7 @@
 
 ALLSEARCH_AUTOLOAD_DIRECTORIES = [
   'app/checks', 'app/controllers', 'app/models', 'app/models/concerns', 'app/relations', 'app/repositories',
-  'app/services'
+  'app/services', 'middleware'
 ].freeze
 
 require 'zeitwerk'

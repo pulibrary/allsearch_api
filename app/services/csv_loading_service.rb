@@ -2,11 +2,16 @@
 
 require 'csv'
 require 'open-uri'
+require allsearch_path 'init/logger'
 
 # A general class that can be subclassed
 # to load data from a remote CSV file
 # into the database
 class CSVLoadingService
+  def initialize(logger: ALLSEARCH_LOGGER)
+    @logger = logger
+  end
+
   def run
     fetch_data
     process_data if data_is_valid?
@@ -14,7 +19,7 @@ class CSVLoadingService
 
   private
 
-  attr_reader :csv
+  attr_reader :csv, :logger
 
   def fetch_data
     contents = uri.open
@@ -38,9 +43,9 @@ class CSVLoadingService
     much_smaller = csv_shrinkage > (existing_records * 0.25)
     return false unless much_smaller
 
-    Rails.logger.error("The #{self.class} had a much shorter CSV. " \
-                       "The original length was #{existing_records} rows, " \
-                       "the new length is #{new_csv_length} rows.")
+    logger.error("The #{self.class} had a much shorter CSV. " \
+                 "The original length was #{existing_records} rows, " \
+                 "the new length is #{new_csv_length} rows.")
     much_smaller
   end
 
@@ -65,10 +70,10 @@ class CSVLoadingService
     new_headers = csv.readline
     return true if (new_headers & expected_headers) == expected_headers
 
-    Rails.logger.error("The #{self.class} did not load the CSV " \
-                       "because the headers didn't match. The expected headers are: " \
-                       "#{expected_headers.to_sentence}. " \
-                       "The new CSV headers are #{new_headers&.to_sentence}.")
+    logger.error("The #{self.class} did not load the CSV " \
+                 "because the headers didn't match. The expected headers are: " \
+                 "#{expected_headers.to_sentence}. " \
+                 "The new CSV headers are #{new_headers&.to_sentence}.")
     false
   end
 
