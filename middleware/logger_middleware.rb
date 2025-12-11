@@ -12,10 +12,6 @@ class LoggerMiddleware
 
   private
 
-  def current_allocations
-    GC.stat(:total_allocated_objects)
-  end
-
   attr_reader :app, :logger
 
   class RequestLogger
