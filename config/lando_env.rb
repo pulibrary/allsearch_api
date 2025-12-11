@@ -1,19 +1,20 @@
 # frozen_string_literal: true
 
-if Rails.env.local?
-  begin
-    lando_services = JSON.parse(`lando info --format json`, symbolize_names: true)
-    lando_services.each do |service|
-      service[:external_connection]&.each do |key, value|
-        ENV["lando_#{service[:service]}_conn_#{key}"] = value
-      end
-      next unless service[:creds]
+require_relative '../app/paths'
+require allsearch_path 'init/environment'
 
-      service[:creds].each do |key, value|
-        ENV["lando_#{service[:service]}_creds_#{key}"] = value
-      end
+CURRENT_ENVIRONMENT.when_local do
+  lando_services = JSON.parse(`lando info --format json`, symbolize_names: true)
+  lando_services.each do |service|
+    service[:external_connection]&.each do |key, value|
+      ENV["lando_#{service[:service]}_conn_#{key}"] = value
     end
-  rescue StandardError
-    nil
+    next unless service[:creds]
+
+    service[:creds].each do |key, value|
+      ENV["lando_#{service[:service]}_creds_#{key}"] = value
+    end
   end
+rescue StandardError
+  nil
 end
