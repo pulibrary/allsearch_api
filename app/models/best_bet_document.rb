@@ -38,5 +38,4 @@ class BestBetDocument
   def url
     @attributes[:url]
   end
-
 end

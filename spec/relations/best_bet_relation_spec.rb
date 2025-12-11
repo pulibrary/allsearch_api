@@ -1,4 +1,4 @@
-#frozen_string_literal: true
+# frozen_string_literal: true
 
 require 'rails_helper'
 
@@ -76,8 +76,8 @@ RSpec.describe BestBetRelation do
       it 'does not create a record and logs an error' do
         allow(Rails.logger).to receive(:error)
         expect(record).to be_nil
-        expect(Rails.logger).to have_received(:error).with("Could not create new BestBet for row: " \
-                                                           "\"\" (String) has invalid type for :title violates constraints (min_size?(1, \"\") failed)")
+        expect(Rails.logger).to have_received(:error).with('Could not create new BestBet for row: ' \
+                                                           '"" (String) has invalid type for :title violates constraints (min_size?(1, "") failed)')
       end
     end
 
@@ -86,7 +86,7 @@ RSpec.describe BestBetRelation do
 
       it 'still creates the record' do
         allow(Rails.logger).to receive(:error)
-        expect(record).to be_a_kind_of(ROM::Struct::BestBetRecord)
+        expect(record).to be_a(ROM::Struct::BestBetRecord)
         expect(Rails.logger).not_to have_received(:error)
       end
     end
@@ -97,8 +97,8 @@ RSpec.describe BestBetRelation do
       it 'does not create a record and logs an error' do
         allow(Rails.logger).to receive(:error)
         expect(record).to be_nil
-        expect(Rails.logger).to have_received(:error).with("Could not create new BestBet for row: " \
-                                                           "\"\" (String) has invalid type for :url violates constraints (min_size?(1, \"\") failed)")
+        expect(Rails.logger).to have_received(:error).with('Could not create new BestBet for row: ' \
+                                                           '"" (String) has invalid type for :url violates constraints (min_size?(1, "") failed)')
       end
     end
 
@@ -108,8 +108,8 @@ RSpec.describe BestBetRelation do
       it 'does not create a record and logs an error' do
         allow(Rails.logger).to receive(:error)
         expect(record).to be_nil
-        expect(Rails.logger).to have_received(:error).with("Could not create new BestBet for row: \"{}\" " \
-                                                           "(String) has invalid type for :search_terms violates constraints (min_size?(3, \"{}\") failed)")
+        expect(Rails.logger).to have_received(:error).with('Could not create new BestBet for row: "{}" ' \
+                                                           '(String) has invalid type for :search_terms violates constraints (min_size?(3, "{}") failed)')
       end
     end
 
@@ -134,7 +134,7 @@ RSpec.describe BestBetRelation do
 
       it 'still creates the record' do
         allow(Rails.logger).to receive(:error)
-        expect(record).to be_a_kind_of(ROM::Struct::BestBetRecord)
+        expect(record).to be_a(ROM::Struct::BestBetRecord)
         expect(Rails.logger).not_to have_received(:error)
       end
     end
@@ -145,7 +145,7 @@ RSpec.describe BestBetRelation do
       it 'still creates the record and logs an info' do
         allow(Rails.logger).to receive(:error)
         allow(Rails.logger).to receive(:info)
-        expect(record).to be_a_kind_of(ROM::Struct::BestBetRecord)
+        expect(record).to be_a(ROM::Struct::BestBetRecord)
         expect(Rails.logger).not_to have_received(:error)
         expect(Rails.logger).to have_received(:info).with("Invalid date for BestBet row: #{row[0]}")
       end

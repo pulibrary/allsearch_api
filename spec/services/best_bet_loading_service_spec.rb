@@ -18,20 +18,20 @@ RSpec.describe BestBetLoadingService, :truncate do
   end
 
   it 'creates a new row in the best_bet table for each CSV row' do
-    expect { described_class.new.run }.to change{ best_bet.count }.by(7)
+    expect { described_class.new.run }.to change(best_bet, :count).by(7)
     third_record = best_bet.to_a[2]
     expect(third_record.title).to eq('Access and Borrowing')
     expect(third_record.description).to eq('Information on access and borrowing privileges ' \
                                            'for different categories of library patrons, espec')
     expect(third_record.url).to eq('https://library.princeton.edu/services/access')
     expect(third_record.search_terms).to contain_exactly('access', 'access office', 'privileges',
-                                                        'privileges office', 'visitors')
+                                                         'privileges office', 'visitors')
     expect(third_record.last_update).to eq(Date.new(2021, 7, 8))
   end
 
   it 'is idempotent' do
     described_class.new.run
-    expect { described_class.new.run }.not_to change{ best_bet.count }
+    expect { described_class.new.run }.not_to(change(best_bet, :count))
   end
 
   context 'when file does not have the required headers' do
@@ -40,7 +40,7 @@ RSpec.describe BestBetLoadingService, :truncate do
     it 'does not proceed' do
       logger = instance_double(SemanticLogger::Logger, error: true)
       repo.create(title:, url: 'library.princeton.edu', search_terms:)
-      expect { described_class.new.run }.not_to(change { best_bet.count })
+      expect { described_class.new.run }.not_to(change(best_bet, :count))
       expect(logger).to have_received(:error)
         .with('The BestBetLoadingService did not load the CSV ' \
               "because the headers didn't match. The expected headers are: " \
@@ -71,13 +71,13 @@ RSpec.describe BestBetLoadingService, :truncate do
   context 'when the CSV is suspiciously small relative to the number of database rows' do
     it 'does not proceed' do
       30.times { repo.create(title:, url:, search_terms:) }
-      expect { described_class.new.run }.not_to(change { best_bet.count })
+      expect { described_class.new.run }.not_to(change(best_bet, :count))
     end
 
     it 'logs an error' do
       logger = instance_double(SemanticLogger::Logger, error: true)
       30.times { repo.create(title:, url:, search_terms:) }
-      expect { described_class.new.run }.not_to(change { best_bet.count })
+      expect { described_class.new.run }.not_to(change(best_bet, :count))
       expect(logger).to have_received(:error)
         .once.with('The BestBetLoadingService had a much shorter CSV. ' \
                    'The original length was 30 rows, the new length is 8 rows.')

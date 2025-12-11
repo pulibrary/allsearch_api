@@ -29,7 +29,7 @@ class BestBet
   end
 
   def records
-    service_response.limit(1).map{ BestBetDocument.new(it).public_metadata }
+    service_response.limit(1).map { BestBetDocument.new(it).public_metadata }
   end
 
   private

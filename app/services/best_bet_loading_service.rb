@@ -15,11 +15,10 @@ class BestBetLoadingService < CSVLoadingService
     repository.best_bet_records.count
   end
 
+  # :reek:FeatureEnvy
+  # :reek:NilCheck
   def csv_without_incomplete_rows
-    csv.filter do |row|
-    !(row[0].nil? || row[2].nil? || row[3].nil?) 
-    end
-
+    csv.filter do { |row| !(row[0].nil? || row[2].nil? || row[3].nil?) }
   end
 
   def expected_headers
