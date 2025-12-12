@@ -71,6 +71,10 @@ class CSVLoadingService
     false
   end
 
+  def rom_container
+    @rom_container ||= RomFactory.new.require_rom!
+  end
+
   def uri; end
 
   def class_to_load; end
