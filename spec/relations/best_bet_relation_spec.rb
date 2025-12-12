@@ -78,7 +78,7 @@ RSpec.describe BestBetRelation do
         allow(ALLSEARCH_LOGGER).to receive(:error)
         expect(record).to be_nil
         expect(ALLSEARCH_LOGGER).to have_received(:error).with('Could not create new BestBet for row: ' \
-                                                           '"" (String) has invalid type for :title violates constraints (min_size?(1, "") failed)')
+                                                               '"" (String) has invalid type for :title violates constraints (min_size?(1, "") failed)')
       end
     end
 
@@ -99,7 +99,7 @@ RSpec.describe BestBetRelation do
         allow(ALLSEARCH_LOGGER).to receive(:error)
         expect(record).to be_nil
         expect(ALLSEARCH_LOGGER).to have_received(:error).with('Could not create new BestBet for row: ' \
-                                                           '"" (String) has invalid type for :url violates constraints (min_size?(1, "") failed)')
+                                                               '"" (String) has invalid type for :url violates constraints (min_size?(1, "") failed)')
       end
     end
 
@@ -110,7 +110,7 @@ RSpec.describe BestBetRelation do
         allow(ALLSEARCH_LOGGER).to receive(:error)
         expect(record).to be_nil
         expect(ALLSEARCH_LOGGER).to have_received(:error).with('Could not create new BestBet for row: "{}" ' \
-                                                           '(String) has invalid type for :search_terms violates constraints (min_size?(3, "{}") failed)')
+                                                               '(String) has invalid type for :search_terms violates constraints (min_size?(3, "{}") failed)')
       end
     end
 
