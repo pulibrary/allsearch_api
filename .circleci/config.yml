@@ -59,7 +59,7 @@ jobs:
       - checkout
       - ruby/install-deps
 
-  checking:
+  rubocop:
     docker: 
       - image: cimg/ruby:3.4
     steps:
@@ -132,7 +132,7 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - checking
+      - rubocop
       - reek
       - test:
           requires:
