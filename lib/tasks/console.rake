@@ -5,10 +5,10 @@ require_relative '../../app/paths'
 desc 'Interactive console to investigate the classes and functionality of this application'
 task :console do
   require allsearch_path 'init/autoloader'
-  require allsearch_path 'init/rom'
+  require allsearch_path 'init/rom_factory'
   require 'irb'
 
-  ALLSEARCH_ROM = require_rom!
+  ALLSEARCH_ROM = RomFactory.new.require_rom!
   ARGV.clear
   IRB.start
 end
