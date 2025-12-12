@@ -12,3 +12,9 @@ def new_logger(environment = CURRENT_ENVIRONMENT)
 end
 
 ALLSEARCH_LOGGER = new_logger
+
+if defined?(PhusionPassenger)
+  PhusionPassenger.on_event(:starting_worker_process) do |forked|
+    SemanticLogger.reopen if forked
+  end
+end
