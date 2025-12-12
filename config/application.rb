@@ -19,6 +19,16 @@ module BentoRailsApi
   class Application < Rails::Application
     config.middleware.insert 0, Rack::UTF8Sanitizer, sanitize_null_bytes: true
     config.middleware.delete Rails::Rack::Logger
+    config.middleware.delete Rack::Sendfile
+    config.middleware.delete Rack::Runtime
+    config.middleware.delete ActionDispatch::Static
+    config.middleware.delete ActionDispatch::Executor
+    config.middleware.delete ActionDispatch::ServerTiming
+    config.middleware.delete ActiveSupport::Cache::Strategy::LocalCache::Middleware
+    config.middleware.delete ActionDispatch::RequestId
+    config.middleware.delete ActionDispatch::RemoteIp
+    config.middleware.delete ActionDispatch::Reloader
+    config.middleware.delete ActionDispatch::Callbacks
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 
