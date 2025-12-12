@@ -28,7 +28,7 @@ class LoggerMiddleware
       end_allocations = current_allocations
       logger.info 'Response',
                   { code: response[0], allocations: (end_allocations - start_allocations),
-                    method: env['REQUEST_METHOD'], ip: request.ip }
+                    method: env['REQUEST_METHOD'], ip: request.ip, path: env['REQUEST_URI'] }
       response
     rescue StandardError => error
       logger.error error.message

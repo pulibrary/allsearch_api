@@ -21,7 +21,7 @@ describe LoggerMiddleware do
 
   it 'logs the number of allocations for the request' do
     logger = instance_double(SemanticLogger::Logger, info: true)
-    response = [500, {}, ['cats']]
+    response = [200, {}, ['cats']]
     app = ->(_env) { response.dup }
     middleware = described_class.new(app, logger)
     middleware.call({})
@@ -31,7 +31,7 @@ describe LoggerMiddleware do
 
   it 'logs the method of the request' do
     logger = instance_double(SemanticLogger::Logger, info: true)
-    app = ->(_env) { [500, {}, ['cats']] }
+    app = ->(_env) { [200, {}, ['cats']] }
     middleware = described_class.new(app, logger)
     middleware.call({ 'REQUEST_METHOD' => 'GET' })
     expect(logger).to have_received(:info).with 'Response', hash_including(method: 'GET')
@@ -39,9 +39,17 @@ describe LoggerMiddleware do
 
   it 'logs the original client ip if available' do
     logger = instance_double(SemanticLogger::Logger, info: true)
-    app = ->(_env) { [500, {}, ['cats']] }
+    app = ->(_env) { [200, {}, ['cats']] }
     middleware = described_class.new(app, logger)
     middleware.call({ 'HTTP_X_FORWARDED_FOR' => '5.6.7.8', 'HTTP_CLIENT_IP' => '1.2.3.4' })
     expect(logger).to have_received(:info).with 'Response', hash_including(ip: '5.6.7.8')
+  end
+
+  it 'logs the path of the request' do
+    logger = instance_double(SemanticLogger::Logger, info: true)
+    app = ->(_env) { [200, {}, ['cats']] }
+    middleware = described_class.new(app, logger)
+    middleware.call({ 'REQUEST_URI' => '/my-path' })
+    expect(logger).to have_received(:info).with 'Response', hash_including(path: '/my-path')
   end
 end
