@@ -24,6 +24,11 @@ class Environment
     self
   end
 
+  def when_local
+    yield if %w[development test].include? name
+    self
+  end
+
   private
 
   attr_reader :vars
