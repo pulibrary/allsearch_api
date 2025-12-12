@@ -48,10 +48,6 @@ class CSVLoadingService
     existing_records - new_csv_length
   end
 
-  def existing_records
-    @existing_records ||= class_to_load.count
-  end
-
   def new_csv_length
     @new_csv_length ||= begin
       length = csv.readlines.size
