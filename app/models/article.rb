@@ -22,7 +22,7 @@ class Article
 
   # For documentation on query parameters, see https://developers.exlibrisgroup.com/summon/apis/SearchAPI/Query/Parameters/
   def service_response
-    service.search(
+    @service_response ||= service.search(
       's.q': query_terms, # Lucene-style queries
       's.fvf': 'ContentType,Newspaper Article,true', # Excludes newspaper articles
       's.ho': 't', # Princeton holdings only
