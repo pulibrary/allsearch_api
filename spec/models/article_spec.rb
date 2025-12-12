@@ -35,4 +35,9 @@ RSpec.describe Article do
 
     expect(facet_value_filter.value).to eq('Newspaper Article')
   end
+
+  it 'does not make excessive queries when compiling our response' do
+    article.our_response
+    expect(WebMock).to have_requested(:get, %r{http://api\.summon\.serialssolutions\.com.*}).times(1)
+  end
 end
