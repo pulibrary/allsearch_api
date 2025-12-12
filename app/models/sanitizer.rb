@@ -1,14 +1,18 @@
 # frozen_string_literal: true
 
-require 'rails-html-sanitizer'
+require 'sanitize'
 require 'cgi'
 
-class Sanitizer < Rails::HTML5::SafeListSanitizer
-  def sanitize(html, options = {})
-    # Add spaces before opening HTML tags, so that words don't run together
-    # after the tags are removed
-    with_spaces = html.to_s.gsub(/(\S)(<\w)/, '\1 \2')
-    sanitized = super(with_spaces, options).gsub('&nbsp;', ' ').strip
-    CGI.unescapeHTML sanitized
+class Sanitizer
+  def sanitize(html)
+    sanitized = sanitizer_implementation.fragment(html)
+    with_fixed_whitespace = sanitized.strip.gsub(/(?:&nbsp;| )+/, ' ')
+    CGI.unescapeHTML with_fixed_whitespace
+  end
+
+  private
+
+  def sanitizer_implementation
+    @sanitizer_implementation ||= Sanitize.new(elements: %w[b em i strong])
   end
 end

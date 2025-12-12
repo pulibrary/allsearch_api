@@ -22,6 +22,7 @@ gem 'rack-utf8_sanitizer'
 gem 'railties', '~> 8.0'
 gem 'rake'
 gem 'rom-sql'
+gem 'sanitize', require: false
 gem 'semantic_logger', require: false
 gem 'sequel-activerecord_connection'
 gem 'summon'

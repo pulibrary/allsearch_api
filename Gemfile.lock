@@ -302,6 +302,9 @@ GEM
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
     ruby-progressbar (1.13.0)
+    sanitize (7.0.0)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.16.8)
     securerandom (0.4.1)
     semantic_logger (4.16.1)
       concurrent-ruby (~> 1.0)
@@ -394,6 +397,7 @@ DEPENDENCIES
   rspec
   rspec_junit_formatter
   rubocop-rspec
+  sanitize
   semantic_logger
   sequel-activerecord_connection
   simplecov
