@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rom-repository'
+require allsearch_path 'init/logger'
 
 class BestBetRepository < ROM::Repository[:best_bet_records]
   commands :create,
@@ -24,7 +25,7 @@ class BestBetRepository < ROM::Repository[:best_bet_records]
     end
     create entries
   rescue Dry::Types::SchemaError => error
-    Rails.logger.error("Could not create new BestBet for row: #{error.message}")
+    ALLSEARCH_LOGGER.error("Could not create new BestBet for row: #{error.message}")
   end
   # rubocop:enable Metrics/MethodLength
 
@@ -35,6 +36,6 @@ class BestBetRepository < ROM::Repository[:best_bet_records]
 
     Date.strptime(update, '%B %d, %Y')
   rescue Date::Error
-    Rails.logger.info("Invalid date for BestBet row: #{row}")
+    ALLSEARCH_LOGGER.info("Invalid date for BestBet row: #{row}")
   end
 end

@@ -38,10 +38,10 @@ RSpec.describe BestBetLoadingService, :truncate do
     let(:google_response) { 'bad response' }
 
     it 'does not proceed' do
-      logger = instance_double(SemanticLogger::Logger, error: true)
+      allow(ALLSEARCH_LOGGER).to receive(:error)
       repo.create(title:, url: 'library.princeton.edu', search_terms:)
       expect { described_class.new.run }.not_to(change(best_bet, :count))
-      expect(logger).to have_received(:error)
+      expect(ALLSEARCH_LOGGER).to have_received(:error)
         .with('The BestBetLoadingService did not load the CSV ' \
               "because the headers didn't match. The expected headers are: " \
               'Title, Description, URL, Search Terms, Last Update, and Updated By. ' \
@@ -75,10 +75,10 @@ RSpec.describe BestBetLoadingService, :truncate do
     end
 
     it 'logs an error' do
-      logger = instance_double(SemanticLogger::Logger, error: true)
+      allow(ALLSEARCH_LOGGER).to receive(:error)
       30.times { repo.create(title:, url:, search_terms:) }
       expect { described_class.new.run }.not_to(change(best_bet, :count))
-      expect(logger).to have_received(:error)
+      expect(ALLSEARCH_LOGGER).to have_received(:error)
         .once.with('The BestBetLoadingService had a much shorter CSV. ' \
                    'The original length was 30 rows, the new length is 8 rows.')
     end
