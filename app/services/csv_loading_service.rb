@@ -26,11 +26,6 @@ class CSVLoadingService
     @csv = CSV.new(contents)
   end
 
-  def process_data
-    class_to_load.destroy_all
-    csv.each { |row| class_to_load.new_from_csv(row) }
-  end
-
   # Data is valid if the CSV has not shrunk significantly, and the header row matches the expected headers
   def data_is_valid?
     return false if csv_is_much_smaller?
@@ -51,10 +46,6 @@ class CSVLoadingService
 
   def csv_shrinkage
     existing_records - new_csv_length
-  end
-
-  def existing_records
-    @existing_records ||= class_to_load.count
   end
 
   def new_csv_length

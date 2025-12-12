@@ -11,6 +11,10 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/bundle/**/*'
 
+Layout/LineLength:
+  Exclude:
+    - 'spec/relations/best_bet_relation_spec.rb'
+
 Lint/ConstantDefinitionInBlock:
   Exclude:
     - 'lib/tasks/**/*'
@@ -24,9 +28,16 @@ RSpec/ExampleLength:
 RSpec/MultipleExpectations:
   Enabled: false
 
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
 RSpec/EmptyExampleGroup:
   Exclude:
     - 'spec/requests/api/*'
+
+RSepc/NestedGroups:
+  Exclude:
+    - 'spec/relations/best_bet_relation_spec.rb'
 
 RSpec/RepeatedDescription:
   Exclude:

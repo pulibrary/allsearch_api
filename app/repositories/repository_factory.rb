@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class RepositoryFactory
-  [:banner, :library_database, :library_staff, :oauth_token].each do |method_name|
+  [:banner, :best_bet, :library_database, :library_staff, :oauth_token].each do |method_name|
     define_singleton_method method_name do
       return instance_variable_get("@#{method_name}") if instance_variable_defined?("@#{method_name}")
 
@@ -16,6 +16,10 @@ class RepositoryFactory
 
   def banner
     BannerRepository.new(rom)
+  end
+
+  def best_bet
+    BestBetRepository.new(rom)
   end
 
   def library_database

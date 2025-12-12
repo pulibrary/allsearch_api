@@ -1,4 +1,10 @@
 {
+  "81fab779af2b3a663a577b179e646fac_0": {
+    "author": "Ryan Laddusaw",
+    "comment": "this method uses placeholders so is not vulnerable",
+    "false_positive": true,
+    "ignored_at": "2025-12-11T20:48:41Z"
+  },
   "e5e17cede9a731da09a639c9c78af007_0": {
     "author": "Max Kadel",
     "comment": "This information is publicly accessible via both the website and the API. If we want to lock it down, we should do it there first, and then encrypt it.",
