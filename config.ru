@@ -12,6 +12,16 @@ require_relative 'config/environment'
 require allsearch_path 'config/allsearch_configs'
 require allsearch_path 'app/router'
 
+use Rack::Cors do
+  allow do
+    origins %r{\Ahttp://localhost(:\d+)?\Z},
+            %r{\Ahttp://127.0.0.1(:\d+)?\Z},
+            %r{\Ahttps://[\w-]+\.princeton.edu\Z}
+
+    resource '/search/*', headers: :any, methods: [:get, :head]
+    resource '/banner', headers: :any, methods: [:get, :head]
+  end
+end
 use LoggerMiddleware
 
 run Rails.application.config.middleware.build(Router)
