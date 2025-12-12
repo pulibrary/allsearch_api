@@ -35,7 +35,7 @@ RSpec/EmptyExampleGroup:
   Exclude:
     - 'spec/requests/api/*'
 
-RSepc/NestedGroups:
+RSpec/NestedGroups:
   Exclude:
     - 'spec/relations/best_bet_relation_spec.rb'
 
