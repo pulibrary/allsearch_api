@@ -23,6 +23,7 @@ use Rack::Cors do
   end
 end
 use LoggerMiddleware
+use Rack::Static, urls: { '/api-docs/v1/swagger.yaml' => '/swagger/v1/swagger.yaml' }
 
 run Rails.application.config.middleware.build(Router)
 Rails.application.load_server

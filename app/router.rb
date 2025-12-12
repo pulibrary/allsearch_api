@@ -4,7 +4,6 @@ Router = Rack::Builder.new do
   map('/') { run MainController }
   map('/banner') { run BannerController }
   map('/api-docs') { run SwaggerUiController }
-  map('/api-docs/v1/swagger.yaml') { run OpenApiSpecController }
   map('/health') { run HealthcheckController }
   map('/health.json') { run HealthcheckController }
   map('/search/article') { run ArticleController }
