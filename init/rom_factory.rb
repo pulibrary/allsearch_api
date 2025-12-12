@@ -29,7 +29,7 @@ class RomFactory
 
   def rom_if_available
     verify_active_record_connection
-      .bind { verify_required_tables }
+      .bind { verify_required_rom_tables }
       .bind { verify_database_is_ready }
       .bind { activerecord_db_connection }
       .bind { |connection| rom_container(connection) }
@@ -79,14 +79,42 @@ class RomFactory
     end
   end
 
-  def verify_database_is_ready
-    # Don't attempt to create a ROM container if activerecord hasn't
-    # run all migrations, or we might get an error from ROM/Sequel
-    # that our tables don't exist
-    ActiveRecord::Migration.check_all_pending!
-    Success()
-  rescue ActiveRecord::PendingMigrationError, ActiveRecord::DatabaseConnectionError, ActiveRecord::NoDatabaseError,
-         ActiveRecord::ConnectionNotEstablished, PG::ConnectionBad => error
+  # Verify that ROM/Sequel migrations have been run
+  # rubocop:disable Metrics/MethodLength
+  def verify_required_rom_tables
+    conn = db_connection.value!
+
+    # Check for sequel_schema_migrations table (created by ROM)
+    unless conn.table_exists?(:sequel_schema_migrations)
+      return Failure(StandardError.new(
+                       'ROM migration tracking table does not exist. Run: bundle exec rake rom:migrate'
+                     ))
+    end
+
+    # Check for required tables that ROM relations depend on
+    required_tables = [:best_bet_records, :oauth_tokens, :library_databases, :library_staff_documents, :banners]
+    missing_tables = required_tables.reject { |table| conn.table_exists?(table) }
+
+    if missing_tables.empty?
+      Success()
+    else
+      Failure(StandardError.new(
+                "Required tables missing: #{missing_tables.join(', ')}. Run: bundle exec rake rom:migrate"
+              ))
+    end
+  rescue StandardError => error
     Failure(error)
+  end
+  # rubocop:enable Metrics/MethodLength
+
+  def verify_database_is_ready
+    # Previously before creating
+    # a ROM container we relied on Rails/ActiveRecord migrations being run
+    # `ActiveRecord::Migration.check_all_pending!` .
+    # Switching to ROM/Sequel we verify we can connect to the DB;
+    # Ensure migrations have been run
+    # (using ROM/Sequel migrator) before attempting operations that
+    # depend on specific tables.
+    db_connection.bind { |conn| Success(conn) }.value_or { |err| Failure(err) }
   end
 end

@@ -30,6 +30,14 @@ class BestBetLoadingService < CSVLoadingService
   end
 
   def repository
-    @repository ||= BestBetRepository.new(Rails.application.config.rom)
+    @repository ||= BestBetRepository.new(rom_container)
+  end
+
+  def rom_container
+    if Rails.application.config.respond_to?(:rom) && Rails.application.config.rom
+      Rails.application.config.rom
+    else
+      @rom_container ||= RomFactory.new.require_rom!
+    end
   end
 end

@@ -25,6 +25,14 @@ class LibraryDatabaseLoadingService < CSVLoadingService
   end
 
   def repository_factory
-    @repository_factory ||= RepositoryFactory.new(Rails.application.config.rom)
+    @repository_factory ||= RepositoryFactory.new(rom_container)
+  end
+
+  def rom_container
+    if Rails.application.config.respond_to?(:rom) && Rails.application.config.rom
+      Rails.application.config.rom
+    else
+      @rom_container ||= RomFactory.new.require_rom!
+    end
   end
 end

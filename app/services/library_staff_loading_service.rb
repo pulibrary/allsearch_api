@@ -32,6 +32,14 @@ class LibraryStaffLoadingService < CSVLoadingService
   end
 
   def repository
-    @repository ||= LibraryStaffRepository.new(Rails.application.config.rom)
+    @repository ||= LibraryStaffRepository.new(rom_container)
+  end
+
+  def rom_container
+    if Rails.application.config.respond_to?(:rom) && Rails.application.config.rom
+      Rails.application.config.rom
+    else
+      @rom_container ||= RomFactory.new.require_rom!
+    end
   end
 end
