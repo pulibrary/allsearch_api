@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'rack_helper'
 require allsearch_path 'init/logger'
 
 RSpec.describe BestBetRelation do

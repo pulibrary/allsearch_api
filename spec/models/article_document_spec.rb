@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe ArticleDocument do
   let(:doc_keys) { [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields] }

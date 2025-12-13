@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe LibraryWebsiteDocument do
   let(:doc_keys) { [:title, :id, :type, :description, :url, :other_fields] }

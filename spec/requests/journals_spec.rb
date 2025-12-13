@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'rack_helper'
 
 RSpec.describe 'GET /search/journals' do
   let(:response_body) { JSON.parse(last_response.body, symbolize_names: true) }

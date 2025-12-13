@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'rack_helper'
 
 # This file defines a DSL that both generates an OpenAPI (aka Swagger) Spec for this application
 # and runs RSpec assertions to confirm that the OpenAPI Spec is accurate.  The DSL is extremely

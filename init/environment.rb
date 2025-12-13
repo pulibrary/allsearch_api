@@ -19,6 +19,11 @@ class Environment
     self
   end
 
+  def when_production
+    yield if name == 'production'
+    self
+  end
+
   def when_deployed
     yield if %w[production staging].include? name
     self
