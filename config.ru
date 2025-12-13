@@ -24,6 +24,10 @@ use Rack::Cors do
 end
 use LoggerMiddleware
 use Rack::Static, urls: { '/api-docs/v1/swagger.yaml' => '/swagger/v1/swagger.yaml' }
+use Rack::Head
+use Rack::ConditionalGet
+use Rack::ETag
+use Rack::UTF8Sanitizer, sanitize_null_bytes: true
 
 run Rails.application.config.middleware.build(Router)
 Rails.application.load_server
