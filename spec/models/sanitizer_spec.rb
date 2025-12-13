@@ -20,6 +20,26 @@ RSpec.describe Sanitizer do
       expect(sanitizer.sanitize(test_string)).to eq(expected)
     end
 
+    it 'does not convert html entities into malicious tags' do
+      test_string = '&lt;script src="example.com"&gt;&lt;/script&gt;<p>This is a test</p>'
+      expected = '&lt;script src="example.com"&gt;&lt;/script&gt; This is a test'
+
+      expect(sanitizer.sanitize(test_string)).to eq(expected)
+    end
+
+    it 'does not convert double html entities into malicious tags' do
+      test_string = '&amp;lt;script src="example.com"&amp;gt;&amp;lt;/script&amp;gt;<p>This is a test</p>'
+      expected = '&amp;lt;script src="example.com"&amp;gt;&amp;lt;/script&amp;gt; This is a test'
+
+      expect(sanitizer.sanitize(test_string)).to eq(expected)
+    end
+
+    it 'keeps meaningful &lt;' do
+      test_string = '5 &lt; 10'
+
+      expect(sanitizer.sanitize(test_string)).to eq(test_string)
+    end
+
     it 'removes link tags' do
       test_string = '<link rel="example.com">This is a test'
       expected = 'This is a test'
