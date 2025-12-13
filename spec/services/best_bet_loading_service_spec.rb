@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'rack_helper'
 
 RSpec.describe BestBetLoadingService, :truncate do
   let(:google_response) { file_fixture('google_sheets/best_bets.csv') }

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'rack_helper'
 
 RSpec.describe 'GET /search/libguides' do
   before do

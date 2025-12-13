@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# These helpers create a full Rack application for testing
+
 require 'rack'
 require 'rack/test'
 
@@ -11,7 +13,4 @@ module RackTestHelpers
   def app
     ALLSEARCH_RACK_APP
   end
-end
-RSpec.configure do |config|
-  config.include RackTestHelpers
 end

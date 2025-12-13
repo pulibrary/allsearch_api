@@ -11,7 +11,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'webmock/rspec'
 require_relative '../app/paths'
 require_relative 'support/fixture_helpers'
-require_relative 'support/rack_helpers'
+require_relative 'support/rack_test_helpers'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'rack_helper'
 
 RSpec.describe 'GET /search/database' do
   let(:libjobs_response) { file_fixture('libjobs/library-databases.csv') }

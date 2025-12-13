@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require 'rack_helper'
 
 def stub_solr_ping(headers: {}, status: 200, **)
   stub_request(:get, %r{http://lib-solr8-prod.princeton.edu:8983/solr/.*/admin/ping}).to_return(headers:, status:,
