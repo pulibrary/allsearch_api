@@ -31,6 +31,7 @@ module BentoRailsApi
     config.middleware.delete Rack::Head
     config.middleware.delete Rack::ConditionalGet
     config.middleware.delete Rack::ETag
+    config.middleware.delete ActionDispatch::HostAuthorization
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 
