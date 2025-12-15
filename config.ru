@@ -22,6 +22,7 @@ use Rack::Cors do
     resource '/banner', headers: :any, methods: [:get, :head]
   end
 end
+use ExceptionHandlerMiddleware
 use LoggerMiddleware
 use HostHeaderMiddleware
 use Rack::Static, urls: { '/api-docs/v1/swagger.yaml' => '/swagger/v1/swagger.yaml' }
