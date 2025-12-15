@@ -10,6 +10,11 @@ RSpec.describe BannerRepository do
   end
 
   describe '#modify' do
+    after do
+      banner_repo = described_class.new Rails.application.config.rom
+      banner_repo.modify(text: '')
+    end
+
     it 'modifies an existing banner if it exists' do
       banner_repo = described_class.new Rails.application.config.rom
       expect(banner_repo.banners.first.text).to eq ''
