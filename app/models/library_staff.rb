@@ -9,7 +9,7 @@ class LibraryStaff
 
   attr_reader :query_terms
 
-  def initialize(query_terms:, rom:)
+  def initialize(query_terms:, rom: Rails.application.config.rom)
     @query_terms = query_terms
     @rom = rom
   end
