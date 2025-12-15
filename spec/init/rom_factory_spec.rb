@@ -42,8 +42,10 @@ RSpec.describe RomFactory do
       allow(Sequel).to receive(:postgres).and_return(db)
       allow(db).to receive(:table_exists?).with(:schema_migrations).and_return(true)
       allow(db).to receive(:table_exists?).with(:ar_internal_metadata).and_return(true)
+      # rubocop :disable RSpec/VerifiedDoubles
       rom_config = double('ROM::Configuration', register_relation: true,
                                                 default: instance_double(ROM::Gateway, use_logger: true)).as_null_object
+      # rubocop :enable RSpec/VerifiedDoubles
       allow(ROM::Configuration).to receive(:new).and_return(rom_config)
       allow(ROM).to receive(:container).and_return(ROM::Container.new([], [], [], []))
       expect(described_class.new.rom_if_available).to be_success

@@ -1,12 +1,6 @@
-\restrict 7jn6boioBXAuAqQ7Mw4YSUHvdX7FhWWhQHIiFcR8GWabNbTTaSBnSP2IJJLiq67
-
--- Dumped from database version 15.10
--- Dumped by pg_dump version 18.1
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -618,8 +612,6 @@ CREATE INDEX staff_search_idx ON public.library_staff_records USING gin (searcha
 --
 -- PostgreSQL database dump complete
 --
-
-\unrestrict 7jn6boioBXAuAqQ7Mw4YSUHvdX7FhWWhQHIiFcR8GWabNbTTaSBnSP2IJJLiq67
 
 SET search_path TO "$user", public;
 

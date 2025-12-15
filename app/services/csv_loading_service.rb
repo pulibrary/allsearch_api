@@ -69,11 +69,7 @@ class CSVLoadingService
   end
 
   def rom_container
-    if Rails.application.config.respond_to?(:rom) && Rails.application.config.rom
-      Rails.application.config.rom
-    else
-      @rom_container ||= RomFactory.new.require_rom!
-    end
+    @rom_container ||= Rails.application.config&.rom || RomFactory.new.require_rom!
   end
 
   def uri; end

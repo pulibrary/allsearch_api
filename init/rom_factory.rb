@@ -30,10 +30,7 @@ class RomFactory
   def rom_if_available
     db_connection
       .bind { |connection| verify_database_ready(connection) }
-      .or do |connection| 
-        `bundle exec rake db:migrate`
-         db_connection
-      end.bind { |connection| rom_container(connection) }
+      .bind { |connection| rom_container(connection) }
   end
 
   private
@@ -46,8 +43,9 @@ class RomFactory
     Failure(error)
   end
 
+  # rubocop:disable Metrics/MethodLength
   def verify_database_ready(connection)
-    required_tables = [:schema_migrations, :ar_internal_metadata, :banners]
+    required_tables = [:schema_migrations, :ar_internal_metadata]
     missing_tables = required_tables.reject { |table| connection.table_exists?(table) }
 
     if missing_tables.empty?
@@ -60,6 +58,7 @@ class RomFactory
   rescue StandardError => error
     Failure(error)
   end
+  # rubocop:enable Metrics/MethodLength
 
   def rom_container(db_connection)
     rom_config = ROM::Configuration.new(:sql, db_connection)
