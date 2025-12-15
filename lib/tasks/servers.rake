@@ -2,13 +2,13 @@
 
 namespace :servers do
   desc 'Start development servers'
-  task initialize: :environment do
+  task :initialize do
     Rake::Task['db:create'].invoke
     Rake::Task['db:migrate'].invoke
   end
 
   desc 'Start the Apache Solr and PostgreSQL container services using Lando.'
-  task start: :environment do
+  task :start do
     Rake::Task['solr:update_configs'].invoke
     system('lando start')
     system('rake servers:initialize')

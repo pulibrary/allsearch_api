@@ -30,7 +30,10 @@ class RomFactory
   def rom_if_available
     db_connection
       .bind { |connection| verify_database_ready(connection) }
-      .bind { |connection| rom_container(connection) }
+      .or do |connection| 
+        `bundle exec rake db:migrate`
+         db_connection
+      end.bind { |connection| rom_container(connection) }
   end
 
   private
@@ -44,7 +47,7 @@ class RomFactory
   end
 
   def verify_database_ready(connection)
-    required_tables = [:schema_migrations, :ar_internal_metadata]
+    required_tables = [:schema_migrations, :ar_internal_metadata, :banners]
     missing_tables = required_tables.reject { |table| connection.table_exists?(table) }
 
     if missing_tables.empty?
