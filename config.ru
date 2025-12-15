@@ -32,4 +32,3 @@ use Rack::ETag
 use Rack::UTF8Sanitizer, sanitize_null_bytes: true
 
 run Rails.application.config.middleware.build(Router)
-Rails.application.load_server
