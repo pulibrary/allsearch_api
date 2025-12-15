@@ -33,9 +33,7 @@ class Document
   end
 
   def other_fields
-    doc_keys&.index_with { |key| get_value key }
-            &.compact
-            &.transform_values(&:to_s)
+    keys_to_hash(doc_keys)&.compact
   end
 
   def get_value(key)
@@ -52,4 +50,10 @@ class Document
   end
 
   attr_reader :document
+
+  def keys_to_hash(keys)
+    hash = {}
+    keys.each { |key| hash[key] = get_value(key) }
+    hash
+  end
 end
