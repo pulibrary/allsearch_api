@@ -4,9 +4,14 @@ require 'database_cleaner/sequel'
 require_relative '../../app/paths'
 require allsearch_path 'db/seeds'
 require allsearch_path 'config/environment'
+require allsearch_path 'init/rom_factory'
 
 RSpec.configure do |config|
-  rom = Rails.application.config.rom
+  rom = if Rails.application.config.respond_to?(:rom) && Rails.application.config.rom
+          Rails.application.config.rom
+        else
+          RomFactory.new.require_rom!
+        end
   all_databases = rom.gateways.values.map(&:connection)
 
   config.before :suite do

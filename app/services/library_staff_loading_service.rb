@@ -32,6 +32,6 @@ class LibraryStaffLoadingService < CSVLoadingService
   end
 
   def repository
-    @repository ||= LibraryStaffRepository.new(Rails.application.config.rom)
+    @repository ||= LibraryStaffRepository.new(rom_container)
   end
 end

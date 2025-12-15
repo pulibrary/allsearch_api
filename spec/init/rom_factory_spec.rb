@@ -24,20 +24,31 @@ RSpec.describe RomFactory do
   end
 
   describe 'rom_if_available' do
-    it 'returns failure if we cannot verify the activerecord connection' do
-      allow(ActiveRecord::Base.connection).to receive(:verify!).and_raise ActiveRecord::NoDatabaseError
+    it 'returns failure if we cannot connect to the database' do
+      allow(Sequel).to receive(:postgres).and_raise Sequel::DatabaseConnectionError
       expect(described_class.new.rom_if_available).to be_failure
     end
 
-    it 'returns failure if checking migrations fails' do
-      allow(ActiveRecord::Migration).to receive(:check_all_pending!).and_raise ActiveRecord::NoDatabaseError
+    it 'returns failure if required tables do not exist' do
+      db = instance_double(Sequel::Postgres::Database, to_s: 'postgres://my-connection-string')
+      allow(Sequel).to receive(:postgres).and_return(db)
+      allow(db).to receive(:table_exists?).with(:schema_migrations).and_return(false)
+      allow(db).to receive(:table_exists?).with(:ar_internal_metadata).and_return(true)
       expect(described_class.new.rom_if_available).to be_failure
     end
 
-    it 'returns failure if the schema migration table does not exist' do
-      allow(ActiveRecord::SchemaMigration).to receive(:new).and_return instance_double(ActiveRecord::SchemaMigration,
-                                                                                       table_exists?: false)
-      expect(described_class.new.rom_if_available).to be_failure
+    it 'returns success when database is ready and ROM can be initialized' do
+      db = instance_double(Sequel::Postgres::Database, to_s: 'postgres://my-connection-string')
+      allow(Sequel).to receive(:postgres).and_return(db)
+      allow(db).to receive(:table_exists?).with(:schema_migrations).and_return(true)
+      allow(db).to receive(:table_exists?).with(:ar_internal_metadata).and_return(true)
+      # rubocop :disable RSpec/VerifiedDoubles
+      rom_config = double('ROM::Configuration', register_relation: true,
+                                                default: instance_double(ROM::Gateway, use_logger: true)).as_null_object
+      # rubocop :enable RSpec/VerifiedDoubles
+      allow(ROM::Configuration).to receive(:new).and_return(rom_config)
+      allow(ROM).to receive(:container).and_return(ROM::Container.new([], [], [], []))
+      expect(described_class.new.rom_if_available).to be_success
     end
   end
 end
