@@ -28,10 +28,8 @@ class RomFactory
   end
 
   def rom_if_available
-    verify_active_record_connection
-      .bind { verify_required_tables }
-      .bind { verify_database_is_ready }
-      .bind { activerecord_db_connection }
+    db_connection
+      .bind { |connection| verify_database_ready(connection) }
       .bind { |connection| rom_container(connection) }
   end
 
@@ -45,8 +43,19 @@ class RomFactory
     Failure(error)
   end
 
-  def activerecord_db_connection
-    Success(Sequel.postgres(extensions: :activerecord_connection))
+  def verify_database_ready(connection)
+    required_tables = [:schema_migrations, :ar_internal_metadata]
+    missing_tables = required_tables.reject { |table| connection.table_exists?(table) }
+
+    if missing_tables.empty?
+      Success(connection)
+    else
+      Failure(StandardError.new(
+                "Database is missing tables: #{missing_tables.join(', ')}. Please run migrations/load the db structure."
+              ))
+    end
+  rescue StandardError => error
+    Failure(error)
   end
 
   def rom_container(db_connection)
@@ -58,35 +67,5 @@ class RomFactory
     rom_config.register_relation OAuthTokenRelation
     rom_config.default.use_logger ALLSEARCH_LOGGER
     Success(ROM.container(rom_config))
-  end
-
-  def verify_active_record_connection
-    Success(ActiveRecord::Base.connection.verify!)
-  rescue ActiveRecord::DatabaseConnectionError, ActiveRecord::NoDatabaseError => error
-    Failure(error)
-  end
-
-  # We may not even have basic tables like ar_internal_metadata or schema_migrations yet.
-  def verify_required_tables
-    pool = ActiveRecord::Tasks::DatabaseTasks.migration_connection_pool
-    required_activerecord_tables = [ActiveRecord::InternalMetadata, ActiveRecord::SchemaMigration].map { |table| table.new(pool) }
-    if required_activerecord_tables.all? &:table_exists?
-      Success()
-    else
-      Failure(StandardError.new(
-                'The basic tables of this database do not yet exist, please run migrations or load the db structure'
-              ))
-    end
-  end
-
-  def verify_database_is_ready
-    # Don't attempt to create a ROM container if activerecord hasn't
-    # run all migrations, or we might get an error from ROM/Sequel
-    # that our tables don't exist
-    ActiveRecord::Migration.check_all_pending!
-    Success()
-  rescue ActiveRecord::PendingMigrationError, ActiveRecord::DatabaseConnectionError, ActiveRecord::NoDatabaseError,
-         ActiveRecord::ConnectionNotEstablished, PG::ConnectionBad => error
-    Failure(error)
   end
 end

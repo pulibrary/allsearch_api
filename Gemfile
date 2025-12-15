@@ -24,7 +24,6 @@ gem 'rake'
 gem 'rom-sql'
 gem 'sanitize', require: false
 gem 'semantic_logger', require: false
-gem 'sequel-activerecord_connection'
 gem 'summon'
 gem 'thor'
 gem 'tzinfo-data', '~> 1.2025'

@@ -68,6 +68,14 @@ class CSVLoadingService
     false
   end
 
+  def rom_container
+    if Rails.application.config.respond_to?(:rom) && Rails.application.config.rom
+      Rails.application.config.rom
+    else
+      @rom_container ||= RomFactory.new.require_rom!
+    end
+  end
+
   def uri; end
 
   def class_to_load; end

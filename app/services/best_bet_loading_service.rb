@@ -30,6 +30,6 @@ class BestBetLoadingService < CSVLoadingService
   end
 
   def repository
-    @repository ||= BestBetRepository.new(Rails.application.config.rom)
+    @repository ||= BestBetRepository.new(rom_container)
   end
 end
