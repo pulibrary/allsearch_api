@@ -52,7 +52,7 @@ RSpec.describe BestBetLoadingService, :truncate do
   context 'when a best bet in postgres is no longer in the CSV' do
     it 'removes it from the database' do
       repo = RepositoryFactory.best_bet
-      old_record = repo.create(id: 123, title:, search_terms:, url:)
+      repo.create(id: 123, title:, search_terms:, url:)
       expect(best_bet.where(id: 123).count).to eq 1
       described_class.new.run
       expect(best_bet.where(id: 123).count).to eq 0
