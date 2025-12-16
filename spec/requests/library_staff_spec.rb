@@ -33,7 +33,7 @@ RSpec.describe 'GET /search/staff' do
   before do
     stub_request(:get, 'https://lib-jobs.princeton.edu/pul-staff-report.csv')
       .to_return(status: 200, body: libjobs_response)
-    LibraryStaffLoadingService.new.run
+    LibraryStaffLoadingService.new(rom_container: ALLSEARCH_ROM).run
   end
 
   it 'returns json' do
