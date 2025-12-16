@@ -34,10 +34,13 @@ Sequel.migration do
       String :other_entities
       String :my_scheduler_link
       String :pronouns
-byebug
-      TsVector :name_searchable,
-              generated_always_as: "to_tsvector('public.unaccented_simple_dict', (coalesce(name, \'\') || ' ' || coalesce(first_name, '') || ' ' || coalesce(middle_name, '') || ' ' || coalesce(last_name, '')))"
-              
+
+      tsvector :name_searchable,
+        generated_always_as: Sequel.function(
+          :to_tsvector, 
+          'public.unaccented_simple_dict',
+          Sequel.lit("coalesce(name, \'\') || ' ' || coalesce(first_name, '') || ' ' || coalesce(middle_name, '') || ' ' || coalesce(last_name, ''))")
+        )
 
       String :bio
 
