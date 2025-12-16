@@ -12,7 +12,9 @@ class CSVLoadingService
   # rom_container: ALLSEARCH_ROM and remove the offending line
   def initialize(logger: ALLSEARCH_LOGGER, rom_container: nil)
     @logger = logger
-    @rom_container = rom_container || Rails.application.config&.rom || RomFactory.new.require_rom!
+    @rom_container = rom_container ||
+                     (Rails.application.config.respond_to?(:rom) && Rails.application.config.rom) ||
+                     RomFactory.new.require_rom!
   end
 
   def run
@@ -69,10 +71,6 @@ class CSVLoadingService
                  "#{expected_headers.to_sentence}. " \
                  "The new CSV headers are #{new_headers&.to_sentence}.")
     false
-  end
-
-  def rom_container
-    @rom_container ||= RomFactory.new.require_rom!
   end
 
   def uri; end
