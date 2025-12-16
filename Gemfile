@@ -14,7 +14,6 @@ gem 'dogstatsd-ruby'
 gem 'dry-monads'
 gem 'flipper-sequel', require: false
 gem 'honeybadger', require: false
-gem 'logstash-event'
 gem 'pg'
 gem 'rack'
 gem 'rack-cors'
