@@ -11,6 +11,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'webmock/rspec'
 require_relative '../app/paths'
 require_relative 'support/fixture_helpers'
+require_relative '../config/lando_env'
 require_relative 'support/rack_test_helpers'
 
 RSpec.configure do |config|
