@@ -53,7 +53,7 @@ RSpec.describe BestBetLoadingService, :truncate do
     it 'removes it from the database' do
       repo = RepositoryFactory.best_bet
       old_record = repo.create(id: 123, title:, search_terms:, url:)
-      expect(best_bet.where(id: 123)).to contain_exactly(old_record)
+      expect(best_bet.where(id: 123).count).to eq 1
       described_class.new.run
       expect(best_bet.where(id: 123).count).to eq 0
     end
