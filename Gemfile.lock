@@ -162,7 +162,6 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
-    logstash-event (1.2.02)
     loofah (2.24.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -378,7 +377,6 @@ DEPENDENCIES
   honeybadger
   irb
   listen
-  logstash-event
   net-scp
   net-ssh
   pg
