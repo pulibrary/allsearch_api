@@ -2,11 +2,7 @@
 
 require_relative 'boot'
 
-require 'rails'
-require 'active_model/railtie'
-require 'action_controller/railtie'
 require 'active_record/railtie'
-require 'action_view/railtie'
 
 require_relative 'lando_env'
 require_relative 'db_connection'
