@@ -7,7 +7,7 @@ Datadog.configure do |c|
   c.service = 'allsearch-backend'
   c.tracing.report_hostname = true
   c.tracing.analytics.enabled = true
-  c.tracing.enabled = Rails.env.production?
+  c.tracing.enabled = ENV['RACK_ENV'] == 'production'
   c.tracing.report_hostname = true
   c.tracing.log_injection = true
 
@@ -22,7 +22,7 @@ Datadog.configure do |c|
   c.runtime_metrics.statsd = Datadog::Statsd.new
 
   # Rails
-  c.tracing.instrument :rails
+  c.tracing.instrument :rack
 
   # Redis
   c.tracing.instrument :redis
