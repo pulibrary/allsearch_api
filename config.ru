@@ -2,12 +2,7 @@
 
 # This file is used by Rack-based servers to start the application.
 
-require_relative 'app/paths'
-
-require allsearch_path 'init/environment'
-require allsearch_path 'init/honeybadger'
-require allsearch_path 'init/logger'
-require allsearch_path 'init/rom_factory'
+require allsearch_path 'init/all'
 
 require_relative 'config/environment'
 require allsearch_path 'config/allsearch_configs'
