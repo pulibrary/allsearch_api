@@ -91,7 +91,7 @@ jobs:
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run:
           name: Database setup
-          command: bundle exec rake db:setup
+          command: RAILS_ENV=test bundle exec rake rom:migrate
       - ruby/install-deps
       - ruby/rspec-test:
           include: spec/**/*_spec.rb
