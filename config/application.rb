@@ -9,7 +9,7 @@ require_relative 'db_connection'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups)
+Bundler.require(*CURRENT_ENVIRONMENT.bundler_groups)
 
 module BentoRailsApi
   class Application < Rails::Application
