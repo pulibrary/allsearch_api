@@ -52,8 +52,6 @@ class Document
   attr_reader :document
 
   def keys_to_hash(keys)
-    hash = {}
-    keys.each { |key| hash[key] = get_value(key) }
-    hash
+    keys.to_h { |key| [key, get_value(key)] }
   end
 end
