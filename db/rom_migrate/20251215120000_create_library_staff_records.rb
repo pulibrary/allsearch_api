@@ -35,15 +35,13 @@ Sequel.migration do
       String :my_scheduler_link
       String :pronouns
 byebug
-      column :name_searchable,
-              type: :tsvector,
-              generated_always_as: "to_tsvector('public.unaccented_simple_dict', (coalesce(name, '') || ' ' || coalesce(first_name, '') || ' ' || coalesce(middle_name, '') || ' ' || coalesce(last_name, '')))"
+      TsVector :name_searchable,
+              generated_always_as: "to_tsvector('public.unaccented_simple_dict', (coalesce(name, \'\') || ' ' || coalesce(first_name, '') || ' ' || coalesce(middle_name, '') || ' ' || coalesce(last_name, '')))"
               
 
       String :bio
 
-      column :searchable,
-              type: :tsvector,
+      TsVector :searchable,
               generated_always_as: "to_tsvector('public.unaccented_dict', (coalesce(title, '') || ' ' || coalesce(email, '') || ' ' || coalesce(department, '') || ' ' || coalesce(office, '') || ' ' || coalesce(building, '') || ' ' || coalesce(team, '') || ' ' || coalesce(division, '') || ' ' || coalesce(unit, '') || ' ' || coalesce(areas_of_study, '') || ' ' || coalesce(bio, '') || ' ' || coalesce(other_entities, '')))"
     end
 
