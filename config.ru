@@ -2,7 +2,7 @@
 
 # This file is used by Rack-based servers to start the application.
 
-require allsearch_path 'init/all'
+require_relative 'init/all'
 
 require_relative 'config/environment'
 require allsearch_path 'config/allsearch_configs'
