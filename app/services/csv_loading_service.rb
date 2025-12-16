@@ -8,8 +8,11 @@ require allsearch_path 'init/logger'
 # to load data from a remote CSV file
 # into the database
 class CSVLoadingService
-  def initialize(logger: ALLSEARCH_LOGGER)
+  # :reek:ControlParameter - once we remove Rails, we can replace the default in the signature with
+  # rom_container: ALLSEARCH_ROM and remove the offending line
+  def initialize(logger: ALLSEARCH_LOGGER, rom_container: nil)
     @logger = logger
+    @rom_container = rom_container || Rails.application.config&.rom || RomFactory.new.require_rom!
   end
 
   def run
@@ -19,7 +22,7 @@ class CSVLoadingService
 
   private
 
-  attr_reader :csv, :logger
+  attr_reader :csv, :logger, :rom_container
 
   def fetch_data
     contents = uri.open
@@ -66,10 +69,6 @@ class CSVLoadingService
                  "#{expected_headers.to_sentence}. " \
                  "The new CSV headers are #{new_headers&.to_sentence}.")
     false
-  end
-
-  def rom_container
-    @rom_container ||= Rails.application.config&.rom || RomFactory.new.require_rom!
   end
 
   def uri; end
