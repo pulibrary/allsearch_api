@@ -1,6 +1,10 @@
 
 Sequel.migration do
   change do
+    execute <<~SQL
+      CREATE TEXT SEARCH CONFIGURATION unaccented_simple_dict ( COPY = simple );
+      ALTER TEXT SEARCH CONFIGURATION unaccented_simple_dict ALTER MAPPING FOR hword, hword_part, word WITH unaccent, simple;
+    SQL
     create_table(:library_staff_records) do
       primary_key :id
       bigint :puid, null: false
