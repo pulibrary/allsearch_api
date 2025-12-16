@@ -17,23 +17,6 @@ Bundler.require(*Rails.groups)
 
 module BentoRailsApi
   class Application < Rails::Application
-    config.middleware.delete Rails::Rack::Logger
-    config.middleware.delete Rack::Sendfile
-    config.middleware.delete Rack::Runtime
-    config.middleware.delete ActionDispatch::Static
-    config.middleware.delete ActionDispatch::Executor
-    config.middleware.delete ActionDispatch::ServerTiming
-    config.middleware.delete ActiveSupport::Cache::Strategy::LocalCache::Middleware
-    config.middleware.delete ActionDispatch::RequestId
-    config.middleware.delete ActionDispatch::RemoteIp
-    config.middleware.delete ActionDispatch::Reloader
-    config.middleware.delete ActionDispatch::Callbacks
-    config.middleware.delete Rack::Head
-    config.middleware.delete Rack::ConditionalGet
-    config.middleware.delete Rack::ETag
-    config.middleware.delete ActionDispatch::HostAuthorization
-    config.middleware.delete ActionDispatch::ShowExceptions
-    config.middleware.delete ActionDispatch::DebugExceptions
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 
@@ -47,15 +30,5 @@ module BentoRailsApi
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
-    # Only loads a smaller set of middleware suitable for API only apps.
-    # Middleware like session, flash, cookies can be added back manually.
-    # Skip views, helpers and assets when generating a new resource.
-    config.api_only = true
-
-    config.hosts << 'allsearch-api-staging.princeton.edu'
-    config.hosts << 'allsearch-api.princeton.edu'
-    # Rack's mock responses use example.org
-    config.hosts << 'example.org'
   end
 end

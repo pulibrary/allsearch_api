@@ -48,14 +48,7 @@ class RackResponseController
   end
 
   def json
-    # Only pass ROM to services that need it
-    params = { query_terms: }
-    params[:rom] = env['rom'] if service_needs_rom?
-    service.new(**params).our_response
-  end
-
-  def service_needs_rom?
-    service.instance_method(:initialize).parameters.any? { |type, name| name == :rom && type == :keyreq }
+    service.new(query_terms:).our_response
   end
 
   def empty_query?

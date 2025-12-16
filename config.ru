@@ -7,10 +7,13 @@ require_relative 'app/paths'
 require allsearch_path 'init/environment'
 require allsearch_path 'init/honeybadger'
 require allsearch_path 'init/logger'
+require allsearch_path 'init/rom_factory'
 
 require_relative 'config/environment'
 require allsearch_path 'config/allsearch_configs'
 require allsearch_path 'app/router'
+
+ALLSEARCH_ROM = RomFactory.new.require_rom!
 
 use Rack::Cors do
   allow do
@@ -31,4 +34,4 @@ use Rack::ConditionalGet
 use Rack::ETag
 use Rack::UTF8Sanitizer, sanitize_null_bytes: true
 
-run Rails.application.config.middleware.build(Router)
+run Router
