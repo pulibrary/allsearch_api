@@ -34,6 +34,10 @@ class Environment
     self
   end
 
+  def bundler_groups
+    [name.to_sym, :default]
+  end
+
   private
 
   attr_reader :vars
