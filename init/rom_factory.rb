@@ -31,7 +31,7 @@ class RomFactory
   def rom_if_available
     db_connection
       .bind { |connection| verify_db_connection_is_ready(connection) }
-      .bind { |_connection| verify_required_rom_tables }
+      .bind { |connection| verify_required_rom_tables(connection) }
       .bind { |connection| rom_container(connection) }
   end
 
@@ -59,22 +59,20 @@ class RomFactory
   end
 
   # rubocop:disable Metrics/MethodLength
-  def verify_required_rom_tables
-    conn = db_connection.value!
-
+  def verify_required_rom_tables(connection)
     # Check for sequel_schema_migrations table (created by ROM)
-    unless conn.table_exists?(:sequel_schema_migrations)
+    unless connection.table_exists?(:sequel_schema_migrations)
       return Failure(StandardError.new(
                        'ROM migration tracking table does not exist. Run: bundle exec rake rom:migrate'
                      ))
     end
 
     # Check for required tables that ROM relations depend on
-    required_tables = [:best_bet_records, :oauth_tokens, :library_databases, :library_staff_documents, :banners]
-    missing_tables = required_tables.reject { |table| conn.table_exists?(table) }
+    required_tables = [:best_bet_records, :oauth_tokens, :library_database_records, :library_staff_records, :banners]
+    missing_tables = required_tables.reject { |table| connection.table_exists?(table) }
 
     if missing_tables.empty?
-      Success()
+      Success(connection)
     else
       Failure(StandardError.new(
                 "Required tables missing: #{missing_tables.join(', ')}. Run: bundle exec rake rom:migrate"

@@ -18,22 +18,21 @@ RSpec.describe RomFactory do
     # rubocop: enable RSpec/VerifiedDoubles
 
     it 'raises an error if the database connection is bad' do
-      allow(Sequel).to receive(:postgres).and_raise Sequel::Error
+      allow_any_instance_of(described_class).to receive(:db_connection).and_return(Failure(Sequel::Error.new))
       expect { described_class.new.require_rom! }.to raise_exception(/Could not connect to the database/)
     end
   end
 
   describe 'rom_if_available' do
     it 'returns failure if we cannot connect to the database' do
-      allow(Sequel).to receive(:postgres).and_raise Sequel::DatabaseConnectionError
+      allow_any_instance_of(described_class).to receive(:db_connection).and_return(Failure(Sequel::DatabaseConnectionError.new))
       expect(described_class.new.rom_if_available).to be_failure
     end
 
     it 'returns failure if required tables do not exist' do
       db = instance_double(Sequel::Postgres::Database, to_s: 'postgres://my-connection-string')
       allow(Sequel).to receive(:postgres).and_return(db)
-      allow(db).to receive(:table_exists?).with(:schema_migrations).and_return(false)
-      allow(db).to receive(:table_exists?).with(:ar_internal_metadata).and_return(true)
+      allow(db).to receive(:table_exists?).with(:sequel_schema_migrations).and_return(false)
       expect(described_class.new.rom_if_available).to be_failure
     end
 
