@@ -35,4 +35,3 @@ use Rack::ETag
 use Rack::UTF8Sanitizer, sanitize_null_bytes: true
 
 run Router
-Rails.application.load_server
