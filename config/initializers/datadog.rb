@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 require 'datadog/statsd'
+require 'datadog/auto_instrument'
 
 Datadog.configure do |c|
   c.env = Rails.env
   c.service = 'allsearch-backend'
   c.tracing.report_hostname = true
   c.tracing.analytics.enabled = true
-  c.tracing.enabled = ENV['RACK_ENV'] == 'production'
+  c.tracing.enabled = ENV['APP_ENV'] == 'production'
   c.tracing.report_hostname = true
   c.tracing.log_injection = true
 

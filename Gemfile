@@ -9,7 +9,7 @@ gem 'activerecord'
 gem 'activesupport'
 gem 'bootsnap', require: false
 gem 'csv'
-gem 'datadog', '~> 2.0', require: 'datadog/auto_instrument'
+gem 'datadog', '~> 2.0'
 gem 'dogstatsd-ruby'
 gem 'dry-monads'
 gem 'flipper-sequel', require: false
