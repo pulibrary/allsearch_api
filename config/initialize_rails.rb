@@ -8,7 +8,16 @@ class InitializeRails
   INITIALIZERS_TO_EXCLUDE = [
     :set_autoload_paths, :setup_once_autoloader, :setup_main_autoloader,
     :set_eager_load, :set_eager_load_paths, :eager_load!,
-    :initialize_logger
+    :initialize_logger, :enable_yjit, 'active_support.initialize_beginning_of_week',
+    'active_support.deprecator', 'action_dispatch.deprecator', 'active_model.deprecator',
+    'action_controller.deprecator', 'active_record.deprecator', 'action_view.deprecator',
+    :load_environment_config, :load_environment_config, :load_environment_hook, :load_active_support,
+    :initialize_error_reporter, 'active_support.to_time_preserves_timezone',
+    :initialize_cache, :set_load_path, :set_load_path, :make_routes_lazy, :make_routes_lazy, :bootstrap_hook,
+    'active_support.isolation_level', 'active_support.raise_on_invalid_cache_expiration_time',
+    'active_support.set_authenticated_message_encryption', 'active_support.reset_execution_context',
+    'active_support.reset_all_current_attributes_instances', 'active_support.deprecation_behavior'
+
   ].freeze
 
   def initialize(application = Rails.application)

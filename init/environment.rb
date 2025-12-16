@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative '../app/paths'
+
 class Environment
   def initialize(vars = ENV)
     @vars = vars
