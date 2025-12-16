@@ -5,7 +5,7 @@ class RepositoryFactory
     define_singleton_method method_name do
       return instance_variable_get("@#{method_name}") if instance_variable_defined?("@#{method_name}")
 
-      rom = Rails.application.config.rom
+      rom = RomFactory.new.require_rom!
       instance_variable_set("@#{method_name}", new(rom).send(method_name))
     end
   end

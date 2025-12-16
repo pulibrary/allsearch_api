@@ -8,7 +8,7 @@ RSpec.describe BestBetLoadingService, :truncate do
   let(:search_terms) { '{some, terms}' }
   let(:url) { 'https://example.com' }
 
-  let(:rom) { Rails.application.config.rom }
+  let(:rom) { RomFactory.new.require_rom! }
   let(:repo) { RepositoryFactory.best_bet }
   let(:best_bet) { rom.relations[:best_bet_records] }
 
