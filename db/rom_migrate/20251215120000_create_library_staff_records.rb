@@ -39,13 +39,18 @@ Sequel.migration do
         generated_always_as: Sequel.function(
           :to_tsvector, 
           'public.unaccented_simple_dict',
-          Sequel.lit("coalesce(name, \'\') || ' ' || coalesce(first_name, '') || ' ' || coalesce(middle_name, '') || ' ' || coalesce(last_name, ''))")
+          Sequel.lit("coalesce(name, '') || ' ' || coalesce(first_name, '') || ' ' || coalesce(middle_name, '') || ' ' || coalesce(last_name, '')")
         )
 
       String :bio
+      
+      tsvector :searchable,
+        generated_always_as: Sequel.function(
+          :to_tsvector, 
+          'public.unaccented_dict',
+          Sequel.lit("coalesce(title, '') || ' ' || coalesce(email, '') || ' ' || coalesce(department, '') || ' ' || coalesce(office, '') || ' ' || coalesce(building, '') || ' ' || coalesce(team, '') || ' ' || coalesce(division, '') || ' ' || coalesce(unit, '') || ' ' || coalesce(areas_of_study, '') || ' ' || coalesce(bio, '') || ' ' || coalesce(other_entities, '')")
+        )
 
-      TsVector :searchable,
-              generated_always_as: "to_tsvector('public.unaccented_dict', (coalesce(title, '') || ' ' || coalesce(email, '') || ' ' || coalesce(department, '') || ' ' || coalesce(office, '') || ' ' || coalesce(building, '') || ' ' || coalesce(team, '') || ' ' || coalesce(division, '') || ' ' || coalesce(unit, '') || ' ' || coalesce(areas_of_study, '') || ' ' || coalesce(bio, '') || ' ' || coalesce(other_entities, '')))"
     end
 
     add_index :library_staff_records, :name_searchable,
