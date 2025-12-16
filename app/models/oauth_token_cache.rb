@@ -31,7 +31,7 @@ class OAuthTokenCache
     repo.find(service:, endpoint:)
         .bind do |existing_entry|
           existing_entry_expiration_time = existing_entry[:expiration_time]
-          if existing_entry_expiration_time && Time.zone.now < existing_entry_expiration_time
+          if existing_entry_expiration_time && Time.now.utc < existing_entry_expiration_time
             Some(existing_entry)
           else
             update_existing_entry(existing_entry[:id])
