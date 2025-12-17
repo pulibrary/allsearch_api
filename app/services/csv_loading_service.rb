@@ -12,9 +12,7 @@ class CSVLoadingService
   # rom_container: ALLSEARCH_ROM and remove the offending line
   def initialize(logger: ALLSEARCH_LOGGER, rom_container: nil)
     @logger = logger
-    @rom_container = rom_container ||
-                     (Rails.application.config.respond_to?(:rom) && Rails.application.config.rom) ||
-                     RomFactory.new.require_rom!
+    @rom_container = rom_container || rails_rom_container || RomFactory.new.require_rom!
   end
 
   def run
@@ -25,6 +23,13 @@ class CSVLoadingService
   private
 
   attr_reader :csv, :logger, :rom_container
+
+  # :reek:UtilityFunction
+  def rails_rom_container
+    Rails.application.config.rom
+  rescue NoMethodError
+    nil
+  end
 
   def fetch_data
     contents = uri.open
