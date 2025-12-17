@@ -4,6 +4,35 @@ require 'spec_helper'
 require allsearch_path 'init/rom_factory'
 
 RSpec.describe RomFactory do
+  describe '#db_connection' do
+    it 'returns success with existing DB constant if already defined' do
+      result = described_class.new.send(:db_connection)
+      expect(result).to be_success
+      expect(result.success).to be_a(Sequel::Database)
+    end
+
+    context 'when DB constant is not defined' do
+      before do
+        hide_const('DB')
+      end
+
+      it 'returns success with database connection when connection succeeds' do
+        db = instance_double(Sequel::Postgres::Database, to_s: 'postgres://my-connection-string')
+        allow(Sequel).to receive(:postgres).and_return(db)
+        result = described_class.new.send(:db_connection)
+        expect(result).to be_success
+        expect(result.success).to eq(db)
+      end
+
+      it 'returns failure when database connection fails' do
+        allow(Sequel).to receive(:postgres).and_raise(Sequel::DatabaseConnectionError.new('Connection failed'))
+        result = described_class.new.send(:db_connection)
+        expect(result).to be_failure
+        expect(result.failure).to be_a(Sequel::DatabaseConnectionError)
+      end
+    end
+  end
+
   describe '#require_rom!' do
     # rubocop: disable RSpec/VerifiedDoubles
     it 'returns a rom if the database connection is good' do
