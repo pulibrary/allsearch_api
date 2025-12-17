@@ -60,6 +60,15 @@ RSpec.describe RomFactory do
       expect(rom_factory.rom_if_available).to be_failure
     end
 
+    it 'returns failure if database connection is not ready' do
+      db = instance_double(Sequel::Postgres::Database, to_s: 'postgres://my-connection-string')
+      rom_factory = described_class.new
+      allow(rom_factory).to receive(:db_connection).and_return(Success(db))
+      allow(rom_factory).to receive(:verify_db_connection_is_ready).and_call_original
+      allow(rom_factory).to receive(:Success).and_raise(StandardError.new)
+      expect(rom_factory.rom_if_available).to be_failure
+    end
+
     describe 'when required tables do not exist' do
       # rubocop: disable RSpec/NestedGroups
       context 'when schema_migrations table is missing' do
