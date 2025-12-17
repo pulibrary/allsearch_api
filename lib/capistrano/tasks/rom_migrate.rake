@@ -9,6 +9,7 @@ namespace :deploy do
     on roles(:db) do
       within release_path do
         with rails_env: fetch(:rails_env) do
+          execute :bundle, :exec, :rake, 'rom:migrations_applied'
           execute :bundle, :exec, :rake, 'rom:migrate'
         end
       end
