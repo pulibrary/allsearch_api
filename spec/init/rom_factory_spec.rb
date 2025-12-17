@@ -60,12 +60,33 @@ RSpec.describe RomFactory do
       expect(rom_factory.rom_if_available).to be_failure
     end
 
-    it 'returns failure if required tables do not exist' do
-      db = instance_double(Sequel::Postgres::Database, to_s: 'postgres://my-connection-string')
-      allow(db).to receive(:table_exists?).with(:sequel_schema_migrations).and_return(false)
-      rom_factory = described_class.new
-      allow(rom_factory).to receive(:db_connection).and_return(Success(db))
-      expect(rom_factory.rom_if_available).to be_failure
+    describe 'when required tables do not exist' do
+      # rubocop: disable RSpec/NestedGroups
+      context 'when schema_migrations table is missing' do
+        it 'returns failure' do
+          db = instance_double(Sequel::Postgres::Database, to_s: 'postgres://my-connection-string')
+          allow(db).to receive(:table_exists?).with(:sequel_schema_migrations).and_return(false)
+          rom_factory = described_class.new
+          allow(rom_factory).to receive(:db_connection).and_return(Success(db))
+          expect(rom_factory.rom_if_available).to be_failure
+        end
+      end
+
+      context 'when other required tables are missing' do
+        it 'returns failure' do
+          db = instance_double(Sequel::Postgres::Database, to_s: 'postgres://my-connection-string')
+          allow(db).to receive(:table_exists?).with(:sequel_schema_migrations).and_return(true)
+          allow(db).to receive(:table_exists?).with(:best_bet_records).and_return(true)
+          allow(db).to receive(:table_exists?).with(:library_database_records).and_return(true)
+          allow(db).to receive(:table_exists?).with(:library_staff_records).and_return(true)
+          allow(db).to receive(:table_exists?).with(:banners).and_return(true)
+          allow(db).to receive(:table_exists?).with(:oauth_tokens).and_return(false)
+          rom_factory = described_class.new
+          allow(rom_factory).to receive(:db_connection).and_return(Success(db))
+          expect(rom_factory.rom_if_available).to be_failure
+        end
+      end
+      # rubocop: enable RSpec/NestedGroups
     end
 
     it 'returns success when database is ready and ROM can be initialized' do
