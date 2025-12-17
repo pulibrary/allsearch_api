@@ -83,4 +83,11 @@ RSpec.describe BestBetLoadingService, :truncate do
                    'The original length was 30 rows, the new length is 8 rows.')
     end
   end
+
+  context 'when Rails raises NoMethodError during CSVLoadingService initialization' do
+    it 'falls back to RomFactory and still works' do
+      allow(Rails).to receive(:application).and_raise(NoMethodError)
+      expect { described_class.new.run }.to change(best_bet, :count).by(7)
+    end
+  end
 end
