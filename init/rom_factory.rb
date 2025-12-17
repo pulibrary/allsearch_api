@@ -60,10 +60,10 @@ class RomFactory
 
   # rubocop:disable Metrics/MethodLength
   def verify_required_rom_tables(connection)
-    # Check for sequel_schema_migrations table (created by ROM)
-    unless connection.table_exists?(:sequel_schema_migrations)
+    # Check forschema_migrations table (created by ROM)
+    unless connection.table_exists?(:schema_migrations)
       return Failure(StandardError.new(
-                       'ROM migration tracking table does not exist. Run: bundle exec rake rom:migrate'
+                       'ROM migration tracking table does not exist. Run: bundle exec rake db:migrate'
                      ))
     end
 
@@ -75,7 +75,7 @@ class RomFactory
       Success(connection)
     else
       Failure(StandardError.new(
-                "Required tables missing: #{missing_tables.join(', ')}. Run: bundle exec rake rom:migrate"
+                "Required tables missing: #{missing_tables.join(', ')}. Run: bundle exec rake db:migrate"
               ))
     end
   rescue StandardError => error

@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 # rubocop:disable Metrics/BlockLength
-namespace :rom do
+namespace :db do
   # rubocop:enable Metrics/BlockLength
+
+  # Clear Rails default db:migrate task if it exists
+  Rake::Task['db:migrate'].clear if Rake::Task.task_defined?('db:migrate')
 
   desc 'Run ROM/Sequel migrations'
   task :migrate do
@@ -10,7 +13,27 @@ namespace :rom do
 
     conn = RomFactory.new.database_if_available.value!
     Sequel.extension :migration
-    Sequel::Migrator.run(conn, File.join(Dir.pwd, 'db', 'rom_migrate'), table: :sequel_schema_migrations)
+
+    unless conn.table_exists?(:schema_migrations)
+      conn.create_table(:schema_migrations) do
+        column :version, :bigint, null: false, primary_key: true
+      end
+    end
+
+    migration_dir = File.join(Dir.pwd, 'db', 'rom_migrate')
+    applied = conn[:schema_migrations].select_map(:version)
+
+    Dir.glob(File.join(migration_dir, '*.rb')).each do |file|
+      version = File.basename(file).split('_').first.to_i
+
+      next if applied.include?(version)
+
+      puts "Applying migration: #{File.basename(file)}"
+      migration = eval(File.read(file))
+      migration.apply(conn, :up)
+      conn[:schema_migrations].insert(version: version)
+    end
+
     puts 'ROM/Sequel migrations run.'
   end
 
@@ -26,37 +49,11 @@ namespace :rom do
 
     conn = RomFactory.new.database_if_available.value!
     Sequel.extension :migration
-    Sequel::Migrator.run(conn, File.join(Dir.pwd, 'db', 'rom_migrate'), target: target,
-                                                                        table: :sequel_schema_migrations)
+    Sequel::Migrator.run(conn, File.join(Dir.pwd, 'db', 'rom_migrate'),
+                         target: target,
+                         table: :schema_migrations,
+                         column: :version)
     puts "Rolled back ROM/Sequel migrations to #{target}."
-  end
-
-  desc 'Mark existing migrations as applied without running them (first time setup)'
-  task :migrations_applied do
-    require_relative '../../init/rom_factory'
-
-    conn = RomFactory.new.database_if_available.value!
-    Sequel.extension :migration
-
-    unless conn.table_exists?(:sequel_schema_migrations)
-      conn.create_table(:sequel_schema_migrations) do
-        column :filename, String, null: false, primary_key: true
-      end
-    end
-
-    migration_dir = File.join(Dir.pwd, 'db', 'rom_migrate')
-    migration_files = Dir.glob(File.join(migration_dir, '*.rb')).map { |f| File.basename(f) }.sort
-
-    migration_files.each do |filename|
-      if conn[:sequel_schema_migrations].where(filename: filename).any?
-        puts "Already applied: #{filename}"
-      else
-        conn[:sequel_schema_migrations].insert(filename: filename)
-        puts "Applied: #{filename}"
-      end
-    end
-
-    puts 'All existing migrations are applied.'
   end
 
   desc 'Reset migration tracking table (clears all migration history)'
@@ -65,11 +62,11 @@ namespace :rom do
 
     conn = RomFactory.new.database_if_available.value!
 
-    if conn.table_exists?(:sequel_schema_migrations)
-      conn[:sequel_schema_migrations].delete
-      puts 'Cleared sequel_schema_migrations table'
+    if conn.table_exists?(:schema_migrations)
+      conn[:schema_migrations].delete
+      puts 'Cleared schema_migrations table'
     else
-      puts 'sequel_schema_migrations table does not exist'
+      puts 'schema_migrations table does not exist'
     end
   end
 end
