@@ -44,3 +44,15 @@ namespace :application do
     end
   end
 end
+
+namespace :database do
+  # Runs database migrations
+  desc 'Run database migrations'
+  task :db_migrate do
+    on roles(:db) do
+      within release_path do
+        execute :rake, 'db:migrate_to_rom'
+      end
+    end
+  end
+end
