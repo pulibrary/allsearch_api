@@ -16,10 +16,8 @@ namespace :db do
       # Clear old Rails migrations
       conn[:schema_migrations].delete
 
-      # Change column type from varchar to bigint
-      conn.alter_table(:schema_migrations) do
-        set_column_type :version, :bigint
-      end
+      # Change column type from varchar to bigint with explicit casting
+      conn.run('ALTER TABLE schema_migrations ALTER COLUMN version TYPE bigint USING version::bigint')
 
       puts 'Populating ROM migrations...'
       Rake::Task['db:migrations_applied'].invoke
