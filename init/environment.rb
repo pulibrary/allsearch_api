@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'erb'
+require 'yaml'
+
 require_relative '../app/paths'
 
 class Environment
