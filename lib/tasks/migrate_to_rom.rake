@@ -13,8 +13,8 @@ namespace :db do
     if column_type == 'character varying'
       puts 'Converting schema_migrations from Rails format to ROM format...'
 
-      # Clear old Rails migrations
-      conn[:schema_migrations].delete
+      # Truncate table
+      conn.run('TRUNCATE TABLE schema_migrations')
 
       # Change column type from varchar to bigint with explicit casting
       conn.run('ALTER TABLE schema_migrations ALTER COLUMN version TYPE bigint USING version::bigint')
