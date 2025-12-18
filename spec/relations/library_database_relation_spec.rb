@@ -4,7 +4,7 @@ require 'rack_helper'
 
 # rubocop:disable RSpec/NestedGroups
 RSpec.describe LibraryDatabaseRelation do
-  let(:library_databases) { Rails.application.config.rom.relations[:library_database_records] }
+  let(:library_databases) { ALLSEARCH_ROM.relations[:library_database_records] }
 
   describe '#query' do
     before do

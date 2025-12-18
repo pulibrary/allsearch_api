@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe LibraryStaff do
   let(:query_terms) { 'foo' }
-  let(:rom) { Rails.application.config.rom }
+  let(:rom) { ALLSEARCH_ROM }
   let(:staff_service) { described_class.new(query_terms:, rom:) }
 
   it 'has the correct more_link' do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rack_helper'
+require 'spec_helper'
 
 RSpec.describe LibraryDatabaseRepository do
   describe '#create_from_csv' do
@@ -10,7 +10,7 @@ RSpec.describe LibraryDatabaseRepository do
                    'http://ebsco.com',
                    'https://libguides.princeton.edu/resource/12345',
                    'Civil Engineering;Energy;Environment']]
-      repo = described_class.new Rails.application.config.rom
+      repo = described_class.new ALLSEARCH_ROM
       repo.create_from_csv(csv_data)
       record = repo.library_database_records.last
       expect(record.libguides_id).to eq(123)
