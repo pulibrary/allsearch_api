@@ -28,5 +28,6 @@ use Rack::Head
 use Rack::ConditionalGet
 use Rack::ETag
 use Rack::UTF8Sanitizer, sanitize_null_bytes: true
+use ContentSecurityPolicyMiddleware
 
 run Router
