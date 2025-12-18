@@ -4,6 +4,7 @@
 require_relative '../app/paths'
 require allsearch_path 'init/environment'
 require allsearch_path 'init/logger'
+require allsearch_path 'config/lando_env'
 
 # Standard init code that does not need to be at the start or end
 require allsearch_path 'init/datadog'
