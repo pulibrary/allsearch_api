@@ -7,7 +7,7 @@ RSpec.describe Environment do
   describe '#when_development' do
     it 'runs the provided block if in the development environment' do
       block_was_called = false
-      described_class.new({ 'RAILS_ENV' => 'development' }).when_development { block_was_called = true }
+      described_class.new({ 'APP_ENV' => 'development' }).when_development { block_was_called = true }
       expect(block_was_called).to be true
     end
 
@@ -19,14 +19,14 @@ RSpec.describe Environment do
 
     it 'does not run the provided block in production' do
       block_was_called = false
-      described_class.new({ 'RAILS_ENV' => 'production' }).when_development { block_was_called = true }
+      described_class.new({ 'APP_ENV' => 'production' }).when_development { block_was_called = true }
       expect(block_was_called).to be false
     end
 
     it 'can be chained with #when_deployed' do
       first_block_was_called = false
       second_block_was_called = false
-      described_class.new({ 'RAILS_ENV' => 'staging' })
+      described_class.new({ 'APP_ENV' => 'staging' })
                      .when_development { first_block_was_called = true }
                      .when_deployed { second_block_was_called = true }
       expect(first_block_was_called).to be false
@@ -36,10 +36,10 @@ RSpec.describe Environment do
 
   describe '#bundler_groups' do
     it 'has :default and the environment-specific group' do
-      expect(described_class.new({ 'RAILS_ENV' => 'production' }).bundler_groups).to eq [:production, :default]
-      expect(described_class.new({ 'RAILS_ENV' => 'staging' }).bundler_groups).to eq [:staging, :default]
-      expect(described_class.new({ 'RAILS_ENV' => 'development' }).bundler_groups).to eq [:development, :default]
-      expect(described_class.new({ 'RAILS_ENV' => 'test' }).bundler_groups).to eq [:test, :default]
+      expect(described_class.new({ 'APP_ENV' => 'production' }).bundler_groups).to eq [:production, :default]
+      expect(described_class.new({ 'APP_ENV' => 'staging' }).bundler_groups).to eq [:staging, :default]
+      expect(described_class.new({ 'APP_ENV' => 'development' }).bundler_groups).to eq [:development, :default]
+      expect(described_class.new({ 'APP_ENV' => 'test' }).bundler_groups).to eq [:test, :default]
     end
   end
 end

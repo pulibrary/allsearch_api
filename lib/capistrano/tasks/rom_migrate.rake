@@ -8,7 +8,7 @@ namespace :deploy do
   task :migrate do
     on roles(:db) do
       within release_path do
-        with rails_env: fetch(:rails_env) do
+        with app_env: fetch(:app_env) do
           execute :bundle, :exec, :rake, 'db:migrate_to_rom'
         end
       end
