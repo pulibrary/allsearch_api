@@ -31,7 +31,7 @@ describe HostHeaderMiddleware do
   it 'allows localhost request for development' do
     middleware = described_class.new(lambda { |_env|
       [200, {}, ['great!']]
-    }, current_environment: Environment.new({ 'RAILS_ENV' => 'development' }))
+    }, current_environment: Environment.new({ 'APP_ENV' => 'development' }))
     env = { 'HTTP_HOST' => 'localhost:3333' }
     expect(middleware.call(env)).to eq [200, {}, ['great!']]
   end
@@ -39,7 +39,7 @@ describe HostHeaderMiddleware do
   it 'allows example.org request for test' do
     middleware = described_class.new(lambda { |_env|
       [200, {}, ['great!']]
-    }, current_environment: Environment.new({ 'RAILS_ENV' => 'test' }))
+    }, current_environment: Environment.new({ 'APP_ENV' => 'test' }))
     env = { 'HTTP_HOST' => 'example.org' }
     expect(middleware.call(env)).to eq [200, {}, ['great!']]
   end
@@ -47,7 +47,7 @@ describe HostHeaderMiddleware do
   it 'allows allsearch-api.princeton.edu request for production' do
     middleware = described_class.new(lambda { |_env|
       [200, {}, ['great!']]
-    }, current_environment: Environment.new({ 'RAILS_ENV' => 'production' }))
+    }, current_environment: Environment.new({ 'APP_ENV' => 'production' }))
     env = { 'HTTP_HOST' => 'allsearch-api.princeton.edu' }
     expect(middleware.call(env)).to eq [200, {}, ['great!']]
   end
@@ -55,7 +55,7 @@ describe HostHeaderMiddleware do
   it 'allows allsearch-api-staging.princeton.edu request for staging' do
     middleware = described_class.new(lambda { |_env|
       [200, {}, ['great!']]
-    }, current_environment: Environment.new({ 'RAILS_ENV' => 'staging' }))
+    }, current_environment: Environment.new({ 'APP_ENV' => 'staging' }))
     env = { 'HTTP_HOST' => 'allsearch-api-staging.princeton.edu' }
     expect(middleware.call(env)).to eq [200, {}, ['great!']]
   end

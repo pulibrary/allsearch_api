@@ -26,7 +26,7 @@ RSpec.describe Catalog do
       it 'links to the host associated with the solr collection' do
         catalog = described_class.new(
           query_terms: 'rubix',
-          allsearch_config: Environment.new({ 'RAILS_ENV' => 'staging' }).config(:allsearch)
+          allsearch_config: Environment.new({ 'APP_ENV' => 'staging' }).config(:allsearch)
         )
         expect(catalog.more_link.value!.to_s).to eq('https://catalog-staging.princeton.edu/catalog?q=rubix&search_field=all_fields')
       end

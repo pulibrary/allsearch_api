@@ -37,7 +37,7 @@ RSpec.describe Autoloader do
   it 'eagerly loads constants in production' do
     with_temp_directory do |directory|
       listener = FakeFileListener.new
-      environment = Environment.new({ 'RAILS_ENV' => 'production' })
+      environment = Environment.new({ 'APP_ENV' => 'production' })
       path_generator = ->(path) { "#{directory}/#{path}" }
       autoloader = described_class.new(directories: ['app/checks'], environment:, listener:, path_generator:)
 
@@ -59,7 +59,7 @@ RSpec.describe Autoloader do
   it 'lazily loads constants in development' do
     with_temp_directory do |directory|
       listener = FakeFileListener.new
-      environment = Environment.new({ 'RAILS_ENV' => 'development' })
+      environment = Environment.new({ 'APP_ENV' => 'development' })
       path_generator = ->(path) { "#{directory}/#{path}" }
       autoloader = described_class.new(directories: ['app/checks'], environment:, listener:, path_generator:)
 
@@ -85,7 +85,7 @@ RSpec.describe Autoloader do
 
   it 'finds new constants when the File Listener detects a change in development' do
     with_temp_directory do |directory|
-      environment = Environment.new({ 'RAILS_ENV' => 'development' })
+      environment = Environment.new({ 'APP_ENV' => 'development' })
       listener = FakeFileListener.new
       path_generator = ->(path) { "#{directory}/#{path}" }
       autoloader = described_class.new(directories: ['app'], environment:, listener:, path_generator:)
@@ -112,7 +112,7 @@ RSpec.describe Autoloader do
     it 'sets up a file listener in development' do
       with_temp_directory do |directory|
         listener = FakeFileListener.new
-        environment = Environment.new({ 'RAILS_ENV' => 'development' })
+        environment = Environment.new({ 'APP_ENV' => 'development' })
         path_generator = ->(path) { "#{directory}/#{path}" }
         autoloader = described_class.new(directories: ['app/checks'], environment:, listener:, path_generator:)
         autoloader.call
@@ -123,7 +123,7 @@ RSpec.describe Autoloader do
     it 'does not set up a file listener in production' do
       with_temp_directory do |directory|
         listener = FakeFileListener.new
-        environment = Environment.new({ 'RAILS_ENV' => 'production' })
+        environment = Environment.new({ 'APP_ENV' => 'production' })
         path_generator = ->(path) { "#{directory}/#{path}" }
         autoloader = described_class.new(directories: ['app/checks'], environment:, listener:, path_generator:)
         autoloader.call

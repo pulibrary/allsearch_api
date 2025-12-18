@@ -13,7 +13,7 @@ namespace :servers do
     Rake::Task['solr:update_configs'].invoke
     system('lando start')
     system('bundle exec rake servers:initialize')
-    system('RAILS_ENV=test bundle exec rake db:migrate')
+    system('APP_ENV=test bundle exec rake db:migrate')
     system('bundle exec rake solr:load_sample_data')
     system('bundle exec rake best_bets:sync')
   end

@@ -7,7 +7,7 @@ executors:
     docker:
       - image: cimg/ruby:3.4.1-browsers
         environment:
-          RAILS_ENV: test
+          APP_ENV: test
           ALLSEARCH_HOST: localhost
           AllSEARCH_USER: postgres
           SOLR_URL: http://solr:SolrRocks@localhost:8983/solr/allsearch-test
@@ -51,7 +51,7 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
-      - run: RAILS_ENV=test bundle exec rspec smoke_spec/smoke_spec.rb
+      - run: APP_ENV=test bundle exec rspec smoke_spec/smoke_spec.rb
   build:
     docker:
       - image: cimg/ruby:3.4
@@ -91,7 +91,7 @@ jobs:
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run:
           name: Database setup
-          command: RAILS_ENV=test bundle exec rake db:migrate
+          command: APP_ENV=test bundle exec rake db:migrate
       - ruby/install-deps
       - ruby/rspec-test:
           include: spec/**/*_spec.rb

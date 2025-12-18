@@ -8,7 +8,7 @@ class Environment
   end
 
   def name
-    vars['RAILS_ENV'] || 'development'
+    vars['APP_ENV'] || 'development'
   end
 
   def config(config_filename)
