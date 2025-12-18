@@ -71,4 +71,32 @@ namespace :db do
       puts 'schema_migrations table does not exist'
     end
   end
+
+  desc 'Mark existing migrations as applied without running them (first time setup)'
+  task :migrations_applied do
+    require_relative '../../init/rom_factory'
+
+    conn = RomFactory.new.database_if_available.value!
+    Sequel.extension :migration
+
+    unless conn.table_exists?(:schema_migrations)
+      conn.create_table(:schema_migrations) do
+        column :version, :bigint, null: false, primary_key: true
+      end
+    end
+
+    migration_dir = File.join(Dir.pwd, 'db', 'rom_migrate')
+    migration_files = Dir.glob(File.join(migration_dir, '*.rb')).map { |f| File.basename(f).split('_').first.to_i }.sort
+
+    migration_files.each do |version|
+      if conn[:schema_migrations].where(version: version).any?
+        puts "Already applied: #{version}"
+      else
+        conn[:schema_migrations].insert(version: version)
+        puts "Applied: #{version}"
+      end
+    end
+
+    puts 'All existing migrations are applied.'
+  end
 end
