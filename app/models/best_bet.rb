@@ -35,6 +35,6 @@ class BestBet
   private
 
   def best_bet
-    @best_bet ||= Rails.application.config.rom.relations[:best_bet_records]
+    @best_bet ||= ALLSEARCH_ROM.relations[:best_bet_records]
   end
 end
