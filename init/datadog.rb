@@ -4,11 +4,11 @@ require 'datadog/statsd'
 require 'datadog/auto_instrument'
 
 Datadog.configure do |c|
-  c.env = Rails.env
+  c.env = CURRENT_ENVIRONMENT.name
   c.service = 'allsearch-backend'
   c.tracing.report_hostname = true
   c.tracing.analytics.enabled = true
-  c.tracing.enabled = ENV['APP_ENV'] == 'production'
+  CURRENT_ENVIRONMENT.when_production { c.tracing.enabled = true }
   c.tracing.report_hostname = true
   c.tracing.log_injection = true
 
