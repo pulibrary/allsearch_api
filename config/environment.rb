@@ -6,6 +6,8 @@ require_relative '../app/paths'
 require_relative 'application'
 
 require allsearch_path 'init/autoloader'
-require allsearch_path 'config/initialize_rails'
 
-InitializeRails.new.call
+# NOTE: The flipper cli looks for a configuration file config/environment.rb
+# for any initializers, so we should not remove the following line unless we
+# use an alternate way of working with flipper
+require allsearch_path 'init/load_flipper'
