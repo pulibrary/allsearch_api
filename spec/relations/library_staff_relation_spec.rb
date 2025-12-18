@@ -9,7 +9,7 @@ RSpec.describe LibraryStaffRelation do
   describe '#query' do
     before do
       repo = LibraryStaffRepository.new(rom)
-      csv = CSV.read Rails.root.join('spec/fixtures/files/library_staff/staff-directory.csv'), headers: true
+      csv = CSV.read allsearch_path('spec/fixtures/files/library_staff/staff-directory.csv'), headers: true
       repo.new_from_csv(csv)
     end
 
@@ -54,7 +54,7 @@ RSpec.describe LibraryStaffRelation do
   describe 'searching by library_title' do
     before do
       repo = LibraryStaffRepository.new(rom)
-      csv = CSV.read Rails.root.join('spec/fixtures/files/library_staff/engineering-staff-directory.csv'), headers: true
+      csv = CSV.read allsearch_path('spec/fixtures/files/library_staff/engineering-staff-directory.csv'), headers: true
       repo.new_from_csv(csv)
     end
 
