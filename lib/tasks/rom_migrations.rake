@@ -29,8 +29,10 @@ namespace :db do
       next if applied.include?(version)
 
       puts "Applying migration: #{File.basename(file)}"
-      migration = eval(File.read(file))
+      load file
+      migration = Sequel::Migration.descendants.last
       migration.apply(conn, :up)
+      Sequel::Migration.descendants.pop
       conn[:schema_migrations].insert(version: version)
     end
 
