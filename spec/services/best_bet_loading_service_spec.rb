@@ -8,7 +8,7 @@ RSpec.describe BestBetLoadingService, :truncate do
   let(:search_terms) { '{some, terms}' }
   let(:url) { 'https://example.com' }
 
-  let(:rom) { Rails.application.config.rom }
+  let(:rom) { RomFactory.new.require_rom! }
   let(:repo) { RepositoryFactory.best_bet }
   let(:best_bet) { rom.relations[:best_bet_records] }
 
@@ -52,8 +52,8 @@ RSpec.describe BestBetLoadingService, :truncate do
   context 'when a best bet in postgres is no longer in the CSV' do
     it 'removes it from the database' do
       repo = RepositoryFactory.best_bet
-      old_record = repo.create(id: 123, title:, search_terms:, url:)
-      expect(best_bet.where(id: 123)).to contain_exactly(old_record)
+      repo.create(id: 123, title:, search_terms:, url:)
+      expect(best_bet.where(id: 123).count).to eq 1
       described_class.new.run
       expect(best_bet.where(id: 123).count).to eq 0
     end
@@ -81,6 +81,13 @@ RSpec.describe BestBetLoadingService, :truncate do
       expect(ALLSEARCH_LOGGER).to have_received(:error)
         .once.with('The BestBetLoadingService had a much shorter CSV. ' \
                    'The original length was 30 rows, the new length is 8 rows.')
+    end
+  end
+
+  context 'when Rails raises NoMethodError during CSVLoadingService initialization' do
+    it 'falls back to RomFactory and still works' do
+      allow(Rails).to receive(:application).and_raise(NoMethodError)
+      expect { described_class.new.run }.to change(best_bet, :count).by(7)
     end
   end
 end

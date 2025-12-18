@@ -11,7 +11,7 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
   end
 
   it 'creates new rows in the library_staff table for each CSV row' do
-    rom = Rails.application.config.rom
+    rom = RomFactory.new.require_rom!
     expect { described_class.new.run }.to change { rom.relations[:library_staff_records].count }.by(5)
     third_record = rom.relations[:library_staff_records].to_a[2]
     fourth_record = rom.relations[:library_staff_records].to_a[3]
@@ -40,7 +40,7 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
 
   it 'is idempotent' do
     described_class.new.run
-    rom = Rails.application.config.rom
+    rom = RomFactory.new.require_rom!
     expect { described_class.new.run }.not_to(change { rom.relations[:library_staff_records].count })
   end
 
@@ -51,7 +51,7 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
       described_class.new.run
       # Create a record that would typically be deleted as part of running
       # this service, since it is not in the CSV data
-      rom = Rails.application.config.rom
+      rom = RomFactory.new.require_rom!
       repo = RepositoryFactory.library_staff
       repo.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
                   title: 'Outside Specialist', library_title: 'Outside Specialist',
@@ -67,7 +67,7 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
       described_class.new.run
       # Create a record that would typically be deleted as part of running
       # this service, since it is not in the CSV data
-      rom = Rails.application.config.rom
+      rom = RomFactory.new.require_rom!
       repo = RepositoryFactory.library_staff
       repo.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
                   title: 'Outside Specialist', library_title: 'Outside Specialist',
@@ -78,7 +78,7 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
 
   context 'when a staff member in postgres is no longer in the CSV' do
     it 'removes them from the database' do
-      rom = Rails.application.config.rom
+      rom = RomFactory.new.require_rom!
       repo = RepositoryFactory.library_staff
       repo.create(puid: 0o00000004, netid: 'notourcat', name: 'Cat, Not Our',
                   title: 'Outside Specialist', library_title: 'Outside Specialist',
@@ -91,7 +91,7 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
 
   context 'when a staff member has updated info in the CSV' do
     it 'updates the relevant fields' do
-      rom = Rails.application.config.rom
+      rom = RomFactory.new.require_rom!
       repo = RepositoryFactory.library_staff
       repo.create(puid: 0o00000003, netid: 'tiberius', first_name: 'Spot Tiberius', name: 'Adams, Spot',
                   title: 'Lead Hairball Engineer', library_title: 'Lead Hairball Engineer',
@@ -108,7 +108,7 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
     let(:libjobs_response) { file_fixture('library_staff/staff-directory-blank-lines.csv') }
 
     it 'creates records for any complete lines in the CSV' do
-      rom = Rails.application.config.rom
+      rom = RomFactory.new.require_rom!
       expect { described_class.new.run }.to change { rom.relations[:library_staff_records].count }.by(1)
     end
   end
