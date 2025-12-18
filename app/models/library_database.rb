@@ -9,7 +9,7 @@ class LibraryDatabase
 
   attr_reader :query_terms
 
-  def initialize(query_terms:, rom: Rails.application.config.rom)
+  def initialize(query_terms:, rom: ALLSEARCH_ROM)
     @query_terms = query_terms
     @rom = rom
   end

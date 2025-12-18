@@ -7,12 +7,7 @@ require allsearch_path 'config/environment'
 require allsearch_path 'init/rom_factory'
 
 RSpec.configure do |config|
-  rom = if Rails.application.config.respond_to?(:rom) && Rails.application.config.rom
-          Rails.application.config.rom
-        else
-          RomFactory.new.require_rom!
-        end
-  all_databases = rom.gateways.values.map(&:connection)
+  all_databases = ALLSEARCH_ROM.gateways.values.map(&:connection)
 
   config.before :suite do
     all_databases.each do |db|
