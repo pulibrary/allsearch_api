@@ -4,7 +4,7 @@ require 'rack_helper'
 require allsearch_path 'init/logger'
 
 RSpec.describe BestBetRelation do
-  let(:rom) { Rails.application.config.rom }
+  let(:rom) { ALLSEARCH_ROM }
   let(:best_bets) { rom.relations[:best_bet_records] }
   let(:repo) { BestBetRepository.new(rom) }
 

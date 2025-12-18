@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe LibraryDatabase do
   let(:query_terms) { 'foo' }
-  let(:rom) { Rails.application.config.rom }
+  let(:rom) { ALLSEARCH_ROM }
   let(:db_service) { described_class.new(query_terms:, rom:) }
 
   it 'has the correct more_link' do

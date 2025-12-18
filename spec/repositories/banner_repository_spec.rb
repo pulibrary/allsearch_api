@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
-require 'rack_helper'
+require 'spec_helper'
 
 RSpec.describe BannerRepository do
   it 'can get a banner' do
-    banner_repo = described_class.new Rails.application.config.rom
+    banner_repo = described_class.new ALLSEARCH_ROM
     banner = banner_repo.banners.first
     expect(banner.dismissible).to be true
   end
 
   describe '#modify' do
     after do
-      banner_repo = described_class.new Rails.application.config.rom
+      banner_repo = described_class.new ALLSEARCH_ROM
       banner_repo.modify(text: '')
     end
 
     it 'modifies an existing banner if it exists' do
-      banner_repo = described_class.new Rails.application.config.rom
+      banner_repo = described_class.new ALLSEARCH_ROM
       expect(banner_repo.banners.first.text).to eq ''
 
       banner_repo.modify(text: 'Dogs! Cats!')
@@ -25,7 +25,7 @@ RSpec.describe BannerRepository do
     end
 
     it 'updates the updated_at timestamp' do
-      banner_repo = described_class.new Rails.application.config.rom
+      banner_repo = described_class.new ALLSEARCH_ROM
 
       expect do
         allow(Time).to receive(:now).and_return Time.utc(2020, 1, 1)
@@ -40,7 +40,7 @@ RSpec.describe BannerRepository do
     end
 
     it 'creates a new banner if none exists' do
-      banner_repo = described_class.new Rails.application.config.rom
+      banner_repo = described_class.new ALLSEARCH_ROM
       banner_repo.delete
       expect(banner_repo.banners.count).to eq 0
 
@@ -50,7 +50,7 @@ RSpec.describe BannerRepository do
     end
 
     it 'updates the updated_at and created_at timestamps' do
-      banner_repo = described_class.new Rails.application.config.rom
+      banner_repo = described_class.new ALLSEARCH_ROM
       banner_repo.delete
 
       allow(Time).to receive(:now).and_return Time.utc(2020, 1, 1)

@@ -26,7 +26,7 @@ RSpec.describe Libanswers do
       expect do
         service = described_class.new(query_terms: 'printer')
         service.service_response
-      end.not_to(change { Rails.application.config.rom.relations[:oauth_tokens].count })
+      end.not_to(change { ALLSEARCH_ROM.relations[:oauth_tokens].count })
     end
   end
 

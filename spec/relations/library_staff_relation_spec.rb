@@ -3,7 +3,7 @@
 require 'rack_helper'
 
 RSpec.describe LibraryStaffRelation do
-  let(:rom) { Rails.application.config.rom }
+  let(:rom) { ALLSEARCH_ROM }
   let(:library_staff) { rom.relations[:library_staff_records] }
 
   describe '#query' do
