@@ -13,6 +13,9 @@ set :ssh_options, { forward_agent: true }
 
 set :linked_dirs, %w[log]
 
+# Run migrations after code update
+after 'deploy:updated', 'deploy:migrate'
+
 namespace :application do
   # You can/ should apply this command to a single host
   # cap --hosts=allsearch-api-staging1.princeton.edu staging application:remove_from_nginx
