@@ -52,8 +52,13 @@ class ArtMuseum
   def handle_parser_error(response)
     raise AllsearchError.new(
       problem: 'UPSTREAM_ERROR',
-      msg: "Query to upstream failed with #{ActionController::Base.helpers.strip_tags(response)}"
+      msg: "Query to upstream failed with #{strip_html_tags(response)}"
     )
+  end
+
+  # :reek:UtilityFunction
+  def strip_html_tags(text)
+    text.gsub(/<[^>]*>/, '')
   end
 
   def query_is_too_long?
