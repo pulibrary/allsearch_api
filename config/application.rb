@@ -2,8 +2,6 @@
 
 require_relative 'boot'
 
-require 'active_record/railtie'
-
 require_relative 'lando_env'
 require_relative 'db_connection'
 
