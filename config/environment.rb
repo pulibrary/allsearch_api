@@ -2,7 +2,7 @@
 
 require_relative '../app/paths'
 
-# Load the Rails application.
+# Load the application configuration.
 require_relative 'application'
 
 require allsearch_path 'init/autoloader'
