@@ -5,6 +5,6 @@
 
 require_relative 'config/application'
 
-Rails.application.load_tasks
+Dir.glob('lib/tasks/**/*.rake').each { |file| load file }
 
 ENV['SWAGGER_DRY_RUN'] = 'false' unless ENV.key?('SWAGGER_DRY_RUN')
