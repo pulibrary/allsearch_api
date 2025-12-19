@@ -62,6 +62,6 @@ end
 
 namespace :deploy do
   task :after_release do
-    invoke! "database:db_migrate"
+    invoke! 'database:db_migrate'
   end
 end
