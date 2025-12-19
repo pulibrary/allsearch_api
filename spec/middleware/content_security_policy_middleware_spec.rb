@@ -8,8 +8,10 @@ RSpec.describe ContentSecurityPolicyMiddleware do
     middleware = described_class.new(app)
     csp = middleware.call({})[1]['Content-Security-Policy']
     expect(csp).to eq(
-      "script-src 'self'; object-src 'none'; " \
-      'connect-src https://allsearch-api.princeton.edu https://allsearch-api-staging.princeton.edu; ' \
+      "script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; " \
+      "object-src 'none'; " \
+      'connect-src https://allsearch-api.princeton.edu https://allsearch-api-staging.princeton.edu ' \
+      'http://localhost:3000; ' \
       "base-uri 'none'; frame-ancestors 'none'"
     )
   end
