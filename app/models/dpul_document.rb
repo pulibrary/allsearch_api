@@ -19,15 +19,15 @@ class DpulDocument < Document
   end
 
   def title
-    document[:readonly_title_ssim]&.first
+    Array(document[:readonly_title_ssim]).first
   end
 
   def creator
-    document[:readonly_creator_ssim]&.first
+    Array(document[:readonly_creator_ssim]).first
   end
 
   def publisher
-    document[:readonly_publisher_ssim]&.first
+    Array(document[:readonly_publisher_ssim]).first
   end
 
   def type

@@ -47,13 +47,16 @@ class BannerRepository < ROM::Repository[:banners]
       end
 
       def as_json
-        {
-          text:,
-          display_banner: display?,
-          alert_status: status_code,
-          dismissible:,
-          autoclear:
-        }.to_json
+        require 'active_support/json'
+        ActiveSupport::JSON.encode(
+          {
+            text:,
+            display_banner: display?,
+            alert_status: status_code,
+            dismissible:,
+            autoclear:
+          }
+        )
       end
     end
   end

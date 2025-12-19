@@ -84,10 +84,12 @@ RSpec.describe BestBetLoadingService, :truncate do
     end
   end
 
-  context 'when Rails raises NoMethodError during CSVLoadingService initialization' do
+  context 'when rom_container raises NoMethodError during CSVLoadingService initialization' do
     it 'falls back to RomFactory and still works' do
-      allow(Rails).to receive(:application).and_raise(NoMethodError)
-      expect { described_class.new.run }.to change(best_bet, :count).by(7)
+      broken_rom = instance_double(ROM::Container)
+      allow(broken_rom).to receive(:relations).and_raise(NoMethodError)
+      service = described_class.new(rom_container: broken_rom)
+      expect { service.run }.to change(best_bet, :count).by(7)
     end
   end
 end
