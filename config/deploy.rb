@@ -13,6 +13,9 @@ set :ssh_options, { forward_agent: true }
 
 set :linked_dirs, %w[log]
 
+# Run migrations after code update
+after 'deploy:updated', 'deploy:migrate'
+
 namespace :application do
   # You can/ should apply this command to a single host
   # cap --hosts=allsearch-api-staging1.princeton.edu staging application:remove_from_nginx
@@ -42,5 +45,23 @@ namespace :application do
         execute :rm, '-f public/remove-from-nginx'
       end
     end
+  end
+end
+
+namespace :database do
+  # Runs database migrations
+  desc 'Run database migrations'
+  task :db_migrate do
+    on roles(:db) do
+      within release_path do
+        execute :rake, 'db:migrate_to_rom'
+      end
+    end
+  end
+end
+
+namespace :deploy do
+  task :after_release do
+    invoke! 'database:db_migrate'
   end
 end
