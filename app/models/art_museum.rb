@@ -56,6 +56,7 @@ class ArtMuseum
     )
   end
 
+  # :reek:UtilityFunction
   def strip_html_tags(text)
     text.gsub(/<[^>]*>/, '')
   end
