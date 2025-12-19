@@ -18,7 +18,6 @@ gem 'pg'
 gem 'rack'
 gem 'rack-cors'
 gem 'rack-utf8_sanitizer'
-gem 'railties', '~> 8.0'
 gem 'rake'
 gem 'rom-sql'
 gem 'sanitize', require: false
