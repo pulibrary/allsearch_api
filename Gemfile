@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'base64'
 gem 'bootsnap', require: false
 gem 'csv'
 gem 'datadog', '~> 2.0'
