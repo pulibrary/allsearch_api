@@ -5,7 +5,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'activemodel'
 gem 'activerecord'
-gem 'activesupport'
 gem 'bootsnap', require: false
 gem 'csv'
 gem 'datadog', '~> 2.0'

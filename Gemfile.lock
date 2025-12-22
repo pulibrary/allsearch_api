@@ -312,7 +312,6 @@ PLATFORMS
 DEPENDENCIES
   activemodel
   activerecord
-  activesupport
   bcrypt_pbkdf
   benchmark-ips
   bootsnap
