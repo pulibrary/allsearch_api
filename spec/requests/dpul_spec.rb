@@ -53,7 +53,7 @@ RSpec.describe 'GET /search/dpul' do
       expect(response_body[:records].first.keys).to contain_exactly(:title, :publisher, :id, :type, :url,
                                                                     :other_fields)
       expect(response_body[:records][1].keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
-                                                                     :other_fields)
+                                                                 :other_fields)
       expect(response_body[:records][1]).to match(expected_response[:records].first)
     end
 
