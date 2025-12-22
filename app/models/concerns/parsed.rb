@@ -23,6 +23,6 @@ module Parsed
   end
 
   def document_class
-    @document_class ||= "#{self.class}Document".constantize
+    @document_class ||= Object.const_get("#{self.class}Document")
   end
 end
