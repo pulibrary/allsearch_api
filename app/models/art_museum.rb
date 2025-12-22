@@ -26,8 +26,6 @@ class ArtMuseum
   private
 
   def art_museum_service_response
-    uri = URI::HTTPS.build(host: 'data.artmuseum.princeton.edu', path: '/search',
-                           query: "q=#{query_terms}&type=all&size=3")
     response = Net::HTTP.get(uri)
     begin
       JSON.parse(response, symbolize_names: true)
@@ -36,13 +34,26 @@ class ArtMuseum
     end
   end
 
+  def uri
+    QueryUri.new(
+      host: 'data.artmuseum.princeton.edu',
+      path: '/search',
+      user_query: query_terms,
+      query_builder: ->(query_terms) { "q=#{query_terms}&type=all&size=3" }
+    ).call
+  end
+
   def number
     service_response.dig(:hits, :total)
   end
 
   def more_link
-    Some(URI::HTTPS.build(host: 'artmuseum.princeton.edu', path: '/search/collections',
-                          query: "mainSearch=\"#{query_terms}\""))
+    Some(QueryUri.new(
+      host: 'artmuseum.princeton.edu',
+      path: '/search/collections',
+      user_query: query_terms,
+      query_builder: ->(query_terms) { "mainSearch=\"#{query_terms}\"" }
+    ).call)
   end
 
   def documents

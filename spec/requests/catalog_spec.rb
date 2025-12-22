@@ -110,7 +110,7 @@ RSpec.describe 'GET /search/catalog' do
 
       expect(last_response).to be_successful
       expect(response_body[:records]).to be_empty
-      expect(response_body[:more]).to eq('https://catalog.princeton.edu/catalog?q=What%20if%20%22I%20quote%22%20my%20search?&search_field=all_fields')
+      expect(response_body[:more]).to eq('https://catalog.princeton.edu/catalog?q=What+if+%22I+quote%22+my+search%3F&search_field=all_fields')
     end
   end
 

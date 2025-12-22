@@ -43,9 +43,12 @@ class LibraryWebsite
   private
 
   def more_link
-    Some(URI::HTTPS.build(host: LibraryWebsite.library_website_host,
-                          path: '/search',
-                          query: "keys=#{query_terms}"))
+    Some(QueryUri.new(
+      host: LibraryWebsite.library_website_host,
+      path: '/search',
+      query_builder: ->(query_terms) { "keys=#{query_terms}" },
+      user_query: query_terms
+    ).call)
   end
 
   def uri
