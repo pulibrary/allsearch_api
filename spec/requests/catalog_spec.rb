@@ -62,7 +62,7 @@ RSpec.describe 'GET /search/catalog' do
       expect(response_body[:records].first.keys).to contain_exactly(:title, :creator, :publisher, :id, :type, :url,
                                                                     :other_fields)
       expect(response_body[:records].first).to match(expected_response[:records].first)
-      expect(response_body[:records].second).to match(expected_response[:records].second)
+      expect(response_body[:records][1]).to match(expected_response[:records][1])
     end
 
     it 'only returns the first three records' do

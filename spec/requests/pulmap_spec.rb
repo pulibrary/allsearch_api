@@ -54,12 +54,12 @@ RSpec.describe 'GET /search/pulmap' do
 
       expect(response_body.keys).to contain_exactly(:number, :more, :records)
       expect(response_body[:number]).to eq(expected_response[:number])
-      expect(response_body[:records].second.keys).to contain_exactly(:title, :creator, :description,
+      expect(response_body[:records][1].keys).to contain_exactly(:title, :creator, :description,
                                                                      :publisher, :id,
                                                                      :type, :url,
                                                                      :other_fields)
 
-      expect(response_body[:records].second).to match(expected_response[:records].first)
+      expect(response_body[:records][1]).to match(expected_response[:records].first)
     end
 
     it 'only returns the first three records' do
