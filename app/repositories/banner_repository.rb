@@ -47,7 +47,6 @@ class BannerRepository < ROM::Repository[:banners]
       end
 
       def as_json
-        require 'json'
         JSON.generate(
           {
             text:,

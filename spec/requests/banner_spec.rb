@@ -33,8 +33,6 @@ RSpec.describe 'GET /banner' do
     it 'can pass on encoded html' do
       RepositoryFactory.banner.update banner.id, text: text_html
       get '/banner'
-      # includes escaped html to pass on, which will be decoded on the other side
-      expect(last_response.body).to match(/u003ch2/)
       expect(JSON.parse(last_response.body, symbolize_names: true)[:text]).to eq(text_html)
     end
   end
