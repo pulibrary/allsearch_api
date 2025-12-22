@@ -21,7 +21,6 @@ gem 'sanitize', require: false
 gem 'semantic_logger', require: false
 gem 'summon'
 gem 'thor'
-gem 'tzinfo-data', '~> 1.2025'
 gem 'whenever', require: false
 gem 'zeitwerk'
 
