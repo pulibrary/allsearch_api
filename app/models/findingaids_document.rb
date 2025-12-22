@@ -50,7 +50,7 @@ class FindingaidsDocument < Document
   end
 
   def extent
-    document[:extent_ssm]&.to_sentence
+    Sentence.new(document[:extent_ssm]).call
   end
 
   def access_restriction

@@ -20,7 +20,7 @@ class LibanswersDocument < Document
   end
 
   def topics
-    document['topics']&.to_sentence
+    Sentence.new(document['topics']).call
   end
 
   # not implemented for this API

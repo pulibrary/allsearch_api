@@ -66,8 +66,8 @@ class CSVLoadingService
 
     logger.error("The #{self.class} did not load the CSV " \
                  "because the headers didn't match. The expected headers are: " \
-                 "#{expected_headers.to_sentence}. " \
-                 "The new CSV headers are #{new_headers&.to_sentence}.")
+                 "#{Sentence.new(expected_headers).call}. " \
+                 "The new CSV headers are #{Sentence.new(new_headers).call}.")
     false
   end
 
