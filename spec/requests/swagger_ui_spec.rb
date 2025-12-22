@@ -6,7 +6,7 @@ RSpec.describe 'GET /api-docs' do
   it 'has a DOM selector where the JS can mount the Swagger UI' do
     get '/api-docs'
     parsed = Nokogiri::HTML(last_response.body)
-    expect(parsed.css('#swagger-ui')).to be_present
+    expect(parsed.css('#swagger-ui')).not_to be_nil
   end
 
   it 'returns a 200' do
