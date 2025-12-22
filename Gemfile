@@ -3,8 +3,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'activemodel'
-gem 'activerecord'
 gem 'bootsnap', require: false
 gem 'csv'
 gem 'datadog', '~> 2.0'
