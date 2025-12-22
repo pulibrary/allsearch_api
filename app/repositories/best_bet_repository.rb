@@ -32,7 +32,7 @@ class BestBetRepository < ROM::Repository[:best_bet_records]
   # :reek:UtilityFunction
   def last_update(row)
     update = row[4]
-    return nil if update.blank?
+    return nil if update&.empty?
 
     Date.strptime(update, '%B %d, %Y')
   rescue Date::Error
