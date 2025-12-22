@@ -49,11 +49,11 @@ class ArticleDocument < Document
   end
 
   def isbn
-    document.src['ISBN'].presence || []
+    document.src['ISBN'] || []
   end
 
   def issn
-    document.src['ISSN'].presence || []
+    document.src['ISSN'] || []
   end
 
   def publication_date
