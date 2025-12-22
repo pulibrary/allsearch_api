@@ -34,16 +34,12 @@ class Libguides
   end
 
   def uri
-    URI::HTTPS.build(host: 'lgapi-us.libapps.com',
-                     path: '/1.2/guides',
-                     query: query_hash)
-  end
-
-  def query_hash
-    { search_terms: query_terms,
-      sort_by: 'relevance',
-      status: '1',
-      expand: 'owner,subjects,tags' }.to_query
+    QueryUri.new(
+      host: 'lgapi-us.libapps.com',
+      path: '/1.2/guides',
+      user_query: query_terms,
+      query_builder: ->(query_terms) { "expand=owner,subjects,tags&search_terms=#{query_terms}&sort_by=relevance&status=1" }
+    ).call
   end
 
   def request
