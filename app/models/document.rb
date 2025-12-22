@@ -42,7 +42,7 @@ class Document
   end
 
   def sanitize_field?(key)
-    do_not_sanitize_these_fields.exclude? key
+    !do_not_sanitize_these_fields.include?(key)
   end
 
   def do_not_sanitize_these_fields
