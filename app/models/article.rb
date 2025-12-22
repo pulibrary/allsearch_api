@@ -38,8 +38,8 @@ class Article
   end
 
   def more_link
-    Some(URI::HTTPS.build(host: 'princeton.summon.serialssolutions.com', path: '/search',
-                          query: service_response.query.query_string))
+    Some(QueryUri.new(host: 'princeton.summon.serialssolutions.com', path: '/search',
+                      query_builder: ->(_query) { service_response.query.query_string }).call)
   end
 
   private
