@@ -1,7 +1,7 @@
 ### Benchmarking the application locally
 
-1. `bundle exec rails s`
-1. `time benchmark/benchmark.sh`
+1. `bundle exec puma`
+2. In a sperate window run `time benchmark/benchmark.sh`
 
 ### Running microbenchmarks
 
