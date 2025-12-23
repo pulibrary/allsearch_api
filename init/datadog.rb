@@ -22,7 +22,7 @@ Datadog.configure do |c|
   # You can configure with host and port of Datadog agent; defaults to 'localhost:8125'.
   c.runtime_metrics.statsd = Datadog::Statsd.new
 
-  # Rails
+  # Rack
   c.tracing.instrument :rack
 
   # Redis

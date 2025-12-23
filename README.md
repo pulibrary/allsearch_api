@@ -107,7 +107,7 @@ vacuum lint -d swagger/**/*.yaml
 ```
 
 ## Update the banner
-In order to update the banner at `/banner`, you can either update it on the rails console, or use a rake task.
+In order to update the banner at `/banner`, you need to utilize the rake task.
 
 Valid values for 'alert_status' are `info|success|warning|error`
 
