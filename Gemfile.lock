@@ -10,7 +10,7 @@ GEM
     bcrypt_pbkdf (1.1.2)
     benchmark-ips (2.14.0)
     bigdecimal (3.3.1)
-    bootsnap (1.19.0)
+    bootsnap (1.20.1)
       msgpack (~> 1.2)
     byebug (12.0.0)
     capistrano (3.20.0)
