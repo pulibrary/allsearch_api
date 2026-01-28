@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'base64'
 gem 'bootsnap', require: false
 gem 'csv'
-gem 'datadog', '~> 2.26'
+gem 'datadog', '~> 2.27'
 gem 'dogstatsd-ruby'
 gem 'dry-monads'
 gem 'flipper-sequel', require: false
