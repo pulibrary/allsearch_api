@@ -277,7 +277,7 @@ GEM
       hashdiff (>= 0.4.0, < 2.0.0)
     whenever (1.1.2)
       chronic (>= 0.6.3)
-    zeitwerk (2.7.4)
+    zeitwerk (2.7.5)
 
 PLATFORMS
   arm64-darwin-22
