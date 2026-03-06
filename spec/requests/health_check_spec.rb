@@ -49,7 +49,7 @@ RSpec.describe 'Health Check' do
     it 'returns on overall error when the remove-from-nginx file is present' do
       stub_solr_ping(body: { status: 'OK' }.to_json)
       remove_from_nginx_path = allsearch_path('public/remove-from-nginx')
-      File.open remove_from_nginx_path, 'w'
+      FileUtils.touch remove_from_nginx_path
 
       get '/health.json'
 

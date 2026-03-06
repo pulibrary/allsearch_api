@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Style/OneClassPerFile
+
 ALLSEARCH_AUTOLOAD_DIRECTORIES = [
   'app/checks', 'app/controllers', 'app/models', 'app/models/concerns', 'app/relations', 'app/repositories',
   'app/services', 'middleware'
@@ -85,3 +87,5 @@ class Autoloader
 end
 
 Autoloader.new.call
+
+# rubocop:enable Style/OneClassPerFile

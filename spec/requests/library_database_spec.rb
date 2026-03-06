@@ -9,16 +9,18 @@ RSpec.describe 'GET /search/database' do
     {
       number: 3,
       records: [
-        title: 'Oxford Music Online',
-        id: '2939886',
-        type: 'Database',
-        description: 'Biographical articles for composers, performers, librettists, conductors and others. ' \
-                     'Includes entries from Grove dictionaries of jazz and opera as well.',
-        url: 'https://libguides.princeton.edu/resource/3970',
-        other_fields: {
-          subjects: 'Biographical Sources, Dance, Music, Music Literature, Theater',
-          alternative_titles: 'Grove Music Online (now part of Oxford Music Online), ' \
-                              'New Grove Dictionary of Music and Musicians (now part of Oxford Music Online)'
+        {
+          title: 'Oxford Music Online',
+          id: '2939886',
+          type: 'Database',
+          description: 'Biographical articles for composers, performers, librettists, conductors and others. ' \
+                       'Includes entries from Grove dictionaries of jazz and opera as well.',
+          url: 'https://libguides.princeton.edu/resource/3970',
+          other_fields: {
+            subjects: 'Biographical Sources, Dance, Music, Music Literature, Theater',
+            alternative_titles: 'Grove Music Online (now part of Oxford Music Online), ' \
+                                'New Grove Dictionary of Music and Musicians (now part of Oxford Music Online)'
+          }
         }
       ]
     }
