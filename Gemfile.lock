@@ -96,7 +96,7 @@ GEM
       flipper (~> 1.4.0)
       sequel (>= 4.0.0, < 6)
     hashdiff (1.2.1)
-    honeybadger (6.5.0)
+    honeybadger (6.5.2)
       logger
       ostruct
     i18n (1.14.8)
