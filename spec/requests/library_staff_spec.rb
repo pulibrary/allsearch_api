@@ -9,22 +9,24 @@ RSpec.describe 'GET /search/staff' do
     {
       number: 3,
       records: [
-        title: 'Trout, Nimbus',
-        id: '2',
-        type: 'Library Staff',
-        url: 'https://library.princeton.edu/about/staff-directory/nimbus-kilgore-trout',
-        other_fields: {
-          building: 'Firestone Library',
-          department: 'Office of the Deputy Dean of Libraries',
-          email: 'nibmus@princeton.edu',
-          first_name: 'Nimbus Kilgore',
-          last_name: 'Trout',
-          library_title: 'Nap Coordinator',
-          office: 'A-200',
-          phone: '(555) 111-1111',
-          unit: 'IT Operations and Digitization',
-          netid: 'nimbuskt',
-          pronouns: 'he/him'
+        {
+          title: 'Trout, Nimbus',
+          id: '2',
+          type: 'Library Staff',
+          url: 'https://library.princeton.edu/about/staff-directory/nimbus-kilgore-trout',
+          other_fields: {
+            building: 'Firestone Library',
+            department: 'Office of the Deputy Dean of Libraries',
+            email: 'nibmus@princeton.edu',
+            first_name: 'Nimbus Kilgore',
+            last_name: 'Trout',
+            library_title: 'Nap Coordinator',
+            office: 'A-200',
+            phone: '(555) 111-1111',
+            unit: 'IT Operations and Digitization',
+            netid: 'nimbuskt',
+            pronouns: 'he/him'
+          }
         }
       ]
     }

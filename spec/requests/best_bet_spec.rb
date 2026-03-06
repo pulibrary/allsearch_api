@@ -8,11 +8,13 @@ RSpec.describe 'GET /search/best-bet', :truncate do
     {
       number: 1,
       records: [
-        title: 'The New York Times',
-        id: 480,
-        type: 'Electronic Resource',
-        description: 'Guide with links to the best sources for current and historical full text online of the NYT.',
-        url: 'http://libguides.princeton.edu/newspapers/usacurrent#nyt'
+        {
+          title: 'The New York Times',
+          id: 480,
+          type: 'Electronic Resource',
+          description: 'Guide with links to the best sources for current and historical full text online of the NYT.',
+          url: 'http://libguides.princeton.edu/newspapers/usacurrent#nyt'
+        }
       ]
     }
   end
