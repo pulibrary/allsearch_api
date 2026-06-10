@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Style/OneClassPerFile
-
 require 'spec_helper'
 
 class StubGateway
@@ -52,5 +50,3 @@ RSpec.describe DatabaseCheck do
     expect(result).to be_failure
   end
 end
-
-# rubocop:enable Style/OneClassPerFile
