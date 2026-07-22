@@ -35,9 +35,9 @@ GEM
     database_cleaner-sequel (2.0.2)
       database_cleaner-core (~> 2.0.0)
       sequel
-    datadog (2.37.0)
+    datadog (2.38.0)
       cgi
-      datadog-ruby_core_source (~> 3.5, >= 3.5.2)
+      datadog-ruby_core_source (~> 3.5, >= 3.5.3)
       libdatadog (~> 36.0.0.1.0)
       libddwaf (~> 1.30.0.0.0)
       logger
@@ -295,7 +295,7 @@ DEPENDENCIES
   capistrano-passenger
   csv
   database_cleaner-sequel
-  datadog (~> 2.37)
+  datadog (~> 2.38)
   dogstatsd-ruby
   dry-monads
   ed25519
