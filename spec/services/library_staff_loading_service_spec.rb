@@ -104,6 +104,19 @@ RSpec.describe LibraryStaffLoadingService, :truncate do
     end
   end
 
+  context 'when a staff member has en empty email address in the CSV' do
+    it 'generates a record with a null email field' do
+      rom = RomFactory.new.require_rom!
+      repo = RepositoryFactory.library_staff
+      repo.create(puid: 0o00000003, netid: 'tiberius', first_name: 'Spot Tiberius', name: 'Adams, Spot',
+                  title: 'Lead Hairball Engineer', library_title: 'Lead Hairball Engineer',
+                  department: 'Library - Collections and Access Services')
+      described_class.new.run
+      expect(rom.relations[:library_staff_records].where(first_name: 'Spot Tiberius').first.name)
+        .to eq 'Adams, Tiberius'
+    end
+  end
+
   context 'when there are blank lines in the CSV' do
     let(:libjobs_response) { file_fixture('library_staff/staff-directory-blank-lines.csv') }
 
