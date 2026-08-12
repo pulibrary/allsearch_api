@@ -5,7 +5,7 @@ orbs:
 executors:
   allsearch-executor:
     docker:
-      - image: cimg/ruby:3.4.1-browsers
+      - image: cimg/ruby:3.4.10-browsers
         environment:
           APP_ENV: test
           ALLSEARCH_HOST: localhost
