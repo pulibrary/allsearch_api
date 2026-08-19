@@ -35,14 +35,14 @@ GEM
     database_cleaner-sequel (2.0.2)
       database_cleaner-core (~> 2.0.0)
       sequel
-    datadog (2.40.0)
+    datadog (2.41.0)
       cgi
       datadog-ruby_core_source (~> 3.5, >= 3.5.4)
-      libdatadog (~> 36.0.0.1.0)
+      libdatadog (~> 40.0.0.1.0)
       libddwaf (~> 1.30.0.0.0)
       logger
       msgpack
-    datadog-ruby_core_source (3.5.4)
+    datadog-ruby_core_source (3.5.5)
     date (3.5.1)
     diff-lcs (1.6.2)
     dogstatsd-ruby (5.7.1)
@@ -109,9 +109,9 @@ GEM
       reline (>= 0.4.2)
     json (2.19.9)
     language_server-protocol (3.17.0.5)
-    libdatadog (36.0.0.1.0)
-    libdatadog (36.0.0.1.0-arm64-darwin)
-    libdatadog (36.0.0.1.0-x86_64-linux)
+    libdatadog (40.0.0.1.0)
+    libdatadog (40.0.0.1.0-arm64-darwin)
+    libdatadog (40.0.0.1.0-x86_64-linux)
     libddwaf (1.30.0.0.2-arm64-darwin)
       ffi (~> 1.0)
     libddwaf (1.30.0.0.2-x86_64-darwin)
@@ -296,7 +296,7 @@ DEPENDENCIES
   capistrano-passenger
   csv
   database_cleaner-sequel
-  datadog (~> 2.40)
+  datadog (~> 2.41)
   dogstatsd-ruby
   dry-monads
   ed25519
