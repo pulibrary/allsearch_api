@@ -19,8 +19,9 @@ class RackResponseController
     end
   end
 
-  ErrorResponse = Struct.new(:problem, :message, :status) do
+  ErrorResponse = Data.define(:problem, :message, :status) do
     def respond
+      ALLSEARCH_LOGGER.error('Error', to_h)
       [
         status,
         { 'Content-Type' => 'application/json; charset=utf-8' },
