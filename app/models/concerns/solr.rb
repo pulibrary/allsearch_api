@@ -7,14 +7,14 @@ module Solr
   include Dry::Monads[:maybe]
 
   def solr_service_response
-    response = Net::HTTP.get_response(solr_uri)
-    response_code = response.code.to_i
-    if response_code > 399
-      raise AllsearchError.new(problem: 'UPSTREAM_ERROR',
-                               msg: "Solr returned a #{response_code} for " \
-                                    "path #{solr_uri.path} on host #{solr_uri.host}")
+    raw_solr_response.then do |response|
+      response_code = response.code.to_i
+      if response_code > 399
+        raise upstream_error(msg: "Solr returned a #{response_code} for path #{solr_uri.path} on host #{solr_uri.host}")
+      end
+
+      JSON.parse(raw_solr_response.body, symbolize_names: true)
     end
-    JSON.parse(response.body, symbolize_names: true)
   end
 
   def number
@@ -35,6 +35,15 @@ module Solr
   end
 
   private
+
+  def raw_solr_response
+    @raw_solr_response ||= begin
+      Net::HTTP.get_response(solr_uri)
+    rescue Timeout::Error, SystemCallError, ProtoServerError, ProtoFatalError => error
+      ALLSEARCH_LOGGER.error('Solr error', error)
+      raise upstream_error(msg: "Solr request raised #{error}")
+    end
+  end
 
   # :reek:ManualDispatch
   def solr_uri
@@ -69,4 +78,7 @@ module Solr
   end
 
   def extra_solr_params; end
+
+  # :reek:UtilityFunction
+  def upstream_error(msg:) = AllsearchError.new(problem: 'UPSTREAM_ERROR', msg:)
 end

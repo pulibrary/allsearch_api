@@ -202,5 +202,12 @@ RSpec.describe 'GET /search/catalog' do
                                  })
       expect(Honeybadger).to have_received(:notify)
     end
+
+    it 'logs the exception' do
+      stub_const('ALLSEARCH_LOGGER', instance_double(SemanticLogger::Logger, error: true))
+      get '/search/catalog?query=123'
+      expect(ALLSEARCH_LOGGER).to have_received(:error).with('Error',
+                                                             hash_including(message: 'This application threw KeyError'))
+    end
   end
 end

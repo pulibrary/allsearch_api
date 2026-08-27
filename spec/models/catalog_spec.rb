@@ -32,4 +32,17 @@ RSpec.describe Catalog do
       end
     end
   end
+
+  describe '#our_response' do
+    it 'logs an error if we timeout communicating with solr' do
+      stub_request(:any, /solr/).to_timeout
+      stub_const('ALLSEARCH_LOGGER', instance_double(SemanticLogger::Logger, error: true))
+
+      expect do
+        described_class.new(query_terms: 'rubix').our_response
+      end.to raise_error AllsearchError
+
+      expect(ALLSEARCH_LOGGER).to have_received(:error).with('Solr error', Net::OpenTimeout)
+    end
+  end
 end
