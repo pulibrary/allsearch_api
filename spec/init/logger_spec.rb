@@ -27,6 +27,28 @@ describe '#new_logger' do
     SemanticLogger.clear_appenders!
     new_logger(Environment.new({ 'APP_ENV' => 'production' }))
     expect(SemanticLogger.appenders.any?(SemanticLogger::Appender::File)).to be true
+    expect(SemanticLogger.appenders.first.file_name).to eq 'log/production.log'
+  end
+
+  def line_count(file_path) = File.read(file_path).scan("\n").count
+
+  it 'does not log INFO messages in production' do
+    SemanticLogger.clear_appenders!
+    Tempfile.create do |file|
+      logger = new_logger(Environment.new({ 'APP_ENV' => 'production' }), file.path)
+      expect { logger.info('Hi', { nice_data: 'great!' }) }.not_to(change { line_count(file.path) })
+    end
+  end
+
+  it 'logs WARN messages in production' do
+    SemanticLogger.clear_appenders!
+    Tempfile.create do |file|
+      logger = new_logger(Environment.new({ 'APP_ENV' => 'production' }), file.path)
+
+      expect do
+        logger.warn('Oh no', { worry_level: 'medium' })
+      end.to change { line_count(file.path) }.by 1
+    end
   end
 end
 
