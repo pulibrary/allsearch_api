@@ -3,11 +3,11 @@
 require 'semantic_logger'
 require_relative 'environment'
 
-def new_logger(environment = CURRENT_ENVIRONMENT)
+def new_logger(environment = CURRENT_ENVIRONMENT, file_name = "log/#{environment.name}.log")
   environment
     .when_development { SemanticLogger.add_appender(io: $stdout, level: :debug) }
 
-  SemanticLogger.add_appender(file_name: "log/#{environment.name}.log")
+  SemanticLogger.add_appender(file_name:, level: :warn)
   SemanticLogger['allsearch-api']
 end
 
