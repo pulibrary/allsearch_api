@@ -7,7 +7,7 @@ def new_logger(environment = CURRENT_ENVIRONMENT, file_name = "log/#{environment
   environment
     .when_development { SemanticLogger.add_appender(io: $stdout, level: :debug) }
 
-  SemanticLogger.add_appender(file_name:, level: :warn)
+  SemanticLogger.add_appender(file_name:, level: :warn, formatter: :json)
   SemanticLogger['allsearch-api']
 end
 
