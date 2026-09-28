@@ -6,9 +6,10 @@ class RackResponseController
     new(request, env).response
   end
 
-  def initialize(request, env)
+  def initialize(request, env, honeybadger: Honeybadger)
     @request = request
     @env = env
+    @honeybadger = honeybadger
   end
 
   def response
@@ -35,7 +36,7 @@ class RackResponseController
 
   private
 
-  attr_reader :request, :service, :env
+  attr_reader :request, :service, :env, :honeybadger
 
   # :reek:TooManyStatements
   def data_response
@@ -77,7 +78,7 @@ class RackResponseController
 
   # :reek:UtilityFunction
   def allsearch_error_response(exception)
-    Honeybadger.notify exception
+    honeybadger.notify exception, url: request.url
     ErrorResponse.new(exception.problem,
                       exception.message,
                       500).respond
@@ -85,7 +86,7 @@ class RackResponseController
 
   # :reek:UtilityFunction
   def upstream_http_error_response(exception)
-    Honeybadger.notify exception
+    honeybadger.notify exception, url: request.url
     ErrorResponse.new('UPSTREAM_ERROR',
                       "Query to upstream failed with #{exception.class}, message: #{exception.message}",
                       500).respond
@@ -93,7 +94,7 @@ class RackResponseController
 
   # :reek:UtilityFunction
   def standard_error_response(exception)
-    Honeybadger.notify exception
+    honeybadger.notify exception, url: request.url
     ErrorResponse.new('APPLICATION_ERROR',
                       "This application threw #{exception.class}",
                       500).respond

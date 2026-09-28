@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class DpulController < RackResponseController
-  def initialize(request, env)
+  def initialize(...)
     super
     @service = Dpul
   end
