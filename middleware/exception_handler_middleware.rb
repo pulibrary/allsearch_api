@@ -11,7 +11,7 @@ class ExceptionHandlerMiddleware
   def call(env)
     app.call env
   rescue StandardError => error
-    honeybadger.notify(error)
+    honeybadger.notify(error, url: Rack::Request.new(env).url)
     ERROR_RESPONSE
   end
 
