@@ -2,7 +2,7 @@
 
 Router = Rack::Builder.new do
   map('/') { run MainController }
-  map('/banner') { run BannerController }
+  map('/banner') { run BannerController.new }
   map('/api-docs') { run SwaggerUiController }
   map('/health') { run HealthcheckController }
   map('/health.json') { run HealthcheckController }
