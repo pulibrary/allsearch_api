@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe ExtensionFilterMiddleware do
-   it 'rejects request with a non-json or yaml file extension' do
+  it 'rejects request with a non-json or yaml file extension' do
     middleware = described_class.new(->(_env) { [200, {}, ['great!']] })
     env = { 'PATH_INFO' => 'GET /search/article?query=test.dkq' }
     expect(middleware.call(env)).to eq [403, {}, ['Invalid URL']]
