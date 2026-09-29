@@ -51,7 +51,18 @@ class ArtMuseumDocument < Document
   end
 
   def primary_image
-    document.dig(:_source, :primaryimage)&.first
+    # rubocop:disable Lint/DuplicateBranch
+    case document.dig(:_source, :primaryimage)
+    in ''
+      nil
+    in String => url
+      url
+    in [String => url, *]
+      url
+    else
+      nil
+    end
+    # rubocop:enable Lint/DuplicateBranch
   end
 
   def object_number
