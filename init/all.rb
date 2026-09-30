@@ -7,7 +7,6 @@ require allsearch_path 'init/logger'
 require allsearch_path 'config/lando_env'
 
 # Standard init code that does not need to be at the start or end
-require allsearch_path 'init/datadog'
 require allsearch_path 'init/honeybadger'
 require allsearch_path 'init/load_flipper'
 require allsearch_path 'init/rom_factory'
