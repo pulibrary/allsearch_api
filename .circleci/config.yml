@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   coveralls: coveralls/coveralls@2.2.5
-  ruby: circleci/ruby@2.1.0
+  ruby: circleci/ruby@3.0.0
 executors:
   allsearch-executor:
     docker:
@@ -18,31 +18,12 @@ executors:
           POSTGRES_PASSWORD: allsearch
           POSTGRES_DB: allsearch_test
     working_directory: ~/allsearch_api  
-commands:
-  setup-bundler:
-    steps:
-      - run:
-          name: Install bundler
-          command: gem install bundler -v '2.5.23'
-      # Restore bundle cache
-      - restore_cache:
-          keys:
-          - allsearch-v1-{{ checksum "Gemfile.lock" }}
-      # Bundle install dependencies
-      - run:
-          name: Install dependencies
-          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
-      - save_cache:
-          key: allsearch-v1-{{ checksum "Gemfile.lock" }}
-          paths:
-            - ./vendor/bundle
 jobs:
   staging_deploy:
     machine: true
     resource_class: pulibrary/ruby-deploy
     steps:
       - checkout
-      - setup-bundler
       - ruby/install-deps
       - run: bundle exec cap staging deploy
   staging_test:
@@ -83,8 +64,8 @@ jobs:
       - attach_workspace:
           at: '~/allsearch_api'
       - checkout
-      - setup-bundler
       - run: ruby --version
+      - ruby/install-deps
       - run: sudo apt install postgresql-client
       - run:
           name: Wait for DB
