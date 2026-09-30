@@ -5,6 +5,7 @@ require 'spec_helper'
 RSpec.describe BannerRepository do
   it 'can get a banner' do
     banner_repo = described_class.new ALLSEARCH_ROM
+    banner_repo.modify(dismissible: true)
     banner = banner_repo.banners.first
     expect(banner.dismissible).to be true
   end
@@ -17,6 +18,7 @@ RSpec.describe BannerRepository do
 
     it 'modifies an existing banner if it exists' do
       banner_repo = described_class.new ALLSEARCH_ROM
+      banner_repo.modify(text: '')
       expect(banner_repo.banners.first.text).to eq ''
 
       banner_repo.modify(text: 'Dogs! Cats!')
@@ -27,10 +29,10 @@ RSpec.describe BannerRepository do
     it 'updates the updated_at timestamp' do
       banner_repo = described_class.new ALLSEARCH_ROM
 
-      expect do
-        allow(Time).to receive(:now).and_return Time.utc(2020, 1, 1)
-        banner_repo.modify(text: 'Old banner')
+      allow(Time).to receive(:now).and_return Time.utc(2020, 1, 1)
+      banner_repo.modify(text: 'Old banner')
 
+      expect do
         expect(banner_repo.banners.first.updated_at).to eq Time.new(2020, 1, 1)
 
         allow(Time).to receive(:now).and_return Time.utc(2050, 1, 1)
