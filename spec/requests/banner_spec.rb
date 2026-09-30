@@ -25,13 +25,12 @@ RSpec.describe 'GET /banner' do
   end
 
   context 'with an updated banner' do
-    let(:banner) { RepositoryFactory.banner.banners.first }
     let(:text_html) do
       '<h2>This is a big heading about an important thing</h2><p>It includes a <a href="https://www.example.com">link</a></p>'
     end
 
     it 'can pass on encoded html' do
-      RepositoryFactory.banner.update banner.id, text: text_html
+      RepositoryFactory.banner.modify text: text_html
       get '/banner'
       expect(JSON.parse(last_response.body, symbolize_names: true)[:text]).to eq(text_html)
     end
