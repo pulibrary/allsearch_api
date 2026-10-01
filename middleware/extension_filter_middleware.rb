@@ -9,7 +9,7 @@ class ExtensionFilterMiddleware
   def call(env)
     path = env['PATH_INFO']
 
-    return REJECTION if path =~ /\.(?!json|yaml$)[^.]{1,5}/
+    return REJECTION if path =~ /\.(?!json|yaml$)[^.]{1,5}$/
 
     @app.call(env)
   end
