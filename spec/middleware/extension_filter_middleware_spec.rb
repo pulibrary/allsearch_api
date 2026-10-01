@@ -9,6 +9,12 @@ describe ExtensionFilterMiddleware do
     expect(middleware.call(env)).to eq [403, {}, ['Invalid URL']]
   end
 
+  it 'does not reject anything with a period in the search' do
+    middleware = described_class.new(->(_env) { [200, {}, ['great!']] })
+    env = { 'PATH_INFO' => 'GET /search/article?query=how to use example.com in test files' }
+    expect(middleware.call(env)).to eq [200, {}, ['great!']]
+  end
+
   it 'does not reject .json extensions' do
     middleware = described_class.new(->(_env) { [200, {}, ['great!']] })
     env = { 'PATH_INFO' => 'GET /search/article?query=test.json' }
