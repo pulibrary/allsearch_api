@@ -28,7 +28,7 @@ class Article
       's.ho': 't', # Princeton holdings only
       's.dym': 't', # Enables Did You Mean functionality
       's.ps': 3, # Limits to three documents in response
-      's.include.ft.matches': 't' #include full text matches
+      's.include.ft.matches': 't' # Include full text matches
     )
   rescue Summon::Transport::TransportError
     handle_summon_authorization_error
