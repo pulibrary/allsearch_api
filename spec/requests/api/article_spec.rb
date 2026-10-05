@@ -6,7 +6,7 @@ RSpec.describe 'article' do
   before do
     stub_summon(query: 'potato', fixture: 'article/potato.json')
     stub_request(:get,
-                 'http://api.summon.serialssolutions.com/2.0.0/search?s.dym=t&s.fvf=ContentType,Newspaper%20Article,true&s.ho=t&s.ps=3&s.q=some_search')
+                 'http://api.summon.serialssolutions.com/2.0.0/search?s.dym=t&s.fvf=ContentType,Newspaper%20Article,true&s.ho=t&s.include.ft.matches=t&s.ps=3&s.q=some_search')
       .to_return(status: 401)
     allow(Honeybadger).to receive(:notify)
   end

@@ -27,7 +27,8 @@ class Article
       's.fvf': 'ContentType,Newspaper Article,true', # Excludes newspaper articles
       's.ho': 't', # Princeton holdings only
       's.dym': 't', # Enables Did You Mean functionality
-      's.ps': 3 # Limits to three documents in response
+      's.ps': 3, # Limits to three documents in response
+      's.include.ft.matches': 't' # Include full text matches
     )
   rescue Summon::Transport::TransportError
     handle_summon_authorization_error
