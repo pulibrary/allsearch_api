@@ -44,7 +44,7 @@ RSpec.describe DatabaseCheck do
   end
 
   it 'returns failure when there are no gateways/active connections' do
-    result = described_class.new([]).call
+    result = described_class.new(nil).call
     expect(result).to be_failure
   end
 end
