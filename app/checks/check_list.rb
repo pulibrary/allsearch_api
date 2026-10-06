@@ -39,7 +39,7 @@ class CheckList
 
   def non_critical_checks
     {
-      'Database' => DatabaseCheck.new(db_gateway),
+      'Database' => DatabaseCheck.new(ALLSEARCH_ROM[:gateways][:default] || nil),
       'Solr: catalog' => solr_check_for_config(:catalog),
       'Solr: dpul' => solr_check_for_config(:dpul),
       'Solr: findingaids' => solr_check_for_config(:findingaids),
@@ -67,9 +67,5 @@ class CheckList
 
   def solr_configs
     @solr_configs ||= ALLSEARCH_CONFIGS[:allsearch]
-  end
-
-  def db_gateway
-    ALLSEARCH_ROM[:gateways][:default] || nil
   end
 end
