@@ -5,8 +5,8 @@ require 'dry-monads'
 class DatabaseCheck
   include Dry::Monads[:result]
 
-  def initialize(gateways)
-    @gateways = gateways
+  def initialize(gateway)
+    @gateway = gateway
   end
 
   def call
@@ -23,13 +23,13 @@ class DatabaseCheck
 
   private
 
-  attr_reader :gateways
+  attr_reader :gateway
 
   def no_active_connections?
-    gateways.empty?
+    gateway.nil?
   end
 
   def can_connect_to_all_active_connections?
-    gateways.all? { |gateway| gateway.connection.test_connection }
+    gateway.connection.test_connection
   end
 end
