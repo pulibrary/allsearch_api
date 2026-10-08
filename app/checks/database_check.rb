@@ -5,14 +5,15 @@ require 'dry-monads'
 class DatabaseCheck
   include Dry::Monads[:result]
 
-  def initialize(gateways)
-    @gateways = gateways
+  def initialize(gateway)
+    @gateway = gateway
   end
 
   def call
-    if no_active_connections?
+    case can_connect_to_active_connection?
+    when nil
       Failure('No active database connections')
-    elsif can_connect_to_all_active_connections?
+    when true
       Success()
     else
       Failure('Problem connecting with database')
@@ -23,13 +24,9 @@ class DatabaseCheck
 
   private
 
-  attr_reader :gateways
+  attr_reader :gateway
 
-  def no_active_connections?
-    gateways.empty?
-  end
-
-  def can_connect_to_all_active_connections?
-    gateways.all? { |gateway| gateway.connection.test_connection }
+  def can_connect_to_active_connection?
+    gateway&.connection.test_connection
   end
 end
