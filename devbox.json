@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.18.0/.schema/devbox.schema.json",
+  "packages": [
+    "ruby@3.4",
+    "postgresql@15",
+    "pkg-config@latest",
+    "libffi@latest",
+    "libyaml@latest",
+    "libyaml.dev",
+    "git@latest",
+    "curl@latest",
+    "wget@latest",
+    "unzip@latest",
+    "path:flakes/solr#default"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to the allsearch devbox! Run `devbox run test` to run the tests.'",
+      "export LANG=${LANG:-C.UTF-8}",
+      "export LC_ALL=${LC_ALL:-C.UTF-8}"
+    ],
+    "scripts": {
+      "bundle": "bundle install",
+      "migrate": [
+        "export APP_ENV=test",
+        "export lando_allsearch_database_creds_user=allsearch",
+        "export lando_allsearch_database_creds_password=allsearch",
+        "bundle exec rake db:migrate"
+      ],
+      "setup": [
+        "devbox run bundle",
+        "devbox services up -b || echo 'devbox services are already running'",
+        "test -f \"$PGDATA/PG_VERSION\" || initdb",
+        "devbox run create_schemas",
+        "devbox run migrate"
+      ],
+      "create_schemas": [
+        "PGPORT=${PGPORT:-5432} createuser allsearch -w || echo 'db user already exists'",
+        "PGPORT=${PGPORT:-5432} createdb allsearch_development -O allsearch || echo 'dev db already exists'",
+        "PGPORT=${PGPORT:-5432} createdb allsearch_test -O allsearch || echo 'test db already exists'"
+      ],
+      "reset_db": [
+        "devbox run wait_for_db",
+        "PGPORT=${PGPORT:-5432} dropdb allsearch_development || echo 'dev db already dropped'",
+        "PGPORT=${PGPORT:-5432} dropdb allsearch_test || echo 'test db already dropped'",
+        "devbox run create_schemas"
+      ],
+      "create_solr_cores": [
+        "until curl --output /dev/null --silent --head --fail http://localhost:${SOLR_PORT:-8983}/solr; do sleep 1; done",
+        "[ $(curl -s -o /dev/null -w '%{http_code}' http://localhost:${SOLR_PORT:-8983}/solr/catalog/admin/ping) -eq '200' ] || solr create_core -c catalog -d solr/solr_configs/catalog-production-v3 -p ${SOLR_PORT:-8983}",
+        "[ $(curl -s -o /dev/null -w '%{http_code}' http://localhost:${SOLR_PORT:-8983}/solr/dpul/admin/ping) -eq '200' ] || solr create_core -c dpul -d solr/solr_configs/dpul -p ${SOLR_PORT:-8983}",
+        "[ $(curl -s -o /dev/null -w '%{http_code}' http://localhost:${SOLR_PORT:-8983}/solr/findingaids/admin/ping) -eq '200' ] || solr create_core -c findingaids -d solr/solr_configs/pulfalight-production -p ${SOLR_PORT:-8983}",
+        "[ $(curl -s -o /dev/null -w '%{http_code}' http://localhost:${SOLR_PORT:-8983}/solr/pulmap/admin/ping) -eq '200' ] || solr create_core -c pulmap -d solr/solr_configs/pulmap -p ${SOLR_PORT:-8983}"
+      ],
+      "delete_solr_cores": [
+        "curl -X POST http://localhost:${SOLR_PORT:-8983}/api/cores/catalog/unload -H 'Content-Type: application/json' -d '{\"deleteIndex\":true,\"deleteDataDir\":true,\"deleteInstanceDir\":true}' || echo 'catalog core was already deleted'",
+        "curl -X POST http://localhost:${SOLR_PORT:-8983}/api/cores/dpul/unload -H 'Content-Type: application/json' -d '{\"deleteIndex\":true,\"deleteDataDir\":true,\"deleteInstanceDir\":true}' || echo 'dpul core was already deleted'",
+        "curl -X POST http://localhost:${SOLR_PORT:-8983}/api/cores/findingaids/unload -H 'Content-Type: application/json' -d '{\"deleteIndex\":true,\"deleteDataDir\":true,\"deleteInstanceDir\":true}' || echo 'findingaids core was already deleted'",
+        "curl -X POST http://localhost:${SOLR_PORT:-8983}/api/cores/pulmap/unload -H 'Content-Type: application/json' -d '{\"deleteIndex\":true,\"deleteDataDir\":true,\"deleteInstanceDir\":true}' || echo 'pulmap core was already deleted'"
+      ],
+      "recreate_solr_cores": [
+        "devbox run delete_solr_cores",
+        "devbox run create_solr_cores"
+      ],
+      "dev": [
+        "devbox run setup",
+        "bundle exec rake solr:update_configs",
+        "devbox run create_solr_cores",
+        "bundle exec rake solr:load_sample_data",
+        "APP_ENV=development lando_allsearch_database_creds_user=allsearch lando_allsearch_database_creds_password=allsearch bundle exec rake db:migrate",
+        "bundle exec puma"
+      ],
+      "test": [
+        "devbox run setup",
+        "APP_ENV=test lando_allsearch_database_creds_user=allsearch lando_allsearch_database_creds_password=allsearch bundle exec rspec"
+      ],
+      "rubocop": "bundle exec rubocop",
+      "reek": "bundle exec reek app"
+    }
+  }
+}

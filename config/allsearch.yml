@@ -40,29 +40,29 @@ development:
   catalog:
     subdomain: catalog-staging
     solr:
-      host: <%= ENV["lando_catalog_solr_conn_host"] %>
-      port: <%= ENV["lando_catalog_solr_conn_port"] %>
+      host: <%= ENV["lando_catalog_solr_conn_host"] || 'localhost' %>
+      port: <%= ENV["lando_catalog_solr_conn_port"] || ENV['SOLR_PORT'] || '8983' %>
       collection: "catalog"
 
   dpul:
     subdomain: dpul-staging
     solr:
-      host: <%= ENV["lando_dpul_solr_conn_host"] %>
-      port: <%= ENV["lando_dpul_solr_conn_port"] %>
+      host: <%= ENV["lando_dpul_solr_conn_host"] || 'localhost' %>
+      port: <%= ENV["lando_dpul_solr_conn_port"] || ENV['SOLR_PORT'] || '8983' %>
       collection: "dpul"
 
   findingaids:
     subdomain: findingaids-staging
     solr:
-      host: <%= ENV["lando_findingaids_solr_conn_host"] %>
-      port: <%= ENV["lando_findingaids_solr_conn_port"] %>
+      host: <%= ENV["lando_findingaids_solr_conn_host"] || 'localhost' %>
+      port: <%= ENV["lando_findingaids_solr_conn_port"] || ENV['SOLR_PORT'] || '8983' %>
       collection: "findingaids"
   
   pulmap:
     subdomain: maps
     solr:
-      host: <%= ENV["lando_pulmap_solr_conn_host"] %>
-      port: <%= ENV["lando_pulmap_solr_conn_port"] %> 
+      host: <%= ENV["lando_pulmap_solr_conn_host"] || 'localhost' %>
+      port: <%= ENV["lando_pulmap_solr_conn_port"] || ENV['SOLR_PORT'] || '8983' %>
       collection: "pulmap"
 
 staging:

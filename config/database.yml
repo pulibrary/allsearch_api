@@ -9,9 +9,9 @@ development: &development
   <<: *default
   database: allsearch_development
   host: <%= ENV["lando_allsearch_database_conn_host"] || "localhost" %>
-  port: <%= ENV["lando_allsearch_database_conn_port"] %>
+  port: <%= ENV["lando_allsearch_database_conn_port"] || ENV['PGPORT'] || '5432' %>
   username: <%= ENV["lando_allsearch_database_creds_user"] || "allsearch" %>
-  password: <%= ENV["lando_allsearch_database_creds_password"] || "allsearch" %>
+  password: <%= ENV["lando_allsearch_database_creds_password"] %>
 
 test:
   <<: *development

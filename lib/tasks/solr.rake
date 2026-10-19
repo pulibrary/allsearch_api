@@ -21,8 +21,8 @@ namespace :solr do
 
   desc 'Load an arbitrary sample data file from the sample-data directory'
   task :load_sample_data_file, [:service, :filename] => :lando do |_task, args|
-    lando_host = ENV.fetch("lando_#{args.service}_solr_conn_host", nil)
-    lando_port = ENV.fetch("lando_#{args.service}_solr_conn_port", nil)
+    lando_host = ENV.fetch("lando_#{args.service}_solr_conn_host", 'localhost')
+    lando_port = ENV.fetch("lando_#{args.service}_solr_conn_port", ENV['SOLR_PORT'] || '8983')
     lando_url = "http://#{lando_host}:#{lando_port}/solr/#{args.service}/update?commit=true"
     `curl -X POST -H 'Content-Type: application/json' \
       '#{lando_url}' --data-binary @sample-data/#{args.filename}`
