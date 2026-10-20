@@ -1,0 +1,23 @@
+version: "0.1"
+
+processes:
+  solr:
+    description: Local Apache Solr for allsearch development
+    # `solr start` daemonizes an independent JVM that outlives this process and
+    # `devbox services stop`, so a later `dev` run can hit "port 8983 in use".
+    # Free the port first so startup is idempotent/restart-safe.
+    command: "mkdir -p solr/data; solr stop -force -p ${SOLR_PORT:-8983} >/dev/null 2>&1; lsof -ti tcp:${SOLR_PORT:-8983} 2>/dev/null | xargs -r kill -9 2>/dev/null; sleep 1; solr start -force -s $(pwd)/solr/data -Dsolr.modules=analysis-extras -p ${SOLR_PORT:-8983}"
+    is_daemon: true
+    shutdown:
+      grace_seconds: 10
+      command: "solr stop -p ${SOLR_PORT:-8983}"
+    environment:
+      - "SOLR_LOGS_DIR=${PWD}/log"
+    liveness_probe:
+      http_get:
+        host: 127.0.0.1
+        scheme: http
+        path: "/solr/"
+        port: ${SOLR_PORT:-8983}
+      period_seconds: 5
+      failure_threshold: 10

@@ -30,6 +30,28 @@ bundle exec rspec smoke_spec
 
 To calculate coverage, run `COVERAGE=true bundle exec rspec`
 
+### Devbox (experimental)
+
+1. `devbox shell`
+1. To run tests: `devbox run test`
+2. To get a local dev instance runnning: `devbox run dev`
+
+Services are configurable by environment variable, in case
+you have other services listening to the same ports:
+
+- `PGPORT` (default 5432)
+- `SOLR_PORT` (default 8983)
+
+For example:
+
+```
+export PGPORT=5433
+export SOLR_PORT=8984
+devbox run dev
+```
+
+Run `devbox run` for the full list of scripts.
+
 ### Rubocop
 ```bash
 bundle exec rubocop
