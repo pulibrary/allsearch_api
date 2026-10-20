@@ -15,13 +15,7 @@ class ArtMuseum
     @service_response = art_museum_service_response
   end
 
-  def query_terms
-    if query_is_too_long?
-      @query_terms[0, query_end]
-    else
-      @query_terms
-    end
-  end
+  def query_terms = tokens[..(maximum_tokens - 1)].join(' ')
 
   private
 
@@ -72,16 +66,12 @@ class ArtMuseum
     text.gsub(/<[^>]*>/, '')
   end
 
-  def query_is_too_long?
-    @query_terms.length > maximum_characters
-  end
-
   def query_end
     # The index of the last whitespace character within maximum_characters
     @query_terms.rindex(/\s/, maximum_characters)
   end
 
-  def maximum_characters
-    220
-  end
+  def tokens = Tokenizer.tokenize(@query_terms)
+
+  def maximum_tokens = 40
 end

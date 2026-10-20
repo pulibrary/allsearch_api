@@ -61,6 +61,9 @@ Style/Documentation:
 Style/SafeNavigationChainLength:
   Enabled: false
 
+Style/ModuleFunction:
+  EnforcedStyle: extend_self
+
 Style/SymbolArray:
   EnforcedStyle: brackets
   MinSize: 8
