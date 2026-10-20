@@ -49,11 +49,10 @@ RSpec.describe 'catalog' do
         it 'gives a reasonable error message' do
           get url
           data = JSON.parse(last_response.body, symbolize_names: true)
-          expect(data[:error]).to eq({
-                                       problem: 'UPSTREAM_ERROR',
-                                       message: 'Solr returned a 404 for path /solr/catalog-alma-production/select ' \
-                                                'on host lib-solr8-prod.princeton.edu'
-                                     })
+          expect(data[:error][:problem]).to eq('UPSTREAM_ERROR')
+          expect(data[:error][:message]).to match(
+            %r{^Solr returned a 404 for path /solr/catalog-alma-production/select on host .* with response body:}
+          )
           expect(Honeybadger).to have_received(:notify)
         end
       end

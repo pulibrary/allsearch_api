@@ -10,9 +10,7 @@ module Solr
   def solr_service_response
     raw_solr_response.then do |response|
       response_code = response.code.to_i
-      if response_code > 399
-        raise upstream_error(msg: "Solr returned a #{response_code} for path #{solr_uri.path} on host #{solr_uri.host}")
-      end
+      raise upstream_error(msg: upstream_error_message(response)) if response_code > 399
 
       JSON.parse(raw_solr_response.body, symbolize_names: true)
     end
@@ -79,6 +77,14 @@ module Solr
   end
 
   def extra_solr_params; end
+
+  # :reek:UtilityFunction
+  def upstream_error_message(response)
+    "Solr returned a #{response.code.to_i} for path #{solr_uri.path} on host " \
+      "#{solr_uri.host} with response body: #{response.body.to_s[0, max_error_body_length]}"
+  end
+
+  def max_error_body_length = 10_000
 
   # :reek:UtilityFunction
   def upstream_error(msg:) = AllsearchError.new(problem: 'UPSTREAM_ERROR', msg:)
