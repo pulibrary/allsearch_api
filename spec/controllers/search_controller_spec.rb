@@ -2,16 +2,18 @@
 
 require 'spec_helper'
 
-describe CatalogController do
+describe SearchController do
   it 'reports the url to honeybadger on error' do
-    allow(Catalog).to receive(:new).and_raise(AllsearchError.new(msg: 'Some bad error'))
+    my_erroring_service = Class.new do
+      def initialize = raise AllsearchError.new(msg: 'Some bad error')
+    end
     honeybadger = class_double(Honeybadger, notify: true)
 
     env = { 'rack.url_scheme' => 'http', 'HTTP_HOST' => 'allsearch-api.princeton.edu',
             'SCRIPT_NAME' => '/search/catalog', 'QUERY_STRING' => 'query=my+nice+query' }
-    controller = described_class.new(Rack::Request.new(env), env, honeybadger:)
+    controller = described_class.new(service: my_erroring_service, honeybadger:)
 
-    controller.response
+    controller.call(env)
 
     expect(honeybadger).to have_received(:notify).with(anything, url: 'http://allsearch-api.princeton.edu/search/catalog?query=my+nice+query')
   end
