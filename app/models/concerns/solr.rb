@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'dry-monads'
+require 'net/http'
 
 # This module helps classes communicate with Solr APIs
 module Solr
@@ -39,7 +40,7 @@ module Solr
   def raw_solr_response
     @raw_solr_response ||= begin
       Net::HTTP.get_response(solr_uri)
-    rescue Timeout::Error, SystemCallError, ProtoServerError, ProtoFatalError => error
+    rescue Timeout::Error, SystemCallError, Net::ProtoServerError, Net::ProtoFatalError => error
       ALLSEARCH_LOGGER.error('Solr error', error)
       raise upstream_error(msg: "Solr request raised #{error}")
     end
