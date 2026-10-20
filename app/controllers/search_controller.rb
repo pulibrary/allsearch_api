@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
-class RackResponseController
-  def self.call(env)
-    request = Rack::Request.new(env)
-    new(request, env).response
-  end
+# This class is responsible for taking incoming HTTP requests for
+# search paths, validating them, and then passing them along to
+# its service.
 
-  def initialize(request, env, honeybadger: Honeybadger)
-    @request = request
-    @env = env
+# :reek:DataClump
+class SearchController
+  def initialize(service:, honeybadger: Honeybadger)
+    @service = service
     @honeybadger = honeybadger
   end
 
-  def response
-    if empty_query?
+  def call(env)
+    request = Rack::Request.new(env)
+    if empty_query?(request)
       empty_query_response
     else
-      data_response
+      data_response(request)
     end
   end
 
@@ -36,37 +36,37 @@ class RackResponseController
 
   private
 
-  attr_reader :request, :service, :env, :honeybadger
+  attr_reader :service, :honeybadger
 
   # :reek:TooManyStatements
-  def data_response
-    [200, { 'Content-Type' => 'application/json; charset=utf-8' }, [json]]
+  def data_response(request)
+    [200, { 'Content-Type' => 'application/json; charset=utf-8' }, [json(request)]]
   rescue AllsearchError => error
-    allsearch_error_response error
+    allsearch_error_response error, request
   rescue Timeout::Error, Errno::ECONNRESET, Net::ProtocolError => error
-    upstream_http_error_response error
+    upstream_http_error_response error, request
   rescue StandardError => error
-    standard_error_response error
+    standard_error_response error, request
   end
 
-  def json
-    service.new(query_terms:).our_response
+  def json(request)
+    service.new(query_terms: query_terms(request)).our_response
   end
 
-  def empty_query?
-    query_terms == ''
+  def empty_query?(request)
+    query_terms(request) == ''
   end
 
-  def query_terms
-    @query_terms ||= case request.params['query']
-                     # If the query contains any non-whitespace characters
-                     in /\S/ => query
-                       query.gsub(/[#{Regexp.escape(special_characters)}]/, ' ')
-                            .gsub(/\s+/, ' ')
-                            .strip
-                     else
-                       ''
-                     end
+  def query_terms(request)
+    case request.params['query']
+    # If the query contains any non-whitespace characters
+    in /\S/ => query
+      query.gsub(/[#{Regexp.escape(special_characters)}]/, ' ')
+           .gsub(/\s+/, ' ')
+           .strip
+    else
+      ''
+    end
   end
 
   # :reek:UtilityFunction
@@ -76,16 +76,16 @@ class RackResponseController
                       400).respond
   end
 
-  # :reek:UtilityFunction
-  def allsearch_error_response(exception)
+  # :reek:UtilityFunction, :reek:FeatureEnvy
+  def allsearch_error_response(exception, request)
     honeybadger.notify exception, url: request.url
     ErrorResponse.new(exception.problem,
                       exception.message,
                       500).respond
   end
 
-  # :reek:UtilityFunction
-  def upstream_http_error_response(exception)
+  # :reek:UtilityFunction, :reek:FeatureEnvy
+  def upstream_http_error_response(exception, request)
     honeybadger.notify exception, url: request.url
     ErrorResponse.new('UPSTREAM_ERROR',
                       "Query to upstream failed with #{exception.class}, message: #{exception.message}",
@@ -93,7 +93,7 @@ class RackResponseController
   end
 
   # :reek:UtilityFunction
-  def standard_error_response(exception)
+  def standard_error_response(exception, request)
     honeybadger.notify exception, url: request.url
     ErrorResponse.new('APPLICATION_ERROR',
                       "This application threw #{exception.class}",

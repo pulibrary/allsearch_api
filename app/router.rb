@@ -6,17 +6,17 @@ Router = Rack::Builder.new do
   map('/api-docs') { run SwaggerUiController }
   map('/health') { run HealthcheckController }
   map('/health.json') { run HealthcheckController }
-  map('/search/article') { run ArticleController }
-  map('/search/artmuseum/') { run ArtMuseumController }
-  map('/search/best-bet/') { run BestBetController }
-  map('/search/catalog/') { run CatalogController }
-  map('/search/database/') { run LibraryDatabaseController }
-  map('/search/dpul/') { run DpulController }
-  map('/search/findingaids/') { run FindingaidsController }
-  map('/search/journals/') { run JournalsController }
-  map('/search/libanswers/') { run LibanswersController }
-  map('/search/libguides/') { run LibguidesController }
-  map('/search/pulmap') { run PulmapController }
-  map('/search/staff/') { run LibraryStaffController }
-  map('/search/website') { run LibraryWebsiteController }
+  map('/search/article') { run SearchController.new(service: Article) }
+  map('/search/artmuseum/') { run SearchController.new(service: ArtMuseum) }
+  map('/search/best-bet/') { run SearchController.new(service: BestBet) }
+  map('/search/catalog/') { run SearchController.new(service: Catalog) }
+  map('/search/database/') { run SearchController.new(service: LibraryDatabase) }
+  map('/search/dpul/') { run SearchController.new(service: Dpul) }
+  map('/search/findingaids/') { run SearchController.new(service: Findingaids) }
+  map('/search/journals/') { run SearchController.new(service: Journals) }
+  map('/search/libanswers/') { run SearchController.new(service: Libanswers) }
+  map('/search/libguides/') { run SearchController.new(service: Libguides) }
+  map('/search/pulmap') { run SearchController.new(service: Pulmap) }
+  map('/search/staff/') { run SearchController.new(service: LibraryStaff) }
+  map('/search/website') { run SearchController.new(service: LibraryWebsite) }
 end
