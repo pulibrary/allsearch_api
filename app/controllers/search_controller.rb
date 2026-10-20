@@ -36,7 +36,7 @@ class SearchController
 
   private
 
-  attr_reader :request, :service, :env, :honeybadger
+  attr_reader :service, :honeybadger
 
   # :reek:TooManyStatements
   def data_response(request)
