@@ -44,5 +44,16 @@ RSpec.describe Catalog do
 
       expect(ALLSEARCH_LOGGER).to have_received(:error).with('Solr error', Net::OpenTimeout)
     end
+
+    it 'logs an error if the connection to solr is reset mid-response' do
+      stub_request(:any, /solr/).to_raise(Net::ProtoFatalError.new('end of file reached'))
+      stub_const('ALLSEARCH_LOGGER', instance_double(SemanticLogger::Logger, error: true))
+
+      expect do
+        described_class.new(query_terms: 'rubix').our_response
+      end.to raise_error AllsearchError
+
+      expect(ALLSEARCH_LOGGER).to have_received(:error).with('Solr error', an_instance_of(Net::ProtoFatalError))
+    end
   end
 end
