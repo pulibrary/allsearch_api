@@ -3,6 +3,8 @@
 # This class is responsible for taking incoming HTTP requests for
 # search paths, validating them, and then passing them along to
 # its service.
+
+# :reek:DataClump
 class SearchController
   def initialize(service:, honeybadger: Honeybadger)
     @service = service
@@ -74,7 +76,7 @@ class SearchController
                       400).respond
   end
 
-  # :reek:UtilityFunction
+  # :reek:UtilityFunction, :reek:FeatureEnvy
   def allsearch_error_response(exception, request)
     honeybadger.notify exception, url: request.url
     ErrorResponse.new(exception.problem,
@@ -82,7 +84,7 @@ class SearchController
                       500).respond
   end
 
-  # :reek:UtilityFunction
+  # :reek:UtilityFunction, :reek:FeatureEnvy
   def upstream_http_error_response(exception, request)
     honeybadger.notify exception, url: request.url
     ErrorResponse.new('UPSTREAM_ERROR',
