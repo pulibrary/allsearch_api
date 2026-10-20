@@ -16,10 +16,21 @@ RSpec.describe ArtMuseum do
       people’s hats off—then, I account it high time to get to sea as soon as I can.
     END_FULL_STORY
     truncated_story = URI.encode_uri_component <<~END_TRUNCATED_STORY.gsub("\n", '')
-      Call me Ishmael. Some years ago—never mind how long precisely—having little or no money
+      Call me Ishmael. Some years ago never mind how long precisely having little or no money
       in my purse, and nothing particular to interest me on shore, I thought I would sail about
       a little and see the watery part of the
     END_TRUNCATED_STORY
+
+    truncated_story_search = stub_request(:get, "https://data.artmuseum.princeton.edu/search?q=#{truncated_story}&size=3&type=all")
+                             .to_return(status: 200, body: file_fixture('art_museum/cats.json'))
+
+    described_class.new(query_terms: full_story)
+    expect(truncated_story_search).to have_been_requested
+  end
+
+  it 'truncates queries with many short tokens before sending them to the art museum' do
+    full_story = (['a'] * 500).join(' ')
+    truncated_story = (['a'] * 40).join(' ')
 
     truncated_story_search = stub_request(:get, "https://data.artmuseum.princeton.edu/search?q=#{truncated_story}&size=3&type=all")
                              .to_return(status: 200, body: file_fixture('art_museum/cats.json'))
