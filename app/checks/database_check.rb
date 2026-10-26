@@ -30,6 +30,6 @@ class DatabaseCheck
   end
 
   def can_connect_to_all_active_connection?
-    gateways.all? { |gateway| gateway.connection.test_connection }
+    gateways.all? { |name, gateway| gateway.connection.test_connection }
   end
 end
