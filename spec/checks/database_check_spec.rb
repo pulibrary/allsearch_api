@@ -22,8 +22,10 @@ end
 
 RSpec.describe DatabaseCheck do
   it 'returns success when the connection has a successful test' do
-    gateway = StubGateway.new(StubConnection.new(-> { true }))
-    result = described_class.new(gateway).call
+    gateways = [
+      StubGateway.new(StubConnection.new(-> { true }))
+    ]
+    result = described_class.new(gateways).call
     expect(result).to be_success
   end
 
@@ -44,7 +46,7 @@ RSpec.describe DatabaseCheck do
   end
 
   it 'returns failure when there are no gateways/active connections' do
-    result = described_class.new(nil).call
+    result = described_class.new([]).call
     expect(result).to be_failure
   end
 end
