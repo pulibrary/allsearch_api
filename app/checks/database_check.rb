@@ -10,10 +10,9 @@ class DatabaseCheck
   end
 
   def call
-    case can_connect_to_active_connection?
-    when nil
+    if no_active_connections?
       Failure('No active database connections')
-    when true
+    elsif can_connect_to_all_active_connection?
       Success()
     else
       Failure('Problem connecting with database')
@@ -26,7 +25,11 @@ class DatabaseCheck
 
   attr_reader :gateways
 
-  def can_connect_to_active_connection?
+  def no_active_connections?
+    gateways.empty?
+  end
+
+  def can_connect_to_all_active_connection?
     gateways.all? { |gateway| gateway.connection.test_connection }
   end
 end
