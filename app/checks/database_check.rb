@@ -12,7 +12,7 @@ class DatabaseCheck
   def call
     if no_active_connections?
       Failure('No active database connections')
-    elsif can_connect_to_all_active_connection?
+    elsif can_connect_to_all_active_connections?
       Success()
     else
       Failure('Problem connecting with database')
@@ -29,7 +29,7 @@ class DatabaseCheck
     gateways.empty?
   end
 
-  def can_connect_to_all_active_connection?
+  def can_connect_to_all_active_connections?
     gateways.all? { |gateway| gateway.connection.test_connection }
   end
 end
