@@ -5,7 +5,7 @@ orbs:
 executors:
   allsearch-executor:
     docker:
-      - image: cimg/ruby:3.4.10-browsers
+      - image: cimg/ruby:4.0.9-browsers
         environment:
           APP_ENV: test
           ALLSEARCH_HOST: localhost
@@ -35,14 +35,14 @@ jobs:
       - run: APP_ENV=test bundle exec rspec smoke_spec/smoke_spec.rb
   build:
     docker:
-      - image: cimg/ruby:3.4
+      - image: cimg/ruby:4.0
     steps:
       - checkout
       - ruby/install-deps
 
   rubocop:
     docker: 
-      - image: cimg/ruby:3.4
+      - image: cimg/ruby:4.0
     steps:
       - checkout
       - ruby/install-deps
@@ -51,7 +51,7 @@ jobs:
           label: Inspecting with Rubocop
   reek:
     docker:
-      - image: cimg/ruby:3.4
+      - image: cimg/ruby:4.0
     steps:
       - checkout
       - ruby/install-deps

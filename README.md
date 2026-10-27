@@ -2,7 +2,7 @@
 Backend API for [Princeton University Library's Allsearch application](https://allsearch.princeton.edu).
 
 Requires:
-- Ruby 3.4
+- Ruby 4.0
 
 [![Coverage Status](https://coveralls.io/repos/github/pulibrary/allsearch_api/badge.svg?branch=main)](https://coveralls.io/github/pulibrary/allsearch_api?branch=main)
 
