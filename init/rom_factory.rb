@@ -48,7 +48,7 @@ class RomFactory
   end
 
   def rom_container(db_connection)
-    rom_config = ROM::Configuration.new(:sql, db_connection)
+    rom_config = ROM::Configuration.new(:sql, db_connection, connect_timeout: 2)
     rom_config.register_relation BannerRelation
     rom_config.register_relation BestBetRelation
     rom_config.register_relation LibraryDatabaseRelation
