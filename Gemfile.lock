@@ -28,7 +28,7 @@ GEM
     crack (1.0.1)
       bigdecimal
       rexml
-    crass (1.0.7)
+    crass (1.0.8)
     csv (3.3.6)
     database_cleaner-core (2.0.1)
     database_cleaner-sequel (2.0.2)
@@ -227,8 +227,8 @@ GEM
       regexp_parser (>= 2.0)
       rubocop (~> 1.86, >= 1.86.2)
     ruby-progressbar (1.13.0)
-    sanitize (7.0.0)
-      crass (~> 1.0.2)
+    sanitize (7.0.1)
+      crass (~> 1.0.8)
       nokogiri (>= 1.16.8)
     semantic_logger (5.1.0)
       concurrent-ruby (~> 1.0)
