@@ -46,6 +46,11 @@ RSpec.describe RomFactory do
     end
     # rubocop: enable RSpec/VerifiedDoubles
 
+    it 'produces a ROM that times out before 10 seconds' do
+      rom_container = described_class.new.require_rom!
+      expect(rom_container.gateways[:default].options[:connect_timeout]).to be < 10
+    end
+
     it 'raises an error if the database connection is bad' do
       rom_factory = described_class.new
       allow(rom_factory).to receive(:db_connection).and_return(Failure(Sequel::Error.new))
