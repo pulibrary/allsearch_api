@@ -282,6 +282,10 @@
         }
       }
     },
+    "openssl.dev": {
+      "resolved": "github:NixOS/nixpkgs/f20cd90e28fe0403873f473b29e42662cd86e8c4?narHash=sha256-EjZqHKObBfIOeHZnMRVV87HB3pPq%2FWBkmRJWyFxmZu8%3D#openssl.dev",
+      "source": "nixpkg"
+    },
     "pkg-config@latest": {
       "last_modified": "2026-10-16T02:15:57Z",
       "resolved": "github:NixOS/nixpkgs/f20cd90e28fe0403873f473b29e42662cd86e8c4#pkg-config",
