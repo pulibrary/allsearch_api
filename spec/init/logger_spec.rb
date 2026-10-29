@@ -47,6 +47,7 @@ describe '#new_logger' do
 
       expect do
         logger.warn('Oh no', { worry_level: 'medium' })
+        SemanticLogger.flush
       end.to change { line_count(file.path) }.by 1
     end
   end
@@ -56,6 +57,7 @@ describe '#new_logger' do
     Tempfile.create do |file|
       logger = new_logger(Environment.new({ 'APP_ENV' => 'production' }), file.path)
       logger.warn('Oh no', { worry_level: 'medium' })
+      SemanticLogger.flush
       File.readlines(file.path).each do |line|
         expect { JSON.parse line }.not_to raise_exception
       end
@@ -67,6 +69,7 @@ describe '#new_logger' do
     Tempfile.create do |file|
       logger = new_logger(Environment.new({ 'APP_ENV' => 'production' }), file.path)
       logger.warn('Oh no', { worry_level: 'medium' })
+      SemanticLogger.flush
       line = File.readlines(file.path).first
       expect(JSON.parse(line)['level']).to eq 'warn'
     end

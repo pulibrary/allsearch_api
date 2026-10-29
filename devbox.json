@@ -11,7 +11,8 @@
     "curl@latest",
     "wget@latest",
     "unzip@latest",
-    "path:flakes/solr#default"
+    "path:flakes/solr#default",
+    "openssl.dev"
   ],
   "shell": {
     "init_hook": [
@@ -75,7 +76,7 @@
         "APP_ENV=test lando_allsearch_database_creds_user=allsearch lando_allsearch_database_creds_password=allsearch bundle exec rspec"
       ],
       "rubocop": "bundle exec rubocop",
-      "reek": "bundle exec reek app"
+      "reek":    "bundle exec reek app"
     }
   }
 }
