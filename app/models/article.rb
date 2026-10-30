@@ -39,8 +39,8 @@ class Article
   end
 
   def more_link
-    Some(QueryUri.new(host: 'princeton.summon.serialssolutions.com', path: '/search',
-                      query_builder: ->(_query) { service_response.query.query_string }).call)
+    Some(QueryUri.new.call(host: 'princeton.summon.serialssolutions.com', path: '/search',
+                           query_builder: ->(_query) { service_response.query.query_string }))
   end
 
   private

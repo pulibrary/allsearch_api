@@ -43,12 +43,12 @@ class LibraryWebsite
   private
 
   def more_link
-    Some(QueryUri.new(
-      host: LibraryWebsite.library_website_host,
-      path: '/search',
-      query_builder: ->(query_terms) { "keys=#{query_terms}" },
-      user_query: query_terms
-    ).call)
+    Some(QueryUri.new.call(
+           host: LibraryWebsite.library_website_host,
+           path: '/search',
+           query_builder: ->(query_terms) { "keys=#{query_terms}" },
+           user_query: query_terms
+         ))
   end
 
   def uri
