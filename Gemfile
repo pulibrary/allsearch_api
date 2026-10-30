@@ -9,6 +9,7 @@ gem 'csv'
 gem 'dry-monads'
 gem 'flipper-sequel', require: false
 gem 'honeybadger', require: false
+gem 'irb'
 gem 'pg'
 gem 'rack'
 gem 'rack-cors'
@@ -29,7 +30,6 @@ group :development do
   gem 'capistrano-bundler', require: false
   gem 'capistrano-passenger', require: false
   gem 'ed25519'
-  gem 'irb'
   gem 'net-scp'
   gem 'net-ssh'
   gem 'puma'
