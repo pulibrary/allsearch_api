@@ -29,12 +29,12 @@ class ArtMuseum
   end
 
   def uri
-    QueryUri.new(
+    query_uri.call(
       host: 'data.artmuseum.princeton.edu',
       path: '/search',
       user_query: query_terms,
       query_builder: ->(query_terms) { "q=#{query_terms}&type=all&size=3" }
-    ).call
+    )
   end
 
   def number
@@ -42,12 +42,12 @@ class ArtMuseum
   end
 
   def more_link
-    Some(QueryUri.new(
-      host: 'artmuseum.princeton.edu',
-      path: '/search/collections',
-      user_query: query_terms,
-      query_builder: ->(query_terms) { "mainSearch=\"#{query_terms}\"" }
-    ).call)
+    Some(query_uri.call(
+           host: 'artmuseum.princeton.edu',
+           path: '/search/collections',
+           user_query: query_terms,
+           query_builder: ->(query_terms) { "mainSearch=\"#{query_terms}\"" }
+         ))
   end
 
   def documents
@@ -74,4 +74,6 @@ class ArtMuseum
   def tokens = Tokenizer.tokenize(@query_terms)
 
   def maximum_tokens = 40
+
+  def query_uri = @query_uri ||= QueryUri.new
 end

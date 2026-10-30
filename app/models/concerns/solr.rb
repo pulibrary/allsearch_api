@@ -21,12 +21,12 @@ module Solr
   end
 
   def more_link
-    Some(QueryUri.new(
-      host: "#{service_subdomain}.princeton.edu",
-      path: '/catalog',
-      user_query: @query_terms,
-      query_builder: ->(query_terms) { "q=#{query_terms}&search_field=all_fields" }
-    ).call)
+    Some(QueryUri.new.call(
+           host: "#{service_subdomain}.princeton.edu",
+           path: '/catalog',
+           user_query: @query_terms,
+           query_builder: ->(query_terms) { "q=#{query_terms}&search_field=all_fields" }
+         ))
   end
 
   def documents
@@ -46,14 +46,14 @@ module Solr
 
   # :reek:ManualDispatch
   def solr_uri
-    @solr_uri ||= QueryUri.new(
+    @solr_uri ||= QueryUri.new.call(
       uri_class: URI::HTTP,
       host: solr_config[:host],
       port: solr_config[:port],
       path: "/solr/#{solr_collection}/select",
       user_query: @query_terms,
       query_builder: search_query_builder
-    ).call
+    )
   end
 
   def solr_collection
