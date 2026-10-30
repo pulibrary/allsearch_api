@@ -5,13 +5,21 @@ require 'flipper'
 
 class LibraryWebsite
   include Dry::Monads[:maybe]
-  include Parsed
 
   attr_reader :query_terms
 
   def initialize(query_terms:)
     @query_terms = query_terms
     @website_config = ALLSEARCH_CONFIGS[:allsearch][:library_website]
+  end
+
+  def our_response
+    hash = {
+      number:,
+      records: documents.map { |document| document_class.new(document:, doc_keys:).to_h }
+    }
+    hash[:more] = more_link.value_or(nil)
+    hash.compact.to_json
   end
 
   def self.library_website_host
@@ -41,6 +49,9 @@ class LibraryWebsite
   end
 
   private
+
+  def doc_keys = [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields]
+  def document_class = LibraryWebsiteDocument
 
   def more_link
     Some(QueryUri.new.call(

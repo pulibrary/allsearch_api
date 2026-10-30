@@ -19,13 +19,11 @@ RSpec.describe Article do
   end
 
   it 'has a number' do
-    expect(article.number).to eq(4_621_075)
+    expect(JSON.parse(article.our_response)['number']).to eq(4_621_075)
   end
 
   it 'has documents' do
-    expect(article.documents).to be_an_instance_of(Array)
-    expect(article.documents.size).to eq(3)
-    expect(article.documents.first).to be_an_instance_of(Summon::Document)
+    expect(JSON.parse(article.our_response)['records'].size).to eq(3)
   end
 
   it 'excludes Newspaper Articles' do

@@ -7,10 +7,18 @@ class Libanswers
   attr_reader :query_terms
 
   include Dry::Monads[:maybe]
-  include Parsed
 
   def initialize(query_terms:)
     @query_terms = CGI.escape(query_terms)
+  end
+
+  def our_response
+    hash = {
+      number:,
+      records: documents.map { |document| document_class.new(document:, doc_keys:).to_h }
+    }
+    hash[:more] = more_link.value_or(nil)
+    hash.compact.to_json
   end
 
   def number
@@ -50,4 +58,7 @@ class Libanswers
     libanswers_request['Authorization'] = "Bearer #{token}"
     libanswers_request
   end
+
+  def doc_keys = [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields]
+  def document_class = LibanswersDocument
 end

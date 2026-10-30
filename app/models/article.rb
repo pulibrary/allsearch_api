@@ -6,18 +6,24 @@ require 'dry-monads'
 # This class is responsible for querying the Summon API, aka "Articles+"
 class Article
   extend Forwardable
-  include Parsed
+
   include Dry::Monads[:maybe]
 
   attr_reader :query_terms, :service
-
-  def_delegators :service_response, :documents
 
   def initialize(query_terms:)
     @query_terms = query_terms
     summon_config = ALLSEARCH_CONFIGS[:allsearch][:summon]
     @service = Summon::Service.new(access_id: summon_config[:access_id],
                                    secret_key: summon_config[:secret_key])
+  end
+
+  def our_response
+    {
+      number: service_response.record_count,
+      records: service_response.documents.map { |document| document_class.new(document:, doc_keys:).to_h },
+      more: more_link
+    }.compact.to_json
   end
 
   # For documentation on query parameters, see https://developers.exlibrisgroup.com/summon/apis/SearchAPI/Query/Parameters/
@@ -34,16 +40,16 @@ class Article
     handle_summon_authorization_error
   end
 
-  def number
-    service_response.record_count
-  end
-
   def more_link
-    Some(QueryUri.new.call(host: 'princeton.summon.serialssolutions.com', path: '/search',
-                           query_builder: ->(_query) { service_response.query.query_string }))
+    QueryUri.new.call(host: 'princeton.summon.serialssolutions.com', path: '/search',
+                      query_builder: ->(_query) { service_response.query.query_string })
   end
 
   private
+
+  def doc_keys = [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields]
+
+  def document_class = ArticleDocument
 
   # :reek:FeatureEnvy
   def handle_summon_authorization_error
