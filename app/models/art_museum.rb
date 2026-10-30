@@ -4,23 +4,30 @@ require 'dry-monads'
 
 # This class is responsible for querying the Art Museum API
 class ArtMuseum
-  include Parsed
   include Dry::Monads[:maybe]
-
-  attr_reader :service, :service_response
 
   def initialize(query_terms:)
     @query_terms = query_terms
-    @service = 'artmuseum'
-    @service_response = art_museum_service_response
   end
 
-  def query_terms = tokens[..(maximum_tokens - 1)].join(' ')
+  def our_response
+    query = clean_query
+
+    art_museum_response(query)
+      .then { parse_response(it, query) }
+      .to_json
+  end
 
   private
 
-  def art_museum_service_response
-    response = Net::HTTP.get(uri)
+  def document_class = ArtMuseumDocument
+
+  def clean_query
+    tokens[..(maximum_tokens - 1)].join(' ')
+  end
+
+  def art_museum_response(query)
+    response = Net::HTTP.get(uri(query))
     begin
       JSON.parse(response, symbolize_names: true)
     rescue JSON::ParserError
@@ -28,30 +35,30 @@ class ArtMuseum
     end
   end
 
-  def uri
+  def parse_response(raw, query)
+    {
+      number: raw.dig(:hits, :total),
+      records: raw.dig(:hits, :hits).map { |document| document_class.new(document:, doc_keys:).to_h },
+      more: more_link(query)
+    }.compact
+  end
+
+  def uri(query)
     query_uri.call(
       host: 'data.artmuseum.princeton.edu',
       path: '/search',
-      user_query: query_terms,
+      user_query: query,
       query_builder: ->(query_terms) { "q=#{query_terms}&type=all&size=3" }
     )
   end
 
-  def number
-    service_response.dig(:hits, :total)
-  end
-
-  def more_link
-    Some(query_uri.call(
-           host: 'artmuseum.princeton.edu',
-           path: '/search/collections',
-           user_query: query_terms,
-           query_builder: ->(query_terms) { "mainSearch=\"#{query_terms}\"" }
-         ))
-  end
-
-  def documents
-    @documents ||= service_response.dig(:hits, :hits)
+  def more_link(query)
+    query_uri.call(
+      host: 'artmuseum.princeton.edu',
+      path: '/search/collections',
+      user_query: query,
+      query_builder: ->(query_terms) { "mainSearch=\"#{query_terms}\"" }
+    )
   end
 
   def handle_parser_error(response)
@@ -62,18 +69,11 @@ class ArtMuseum
   end
 
   # :reek:UtilityFunction
-  def strip_html_tags(text)
-    text.gsub(/<[^>]*>/, '')
-  end
-
-  def query_end
-    # The index of the last whitespace character within maximum_characters
-    @query_terms.rindex(/\s/, maximum_characters)
-  end
+  def strip_html_tags(text) = text.gsub(/<[^>]*>/, '')
 
   def tokens = Tokenizer.tokenize(@query_terms)
-
   def maximum_tokens = 40
 
   def query_uri = @query_uri ||= QueryUri.new
+  def doc_keys = [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields]
 end

@@ -4,12 +4,19 @@ require 'dry-monads'
 
 class Libguides
   include Dry::Monads[:maybe]
-  include Parsed
 
   attr_reader :query_terms
 
   def initialize(query_terms:)
     @query_terms = query_terms
+  end
+
+  def our_response
+    {
+      number:,
+      records: documents.map { |document| document_class.new(document:, doc_keys:).to_h },
+      more: more_link.value_or(nil)
+    }.compact.to_json
   end
 
   def documents
@@ -28,6 +35,9 @@ class Libguides
   end
 
   private
+
+  def document_class = LibguidesDocument
+  def doc_keys = [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields]
 
   def more_link
     Some("https://libguides.princeton.edu/srch.php?q=#{query_terms}")

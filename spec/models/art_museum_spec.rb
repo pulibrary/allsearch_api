@@ -24,7 +24,7 @@ RSpec.describe ArtMuseum do
     truncated_story_search = stub_request(:get, "https://data.artmuseum.princeton.edu/search?q=#{truncated_story}&size=3&type=all")
                              .to_return(status: 200, body: file_fixture('art_museum/cats.json'))
 
-    described_class.new(query_terms: full_story)
+    described_class.new(query_terms: full_story).our_response
     expect(truncated_story_search).to have_been_requested
   end
 
@@ -35,7 +35,7 @@ RSpec.describe ArtMuseum do
     truncated_story_search = stub_request(:get, "https://data.artmuseum.princeton.edu/search?q=#{truncated_story}&size=3&type=all")
                              .to_return(status: 200, body: file_fixture('art_museum/cats.json'))
 
-    described_class.new(query_terms: full_story)
+    described_class.new(query_terms: full_story).our_response
     expect(truncated_story_search).to have_been_requested
   end
 end

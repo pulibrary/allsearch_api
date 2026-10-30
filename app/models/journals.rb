@@ -9,10 +9,6 @@ class Journals < Catalog
     'fq=format:Journal'
   end
 
-  def document_class
-    CatalogDocument
-  end
-
   def more_link
     Some(QueryUri.new.call(
            host: "#{service_subdomain}.princeton.edu",
