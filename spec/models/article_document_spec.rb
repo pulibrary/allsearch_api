@@ -3,14 +3,15 @@
 require 'spec_helper'
 
 RSpec.describe ArticleDocument do
-  let(:doc_keys) { [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields] }
-  let(:query_terms) { 'forest' }
-  let(:document) { Article.new(query_terms:).documents.first }
-  let(:article_document) { described_class.new(document:, doc_keys:) }
-
-  before do
-    stub_summon(query: 'forest', fixture: 'article/forest.json')
+  def summon_documents(fixture)
+    file_fixture(fixture)
+      .then { JSON.parse(it)['documents'] }
+      .then { |documents| documents.map { Summon::Document.new(instance_double(Summon::Service), it) } }
   end
+
+  let(:doc_keys) { [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields] }
+  let(:document) { summon_documents('article/forest.json').first }
+  let(:article_document) { described_class.new(document:, doc_keys:) }
 
   it 'has the expected values' do
     expect(article_document.title)
@@ -29,11 +30,7 @@ RSpec.describe ArticleDocument do
   end
 
   context 'with a lot of journal articles' do
-    let(:query_terms) { 'potato' }
-
-    before do
-      stub_summon(query: 'potato', fixture: 'article/potato.json')
-    end
+    let(:document) { summon_documents('article/potato.json').first }
 
     it 'has the expected_values' do
       expect(article_document.title).to eq('Potato')
