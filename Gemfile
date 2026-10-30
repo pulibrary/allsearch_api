@@ -10,6 +10,11 @@ gem 'dry-monads'
 gem 'flipper-sequel', require: false
 gem 'honeybadger', require: false
 gem 'irb'
+gem 'opentelemetry-exporter-otlp'
+gem 'opentelemetry-instrumentation-net_http'
+gem 'opentelemetry-instrumentation-pg'
+gem 'opentelemetry-instrumentation-rack'
+gem 'opentelemetry-sdk'
 gem 'pg'
 gem 'rack'
 gem 'rack-cors'
