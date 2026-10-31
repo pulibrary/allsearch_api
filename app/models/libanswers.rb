@@ -4,59 +4,55 @@ require 'dry-monads'
 
 # This class is responsible for querying Libanswers for FAQs
 class Libanswers
-  attr_reader :query_terms
-
   include Dry::Monads[:maybe]
 
-  def initialize(query_terms:)
-    @query_terms = CGI.escape(query_terms)
+  def our_response(query_terms:)
+    service_response = service_response(query_terms:)['search']
+    {
+      number: service_response['numFound'],
+      records: service_response['results'].map { |document| document_class.new(document:, doc_keys:).to_h },
+      more: more_link(query_terms:).value_or(nil)
+    }.compact.to_json
   end
 
-  def our_response
-    hash = {
-      number:,
-      records: documents.map { |document| document_class.new(document:, doc_keys:).to_h }
-    }
-    hash[:more] = more_link.value_or(nil)
-    hash.compact.to_json
+  def more_link(query_terms:)
+    Some("https://faq.library.princeton.edu/search/?t=0&q=#{CGI.escape(query_terms).gsub(/\s+/, '+')}")
   end
 
-  def number
-    service_response['search']['numFound']
-  end
-
-  def more_link
-    Some("https://faq.library.princeton.edu/search/?t=0&q=#{query_terms.gsub(/\s+/, '+')}")
-  end
-
-  def documents
-    service_response['search']['results']
-  end
-
-  def service_response
-    @service_response ||= Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
-      response = http.request(request)
-      if response.code == '200'
-        JSON.parse(response.body)
-      else
-        { 'search' => { 'results' => [], 'numFound' => 0 } }
+  def service_response(query_terms:)
+    uri(query_terms:)
+      .then { libanswers_connection.get it, { 'Authorization' => "Bearer #{token}" } }
+      .then do |response|
+        if response.code == '200'
+          JSON.parse(response.body)
+        else
+          { 'search' => { 'results' => [], 'numFound' => 0 } }
+        end
       end
-    end
   end
 
   private
 
-  def uri
-    URI.parse "https://faq.library.princeton.edu/api/1.1/search/#{query_terms}?iid=344&limit=3"
+  # :reek:UtilityFunction
+  def uri(query_terms:)
+    URI.parse "https://faq.library.princeton.edu/api/1.1/search/#{CGI.escape(query_terms)}?iid=344&limit=3"
   end
 
-  def request
-    libanswers_request = Net::HTTP::Get.new(uri)
+  # This should not be memoized, since the token is refreshed regularly
+  def token = token_cache.token
 
-    token = OAuthTokenCache.new(service: 'libanswers',
-                                endpoint: 'https://faq.library.princeton.edu/api/1.1/oauth/token').token
-    libanswers_request['Authorization'] = "Bearer #{token}"
-    libanswers_request
+  def token_cache
+    @token_cache ||= OAuthTokenCache.new(service: 'libanswers',
+                                         endpoint: 'https://faq.library.princeton.edu/api/1.1/oauth/token')
+  end
+
+  # :reek:FeatureEnvy
+  def libanswers_connection
+    @libanswers_connection ||= begin
+      http = Net::HTTP.new('faq.library.princeton.edu', Net::HTTP.https_default_port)
+      http.use_ssl = true
+      http.start
+    end
   end
 
   def doc_keys = [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields]

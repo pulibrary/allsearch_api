@@ -72,6 +72,12 @@ RSpec.describe 'GET /search/catalog' do
     end
   end
 
+  it 'uses a reasonable number of allocations' do
+    expect do
+      get '/search/catalog?query=cats'
+    end.to increase_allocations_no_more_than(3400)
+  end
+
   context 'without a search term' do
     it 'returns a 400 bad request' do
       get '/search/catalog?query='

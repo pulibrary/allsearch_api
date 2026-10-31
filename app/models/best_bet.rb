@@ -6,29 +6,20 @@ require 'dry-monads'
 class BestBet
   include Dry::Monads[:maybe]
 
-  attr_reader :query_terms
-
-  def initialize(query_terms:)
-    @query_terms = query_terms
-  end
-
-  def our_response
+  def our_response(query_terms:)
+    service_response = service_response(query_terms:)
     {
-      number: number,
-      records:
+      number: service_response.count,
+      records: records(service_response:)
     }.compact.to_json
   end
 
-  def number
-    service_response.count
-  end
-
-  def service_response
+  def service_response(query_terms:)
     unescaped_terms = URI::DEFAULT_PARSER.unescape(query_terms)
-    @service_response ||= best_bet.query(unescaped_terms)
+    best_bet.query(unescaped_terms)
   end
 
-  def records
+  def records(service_response:)
     service_response.limit(1).map { BestBetDocument.new(it).public_metadata }
   end
 

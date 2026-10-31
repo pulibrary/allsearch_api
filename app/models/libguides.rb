@@ -5,33 +5,21 @@ require 'dry-monads'
 class Libguides
   include Dry::Monads[:maybe]
 
-  attr_reader :query_terms
+  LIBGUIDES_HOSTNAME = 'lgapi-us.libapps.com'
 
-  def initialize(query_terms:)
-    @query_terms = query_terms
-  end
-
-  def our_response
+  def our_response(query_terms:)
+    service_response = service_response(query_terms:)
     {
-      number:,
-      records: documents.map { |document| document_class.new(document:, doc_keys:).to_h },
-      more: more_link.value_or(nil)
+      number: service_response.count,
+      records: (service_response[0..2] || []).map { |document| document_class.new(document:, doc_keys:).to_h },
+      more: more_link(query_terms:).value_or(nil)
     }.compact.to_json
   end
 
-  def documents
-    service_response[0..2] || []
-  end
-
-  def number
-    service_response.count
-  end
-
-  def service_response
-    @service_response ||= Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
-      response = http.request(request)
-      JSON.parse(response.body)
-    end
+  def service_response(query_terms:)
+    uri(query_terms:)
+      .then { libguides_connection.get(it, { 'Authorization' => "Bearer #{token}" }) }
+      .then { JSON.parse(it.body) }
   end
 
   private
@@ -39,13 +27,13 @@ class Libguides
   def document_class = LibguidesDocument
   def doc_keys = [:title, :creator, :publisher, :id, :type, :description, :url, :other_fields]
 
-  def more_link
+  def more_link(query_terms:)
     Some("https://libguides.princeton.edu/srch.php?q=#{query_terms}")
   end
 
-  def uri
-    QueryUri.new.call(
-      host: 'lgapi-us.libapps.com',
+  def uri(query_terms:)
+    query_uri.call(
+      host: LIBGUIDES_HOSTNAME,
       path: '/1.2/guides',
       user_query: query_terms,
       query_builder: lambda { |query_terms|
@@ -54,12 +42,22 @@ class Libguides
     )
   end
 
-  def request
-    libguides_request = Net::HTTP::Get.new(uri)
+  def query_uri = @query_uri ||= QueryUri.new
 
-    token = OAuthTokenCache.new(service: 'libguides',
-                                endpoint: 'https://lgapi-us.libapps.com/1.2/oauth/token').token
-    libguides_request['Authorization'] = "Bearer #{token}"
-    libguides_request
+  # This should not be memoized, since the token is refreshed regularly
+  def token = token_cache.token
+
+  def token_cache
+    @token_cache ||= OAuthTokenCache.new(service: 'libguides',
+                                         endpoint: 'https://lgapi-us.libapps.com/1.2/oauth/token')
+  end
+
+  # :reek:FeatureEnvy
+  def libguides_connection
+    @libguides_connection ||= begin
+      http = Net::HTTP.new(LIBGUIDES_HOSTNAME, Net::HTTP.https_default_port)
+      http.use_ssl = true
+      http.start
+    end
   end
 end

@@ -11,7 +11,7 @@ describe SearchController do
 
     env = { 'rack.url_scheme' => 'http', 'HTTP_HOST' => 'allsearch-api.princeton.edu',
             'SCRIPT_NAME' => '/search/catalog', 'QUERY_STRING' => 'query=my+nice+query' }
-    controller = described_class.new(service: my_erroring_service, honeybadger:)
+    controller = described_class.new(service_class: my_erroring_service, honeybadger:)
 
     controller.call(env)
 
