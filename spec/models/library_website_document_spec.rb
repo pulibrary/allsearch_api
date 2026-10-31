@@ -4,8 +4,10 @@ require 'spec_helper'
 
 RSpec.describe LibraryWebsiteDocument do
   let(:doc_keys) { [:title, :id, :type, :description, :url, :other_fields] }
-  let(:query_terms) { 'firestone' }
-  let(:document) { LibraryWebsite.new(query_terms:).documents.first }
+  let(:document) do
+    file_fixture('library_website/firestone.json')
+      .then { JSON.parse(it)['content'].first }
+  end
   let(:website_document) { described_class.new(document:, doc_keys:) }
 
   before do

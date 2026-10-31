@@ -11,6 +11,7 @@ ENV['APP_ENV'] ||= 'test'
 require 'webmock/rspec'
 require_relative '../app/paths'
 require_relative 'support/fixture_helpers'
+require_relative 'support/performance_helpers'
 require_relative '../config/lando_env'
 require_relative 'support/rack_test_helpers'
 

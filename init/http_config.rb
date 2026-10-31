@@ -7,9 +7,9 @@ class HTTPConfig
 
   def call
     http_client.default_configuration = {
-      open_timeout: 1,
-      read_timeout: 3.5,
-      write_timeout: 3.5
+      open_timeout: 5,
+      read_timeout: 5,
+      write_timeout: 4
     }
   end
 

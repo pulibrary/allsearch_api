@@ -6,8 +6,8 @@
 
 # :reek:DataClump
 class SearchController
-  def initialize(service:, honeybadger: Honeybadger)
-    @service = service
+  def initialize(service_class:, honeybadger: Honeybadger)
+    @service_class = service_class
     @honeybadger = honeybadger
   end
 
@@ -36,7 +36,7 @@ class SearchController
 
   private
 
-  attr_reader :service, :honeybadger
+  attr_reader :service_class, :honeybadger
 
   # :reek:TooManyStatements
   def data_response(request)
@@ -50,8 +50,10 @@ class SearchController
   end
 
   def json(request)
-    service.new(query_terms: query_terms(request)).our_response
+    service.our_response(query_terms: query_terms(request))
   end
+
+  def service = @service ||= service_class.new
 
   def empty_query?(request)
     query_terms(request) == ''
