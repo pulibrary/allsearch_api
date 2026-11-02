@@ -13,8 +13,9 @@ RSpec.describe Catalog do
     end
 
     it 'links to the host associated with the solr collection' do
-      catalog = described_class.new(query_terms: 'rubix')
-      expect(catalog.more_link.value!.to_s).to eq('https://catalog.princeton.edu/catalog?q=rubix&search_field=all_fields')
+      catalog = described_class.new
+      our_response = catalog.our_response(query_terms: 'rubix')
+      expect(JSON.parse(our_response)['more']).to eq('https://catalog.princeton.edu/catalog?q=rubix&search_field=all_fields')
     end
 
     context 'when on a non-production environment' do
@@ -25,10 +26,10 @@ RSpec.describe Catalog do
 
       it 'links to the host associated with the solr collection' do
         catalog = described_class.new(
-          query_terms: 'rubix',
           allsearch_config: Environment.new({ 'APP_ENV' => 'staging' }).config(:allsearch)
         )
-        expect(catalog.more_link.value!.to_s).to eq('https://catalog-staging.princeton.edu/catalog?q=rubix&search_field=all_fields')
+        our_response = catalog.our_response(query_terms: 'rubix')
+        expect(JSON.parse(our_response)['more']).to eq('https://catalog-staging.princeton.edu/catalog?q=rubix&search_field=all_fields')
       end
     end
   end
@@ -39,7 +40,7 @@ RSpec.describe Catalog do
       stub_const('ALLSEARCH_LOGGER', instance_double(SemanticLogger::Logger, error: true))
 
       expect do
-        described_class.new(query_terms: 'rubix').our_response
+        described_class.new.our_response(query_terms: 'rubix')
       end.to raise_error AllsearchError
 
       expect(ALLSEARCH_LOGGER).to have_received(:error).with('Solr error', Net::OpenTimeout)
@@ -50,7 +51,7 @@ RSpec.describe Catalog do
       stub_const('ALLSEARCH_LOGGER', instance_double(SemanticLogger::Logger, error: true))
 
       expect do
-        described_class.new(query_terms: 'rubix').our_response
+        described_class.new.our_response(query_terms: 'rubix')
       end.to raise_error AllsearchError
 
       expect(ALLSEARCH_LOGGER).to have_received(:error).with('Solr error', an_instance_of(Net::ProtoFatalError))

@@ -67,6 +67,12 @@ RSpec.describe 'GET /search/artmuseum' do
     end
   end
 
+  it 'uses a reasonable number of allocations' do
+    expect do
+      get '/search/artmuseum?query=cats'
+    end.to increase_allocations_no_more_than(2300)
+  end
+
   context 'when the art museum is temporarily down' do
     before do
       stub_art_museum(query: 'cats', fixture: 'art_museum/nginx_503')

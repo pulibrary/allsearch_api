@@ -5,13 +5,13 @@ require 'rack_helper'
 RSpec.describe Libanswers do
   describe '#more_link' do
     it 'incorporates the query term into libanswers search url' do
-      libanswers = described_class.new(query_terms: 'ducks')
-      expect(libanswers.more_link.value!).to eq('https://faq.library.princeton.edu/search/?t=0&q=ducks')
+      libanswers = described_class.new
+      expect(libanswers.more_link(query_terms: 'ducks').value!).to eq('https://faq.library.princeton.edu/search/?t=0&q=ducks')
     end
 
     it 'puts + between words' do
-      libanswers = described_class.new(query_terms: 'root beer')
-      expect(libanswers.more_link.value!).to eq('https://faq.library.princeton.edu/search/?t=0&q=root+beer')
+      libanswers = described_class.new
+      expect(libanswers.more_link(query_terms: 'root beer').value!).to eq('https://faq.library.princeton.edu/search/?t=0&q=root+beer')
     end
   end
 
@@ -24,8 +24,8 @@ RSpec.describe Libanswers do
 
     it 'does not try to insert duplicate OAuthTokens into the database' do
       expect do
-        service = described_class.new(query_terms: 'printer')
-        service.service_response
+        service = described_class.new
+        service.service_response(query_terms: 'printer')
       end.not_to(change { ALLSEARCH_ROM.relations[:oauth_tokens].count })
     end
   end
@@ -48,13 +48,15 @@ RSpec.describe Libanswers do
     end
 
     it 'has an empty documents array' do
-      service = described_class.new(query_terms: '0%000')
-      expect(service.documents).to be_empty
+      service = described_class.new
+      our_response = service.our_response(query_terms: '0%000')
+      expect(JSON.parse(our_response)['records']).to be_empty
     end
 
     it 'has 0 as the number' do
-      service = described_class.new(query_terms: '0%000')
-      expect(service.number).to eq 0
+      service = described_class.new
+      our_response = service.our_response(query_terms: '0%000')
+      expect(JSON.parse(our_response)['number']).to eq 0
     end
   end
 end

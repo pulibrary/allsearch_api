@@ -5,10 +5,10 @@ require 'spec_helper'
 RSpec.describe LibraryDatabase do
   let(:query_terms) { 'foo' }
   let(:rom) { ALLSEARCH_ROM }
-  let(:db_service) { described_class.new(query_terms:, rom:) }
+  let(:db_service) { described_class.new(rom:) }
 
   it 'has the correct more_link' do
-    expect(db_service.more_link.value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=foo')
+    expect(db_service.more_link(query_terms:).value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=foo')
   end
 
   context 'with accents in the query terms' do
@@ -24,20 +24,20 @@ RSpec.describe LibraryDatabase do
     end
 
     it 'can search for queries as passed by the controller' do
-      our_response = JSON.parse(db_service.our_response, symbolize_names: true)
+      our_response = JSON.parse(db_service.our_response(query_terms:), symbolize_names: true)
       expect(our_response[:records]).not_to be_empty
       expect(our_response[:records].last[:title]).to eq('Kōbunsō Taika Koshomoku')
     end
 
     it 'builds a working more_link' do
-      expect(db_service.more_link.value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
+      expect(db_service.more_link(query_terms:).value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
     end
 
     context 'when the diacritics are decomposed into two separate characters' do
       let(:query_terms) { 'Ko%CC%84bunso%CC%84%20Taika%20Koshomoku' }
 
       it 'builds a working more_link' do
-        expect(db_service.more_link.value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
+        expect(db_service.more_link(query_terms:).value!.to_s).to eq('https://libguides.princeton.edu/az/databases?q=Kobunso%20Taika%20Koshomoku')
       end
     end
 
@@ -46,7 +46,7 @@ RSpec.describe LibraryDatabase do
       let(:query_terms) { 'Ma%CA%BBagarim' }
 
       it 'can search for queries as passed by the controller' do
-        our_response = JSON.parse(db_service.our_response, symbolize_names: true)
+        our_response = JSON.parse(db_service.our_response(query_terms:), symbolize_names: true)
         expect(our_response[:records]).not_to be_empty
       end
     end
