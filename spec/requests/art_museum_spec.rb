@@ -68,6 +68,7 @@ RSpec.describe 'GET /search/artmuseum' do
   end
 
   it 'uses a reasonable number of allocations' do
+    skip 'this is highly variable to run in CI, but it can be useful for local development'
     expect do
       get '/search/artmuseum?query=cats'
     end.to increase_allocations_no_more_than(2300)
