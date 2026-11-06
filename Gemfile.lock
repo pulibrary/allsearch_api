@@ -96,7 +96,7 @@ GEM
     googleapis-common-protos-types (1.24.0)
       google-protobuf (~> 4.26)
     hashdiff (1.2.1)
-    honeybadger (6.9.3)
+    honeybadger (6.10.1)
       logger
       ostruct
     i18n (1.14.8)
